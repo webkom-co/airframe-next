@@ -1,16 +1,18 @@
 {
     "presets": [
         "env",
-        "react"
+        "react",
+        "stage-2"
     ],
     "plugins": [
-        "transform-object-rest-spread",
-        "transform-class-properties",
-        "transform-runtime",
-        "syntax-dynamic-import",
         "universal-import"
     ],
     "env": {
+        "development": {
+            "plugins": [
+              "react-hot-loader/babel"
+            ]
+        }
     }
 }
   

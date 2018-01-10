@@ -9,6 +9,19 @@ var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var config = require('./../config');
 
+var externals = fs
+  .readdirSync(path.join(config.rootDir, 'node_modules'))
+  .filter(
+    x =>
+      !/\.bin|react-universal-component|require-universal-module|webpack-flush-chunks/.test(
+        x
+      )
+  )
+  .reduce((externals, mod) => {
+    externals[mod] = `commonjs ${mod}`
+    return externals
+  }, {});
+
 module.exports = {
     devtool: false,
     entry: ['babel-polyfill', path.join(config.srcServerDir, 'index.js')],
@@ -27,18 +40,7 @@ module.exports = {
             config.srcDir
         ]
     },
-    externals: [
-        /*
-        nodeExternals({
-            modulesDir: path.join(config.rootDir, 'node_modules'),
-            whitelist: [
-                /^react-universal-component/,
-                /^require-universal-module/,
-                /^webpack-flush-chunks/,
-            ]
-        })
-        */
-    ],
+    externals,
     plugins: [
         new webpack.optimize.LimitChunkCountPlugin({
             maxChunks: 1
@@ -46,7 +48,8 @@ module.exports = {
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
-        //new ExtractCssChunks(),
+        new webpack.HashedModuleIdsPlugin(),
+        new ExtractCssChunks(),
         //new UglifyJsPlugin()
     ],
     module: {
@@ -56,21 +59,10 @@ module.exports = {
                 include: [config.srcServerDir, config.srcDir],
                 exclude: /node_modules/,
                 use: {
-                    loader: 'babel-loader',
-                    /*
-                    options: {
-                        presets: ["env"],
-                        plugins: [
-                            "transform-object-rest-spread",
-                            "transform-class-properties",
-                            "transform-runtime"
-                        ]
-                    }
-                    */
+                    loader: 'babel-loader'
                 }
             },
             // Modular Styles
-            /*
             {
                 test: /\.css$/,
                 use: ExtractCssChunks.extract({
@@ -123,7 +115,7 @@ module.exports = {
                 }),
                 include: [path.resolve(config.srcDir, 'styles')]
             },
-            */
+            /*
             {
                 test: /\.css$/,
                 use: [
@@ -167,11 +159,12 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['css-loader', 'postcss-loader', 'sass-loader'],
                 include: [path.resolve(config.srcDir, 'styles')]
-            },
+            },*/
             {
                 test: /\.html$/,
                 use: 'raw-loader'
             }
+            
         ]
     }
 }
