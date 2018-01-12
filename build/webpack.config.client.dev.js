@@ -7,9 +7,11 @@ var WebpackAssetsManifest = require('webpack-assets-manifest');
 var config = require('./../config');
 
 module.exports = {
+    name: 'client',
     devtool: 'inline-source-map',
+    target: 'web',
     entry: {
-        app: path.join(config.srcDir, 'index.js')
+        app: [path.join(config.srcDir, 'index.js')]
     },
     output: {
         filename: '[name].bundle.js',
@@ -28,13 +30,13 @@ module.exports = {
             name: 'common'
         }),
         new HtmlWebpackPlugin({
-            template: config.srcHtmlLayout
+            template: config.srcHtmlLayout,
+            inject: false
         }),
         //new webpack.HashedModuleIdsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
-
         new webpack.NamedModulesPlugin(),
         new webpack.HotModuleReplacementPlugin()
     ],
@@ -42,7 +44,6 @@ module.exports = {
         rules: [
             {
                 test: /\.js$/,
-                include: config.srcDir,
                 exclude: /node_modules/,
                 use: 'babel-loader'
             },
@@ -92,6 +93,22 @@ module.exports = {
                 test: /\.scss$/,
                 use: ['style-loader', 'css-loader', 'postcss-loader', 'sass-loader'],
                 include: [path.resolve(config.srcDir, 'styles')]
+            },
+            // Fonts
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "fonts/[name].[ext]",
+                }
+            },
+            // Files
+            {
+                test: /\.(jpg|jpeg|png|gif|svg)$/,
+                loader: "file-loader",
+                options: {
+                    name: "static/[name].[ext]",
+                }
             }
         ]
     },

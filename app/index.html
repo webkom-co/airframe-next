@@ -27,15 +27,12 @@
 <div id="root"><%= config.innerHtml || '' %></div>
 
 <% for (var chunk in config.files.chunks) { %>
-<script src="<%= config.files.chunks[chunk].entry %>"></script>
+<script src="<%= config.files.chunks[chunk].entry %>" defer></script>
 <% } %>
 
 <% if (config.options.devServer) { %>
 <script src="<%= config.options.devServer%>/webpack-dev-server.js"></script>
 <% } %>
 
-<% if (config.options.chunks) { %>
-  <%= config.options.chunks.js %>
-<% } %>
 </body>
 </html>

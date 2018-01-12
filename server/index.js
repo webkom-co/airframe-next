@@ -1,3 +1,4 @@
+import React from 'react';
 import { renderToString } from 'react-dom/server';
 import { clearChunks, flushChunkNames } from 'react-universal-component/server'
 import createMemoryHistory from 'history/createMemoryHistory';
@@ -16,11 +17,14 @@ import {
 
 import config from './../config';
 import layoutHtml from './../app/index.html';
-import AppFactory from './../app/app';
+import { App } from './../app/components';
+import { getStore } from './../app/modules';
 
 const app = express();
 const port = process.env.PORT || 4000;
 const rootDir = path.dirname(process.argv[1]);
+
+app.set('view engine', 'html');
 
 app.use(express.static(rootDir));
 
@@ -32,9 +36,10 @@ app.use(async (req, res, next) => {
             initialEntries: [req.url],
             initialIndex: 0
         });
+        const store = getStore(history);
 
         const initialLocation = parsePath(req.url);
-        const appComponent = AppFactory.createServer(history, req.url);
+        const appComponent = <App.Server {...{ history, store }} />;
         const contentHtml = renderToString(appComponent);
         
         const webpackStats = await readWebpackStats(config.clientStatsFile);

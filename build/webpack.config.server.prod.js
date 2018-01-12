@@ -115,54 +115,25 @@ module.exports = {
                 }),
                 include: [path.resolve(config.srcDir, 'styles')]
             },
-            /*
-            {
-                test: /\.css$/,
-                use: [
-                    { 
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
-                        }
-                    },
-                    { loader: 'postcss-loader' }
-                ],
-                exclude: [path.resolve(config.srcDir, 'styles')],
-                include: [config.srcDir]
-            },
-            {
-                test: /\.scss$/,
-                use: [
-                    {
-                        loader: 'css-loader',
-                        options: {
-                            modules: true,
-                            importLoaders: 1,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
-                        }
-                    },
-                    { loader: 'postcss-loader' },
-                    { loader: 'sass-loader' }
-                ],
-                exclude: [path.resolve(config.srcDir, 'styles')],
-                include: [config.srcDir]
-            },
-            // Global Styles
-            {
-                test: /\.css$/,
-                use: ['css-loader', 'postcss-loader'],
-                include: [path.resolve(config.srcDir, 'styles')]
-            },
-            {
-                test: /\.scss$/,
-                use: ['css-loader', 'postcss-loader', 'sass-loader'],
-                include: [path.resolve(config.srcDir, 'styles')]
-            },*/
             {
                 test: /\.html$/,
                 use: 'raw-loader'
+            },
+            // Fonts
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "fonts/[name].[ext]",
+                }
+            },
+            // Files
+            {
+                test: /\.(jpg|jpeg|png|gif|svg)$/,
+                loader: "file-loader",
+                options: {
+                    name: "static/[name].[ext]",
+                }
             }
             
         ]

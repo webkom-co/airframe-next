@@ -5,12 +5,13 @@
         "stage-2"
     ],
     "plugins": [
-        "universal-import"
+        "universal-import",
+        "react-hot-loader/babel"
     ],
     "env": {
         "development": {
             "plugins": [
-              "react-hot-loader/babel"
+                "react-hot-loader/babel"
             ]
         }
     }

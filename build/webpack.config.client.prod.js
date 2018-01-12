@@ -11,7 +11,7 @@ var config = require('./../config');
 module.exports = {
     devtool: 'inline-source-map',
     entry: {
-        app: path.join(config.srcDir, 'index.js')
+        app: ['react-hot-loader/patch', path.join(config.srcDir, 'index.js')]
     },
     output: {
         filename: '[name].bundle.js',
@@ -30,7 +30,8 @@ module.exports = {
             name: 'common'
         }),
         new HtmlWebpackPlugin({
-            template: config.srcHtmlLayout
+            template: config.srcHtmlLayout,
+            inject: false
         }),
         new webpack.HashedModuleIdsPlugin(),
         new ExtractCssChunks(),
@@ -133,6 +134,22 @@ module.exports = {
                     ]
                 }),
                 include: [path.resolve(config.srcDir, 'styles')]
+            },
+            // Fonts
+            {
+                test: /\.(ttf|eot|woff|woff2)$/,
+                loader: "file-loader",
+                options: {
+                    name: "fonts/[name].[ext]",
+                }
+            },
+            // Files
+            {
+                test: /\.(jpg|jpeg|png|gif|svg)$/,
+                loader: "file-loader",
+                options: {
+                    name: "static/[name].[ext]",
+                }
             }
         ]
     }

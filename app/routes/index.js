@@ -5,7 +5,7 @@ import {
 } from 'react-router';
 import universal from 'react-universal-component';
 
-import PageLoader from './../components/PageLoader';
+import { PageLoader } from './../components';
 import { buildReducers } from './../modules';
 
 // UniversalComponent with added support for asynch loading of
@@ -56,4 +56,4 @@ const getRoutes = (store) => {
     );
 };
 
-export default getRoutes;
+export { getRoutes };

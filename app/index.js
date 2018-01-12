@@ -1,10 +1,15 @@
+import React from 'react';
 import { render } from 'react-dom';
 import createBrowserHistory from 'history/createBrowserHistory';
+import { AppContainer } from 'react-hot-loader'
 
-import AppFactory from './app';
+import { getStore } from './modules';
+import { App } from './components';
 
 const history = createBrowserHistory();
+const store = getStore(history);
 
-const appComponent = AppFactory.createClient(history);
-
-render(appComponent, document.querySelector('#root'));
+render(
+    <App.Client {...{ history, store }} />,
+    document.querySelector('#root')
+);
