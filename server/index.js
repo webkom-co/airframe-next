@@ -5,6 +5,7 @@ import createMemoryHistory from 'history/createMemoryHistory';
 import { parsePath } from 'history/PathUtils';
 import flushChunks from 'webpack-flush-chunks'
 import express from 'express';
+import compression from 'compression';
 import path from 'path';
 
 import {
@@ -23,6 +24,8 @@ import { getStore } from './../app/modules';
 const app = express();
 const port = process.env.PORT || 4000;
 const rootDir = path.dirname(process.argv[1]);
+
+app.use(compression());
 
 app.use(express.static(rootDir));
 
