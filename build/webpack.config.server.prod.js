@@ -24,6 +24,7 @@ var externals = fs
 
 module.exports = {
     devtool: false,
+    mode: 'production',
     entry: ['babel-polyfill', path.join(config.srcServerDir, 'index.js')],
     output: {
         filename: 'server.js',
@@ -50,7 +51,7 @@ module.exports = {
         }),
         new webpack.HashedModuleIdsPlugin(),
         new ExtractCssChunks(),
-        //new UglifyJsPlugin()
+        new UglifyJsPlugin()
     ],
     module: {
         rules: [
@@ -65,54 +66,57 @@ module.exports = {
             // Modular Styles
             {
                 test: /\.css$/,
-                use: ExtractCssChunks.extract({
-                    use: [
-                        { 
-                            loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                importLoaders: 1,
-                                localIdentName: '[name]_[local]_[hash:base64:5]'
-                            }
-                        },
-                        { loader: 'postcss-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                        }
+                    },
+                    { loader: 'postcss-loader' }
+                ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
             },
             {
                 test: /\.scss$/,
-                use: ExtractCssChunks.extract({
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                importLoaders: 1,
-                                localIdentName: '[name]_[local]_[hash:base64:5]'
-                            }
-                        },
-                        { loader: 'postcss-loader' },
-                        { loader: 'sass-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                        }
+                    },
+                    { loader: 'postcss-loader' },
+                    { loader: 'sass-loader' }
+                ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
             },
             // Global Styles
             {
                 test: /\.css$/,
-                use: ExtractCssChunks.extract({
-                    use: ['css-loader', 'postcss-loader']
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    'css-loader',
+                    'postcss-loader'
+                ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },
             {
                 test: /\.scss$/,
-                use: ExtractCssChunks.extract({
-                    use: ['css-loader', 'postcss-loader', 'sass-loader']
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
+                ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },
             {

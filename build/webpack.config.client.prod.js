@@ -10,6 +10,7 @@ var config = require('./../config');
 
 module.exports = {
     devtool: 'inline-source-map',
+    mode: 'production',
     entry: {
         app: ['react-hot-loader/patch', path.join(config.srcDir, 'index.js')]
     },
@@ -26,9 +27,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
-        }),
         new HtmlWebpackPlugin({
             template: config.srcHtmlLayout,
             inject: false
@@ -39,21 +37,6 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new UglifyJsPlugin()
-        /*
-            new WebpackAssetsManifest({
-                writeToDisk: true,
-                output: path.join(config.distDir, config.clientManifestFile),
-                sortManifest: function(name) {
-                    return name.indexOf('common.') === 0 ? 0 : 1;
-                }
-            }),
-        */
-        /*
-            new StatsPlugin(path.join(config.distDir, config.clientStatsFile), {
-                chunkModules: true,
-                exclude: [/node_modules/]
-            })
-        */
     ],
     module: {
         rules: [
@@ -66,73 +49,69 @@ module.exports = {
             // Modular Styles
             {
                 test: /\.css$/,
-                use: ExtractCssChunks.extract({
-                    use: [
-                        { 
-                            loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                importLoaders: 1,
-                                localIdentName: '[name]_[local]_[hash:base64:5]',
-                                minimize: true
-                            }
-                        },
-                        { loader: 'postcss-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]_[local]_[hash:base64:5]',
+                            minimize: true
+                        }
+                    },
+                    { loader: 'postcss-loader' }
+                ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
             },
             {
                 test: /\.scss$/,
-                use: ExtractCssChunks.extract({
-                    use: [
-                        {
-                            loader: 'css-loader',
-                            options: {
-                                modules: true,
-                                importLoaders: 1,
-                                localIdentName: '[name]_[local]_[hash:base64:5]',
-                                minimize: true
-                            }
-                        },
-                        { loader: 'postcss-loader' },
-                        { loader: 'sass-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                            localIdentName: '[name]_[local]_[hash:base64:5]',
+                            minimize: true
+                        }
+                    },
+                    { loader: 'postcss-loader' },
+                    { loader: 'sass-loader' }
+                ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
             },
             // Global Styles
             {
                 test: /\.css$/,
-                use: ExtractCssChunks.extract({
-                    use: [ 
-                        { 
-                            loader: 'css-loader',
-                            options: {
-                                minimize: true
-                            }
-                        },
-                        { loader: 'postcss-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    },
+                    { loader: 'postcss-loader' }
+                ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },
             {
                 test: /\.scss$/,
-                use: ExtractCssChunks.extract({
-                    use: [
-                        { 
-                            loader: 'css-loader',
-                            options: {
-                                minimize: true
-                            }
-                        }, 
-                        { loader: 'postcss-loader' }, 
-                        { loader: 'sass-loader' }
-                    ]
-                }),
+                use: [
+                    ExtractCssChunks.loader,
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    }, 
+                    { loader: 'postcss-loader' }, 
+                    { loader: 'sass-loader' }
+                ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },
             // Fonts

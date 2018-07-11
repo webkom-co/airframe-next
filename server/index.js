@@ -24,8 +24,6 @@ const app = express();
 const port = process.env.PORT || 4000;
 const rootDir = path.dirname(process.argv[1]);
 
-app.set('view engine', 'html');
-
 app.use(express.static(rootDir));
 
 app.use(async (req, res, next) => {
@@ -48,10 +46,6 @@ app.use(async (req, res, next) => {
             chunkNames: flushChunkNames(),
             outputPath: rootDir
         });
-        /*
-        const clientManifest = await getWebpackManifest(config.clientManifestFile);
-        const templateFiles = manifestToTemplateFiles(clientManifest);
-        */
         
         const destHtml = getCompiledTemplate({
             layoutHtml, 

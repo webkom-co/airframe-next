@@ -10,6 +10,7 @@ module.exports = {
     name: 'client',
     devtool: 'inline-source-map',
     target: 'web',
+    mode: 'development',
     entry: {
         app: [path.join(config.srcDir, 'index.js')]
     },
@@ -26,14 +27,10 @@ module.exports = {
         ]
     },
     plugins: [
-        new webpack.optimize.CommonsChunkPlugin({
-            name: 'common'
-        }),
         new HtmlWebpackPlugin({
             template: config.srcHtmlLayout,
             inject: false
         }),
-        //new webpack.HashedModuleIdsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
         }),
