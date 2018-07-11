@@ -7,19 +7,6 @@ const rootDir = path.dirname(process.argv[1]);
 const isExtension = (fileName, ext) => 
         fileName.substring(fileName.length - ext.length, fileName.length) === ext;
 
-export async function getWebpackManifest(manifestName) {
-    let appClientManifest
-    try {
-        appClientManifest = await 
-            fs.readFile(path.join(rootDir, manifestName))
-              .then(rawJson => JSON.parse(rawJson));
-    } catch(error) {
-        throw('Failed to read Webpack Manifest file. Details: %s', error.message);
-    }
-    return await fs.readFile(path.join(rootDir, manifestName))
-                    .then(rawJson => JSON.parse(rawJson));
-}
-
 export async function readWebpackStats(statsFileName) {
     let statsContent;
     try {

@@ -1,26 +1,20 @@
-//import path from 'path';
-//import webpack from 'webpack';
 var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
-var nodeExternals = require('webpack-node-externals');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var config = require('./../config');
 
 var externals = fs
-  .readdirSync(path.join(config.rootDir, 'node_modules'))
-  .filter(
-    x =>
-      !/\.bin|react-universal-component|require-universal-module|webpack-flush-chunks/.test(
-        x
-      )
-  )
-  .reduce((externals, mod) => {
-    externals[mod] = `commonjs ${mod}`
-    return externals
-  }, {});
+    .readdirSync(path.join(config.rootDir, 'node_modules'))
+    .filter(
+        x => !/\.bin|react-universal-component|require-universal-module|webpack-flush-chunks/.test(x)
+    )
+    .reduce((externals, mod) => {
+        externals[mod] = `commonjs ${mod}`
+        return externals
+    }, {});
 
 module.exports = {
     devtool: false,

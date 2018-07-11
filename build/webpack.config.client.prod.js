@@ -2,7 +2,6 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var WebpackAssetsManifest = require('webpack-assets-manifest');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 

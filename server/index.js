@@ -9,7 +9,6 @@ import compression from 'compression';
 import path from 'path';
 
 import {
-    getWebpackManifest,
     getCompiledTemplate,
     getStatsEntrypointFiles,
     getFileExtension,
