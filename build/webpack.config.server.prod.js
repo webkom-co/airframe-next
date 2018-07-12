@@ -67,7 +67,8 @@ module.exports = {
                         options: {
                             modules: true,
                             importLoaders: 1,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                            localIdentName: '[name]_[local]_[hash:base64:5]',
+                            minimize: true
                         }
                     },
                     { loader: 'postcss-loader' }
@@ -84,11 +85,17 @@ module.exports = {
                         options: {
                             modules: true,
                             importLoaders: 1,
-                            localIdentName: '[name]_[local]_[hash:base64:5]'
+                            localIdentName: '[name]_[local]_[hash:base64:5]',
+                            minimize: true
                         }
                     },
                     { loader: 'postcss-loader' },
-                    { loader: 'sass-loader' }
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: config.scssIncludes
+                        }
+                    }
                 ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
@@ -98,7 +105,12 @@ module.exports = {
                 test: /\.css$/,
                 use: [
                     ExtractCssChunks.loader,
-                    'css-loader',
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    },
                     'postcss-loader'
                 ],
                 include: [path.resolve(config.srcDir, 'styles')]
@@ -107,9 +119,19 @@ module.exports = {
                 test: /\.scss$/,
                 use: [
                     ExtractCssChunks.loader,
-                    'css-loader',
+                    { 
+                        loader: 'css-loader',
+                        options: {
+                            minimize: true
+                        }
+                    },
                     'postcss-loader',
-                    'sass-loader'
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: config.scssIncludes
+                        }
+                    }
                 ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },

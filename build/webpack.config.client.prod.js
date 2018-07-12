@@ -1,5 +1,4 @@
 var path = require('path');
-var fs = require('fs');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
@@ -78,7 +77,12 @@ module.exports = {
                         }
                     },
                     { loader: 'postcss-loader' },
-                    { loader: 'sass-loader' }
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: config.scssIncludes
+                        }
+                    }
                 ],
                 exclude: [path.resolve(config.srcDir, 'styles')],
                 include: [config.srcDir]
@@ -109,7 +113,12 @@ module.exports = {
                         }
                     }, 
                     { loader: 'postcss-loader' }, 
-                    { loader: 'sass-loader' }
+                    {
+                        loader: 'sass-loader',
+                        options: {
+                            includePaths: config.scssIncludes
+                        }
+                    }
                 ],
                 include: [path.resolve(config.srcDir, 'styles')]
             },

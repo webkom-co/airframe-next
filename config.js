@@ -18,7 +18,8 @@ var config = {
     srcHtmlLayout:          path.join(root, 'app', 'index.html'),
 
     // Site Config ====================================================
-    siteTitle:              'React Starter App'
+    siteTitle:              'React Starter App',
+    scssIncludes:           []
 }
 
 module.exports = config;
