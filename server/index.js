@@ -7,6 +7,7 @@ import flushChunks from 'webpack-flush-chunks'
 import express from 'express';
 import compression from 'compression';
 import path from 'path';
+import * as _ from 'lodash';
 
 import {
     getCompiledTemplate,
@@ -44,8 +45,17 @@ app.use(async (req, res, next) => {
         
         const webpackStats = await readWebpackStats(config.clientStatsFile);
         const entryPoints = getStatsEntrypointFiles(webpackStats);
+        // TODO: There is something wrong here - flushChunkNames() returns
+        // nested chunks as 'Parent/Child' format, but flushChunks
+        // expects 'Parent-Child'. Quick replace() for now. The topic
+        // is active here: https://github.com/faceyspacey/react-universal-component/issues/117
+        // but upgrading webpack didn't help
+        const chunkNames = _.map(
+            flushChunkNames(),
+            (chunkName) => chunkName.replace('/', '-')
+        );
         const chunks = flushChunks(webpackStats, {
-            chunkNames: flushChunkNames(),
+            chunkNames,
             outputPath: rootDir
         });
         
@@ -72,7 +82,7 @@ app.use(async (req, res, next) => {
     }
 });
 
-app.use((req, res, next) => {
+app.use((req, res) => {
     res.status(404);
   
     if (req.accepts('html')) {
@@ -89,5 +99,6 @@ app.use((req, res, next) => {
 });
 
 app.listen(port, () => {
+    /* eslint-disable-next-line no-console */
     console.log('SSR application started!');
 });
