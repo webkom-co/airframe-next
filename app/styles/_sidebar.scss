@@ -1,0 +1,62 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins/breakpoints";
+@import "variables";
+
+.sidebar {
+    display: flex;
+    height: 100%;
+    width: $sidebar-default-width;
+    flex-direction: column;
+    background: $sidebar-background;
+
+    &__section {
+        flex: 0 0 auto;
+        padding: 1rem;
+
+        &--fluid {
+            flex: 1 1 auto;
+        }
+
+        &--cover {
+            padding: 0;
+        }
+    }
+
+    &__show-slim {
+        display: none;
+    }
+}
+
+// collapse to Slim Sidebar at >= LG
+@media (min-width: breakpoint-min('lg', $grid-breakpoints)) {
+    .sidebar--slim {
+        &.sidebar--collapsed {
+            width: $sidebar-slim-width;
+
+            .sidebar__show-slim {
+                display: block;
+            }
+
+            .sidebar__hide-slim {
+                display: none;
+            }
+        }
+    }
+}
+
+// overlay and collapse with transform at < LG
+@media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+    .sidebar {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: auto;
+        z-index: 4;
+        transition: transform $sidebar-overlay-transition;
+
+        &--collapsed {
+            transform: translateX(-100%);
+        }
+    }
+}

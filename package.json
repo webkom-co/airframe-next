@@ -17,6 +17,7 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
     "babel-loader": "^7.1.5",
     "babel-plugin-universal-import": "^3.0.0",
     "babel-polyfill": "^6.26.0",
@@ -48,6 +49,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
+    "bootstrap": "^4.1.1",
     "express": "^4.16.3",
     "font-awesome": "^4.7.0",
     "fs-extra": "^6.0.1",
@@ -62,6 +64,7 @@
     "react-router-dom": "^4.3.1",
     "react-router-redux": "^5.0.0-alpha.9",
     "react-universal-component": "^2.8.1",
+    "reactstrap": "^6.3.0",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",

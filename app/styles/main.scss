@@ -1,7 +1,3 @@
-body {
-    background-color: #ccc;
-}
-
-.jakas-klasa {
-    color: yellow;
-}
+@import "./layout";
+@import "./sidebar";
+@import "./sidebar-menu";

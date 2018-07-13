@@ -1,0 +1,24 @@
+@import "variables";
+
+.layout {
+    background-color: $body-color;
+    display: flex;
+    min-width: 100vh;
+
+    &__sidebar {
+        flex: 0 0 auto;
+        height: 100vh;
+    }
+
+    &__navbar {
+
+    }
+
+    &__content {
+        padding: 2rem;
+    }
+
+    &__wrap {
+        flex: 1 1 auto;
+    }
+}

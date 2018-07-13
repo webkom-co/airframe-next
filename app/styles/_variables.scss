@@ -1,0 +1,25 @@
+@import "bootstrap/variables";
+
+$body-color: #fff; 
+
+$sidebar-default-width: 250px;
+$sidebar-slim-width: 60px;
+$sidebar-background: $gray-100;
+$sidebar-overlay-transition: 300ms cubic-bezier(0.215, 0.610, 0.355, 1.000);
+
+$sidebar-menu-item-padding: (
+    top: 0.5rem,
+    right: 1rem,
+    bottom: 0.5rem,
+    left: 1rem,
+);
+$sidebar-submenu-item-padding: (
+    top: 0.5rem,
+    right: 1rem,
+    bottom: 0.5rem,
+    left:  2.5rem,
+);
+$sidebar-submenu-nested-offset: 1rem;
+$sidebar-submenu-nested-font-size: 12px;
+
+$navbar-height: 56px;

@@ -1,0 +1,98 @@
+@import "./variables";
+
+@mixin caret {
+    margin-left: 0.5rem;
+    width: 1.28571em;
+    text-align: center;
+    font-family: FontAwesome;
+    content: "\f104";
+}
+
+@mixin applyPaddingMap($padding-map, $leftOffset) {
+    padding-top: map-get($padding-map, top);
+    padding-right: map-get($padding-map, right);
+    padding-bottom: map-get($padding-map, bottom);
+    padding-left: calc(#{map-get($padding-map, left)} + #{$leftOffset});
+}
+
+.sidebar-menu {
+    list-style-type: none;
+    padding: 0;
+
+    &__entry {
+        &__link {
+            display: flex;
+            align-items: center;
+            
+            @include applyPaddingMap($sidebar-menu-item-padding, 0px);
+
+            > i:first-child {
+                margin-right: 0.5rem;
+                flex: 0 0 auto;
+            }
+
+            > span {
+                flex: 1 1 auto;
+            }
+        }
+
+        &--nested {
+            // Nested Carets
+            .sidebar-menu__entry__link::after {
+                flex: 0 0 auto;
+
+                @include caret();
+            }
+            
+            &.open .sidebar-menu__entry__link::after {
+                content: "\f107";
+            }
+        }
+    }
+}
+
+.sidebar-submenu {
+    padding: 0;
+    list-style-type: none;
+    height: 0;
+    overflow: hidden;
+
+    &__entry {
+        &--nested > .sidebar-submenu__entry__link::after {
+            flex: 0 0 auto;
+
+            @include caret();
+        }
+
+        &__link {
+            display: flex;
+
+            @include applyPaddingMap(
+                $sidebar-submenu-item-padding,
+                $sidebar-submenu-nested-offset
+            );
+
+            > span {
+                flex: 1 1 auto;
+            }
+        }
+    }
+}
+
+.open {
+    &.sidebar-menu__entry--nested > .sidebar-submenu__entry__link::after {
+        content: "\f107";
+    }
+
+    > .sidebar-submenu {
+        height: auto;
+    }
+}
+
+.sidebar-submenu .sidebar-submenu .sidebar-submenu__entry__link {
+    @include applyPaddingMap(
+        $sidebar-submenu-item-padding,
+        2 * $sidebar-submenu-nested-offset
+    );
+    font-size: $sidebar-submenu-nested-font-size;
+}
