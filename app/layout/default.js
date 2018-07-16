@@ -8,6 +8,10 @@ import {
     NavLink
 } from 'reactstrap';
 
+import {
+    SidebarMenu
+} from './../components';
+
 import './../styles/main.scss';
 import './../styles/bootstrap/bootstrap.scss';
 import './../styles/plugins/plugins.scss';
@@ -28,44 +32,30 @@ class Layout extends React.Component {
                             Foo
                         </div>
                         <div className="sidebar__section sidebar__section--fluid sidebar__section--cover">
-                            <ul className="sidebar-menu">
-                                <li className="sidebar-menu__entry">
-                                    <a className="sidebar-menu__entry__link" href="javascript:;">
-                                        <i className="fa fa-fw fa-home"></i>
-                                        <span>Home</span>
-                                    </a>
-                                </li>
-                                <li className="sidebar-menu__entry sidebar-menu__entry--nested open">
-                                    <a className="sidebar-menu__entry__link" href="javascript:;">
-                                        <i className="fa fa-fw fa-question"></i>
-                                        <span>Help</span>
-                                    </a>
-                                    <ul className="sidebar-submenu">
-                                        <li className="sidebar-submenu__entry sidebar-submenu__entry--nested open">
-                                            <a className="sidebar-submenu__entry__link" href="javascript:;'">
-                                                <span>Tutorial</span>
-                                            </a>
-                                            <ul className="sidebar-submenu">
-                                                <li className="sidebar-submenu__entry">
-                                                    <a href="javascript:;" className="sidebar-submenu__entry__link">
-                                                        First Tutorial
-                                                    </a>
-                                                </li>
-                                                <li className="sidebar-submenu__entry">
-                                                    <a href="javascript:;" className="sidebar-submenu__entry__link">
-                                                        Secound Tutorial
-                                                    </a>
-                                                </li>
-                                            </ul>
-                                        </li>
-                                        <li className="sidebar-submenu__entry">
-                                            <a className="sidebar-submenu__entry__link" href="javascript:;'">
-                                                <span>Training Videos</span>
-                                            </a>
-                                        </li>
-                                    </ul>
-                                </li>
-                            </ul>
+                            <SidebarMenu>
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-home"></i> }
+                                    title="Home"
+                                />
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-question"></i> }
+                                    title="Help"
+                                >
+                                    <SidebarMenu.Item title="Tutorial">
+                                        <SidebarMenu.Item
+                                            title="First Tutorial"
+                                            to="/"
+                                        />
+                                        <SidebarMenu.Item
+                                            title="Second Tutorial"
+                                            to="/"
+                                        />
+                                    </SidebarMenu.Item>
+                                    <SidebarMenu.Item
+                                        title="Training Videos"
+                                    />
+                                </SidebarMenu.Item>
+                            </SidebarMenu>
                         </div>
                         <div className="sidebar__section">
                             Bar
