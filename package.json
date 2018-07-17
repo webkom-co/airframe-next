@@ -65,10 +65,10 @@
     "react-router-redux": "^5.0.0-alpha.9",
     "react-universal-component": "^2.8.1",
     "reactstrap": "^6.3.0",
-    "recompose": "^0.27.1",
     "redux": "^4.0.0",
     "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
+    "uuid": "^3.3.2",
     "webpack-cli": "^3.0.8",
     "webpack-flush-chunks": "^2.0.1"
   }

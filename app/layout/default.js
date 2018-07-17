@@ -36,6 +36,12 @@ class Layout extends React.Component {
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-home"></i> }
                                     title="Home"
+                                    to='/'
+                                />
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-list"></i> }
+                                    title="Params"
+                                    to='/params'
                                 />
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
@@ -44,11 +50,12 @@ class Layout extends React.Component {
                                     <SidebarMenu.Item title="Tutorial">
                                         <SidebarMenu.Item
                                             title="First Tutorial"
-                                            to="/"
+                                            to="/redux-example"
+                                            exact
                                         />
                                         <SidebarMenu.Item
                                             title="Second Tutorial"
-                                            to="/"
+                                            to="/splitted"
                                         />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item

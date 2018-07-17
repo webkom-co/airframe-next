@@ -2,10 +2,12 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 import classNames from 'classnames';
-import { withState, withStateHandlers, compose, withHandlers } from 'recompose';
+import uuid from 'uuid/v4';
+
+import { MenuContext } from './MenuContext';
 
 /**
- * SidebarMenuItemLink - renders a collapse trigger or a ReactRouter Link 
+ * Renders a collapse trigger or a ReactRouter Link 
  */
 const SidebarMenuItemLink = (props) => (
     props.to ? (
@@ -16,7 +18,7 @@ const SidebarMenuItemLink = (props) => (
         <a
             href="javascript:;"
             className={`${props.classBase}__entry__link`}
-            onClick={ props.onToggle() }
+            onClick={ () => props.onToggle() }
         >
             { props.children }
         </a>
@@ -31,84 +33,116 @@ SidebarMenuItemLink.propTypes = {
 }
 
 /**
- * SidebarMenuItem - the main component determining what needs to be rendered
+ * The main menu entry component
  */
-const SidebarMenuItem = (props) => {
-    const classBase = props.isSubNode ? "sidebar-submenu" : "sidebar-menu";
-    const itemClass = classNames(`${classBase}__entry`, {
-        [`${classBase}__entry--nested`]: !!props.children
-    });
-
-    if (props.currentUrl !== props.lastCurrentUrl) {
-        props.setActive(props.currentUrl === props.to);
-        props.setLastCurrentUrl(props.currentUrl);
+export class SidebarMenuItem extends React.Component {
+    static propTypes = {
+        // MenuContext props
+        addEntry: PropTypes.func,
+        updateEntry: PropTypes.func,
+        removeEntry: PropTypes.func,
+        entries: PropTypes.object,
+        // Provided props
+        parentId: PropTypes.string,
+        children: PropTypes.node,
+        isSubNode: PropTypes.bool,
+        currentUrl: PropTypes.string,
+        // User props
+        icon: PropTypes.node,
+        title: PropTypes.string,
+        to: PropTypes.string,
+        exact: PropTypes.bool
     }
-    return (
-        <li className={ itemClass }>
-            <SidebarMenuItemLink
-                to={ props.to || null }
-                onToggle={ props.onToggle || function() { } }
-                classBase={ classBase }
-            >
-                {
-                    props.icon && React.cloneElement(props.icon, {
-                        className: classNames(
-                            props.icon.props.className,
-                            `${classBase}__entry__icon`
-                        )
-                    })
-                }
-                {
-                    typeof props.title === 'string' ?
-                        <span>{ props.title }</span> :
-                        props.title
-                }
-            </SidebarMenuItemLink>
-            {
-                props.children && (
-                    <ul className="sidebar-submenu">
+
+    static defaultProps = {
+        exact: true
+    }
+
+    constructor(props) {
+        super(props);
+
+        this.id = uuid();
+    }
+
+    componentDidMount() {
+        const entry = {
+            id: this.id,
+            parentId: this.props.parentId,
+            exact: !!this.props.exact
+        };
+        
+        if (this.props.to) {
+            entry.url = this.props.to;
+        }
+
+        this.props.addEntry(entry);
+    }
+
+    componentWillUnmount() {
+        this.props.removeEntry(this.id);
+    }
+
+    getEntry() {
+        return this.props.entries[this.id];
+    }
+
+    toggleNode() {
+        const entry = this.getEntry();
+
+        this.props.updateEntry(this.id, { open: !entry.open });
+    }
+
+    render() {
+        const entry = this.getEntry();
+        const classBase = this.props.isSubNode ? "sidebar-submenu" : "sidebar-menu";
+        const itemClass = classNames(`${classBase}__entry`, {
+            [`${classBase}__entry--nested`]: !!this.props.children,
+            'open': entry && entry.open,
+            'active': entry && entry.active
+        });
+
+        return (
+            <li className={ itemClass }>
+                <SidebarMenuItemLink
+                    to={ this.props.to || null }
+                    onToggle={ this.toggleNode.bind(this) }
+                    classBase={ classBase }
+                >
                     {
-                        React.Children.map(props.children, (child) =>
-                            React.cloneElement(child, { isSubNode: true }))
+                        this.props.icon && React.cloneElement(this.props.icon, {
+                            className: classNames(
+                                this.props.icon.props.className,
+                                `${classBase}__entry__icon`
+                            )
+                        })
                     }
-                    </ul>
-                )
-            }
-        </li>
-    );
+                    {
+                        typeof this.props.title === 'string' ?
+                            <span>{ this.props.title }</span> :
+                            this.props.title
+                    }
+                </SidebarMenuItemLink>
+                {
+                    this.props.children && (
+                        <ul className="sidebar-submenu">
+                        {
+                            React.Children.map(this.props.children, (child) => (
+                                <MenuContext.Consumer>
+                                {
+                                    (ctx) => React.cloneElement(child, {
+                                        isSubNode: true,
+                                        parentId: this.id,
+                                        currentUrl: this.props.currentUrl,
+                                        ...ctx
+                                    })
+                                }
+                                </MenuContext.Consumer>
+                            ))
+                        }
+                        </ul>
+                    )
+                }
+            </li>
+        );
+    }
 }
-SidebarMenuItem.propTypes = {
-    active: PropTypes.bool,
-    onToggle: PropTypes.func,
-    children: PropTypes.node,
-    isSubNode: PropTypes.bool,
-    icon: PropTypes.node,
-    title: PropTypes.string,
-    currentUrl: PropTypes.string,
-    to: PropTypes.string,
-
-    // State Extension
-    isOpen: PropTypes.bool,
-    isActive: PropTypes.bool,
-    lastCurrentUrl: PropTypes.string,
-    setActive: PropTypes.func,
-    setOpen: PropTypes.func,
-    setLastCurrentUrl: PropTypes.func
-}
-
-const stateExtender = compose(
-    withState('isOpen', 'setOpen', false),
-    withState('isActive', 'setActive', false),
-    withState('lastCurrentUrl', 'setLastCurrentUrl', ''),
-    withHandlers({
-        setActive: ({ setActive }) => (active) => { setActive(active) },
-        setOpen: ({ setOpen }) => (open) => { setOpen(open) },
-        setLastCurrentUrl: ({ setLastCurrentUrl }) => (url) => { setLastCurrentUrl(url) }
-    })
-);
-
-const extendedSidebarMenuItem = stateExtender(SidebarMenuItem);
-
-export {
-    extendedSidebarMenuItem as SidebarMenuItem
-};

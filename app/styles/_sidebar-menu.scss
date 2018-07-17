@@ -20,11 +20,22 @@
     padding: 0;
 
     &__entry {
+        &.active {
+            background: $gray-200;
+        }
+
+        &.active.open {
+            background: none;
+        }
+
         &__link {
             display: flex;
             align-items: center;
-            
             @include applyPaddingMap($sidebar-menu-item-padding, 0px);
+
+            &:hover {
+                text-decoration: none;
+            }
 
             > i:first-child {
                 margin-right: 0.5rem;
@@ -58,6 +69,14 @@
     overflow: hidden;
 
     &__entry {
+        &.active {
+            background: $gray-200;
+        }
+
+        &.active.open {
+            background: none;
+        }
+
         &--nested > .sidebar-submenu__entry__link::after {
             flex: 0 0 auto;
 
@@ -66,11 +85,14 @@
 
         &__link {
             display: flex;
-
             @include applyPaddingMap(
                 $sidebar-submenu-item-padding,
                 $sidebar-submenu-nested-offset
             );
+
+            &:hover {
+                text-decoration: none;
+            }
 
             > span {
                 flex: 1 1 auto;
