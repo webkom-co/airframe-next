@@ -9,6 +9,7 @@ import {
 } from 'reactstrap';
 
 import {
+    Sidebar,
     SidebarMenu
 } from './../components';
 
@@ -27,11 +28,12 @@ class Layout extends React.Component {
         return (
             <div className="layout">
                 <div className="layout__sidebar">
-                    <div className="sidebar">
-                        <div className="sidebar__section">
+                    <Sidebar>
+                        <Sidebar.Section>
                             Foo
-                        </div>
-                        <div className="sidebar__section sidebar__section--fluid sidebar__section--cover">
+                        </Sidebar.Section>
+
+                        <Sidebar.Section fluid cover>
                             <SidebarMenu>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-home"></i> }
@@ -63,11 +65,12 @@ class Layout extends React.Component {
                                     />
                                 </SidebarMenu.Item>
                             </SidebarMenu>
-                        </div>
-                        <div className="sidebar__section">
+                        </Sidebar.Section>
+
+                        <Sidebar.Section>
                             Bar
-                        </div>
-                    </div>
+                        </Sidebar.Section>
+                    </Sidebar>
                 </div>
 
                 <div className="layout__wrap">
