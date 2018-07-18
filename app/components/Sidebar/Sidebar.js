@@ -3,8 +3,9 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
 const Sidebar = (props) => {
-    const sidebarClass = classNames({
-        'sidebar--slim': props.slim
+    const sidebarClass = classNames('sidebar', {
+        'sidebar--slim': props.slim,
+        'sidebar--collapsed': props.collapsed
     });
 
     return (
@@ -16,7 +17,8 @@ const Sidebar = (props) => {
 
 Sidebar.propTypes = {
     children: PropTypes.node,
-    slim: PropTypes.bool
+    slim: PropTypes.bool,
+    collapsed: PropTypes.bool
 };
 
 export {
