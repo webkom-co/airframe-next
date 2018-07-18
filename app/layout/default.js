@@ -9,15 +9,17 @@ import {
 } from 'reactstrap';
 
 import {
+    Layout,
     Sidebar,
-    SidebarMenu
+    SidebarMenu,
+    SidebarTrigger
 } from './../components';
 
 import './../styles/main.scss';
 import './../styles/bootstrap/bootstrap.scss';
 import './../styles/plugins/plugins.scss';
 
-class Layout extends React.Component {
+class AppLayout extends React.Component {
     static propTypes = {
         children: PropTypes.node.isRequired
     }
@@ -26,9 +28,27 @@ class Layout extends React.Component {
         const { children } = this.props;
         
         return (
-            <div className="layout">
-                <div className="layout__sidebar">
+            <Layout>
+                { /* --------- Navbar ----------- */ }
+                <Layout.Navbar>
+                    <Navbar light color="light">
+                        <Nav>
+                            <NavItem>
+                                <SidebarTrigger/>
+                            </NavItem>
+                        </Nav>
+                    </Navbar>
+                </Layout.Navbar>
+
+                { /* -------- Sidebar ------------*/ }
+                <Layout.Sidebar>
                     <Sidebar>
+                        <Sidebar.Close>
+                            <SidebarTrigger tag={ <a /> }>
+                                <i className="fa fa-close"></i>
+                            </SidebarTrigger>
+                        </Sidebar.Close>
+
                         <Sidebar.Section>
                             Foo
                         </Sidebar.Section>
@@ -71,35 +91,15 @@ class Layout extends React.Component {
                             Bar
                         </Sidebar.Section>
                     </Sidebar>
-                </div>
+                </Layout.Sidebar>
 
-                <div className="layout__wrap">
-                    <div className="layout__navbar">
-                        <Navbar light color="light">
-                            <Nav>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/">Home</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/splitted">Splitted</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/params/0">Params</NavLink>
-                                </NavItem>
-                                <NavItem>
-                                    <NavLink tag={Link} to="/redux-example">Redux Example</NavLink>
-                                </NavItem>
-                            </Nav>
-                        </Navbar>
-                    </div>
-
-                    <div className="layout__content">
-                        { children }
-                    </div>
-                </div>
-            </div>
+                { /* -------- Content ------------*/ }
+                <Layout.Content>
+                    { children }
+                </Layout.Content>
+            </Layout>
         )        
     }
 }
 
-export default Layout;
+export default AppLayout;

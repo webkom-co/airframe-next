@@ -18,7 +18,10 @@ var config = {
     srcHtmlLayout:          path.join(root, 'app', 'index.html'),
 
     // Site Config ====================================================
-    siteTitle:              'React Starter App',
+    siteTitle:              'React Dashboard',
+    siteDescription:        'Initial React Dashboard seed project',
+    siteCannonicalUrl:      'http://localhost:4000',
+    siteKeywords:           'react dashboard seed',
     scssIncludes:           []
 }
 
