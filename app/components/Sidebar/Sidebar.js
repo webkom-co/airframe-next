@@ -12,6 +12,9 @@ const Sidebar = (props) => {
         'sidebar--collapsed': props.collapsed || props.pageConfig.sidebarCollapsed
     });
 
+    const defaultMqProps = typeof window === 'undefined' ?
+        { values: { deviceWidth: 900 } } :
+        {};
     return (
         <React.Fragment>
             { /* Enable OuterClick only in sidebar overlay mode */}
@@ -27,7 +30,10 @@ const Sidebar = (props) => {
             </MediaQuery>
 
             { /* Just render the content in non-overlay */ }
-            <MediaQuery minDeviceWidth={ 768 }>
+            <MediaQuery
+                minDeviceWidth={ 768 }
+                { ...defaultMqProps }
+            >
                 <div className={ sidebarClass }>
                     { props.children }
                 </div>
