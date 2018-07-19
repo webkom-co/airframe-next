@@ -10,6 +10,7 @@ const LayoutContent = (props) => (
 LayoutContent.propTypes = {
     children: PropTypes.node
 };
+LayoutContent.layoutPartName = "content";
 
 export {
     LayoutContent

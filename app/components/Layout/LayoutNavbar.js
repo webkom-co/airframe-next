@@ -10,6 +10,7 @@ const LayoutNavbar = (props) => (
 LayoutNavbar.propTypes = {
     children: PropTypes.node
 };
+LayoutNavbar.layoutPartName = "navbar";
 
 export {
     LayoutNavbar

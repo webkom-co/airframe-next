@@ -76,7 +76,9 @@ app.use(async (req, res, next) => {
             return;
         }
 
-        res.send(destHtml);
+        res
+            .header('Content-Type', 'text/html')
+            .send(destHtml);
     } else {
         next();
     }

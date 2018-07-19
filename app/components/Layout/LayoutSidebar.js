@@ -9,7 +9,8 @@ const LayoutSidebar = (props) => (
 
 LayoutSidebar.propTypes = {
     children: PropTypes.node
-}
+};
+LayoutSidebar.layoutPartName = "sidebar";
 
 export {
     LayoutSidebar

@@ -6,7 +6,7 @@ import { Provider } from 'react-redux';
 import { ConnectedRouter } from 'react-router-redux';
 
 import { getRoutes } from './../../routes';
-import Layout from './../../layout/default';
+import AppLayout from './../../layout/default';
 
 import FakeStaticContext from './FakeStaticContext';
 
@@ -20,9 +20,9 @@ const AppServer = props => {
         <Provider store={store}>
             <FakeStaticContext>
                 <ConnectedRouter history={history}>
-                    <Layout>
+                    <AppLayout>
                         { getRoutes(store) }
-                    </Layout>
+                    </AppLayout>
                 </ConnectedRouter>
             </FakeStaticContext>
         </Provider>

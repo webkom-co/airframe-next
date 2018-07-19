@@ -12,7 +12,7 @@ const findChildByType = (children, targetType) => {
     let result;
 
     React.Children.forEach(children, (child) => {
-        if (child.type.displayName === targetType.name) {
+        if (child.type.layoutPartName === targetType.layoutPartName) {
             result = child;
         }
     });
