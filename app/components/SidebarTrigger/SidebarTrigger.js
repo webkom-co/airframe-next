@@ -4,13 +4,14 @@ import PropTypes from 'prop-types';
 import { withPageConfig } from './../Layout';
 
 const SidebarTrigger = (props) => {
-    const { tag: Tag } = props;
+    const { tag: Tag, pageConfig, ...otherProps } = props;
     return (
         <Tag
             onClick={ () => { props.pageConfig.toggleSidebar(); return false; } }
-            active={ props.pageConfig.sidebarCollapsed }
+            active={ Tag !== 'a' ? pageConfig.sidebarCollapsed : undefined }
+            { ...otherProps }
         >
-            <i className="fa fa-bars fa-fw"></i>
+            { props.children }
         </Tag>
     )
 };

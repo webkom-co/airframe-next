@@ -24,6 +24,14 @@
 
     &__close {
         display: none;
+
+        > a {
+            color: $gray-300;
+
+            &:hover {
+                color: $gray-500;
+            }
+        }
     }
 
     &__show-slim {
@@ -46,6 +54,11 @@
             }
         }
     }
+    .sidebar:not(.sidebar--slim) {
+        &.sidebar--collapsed {
+            display: none;
+        }
+    }
 }
 
 // overlay and collapse with transform at < LG
@@ -65,8 +78,13 @@
 
         &__close {
             position: absolute;
-            top: 1.5rem;
-            right: 1.5rem;
+            top: 1rem;
+            right: 1rem;
+            display: block;
+        }
+
+        &:not(.sidebar--collapsed) {
+            box-shadow: 0px 0px 20px 0px rgba(0,0,0,0.75);
         }
     }
 }

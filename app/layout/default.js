@@ -44,8 +44,8 @@ class AppLayout extends React.Component {
                 <Layout.Sidebar>
                     <Sidebar>
                         <Sidebar.Close>
-                            <SidebarTrigger tag={ <a /> }>
-                                <i className="fa fa-close"></i>
+                            <SidebarTrigger tag={ 'a' } href="javascript:;">
+                                <i className="fa fa-times-circle fa-fw"></i>
                             </SidebarTrigger>
                         </Sidebar.Close>
 
@@ -54,6 +54,7 @@ class AppLayout extends React.Component {
                         </Sidebar.Section>
 
                         <Sidebar.Section fluid cover>
+                            { /* -------- Sidebar Menu ---------*/ }
                             <SidebarMenu>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-home"></i> }
