@@ -22,7 +22,8 @@ const findChildByType = (children, targetType) => {
 
 class Layout extends React.Component {
     static propTypes = {
-        children: PropTypes.node
+        children: PropTypes.node,
+        sidebarSlim: PropTypes.bool
     }
 
     constructor(props) {
@@ -56,6 +57,7 @@ class Layout extends React.Component {
             <PageConfigContext.Provider
                 value={{
                     ...this.state,
+                    sidebarSlim: !!this.props.sidebarSlim,
 
                     toggleSidebar: this.toggleSidebar.bind(this)
                 }}

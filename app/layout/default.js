@@ -28,7 +28,7 @@ class AppLayout extends React.Component {
         const { children } = this.props;
         
         return (
-            <Layout>
+            <Layout sidebarSlim>
                 { /* --------- Navbar ----------- */ }
                 <Layout.Navbar>
                     <Navbar light color="light">

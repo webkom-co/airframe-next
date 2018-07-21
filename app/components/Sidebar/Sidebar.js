@@ -8,17 +8,17 @@ import { withPageConfig } from './../Layout';
 
 const Sidebar = (props) => {
     const sidebarClass = classNames('sidebar', {
-        'sidebar--slim': props.slim,
-        'sidebar--collapsed': props.collapsed || props.pageConfig.sidebarCollapsed
+        'sidebar--slim': props.slim || props.pageConfig.sidebarSlim,
+        'sidebar--collapsed': props.collapsed || props.pageConfig.sidebarCollapsed,
     });
 
     const defaultMqProps = typeof window === 'undefined' ?
-        { values: { deviceWidth: 900 } } :
+        { values: { deviceWidth: 1366 } } :
         {};
     return (
         <React.Fragment>
             { /* Enable OuterClick only in sidebar overlay mode */}
-            <MediaQuery maxDeviceWidth={ 767.9 }>
+            <MediaQuery maxDeviceWidth={ 991.9 }>
                 <OuterClick
                     active={ !props.pageConfig.sidebarCollapsed }
                     onClickOutside={ () => props.pageConfig.toggleSidebar() }
@@ -31,7 +31,7 @@ const Sidebar = (props) => {
 
             { /* Just render the content in non-overlay */ }
             <MediaQuery
-                minDeviceWidth={ 768 }
+                minDeviceWidth={ 992 }
                 { ...defaultMqProps }
             >
                 <div className={ sidebarClass }>

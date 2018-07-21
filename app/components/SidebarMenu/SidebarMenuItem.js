@@ -47,6 +47,7 @@ export class SidebarMenuItem extends React.Component {
         children: PropTypes.node,
         isSubNode: PropTypes.bool,
         currentUrl: PropTypes.string,
+        slim: PropTypes.bool,
         // User props
         icon: PropTypes.node,
         title: PropTypes.string,
@@ -133,6 +134,7 @@ export class SidebarMenuItem extends React.Component {
                                         isSubNode: true,
                                         parentId: this.id,
                                         currentUrl: this.props.currentUrl,
+                                        slim: this.props.slim,
                                         ...ctx
                                     })
                                 }

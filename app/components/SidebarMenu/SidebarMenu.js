@@ -2,13 +2,16 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { withRouter } from 'react-router-dom';
 import _ from 'lodash';
+import classNames from 'classnames';
 
+import { withPageConfig } from './../Layout/withPageConfig'
 import { MenuContext } from './MenuContext';
 
 class SidebarMenu extends React.Component {
     static propTypes = {
         children: PropTypes.node,
-        currentUrl: PropTypes.string
+        currentUrl: PropTypes.string,
+        slim: PropTypes.bool
     }
 
     constructor(props) {
@@ -95,6 +98,11 @@ class SidebarMenu extends React.Component {
     }
 
     render() {
+        const isSlim = this.props.slim || this.props.pageConfig.sidebarSlim;
+        const sidebarMenuClass = classNames('sidebar-menu', {
+            'sidebar-menu--slim': isSlim
+        });
+
         return (
             <MenuContext.Provider
                 value={{
@@ -104,12 +112,16 @@ class SidebarMenu extends React.Component {
                     removeEntry: this.removeEntry.bind(this)
                 }}
             >
-            <ul className="sidebar-menu">
+            <ul className={ sidebarMenuClass }>
             {
                 React.Children.map(this.props.children, (child) =>
                     <MenuContext.Consumer>
                     {
-                        (ctx) => React.cloneElement(child, { ...ctx, currentUrl: this.props.location.pathname})
+                        (ctx) => React.cloneElement(child, {
+                            ...ctx,
+                            currentUrl: this.props.location.pathname,
+                            slim: isSlim
+                        })
                     }
                     </MenuContext.Consumer>
                 )
@@ -120,7 +132,7 @@ class SidebarMenu extends React.Component {
     }
 }
 
-const RouterSidebarMenu = withRouter(SidebarMenu);
+const RouterSidebarMenu = withPageConfig(withRouter(SidebarMenu));
 
 export {
     RouterSidebarMenu as SidebarMenu

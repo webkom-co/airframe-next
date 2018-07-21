@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins/breakpoints";
 @import "./variables";
 
 @mixin caret {
@@ -20,12 +22,11 @@
     padding: 0;
 
     &__entry {
-        &.active {
-            background: $gray-200;
-        }
-
-        &.active.open {
-            background: none;
+        &.active:not(.open) {
+            > .sidebar-menu__entry__link {
+                background: $sidebar-menu-highlight-bg;
+                color: $sidebar-menu-highlight-color;
+            }
         }
 
         &__link {
@@ -35,6 +36,8 @@
 
             &:hover {
                 text-decoration: none;
+                background: $sidebar-menu-highlight-bg;
+                color: $sidebar-menu-highlight-color;
             }
 
             > i:first-child {
@@ -69,12 +72,12 @@
     overflow: hidden;
 
     &__entry {
-        &.active {
-            background: $gray-200;
-        }
+        &.active:not(.open) {
+            background: $sidebar-menu-highlight-bg;
 
-        &.active.open {
-            background: none;
+            > .sidebar-submenu__entry__link {
+                color: $sidebar-menu-highlight-color;
+            }
         }
 
         &--nested > .sidebar-submenu__entry__link::after {
@@ -92,6 +95,8 @@
 
             &:hover {
                 text-decoration: none;
+                background: $sidebar-menu-highlight-bg;
+                color: $sidebar-menu-highlight-color;
             }
 
             > span {
@@ -117,4 +122,72 @@
         2 * $sidebar-submenu-nested-offset
     );
     font-size: $sidebar-submenu-nested-font-size;
+}
+
+/* ------ Slim Sidebar ---------- */
+@media (min-width: breakpoint-min('lg', $grid-breakpoints)) {
+    .sidebar--collapsed .sidebar-menu--slim {
+        .sidebar-menu__entry {
+            &.active.open {
+                > .sidebar-menu__entry__link {
+                    background: $sidebar-menu-highlight-bg;
+                    color: $sidebar-menu-highlight-color;
+                }
+            }
+
+            &--nested {
+                position: relative;
+
+                .sidebar-menu__entry__link {
+                    &::after {
+                        content: none;
+                    }
+                }
+
+                > .sidebar-submenu {
+                    display: none;
+                    position: absolute;
+                    left: 100%;
+                    top: 0;
+                    right: auto;
+                    bottom: auto;
+                    border-left: 5px solid $body-color;
+                    min-width: $sidebar-slim-submenu-width;
+                    background: $sidebar-slim-submenu-bg;
+                    padding-top: 0.5rem;
+                    padding-bottom: 0.5rem;
+                    border-radius: $sidebar-slim-submenu-border-radius;
+                    box-shadow: $sidebar-slim-submenu-box-shadow;
+
+                    // First Menu - hoverable
+                    > .sidebar-submenu__entry > .sidebar-submenu__entry__link {
+                        padding-left: 1rem;
+                    }
+                    // Nested menus
+                    .sidebar-submenu__entry__link {
+                        @include applyPaddingMap($sidebar-slim-submenu-item-padding, 0.5rem);
+                    }
+                }
+
+                &:hover > .sidebar-submenu {
+                    display: block;
+                    height: auto;
+                }
+            }
+
+            &__link {
+                justify-content: center;
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+
+                > span {
+                    display: none;
+                }
+
+                > i:first-child {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
 }
