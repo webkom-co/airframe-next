@@ -1,0 +1,10 @@
+@import "./../../styles/variables";
+
+@each $name, $color in $dashboard-colors {
+    .avatar-fg-color--#{ $name } {
+        color: $color;
+    }
+    .avatar-bg-color--#{ $name } {
+        background-color: $color;
+    }
+}

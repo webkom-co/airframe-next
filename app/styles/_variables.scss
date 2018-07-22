@@ -37,3 +37,53 @@ $sidebar-submenu-nested-offset: 1rem;
 $sidebar-submenu-nested-font-size: 12px;
 
 $navbar-height: 56px;
+
+/* Avatar Variants Definitions */
+$avatars: (
+    sm: (
+        size: 20px,
+
+        icon-bottom: -1px,
+        icon-right: 0px,
+        icon-font-size: 14px,
+        icon-stack-ratio: 0.75,
+        icon-stack-ratio-small: 0.44,
+        
+        badge-top: 1px,
+        badge-right: -2px,
+        badge-font-size: 9px
+    ),
+    md: (
+        size: 30px,
+        
+        icon-bottom: 5px,
+        icon-right: -1px,
+        icon-font-size: 20px,
+        icon-stack-ratio: 0.75,
+        icon-stack-ratio-small: 0.44,
+
+        badge-top: 3px,
+        badge-right: 5px
+    ),
+    lg: (
+        size: 60px,
+        
+        icon-bottom: 8px,
+        icon-right: 10px,
+        icon-font-size: 20px,
+        icon-stack-ratio: 0.75,
+        icon-stack-ratio-small: 0.44,
+        
+        badge-top: 5px,
+        badge-right: 10px
+    )
+);
+
+// All Colors Definitions (Add more colors in further parameters)
+$dashboard-colors: map-merge(
+    map-merge(
+        $grays,
+        $colors
+    ),
+    $theme-colors
+);

@@ -36,6 +36,7 @@ const UniversalComponent = universal(props => import(`./${props.route}`), {
 //----- Static Route Imports ------
 import Home from './Home';
 import Params from './Params';
+import Avatars from './Avatars';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -51,6 +52,11 @@ const getRoutes = (store) => {
             <Route 
                 path='/redux-example' 
                 component={() => <UniversalComponent route='ReduxExample' store={store} />} 
+            />
+            <Route 
+                path='/avatars'
+                exact
+                component={Avatars} 
             />
         </Switch>
     );
