@@ -1,13 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
+import { Badge } from 'reactstrap';
 
-const AvatarAddonBadge = (props) => (
-    <div className={ addOnClass }>
-        { children }
-    </div>
-);
+const AvatarAddonBadge = (props) => {
+    const { children, className, ...badgeProps } = props;
+
+    return (
+        <Badge className={classNames('avatar__badge', props.className)} {...badgeProps}>
+            { children }
+        </Badge>
+    );
+};
 AvatarAddonBadge.propTypes = {
     children: PropTypes.node
 };
+AvatarAddonBadge.addOnId = "avatar--badge";
 
 export { AvatarAddonBadge };

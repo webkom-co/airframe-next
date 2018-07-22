@@ -5,7 +5,7 @@ import {
     Col
 } from 'reactstrap';
 
-import { Avatar } from './../../components';
+import { Avatar, AvatarAddOn } from './../../components';
 
 import classes from './Avatars.scss';
 
@@ -20,6 +20,15 @@ const Home = () => (
                     <Avatar.Font
                         size="sm"
                         bgColor="danger"
+                        addOns={[
+                            <AvatarAddOn.Badge color="success">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                fgColor="success"
+                            />
+                        ]}
                     >
                         <i className="fa fa-anchor" />
                     </Avatar.Font>
@@ -29,6 +38,15 @@ const Home = () => (
                     <Avatar.Font
                         bgColor="success"
                         size="lg"
+                        addOns={[
+                            <AvatarAddOn.Badge color="danger">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="danger"
+                            />
+                        ]}
                     >
                         <i className="fa fa-bluetooth" />
                     </Avatar.Font>

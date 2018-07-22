@@ -2,20 +2,25 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
+import avatarColors from './avatarColors.scss';
+
 const AvatarAddonIcon = (props) => {
     const addOnClass = classNames('avatar__icon', {
         'avatar__icon--small': props.small
-    });
+    }, avatarColors[`avatar-fg-color--${ props.color }`]);
 
     return (
-        <div className={ addOnClass }>
-            { children }
-        </div>
+        <i className={ classNames(addOnClass, props.className) }></i>
     );
 };
 AvatarAddonIcon.propTypes = {
     small: PropTypes.bool,
-    children: PropTypes.node
+    className: PropTypes.string,
+    color: PropTypes.string
 };
+AvatarAddonIcon.defaultProps = {
+    color: "success"
+};
+AvatarAddonIcon.addOnId = "avatar--icon";
 
 export { AvatarAddonIcon };
