@@ -13,7 +13,7 @@ import { buildReducers } from './../modules';
 // with propper SSR support (https://github.com/faceyspacey/react-universal-component)
 const UniversalComponent = universal(props => import(`./${props.route}`), {
     loading: PageLoader,
-    onLoad: (loadedModule, { isSync, isServer }, props) => {
+    onLoad: (loadedModule, loadOptions, props) => {
         const { store } = props;
         const reducers = loadedModule.exports ? 
             loadedModule.exports.reducers : loadedModule.reducers;
@@ -23,8 +23,6 @@ const UniversalComponent = universal(props => import(`./${props.route}`), {
                 throw 'Universal Component: When you want to ' +  
                     'asynchronously inject reducers, you need to provide ' +  
                     'also Redux \'store\' in the Bundle props.';
-
-                return;
             }
             const updatedReducers = buildReducers(reducers);
 
@@ -37,6 +35,7 @@ const UniversalComponent = universal(props => import(`./${props.route}`), {
 import Home from './Home';
 import Params from './Params';
 import Avatars from './Avatars';
+import Cards from './Cards';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -57,6 +56,11 @@ const getRoutes = (store) => {
                 path='/avatars'
                 exact
                 component={Avatars} 
+            />
+            <Route 
+                path='/cards'
+                exact
+                component={Cards} 
             />
         </Switch>
     );

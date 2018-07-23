@@ -7,13 +7,14 @@ const AvatarAddonBadge = (props) => {
     const { children, className, ...badgeProps } = props;
 
     return (
-        <Badge className={classNames('avatar__badge', props.className)} {...badgeProps}>
+        <Badge className={classNames('avatar__badge', className)} {...badgeProps}>
             { children }
         </Badge>
     );
 };
 AvatarAddonBadge.propTypes = {
-    children: PropTypes.node
+    children: PropTypes.node,
+    className: PropTypes.string
 };
 AvatarAddonBadge.addOnId = "avatar--badge";
 
