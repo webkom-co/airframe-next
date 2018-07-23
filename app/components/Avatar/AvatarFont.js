@@ -18,10 +18,10 @@ const AvatarFont = (props) => {
     } = props;
     const parentClass = classNames(classes['avatar-font'],
         classes[`avatar-font--${avatarProps.size}`],
-        bgColor && avatarColors[`avatar-bg-color--${ bgColor }`]
+        bgColor && avatarColors[`bg-color--${ bgColor }`]
     );
     const childClass = classNames(classes['avatar-font__text'],
-        fgColor && avatarColors[`avatar-fg-color--${ fgColor }`]
+        fgColor && avatarColors[`fg-color--${ fgColor }`]
     );
     const parentCustomStyle = bgColorCustom ? {
         backgroundColor: bgColorCustom
