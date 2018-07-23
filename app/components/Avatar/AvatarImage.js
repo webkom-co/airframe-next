@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
+import _ from 'lodash';
 
 import { Avatar } from './Avatar';
 import { AvatarFont } from './AvatarFont';
@@ -12,11 +13,12 @@ class AvatarImage extends React.Component {
         src: PropTypes.string.isRequired,
         placeholder: PropTypes.node,
         alt: PropTypes.string,
-        ...Avatar.propTypes
+        className: PropTypes.string,
+        ..._.omit(Avatar.propTypes, ['children'])
     };
 
     static defaultProps = {
-        placholder: <i className="fa fa-user fa-fw"></i>
+        placeholder: <i className="fa fa-user fa-fw"></i>
     }
 
     constructor(props) {
@@ -28,23 +30,24 @@ class AvatarImage extends React.Component {
     }
 
     render() {
-        const parenClass = classNames(classes['avatar-image'], {
+        const { src, placeholder, alt, className, ...avatarProps } = this.props;
+        const parentClass = classNames(classes['avatar-image'], {
             [classes['avatar-image--loaded']]: this.state.imgLoaded
-        });
+        }, className);
 
         return (
             <div className={ parentClass }>
-                <Avatar className={ classes['avatar-image__image'] }>
+                <Avatar className={ classes['avatar-image__image'] } {...avatarProps}>
                     <img
-                        src={ this.props.src }
-                        alt={ this.props.alt }
+                        src={ src }
+                        alt={ alt }
                         onLoad={ () => { this.setState({ imgLoaded: true }) } }
                     />
                 </Avatar>
                 {
                     !this.state.imgLoaded && (
-                        <AvatarFont className={ classes['avatar-image__placeholder'] }>
-                            { this.props.placeholder }
+                        <AvatarFont className={ classes['avatar-image__placeholder'] } {...avatarProps}>
+                            { placeholder }
                         </AvatarFont>
                     )
                 }

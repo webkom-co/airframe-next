@@ -1,11 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
 import {
     Navbar,
     Nav,
     NavItem,
-    NavLink
 } from 'reactstrap';
 
 import {

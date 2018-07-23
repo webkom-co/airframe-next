@@ -9,3 +9,11 @@
         flex: 0 0 auto;
     }
 }
+
+.avatar-font--sm .avatar-font__text {
+    font-size: 12px;
+}
+
+.avatar-font--lg .avatar-font__text {
+    font-size: 36px;
+}

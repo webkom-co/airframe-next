@@ -21,12 +21,18 @@ const Home = () => (
                         size="sm"
                         bgColor="danger"
                         addOns={[
-                            <AvatarAddOn.Badge color="success">
+                            <AvatarAddOn.Badge color="success" key="avatar-badge">
                                 32156
                             </AvatarAddOn.Badge>,
                             <AvatarAddOn.Icon 
                                 className="fa fa-circle"
-                                fgColor="success"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="success"
+                                key="avatar-icon-fg"
                             />
                         ]}
                     >
@@ -39,17 +45,130 @@ const Home = () => (
                         bgColor="success"
                         size="lg"
                         addOns={[
-                            <AvatarAddOn.Badge color="danger">
+                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
                                 32156
                             </AvatarAddOn.Badge>,
                             <AvatarAddOn.Icon 
                                 className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
                                 color="danger"
+                                key="avatar-icon-fg"
                             />
                         ]}
                     >
                         <i className="fa fa-bluetooth" />
                     </Avatar.Font>
+                </Col>
+
+                <Col lg={ 4 } className={ classes['avatars-box'] }>
+                    <Avatar.Font
+                        size="sm"
+                        bgColor="danger"
+                        addOns={[
+                            <AvatarAddOn.Badge color="success" key="avatar-badge">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="success"
+                                key="avatar-icon-fg"
+                            />
+                        ]}
+                    >
+                        MK
+                    </Avatar.Font>
+                    <Avatar.Font>
+                        SM
+                    </Avatar.Font>
+                    <Avatar.Font
+                        bgColor="success"
+                        size="lg"
+                        addOns={[
+                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="danger"
+                                key="avatar-icon-fg"
+                            />
+                        ]}
+                    >
+                        PS
+                    </Avatar.Font>
+                </Col>
+
+                <Col lg={ 4 } className={ classes['avatars-box'] }>
+                    <Avatar.Image
+                        size="sm"
+                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        addOns={[
+                            <AvatarAddOn.Badge color="success" key="avatar-badge">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="success"
+                                key="avatar-icon-fg"
+                            />
+                        ]}
+                    />
+                    <Avatar.Image
+                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        addOns={[
+                            <AvatarAddOn.Badge color="success" key="avatar-badge">
+                                12
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="success"
+                                key="avatar-icon-fg"
+                            />
+                        ]}
+                    />
+                    <Avatar.Image
+                        size="lg"
+                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        addOns={[
+                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
+                                32156
+                            </AvatarAddOn.Badge>,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="white"
+                                key="avatar-icon-bg"
+                            />,
+                            <AvatarAddOn.Icon 
+                                className="fa fa-circle"
+                                color="danger"
+                                key="avatar-icon-fg"
+                            />
+                        ]}
+                    />
                 </Col>
             </Row>
         </Container>

@@ -51,7 +51,8 @@ Avatar.propTypes = {
     size: PropTypes.string,
     children: PropTypes.node.isRequired,
     addOns: PropTypes.node,
-    style: PropTypes.object
+    style: PropTypes.object,
+    className: PropTypes.string
 };
 Avatar.defaultProps = {
     size: "md",

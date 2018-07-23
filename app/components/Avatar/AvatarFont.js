@@ -17,9 +17,10 @@ const AvatarFont = (props) => {
         ...avatarProps
     } = props;
     const parentClass = classNames(classes['avatar-font'],
+        classes[`avatar-font--${avatarProps.size}`],
         bgColor && avatarColors[`avatar-bg-color--${ bgColor }`]
     );
-    const childClass = classNames(classes['avatar-font--text'],
+    const childClass = classNames(classes['avatar-font__text'],
         fgColor && avatarColors[`avatar-fg-color--${ fgColor }`]
     );
     const parentCustomStyle = bgColorCustom ? {
@@ -28,7 +29,11 @@ const AvatarFont = (props) => {
     const childCustomStyle = fgColorCustom ? {
         color: fgColorCustom
     } : { };
-    const child = React.Children.only(children);
+    const child = typeof children === 'string' ? 
+        <span>
+            { children }
+        </span> :
+        React.Children.only(children);
     return (
         <Avatar { ...avatarProps }>
             <div className={ parentClass } style={parentCustomStyle}>
@@ -51,7 +56,7 @@ AvatarFont.propTypes = {
     ...Avatar.propTypes
 };
 AvatarFont.defaultProps = {
-    bgColor: 'primary',
+    bgColor: '400',
     fgColor: 'white'
 };
 

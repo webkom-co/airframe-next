@@ -1,3 +1,29 @@
 .avatar-image {
-    
+    display: inline-block;
+    position: relative;
+
+    &__image {
+        position: relative;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        z-index: 0;
+
+        img {
+            width: 100%;
+        }
+    }
+
+    &__placeholder {
+        position: relative;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+
+    &--loaded {
+        .avatar-image__image {
+            visibility: visible;
+        }
+    }
 }
