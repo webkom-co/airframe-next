@@ -86,7 +86,9 @@ const Home = () => (
                     >
                         MK
                     </Avatar.Font>
-                    <Avatar.Font>
+                    <Avatar.Font
+                        bgColor="info"
+                    >
                         SM
                     </Avatar.Font>
                     <Avatar.Font

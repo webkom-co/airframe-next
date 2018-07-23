@@ -49,18 +49,22 @@
         width: 100%;
         height: 100%;
         overflow: hidden;
+        position: relative;
+        z-index: 0;
     }
 
     &__badge {
         position: absolute;
         display: block;
         transform: translate(50%, -50%);
+        z-index: 1;
     }
     
     &__icon {
         position: absolute;
         display: block;
         transform: translate(50%, 50%);
+        z-index: 1;
   
         &--stack {
             > .fa {
