@@ -44,7 +44,8 @@ const Sidebar = (props) => {
 Sidebar.propTypes = {
     children: PropTypes.node,
     slim: PropTypes.bool,
-    collapsed: PropTypes.bool
+    collapsed: PropTypes.bool,
+    pageConfig: PropTypes.object
 };
 
 const cfgSidebar = withPageConfig(Sidebar);

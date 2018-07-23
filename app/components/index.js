@@ -8,6 +8,7 @@ import PageLoader from './PageLoader';
 import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
+import Tools from './Tools';
 
 export {
     App,
@@ -21,7 +22,8 @@ export {
     PageLoader,
     Sidebar,
     SidebarMenu,
-    SidebarTrigger
+    SidebarTrigger,
+    Tools
 };
 // Export non overriden Reactstrap components
 export {

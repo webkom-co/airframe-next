@@ -10,7 +10,8 @@ import {
     Layout,
     Sidebar,
     SidebarMenu,
-    SidebarTrigger
+    SidebarTrigger,
+    Tools
 } from './../components';
 
 import './../styles/main.scss';
@@ -48,7 +49,9 @@ class AppLayout extends React.Component {
                         </Sidebar.Close>
 
                         <Sidebar.Section>
-                            Foo
+                            <Tools.DefaultOnly>
+                                Foo
+                            </Tools.DefaultOnly>
                         </Sidebar.Section>
 
                         <Sidebar.Section fluid cover>
@@ -97,7 +100,10 @@ class AppLayout extends React.Component {
                         </Sidebar.Section>
 
                         <Sidebar.Section>
-                            Bar
+                            <Tools.SlimOnly>
+                                <span>Foo</span>
+                                <span>Bar</span>
+                            </Tools.SlimOnly>
                         </Sidebar.Section>
                     </Sidebar>
                 </Layout.Sidebar>
