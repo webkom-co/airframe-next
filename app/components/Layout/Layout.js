@@ -70,7 +70,12 @@ class Layout extends React.Component {
                     <meta name="keywords" content={ this.state.pageKeywords } />
                 </Helmet>
                 <div className="layout">
-                    { !this.state.sidebarHidden && sidebar }
+                    { 
+                        !this.state.sidebarHidden && React.cloneElement(sidebar, {
+                            sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed,
+                            sidebarCollapsed: !this.props.sidebarSlim && this.state.sidebarCollapsed
+                        })
+                    }
 
                     <div className="layout__wrap">
                         { !this.state.navabrHidden && navbar }

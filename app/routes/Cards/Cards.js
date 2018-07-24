@@ -36,8 +36,8 @@ const Cards = () => (
                     </h1>
                 </Col>
             </Row>
-            <Row className="mt-4">
-                <Col lg={ 4 }>
+            <Row>
+                <Col lg={ 4 } className="mt-4">
                     <Card>
                         <CardHeader>
                             Default Header
@@ -47,7 +47,7 @@ const Cards = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={ 4 } className="mt-4">
                     <Card>
                         <CardHeader
                             type="background"
@@ -61,7 +61,7 @@ const Cards = () => (
                     </Card>
                 </Col>
                 <Col lg={ 4 }>
-                    <Card>
+                    <Card className="mt-4">
                         <CardHeader
                             type="border"
                             color="warning"
@@ -74,42 +74,42 @@ const Cards = () => (
                     </Card>
                 </Col>
             </Row>
-            <Row className="mt-4">
-                <Col lg={ 4 }>
+            <Row>
+                <Col lg={ 4 } className="mt-4">
                     <Card color="primary">
                         { cardContent("Border Color") }
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="side-border" color="danger">
                         { cardContent("Side Color") }
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="background" color="info">
                         { cardContent("Background Color") }
                     </Card>
                 </Col>
             </Row>
-            <Row className="mt-4">
-                <Col lg={ 4 }>
+            <Row>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="shadow">
                         { cardContent("Shadow") }
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="border-dot" color="400">
                         { cardContent("Border Dotted") }
                     </Card>
                 </Col>
-                <Col lg={ 4 }>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="border-dash" color="400">
                         { cardContent("Border Dashed") }
                     </Card>
                 </Col>
             </Row>
-            <Row className="mt-4">
-                <Col lg={ 4 }>
+            <Row>
+                <Col lg={ 4 } className="mt-4">
                     <Card type="none">
                         { cardContent("Plain") }
                     </Card>

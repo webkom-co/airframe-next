@@ -1,3 +1,5 @@
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/mixins/breakpoints";
 @import "variables";
 
 .layout {
@@ -5,13 +7,52 @@
     display: flex;
     min-width: 100vh;
 
+    &__navbar {
+        height: $navbar-height;
+
+        > .fixed-top {
+            left: $sidebar-default-width;
+
+            @media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+                left: 0;
+            }
+        }
+    }
+
     &__sidebar {
         flex: 0 0 auto;
         height: 100vh;
+        width: $sidebar-default-width;
+
+        @media (min-width: breakpoint-min('lg', $grid-breakpoints)) {
+            &--slim {
+                width: $sidebar-slim-width;
+            }
+
+            &--slim ~ .layout__wrap .layout__navbar > .fixed-top {
+                left: $sidebar-slim-width;
+            }
+
+            &--collapsed {
+                width: 0;
+            }
+
+            &--collapsed ~ .layout__wrap .layout__navbar > .fixed-top {
+                left: 0;
+            }
+        }
+
+        @media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+            width: 0;
+        }
     }
 
     &__content {
-        padding: 2rem;
+        padding: 1.5rem;
+
+        @media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+            padding: 0.5rem;
+        }
     }
 
     &__wrap {

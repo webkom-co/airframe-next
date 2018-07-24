@@ -3,8 +3,13 @@
 @import "variables";
 
 .sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    z-index: 1031;
+
     display: flex;
-    height: 100%;
     width: $sidebar-default-width;
     flex-direction: column;
     background: $sidebar-background;
@@ -15,6 +20,7 @@
 
         &--fluid {
             flex: 1 1 auto;
+            overflow-y: auto;
         }
 
         &--cover {
@@ -52,6 +58,10 @@
             .sidebar__hide-slim {
                 display: none;
             }
+
+            .sidebar__section--fluid {
+                overflow-y: visible;
+            }
         }
     }
     .sidebar:not(.sidebar--slim) {
@@ -69,7 +79,7 @@
         bottom: 0;
         left: 0;
         right: auto;
-        z-index: 4;
+        
         transition: transform $sidebar-overlay-transition;
 
         &--collapsed {

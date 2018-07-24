@@ -1,20 +1,25 @@
 import React from 'react';
-import {
+
+import { 
+    Avatar,
+    AvatarAddOn,
     Row,
     Container,
     Col
-} from 'reactstrap';
-
-import { Avatar, AvatarAddOn } from './../../components';
+} from './../../components';
 
 import classes from './Avatars.scss';
 
 const Home = () => (
     <React.Fragment>
-        <h1>
-            Avatars
-        </h1>
         <Container fluid>
+            <Row>
+                <Col lg={ 12 }>
+                    <h1>
+                        Avatars
+                    </h1>
+                </Col>
+            </Row>
             <Row>
                 <Col lg={ 4 } className={ classes['avatars-box'] }>
                     <Avatar.Font

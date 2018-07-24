@@ -1,11 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-const LayoutNavbar = (props) => (
-    <div className="layout__navbar">
-        { props.children }
-    </div>
-);
+const LayoutNavbar = (props) => {
+    const navbar = React.Children.only(props.children);
+
+    return (
+        <div className="layout__navbar">
+        {
+            React.cloneElement(navbar, { fixed: "top" })
+        }
+        </div>
+    );
+};
 
 LayoutNavbar.propTypes = {
     children: PropTypes.node
