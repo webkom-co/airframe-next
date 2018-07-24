@@ -4,8 +4,6 @@
 
     &__image {
         position: relative;
-        top: 0;
-        left: 0;
         visibility: hidden;
         z-index: 0;
 
@@ -19,7 +17,7 @@
     }
 
     &__placeholder {
-        position: relative;
+        position: absolute;
         top: 0;
         left: 0;
         z-index: 1;

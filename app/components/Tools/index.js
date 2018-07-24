@@ -1,9 +1,11 @@
 import { SlimOnly } from './SlimOnly';
 import { DefaultOnly } from './DefaultOnly';
+import { SlimProps } from './SlimProps';
 
 const Tools = {
     SlimOnly,
-    DefaultOnly
+    DefaultOnly,
+    SlimProps
 };
 
 export default Tools;

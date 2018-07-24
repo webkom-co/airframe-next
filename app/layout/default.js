@@ -7,6 +7,8 @@ import {
 } from 'reactstrap';
 
 import {
+    Avatar,
+    AvatarAddOn,
     Layout,
     Sidebar,
     SidebarMenu,
@@ -17,6 +19,8 @@ import {
 import './../styles/main.scss';
 import './../styles/bootstrap/bootstrap.scss';
 import './../styles/plugins/plugins.scss';
+
+import avatarImg from './../images/avatars/avatar-1.jpg';
 
 class AppLayout extends React.Component {
     static propTypes = {
@@ -49,8 +53,29 @@ class AppLayout extends React.Component {
                         </Sidebar.Close>
 
                         <Sidebar.Section>
+                            <Tools.SlimProps
+                                slimProps={{ size: 'md' }}
+                            >
+                                <Avatar.Image
+                                    size="lg"
+                                    src={ avatarImg }
+                                    addOns={[
+                                        <AvatarAddOn.Icon 
+                                            className="fa fa-circle"
+                                            color="white"
+                                            key="avatar-icon-bg"
+                                        />,
+                                        <AvatarAddOn.Icon 
+                                            className="fa fa-circle"
+                                            color="success"
+                                            key="avatar-icon-fg"
+                                        />
+                                    ]}
+                                />
+                            </Tools.SlimProps>
                             <Tools.DefaultOnly>
-                                Foo
+                                <h6 className="mt-2">Craig Marsh</h6>
+                                <p className="mb-0">International Usability</p>
                             </Tools.DefaultOnly>
                         </Sidebar.Section>
 
