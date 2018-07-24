@@ -1,19 +1,19 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import className from 'classnames';
+import MediaQuery from 'react-responsive';
+
+import { withPageConfig } from './../Layout/withPageConfig';
 
 const DefaultOnly = (props) => (
     <React.Fragment>
     {
-        typeof props.children === 'string' ?
-            <div className="sidebar__hide-slim">
+        props.pageConfig.sidebarSlim && props.pageConfig.sidebarCollapsed ? (
+            <MediaQuery maxWidth={ 991.8 }>
                 { props.children }
-            </div> :
-            React.Children.map(props.children, (child) => 
-                React.cloneElement(child, {
-                    className: className(child.props.className, 'sidebar__hide-slim')
-                })
-            )
+            </MediaQuery>
+        ) : (
+            props.children
+        )
     }
     </React.Fragment>
 );
@@ -22,6 +22,8 @@ DefaultOnly.propTypes = {
     pageConfig: PropTypes.object
 };
 
+const ExtendedDefaultOnly = withPageConfig(DefaultOnly);
+
 export {
-    DefaultOnly
+    ExtendedDefaultOnly as DefaultOnly
 };

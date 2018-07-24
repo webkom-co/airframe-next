@@ -1,27 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import className from 'classnames';
+import MediaQuery from 'react-responsive';
+
+import { withPageConfig } from './../Layout/withPageConfig';
 
 const SlimOnly = (props) => (
-    <React.Fragment>
+    <MediaQuery minWidth={ 992 }>
     {
-        typeof props.children === 'string' ?
-            <div className="sidebar__show-slim">
-                { props.children }
-            </div> :
-            React.Children.map(props.children, (child) => 
-                React.cloneElement(child, {
-                    className: className(child.props.className, 'sidebar__show-slim')
-                })
-            )
+        props.pageConfig.sidebarSlim && props.pageConfig.sidebarCollapsed && props.children
     }
-    </React.Fragment>
+    </MediaQuery>
 );
 SlimOnly.propTypes = {
     children: PropTypes.node.isRequired,
     pageConfig: PropTypes.object
 };
 
+const ExtendedSlimOnly = withPageConfig(SlimOnly);
+
 export {
-    SlimOnly
+    ExtendedSlimOnly as SlimOnly
 };
