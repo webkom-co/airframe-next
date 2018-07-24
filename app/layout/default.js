@@ -103,7 +103,7 @@ class AppLayout extends React.Component {
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-list"></i> }
                                     title="Params"
-                                    to='/params'
+                                    to='/params/0'
                                 />
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
