@@ -5,6 +5,7 @@ import CardHeader from './CardHeader';
 import Layout, { withPageConfig } from './Layout';
 import OuterClick from './OuterClick';
 import PageLoader from './PageLoader';
+import Progress from './Progress';
 import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
@@ -20,6 +21,7 @@ export {
     withPageConfig,
     OuterClick,
     PageLoader,
+    Progress,
     Sidebar,
     SidebarMenu,
     SidebarTrigger,
@@ -92,7 +94,6 @@ export {
     Popover,
     PopoverBody,
     PopoverHeader,
-    Progress,
     Row,
     TabContent,
     Table,

@@ -10,6 +10,7 @@ import {
     Avatar,
     AvatarAddOn,
     Layout,
+    Progress,
     Sidebar,
     SidebarMenu,
     SidebarTrigger,
@@ -53,6 +54,7 @@ class AppLayout extends React.Component {
                         </Sidebar.Close>
 
                         <Sidebar.Section>
+                            { /* Avatar */ }
                             <Tools.SlimProps
                                 slimProps={{ size: 'md' }}
                             >
@@ -73,6 +75,7 @@ class AppLayout extends React.Component {
                                     ]}
                                 />
                             </Tools.SlimProps>
+                            { /* User Info (non-slim only) */ }
                             <Tools.DefaultOnly>
                                 <h6 className="mt-2">Craig Marsh</h6>
                                 <p className="mb-0">International Usability</p>
@@ -125,10 +128,23 @@ class AppLayout extends React.Component {
                         </Sidebar.Section>
 
                         <Sidebar.Section>
-                            <Tools.SlimOnly>
-                                <span>Foo</span>
-                                <span>Bar</span>
-                            </Tools.SlimOnly>
+                            { /* Capacity / Storage (non-slim only) */ }
+                            <Tools.DefaultOnly>
+                                <div>
+                                    <Progress color="primary" slim value={ 40 }/>
+                                    <div className="d-flex justify-content-between">
+                                        <span>Capacity</span>
+                                        <span>40%</span>
+                                    </div>
+                                </div>
+                                <div className="mt-3">
+                                    <Progress color="warning" slim value={ 60 }/>
+                                    <div className="d-flex justify-content-between">
+                                        <span>Storage</span>
+                                        <span>60%</span>
+                                    </div>
+                                </div>
+                            </Tools.DefaultOnly>
                         </Sidebar.Section>
                     </Sidebar>
                 </Layout.Sidebar>
