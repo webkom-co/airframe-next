@@ -247,20 +247,30 @@ class AppLayout extends React.Component {
                                     to='/'
                                 />
                                 <SidebarMenu.Item
-                                    icon={ <i className="fa fa-fw fa-user"></i> }
-                                    title="Avatars"
-                                    to='/avatars'
-                                />
-                                <SidebarMenu.Item
-                                    icon={ <i className="fa fa-fw fa-clone"></i> }
-                                    title="Cards"
-                                    to='/cards'
-                                />
-                                <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-list"></i> }
                                     title="Params"
                                     to='/params/0'
                                 />
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-clone"></i> }
+                                    title="Cards"
+                                >
+                                    <SidebarMenu.Item
+                                        title="Cards"
+                                        to='/cards'
+                                        exact
+                                    />
+                                </SidebarMenu.Item>
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-toggle-on"></i> }
+                                    title="Interface"
+                                >
+                                    <SidebarMenu.Item
+                                        title="Avatars"
+                                        to='/avatars'
+                                        exact
+                                    />
+                                </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Help"
