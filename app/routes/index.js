@@ -36,6 +36,7 @@ import Home from './Home';
 import Params from './Params';
 import Avatars from './Avatars';
 import Cards from './Cards';
+import BadgesLabels from './BadgesLabels';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -61,6 +62,11 @@ const getRoutes = (store) => {
                 path='/cards'
                 exact
                 component={Cards} 
+            />
+             <Route 
+                path='/badgeslabels'
+                exact
+                component={BadgesLabels} 
             />
         </Switch>
     );

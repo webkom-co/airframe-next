@@ -270,6 +270,11 @@ class AppLayout extends React.Component {
                                         to='/avatars'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Badges & Labels"
+                                        to='/badgeslabels'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
