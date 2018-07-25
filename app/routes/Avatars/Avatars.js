@@ -128,162 +128,6 @@ const Home = () => (
                         </CardBody>
                     </Card>
                 </Col>
-                <Col lg={ 4 } className={ classes['avatars-box'] }>
-                    <Avatar.Font
-                        size="sm"
-                        bgColor="danger"
-                        addOns={[
-                            <AvatarAddOn.Badge color="success" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="success"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    >
-                        <i className="fa fa-anchor" />
-                    </Avatar.Font>
-                    <Avatar.Font>
-                        <i className="fa fa-user" />
-                    </Avatar.Font>
-                    <Avatar.Font
-                        bgColor="success"
-                        size="lg"
-                        addOns={[
-                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="danger"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    >
-                        <i className="fa fa-bluetooth" />
-                    </Avatar.Font>
-                </Col>
-
-                <Col lg={ 4 } className={ classes['avatars-box'] }>
-                    <Avatar.Font
-                        size="sm"
-                        bgColor="danger"
-                        addOns={[
-                            <AvatarAddOn.Badge color="success" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="success"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    >
-                        MK
-                    </Avatar.Font>
-                    <Avatar.Font
-                        bgColor="info"
-                    >
-                        SM
-                    </Avatar.Font>
-                    <Avatar.Font
-                        bgColor="success"
-                        size="lg"
-                        addOns={[
-                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="danger"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    >
-                        PS
-                    </Avatar.Font>
-                </Col>
-
-                <Col lg={ 4 } className={ classes['avatars-box'] }>
-                    <Avatar.Image
-                        size="sm"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
-                        addOns={[
-                            <AvatarAddOn.Badge color="success" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="success"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    />
-                    <Avatar.Image
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
-                        addOns={[
-                            <AvatarAddOn.Badge color="success" key="avatar-badge">
-                                12
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="success"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    />
-                    <Avatar.Image
-                        size="lg"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
-                        addOns={[
-                            <AvatarAddOn.Badge color="danger" key="avatar-badge">
-                                32156
-                            </AvatarAddOn.Badge>,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="danger"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
-                    />
-                </Col>
             </Row>
             { /* END Section 1 */}
 
@@ -1089,6 +933,121 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-1"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-facebook"
+                                        color="facebook"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="lg"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-1"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-twitter"
+                                        color="twitter"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="lg"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-1"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-linkedin"
+                                        color="linkedin"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="lg"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-1"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="success"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-plus"
+                                        color="white"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="lg"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="danger"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-minus"
+                                        color="white"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Avatar: Custom Icons Default
+                                <span className="small ml-1 text-muted">
+                                    #6.02
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Avatars with badges
+                            </p>
+                            <Avatar.Image
+                                size="md"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1100,11 +1059,12 @@ const Home = () => (
                                         className="fa fa-facebook"
                                         color="facebook"
                                         key="avatar-icon-fg"
+                                        small
                                     />
                                 ]}
                             />
                             <Avatar.Image
-                                size="lg"
+                                size="md"
                                 src="http://bs4.webkom.co/img/avatars/2.jpg"
                                 className="mr-2"
                                 addOns={[
@@ -1117,11 +1077,12 @@ const Home = () => (
                                         className="fa fa-twitter"
                                         color="twitter"
                                         key="avatar-icon-fg"
+                                        small
                                     />
                                 ]}
                             />
                             <Avatar.Image
-                                size="lg"
+                                size="md"
                                 src="http://bs4.webkom.co/img/avatars/2.jpg"
                                 className="mr-2"
                                 addOns={[
@@ -1134,11 +1095,12 @@ const Home = () => (
                                         className="fa fa-linkedin"
                                         color="linkedin"
                                         key="avatar-icon-fg"
+                                        small
                                     />
                                 ]}
                             />
                             <Avatar.Image
-                                size="lg"
+                                size="md"
                                 src="http://bs4.webkom.co/img/avatars/2.jpg"
                                 className="mr-2"
                                 addOns={[
@@ -1160,6 +1122,29 @@ const Home = () => (
                                     />
                                 ]}
                             />
+                            <Avatar.Image
+                                size="md"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="danger"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-minus"
+                                        color="white"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
                         </CardBody>
                     </Card>
                 </Col>
@@ -1167,14 +1152,208 @@ const Home = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Avatar: Badges Default
+                                Avatar: Custom Icons Small
                                 <span className="small ml-1 text-muted">
-                                    #5.02
+                                    #6.03
                                 </span>
                             </CardTitle>
                             <p className="card-text">
                                 Avatars with badges
                             </p>
+                            <Avatar.Image
+                                size="sm"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-facebook"
+                                        color="facebook"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="sm"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-twitter"
+                                        color="twitter"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="sm"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-linkedin"
+                                        color="linkedin"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="sm"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="success"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-plus"
+                                        color="white"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                            <Avatar.Image
+                                size="sm"
+                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                className="mr-2"
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="danger"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-minus"
+                                        color="white"
+                                        key="avatar-icon-fg"
+                                        small
+                                    />
+                                ]}
+                            />
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 6 */}
+
+            { /* START Header 7 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={7} 
+                        title="Avatars Colors" 
+                        subTitle={(
+                            <React.Fragment>
+                                There are versions available default, 
+                                that is avatar: large: avatar <code>avatar-lg</code> & small: 
+                                avatar <code>avatar-sm</code>.
+                            </React.Fragment>
+                        )}
+                        className="mt-5"
+                    />
+                </Col>
+            </Row>
+            { /* END Header 7 */}
+            { /* START Section 7 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Avatars: Colors Default
+                                <span className="small ml-1 text-muted">
+                                    #7.01
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Large size avatar example
+                            </p>
+                            <Avatar.Font
+                                bgColor="primary"
+                                className="mr-1"
+                            >
+                                PR
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="info"
+                                className="mr-1"
+                            >
+                                IN
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="success"
+                                className="mr-1"
+                            >
+                                SU
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="warning"
+                                className="mr-1"
+                            >
+                                WA
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="danger"
+                                className="mr-1"
+                            >
+                                DA
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="secondary"
+                                className="mr-1"
+                            >
+                                SE
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="dark"
+                                className="mr-1"
+                            >
+                                DA
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="light"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                LI
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="white"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                WH
+                            </Avatar.Font>
                             
                         </CardBody>
                     </Card>
@@ -1183,20 +1362,247 @@ const Home = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Avatar: Badges Small
+                                Avatars: Gray Colors
                                 <span className="small ml-1 text-muted">
-                                    #5.03
+                                    #7.02
                                 </span>
                             </CardTitle>
                             <p className="card-text">
-                                Avatars with badges
+                                Large size avatar example
                             </p>
-                           
+                            <Avatar.Font
+                                bgColor="100"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                100
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="200"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                200
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="300"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                300
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="400"
+                                fgColor="secondary"
+                                className="mr-1"
+                            >
+                                400
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="500"
+                                fgColor="dark"
+                                className="mr-1"
+                            >
+                                500
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="600"
+                                fgColor="white"
+                                className="mr-1"
+                            >
+                                600
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="700"
+                                fgColor="white"
+                                className="mr-1"
+                            >
+                                700
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="800"
+                                fgColor="white"
+                                className="mr-1"
+                            >
+                                800
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="900"
+                                fgColor="white"
+                                className="mr-1"
+                            >
+                                900
+                            </Avatar.Font>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Avatars: Other Colors 
+                                <span className="small ml-1 text-muted">
+                                    #7.03
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Large size avatar example
+                            </p>
+                            <Avatar.Font
+                                bgColor="indigo"
+                                className="mr-1"
+                            >
+                                IN
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="purple"
+                                className="mr-1"
+                            >
+                                PU
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="pink"
+                                className="mr-1"
+                            >
+                                PI
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="teal"
+                                className="mr-1"
+                            >
+                                TE
+                            </Avatar.Font>
+                            <Avatar.Font
+                                bgColor="cyan"
+                                className="mr-1"
+                            >
+                                CY
+                            </Avatar.Font>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Avatars: Colors Social
+                                <span className="small ml-1 text-muted">
+                                    #7.04
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Large size avatar example
+                            </p>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-facebook" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-twitter" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-lastfm" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-pinterest" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-linkedin" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-medium" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-skype" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-foursquare" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-android" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-spotify" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-paypal" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-dribbble" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-youtube" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-windows" />
+                            </Avatar.Font>
+                            <Avatar.Font 
+                                bgColor="secondary"
+                                fgColor="white"
+                                className="mr-1"
+                                >
+                                <i className="fa fa-amazon" />
+                            </Avatar.Font>
                         </CardBody>
                     </Card>
                 </Col>
             </Row>
-            { /* END Section 6 */}
+            { /* END Section 7 */}
         </Container>
     </React.Fragment>
 );
