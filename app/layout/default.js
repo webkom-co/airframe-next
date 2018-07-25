@@ -7,10 +7,14 @@ import {
     Avatar,
     AvatarAddOn,
     Badge,
+    Button,
     ExtendedDropdown,
     UncontrolledDropdown,
     DropdownToggle,
     IconWithBadge,
+    Input,
+    InputGroup,
+    InputGroupAddon,
     Layout,
     ListGroup,
     ListGroupItem,
@@ -51,6 +55,11 @@ const activityFeedIcons = [
     </span>
 ];
 
+const messagesColors = [
+    "text-success",
+    "text-danger",
+    "text-warning"
+];
 /*eslint-enable */
 
 class AppLayout extends React.Component {
@@ -129,8 +138,61 @@ class AppLayout extends React.Component {
                                     </IconWithBadge>
                                 </DropdownToggle>
                                 <ExtendedDropdown right>
+                                    <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
+                                        <span>Messages</span>
+                                        <a href="javascript:;">
+                                            <i className="fa fa-pencil" />
+                                        </a>
+                                    </ExtendedDropdown.Section>
                                     <ExtendedDropdown.Section>
-                                        Kutasiwo
+                                        <InputGroup>
+                                            <Input placeholder="Search Messages..." />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="white">
+                                                    <i className="fa fa-search" />
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </ExtendedDropdown.Section>
+
+                                    <ExtendedDropdown.Section list>
+                                        <ListGroup>
+                                        {
+                                            _.times(3, (index) => (
+                                                <ListGroupItem>
+                                                    <Media>
+                                                        <Media left>
+                                                            <Avatar.Image
+                                                                src={ faker.image.avatar() }
+                                                                className='mr-4'
+                                                            />
+                                                        </Media>
+                                                        <Media body>
+                                                            <span className="d-flex justify-content-start">
+                                                                <i
+                                                                    className={`fa fa-circle small ${messagesColors[index]} mr-2 d-flex align-items-center`}
+                                                                />
+                                                                <span className="h6 pb-0 mb-0 d-flex align-items-center">
+                                                                    { faker.name.firstName() } { faker.name.lastName() }
+                                                                </span>
+                                                                
+                                                                <span className="ml-1 small">(23)</span>
+                                                                <span className="ml-auto small">Now</span>
+                                                            </span>
+                                                            <p className="mt-2 mb-1">
+                                                                { faker.lorem.sentences() }
+                                                            </p>
+                                                        </Media>
+                                                    </Media>
+                                                </ListGroupItem>
+                                            ))
+                                        }
+                                        </ListGroup>
+                                    </ExtendedDropdown.Section>
+
+                                    <ExtendedDropdown.Section className="text-center" tag="a" href="javascript:;">
+                                        View All
+                                        <i className="fa fa-angle-right fa-fw ml-2" />
                                     </ExtendedDropdown.Section>
                                 </ExtendedDropdown>
                             </UncontrolledDropdown>
