@@ -19,7 +19,7 @@
             .avatar__icon > * ~ * {
                 font-size: map-get($avatar, icon-stack-ratio) * map-get($avatar, icon-font-size);
 
-                &.avatar__icon__small {
+                &.avatar__icon--small {
                     font-size: map-get($avatar, icon-stack-ratio-small) * map-get($avatar, icon-font-size);
                 }
             }
