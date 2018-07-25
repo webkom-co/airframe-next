@@ -18,6 +18,7 @@ const ExtendedDropdown = (props, context) => {
     const classes = mapToCssModules(classNames(
         className,
         'dropdown-menu',
+        'extended-dropdown',
         {
             'dropdown-menu-right': right,
             show: context.isOpen,

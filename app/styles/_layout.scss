@@ -5,7 +5,7 @@
 .layout {
     background-color: $body-color;
     display: flex;
-    min-width: 100vh;
+    min-height: 100vh;
 
     &__navbar {
         height: $navbar-height;

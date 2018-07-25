@@ -1,15 +1,23 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import {
-    Navbar,
-    Nav,
-    NavItem,
-} from 'reactstrap';
+import _ from 'lodash';
+import faker from 'faker';
 
 import {
     Avatar,
     AvatarAddOn,
+    Badge,
+    ExtendedDropdown,
+    UncontrolledDropdown,
+    DropdownToggle,
+    IconWithBadge,
     Layout,
+    ListGroup,
+    ListGroupItem,
+    Navbar,
+    Nav,
+    NavItem,
+    Media,
     Progress,
     Sidebar,
     SidebarMenu,
@@ -23,6 +31,28 @@ import './../styles/plugins/plugins.scss';
 
 import avatarImg from './../images/avatars/avatar-1.jpg';
 
+/*eslint-disable */
+const activityFeedIcons = [
+    <span className="fa-stack fa-lg fa-fw d-flex mr-3">
+        <i className="fa fa-circle fa-fw fa-stack-2x text-success"></i>
+        <i className="fa fa-check fa-stack-1x fa-fw text-white"></i>
+    </span>,
+    <span className="fa-stack fa-lg fa-fw d-flex mr-3">
+        <i className="fa fa-circle fa-fw fa-stack-2x text-danger"></i>
+        <i className="fa fa-close fa-stack-1x fa-fw text-white"></i>
+    </span>,
+    <span className="fa-stack fa-lg fa-fw d-flex mr-3">
+        <i className="fa fa-circle fa-fw fa-stack-2x text-warning"></i>
+        <i className="fa fa-exclamation fa-stack-1x fa-fw text-white"></i>
+    </span>,
+    <span className="fa-stack fa-lg fa-fw d-flex mr-3">
+        <i className="fa fa-circle fa-fw fa-stack-2x text-primary"></i>
+        <i className="fa fa-info fa-stack-1x fa-fw text-white"></i>
+    </span>
+];
+
+/*eslint-enable */
+
 class AppLayout extends React.Component {
     static propTypes = {
         children: PropTypes.node.isRequired
@@ -35,11 +65,75 @@ class AppLayout extends React.Component {
             <Layout sidebarSlim>
                 { /* --------- Navbar ----------- */ }
                 <Layout.Navbar>
-                    <Navbar light color="light">
-                        <Nav>
+                    <Navbar light color="light" expand="xs">
+                        <Nav navbar>
                             <NavItem>
                                 <SidebarTrigger/>
                             </NavItem>
+                        </Nav>
+                        <Nav navbar className="ml-auto">
+                            <UncontrolledDropdown nav inNavbar>
+                                <DropdownToggle nav>
+                                    <IconWithBadge
+                                        badge={ <Badge pill color="primary">6</Badge> }
+                                    >
+                                        <i className="fa fa-bell-o fa-fw" />
+                                    </IconWithBadge>
+                                </DropdownToggle>
+                                <ExtendedDropdown right>
+                                    <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
+                                        <span>Activity Feed</span>
+                                        <Badge pill>4</Badge>
+                                    </ExtendedDropdown.Section>
+
+                                    <ExtendedDropdown.Section list>
+                                        <ListGroup>
+                                        {
+                                            _.times(4, (index) => (
+                                                <ListGroupItem>
+                                                    <Media>
+                                                        <Media left>
+                                                            { activityFeedIcons[index] }
+                                                        </Media>
+                                                        <Media body>
+                                                            <span className="h6">
+                                                                { faker.name.firstName() } { faker.name.lastName() }
+                                                            </span> changed Description to &quot;{ faker.random.words() }&quot;
+                                                            <p className="mt-2 mb-1">
+                                                                { faker.lorem.sentence() }
+                                                            </p>
+                                                            <div className="small mt-2">
+                                                                { faker.date.past().toString() }
+                                                            </div>
+                                                        </Media>
+                                                    </Media>
+                                                </ListGroupItem>
+                                            ))
+                                        }
+                                        </ListGroup>
+                                    </ExtendedDropdown.Section>
+
+                                    <ExtendedDropdown.Section className="text-center" tag="a" href="javascript:;">
+                                        See All Notifications
+                                        <i className="fa fa-angle-right fa-fw ml-2" />
+                                    </ExtendedDropdown.Section>
+                                </ExtendedDropdown>
+                            </UncontrolledDropdown>
+
+                            <UncontrolledDropdown nav inNavbar className="ml-2">
+                                <DropdownToggle nav>
+                                    <IconWithBadge
+                                        badge={ <Badge pill color="warning">6</Badge> }
+                                    >
+                                        <i className="fa fa-envelope-o fa-fw" />
+                                    </IconWithBadge>
+                                </DropdownToggle>
+                                <ExtendedDropdown right>
+                                    <ExtendedDropdown.Section>
+                                        Kutasiwo
+                                    </ExtendedDropdown.Section>
+                                </ExtendedDropdown>
+                            </UncontrolledDropdown>
                         </Nav>
                     </Navbar>
                 </Layout.Navbar>

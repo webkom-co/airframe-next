@@ -2,6 +2,8 @@ import App from './App';
 import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
 import CardHeader from './CardHeader';
+import ExtendedDropdown from './ExtendedDropdown';
+import IconWithBadge from './IconWithBadge';
 import Layout, { withPageConfig } from './Layout';
 import OuterClick from './OuterClick';
 import PageLoader from './PageLoader';
@@ -17,6 +19,8 @@ export {
     AvatarAddOn,
     Card,
     CardHeader,
+    ExtendedDropdown,
+    IconWithBadge,
     Layout,
     withPageConfig,
     OuterClick,
@@ -99,5 +103,9 @@ export {
     Table,
     TabPane,
     Tag,
-    Tooltip
+    Tooltip,
+    UncontrolledAlert,
+    UncontrolledButtonDropdown,
+    UncontrolledDropdown,
+    UncontrolledTooltip
 } from 'reactstrap';
