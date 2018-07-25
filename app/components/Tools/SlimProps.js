@@ -22,7 +22,7 @@ const SlimProps = (props) => {
                 }
             </MatchMedia>
             <MatchMedia maxWidth={ 991.8 }>
-                { ...children }
+                { children }
             </MatchMedia>
         </React.Fragment>
     );
