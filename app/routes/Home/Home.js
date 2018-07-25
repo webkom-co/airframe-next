@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 import {
     Container,
@@ -11,7 +12,7 @@ const Home = () => (
         <Row>
             <Col lg={ 12 }>
                 <h1>
-                    Hello from Home Container
+                    Hello from { faker.name.firstName() } { faker.name.lastName() }
                 </h1>
             </Col>
         </Row>
