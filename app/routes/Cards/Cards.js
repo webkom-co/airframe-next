@@ -131,7 +131,7 @@ const Cards = () => (
                             { cardText({ cardNo: "1.10" }) } 
                         </CardBody>
                     </Card>
-                     <Card className="mb-3">
+                    <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
                                 Without Header 
