@@ -280,6 +280,11 @@ class AppLayout extends React.Component {
                                         to='/progressbars'
                                         exact
                                     />
+                                     <SidebarMenu.Item
+                                        title="Media Objects"
+                                        to='/mediaobjects'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

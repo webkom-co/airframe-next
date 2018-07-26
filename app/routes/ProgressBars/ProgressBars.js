@@ -7,7 +7,6 @@ import {
     Card,
     CardTitle,
     CardBody,
-    Badge,
     Progress,
 } from './../../components';
 
