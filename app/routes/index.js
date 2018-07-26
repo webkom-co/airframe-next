@@ -37,6 +37,7 @@ import Params from './Params';
 import Avatars from './Avatars';
 import Cards from './Cards';
 import BadgesLabels from './BadgesLabels';
+import ProgressBars from './ProgressBars';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -63,10 +64,15 @@ const getRoutes = (store) => {
                 exact
                 component={Cards} 
             />
-             <Route 
+            <Route 
                 path='/badgeslabels'
                 exact
                 component={BadgesLabels} 
+            />
+            <Route 
+                path='/progressbars'
+                exact
+                component={ProgressBars} 
             />
         </Switch>
     );
