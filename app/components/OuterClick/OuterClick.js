@@ -50,9 +50,11 @@ class OuterClick extends React.Component {
 
     handleDocumentClick = (evt) => {
         if(this.props.active) {
+            // eslint-disable-next-line react/no-find-dom-node
             const domElement = ReactDOM.findDOMNode(this.elementRef);
 
             const isExcluded = _.some(this.props.excludedElements,
+                // eslint-disable-next-line react/no-find-dom-node
                 (element) => element && ReactDOM.findDOMNode(element).contains(evt.target));
 
             if (!isExcluded && !domElement.contains(evt.target)) {

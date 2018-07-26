@@ -11,7 +11,9 @@ class SidebarMenu extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         currentUrl: PropTypes.string,
-        slim: PropTypes.bool
+        slim: PropTypes.bool,
+        location: PropTypes.object,
+        pageConfig: PropTypes.object
     }
 
     constructor(props) {
@@ -48,6 +50,7 @@ class SidebarMenu extends React.Component {
     }
 
     removeEntry(id) {
+        // eslint-disable-next-line no-unused-vars
         const { [id]: toRemove, ...rest } = this.state.entries;
         this.setState({ entries: this.entries = rest });
     }

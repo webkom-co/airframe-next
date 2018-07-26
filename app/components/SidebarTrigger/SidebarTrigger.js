@@ -17,7 +17,8 @@ const SidebarTrigger = (props) => {
 };
 SidebarTrigger.propTypes = {
     tag: PropTypes.any,
-    children: PropTypes.node
+    children: PropTypes.node,
+    pageConfig: PropTypes.object
 }
 SidebarTrigger.defaultProps = {
     tag: NavLink,
