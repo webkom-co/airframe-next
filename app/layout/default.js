@@ -275,6 +275,11 @@ class AppLayout extends React.Component {
                                         to='/badgeslabels'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Progress Bars"
+                                        to='/progressbars'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
