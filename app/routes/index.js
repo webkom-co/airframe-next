@@ -38,6 +38,8 @@ import Avatars from './Avatars';
 import Cards from './Cards';
 import BadgesLabels from './BadgesLabels';
 import ProgressBars from './ProgressBars';
+import MediaObjects from './MediaObjects';
+
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -73,6 +75,11 @@ const getRoutes = (store) => {
                 path='/progressbars'
                 exact
                 component={ProgressBars} 
+            />
+            <Route 
+                path='/mediaobjects'
+                exact
+                component={MediaObjects} 
             />
         </Switch>
     );
