@@ -86,6 +86,10 @@
             transform: translateX(-100%);
         }
 
+        &--animations-disabled {
+            transition: none;
+        }
+
         &__close {
             position: absolute;
             top: 1rem;

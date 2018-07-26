@@ -101,7 +101,13 @@ class SidebarMenu extends React.Component {
     }
 
     render() {
-        const isSlim = this.props.slim || this.props.pageConfig.sidebarSlim;
+        const isSlim = this.props.slim || (
+            this.props.pageConfig.sidebarSlim &&
+            this.props.pageConfig.sidebarCollapsed && (
+                this.props.pageConfig.screenSize === 'lg' ||
+                this.props.pageConfig.screenSize === 'xl'
+            )
+        );
         const sidebarMenuClass = classNames('sidebar-menu', {
             'sidebar-menu--slim': isSlim
         });

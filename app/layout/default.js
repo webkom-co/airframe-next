@@ -99,7 +99,7 @@ class AppLayout extends React.Component {
                                         <ListGroup>
                                         {
                                             _.times(4, (index) => (
-                                                <ListGroupItem>
+                                                <ListGroupItem key={ index }>
                                                     <Media>
                                                         <Media left>
                                                             { activityFeedIcons[index] }
@@ -159,7 +159,7 @@ class AppLayout extends React.Component {
                                         <ListGroup>
                                         {
                                             _.times(3, (index) => (
-                                                <ListGroupItem>
+                                                <ListGroupItem key={ index }>
                                                     <Media>
                                                         <Media left>
                                                             <Avatar.Image

@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import _ from 'lodash';
 
 import { LayoutContent } from './LayoutContent';
 import { LayoutNavbar } from './LayoutNavbar';
@@ -20,6 +21,14 @@ const findChildByType = (children, targetType) => {
     return result;
 }
 
+const responsiveBreakpoints = {
+    'xs': { max: 575.8 },
+    'sm': { min: 576, max: 767.8 },
+    'md': { min: 768, max: 991.8 },
+    'lg': { min: 992, max: 1199.8 },
+    'xl': { min: 1200 }
+};
+
 class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
@@ -34,11 +43,66 @@ class Layout extends React.Component {
             navabrHidden: false,
             footerHidden: false,
             sidebarCollapsed: false,
+            screenSize: '',
+            animationsDisabled: true,
 
             pageTitle: config.siteTitle,
             pageDescription: config.siteDescription,
             pageKeywords: config.siteKeywords
         };
+
+        this.lastLgSidebarCollapsed = false;
+    }
+
+    componentDidMount() {
+        // Determine the current window size
+        const layoutAdjuster = () => {
+            const { screenSize } = this.state;
+            let currentScreenSize;
+
+            _.forOwn(responsiveBreakpoints, (value, key) => {
+                const queryParts = [
+                    `${ _.isUndefined(value.min) ? '' : `(min-width: ${value.min}px)` }`,
+                    `${ _.isUndefined(value.max) ? '' : `(max-width: ${value.max}px)`}`
+                ];
+                const query = _.compact(queryParts).join(' and ');
+
+                if (window.matchMedia(query).matches) {
+                    currentScreenSize = key;
+                }
+            });
+
+            if (screenSize !== currentScreenSize) {
+                this.setState({ screenSize: currentScreenSize });
+                this.updateLayoutOnScreenSize(currentScreenSize);
+            }
+        };
+
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', () => {
+                setTimeout(layoutAdjuster.bind(this), 0);
+            });
+            
+            layoutAdjuster();
+
+            window.requestAnimationFrame(() => {
+                this.setState({ animationsDisabled: false });
+            });
+        }
+    }
+
+    updateLayoutOnScreenSize(screenSize) {
+        if (
+            screenSize === 'md' ||
+            screenSize === 'sm' ||
+            screenSize === 'xs'
+        ) {
+            // Save for recovering to lg later
+            this.lastLgSidebarCollapsed = this.state.sidebarCollapsed;
+            this.setState({ sidebarCollapsed: true });
+        } else {
+            this.setState({ sidebarCollapsed: this.lastLgSidebarCollapsed });
+        }
     }
 
     toggleSidebar() {
@@ -72,7 +136,9 @@ class Layout extends React.Component {
                 <div className="layout">
                     { 
                         !this.state.sidebarHidden && React.cloneElement(sidebar, {
-                            sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed,
+                            sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (
+                                this.state.screenSize === 'lg' || this.state.screenSize === 'xl'
+                            ),
                             sidebarCollapsed: !this.props.sidebarSlim && this.state.sidebarCollapsed
                         })
                     }
