@@ -34,7 +34,7 @@ class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         sidebarSlim: PropTypes.bool,
-        history: PropTypes.object
+        location: PropTypes.object
     }
 
     constructor(props) {
@@ -98,23 +98,6 @@ class Layout extends React.Component {
             this.bodyElement = document.body;
             this.documentElement = document.documentElement;
         }
-        // Listen for Navigation
-        this.unlistenNavigation = this.props.history.listen(() => {
-            // Hide overlay sidebar
-            if (
-                !this.state.sidebarCollapsed && (
-                    this.state.screenSize === 'xs' ||
-                    this.state.screenSize === 'sm' ||
-                    this.state.screenSize === 'md'
-                )
-            ) {
-                this.setState({ sidebarCollapsed: true });
-            }
-            // Scroll to top
-            if (this.bodyElement && this.documentElement) {
-                this.documentElement.scrollTop = this.bodyElement.scrollTop = 0;
-            }
-        });
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -139,6 +122,28 @@ class Layout extends React.Component {
                     }
                 Object.assign(this.bodyElement.style, styleUpdate);
                 Object.assign(this.documentElement.style, styleUpdate);
+            }
+        }
+
+        // After location change
+        if (prevProps.location.pathname !== this.props.location.pathname) {
+            // Scroll to top
+            if (this.bodyElement && this.documentElement) {
+                this.documentElement.scrollTop = this.bodyElement.scrollTop = 0;
+            }
+
+            // Hide the sidebar when in overlay mode
+            if (
+                !this.state.sidebarCollapsed && (
+                    this.state.screenSize === 'xs' ||
+                    this.state.screenSize === 'sm' ||
+                    this.state.screenSize === 'md'
+                )
+            ) {
+                // Add some time to prevent jank while the dom is updating
+                setTimeout(() => {
+                    this.setState({ sidebarCollapsed: true });
+                }, 100);
             }
         }
     }
@@ -203,10 +208,6 @@ class Layout extends React.Component {
                 </div>
             </PageConfigContext.Provider>
         );
-    }
-
-    componentWillUnmount() {
-        this.unlistenNavigation();
     }
 }
 

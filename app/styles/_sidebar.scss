@@ -81,11 +81,12 @@
         left: 0;
         right: auto;
         touch-action: none;
-        
+        transform: translateZ(0);
+
         transition: transform $sidebar-overlay-transition;
 
         &--collapsed {
-            transform: translateX(-100%);
+            transform: translateZ(0) translateX(-100%);
         }
 
         &--animations-disabled {
