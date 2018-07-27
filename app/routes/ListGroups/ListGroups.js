@@ -1325,12 +1325,12 @@ const ListGroups = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p>
+                                    <p className="mb-0">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
                                 <Media left top className="ml-2">
-                                    <i className="fa fa-exclamation-circle"></i>
+                                    <i className="fa fa-user"></i>
                                 </Media>
                             </Media>
                             </ListGroupItem>
@@ -1358,12 +1358,12 @@ const ListGroups = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p>
+                                    <p className="mb-0">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
                                 <Media left top className="ml-2">
-                                    <i className="fa fa-exclamation-circle"></i>
+                                    <i className="fa fa-gear"></i>
                                 </Media>
                             </Media>
                             </ListGroupItem>
@@ -1391,7 +1391,7 @@ const ListGroups = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p>
+                                    <p className="mb-0">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
@@ -1399,6 +1399,246 @@ const ListGroups = () => (
                                     <i className="fa fa-exclamation-circle"></i>
                                 </Media>
                             </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Left Icon 
+                             <span className="small ml-1 text-muted">
+                                #2.09
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <span className="fa-stack fa-lg">
+                                            <i className="fa fa-circle fa-stack-2x text-success"></i>
+                                            <i className="fa fa-check fa-stack-1x text-white"></i>
+                                        </span>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Success
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <span className="fa-stack fa-lg">
+                                            <i className="fa fa-circle fa-stack-2x text-danger"></i>
+                                            <i className="fa fa-close fa-stack-1x text-white"></i>
+                                        </span>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Danger
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <span className="fa-stack fa-lg">
+                                            <i className="fa fa-circle fa-stack-2x text-warning"></i>
+                                            <i className="fa fa-exclamation fa-stack-1x text-white"></i>
+                                        </span>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Warning
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Right Button
+                             <span className="small ml-1 text-muted">
+                                #2.08
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <div>
+                                            <CustomInput type="checkbox" id="rightCheckbox1" label="" checked />
+                                        </div>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <div>
+                                            <CustomInput type="checkbox" id="rightCheckbox2" label="" />
+                                        </div>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <div>
+                                            <CustomInput type="checkbox" id="rightCheckbox3" label="" />
+                                        </div>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                            List Groups: Media: Left Checkbox 
+                            <span className="small ml-1 text-muted">
+                                #2.13
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left className="mr-3">
+                                        <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox1" label="" checked />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox2" name="leftRadio" label="" />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox3" name="leftRadio" label="" />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
                             </ListGroupItem>
                         </ListGroup>
                     </div>
