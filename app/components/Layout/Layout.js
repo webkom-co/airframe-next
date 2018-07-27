@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
+import { withRouter } from 'react-router';
 import _ from 'lodash';
 
 import { LayoutContent } from './LayoutContent';
@@ -32,7 +33,8 @@ const responsiveBreakpoints = {
 class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
-        sidebarSlim: PropTypes.bool
+        sidebarSlim: PropTypes.bool,
+        history: PropTypes.object
     }
 
     constructor(props) {
@@ -96,6 +98,23 @@ class Layout extends React.Component {
             this.bodyElement = document.body;
             this.documentElement = document.documentElement;
         }
+        // Listen for Navigation
+        this.unlistenNavigation = this.props.history.listen(() => {
+            // Hide overlay sidebar
+            if (
+                !this.state.sidebarCollapsed && (
+                    this.state.screenSize === 'xs' ||
+                    this.state.screenSize === 'sm' ||
+                    this.state.screenSize === 'md'
+                )
+            ) {
+                this.setState({ sidebarCollapsed: true });
+            }
+            // Scroll to top
+            if (this.bodyElement && this.documentElement) {
+                this.documentElement.scrollTop = this.bodyElement.scrollTop = 0;
+            }
+        });
     }
 
     componentDidUpdate(prevProps, prevState) {
@@ -185,6 +204,12 @@ class Layout extends React.Component {
             </PageConfigContext.Provider>
         );
     }
+
+    componentWillUnmount() {
+        this.unlistenNavigation();
+    }
 }
 
-export { Layout };
+const routedLayout = withRouter(Layout);
+
+export { routedLayout as Layout };
