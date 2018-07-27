@@ -40,6 +40,7 @@ import BadgesLabels from './BadgesLabels';
 import ProgressBars from './ProgressBars';
 import MediaObjects from './MediaObjects';
 import ListGroups from './ListGroups';
+import Buttons from './Buttons';
 
 
 //------ Route Definitions --------
@@ -86,6 +87,11 @@ const getRoutes = (store) => {
                 path='/listgroups'
                 exact
                 component={ListGroups} 
+            />
+            <Route 
+                path='/buttons'
+                exact
+                component={Buttons} 
             />
         </Switch>
     );
