@@ -79,6 +79,7 @@
         bottom: 0;
         left: 0;
         right: auto;
+        touch-action: none;
         
         transition: transform $sidebar-overlay-transition;
 

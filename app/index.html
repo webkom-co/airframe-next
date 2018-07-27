@@ -12,7 +12,7 @@
   <% if (config.files.favicon) { %>
   <link rel="shortcut icon" href="<%= config.files.favicon%>">
   <% } %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui">
 
   <% for (var css in config.files.css) { %>
   <link href="<%= config.files.css[css] %>" rel="stylesheet">
