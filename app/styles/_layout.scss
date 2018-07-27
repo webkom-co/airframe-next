@@ -17,6 +17,11 @@
                 left: 0;
             }
         }
+
+        @media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+            background: $navbar-background-color;
+            border-bottom: 1px solid $navbar-border-color;
+        }
     }
 
     &__sidebar {

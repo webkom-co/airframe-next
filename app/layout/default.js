@@ -74,7 +74,7 @@ class AppLayout extends React.Component {
             <Layout sidebarSlim>
                 { /* --------- Navbar ----------- */ }
                 <Layout.Navbar>
-                    <Navbar light color="light" expand="xs">
+                    <Navbar light color="none" expand="xs">
                         <Nav navbar>
                             <NavItem>
                                 <SidebarTrigger/>
