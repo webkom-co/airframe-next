@@ -10,12 +10,15 @@ import {
     CardBody,
     CardTitle,
     Badge,
+    Button,
+    Media,
     Avatar,
     AvatarAddOn,
     ListGroup,
     ListGroupItem,
     ListGroupItemHeading,
     ListGroupItemText,
+    CustomInput,
     CardText
 } from './../../components';
 
@@ -303,6 +306,1108 @@ const ListGroups = () => (
                 </Col>
             </Row>
             { /* END Header 2 */}
+            { /* START Section 2 */}
+            <Row>
+                { /* START Col6 1 */}
+                <Col lg={ 6 }>
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Default
+                             <span className="small ml-1 text-muted">
+                                #2.01
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="warning"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Color Header
+                             <span className="small ml-1 text-muted">
+                                #2.02
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1 text-success">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1 text-danger">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1 text-warning">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="warning"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Color Text
+                             <span className="small ml-1 text-muted">
+                                #2.04
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="text-muted mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="text-danger mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="text-success mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Status Icon
+                             <span className="small ml-1 text-muted">
+                                #2.06
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top>
+                                        <i className="fa fa-circle text-danger"></i>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="warning"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top>
+                                        <i className="fa fa-circle text-warning"></i>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top>
+                                        <i className="fa fa-circle text-success"></i>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Right Button
+                             <span className="small ml-1 text-muted">
+                                #2.08
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top className="ml-2">
+                                        <Button outline color="secondary" size="sm">
+                                            <i className="fa fa-user fa-fw"></i>
+                                        </Button>{' '}
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top className="ml-2">
+                                        <Button outline color="secondary" size="sm">
+                                            <i className="fa fa-gear fa-fw"></i>
+                                        </Button>{' '}
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media left top className="ml-2">
+                                        <Button outline color="secondary" size="sm">
+                                            <i className="fa fa-exclamation-circle fa-fw"></i>
+                                        </Button>{' '}
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Left Icons Single
+                             <span className="small ml-1 text-muted">
+                                #2.10
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <i class="fa fa-file-pdf-o fa-fw fa-lg text-danger"></i>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Document PDF
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <i class="fa fa-file-word-o fa-fw fa-lg text-primary"></i>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Document Word
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <i class="fa fa-file-excel-o fa-fw fa-lg text-success"></i>
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            Document Excell
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media> 
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Right Radio
+                             <span className="small ml-1 text-muted">
+                                #2.12
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <div>
+                                            <CustomInput type="radio" id="rightRadio1" name="customRadio" label="" checked />
+                                        </div>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <div>
+                                            <CustomInput type="radio" id="rightRadio2" name="customRadio" label="" />
+                                        </div>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top>
+                                        <div>
+                                            <CustomInput type="radio" id="rightRadio3" name="customRadio" label="" />
+                                        </div>
+                                    </Media>
+                                </Media> 
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Left Radio
+                             <span className="small ml-1 text-muted">
+                                #2.14
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left className="mr-3">
+                                        <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" checked />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <CustomInput type="radio" id="leftRadio2" name="leftRadio" label="" />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem>
+                                <Media>
+                                    <Media left top className="mr-3">
+                                        <CustomInput type="radio" id="leftRadio3" name="leftRadio" label="" />
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                </Col>
+                { /* END Col6 1 */}
+                { /* START Col6 2 */}
+                <Col lg={ 6 }>
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Left Default
+                             <span className="small ml-1 text-muted">
+                                #2.02
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="warning"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media body>
+                                        <span className="mt-0 d-flex h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right top className="ml-2">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Right Badge
+                             <span className="small ml-1 text-muted">
+                                #2.03
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="secondary"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right middle>
+                                        <Badge color="secondary">Offline</Badge>
+                                    </Media>
+                            </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="danger"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right middle>
+                                        <Badge color="danger">Busy</Badge>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                    <Media left top className="mr-4">
+                                        <Avatar.Image
+                                            size="md"
+                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            addOns={[
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="white"
+                                                    key="avatar-icon-bg"
+                                                />,
+                                                <AvatarAddOn.Icon 
+                                                    className="fa fa-circle"
+                                                    color="success"
+                                                    key="avatar-icon-fg"
+                                                />
+                                            ]}
+                                        /> 
+                                    </Media>
+                                    <Media body>
+                                        <span className="mt-0 h6 mb-1">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </span>
+                                        <p className="mb-0">
+                                            { faker.lorem.sentence() }
+                                        </p>
+                                    </Media>
+                                    <Media right middle>
+                                        <Badge color="success">Online</Badge>
+                                    </Media>
+                                </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                    { /* START Example */}
+                    <div className="mb-5">
+                        <h6>
+                             List Groups: Media: Right Icon
+                             <span className="small ml-1 text-muted">
+                                #2.07
+                            </span>
+                        </h6>
+                        <ListGroup>
+                            <ListGroupItem tag="button" action href="#">
+                               <Media>
+                                <Media left top className="mr-4">
+                                    <Avatar.Image
+                                        size="md"
+                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        addOns={[
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="white"
+                                                key="avatar-icon-bg"
+                                            />,
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="secondary"
+                                                key="avatar-icon-fg"
+                                            />
+                                        ]}
+                                    /> 
+                                </Media>
+                                <Media body>
+                                    <span className="mt-0 d-flex h6 mb-1">
+                                        { faker.name.firstName() } { faker.name.lastName() }
+                                    </span>
+                                    <p>
+                                        { faker.lorem.sentence() }
+                                    </p>
+                                </Media>
+                                <Media left top className="ml-2">
+                                    <i className="fa fa-exclamation-circle"></i>
+                                </Media>
+                            </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                <Media left top className="mr-4">
+                                    <Avatar.Image
+                                        size="md"
+                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        addOns={[
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="white"
+                                                key="avatar-icon-bg"
+                                            />,
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="secondary"
+                                                key="avatar-icon-fg"
+                                            />
+                                        ]}
+                                    /> 
+                                </Media>
+                                <Media body>
+                                    <span className="mt-0 d-flex h6 mb-1">
+                                        { faker.name.firstName() } { faker.name.lastName() }
+                                    </span>
+                                    <p>
+                                        { faker.lorem.sentence() }
+                                    </p>
+                                </Media>
+                                <Media left top className="ml-2">
+                                    <i className="fa fa-exclamation-circle"></i>
+                                </Media>
+                            </Media>
+                            </ListGroupItem>
+                            <ListGroupItem  tag="button" action href="#">
+                                <Media>
+                                <Media left top className="mr-4">
+                                    <Avatar.Image
+                                        size="md"
+                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        addOns={[
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="white"
+                                                key="avatar-icon-bg"
+                                            />,
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="secondary"
+                                                key="avatar-icon-fg"
+                                            />
+                                        ]}
+                                    /> 
+                                </Media>
+                                <Media body>
+                                    <span className="mt-0 d-flex h6 mb-1">
+                                        { faker.name.firstName() } { faker.name.lastName() }
+                                    </span>
+                                    <p>
+                                        { faker.lorem.sentence() }
+                                    </p>
+                                </Media>
+                                <Media left top className="ml-2">
+                                    <i className="fa fa-exclamation-circle"></i>
+                                </Media>
+                            </Media>
+                            </ListGroupItem>
+                        </ListGroup>
+                    </div>
+                    { /* END Example */}
+                   
+                </Col>
+                { /* END Col6 2 */}
+            </Row>
+            { /* END Section 2 */}
 
 
         </Container>
