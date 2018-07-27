@@ -280,9 +280,14 @@ class AppLayout extends React.Component {
                                         to='/progressbars'
                                         exact
                                     />
-                                     <SidebarMenu.Item
+                                    <SidebarMenu.Item
                                         title="Media Objects"
                                         to='/mediaobjects'
+                                        exact
+                                    />
+                                    <SidebarMenu.Item
+                                        title="List Groups"
+                                        to='/listgroups'
                                         exact
                                     />
                                 </SidebarMenu.Item>
