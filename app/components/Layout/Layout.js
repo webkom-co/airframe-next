@@ -2,7 +2,6 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import _ from 'lodash';
-import MobileDetect from 'mobile-detect';
 
 import { LayoutContent } from './LayoutContent';
 import { LayoutNavbar } from './LayoutNavbar';
@@ -30,8 +29,6 @@ const responsiveBreakpoints = {
     'xl': { min: 1200 }
 };
 
-const freezeVp = (e) => { e.preventDefault(); };
-
 class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
@@ -55,10 +52,6 @@ class Layout extends React.Component {
         };
 
         this.lastLgSidebarCollapsed = false;
-
-        if (typeof window !== 'undefined') {
-            this.md = new MobileDetect(window.navigator.userAgent);
-        }
     }
 
     componentDidMount() {
@@ -101,13 +94,14 @@ class Layout extends React.Component {
         // Add document initialization
         if (typeof document !== 'undefined') {
             this.bodyElement = document.body;
+            this.documentElement = document.documentElement;
         }
     }
 
     componentDidUpdate(prevProps, prevState) {
         // Prevent content scrolling in overlay mode
         if (
-            this.bodyElement && (
+            this.bodyElement && this.documentElement && (
                 this.state.screenSize === 'xs' ||
                 this.state.screenSize === 'sm' ||
                 this.state.screenSize === 'md'
@@ -115,24 +109,17 @@ class Layout extends React.Component {
         ) {
             if (prevState.sidebarCollapsed !== this.state.sidebarCollapsed) {
                 // Most of the devices
-                Object.assign(this.bodyElement.style,
-                    this.state.sidebarCollapsed ? {
+                const styleUpdate = this.state.sidebarCollapsed ? {
                         overflowY: 'auto',
-                        touchAction: 'auto'
+                        touchAction: 'auto',
+                        height: 'auto'
                     }: {
                         overflowY: 'hidden',
-                        touchAction: 'none'
+                        touchAction: 'none',
+                        height: '100%'
                     }
-                );
-
-                // iOS
-                if (this.md.os() === 'iOS' || this.md.userAgent() === 'Safari') {
-                    if (this.state.sidebarCollapsed) {
-                        this.bodyElement.removeEventListener("touchmove", freezeVp, false);
-                    } else {
-                        this.bodyElement.addEventListener("touchmove", freezeVp, false);
-                    }
-                }
+                Object.assign(this.bodyElement.style, styleUpdate);
+                Object.assign(this.documentElement.style, styleUpdate);
             }
         }
     }
