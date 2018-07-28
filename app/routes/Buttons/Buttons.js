@@ -9,7 +9,11 @@ import {
     CardHeader,
     CardBody,
     CardTitle,
-    CardText
+    CardText,
+    ButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem
 } from './../../components';
 
 import {
@@ -543,20 +547,304 @@ const Buttons = () => (
                                 </span>
                             </CardTitle>
                             <p>
-                                Default button with dropdown
+                                Below example:
                             </p>
-                            <Button outline color="secondary">
-                                <i className="fa fa-home mr-2"></i>
-                                With Icon Button
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Default
+                                <span className="small ml-1 text-muted">
+                                    #3.04
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with Contextual Colors
+                            </p>
+                             <Button outline color="secondary">
+                                Default Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Left Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.05
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with Contextual Colors
+                            </p>
+                            <Button color="secondary">
+                                <i className="fa fa-gear mr-2"></i>
+                                With Icon
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #3.06
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Colored button with dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded
+                                <span className="small ml-1 text-muted">
+                                    #3.07
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Works with all button types
+                            </p>
+                             <Button outline color="secondary">
+                                Rounded Button
                             </Button>{' '}
                         </CardBody>
                     </Card>
                 </Col>
                 <Col lg={ 4 }>
-                   
+                   <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Left Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.08
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Available in both directions
+                            </p>
+                            <Button color="secondary">
+                                <i className="fa fa-gear mr-2"></i>
+                                With Icon
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Outline Rounded Drodpown
+                                <span className="small ml-1 text-muted">
+                                    #3.09
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Rounded button with dropdown
+                            </p>
+                             <Button outline color="secondary">
+                                Default Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Link
+                                <span className="small ml-1 text-muted">
+                                    #3.10
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button as Link
+                                <code>
+                                    &lt;Button outline color="link"&gt;...&lt;/Button&gt;{' '}
+                                </code>
+                            </p>
+                            <Button color="link">
+                                Linked Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Link Left Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.11
+                                </span>
+                            </CardTitle>
+                            <p>
+                                 Button as Link with Icon
+                            </p>
+                            <Button color="link">
+                                <i className="fa fa-gear mr-2"></i>
+                                With Icon
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #3.06
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Colored button with dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Outline Icon Alone
+                                <span className="small ml-1 text-muted">
+                                    #3.13
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with a single icon only
+                            </p>
+                            <Button outline color="secondary">
+                                <i className="fa fa-bars"></i>
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Outline Icon Alone
+                                <span className="small ml-1 text-muted">
+                                    #3.14
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with a single icon only
+                            </p>
+                            <Button outline color="secondary">
+                                <i className="fa fa-bars"></i>
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
                 </Col>
                 <Col lg={ 4 }>
-
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Outline Icon Alone Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #3.15
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Icon button with dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Icon Alone
+                                <span className="small ml-1 text-muted">
+                                    #3.13
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with a single icon only
+                            </p>
+                            <Button color="secondary">
+                                <i className="fa fa-bars"></i>
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Icon Alone Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #3.17
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Works with all button types
+                            </p>
+                            <Button color="secondary">
+                                <i className="fa fa-bars"></i>
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Icon Alone Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #3.18
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Icon button with dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Icons Only Small & Default
+                                <span className="small ml-1 text-muted">
+                                    #3.19
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Floating action button example
+                            </p>
+                            <div className="d-flex">
+                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                    <i className="fa fa-fw fa-caret-left"></i>
+                                </Button>
+                                <Button color="secondary" size="lg" className="mr-2 align-self-center">
+                                    <i className="fa fa-fw fa-check"></i>
+                                </Button>
+                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                    <i className="fa fa-fw fa-caret-right"></i>
+                                </Button>
+                            </div>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Icons Above Text
+                                <span className="small ml-1 text-muted">
+                                    #3.20
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Float buttons with text and icons
+                            </p>
+                            <div className="d-flex">
+                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center text-center">
+                                    <i className="fa fa-fw fa-caret-left"></i>
+                                    <div>Prev</div>
+                                </Button>
+                                <Button color="secondary" size="lg" className="mr-2 align-self-center text-center">
+                                    <i className="fa fa-fw fa-check"></i>
+                                    <div>Confirm</div>
+                                </Button>
+                                <Button color="secondary" outline size="sm" className="mr-2 align-self-center">
+                                    <i className="fa fa-fw fa-caret-right"></i>
+                                    <div>Next</div>
+                                </Button>
+                            </div>
+                        </CardBody>
+                    </Card>
                 </Col>
             </Row>
             { /* END Section 3 */}
