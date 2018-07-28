@@ -5,6 +5,8 @@ import {
     Row,
     Col,
     Button,
+    ButtonGroup,
+    ButtonToolbar,
     Card,
     CardHeader,
     CardBody,
@@ -848,6 +850,589 @@ const Buttons = () => (
                 </Col>
             </Row>
             { /* END Section 3 */}
+
+            { /* START Header 4 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={5} 
+                        title="Buttons Styling" 
+                        className="mt-5"
+                        subTitle="Media list and media object layouts."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 4 */}
+            { /* START Section 4 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Buttons: Large, Default and Small
+                                <span className="small ml-1 text-muted">
+                                    #4.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Button with a single icon only
+                            </p>
+                            <Button color="primary" size="lg" className="mb-2">
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Large Button
+                            </Button>{' '}
+                            <Button color="secondary" className="mb-2">
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Default Button
+                            </Button>{' '}
+                            <Button color="secondary" outline>
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Small Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Buttons: Rounded
+                                <span className="small ml-1 text-muted">
+                                    #4.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Available styling of <code>.r-30</code> button
+                            </p>
+                            <Button color="primary" size="lg" className="mb-2">
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Large Button
+                            </Button>{' '}
+                            <Button color="secondary" className="mb-2">
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Default Button
+                            </Button>{' '}
+                            <Button color="secondary" outline>
+                                <i className="fa fa-folder-open-o mr-2"></i>
+                                Small Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+
+                </Col>
+            </Row>
+            { /* END Section 4 */}
+
+            { /* START Header 5 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={4} 
+                        title="Buttons States" 
+                        className="mt-5"
+                        subTitle="Media list and media object layouts."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 5 */}
+            { /* START Section 5 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Default State
+                                <span className="small ml-1 text-muted">
+                                    #5.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Default button, example:  
+                            </p>
+                            <Button color="primary">
+                                Default Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Default State
+                                <span className="small ml-1 text-muted">
+                                    #5.02
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Active button, just add: <code>active</code> to 
+                                <code>&lt;Button /&gt;</code>.
+                            </p>
+                            <Button color="primary" active>
+                                Active Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Disabled State
+                                <span className="small ml-1 text-muted">
+                                    #5.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Active button, just add: <code>disabled</code> to 
+                                <code>&lt;Button /&gt;</code>.
+                            </p>
+                            <Button color="primary" active>
+                                Disabled Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+
+                </Col>
+            </Row>
+            { /* END Section 5 */}
+
+            { /* START Header 6 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={6} 
+                        title="Buttons Icons Positions" 
+                        className="mt-5"
+                        subTitle="Media list and media object layouts."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 6 */}
+            { /* START Section 6 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Left Icon
+                                <span className="small ml-1 text-muted">
+                                    #6.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Display icon on the left side
+                            </p>
+                            <Button outline color="secondary">
+                                <i className="fa fa-envelope-o mr-2"></i>
+                                Left Position
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Right Icon
+                                <span className="small ml-1 text-muted">
+                                    #6.02
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Display icon on the right side
+                            </p>
+                            <Button outline color="secondary">
+                                Right Position
+                                <i className="fa fa-envelope-o ml-2"></i>
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Right Icon Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #6.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Additional option for right icon
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Left Icon Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #6.04
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Additional option for left icon
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+
+                </Col>
+            </Row>
+            { /* END Section 6 */}
+
+            { /* START Header 7 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={7} 
+                        title="Buttons Dropdowns" 
+                        className="mt-5"
+                        subTitle="Dropdown menus attached to buttons."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 7 */}
+            { /* START Section 7 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropup
+                                <span className="small ml-1 text-muted">
+                                    #7.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic button dropup example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Left Icon Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #7.02
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Dropdown button with icon
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Group Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #7.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Segmented button dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Dropup
+                                <span className="small ml-1 text-muted">
+                                    #7.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Dropup attached to <code>.r-30</code> button
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>        
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #7.05
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Rouned button menu with icon
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Rounded Group Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #7.06
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Rounded button with segments
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Icon Alone Dropup
+                                <span className="small ml-1 text-muted">
+                                    #7.07
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Dropup attached to icon button
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Group Icon Alone Dropup
+                                <span className="small ml-1 text-muted">
+                                    #7.08
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Segmented button dropdown
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Group Icon Alone Dropdown
+                                <span className="small ml-1 text-muted">
+                                    #7.09
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Dropdown in segmented icon button
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropright
+                                <span className="small ml-1 text-muted">
+                                    #7.10
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic button dropright example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropleft
+                                <span className="small ml-1 text-muted">
+                                    #7.11
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic button dropright example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Dropdown Menu Right
+                                <span className="small ml-1 text-muted">
+                                    #7.12
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic button dropleft example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 7 */}
+
+            { /* START Header 8 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={8} 
+                        title="Buttons Options" 
+                        className="mt-5"
+                        subTitle="Media list and media object layouts."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 8 */}
+            { /* START Section 8 */}
+            <Row>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Outline
+                                <span className="small ml-1 text-muted">
+                                    #8.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Default Button Group, example:  
+                                <code>
+                                &lt;ButtonGroup&gt;&lt;Button outline color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;
+                                </code>
+                            </p>
+                            <ButtonGroup>
+                                <Button outline color="secondary">Left</Button>
+                                <Button outline color="secondary">Middle</Button>
+                                <Button outline color="secondary">Right</Button>
+                            </ButtonGroup>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Toolbar
+                                <span className="small ml-1 text-muted">
+                                    #8.02
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Example:   
+                                <code>
+                                &lt;ButtonToolbar&gt;&lt;ButtonGroup&gt;&lt;Button outline color="secondary"&gt;...&lt;/Button&gt;&lt;/ButtonGroup&gt;&lt;/ButtonToolbar&gt;
+                                </code>
+                            </p>
+                            <ButtonToolbar>
+                                <ButtonGroup className="mr-2">
+                                    <Button outline color="secondary">1</Button>
+                                    <Button outline color="secondary">2</Button>
+                                    <Button outline color="secondary">3</Button>
+                                </ButtonGroup>
+                                <ButtonGroup className="mr-2">
+                                    <Button outline color="secondary">3</Button>
+                                    <Button outline color="secondary">4</Button>
+                                </ButtonGroup>
+                                <ButtonGroup>
+                                    <Button outline color="secondary">5</Button>
+                                </ButtonGroup>
+                            </ButtonToolbar>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Checkboxes
+                                <span className="small ml-1 text-muted">
+                                    #8.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Bootstrap <code>checkbox</code> button group
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Radios
+                                <span className="small ml-1 text-muted">
+                                    #8.04
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Bootstrap <code>radio</code> button group
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Toogle States
+                                <span className="small ml-1 text-muted">
+                                    #8.05
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Using <code>data-toggle="button"</code>
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 4 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Block
+                                <span className="small ml-1 text-muted">
+                                    #8.06
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Just add <code>block</code>.
+                            </p>
+                            <Button outline color="secondary" block>
+                                Block Button
+                            </Button>{' '}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Nesting
+                                <span className="small ml-1 text-muted">
+                                    #8.07
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Below example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Button: Checked Single
+                                <span className="small ml-1 text-muted">
+                                    #8.08
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Below example
+                            </p>
+                            <i>TO-DO...</i>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 8 */}
         </Container>
     </React.Fragment>
 );
