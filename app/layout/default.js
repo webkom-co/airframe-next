@@ -304,6 +304,11 @@ class AppLayout extends React.Component {
                                         title="Images"
                                         to='/interface/images'
                                     />
+                                    <SidebarMenu.Item
+                                        title="Paginations"
+                                        to='/Paginations'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

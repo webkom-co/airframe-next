@@ -43,6 +43,7 @@ import MediaObjects from './MediaObjects';
 import ListGroups from './ListGroups';
 import Buttons from './Buttons';
 import Typography from './Typography';
+import Paginations from './Paginations';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -103,6 +104,11 @@ const getRoutes = (store) => {
                 path='/interface/images'
                 exact
                 component={Images} 
+            />
+            <Route
+                path='/paginations'
+                exact
+                component={Paginations} 
             />
         </Switch>
     );
