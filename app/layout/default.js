@@ -265,19 +265,38 @@ class AppLayout extends React.Component {
                                     icon={ <i className="fa fa-fw fa-toggle-on"></i> }
                                     title="Interface"
                                 >
+                                  <SidebarMenu.Item
+                                        title="Typography"
+                                        to='/typography'
+                                        exact
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Buttons"
+                                        to='/buttons'
+                                        exact
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Paginations"
+                                        to='/Paginations'
+                                        exact
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Images"
+                                        to='/interface/images'
+                                    />
                                     <SidebarMenu.Item
                                         title="Avatars"
                                         to='/avatars'
                                         exact
                                     />
                                     <SidebarMenu.Item
-                                        title="Badges & Labels"
-                                        to='/badgeslabels'
+                                        title="Progress Bars"
+                                        to='/progressbars'
                                         exact
                                     />
                                     <SidebarMenu.Item
-                                        title="Progress Bars"
-                                        to='/progressbars'
+                                        title="Badges & Labels"
+                                        to='/badgeslabels'
                                         exact
                                     />
                                     <SidebarMenu.Item
@@ -288,25 +307,6 @@ class AppLayout extends React.Component {
                                     <SidebarMenu.Item
                                         title="List Groups"
                                         to='/listgroups'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Buttons"
-                                        to='/buttons'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Typography"
-                                        to='/typography'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Images"
-                                        to='/interface/images'
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Paginations"
-                                        to='/Paginations'
                                         exact
                                     />
                                 </SidebarMenu.Item>
