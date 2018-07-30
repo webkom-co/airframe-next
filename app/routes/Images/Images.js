@@ -5,6 +5,8 @@ import {
     Col,
     Card,
     CardImg,
+    CardBody,
+    CardText,
     HolderProvider
 } from './../../components';
 
@@ -268,6 +270,46 @@ const Images = () => (
             </Col>
         </Row>
         { /* END Section 1 */}
+
+        { /* START Header 2 */}
+        <Row>
+            <Col lg={ 12 }>
+                <HeaderDemo 
+                    no={2} 
+                    title="Images: Title Options"
+                    className="mt-5"
+                    subTitle="Documentation and examples for opting images into responsive behavior."
+                />
+            </Col>
+        </Row>
+        { /* END Header 2 */}
+        { /* START Section 2 */}
+        <Row>
+            <Col lg={ 4 }>
+                <Card>
+                    <HolderProvider.Icon
+                        iconChar=""
+                        size={ 32 }
+                    >
+                        <CardImg />
+                                            <CardBody>
+                        <CardTitle>Card title</CardTitle>
+                        <CardSubtitle>Card subtitle</CardSubtitle>
+                        <CardText>Some quick example text to build on the card title and make up the bulk of the card's content.</CardText>
+                        <Button>Button</Button>
+                    </CardBody>
+                    </HolderProvider.Icon>
+
+                </Card>
+            </Col>
+            <Col lg={ 4 }>
+
+            </Col>
+            <Col lg={ 4 }>
+
+            </Col>
+        </Row>
+        { /* END Section 2 */}
 
         <Row>
             <Col lg={ 4 }>
