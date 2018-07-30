@@ -44,6 +44,7 @@ import ListGroups from './ListGroups';
 import Buttons from './Buttons';
 import Typography from './Typography';
 import Paginations from './Paginations';
+import Alerts from './Alerts';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -109,6 +110,11 @@ const getRoutes = (store) => {
                 path='/paginations'
                 exact
                 component={Paginations} 
+            />
+            <Route
+                path='/alerts'
+                exact
+                component={Alerts} 
             />
         </Switch>
     );

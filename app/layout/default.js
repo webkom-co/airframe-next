@@ -309,6 +309,11 @@ class AppLayout extends React.Component {
                                         to='/listgroups'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Alerts"
+                                        to='/alerts'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
