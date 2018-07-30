@@ -295,6 +295,11 @@ class AppLayout extends React.Component {
                                         to='/buttons'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Typography"
+                                        to='/typography'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

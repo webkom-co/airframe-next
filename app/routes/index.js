@@ -41,7 +41,7 @@ import ProgressBars from './ProgressBars';
 import MediaObjects from './MediaObjects';
 import ListGroups from './ListGroups';
 import Buttons from './Buttons';
-
+import Typography from './Typography';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -92,6 +92,11 @@ const getRoutes = (store) => {
                 path='/buttons'
                 exact
                 component={Buttons} 
+            />
+            <Route 
+                path='/typography'
+                exact
+                component={Typography} 
             />
         </Switch>
     );
