@@ -300,6 +300,10 @@ class AppLayout extends React.Component {
                                         to='/typography'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Images"
+                                        to='/interface/images'
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

@@ -37,6 +37,7 @@ import Params from './Params';
 import Avatars from './Avatars';
 import Cards from './Cards';
 import BadgesLabels from './BadgesLabels';
+import Images from './Images';
 import ProgressBars from './ProgressBars';
 import MediaObjects from './MediaObjects';
 import ListGroups from './ListGroups';
@@ -97,6 +98,11 @@ const getRoutes = (store) => {
                 path='/typography'
                 exact
                 component={Typography} 
+            />
+            <Route 
+                path='/interface/images'
+                exact
+                component={Images} 
             />
         </Switch>
     );

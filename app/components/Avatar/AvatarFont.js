@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Avatar } from './Avatar';
 
-import avatarColors from './../colors.scss';
+import avatarColors from './../../colors.scss';
 import classes from './AvatarFont.scss';
 
 const AvatarFont = (props) => {

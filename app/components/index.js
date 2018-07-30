@@ -3,6 +3,7 @@ import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
 import CardHeader from './CardHeader';
 import ExtendedDropdown from './ExtendedDropdown';
+import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import Layout, { withPageConfig } from './Layout';
 import OuterClick from './OuterClick';
@@ -21,6 +22,7 @@ export {
     CardHeader,
     ExtendedDropdown,
     IconWithBadge,
+    HolderProvider,
     Layout,
     withPageConfig,
     OuterClick,
