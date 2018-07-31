@@ -45,6 +45,7 @@ import Buttons from './Buttons';
 import Typography from './Typography';
 import Paginations from './Paginations';
 import Alerts from './Alerts';
+import Accordions from './Accordions';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -115,6 +116,11 @@ const getRoutes = (store) => {
                 path='/alerts'
                 exact
                 component={Alerts} 
+            />
+            <Route
+                path='/accordions'
+                exact
+                component={Accordions} 
             />
         </Switch>
     );

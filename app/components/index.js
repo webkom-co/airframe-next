@@ -109,5 +109,6 @@ export {
     UncontrolledAlert,
     UncontrolledButtonDropdown,
     UncontrolledDropdown,
+    UncontrolledCollapse,
     UncontrolledTooltip
 } from 'reactstrap';
