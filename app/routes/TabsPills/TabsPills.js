@@ -135,7 +135,7 @@ const TabsPills = () => (
                 </Col>
             </Row>
             { /* END Header 2 */}
-            { /* START Section 1 */}
+            { /* START Section 2 */}
             <Row>
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
@@ -516,8 +516,505 @@ const TabsPills = () => (
                 </Col>
                 { /* END Col6 2 */}
             </Row>
-            { /* END Section 1 */}
+            { /* END Section 2 */}
 
+            { /* START Header 3 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={3} 
+                        title="Pills Appearance" 
+                        className="mt-5"
+                        subTitle={(
+                            <React.Fragment>
+                                Default, bordered, toolbar layouts
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 3 */}
+            { /* START Section 3 */}
+            <Row>
+                <Col lg={ 6 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Left Icons
+                                <span className="small ml-1 text-muted">
+                                    #3.01
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills>
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        <i className="fa fa-fw fa-user mr-2"></i>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <i className="fa fa-fw fa-gear mr-2"></i>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <i className="fa fa-fw fa-sign-out mr-2"></i>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Right Icons
+                                <span className="small ml-1 text-muted">
+                                    #3.02
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills>
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        Profile
+                                        <i className="fa fa-fw fa-user ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        Settings
+                                        <i className="fa fa-fw fa-gear ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        Logout
+                                        <i className="fa fa-fw fa-sign-out ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Only Icons
+                                <span className="small ml-1 text-muted">
+                                    #3.03
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills>
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        <i className="fa fa-fw fa-user"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <i className="fa fa-fw fa-gear"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <i className="fa fa-fw fa-sign-out"></i>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Left Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.04
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        <i className="fa fa-fw fa-user mr-2"></i>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <i className="fa fa-fw fa-gear mr-2"></i>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <i className="fa fa-fw fa-sign-out mr-2"></i>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Right Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.05
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        Profile
+                                        <i className="fa fa-fw fa-user ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        Settings
+                                        <i className="fa fa-fw fa-gear ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        Logout
+                                        <i className="fa fa-fw fa-sign-out ml-2"></i>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Only Icon
+                                <span className="small ml-1 text-muted">
+                                    #3.06
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        <i className="fa fa-fw fa-user"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <i className="fa fa-fw fa-gear"></i>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <i className="fa fa-fw fa-sign-out"></i>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Right Pills
+                                <span className="small ml-1 text-muted">
+                                    #3.07
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        Profile
+                                        <Badge color="secondary" pill className="align-self-center ml-2">3</Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        Settings
+                                        <Badge color="secondary" pill className="align-self-center ml-2">9</Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        Logout
+                                        <Badge color="secondary" pill className="align-self-center ml-2">87</Badge>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 6 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Left Pills
+                                <span className="small ml-1 text-muted">
+                                    #3.08
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                         <Badge color="secondary" pill className="align-self-center mr-2">3</Badge>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <Badge color="secondary" pill className="align-self-center mr-2">9</Badge>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <Badge color="secondary" pill className="align-self-center mr-2">87</Badge>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Left Pills
+                                <span className="small ml-1 text-muted">
+                                    #3.09
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills>
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                         <Badge color="secondary" pill className="align-self-center mr-2">1</Badge>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <Badge color="secondary" pill className="align-self-center mr-2">2</Badge>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <Badge color="secondary" pill className="align-self-center mr-2">3</Badge>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Left Pills
+                                <span className="small ml-1 text-muted">
+                                    #3.10
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills>
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                         <Badge color="secondary" className="align-self-center mr-2">
+                                            Done
+                                         </Badge>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <Badge color="secondary" className="align-self-center mr-2">
+                                            Add
+                                        </Badge>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <Badge color="secondary" className="align-self-center mr-2">
+                                            Failed
+                                        </Badge>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Left Badges
+                                <span className="small ml-1 text-muted">
+                                    #3.11
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                         <Badge color="secondary" className="align-self-center mr-2">
+                                            Ready
+                                         </Badge>
+                                        Profile
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        <Badge color="secondary" className="align-self-center mr-2">
+                                            Alert
+                                        </Badge>
+                                        Settings
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        <Badge color="secondary" className="align-self-center mr-2">
+                                            Done
+                                        </Badge>
+                                        Logout
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Justify Right Badges
+                                <span className="small ml-1 text-muted">
+                                    #3.12
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        Profile
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            $3,2K
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        Settings
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            $821
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        Logout
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            $23
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Pills: Right Badges
+                                <span className="small ml-1 text-muted">
+                                    #3.13
+                                </span>
+                            </CardTitle>
+                            <p>
+                                Basic pills example using <code>&lt;Nav pills&gt;</code> class. 
+                                Also requires base <code>&lt;NavItem&gt;</code> and 
+                                <code>&lt;NavLink&gt;</code> class.
+                            </p>
+                            <Nav pills className="nav-justified">
+                                <NavItem>
+                                    <NavLink href="#" active>
+                                        Profile
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            1
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#">
+                                        Settings
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            0
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                                <NavItem>
+                                    <NavLink href="#" disabled>
+                                        Logout
+                                        <Badge color="secondary" className="align-self-center ml-2">
+                                            2
+                                        </Badge>
+                                    </NavLink>
+                                </NavItem>
+                            </Nav>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 3 */}
         </Container>
     </React.Fragment>
 );
