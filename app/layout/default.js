@@ -319,6 +319,11 @@ class AppLayout extends React.Component {
                                         to='/accordions'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Tabs Pills"
+                                        to='/tabspills'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

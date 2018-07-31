@@ -46,6 +46,7 @@ import Typography from './Typography';
 import Paginations from './Paginations';
 import Alerts from './Alerts';
 import Accordions from './Accordions';
+import TabsPills from './TabsPills';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -121,6 +122,11 @@ const getRoutes = (store) => {
                 path='/accordions'
                 exact
                 component={Accordions} 
+            />
+            <Route
+                path='/tabspills'
+                exact
+                component={TabsPills} 
             />
         </Switch>
     );
