@@ -49,6 +49,7 @@ import Accordions from './Accordions';
 import TabsPills from './TabsPills';
 import TooltipsPopovers from './TooltipsPopovers';
 import Dropdowns from './Dropdowns';
+import Forms from './Forms';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -139,6 +140,11 @@ const getRoutes = (store) => {
                 path='/dropdowns'
                 exact
                 component={Dropdowns} 
+            />
+            <Route
+                path='/forms'
+                exact
+                component={Forms} 
             />
         </Switch>
     );

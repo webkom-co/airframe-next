@@ -336,6 +336,16 @@ class AppLayout extends React.Component {
                                     />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-check-square-o"></i> }
+                                    title="Forms"
+                                >
+                                    <SidebarMenu.Item
+                                        title="Forms"
+                                        to='/forms'
+                                        exact
+                                    />
+                                </SidebarMenu.Item>
+                                <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Help"
                                 >
