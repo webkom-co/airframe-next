@@ -801,6 +801,335 @@ const Forms = () => (
                 </Col>
             </Row>
             { /* END Section 1 */}
+
+            { /* START Header 2 */}
+            <Row> 
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={2} 
+                        title="Checkboxes" 
+                        className="mt-5"
+                        subTitle={(
+                            <React.Fragment>
+                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 2 */}
+            { /* START Section 2 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <Row>
+                                <Col lg={ 6 }>
+                                    { /* START Checkboxes */}
+                                    <div className="mb-5">
+                                        <CardTitle tag="h6">
+                                            Forms: Checkboxes Stacked
+                                            <span className="small ml-1 text-muted">
+                                                #2.01
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <FormGroup check>
+                                                    <Label check>
+                                                        <Input type="checkbox" checked />{' '}
+                                                        Checked Checkbox
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check>
+                                                    <Label check>
+                                                        <Input type="checkbox" />{' '}
+                                                        Unchecked Checkbox
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check disabled>
+                                                    <Label check>
+                                                        <Input type="checkbox" disabled />{' '}
+                                                        Disabled Checkbox
+                                                    </Label>
+                                                </FormGroup>
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Checkboxes */}
+                                    { /* START Checkboxes */}
+                                    <div>
+                                        <CardTitle tag="h6">
+                                            Forms: Checkboxes Inline
+                                            <span className="small ml-1 text-muted">
+                                                #2.02
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <FormGroup check inline>
+                                                    <Label check>
+                                                        <Input type="checkbox" checked />{' '}
+                                                        Checked
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check inline>
+                                                    <Label check>
+                                                        <Input type="checkbox" />{' '}
+                                                        Unchecked
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check disabled inline>
+                                                    <Label check>
+                                                        <Input type="checkbox" disabled />{' '}
+                                                        Disabled
+                                                    </Label>
+                                                </FormGroup>
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Checkboxes */}
+                                </Col>
+                                <Col lg={ 6 }>
+                                    { /* START Checkboxes */}
+                                    <div className="mb-5">
+                                        <CardTitle tag="h6">
+                                            Forms: Checkboxes Stacked Custom
+                                            <span className="small ml-1 text-muted">
+                                                #2.03
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesStackedCustom1" 
+                                                    label="Checked Checkbox Custom"
+                                                    checked 
+                                                />
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesStackedCustom2" 
+                                                    label="Unchecked Checkbox Custom" 
+                                                />
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesStackedCustom3" 
+                                                    label="Disabled Checkbox Custom" 
+                                                />
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Checkboxes */}
+                                    { /* START Checkboxes */}
+                                    <div>
+                                        <CardTitle tag="h6">
+                                            Forms: Checkboxes Inline
+                                            <span className="small ml-1 text-muted">
+                                                #2.02
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesInlineCustom1" 
+                                                    label="Checked Custom" 
+                                                    inline
+                                                    checked
+                                                />
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesInlineCustom2" 
+                                                    label="Unchecked Custom" 
+                                                    inline
+                                                />
+                                                <CustomInput 
+                                                    type="checkbox" 
+                                                    id="checkboxesInlineCustom3" 
+                                                    label="Disabled Custom" 
+                                                    inline
+                                                    disabled
+                                                />
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Checkboxes */}
+                                </Col>
+                            </Row>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 2 */}
+
+            { /* START Header 3 */}
+            <Row> 
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={3} 
+                        title="Radios" 
+                        className="mt-5"
+                        subTitle={(
+                            <React.Fragment>
+                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 3 */}
+            { /* START Section 3 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <Row>
+                                <Col lg={ 6 }>
+                                    { /* START Radios */}
+                                    <div className="mb-5">
+                                        <CardTitle tag="h6">
+                                            Forms: Radio Stacked
+                                            <span className="small ml-1 text-muted">
+                                                #3.01
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <FormGroup check>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioStacked" checked />{' '}
+                                                        Checked Radio
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioStacked" />{' '}
+                                                        Unchecked Radio
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check disabled>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioStacked" disabled />{' '}
+                                                        Disabled Radio
+                                                    </Label>
+                                                </FormGroup>
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Radios */}
+                                    { /* START Radios */}
+                                    <div>
+                                        <CardTitle tag="h6">
+                                            Forms: Radio Inline
+                                            <span className="small ml-1 text-muted">
+                                                #3.02
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <FormGroup check inline>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioInline" checked />{' '}
+                                                        Checked
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check inline>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioInline" />{' '}
+                                                        Unchecked
+                                                    </Label>
+                                                </FormGroup>
+                                                <FormGroup check disabled inline>
+                                                    <Label check>
+                                                        <Input type="radio" name="radioInline" disabled />{' '}
+                                                        Disabled
+                                                    </Label>
+                                                </FormGroup>
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Radios */}
+                                </Col>
+                                <Col lg={ 6 }>
+                                    { /* START Radios */}
+                                    <div className="mb-5">
+                                        <CardTitle tag="h6">
+                                            Forms: Radio Stacked Custom
+                                            <span className="small ml-1 text-muted">
+                                                #3.03
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radiosStackedCustom1" 
+                                                    name="radiosStackedCustom"
+                                                    label="Checked Radio Custom"
+                                                    checked 
+                                                />
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radiosStackedCustom2" 
+                                                    name="radiosStackedCustom"
+                                                    label="Unchecked Radio Custom" 
+                                                />
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radiosStackedCustom3" 
+                                                    name="radiosStackedCustom"
+                                                    label="Disabled Radio Custom" 
+                                                    disabled
+                                                />
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Radios */}
+                                    { /* START Radios */}
+                                    <div>
+                                        <CardTitle tag="h6">
+                                            Forms: Radio Inline
+                                            <span className="small ml-1 text-muted">
+                                                #3.02
+                                            </span>
+                                        </CardTitle>
+                                        <Form>
+                                            <FormGroup>
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radioInlineCustom1"
+                                                    name="radioInlineCustom"
+                                                    label="Checked Custom" 
+                                                    inline
+                                                    checked
+                                                />
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radioInlineCustom2" 
+                                                    name="radioInlineCustom"
+                                                    label="Unchecked Custom" 
+                                                    inline
+                                                />
+                                                <CustomInput 
+                                                    type="radio" 
+                                                    id="radioInlineCustom2" 
+                                                    name="radioInlineCustom"
+                                                    label="Disabled Custom" 
+                                                    inline
+                                                    disabled
+                                                />
+                                            </FormGroup>
+                                        </Form>
+                                    </div>
+                                    { /* END Radios */}
+                                </Col>
+                            </Row>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 2 */}
         </Container>
     </React.Fragment>
 );
