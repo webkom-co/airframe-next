@@ -324,6 +324,11 @@ class AppLayout extends React.Component {
                                         to='/tabspills'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Tooltips & Popovers"
+                                        to='/tooltipspopovers'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

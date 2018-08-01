@@ -47,6 +47,7 @@ import Paginations from './Paginations';
 import Alerts from './Alerts';
 import Accordions from './Accordions';
 import TabsPills from './TabsPills';
+import TooltipsPopovers from './TooltipsPopovers';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -127,6 +128,11 @@ const getRoutes = (store) => {
                 path='/tabspills'
                 exact
                 component={TabsPills} 
+            />
+            <Route
+                path='/tooltipspopovers'
+                exact
+                component={TooltipsPopovers} 
             />
         </Switch>
     );
