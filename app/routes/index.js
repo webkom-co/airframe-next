@@ -48,6 +48,7 @@ import Alerts from './Alerts';
 import Accordions from './Accordions';
 import TabsPills from './TabsPills';
 import TooltipsPopovers from './TooltipsPopovers';
+import Dropdowns from './Dropdowns';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -133,6 +134,11 @@ const getRoutes = (store) => {
                 path='/tooltipspopovers'
                 exact
                 component={TooltipsPopovers} 
+            />
+            <Route
+                path='/dropdowns'
+                exact
+                component={Dropdowns} 
             />
         </Switch>
     );

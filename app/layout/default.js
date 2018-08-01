@@ -329,6 +329,11 @@ class AppLayout extends React.Component {
                                         to='/tooltipspopovers'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Dropdowns"
+                                        to='/dropdowns'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

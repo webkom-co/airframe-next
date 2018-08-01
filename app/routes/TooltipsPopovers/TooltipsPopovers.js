@@ -9,9 +9,6 @@ import {
     CardTitle,
     CardBody,
     CardText,
-    Pagination,
-    PaginationItem,
-    PaginationLink,
     UncontrolledTooltip
 } from './../../components';
 
