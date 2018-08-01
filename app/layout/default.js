@@ -344,6 +344,11 @@ class AppLayout extends React.Component {
                                         to='/forms'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Forms Layouts"
+                                        to='/formslayouts'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }

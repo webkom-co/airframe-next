@@ -50,6 +50,7 @@ import TabsPills from './TabsPills';
 import TooltipsPopovers from './TooltipsPopovers';
 import Dropdowns from './Dropdowns';
 import Forms from './Forms';
+import FormsLayouts from './FormsLayouts';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -145,6 +146,11 @@ const getRoutes = (store) => {
                 path='/forms'
                 exact
                 component={Forms} 
+            />
+            <Route
+                path='/formslayouts'
+                exact
+                component={FormsLayouts} 
             />
         </Switch>
     );
