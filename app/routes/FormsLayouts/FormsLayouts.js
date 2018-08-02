@@ -10,6 +10,8 @@ import {
     Button, 
     FormFeedback,
     Badge,
+    InputGroup,
+    InputGroupAddon,
     CustomInput,
     Form, 
     FormGroup, 
@@ -95,7 +97,7 @@ const FormsLayouts = () => (
                                             <FormGroup>
                                                 <CustomInput 
                                                     type="radio" 
-                                                    id="operatingSystem1"
+                                                    id="operatingSystem12"
                                                     name="operatingSystem"
                                                     label="OSX" 
                                                     inline
@@ -103,14 +105,14 @@ const FormsLayouts = () => (
                                                 />
                                                 <CustomInput 
                                                     type="radio" 
-                                                    id="operatingSystem2" 
+                                                    id="operatingSystem22"
                                                     name="operatingSystem"
                                                     label="Windows" 
                                                     inline
                                                 />
                                                 <CustomInput 
                                                     type="radio" 
-                                                    id="operatingSystem3" 
+                                                    id="operatingSystem33" 
                                                     name="operatingSystem"
                                                     label="Linux" 
                                                     inline
@@ -170,12 +172,115 @@ const FormsLayouts = () => (
                                         />
                                         <CustomInput 
                                             type="checkbox" 
-                                            id="iConfirm" 
+                                            id="iConfirm2" 
                                             label="I confirm that I have read the Terms." 
                                             className="mb-3"
                                         />
                                         <Button color="primary">Save</Button>
                                     </Col>
+                                </FormGroup>
+                                { /* END Textarea */}
+                            </Form>
+                            { /* END Form */}
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6" className="mb-4">
+                                Forms Without Labels: Preview Example #1.03
+                                <span className="small ml-1 text-muted">
+                                    #1.03
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup>
+                                    <Input 
+                                        type="text" 
+                                        name="" 
+                                        placeholder="Enter Name..." 
+                                    />
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup>
+                                    <Input 
+                                        type="password" 
+                                        name="password" 
+                                        placeholder="Password..." 
+                                    />
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Radios */}
+                                <FormGroup>
+                                    <Form>
+                                        <FormGroup>
+                                            <CustomInput 
+                                                type="radio" 
+                                                name="operatingSystem"
+                                                id="operatingSystem13"
+                                                label="OSX" 
+                                                inline
+                                                checked
+                                            />
+                                            <CustomInput 
+                                                type="radio" 
+                                                name="operatingSystem"
+                                                id="operatingSystem23"
+                                                label="Windows" 
+                                                inline
+                                            />
+                                            <CustomInput 
+                                                type="radio"  
+                                                name="operatingSystem"
+                                                id="operatingSystem33"
+                                                label="Linux" 
+                                                inline
+                                                disabled
+                                            />
+                                        </FormGroup>
+                                    </Form>
+                                </FormGroup>
+                                { /* END Radios */}
+                                { /* START Select */}
+                                <FormGroup>
+                                    <CustomInput 
+                                        type="select" 
+                                        name="customSelect"  
+                                    >
+                                        <option value="">Select Country...</option>
+                                        <option>United States of America (US)</option>
+                                        <option>United Kingdom (UK)</option>
+                                        <option>Australia</option>
+                                        <option>Canada</option>
+                                        <option>Other...</option>
+                                    </CustomInput>
+                                </FormGroup>
+                                { /* END Select */}
+                                { /* START File Select */}
+                                <FormGroup>
+                                    <CustomInput type="file" id="addCv" name="customFile" label="Choose file..." />
+                                    <FormText color="muted">
+                                        Accepted formats: pdf, doc, txt. Max file size 7Mb
+                                    </FormText>
+                                </FormGroup>
+                                { /* END File Select */}
+                                { /* START Textarea */}
+                                <FormGroup>
+                                        <Input 
+                                            type="textarea" 
+                                            name="text"  
+                                            placeholder="Enter Your Message..." 
+                                            className="mb-2"
+                                        />
+                                        <CustomInput 
+                                            type="checkbox" 
+                                            id="iConfirm3" 
+                                            label="I confirm that I have read the Terms." 
+                                            className="mb-3"
+                                        />
+                                        <Button color="primary">Save</Button>
                                 </FormGroup>
                                 { /* END Textarea */}
                             </Form>
@@ -312,6 +417,75 @@ const FormsLayouts = () => (
                 </Col>
             </Row>
             { /* END Section 1 */}
+
+            { /* START Header 2 */}
+            <Row> 
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={2} 
+                        title="Forms Inline" 
+                        className="mt-5"
+                        subTitle={(
+                            <React.Fragment>
+                                Form controls within inline forms vary slightly from their default states.
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 2 */}
+            { /* START Section 2 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6" className="mb-4">
+                                Forms Inline: Preview Example
+                                <span className="small ml-1 text-muted">
+                                    #2.01
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form inline>
+                                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                                    <Input type="text" name="text" id="enterName" placeholder="Enter Name..." />
+                                </FormGroup>
+                                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                                    <InputGroup>
+                                        <InputGroupAddon addonType="prepend">
+                                            i
+                                        </InputGroupAddon>
+                                        <Input type="password" name="password" placeholder="Password..." />
+                                    </InputGroup>
+                                </FormGroup>
+                                <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
+                                    <InputGroup>
+                                        <InputGroupAddon addonType="prepend">
+                                            Country
+                                        </InputGroupAddon>
+                                        <CustomInput type="select" id="country" name="customSelect">
+                                            <option value="">Select...</option>
+                                            <option>United Kingdom</option>
+                                            <option>United States</option>
+                                            <option>Canada</option>
+                                            <option>Australia</option>
+                                            <option>New Zeland</option>
+                                        </CustomInput>
+                                    </InputGroup>
+                                </FormGroup>
+                                <FormGroup>
+                                    <CustomInput type="checkbox" id="rememberMe" label="Remember Me" inline />
+                                </FormGroup>
+                                <Button color="primary">
+                                    Submit
+                                </Button>
+                            </Form>
+                            { /* END Form */}
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 2 */}
         </Container>
     </React.Fragment>
 );
