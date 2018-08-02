@@ -53,6 +53,7 @@ import Forms from './Forms';
 import FormsLayouts from './FormsLayouts';
 import Tables from './Tables';
 import Projects from './Projects';
+import Tasks from './Tasks';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -163,6 +164,11 @@ const getRoutes = (store) => {
                 path='/projects/:type'
                 exact
                 component={Projects} 
+            />
+            <Route
+                path='/tasks/:type'
+                exact
+                component={Tasks} 
             />
         </Switch>
     );

@@ -376,6 +376,18 @@ class AppLayout extends React.Component {
                                             exact
                                         />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item title="Tasks">
+                                        <SidebarMenu.Item
+                                            title="Tasks List"
+                                            to="/tasks/list"
+                                            exact
+                                        />
+                                        <SidebarMenu.Item
+                                            title="Tasks Grid"
+                                            to="/tasks/grid"
+                                            exact
+                                        />
+                                    </SidebarMenu.Item>
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
