@@ -561,6 +561,291 @@ const Tables = () => (
                 </Col>
             </Row>
             { /* END Section 7 */}
+
+            { /* START Section 8 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Table Heads
+                                <span className="small ml-1 text-muted">
+                                    #8.01
+                                </span>
+                            </CardTitle>
+                            <p className="mb-0">
+                                Similar to tables and dark tables, use the modifier classes 
+                                <code>.thead-light</code> or <code>.thead-dark</code> to make 
+                                <code>&lt;thead&gt;</code>s appear light or dark gray.
+                            </p>
+                        </CardBody>
+                        { /* START Table */}
+                        <Table className="mb-0" hover>
+                            <thead className="thead-light">
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Nick</th>
+                                    <th className="text-right">
+                                        Role
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { /* START TR */}
+                                <tr>
+                                    <td className="align-middle">
+                                        1
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.name.firstName() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.name.lastName() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.internet.email() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.internet.userName() }
+                                    </td>
+                                    <td className="align-middle text-right">
+                                        <Badge color="primary">
+                                            { faker.name.jobType() }
+                                        </Badge>
+                                    </td>
+                                </tr>
+                                { /* END TR */}
+                            </tbody>
+                            <thead className="thead-dark">
+                                <tr>
+                                    <th>#</th>
+                                    <th>First Name</th>
+                                    <th>Last Name</th>
+                                    <th>Email</th>
+                                    <th>Nick</th>
+                                    <th className="text-right">
+                                        Role
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { /* START TR */}
+                                <tr>
+                                    <td className="align-middle">
+                                        1
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.name.firstName() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.name.lastName() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.internet.email() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.internet.userName() }
+                                    </td>
+                                    <td className="align-middle text-right">
+                                        <Badge color="primary">
+                                            { faker.name.jobType() }
+                                        </Badge>
+                                    </td>
+                                </tr>
+                                { /* END TR */}
+                            </tbody>
+                        </Table>
+                        { /* END Table */}
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 8 */}
+
+            { /* START Section 9 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Table Contextual
+                                <span className="small ml-1 text-muted">
+                                    #9.01
+                                </span>
+                            </CardTitle>
+                            <p className="mb-0">
+                               Use contextual classes to color table rows or individual cells.
+                            </p>
+                        </CardBody>
+                        { /* START Table */}
+                        <Table className="mb-0" hover>
+                            <thead>
+                                <tr>
+                                    <th>Invoice</th>
+                                    <th>Name</th>
+                                    <th>Date</th>
+                                    <th>Price</th>
+                                    <th>Status</th>
+                                    <th className="text-right">
+                                        Country
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { /* START TR */}
+                                <tr className="table-active">
+                                    <td className="align-middle">
+                                        1
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.name.firstName() } { faker.name.lastName() }
+                                    </td>
+                                    <td className="align-middle">
+                                        { faker.date.weekday() }, 12 { faker.date.month() }, 2018
+                                    </td>
+                                    <td className="align-middle">
+                                         $ { faker.finance.amount() }
+                                    </td>
+                                    <td className="align-middle">
+                                        <Badge color="secondary">
+                                            { faker.finance.accountName() }
+                                        </Badge>
+                                    </td>
+                                    <td className="align-middle text-right">
+                                        { faker.address.country() }
+                                    </td>
+                                </tr>
+                                { /* END TR */}
+                            </tbody>
+                        </Table>
+                        { /* END Table */}
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 9 */}
+
+            { /* START Section 10 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3" type="background" color="900">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Table Inverse
+                                <span className="small ml-1 text-muted">
+                                    #1.10
+                                </span>
+                            </CardTitle>
+                            <p className="mb-0">
+                                You can also invert the colors—with light text on dark backgrounds—with <code>dark</code>.
+                            </p>
+                        </CardBody>
+                        { /* START Table */}
+                        <Table className="mb-0" dark>
+                            <thead>
+                                <tr>
+                                    <th>Project</th>
+                                    <th>Deadline</th>
+                                    <th>Leader</th>
+                                    <th>Budget</th>
+                                    <th>Status</th>
+                                    <th className="text-right">
+                                        Actions
+                                    </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                { /* START TR */}
+                                <tr>
+                                    <td className="align-middle">
+                                        <div className="text-inverse">
+                                            { faker.name.firstName() } { faker.name.lastName() }
+                                        </div>
+                                        <span>
+                                            { faker.company.companyName() }
+                                        </span>
+                                    </td>
+                                    <td className="align-middle">
+                                        <div>
+                                            Thursday
+                                        </div>
+                                        <span className="text-danger">
+                                            Overdue
+                                        </span>
+                                    </td>
+                                    <td className="align-middle">
+                                        <Media>
+                                            <Media left middle className="mr-3">
+                                                <Avatar.Image
+                                                    size="md"
+                                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                    addOns={[
+                                                        <AvatarAddOn.Icon 
+                                                            className="fa fa-circle"
+                                                            color="white"
+                                                            key="avatar-icon-bg"
+                                                        />,
+                                                        <AvatarAddOn.Icon 
+                                                            className="fa fa-circle"
+                                                            color="danger"
+                                                            key="avatar-icon-fg"
+                                                        />
+                                                    ]}
+                                                /> 
+                                            </Media>
+                                            <Media body>
+                                                <div className="mt-0 d-flex">
+                                                    { faker.name.firstName() } { faker.name.lastName() }
+                                                </div>
+                                                <span>
+                                                    { faker.name.jobTitle() }
+                                                </span>
+                                            </Media>
+                                        </Media>
+                                    </td>
+                                    <td className="align-middle">
+                                        <div>
+                                            { faker.finance.amount() }
+                                        </div>
+                                        <span>
+                                            Paid
+                                        </span>
+                                    </td>
+                                    <td className="align-middle">
+                                        <i className="fa fa-circle-o text-success mr-2"></i>
+                                        { faker.finance.transactionType() }
+                                    </td>
+                                    <td className="align-middle text-right">
+                                        <UncontrolledButtonDropdown>
+                                            <DropdownToggle color="secondary" outline caret>
+                                                <i className="fa fa-gear"></i>
+                                            </DropdownToggle>
+                                            <DropdownMenu right>
+                                                <DropdownItem>
+                                                    <i className="fa fa-fw fa-envelope mr-2"></i>
+                                                    Send Email
+                                                </DropdownItem>
+                                                <DropdownItem>
+                                                    <i className="fa fa-fw fa-phone mr-2"></i>
+                                                    Call
+                                                </DropdownItem>
+                                                <DropdownItem>
+                                                    <i className="fa fa-fw fa-user mr-2"></i>
+                                                    Profile
+                                                </DropdownItem>
+                                            </DropdownMenu>
+                                        </UncontrolledButtonDropdown>
+                                    </td>
+                                </tr>
+                            { /* END TR */}
+                            </tbody>
+                        </Table>
+                        { /* END Table */}
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 10 */}
         </Container>
     </React.Fragment>
 );
