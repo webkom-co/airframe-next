@@ -351,6 +351,16 @@ class AppLayout extends React.Component {
                                     />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-trello"></i> }
+                                    title="Tables"
+                                >
+                                    <SidebarMenu.Item
+                                        title="Tables"
+                                        to='/tables'
+                                        exact
+                                    />
+                                </SidebarMenu.Item>
+                                <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Help"
                                 >
