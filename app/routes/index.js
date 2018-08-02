@@ -52,7 +52,7 @@ import Dropdowns from './Dropdowns';
 import Forms from './Forms';
 import FormsLayouts from './FormsLayouts';
 import Tables from './Tables';
-import ProjectsList from './ProjectsList';
+import Projects from './Projects';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -160,9 +160,9 @@ const getRoutes = (store) => {
                 component={Tables} 
             />
             <Route
-                path='/projectslist'
+                path='/projects/:type'
                 exact
-                component={ProjectsList} 
+                component={Projects} 
             />
         </Switch>
     );

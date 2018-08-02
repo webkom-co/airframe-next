@@ -367,7 +367,12 @@ class AppLayout extends React.Component {
                                     <SidebarMenu.Item title="Projects">
                                         <SidebarMenu.Item
                                             title="Projects List"
-                                            to="/projectslist"
+                                            to="/projects/list"
+                                            exact
+                                        />
+                                        <SidebarMenu.Item
+                                            title="Projects Grid"
+                                            to="/projects/grid"
                                             exact
                                         />
                                     </SidebarMenu.Item>
