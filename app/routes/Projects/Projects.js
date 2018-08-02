@@ -16,30 +16,11 @@ import {
     Badge,
     Media,
     Avatar,
-    Progress,
     Breadcrumb,
     BreadcrumbItem,
     ButtonGroup,
-    Pagination,
-    PaginationItem,
-    PaginationLink,
-    AvatarAddOn,
-    Card,
-    CardTitle,
-    CardBody,
-    CardText,
-    CardFooter,
-    Table,
-    UncontrolledTooltip,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
-    DropdownItem,
-    DropdownMenu
 } from './../../components';
 
-import {
-    HeaderDemo
-} from "../components/HeaderDemo";
 import ProjectsList from './ProjectsList';
 import ProjectsGrid from './ProjectsGrid';
 

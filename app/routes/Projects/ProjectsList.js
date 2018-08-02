@@ -2,43 +2,20 @@ import React from 'react';
 import faker from 'faker';
 
 import { 
-    Container,
-    Row,
-    Col,
-    Button,
-    InputGroup,
-    Input,
-    InputGroupAddon,
-    Nav,
-    NavItem,
-    NavLink,
     Badge,
-    Media,
     Avatar,
     Progress,
-    Breadcrumb,
-    BreadcrumbItem,
-    ButtonGroup,
     Pagination,
     PaginationItem,
     PaginationLink,
-    AvatarAddOn,
     Card,
-    CardTitle,
-    CardBody,
-    CardText,
     CardFooter,
     Table,
-    UncontrolledTooltip,
     UncontrolledButtonDropdown,
     DropdownToggle,
     DropdownItem,
     DropdownMenu
 } from './../../components';
-
-import {
-    HeaderDemo
-} from "../components/HeaderDemo";
 
 const ProjectsList = () => (
         <Card className="mb-3">
