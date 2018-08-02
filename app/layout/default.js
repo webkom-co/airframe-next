@@ -361,8 +361,20 @@ class AppLayout extends React.Component {
                                     />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-mouse-pointer"></i> }
+                                    title="Apps"
+                                >
+                                    <SidebarMenu.Item title="Projects">
+                                        <SidebarMenu.Item
+                                            title="Projects List"
+                                            to="/projectslist"
+                                            exact
+                                        />
+                                    </SidebarMenu.Item>
+                                </SidebarMenu.Item>
+                                <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
-                                    title="Help"
+                                    title="Example"
                                 >
                                     <SidebarMenu.Item title="Tutorial">
                                         <SidebarMenu.Item
