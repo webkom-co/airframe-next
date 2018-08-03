@@ -26,6 +26,9 @@ import ProjectsGrid from './ProjectsGrid';
 import {
     ProjectsLeftNav
 } from "../components/ProjectsLeftNav";
+import {
+    ProjectsSmHeader
+} from "../components/ProjectsSmHeader";
 
 
 const Projects = (props) => (
@@ -36,26 +39,7 @@ const Projects = (props) => (
                     <ProjectsLeftNav />
                 </Col>
                 <Col lg={ 9 }>
-                    { /* START Header Nav */}
-                    <div className="d-flex justify-content-end">
-                        <Breadcrumb className="mr-auto d-flex align-items-center">
-                            <BreadcrumbItem active>
-                                Home
-                            </BreadcrumbItem>
-                        </Breadcrumb>
-                        <ButtonGroup className="p-2">
-                            <Button color="secondary" outline className="align-self-center">
-                                <i className="fa-fw fa fa-bars"></i>
-                            </Button>
-                            <Button color="secondary" outline className="align-self-center">
-                                <i className="fa-fw fa fa-th-large"></i>
-                            </Button>
-                        </ButtonGroup>
-                        <Button color="secondary" className="align-self-center">
-                            <i className="fa-fw fa fa-plus"></i>
-                        </Button>
-                    </div>
-                    { /* END Header Nav */}
+                    <ProjectsSmHeader />
 
                     { 
                         props.match.params.type === "list" ?
