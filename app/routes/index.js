@@ -55,6 +55,7 @@ import Tables from './Tables';
 import Projects from './Projects';
 import Tasks from './Tasks';
 import TasksKanban from './TasksKanban';
+import TasksDetails from './TasksDetails';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -175,6 +176,11 @@ const getRoutes = (store) => {
                 path='/taskskanban'
                 exact
                 component={TasksKanban} 
+            />
+            <Route
+                path='/tasksdetails'
+                exact
+                component={TasksDetails} 
             />
         </Switch>
     );
