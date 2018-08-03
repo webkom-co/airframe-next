@@ -265,7 +265,12 @@ class AppLayout extends React.Component {
                                     icon={ <i className="fa fa-fw fa-toggle-on"></i> }
                                     title="Interface"
                                 >
-                                  <SidebarMenu.Item
+                                    <SidebarMenu.Item
+                                        title="Colors"
+                                        to='/colors'
+                                        exact
+                                    />
+                                    <SidebarMenu.Item
                                         title="Typography"
                                         to='/typography'
                                         exact
