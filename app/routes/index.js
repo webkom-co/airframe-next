@@ -57,6 +57,7 @@ import Tasks from './Tasks';
 import TasksKanban from './TasksKanban';
 import TasksDetails from './TasksDetails';
 import Colors from './Colors';
+import InputGroups from './InputGroups';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -187,6 +188,11 @@ const getRoutes = (store) => {
                 path='/colors'
                 exact
                 component={Colors} 
+            />
+            <Route
+                path='/inputgroups'
+                exact
+                component={InputGroups} 
             />
         </Switch>
     );

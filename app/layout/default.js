@@ -354,6 +354,11 @@ class AppLayout extends React.Component {
                                         to='/formslayouts'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Input Groups"
+                                        to='/inputgroups'
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-trello"></i> }
