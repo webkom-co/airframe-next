@@ -15,6 +15,7 @@
   "author": "Webkom",
   "license": "ISC",
   "devDependencies": {
+    "autoprefixer": "^9.1.0",
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.3",
     "babel-eslint": "^8.2.6",
