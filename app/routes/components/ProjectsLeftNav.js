@@ -30,7 +30,9 @@ const ProjectsLeftNav = () => (
             <InputGroup>
                 <Input placeholder="Search for..." />
                 <InputGroupAddon addonType="append">
-                    <Button outline color="secondary">Search</Button>
+                    <Button outline color="secondary">
+                        <i className="fa fa-search"></i>
+                    </Button>
                 </InputGroupAddon>
             </InputGroup>
         </div>
