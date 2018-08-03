@@ -1298,6 +1298,417 @@ const InputGroups = () => (
                 </Col>
             </Row>
             { /* END Section 2 */}
+
+            { /* START Header 3 */}
+            <Row> 
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={3} 
+                        title="Input Groups Buttons" 
+                        className="mt-5"
+                        subTitle={(
+                            <React.Fragment>
+                                Easily extend form controls by adding text, buttons, 
+                                or button groups on either side of textual inputs, custom selects, and custom file inputs.
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 3 */}
+            { /* START Section 3 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6" className="mb-4">
+                                Input Groups: Sizes
+                                <span className="small ml-1 text-muted">
+                                    #3.01
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftLargeAddon" sm={3} size="lg">
+                                        Large Addon
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup size="lg">
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-user"></i>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Enter Your Nick..." id="leftLargeAddon" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftDefaultAddon" sm={3}>
+                                        Default Addon
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-envelope"></i>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Enter Your Email..." id="leftDefaultAddon" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftSmallAddon" sm={3} size="sm">
+                                        Small Addon
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-lock"></i>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Enter Password..." id="leftSmallAddon" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+
+                            <CardTitle tag="h6" className="mt-5 mb-4">
+                                Input Groups: Checkboxes and Radios
+                                <span className="small ml-1 text-muted">
+                                    #3.02
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftCheckbox" sm={3}>
+                                        Left Checkbox
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Input type="checkbox" id="leftCheckboxAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Checkbox Custom..." id="leftCheckbox" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightCheckbox" sm={3}>
+                                        Right Checkbox
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Addon Checkbox Custom..." id="rightCheckbox" />
+                                            <InputGroupAddon addonType="append">
+                                                <Input type="checkbox" id="rightRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftRadio" sm={3}>
+                                        Left Radio
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Input type="radio" id="leftRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Radio Custom..." id="leftRadio" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightRadio" sm={3}>
+                                        Right Radio
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Addon Radio Custom..." id="rightRadio" />
+                                            <InputGroupAddon addonType="append">
+                                                <Input type="radio" id="rightRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftCustomCheckbox" sm={3}>
+                                        Left Checkbox
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <CustomInput type="checkbox" id="leftCustomCheckboxAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Checkbox Native..." id="leftCustomCheckbox" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightCustomCheckbox" sm={3}>
+                                        Right Checkbox
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Addon Checkbox Native..." id="rightCustomCheckbox" />
+                                            <InputGroupAddon addonType="append">
+                                                <CustomInput type="checkbox" id="rightCustomRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftCustomRadio" sm={3}>
+                                        Left Radio
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <CustomInput type="radio" id="leftCustomRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Radio Native..." id="leftCustomRadio" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightCustomRadio" sm={3}>
+                                        Right Radio
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Addon Radio Native..." id="rightCustomRadio" />
+                                            <InputGroupAddon addonType="append">
+                                                <CustomInput type="radio" id="rightCustomRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+
+                            <CardTitle tag="h6" className="mt-5 mb-4">
+                                Input Groups: Custom Selects
+                                <span className="small ml-1 text-muted">
+                                    #3.03
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightSelect" sm={3}>
+                                        Right Select
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                Language:
+                                            </InputGroupAddon>
+                                            <CustomInput type="select" id="rightSelect" name="customSelect">
+                                                <option value="">Choose...</option>
+                                                <option>England</option>
+                                                <option>Scotland</option>
+                                                <option>Ireland</option>
+                                                <option>United States</option>
+                                                <option>Australia</option>
+                                                <option>Canada</option>
+                                                <option>New Zeland</option>
+                                            </CustomInput>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftSelect" sm={3}>
+                                        Left Select
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <CustomInput type="select" id="leftSelect" name="customSelect">
+                                                <option value="">Choose...</option>
+                                                <option>England</option>
+                                                <option>Scotland</option>
+                                                <option>Ireland</option>
+                                                <option>United States</option>
+                                                <option>Australia</option>
+                                                <option>Canada</option>
+                                                <option>New Zeland</option>
+                                            </CustomInput>
+                                            <InputGroupAddon addonType="append">
+                                                Selected
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftButtonSelect" sm={3}>
+                                        Left Button Select
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    Confirm
+                                                </Button>{' '}
+                                            </InputGroupAddon>
+                                            <CustomInput type="select" id="leftButtonSelect" name="customSelect">
+                                                <option value="">Choose...</option>
+                                                <option>England</option>
+                                                <option>Scotland</option>
+                                                <option>Ireland</option>
+                                                <option>United States</option>
+                                                <option>Australia</option>
+                                                <option>Canada</option>
+                                                <option>New Zeland</option>
+                                            </CustomInput>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightButtonSelect" sm={3}>
+                                        Right Button Select
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <CustomInput type="select" id="rightButtonSelect" name="customSelect">
+                                                <option value="">Choose...</option>
+                                                <option>England</option>
+                                                <option>Scotland</option>
+                                                <option>Ireland</option>
+                                                <option>United States</option>
+                                                <option>Australia</option>
+                                                <option>Canada</option>
+                                                <option>New Zeland</option>
+                                            </CustomInput>
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    <i className="fa fa-fw fa-check"></i>
+                                                </Button>{' '}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+
+                            <CardTitle tag="h6" className="mt-5 mb-4">
+                                Input Groups: Custom File Inputs
+                                <span className="small ml-1 text-muted">
+                                    #3.03
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftFileInput" sm={3}>
+                                        Left File Input
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <CustomInput type="file" id="leftFileInput" name="customFile" />
+                                            <InputGroupAddon addonType="append">
+                                                <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                                All Images Accepted
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightFileInput" sm={3}>
+                                        Right File Input
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-file-pdf-o mr-2"></i>
+                                                Only PDF Accepted
+                                            </InputGroupAddon>
+                                            <CustomInput type="file" id="rightFileInput" name="customFile" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftFileInput2" sm={3}>
+                                        Left File Input
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    Remove
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <CustomInput type="file" id="leftFileInput2" name="customFile" />
+                                            <InputGroupAddon addonType="append">
+                                                <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                                All Images Accepted
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightFileInput2" sm={3}>
+                                        Right File Input
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-file-pdf-o mr-2"></i>
+                                                Only PDF Accepted
+                                            </InputGroupAddon>
+                                            <CustomInput type="file" id="rightFileInput" name="customFile" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    Send
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 3 */}
         </Container>
     </React.Fragment>
 );
