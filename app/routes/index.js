@@ -54,6 +54,7 @@ import FormsLayouts from './FormsLayouts';
 import Tables from './Tables';
 import Projects from './Projects';
 import Tasks from './Tasks';
+import TasksKanban from './TasksKanban';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -169,6 +170,11 @@ const getRoutes = (store) => {
                 path='/tasks/:type'
                 exact
                 component={Tasks} 
+            />
+            <Route
+                path='/taskskanban'
+                exact
+                component={TasksKanban} 
             />
         </Switch>
     );

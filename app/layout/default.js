@@ -387,6 +387,11 @@ class AppLayout extends React.Component {
                                             to="/tasks/grid"
                                             exact
                                         />
+                                        <SidebarMenu.Item
+                                            title="Tasks Kanban"
+                                            to="/taskskanban"
+                                            exact
+                                        />
                                     </SidebarMenu.Item>
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
