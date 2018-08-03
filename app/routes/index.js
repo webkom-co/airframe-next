@@ -58,6 +58,9 @@ import TasksKanban from './TasksKanban';
 import TasksDetails from './TasksDetails';
 import Colors from './Colors';
 
+import Register from './Register';
+import Login from './Login';
+
 //------ Route Definitions --------
 const getRoutes = (store) => {
     return (
@@ -188,6 +191,10 @@ const getRoutes = (store) => {
                 exact
                 component={Colors} 
             />
+
+            { /* Pages */ }
+            <Route path='/pages/register' component={ Register } />
+            <Route path='/pages/login' component={ Login } />
         </Switch>
     );
 };

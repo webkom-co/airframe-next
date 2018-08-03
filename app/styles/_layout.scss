@@ -21,6 +21,10 @@
             background: $navbar-background-color;
             border-bottom: 1px solid $navbar-border-color;
         }
+
+        + .layout__content {
+            margin-top: $navbar-height;
+        }
     }
 
     &__sidebar {
@@ -52,7 +56,6 @@
     }
 
     &__content {
-        margin-top: $navbar-height;
         padding: 1.5rem;
 
         @media (max-width: breakpoint-max('md', $grid-breakpoints)) {

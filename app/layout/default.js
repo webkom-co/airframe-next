@@ -404,6 +404,21 @@ class AppLayout extends React.Component {
                                         />
                                     </SidebarMenu.Item>
                                 </SidebarMenu.Item>
+                                
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-copy"></i> }
+                                    title="Pages"
+                                >
+                                    <SidebarMenu.Item
+                                        title="Register"
+                                        to="/pages/register"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Login"
+                                        to="/pages/login"
+                                    />
+                                </SidebarMenu.Item>
+
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Example"

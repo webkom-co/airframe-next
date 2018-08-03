@@ -42,7 +42,7 @@ class Layout extends React.Component {
 
         this.state = {
             sidebarHidden: false,
-            navabrHidden: false,
+            navbarHidden: false,
             footerHidden: false,
             sidebarCollapsed: false,
             screenSize: '',
@@ -166,6 +166,10 @@ class Layout extends React.Component {
         });
     }
 
+    setElementsVisibility(elements) {
+        this.setState(_.pick(elements, ['sidebarHidden', 'navbarHidden', 'footerHidden']));
+    }
+
     render() {
         const { children } = this.props;
         const sidebar = findChildByType(children, LayoutSidebar);
@@ -178,7 +182,8 @@ class Layout extends React.Component {
                     ...this.state,
                     sidebarSlim: !!this.props.sidebarSlim,
 
-                    toggleSidebar: this.toggleSidebar.bind(this)
+                    toggleSidebar: this.toggleSidebar.bind(this),
+                    setElementsVisibility: this.setElementsVisibility.bind(this) 
                 }}
             >
                 <Helmet>
@@ -199,7 +204,7 @@ class Layout extends React.Component {
                     }
 
                     <div className="layout__wrap">
-                        { !this.state.navabrHidden && navbar }
+                        { !this.state.navbarHidden && navbar }
 
                         { content }
                     </div>

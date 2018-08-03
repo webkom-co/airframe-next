@@ -2,6 +2,7 @@ import App from './App';
 import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
 import CardHeader from './CardHeader';
+import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
@@ -21,6 +22,7 @@ export {
     AvatarAddOn,
     Card,
     CardHeader,
+    EmptyLayout,
     ExtendedDropdown,
     IconWithBadge,
     InputGroupAddon,

@@ -7,7 +7,7 @@ const LayoutNavbar = (props) => {
     return (
         <div className="layout__navbar">
         {
-            React.cloneElement(navbar, { fixed: false })
+            React.cloneElement(navbar, { fixed: null })
         }
         </div>
     );
