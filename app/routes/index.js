@@ -57,6 +57,7 @@ import Tasks from './Tasks';
 import TasksKanban from './TasksKanban';
 import TasksDetails from './TasksDetails';
 import Colors from './Colors';
+import InputGroups from './InputGroups';
 
 import Register from './Register';
 import Login from './Login';
@@ -191,10 +192,15 @@ const getRoutes = (store) => {
                 exact
                 component={Colors} 
             />
+            <Route
+                path='/inputgroups'
+                exact
+                component={InputGroups} 
+            />
 
             { /* Pages */ }
             <Route path='/pages/register' component={ Register } />
-            <Route path='/pages/login' component={ Login } />
+            <Route path='/pages/login' component={ Login } />            
         </Switch>
     );
 };
