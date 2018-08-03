@@ -15,7 +15,11 @@ import {
     CustomInput,
     Form, 
     FormGroup, 
-    Label, 
+    Label,
+    UncontrolledButtonDropdown, 
+    DropdownMenu,
+    DropdownToggle,
+    DropdownItem,
     Input, 
     FormText
 } from './../../components';
@@ -412,6 +416,888 @@ const InputGroups = () => (
                 </Col>
             </Row>
             { /* END Section 1 */}
+
+            { /* START Header 2 */}
+            <Row> 
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={2} 
+                        title="Input Groups Buttons"
+                        className="mt-5" 
+                        subTitle={(
+                            <React.Fragment>
+                                Indicate the current page’s location within a navigational hierarchy that automatically adds separators via CSS.
+                            </React.Fragment>
+                        )}
+                    />
+                </Col>
+            </Row>
+            { /* END Header 2 */}
+            { /* START Section 2 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6" className="mb-4">
+                                Input Groups: Buttons
+                                <span className="small ml-1 text-muted">
+                                    #2.01
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftButton" sm={3}>
+                                        Left Button
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                 <Button color="secondary" outline>
+                                                    Change...
+                                                 </Button>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Left Addon..." id="leftButton" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightButton" sm={3}>
+                                        Right Button
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Right Addon..." id="rightButton" />
+                                            <InputGroupAddon addonType="append">
+                                                 <Button color="secondary" outline>
+                                                    Add <i className="fa fa-angle-right ml-2"></i>
+                                                 </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothButtons" sm={3}>
+                                        Both Buttons
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                 <Button color="secondary" outline>
+                                                    $
+                                                 </Button>
+                                            </InputGroupAddon>
+                                            <Input placeholder="Amount..." id="bothButtons" />
+                                            <InputGroupAddon addonType="append">
+                                                 <Button color="secondary" outline>
+                                                    Add <i className="fa fa-angle-right ml-2"></i>
+                                                 </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftButtonTextarea" sm={3}>
+                                        Left Textarea
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    <i className="fa fa-close mr-2"></i>
+                                                    Clear
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input type="textarea" name="text" id="leftButtonTextarea" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightButtonTextarea" sm={3}>
+                                        Right Textarea
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input type="textarea" name="text" id="rightButtonTextarea" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    <i className="fa fa-close mr-2"></i>
+                                                    Clear
+                                                </Button>
+                                            </InputGroupAddon>                                            
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothButtonTextarea" sm={3}>
+                                        Both Textarea
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    Change...
+                                                </Button>
+                                            </InputGroupAddon>  
+                                            <Input type="textarea" name="text" id="bothButtonTextarea" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    <i className="fa fa-close mr-2"></i>
+                                                    Clear
+                                                </Button>
+                                            </InputGroupAddon>                                            
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+
+                            <CardTitle tag="h6" className="mt-5 mb-4">
+                                Input Groups: Buttons Dropdowns
+                                <span className="small ml-1 text-muted">
+                                    #2.02
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftDropdown" sm={3}>
+                                        Left Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Select
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input placeholder="Left Addon..." id="leftDropdown" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightDropdown" sm={3}>
+                                        Right Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Left Addon..." id="rightDropdown" />
+                                            <InputGroupAddon addonType="append">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Select
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothDropdowns" sm={3}>
+                                        Both Dropdowns
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Users
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>
+                                                            Select Priveleges:
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-circle-o mr-2"></i>
+                                                            Administrator
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-o mr-2"></i>
+                                                            User
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-users mr-2"></i>
+                                                            All
+                                                        </DropdownItem>
+                                                        <DropdownItem divider />
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-plus mr-2"></i>
+                                                            Add New User
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input placeholder="Amount..." id="bothDropdowns" />
+                                            <InputGroupAddon addonType="append">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Select
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftTexareaDropdown" sm={3}>
+                                        Left Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input type="textarea" name="text" id="leftTexareaDropdown" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightTexareaDropdown" sm={3}>
+                                        Right Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input type="textarea" name="text" id="rightTexareaDropdown" />
+                                            <InputGroupAddon addonType="append">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothTexareaDropdowns" sm={3}>
+                                        Both Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Users
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>
+                                                            Select Priveleges:
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-circle-o mr-2"></i>
+                                                            Administrator
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-o mr-2"></i>
+                                                            User
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-users mr-2"></i>
+                                                            All
+                                                        </DropdownItem>
+                                                        <DropdownItem divider />
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-plus mr-2"></i>
+                                                            Add New User
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input type="textarea" name="text" id="bothTexareaDropdowns" />
+                                            <InputGroupAddon addonType="append">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                        { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+
+                            <CardTitle tag="h6" className="mt-5 mb-4">
+                                Input Groups: Segmented
+                                <span className="small ml-1 text-muted">
+                                    #2.03
+                                </span>
+                            </CardTitle>
+                            { /* START Form */}
+                            <Form>
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftSegmentedDropdown" sm={3}>
+                                        Left Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <Button color="secondary" outline>
+                                                    Options
+                                                </Button>
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input placeholder="Left Addon..." id="leftSegmentedDropdown" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightSegmentedDropdown" sm={3}>
+                                        Right Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input placeholder="Left Addon..." id="rightSegmentedDropdown" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    Options
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothSegmentedDropdowns" sm={3}>
+                                        Both Dropdowns
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    Options
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-user-circle-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>
+                                                            Select Priveleges:
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-circle-o mr-2"></i>
+                                                            Administrator
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-o mr-2"></i>
+                                                            User
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-users mr-2"></i>
+                                                            All
+                                                        </DropdownItem>
+                                                        <DropdownItem divider />
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-plus mr-2"></i>
+                                                            Add New User
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input placeholder="Amount..." id="bothSegmentedDropdowns" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    Options
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="leftSegmentedTexareaDropdown" sm={3}>
+                                        Left Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                                <Button color="secondary" outline>
+                                                    Clear
+                                                </Button>
+                                            </InputGroupAddon>
+                                            <Input type="textarea" name="text" id="leftSegmentedTexareaDropdown" />
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="rightSegmentedTexareaDropdown" sm={3}>
+                                        Right Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <Input type="textarea" name="text" id="rightSegmentedTexareaDropdown" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    Clear
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                                { /* START Input */}
+                                <FormGroup row>
+                                    <Label for="bothSegmentedTexareaDropdowns" sm={3}>
+                                        Both Dropdown
+                                    </Label>
+                                    <Col sm={9}>
+                                        <InputGroup>
+                                            <InputGroupAddon addonType="prepend">
+                                                <Button color="secondary" outline>
+                                                    Options
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        Users
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>
+                                                            Select Priveleges:
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-circle-o mr-2"></i>
+                                                            Administrator
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-user-o mr-2"></i>
+                                                            User
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-users mr-2"></i>
+                                                            All
+                                                        </DropdownItem>
+                                                        <DropdownItem divider />
+                                                        <DropdownItem>
+                                                            <i className="fa fa-fw fa-plus mr-2"></i>
+                                                            Add New User
+                                                        </DropdownItem>
+                                                    { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                            <Input type="textarea" name="text" id="bothSegmentedTexareaDropdowns" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="secondary" outline>
+                                                    Clear
+                                                </Button>
+                                                { /* START Button Dropdown */}
+                                                <UncontrolledButtonDropdown>
+                                                    <DropdownToggle color="secondary" outline caret>
+                                                        <i className="fa fa-fw fa-folder-open-o"></i>
+                                                    </DropdownToggle>
+                                                    <DropdownMenu persist right>
+                                                        { /* START Dropdown Content */}
+                                                        <DropdownItem header>Select Folder:</DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            Content
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Movies
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Documents
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Pictures
+                                                        </DropdownItem>
+                                                        <DropdownItem>
+                                                            <i className="fa fa-folder-o mr-2"></i>
+                                                            My Music
+                                                        </DropdownItem>
+                                                        { /* END Dropdown Content */}
+                                                    </DropdownMenu>
+                                                </UncontrolledButtonDropdown>
+                                                { /* END Button Dropdown */}
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </Col>
+                                </FormGroup>
+                                { /* END Input */}
+                            </Form>
+                            { /* END Form */}
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 2 */}
         </Container>
     </React.Fragment>
 );
