@@ -5,6 +5,7 @@ import CardHeader from './CardHeader';
 import ExtendedDropdown from './ExtendedDropdown';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
+import InputGroupAddon from './InputGroupAddon';
 import Layout, { withPageConfig } from './Layout';
 import OuterClick from './OuterClick';
 import PageLoader from './PageLoader';
@@ -22,6 +23,7 @@ export {
     CardHeader,
     ExtendedDropdown,
     IconWithBadge,
+    InputGroupAddon,
     HolderProvider,
     Layout,
     withPageConfig,
@@ -74,7 +76,6 @@ export {
     FormText,
     Input,
     InputGroup,
-    InputGroupAddon,
     InputGroupButtonDropdown,
     InputGroupText,
     Jumbotron,

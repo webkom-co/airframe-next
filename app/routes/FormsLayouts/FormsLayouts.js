@@ -453,7 +453,7 @@ const FormsLayouts = () => (
                                 <FormGroup className="mb-2 mr-sm-2 mb-sm-0">
                                     <InputGroup>
                                         <InputGroupAddon addonType="prepend">
-                                            i
+                                            <i className="fa fa-key fa-fw" />
                                         </InputGroupAddon>
                                         <Input type="password" name="password" placeholder="Password..." />
                                     </InputGroup>
