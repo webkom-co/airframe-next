@@ -113,12 +113,10 @@ class Layout extends React.Component {
                 // Most of the devices
                 const styleUpdate = this.state.sidebarCollapsed ? {
                         overflowY: 'auto',
-                        touchAction: 'auto',
-                        height: 'auto'
+                        touchAction: 'auto'
                     }: {
                         overflowY: 'hidden',
-                        touchAction: 'none',
-                        height: '100%'
+                        touchAction: 'none'
                     }
                 Object.assign(this.bodyElement.style, styleUpdate);
                 Object.assign(this.documentElement.style, styleUpdate);
