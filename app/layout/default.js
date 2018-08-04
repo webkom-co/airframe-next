@@ -451,7 +451,11 @@ class AppLayout extends React.Component {
                                         to="/pages/comingsoon"
                                     />
                                 </SidebarMenu.Item>
-
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-star-o"></i> }
+                                    title="Icons"
+                                    to='/icons'
+                                />
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Example"

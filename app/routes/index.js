@@ -58,6 +58,7 @@ import TasksKanban from './TasksKanban';
 import TasksDetails from './TasksDetails';
 import Colors from './Colors';
 import InputGroups from './InputGroups';
+import Icons from './Icons';
 
 import Register from './Register';
 import Login from './Login';
@@ -203,6 +204,11 @@ const getRoutes = (store) => {
                 path='/inputgroups'
                 exact
                 component={InputGroups} 
+            />
+            <Route
+                path='/icons'
+                exact
+                component={Icons} 
             />
 
             { /* Pages */ }
