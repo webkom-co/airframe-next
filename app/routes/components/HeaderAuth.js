@@ -5,7 +5,7 @@ const HeaderAuth = (props) => (
     <div className="mb-4">
         <div className="mb-4 text-center">
             <a href="/">
-                <i className={ `fa fa-${ props.icon } fa-3x text-primary ${ props.iconClassName }` }></i>
+                <i className={ `fa fa-${ props.icon } fa-3x ${ props.iconClassName }` }></i>
             </a>
         </div>
         <h5 className="text-center mb-4">
@@ -25,7 +25,8 @@ HeaderAuth.propTypes = {
 HeaderAuth.defaultProps = {
     icon: "send",
     title: "Waiting for Data...",
-    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas aperiam odit, reiciendis dicta nihil."
+    text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas aperiam odit, reiciendis dicta nihil.",
+    iconClassName: "text-primary"
 };
 
 export { HeaderAuth };

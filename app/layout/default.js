@@ -438,6 +438,10 @@ class AppLayout extends React.Component {
                                         title="Confirmation"
                                         to="/pages/confirmation"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Success"
+                                        to="/pages/success"
+                                    />
                                 </SidebarMenu.Item>
 
                                 <SidebarMenu.Item
