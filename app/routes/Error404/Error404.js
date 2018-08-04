@@ -42,7 +42,7 @@ const Error404 = () => (
                     <InputGroup>
                         <Input type="text" name="text" id="search" placeholder="Enter search phrase here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary">
+                            <Button color="primary" href="/">
                                 <i className="fa fa-search"></i>
                             </Button>
                         </InputGroupAddon>

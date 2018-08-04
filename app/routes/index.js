@@ -64,6 +64,7 @@ import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import LockScreen from './LockScreen';
 import Error404 from './Error404';
+import Confirmation from './Confirmation';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -207,6 +208,7 @@ const getRoutes = (store) => {
             <Route path='/pages/forgotpassword' component={ ForgotPassword } />
             <Route path='/pages/lockscreen' component={ LockScreen } />
             <Route path='/pages/error404' component={ Error404 } />
+            <Route path='/pages/confirmation' component={ Confirmation } />
         </Switch>
     );
 };

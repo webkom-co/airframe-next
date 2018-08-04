@@ -434,6 +434,10 @@ class AppLayout extends React.Component {
                                         title="Error 404"
                                         to="/pages/error404"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Confirmation"
+                                        to="/pages/confirmation"
+                                    />
                                 </SidebarMenu.Item>
 
                                 <SidebarMenu.Item
