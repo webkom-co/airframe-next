@@ -422,6 +422,10 @@ class AppLayout extends React.Component {
                                         title="Login"
                                         to="/pages/login"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Forgot Password"
+                                        to="/pages/forgotpassword"
+                                    />
                                 </SidebarMenu.Item>
 
                                 <SidebarMenu.Item

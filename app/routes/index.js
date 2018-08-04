@@ -61,6 +61,7 @@ import InputGroups from './InputGroups';
 
 import Register from './Register';
 import Login from './Login';
+import ForgotPassword from './ForgotPassword';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -200,7 +201,8 @@ const getRoutes = (store) => {
 
             { /* Pages */ }
             <Route path='/pages/register' component={ Register } />
-            <Route path='/pages/login' component={ Login } />            
+            <Route path='/pages/login' component={ Login } />
+            <Route path='/pages/forgotpassword' component={ ForgotPassword } />          
         </Switch>
     );
 };
