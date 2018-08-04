@@ -446,6 +446,10 @@ class AppLayout extends React.Component {
                                         title="Danger"
                                         to="/pages/danger"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Coming Soon"
+                                        to="/pages/comingsoon"
+                                    />
                                 </SidebarMenu.Item>
 
                                 <SidebarMenu.Item

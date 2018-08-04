@@ -67,6 +67,7 @@ import Error404 from './Error404';
 import Confirmation from './Confirmation';
 import Success from './Success';
 import Danger from './Danger';
+import ComingSoon from './ComingSoon';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -213,6 +214,7 @@ const getRoutes = (store) => {
             <Route path='/pages/confirmation' component={ Confirmation } />
             <Route path='/pages/success' component={ Success } />
             <Route path='/pages/danger' component={ Danger } />
+            <Route path='/pages/comingsoon' component={ ComingSoon } />
         </Switch>
     );
 };
