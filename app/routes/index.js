@@ -63,6 +63,7 @@ import Register from './Register';
 import Login from './Login';
 import ForgotPassword from './ForgotPassword';
 import LockScreen from './LockScreen';
+import Error404 from './Error404';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
@@ -204,7 +205,8 @@ const getRoutes = (store) => {
             <Route path='/pages/register' component={ Register } />
             <Route path='/pages/login' component={ Login } />
             <Route path='/pages/forgotpassword' component={ ForgotPassword } />
-            <Route path='/pages/lockscreen' component={ LockScreen } />      
+            <Route path='/pages/lockscreen' component={ LockScreen } />
+            <Route path='/pages/error404' component={ Error404 } />
         </Switch>
     );
 };

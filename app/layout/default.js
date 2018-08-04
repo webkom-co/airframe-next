@@ -430,6 +430,10 @@ class AppLayout extends React.Component {
                                         title="Lock Screen"
                                         to="/pages/lockscreen"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Error 404"
+                                        to="/pages/error404"
+                                    />
                                 </SidebarMenu.Item>
 
                                 <SidebarMenu.Item
