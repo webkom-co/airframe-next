@@ -59,6 +59,7 @@ import TasksDetails from './TasksDetails';
 import Colors from './Colors';
 import InputGroups from './InputGroups';
 import Icons from './Icons';
+import Clients from './Clients';
 
 import Register from './Register';
 import Login from './Login';
@@ -209,6 +210,11 @@ const getRoutes = (store) => {
                 path='/icons'
                 exact
                 component={Icons} 
+            />
+            <Route
+                path='/clients'
+                exact
+                component={Clients} 
             />
 
             { /* Pages */ }
