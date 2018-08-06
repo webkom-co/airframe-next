@@ -408,6 +408,11 @@ class AppLayout extends React.Component {
                                             exact
                                         />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item
+                                        title="Clients"
+                                        to="/clients"
+                                        exact
+                                    />
                                 </SidebarMenu.Item>
                                 
                                 <SidebarMenu.Item
@@ -422,8 +427,40 @@ class AppLayout extends React.Component {
                                         title="Login"
                                         to="/pages/login"
                                     />
+                                    <SidebarMenu.Item
+                                        title="Forgot Password"
+                                        to="/pages/forgotpassword"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Lock Screen"
+                                        to="/pages/lockscreen"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Error 404"
+                                        to="/pages/error404"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Confirmation"
+                                        to="/pages/confirmation"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Success"
+                                        to="/pages/success"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Danger"
+                                        to="/pages/danger"
+                                    />
+                                    <SidebarMenu.Item
+                                        title="Coming Soon"
+                                        to="/pages/comingsoon"
+                                    />
                                 </SidebarMenu.Item>
-
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-star-o"></i> }
+                                    title="Icons"
+                                    to='/icons'
+                                />
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-question"></i> }
                                     title="Example"

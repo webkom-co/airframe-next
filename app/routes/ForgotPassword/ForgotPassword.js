@@ -23,43 +23,39 @@ import {
     FooterAuth
 } from "../components/FooterAuth";
 
-const Login = () => (
+const ForgotPassword = () => (
     <EmptyLayout>
         <EmptyLayout.Section center>
             { /* START Header */}
             <HeaderAuth 
-                title="Sign In to Application"
+                title="Forgot Password"
             />
             { /* END Header */}
             { /* START Form */}
             <Form className="mb-3">
                 <FormGroup>
                     <Label for="emailAdress">
-                        Email Adress
+                        Email Adress or Username
                     </Label>
-                    <Input type="email" name="email" id="emailAdress" placeholder="Enter email..." />
+                    <Input type="email" name="email" id="emailAdress" placeholder="Enter..." />
                     <FormText color="muted">
                         We'll never share your email with anyone else.
                     </FormText>
                 </FormGroup>
-                <FormGroup>
-                    <Label for="password">
-                        Password
-                    </Label>
-                    <Input type="password" name="password" id="password" placeholder="Password..." />
-                </FormGroup>
-                <FormGroup>
-                    <CustomInput type="checkbox" id="rememberPassword" label="Remember Password" inline />
-                </FormGroup>
-                <Button color="primary" block href="/">
-                    Sign In
-                </Button>
+                <div className="d-flex">
+                    <Button color="primary" href="/" className="align-self-center">
+                        Reset Password
+                    </Button>
+                    <Button color="secondary" outline href="/" className="align-self-center ml-auto">
+                        Back to Home
+                    </Button>
+                </div>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/forgotpassword">
-                    Forgot Password
+                <a href="/pages/login">
+                    Login
                 </a>
                 <a href="/pages/register" className="ml-auto">
                     Register
@@ -73,4 +69,4 @@ const Login = () => (
     </EmptyLayout>
 );
 
-export default Login;
+export default ForgotPassword;

@@ -39,6 +39,13 @@ import {
     TasksCardGrid
 } from "../components/TasksCardGrid";
 
+import {
+    Attachment
+} from "../components/Attachment";
+
+import {
+    Comment
+} from "../components/Comment";
 
 const TasksDetails = () => (
     <React.Fragment>
@@ -255,39 +262,21 @@ const TasksDetails = () => (
                                         3
                                     </Badge>
                                 </div>
-                                { /* START Atachemnt Media */}
-                                <Media className="mb-2">
-                                    <Media left className="mr-2">
-                                        <span className="fa-stack fa-lg">
-                                            <i className="fa fa-square fa-stack-2x text-primary"></i>
-                                            <i className="fa fa-file-word-o fa-stack-1x text-white"></i>
-                                        </span>
-                                    </Media>
-                                    <Media body>
-                                        <div className="text-inverse">
-                                            { faker.system.fileName() }
-                                        </div>
-                                        <span>
-                                            by <span>
-                                                { faker.name.firstName() } { faker.name.firstName() }
-                                            </span> 
-                                            <span className="text-muted"> · </span> 
-                                            <span>
-                                                { faker.finance.amount() } Kb
-                                            </span>
-                                        </span>
-                                    </Media>
-                                    <Media right className="d-flex">
-                                        <div className="text-right mr-3">
-                                            04-Oct-2012<br />
-                                            05:20 PM
-                                        </div>
-                                        <Button color="secondary" outline className="align-self-center">
-                                            <i className="fa fa-fw fa-download"></i>
-                                        </Button>
-                                    </Media>
-                                </Media>
-                                { /* END Atachemnt Media */}
+                                <Attachment 
+                                    icon="file-word-o"
+                                    iconClassName="text-white"
+                                    BgIconClassName="text-primary"
+                                />
+                                <Attachment 
+                                    icon="file-excel-o"
+                                    iconClassName="text-white"
+                                    BgIconClassName="text-success"
+                                />
+                                <Attachment 
+                                    icon="file-powerpoint-o"
+                                    iconClassName="text-white"
+                                    BgIconClassName="text-warning"
+                                />
                                 <a href="#" className="my-3">
                                     <i className="fa fa-plus mr-2"></i>
                                     Add More Files to this Task
@@ -362,6 +351,7 @@ const TasksDetails = () => (
                                     </div>
                                 </Media>
                             </Media>
+                            <Comment />
                             { /* END Comment Media */}
                         </CardBody>
                         <CardFooter>
