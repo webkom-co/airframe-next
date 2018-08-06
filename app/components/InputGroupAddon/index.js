@@ -1,3 +1,3 @@
-import { InputGroupAddon } from './inputGroupAddon'; 
+import { InputGroupAddon } from './InputGroupAddon'; 
 
 export default InputGroupAddon;
