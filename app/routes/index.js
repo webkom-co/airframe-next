@@ -60,6 +60,7 @@ import Colors from './Colors';
 import InputGroups from './InputGroups';
 import Icons from './Icons';
 import Clients from './Clients';
+import Files from './Files';
 
 import Register from './Register';
 import Login from './Login';
@@ -215,6 +216,11 @@ const getRoutes = (store) => {
                 path='/clients'
                 exact
                 component={Clients} 
+            />
+            <Route
+                path='/files/:type'
+                exact
+                component={Files} 
             />
 
             { /* Pages */ }
