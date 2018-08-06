@@ -11,12 +11,9 @@ import {
     Table,
     Button,
     Card,
-    CardTitle,
     AvatarAddOn,
     CardBody,
-    CardText,
     CardFooter,
-    CardColumns,
     UncontrolledButtonDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -34,10 +31,6 @@ import {
 import {
     ProjectsSmHeader
 } from "../components/ProjectsSmHeader";
-
-import {
-    TasksCardGrid
-} from "../components/TasksCardGrid";
 
 import {
     Attachment
@@ -290,67 +283,8 @@ const TasksDetails = () => (
                                 <Badge pill color="secondary">
                                     3
                                 </Badge>
-                            </div>
-                            { /* START Comment Media */}
-                            <Media className="mb-2">
-                                <Media left className="mr-3">
-                                    <Avatar.Image
-                                        size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
-                                        className="mr-2"
-                                        addOns={[
-                                            <AvatarAddOn.Icon 
-                                                className="fa fa-circle"
-                                                color="white"
-                                                key="avatar-icon-bg"
-                                            />,
-                                            <AvatarAddOn.Icon 
-                                                className="fa fa-circle"
-                                                color="success"
-                                                key="avatar-icon-fg"
-                                            />
-                                        ]}
-                                    />
-                                </Media>
-                                <Media body>
-                                    <div className="mb-2">
-                                        <span className="text-inverse mr-2">
-                                            { faker.name.firstName() } { faker.name.firstName() }
-                                        </span>
-                                        <span className="small">
-                                            13-Jun-2015, 08:13
-                                        </span>
-                                    </div>
-                                    <p className="mb-1">
-                                        { faker.lorem.paragraph() }
-                                    </p>
-                                    <div>
-                                        <span className="text-success mr-2">
-                                            +92
-                                        </span>
-                                        <a href="#" id="tooltipVoteUp" className="mr-2">
-                                            <i className="fa fa-angle-up text-success"></i>
-                                        </a>
-                                        <UncontrolledTooltip placement="top" target="tooltipVoteUp">
-                                            Vote Up
-                                        </UncontrolledTooltip>
-                                        <a href="#" id="tooltipVoteDown" className="mr-2">
-                                            <i className="fa fa-angle-down text-danger"></i>
-                                        </a>
-                                        <UncontrolledTooltip placement="down" target="tooltipVoteDown">
-                                            Vote Down
-                                        </UncontrolledTooltip>
-                                        <span className="mr-2">·</span>
-                                        <a href="#" className="mr-2">
-                                            Reply
-                                        </a>
-                                        <span className="mr-2">·</span>
-                                        <a href="#">
-                                            Edit
-                                        </a>
-                                    </div>
-                                </Media>
-                            </Media>
+                            </div> 
+                            <Comment />
                             <Comment />
                             { /* END Comment Media */}
                         </CardBody>
