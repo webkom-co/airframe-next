@@ -12,31 +12,21 @@ import {
     ButtonToolbar,
     Button,
     ButtonGroup,
-    CardTitle,
     CardBody,
     CardFooter,
     CustomInput,
-    Progress,
     Table,
     TabPane,
     Badge,
     Nav,
     NavItem,
-    NavLink,
     Pagination,
     PaginationLink,
     PaginationItem,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
     UncontrolledTooltip,
     UncontrolledTabs
 } from './../../components';
 
-import {
-    HeaderDemo
-} from "../components/HeaderDemo";
 
 const Clients = () => (
     <React.Fragment>
@@ -83,7 +73,7 @@ const Clients = () => (
 
                             <UncontrolledTabs.TabContent>
                                 <TabPane tabId="clients">
-                                { /* START Table */}
+                                    { /* START Table */}
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
@@ -155,44 +145,157 @@ const Clients = () => (
                                         </tbody>
                                     </Table>
                                     { /* END Table */}
-                                    <CardFooter className="d-flex">
-                                        <span className="align-self-center">
-                                            Showing 1 to 10 of 57 entries
-                                        </span>
-                                        <Pagination aria-label="Page navigation example" className="ml-auto">
-                                            <PaginationItem>
-                                                <PaginationLink previous href="#">
-                                                    <i className="fa fa-fw fa-angle-left"></i>
-                                                </PaginationLink>
-                                            </PaginationItem>
-                                            <PaginationItem active>
-                                                <PaginationLink href="#">
-                                                    1
-                                                </PaginationLink>
-                                            </PaginationItem>
-                                            <PaginationItem>
-                                                <PaginationLink href="#">
-                                                    2
-                                                </PaginationLink>
-                                            </PaginationItem>
-                                            <PaginationItem>
-                                                <PaginationLink href="#">
-                                                    3
-                                                </PaginationLink>
-                                            </PaginationItem>
-                                            <PaginationItem>
-                                                <PaginationLink next href="#">
-                                                    <i className="fa fa-fw fa-angle-right"></i>
-                                                </PaginationLink>
-                                            </PaginationItem>
-                                        </Pagination>
-                                    </CardFooter>
                                 </TabPane>
                                 <TabPane tabId="companies">
-                                    Companies here
+                                    { /* START Table */}
+                                    <Table className="mb-0" hover responsive>
+                                        <thead>
+                                            <tr>
+                                                <th></th>
+                                                <th></th>
+                                                <th>Name</th>
+                                                <th>Email</th>
+                                                <th className="text-right">Phone</th>
+                                                <th className="text-right">Label</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            { /* START TR */}
+                                            <tr>
+                                                <td className="align-middle">
+                                                    <CustomInput type="checkbox" id="companyCheckbox" label="" inline />
+                                                </td>
+                                                <td className="align-middle">
+                                                    <a href="#" id="tooltipAddToFavorites">
+                                                        <i className="fa fa-fw fa-star-o"></i>
+                                                    </a>
+                                                    <UncontrolledTooltip placement="top" target="tooltipAddToFavorites">
+                                                        Add To Favorites
+                                                    </UncontrolledTooltip>
+                                                </td>
+                                                <td className="align-middle">
+                                                    <Media>
+                                                        <Media left className="align-self-center mr-2">
+                                                            <Avatar.Font 
+                                                                bgColor="secondary"
+                                                                fgColor="white"
+                                                                className="mr-1"
+                                                                >
+                                                                <i className="fa fa-facebook" />
+                                                            </Avatar.Font>
+                                                        </Media>
+                                                        <Media body>
+                                                            <div className="mt-0 d-flex">
+                                                                Facebook
+                                                            </div>
+                                                            <span>
+                                                                { faker.address.country() }
+                                                            </span>
+                                                        </Media>
+                                                    </Media>
+                                                </td>
+                                                <td className="align-middle">
+                                                    <Avatar.Image
+                                                        size="sm"
+                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        className="mr-2"
+                                                        addOns={[
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="white"
+                                                                key="avatar-icon-bg"
+                                                            />,
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="success"
+                                                                key="avatar-icon-fg"
+                                                            />
+                                                        ]}
+                                                    />
+                                                    <Avatar.Image
+                                                        size="sm"
+                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        className="mr-2"
+                                                        addOns={[
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="white"
+                                                                key="avatar-icon-bg"
+                                                            />,
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="danger"
+                                                                key="avatar-icon-fg"
+                                                            />
+                                                        ]}
+                                                    />
+                                                    <Avatar.Image
+                                                        size="sm"
+                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        className="mr-2"
+                                                        addOns={[
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="white"
+                                                                key="avatar-icon-bg"
+                                                            />,
+                                                            <AvatarAddOn.Icon 
+                                                                className="fa fa-circle"
+                                                                color="warning"
+                                                                key="avatar-icon-fg"
+                                                            />
+                                                        ]}
+                                                    />
+                                                </td>
+                                                <td className="align-middle text-right">
+                                                    { faker.phone.phoneNumberFormat() }<br />
+                                                    { faker.internet.email() } 
+                                                </td>
+                                                <td className="align-middle text-right">
+                                                    { faker.address.streetAddress() }<br />
+                                                    { faker.address.city() } 
+                                                </td>
+                                            </tr>
+                                        { /* END TR */}
+                                        </tbody>
+                                    </Table>
+                                    { /* END Table */}
                                 </TabPane>
                             </UncontrolledTabs.TabContent>
                         </UncontrolledTabs>
+
+                        <CardFooter className="d-flex">
+                            <span className="align-self-center">
+                                Showing 1 to 10 of 57 entries
+                            </span>
+                            <Pagination aria-label="Page navigation example" className="ml-auto">
+                                <PaginationItem>
+                                    <PaginationLink previous href="#">
+                                        <i className="fa fa-fw fa-angle-left"></i>
+                                    </PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem active>
+                                    <PaginationLink href="#">
+                                        1
+                                    </PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href="#">
+                                        2
+                                    </PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink href="#">
+                                        3
+                                    </PaginationLink>
+                                </PaginationItem>
+                                <PaginationItem>
+                                    <PaginationLink next href="#">
+                                        <i className="fa fa-fw fa-angle-right"></i>
+                                    </PaginationLink>
+                                </PaginationItem>
+                            </Pagination>
+                        </CardFooter>
                     </Card>
                 </Col>
                 <Col lg={ 4 }>
