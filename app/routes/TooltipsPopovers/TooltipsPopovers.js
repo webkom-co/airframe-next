@@ -1,4 +1,5 @@
 import React from 'react';
+import faker from 'faker';
 
 import { 
     Container,
@@ -9,7 +10,10 @@ import {
     CardTitle,
     CardBody,
     CardText,
-    UncontrolledTooltip
+    UncontrolledTooltip,
+    UncontrolledPopover,
+    PopoverHeader,
+    PopoverBody
 } from './../../components';
 
 import {
@@ -185,9 +189,17 @@ const TooltipsPopovers = () => (
                                     #3.01
                                 </span>
                             </CardTitle>
-                            <Button className="text-center" outline color="secondary" id="UncontrolledTooltipTop">
+                            <Button className="text-center" outline color="secondary" id="UncontrolledPopoverTop">
                                 Show
                             </Button>
+                            <UncontrolledPopover placement="top" target="UncontrolledPopoverTop">
+                                <PopoverHeader>
+                                    Top Popover
+                                </PopoverHeader>
+                                <PopoverBody>
+                                    { faker.lorem.paragraph() }
+                                </PopoverBody>
+                            </UncontrolledPopover>
                         </CardBody>
                     </Card>
                 </Col>
@@ -200,9 +212,17 @@ const TooltipsPopovers = () => (
                                     #3.02
                                 </span>
                             </CardTitle>
-                            <Button className="text-center" outline color="secondary" id="UncontrolledTooltipRight">
+                            <Button className="text-center" outline color="secondary" id="UncontrolledPopoverRight">
                                 Show
                             </Button>
+                            <UncontrolledPopover placement="right" target="UncontrolledPopoverRight">
+                                <PopoverHeader>
+                                    Right Popover
+                                </PopoverHeader>
+                                <PopoverBody>
+                                    { faker.lorem.paragraph() }
+                                </PopoverBody>
+                            </UncontrolledPopover>
                         </CardBody>
                     </Card>
                 </Col>
@@ -215,9 +235,17 @@ const TooltipsPopovers = () => (
                                     #3.03
                                 </span>
                             </CardTitle>
-                            <Button className="text-center" outline color="secondary">
+                            <Button className="text-center" outline color="secondary" id="UncontrolledPopoverBottom">
                                 Show
                             </Button>
+                            <UncontrolledPopover placement="bottom" target="UncontrolledPopoverBottom">
+                                <PopoverHeader>
+                                    Bottom Popover
+                                </PopoverHeader>
+                                <PopoverBody>
+                                    { faker.lorem.paragraph() }
+                                </PopoverBody>
+                            </UncontrolledPopover>
                         </CardBody>
                     </Card>
                 </Col>
@@ -230,9 +258,17 @@ const TooltipsPopovers = () => (
                                     #3.03
                                 </span>
                             </CardTitle>
-                            <Button className="text-center" outline color="secondary">
+                            <Button className="text-center" outline color="secondary" id="UncontrolledPopoverLeft">
                                 Show
                             </Button>
+                            <UncontrolledPopover placement="left" target="UncontrolledPopoverLeft">
+                                <PopoverHeader>
+                                    Left Popover
+                                </PopoverHeader>
+                                <PopoverBody>
+                                    { faker.lorem.paragraph() }
+                                </PopoverBody>
+                            </UncontrolledPopover>
                         </CardBody>
                     </Card>
                 </Col>

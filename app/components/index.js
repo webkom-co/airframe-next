@@ -15,6 +15,7 @@ import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
 import Tools from './Tools';
+import UncontrolledPopover from './UncontrolledPopover';
 
 export {
     App,
@@ -35,7 +36,8 @@ export {
     Sidebar,
     SidebarMenu,
     SidebarTrigger,
-    Tools
+    Tools,
+    UncontrolledPopover
 };
 // Export non overriden Reactstrap components
 export {
