@@ -420,6 +420,18 @@ class AppLayout extends React.Component {
                                             exact
                                         />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item title="Users">
+                                        <SidebarMenu.Item
+                                            title="Users List"
+                                            to="/users/list"
+                                            exact
+                                        />
+                                        <SidebarMenu.Item
+                                            title="Users Grid"
+                                            to="/users/grid"
+                                            exact
+                                        />
+                                    </SidebarMenu.Item>
                                     <SidebarMenu.Item
                                         title="Clients"
                                         to="/clients"
