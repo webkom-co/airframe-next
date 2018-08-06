@@ -49,6 +49,7 @@ import Accordions from './Accordions';
 import TabsPills from './TabsPills';
 import TooltipsPopovers from './TooltipsPopovers';
 import Dropdowns from './Dropdowns';
+import Modals from './Modals';
 import Forms from './Forms';
 import FormsLayouts from './FormsLayouts';
 import Tables from './Tables';
@@ -176,6 +177,10 @@ const getRoutes = (store) => {
                 path='/tables'
                 exact
                 component={Tables} 
+            />
+            <Route 
+                path='/interface/modals' 
+                component={Modals} 
             />
             <Route
                 path='/projects/:type'

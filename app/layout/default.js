@@ -339,6 +339,10 @@ class AppLayout extends React.Component {
                                         to='/dropdowns'
                                         exact
                                     />
+                                    <SidebarMenu.Item
+                                        title="Modals"
+                                        to='/interface/modals'
+                                    />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-check-square-o"></i> }
