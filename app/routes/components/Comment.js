@@ -6,9 +6,9 @@ import {
     Media,
     AvatarAddOn,
     UncontrolledTooltip 
-} from 'reactstrap';
+} from './../../components';
 
-const Comment = () => (
+const Comment = (props) => (
 
     <Media className={ `mb-2 ${ props.mediaClassName }` }>
         <Media left className="mr-3">
@@ -55,7 +55,7 @@ const Comment = () => (
                 <a href="#" id="tooltipVoteDown2" className="mr-2">
                     <i className="fa fa-angle-down text-danger"></i>
                 </a>
-                <UncontrolledTooltip placement="down" target="tooltipVoteDown2">
+                <UncontrolledTooltip placement="bottom" target="tooltipVoteDown2">
                     Vote Down
                 </UncontrolledTooltip>
                 <span className="mr-2">·</span>
