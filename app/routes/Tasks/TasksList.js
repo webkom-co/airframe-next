@@ -4,7 +4,6 @@ import faker from 'faker';
 import { 
     Badge,
     Avatar,
-    Progress,
     Pagination,
     PaginationItem,
     PaginationLink,
@@ -38,7 +37,7 @@ const TasksList = () => (
                     { /* START TR */}
                     <tr>
                         <td className="align-middle">
-                            <CustomInput type="checkbox" id="tasksList1" label="" />
+                            <CustomInput type="checkbox" id="tasksList1" label="" inline />
                         </td>
                         <td className="align-middle">
                             <UncontrolledButtonDropdown>
