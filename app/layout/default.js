@@ -251,238 +251,90 @@ class AppLayout extends React.Component {
                                     title="Params"
                                     to='/params/0'
                                 />
+                                { /* -------- Cards ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-clone"></i> }
                                     title="Cards"
                                 >
-                                    <SidebarMenu.Item
-                                        title="Cards"
-                                        to='/cards'
-                                        exact
-                                    />
+                                    <SidebarMenu.Item title="Cards" to='/cards' exact />
                                 </SidebarMenu.Item>
+                                { /* -------- Interface ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-toggle-on"></i> }
                                     title="Interface"
                                 >
-                                    <SidebarMenu.Item
-                                        title="Colors"
-                                        to='/colors'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Typography"
-                                        to='/typography'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Buttons"
-                                        to='/buttons'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Paginations"
-                                        to='/Paginations'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Images"
-                                        to='/interface/images'
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Avatars"
-                                        to='/avatars'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Progress Bars"
-                                        to='/progressbars'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Badges & Labels"
-                                        to='/badgeslabels'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Media Objects"
-                                        to='/mediaobjects'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="List Groups"
-                                        to='/listgroups'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Alerts"
-                                        to='/alerts'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Accordions"
-                                        to='/accordions'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Tabs Pills"
-                                        to='/tabspills'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Tooltips & Popovers"
-                                        to='/tooltipspopovers'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Dropdowns"
-                                        to='/dropdowns'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Modals"
-                                        to='/interface/modals'
-                                    />
+                                    <SidebarMenu.Item title="Colors" to='/colors' exact />
+                                    <SidebarMenu.Item title="Typography" to='/typography' exact />
+                                    <SidebarMenu.Item title="Buttons" to='/buttons' exact />
+                                    <SidebarMenu.Item title="Paginations" to='/Paginations'exact />
+                                    <SidebarMenu.Item title="Images" to='/interface/images' />
+                                    <SidebarMenu.Item title="Avatars" to='/avatars' exact />
+                                    <SidebarMenu.Item title="Progress Bars" to='/progressbars' exact />
+                                    <SidebarMenu.Item title="Badges & Labels" to='/badgeslabels' exact />
+                                    <SidebarMenu.Item title="Media Objects" to='/mediaobjects' exact />
+                                    <SidebarMenu.Item title="List Groups" to='/listgroups' exact />
+                                    <SidebarMenu.Item title="Alerts" to='/alerts' exact />
+                                    <SidebarMenu.Item title="Accordions" to='/accordions' exact />
+                                    <SidebarMenu.Item title="Tabs Pills" to='/tabspills' exact />
+                                    <SidebarMenu.Item title="Tooltips & Popovers" to='/tooltipspopovers' exact />
+                                    <SidebarMenu.Item title="Dropdowns" to='/dropdowns' exact />
+                                    <SidebarMenu.Item title="Modals" to='/interface/modals'/>
                                 </SidebarMenu.Item>
+                                { /* -------- Forms ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-check-square-o"></i> }
                                     title="Forms"
                                 >
-                                    <SidebarMenu.Item
-                                        title="Forms"
-                                        to='/forms'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Forms Layouts"
-                                        to='/formslayouts'
-                                        exact
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Input Groups"
-                                        to='/inputgroups'
-                                        exact
-                                    />
+                                    <SidebarMenu.Item title="Forms" to='/forms' exact />
+                                    <SidebarMenu.Item title="Forms Layouts" to='/formslayouts' exact />
+                                    <SidebarMenu.Item title="Input Groups" to='/inputgroups' exact />
                                 </SidebarMenu.Item>
+                                { /* -------- Tables ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-trello"></i> }
                                     title="Tables"
                                 >
-                                    <SidebarMenu.Item
-                                        title="Tables"
-                                        to='/tables'
-                                        exact
-                                    />
+                                    <SidebarMenu.Item title="Tables" to='/tables' exact />
                                 </SidebarMenu.Item>
+                                { /* -------- Apps ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-mouse-pointer"></i> }
                                     title="Apps"
                                 >
                                     <SidebarMenu.Item title="Projects">
-                                        <SidebarMenu.Item
-                                            title="Projects List"
-                                            to="/projects/list"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Projects Grid"
-                                            to="/projects/grid"
-                                            exact
-                                        />
+                                        <SidebarMenu.Item title="Projects List" to="/projects/list" exact />
+                                        <SidebarMenu.Item title="Projects Grid" to="/projects/grid" exact />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Tasks">
-                                        <SidebarMenu.Item
-                                            title="Tasks List"
-                                            to="/tasks/list"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Tasks Grid"
-                                            to="/tasks/grid"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Tasks Kanban"
-                                            to="/taskskanban"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Tasks Details"
-                                            to="/tasksdetails"
-                                            exact
-                                        />
+                                        <SidebarMenu.Item title="Tasks List" to="/tasks/list" exact />
+                                        <SidebarMenu.Item title="Tasks Grid" to="/tasks/grid" exact />
+                                        <SidebarMenu.Item title="Tasks Kanban" to="/taskskanban" exact />
+                                        <SidebarMenu.Item title="Tasks Details" to="/tasksdetails" exact/>
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Files">
-                                        <SidebarMenu.Item
-                                            title="Files List"
-                                            to="/files/list"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Files Grid"
-                                            to="/files/grid"
-                                            exact
-                                        />
+                                        <SidebarMenu.Item title="Files List" to="/files/list" exact />
+                                        <SidebarMenu.Item title="Files Grid" to="/files/grid" exact />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Users">
-                                        <SidebarMenu.Item
-                                            title="Users List"
-                                            to="/users/list"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Users Grid"
-                                            to="/users/grid"
-                                            exact
-                                        />
+                                        <SidebarMenu.Item title="Users List" to="/users/list" exact />
+                                        <SidebarMenu.Item title="Users Grid" to="/users/grid" exact />
                                     </SidebarMenu.Item>
-                                    <SidebarMenu.Item
-                                        title="Clients"
-                                        to="/clients"
-                                        exact
-                                    />
+                                    <SidebarMenu.Item title="Clients" to="/clients" exact />
                                 </SidebarMenu.Item>
-                                
+                                { /* -------- Pages ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-copy"></i> }
                                     title="Pages"
                                 >
-                                    <SidebarMenu.Item
-                                        title="Register"
-                                        to="/pages/register"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Login"
-                                        to="/pages/login"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Forgot Password"
-                                        to="/pages/forgotpassword"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Lock Screen"
-                                        to="/pages/lockscreen"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Error 404"
-                                        to="/pages/error404"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Confirmation"
-                                        to="/pages/confirmation"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Success"
-                                        to="/pages/success"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Danger"
-                                        to="/pages/danger"
-                                    />
-                                    <SidebarMenu.Item
-                                        title="Coming Soon"
-                                        to="/pages/comingsoon"
-                                    />
+                                    <SidebarMenu.Item title="Register" to="/pages/register" />
+                                    <SidebarMenu.Item title="Login" to="/pages/login" />
+                                    <SidebarMenu.Item title="Forgot Password" to="/pages/forgotpassword" />
+                                    <SidebarMenu.Item title="Lock Screen" to="/pages/lockscreen" />
+                                    <SidebarMenu.Item title="Error 404" to="/pages/error404" />
+                                    <SidebarMenu.Item title="Confirmation" to="/pages/confirmation" />
+                                    <SidebarMenu.Item title="Success" to="/pages/success" />
+                                    <SidebarMenu.Item title="Danger" to="/pages/danger" />
+                                    <SidebarMenu.Item title="Coming Soon" to="/pages/comingsoon" />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-star-o"></i> }
@@ -494,15 +346,8 @@ class AppLayout extends React.Component {
                                     title="Example"
                                 >
                                     <SidebarMenu.Item title="Tutorial">
-                                        <SidebarMenu.Item
-                                            title="First Tutorial"
-                                            to="/redux-example"
-                                            exact
-                                        />
-                                        <SidebarMenu.Item
-                                            title="Second Tutorial"
-                                            to="/splitted"
-                                        />
+                                        <SidebarMenu.Item title="First Tutorial" to="/redux-example" exact />
+                                        <SidebarMenu.Item title="Second Tutorial" to="/splitted" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item
                                         title="Training Videos"
