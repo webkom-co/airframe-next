@@ -325,6 +325,10 @@ class AppLayout extends React.Component {
                                         <SidebarMenu.Item title="Users List" to="/users/list" exact />
                                         <SidebarMenu.Item title="Users Grid" to="/users/grid" exact />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item title="Gallery">
+                                        <SidebarMenu.Item title="Gallery Grid" to="/gallerygrid" exact />
+                                        <SidebarMenu.Item title="Gallery Table" to="/gallerytable" exact />
+                                    </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Clients" to="/clients" exact />
                                 </SidebarMenu.Item>
                                 { /* -------- Pages ---------*/ }

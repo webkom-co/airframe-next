@@ -70,6 +70,8 @@ import SearchResults from './SearchResults';
 import ImagesResults from './ImagesResults';
 import VideosResults from './VideosResults';
 import UsersResults from './UsersResults';
+import GalleryGrid from './GalleryGrid';
+import GalleryTable from './GalleryTable';
 
 import Icons from './Icons';
 
@@ -131,7 +133,9 @@ const getRoutes = (store) => {
             <Route path='/searchresults' exact component={SearchResults} />
             <Route path='/imagesresults' exact component={ImagesResults} />
             <Route path='/videosresults' exact component={VideosResults} />
-            <Route path='/usersresults' exact component={UsersResults} /> 
+            <Route path='/usersresults' exact component={UsersResults} />
+            <Route path='/gallerygrid' exact component={GalleryGrid} />
+            <Route path='/gallerytable' exact component={GalleryTable} />
             <Route path='/clients' exact component={Clients} />
 
             <Route path='/icons' exact component={Icons} />
