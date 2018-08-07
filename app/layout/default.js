@@ -315,6 +315,12 @@ class AppLayout extends React.Component {
                                         <SidebarMenu.Item title="Files List" to="/files/list" exact />
                                         <SidebarMenu.Item title="Files Grid" to="/files/grid" exact />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item title="Search Results">
+                                        <SidebarMenu.Item title="Search Results" to="/searchresults" exact />
+                                        <SidebarMenu.Item title="Images Results" to="/imagesresults" exact />
+                                        <SidebarMenu.Item title="Videos Results" to="/videosresults" exact />
+                                        <SidebarMenu.Item title="Users Results" to="/usersresults" exact /> 
+                                    </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Users">
                                         <SidebarMenu.Item title="Users List" to="/users/list" exact />
                                         <SidebarMenu.Item title="Users Grid" to="/users/grid" exact />

@@ -66,6 +66,10 @@ import TasksDetails from './TasksDetails';
 import Files from './Files';
 import Users from './Users';
 import Clients from './Clients';
+import SearchResults from './SearchResults';
+import ImagesResults from './ImagesResults';
+import VideosResults from './VideosResults';
+import UsersResults from './UsersResults';
 
 import Icons from './Icons';
 
@@ -124,6 +128,10 @@ const getRoutes = (store) => {
             <Route path='/tasksdetails' exact component={TasksDetails} />
             <Route path='/files/:type' exact component={Files} />
             <Route path='/users/:type' exact component={Users} />
+            <Route path='/searchresults' exact component={SearchResults} />
+            <Route path='/imagesresults' exact component={ImagesResults} />
+            <Route path='/videosresults' exact component={VideosResults} />
+            <Route path='/usersresults' exact component={UsersResults} /> 
             <Route path='/clients' exact component={Clients} />
 
             <Route path='/icons' exact component={Icons} />
