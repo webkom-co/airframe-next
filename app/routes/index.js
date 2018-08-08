@@ -75,6 +75,12 @@ import GalleryTable from './GalleryTable';
 import Inbox from './Inbox';
 import NewEmail from './NewEmail';
 import EmailDetails from './EmailDetails';
+import ProfileDetails from './ProfileDetails';
+import ProfileEdit from './ProfileEdit';
+import AccountEdit from './AccountEdit';
+import BillingEdit from './BillingEdit';
+import SettingsEdit from './SettingsEdit';
+import SessionsEdit from './SessionsEdit';
 
 import Icons from './Icons';
 
@@ -143,6 +149,12 @@ const getRoutes = (store) => {
             <Route path='/inbox' exact component={Inbox} />
             <Route path='/newemail' exact component={NewEmail} />
             <Route path='/emaildetails' exact component={EmailDetails} /> 
+            <Route path='/profiledetails' exact component={ProfileDetails} />
+            <Route path='/profileedit' exact component={ProfileEdit} />
+            <Route path='/accountedit' exact component={AccountEdit} />
+            <Route path='/billingedit' exact component={BillingEdit} />
+            <Route path='/settingsedit' exact component={SettingsEdit} />
+            <Route path='/sessionsedit' exact component={SessionsEdit} />
 
             <Route path='/icons' exact component={Icons} />
 

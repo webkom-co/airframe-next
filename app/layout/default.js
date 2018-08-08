@@ -334,6 +334,14 @@ class AppLayout extends React.Component {
                                         <SidebarMenu.Item title="New Email" to="/newemail" exact />
                                         <SidebarMenu.Item title="Email Details" to="/emaildetails" exact />
                                     </SidebarMenu.Item>
+                                    <SidebarMenu.Item title="Profile">
+                                        <SidebarMenu.Item title="Profile Details" to="/profiledetails" exact />
+                                        <SidebarMenu.Item title="Profile Edit" to="/profileedit" exact />
+                                        <SidebarMenu.Item title="Account Edit" to="/accountedit" exact />
+                                        <SidebarMenu.Item title="Billing Edit" to="/billingedit" exact />
+                                        <SidebarMenu.Item title="Settings Edit" to="/settingsedit" exact />
+                                        <SidebarMenu.Item title="Sessions Edit" to="/sessionsedit" exact />
+                                    </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Clients" to="/clients" exact />
                                 </SidebarMenu.Item>
                                 { /* -------- Pages ---------*/ }
