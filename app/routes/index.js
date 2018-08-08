@@ -72,6 +72,9 @@ import VideosResults from './VideosResults';
 import UsersResults from './UsersResults';
 import GalleryGrid from './GalleryGrid';
 import GalleryTable from './GalleryTable';
+import Inbox from './Inbox';
+import NewEmail from './NewEmail';
+import EmailDetails from './EmailDetails';
 
 import Icons from './Icons';
 
@@ -137,6 +140,9 @@ const getRoutes = (store) => {
             <Route path='/gallerygrid' exact component={GalleryGrid} />
             <Route path='/gallerytable' exact component={GalleryTable} />
             <Route path='/clients' exact component={Clients} />
+            <Route path='/inbox' exact component={Inbox} />
+            <Route path='/newemail' exact component={NewEmail} />
+            <Route path='/emaildetails' exact component={EmailDetails} /> 
 
             <Route path='/icons' exact component={Icons} />
 
