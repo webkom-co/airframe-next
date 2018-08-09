@@ -279,6 +279,7 @@ class AppLayout extends React.Component {
                                     <SidebarMenu.Item title="Tooltips & Popovers" to='/tooltipspopovers' exact />
                                     <SidebarMenu.Item title="Dropdowns" to='/dropdowns' exact />
                                     <SidebarMenu.Item title="Modals" to='/interface/modals'/>
+                                    <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs'/>
                                 </SidebarMenu.Item>
                                 { /* -------- Forms ---------*/ }
                                 <SidebarMenu.Item

@@ -52,6 +52,7 @@ import TabsPills from './TabsPills';
 import TooltipsPopovers from './TooltipsPopovers';
 import Dropdowns from './Dropdowns';
 import Modals from './Modals';
+import Breadcrumbs from './Breadcrumbs';
 
 import Forms from './Forms';
 import FormsLayouts from './FormsLayouts';
@@ -125,6 +126,7 @@ const getRoutes = (store) => {
             <Route path='/tooltipspopovers' exact component={TooltipsPopovers} />
             <Route path='/dropdowns' exact component={Dropdowns} />
             <Route path='/interface/modals' component={Modals} />
+            <Route path='/interface/breadcrumbs' component={Breadcrumbs} />
 
             { /* Forms */ }
             <Route path='/forms' exact component={Forms} />
