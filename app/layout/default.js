@@ -343,6 +343,7 @@ class AppLayout extends React.Component {
                                         <SidebarMenu.Item title="Sessions Edit" to="/sessionsedit" exact />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Clients" to="/clients" exact />
+                                    <SidebarMenu.Item title="Chat" to="/chat" exact />
                                 </SidebarMenu.Item>
                                 { /* -------- Pages ---------*/ }
                                 <SidebarMenu.Item

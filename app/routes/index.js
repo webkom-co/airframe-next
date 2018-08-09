@@ -81,6 +81,7 @@ import AccountEdit from './AccountEdit';
 import BillingEdit from './BillingEdit';
 import SettingsEdit from './SettingsEdit';
 import SessionsEdit from './SessionsEdit';
+import Chat from './Chat';
 
 import Icons from './Icons';
 
@@ -155,6 +156,7 @@ const getRoutes = (store) => {
             <Route path='/billingedit' exact component={BillingEdit} />
             <Route path='/settingsedit' exact component={SettingsEdit} />
             <Route path='/sessionsedit' exact component={SessionsEdit} />
+            <Route path='/chat' exact component={Chat} />
 
             <Route path='/icons' exact component={Icons} />
 
