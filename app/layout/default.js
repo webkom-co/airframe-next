@@ -247,6 +247,11 @@ class AppLayout extends React.Component {
                                     to='/'
                                 />
                                 <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-th"></i> }
+                                    title="Widgets"
+                                    to='/widgets'
+                                />
+                                <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-list"></i> }
                                     title="Params"
                                     to='/params/0'

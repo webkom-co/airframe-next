@@ -34,6 +34,9 @@ const UniversalComponent = universal(props => import(`./${props.route}`), {
 //----- Static Route Imports ------
 import Home from './Home';
 import Params from './Params';
+
+import Widgets from './Widgets';
+
 import Cards from './Cards';
 
 import Colors from './Colors';
@@ -107,6 +110,9 @@ const getRoutes = (store) => {
                 component={() => <UniversalComponent route='Splitted' />} 
             />
             <Route path='/params/:param' component={Params} />
+
+            <Route path='/widgets' exact component={Widgets} />
+
             <Route path='/cards' exact component={Cards} />
 
             { /* Interface */ }
