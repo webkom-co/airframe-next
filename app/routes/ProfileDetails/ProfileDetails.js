@@ -48,7 +48,7 @@ import {
 
 import {
     Chat
-} from "../components/Profile/Chat";
+} from "../components/Chat/Chat";
 
 const ProfileDetails = () => (
     <React.Fragment>

@@ -1,15 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import faker from 'faker';
 import {
-    Card,
-    CardBody,
-    CardFooter,
     Form,
     FormGroup,
-    FormText,
     Input,
-    CustomInput,
     InputGroupAddon,
     InputGroup,
     Button,
@@ -19,11 +13,11 @@ import {
 
 import {
     HeaderAuth
-} from "../components/HeaderAuth";
+} from "../components/Pages/HeaderAuth";
 
 import {
     FooterAuth
-} from "../components/FooterAuth";
+} from "../components/Pages/FooterAuth";
 
 const Error404 = () => (
     <EmptyLayout>

@@ -1,24 +1,11 @@
 import React from 'react';
-import faker from 'faker';
 
 import { 
-    Container,
-    Row,
-    Col,
-    Button,
-    InputGroup,
-    Input,
-    InputGroupAddon,
     Nav,
     NavItem,
     NavLink,
-    Badge,
-    Media,
-    Avatar,
-    Breadcrumb,
-    BreadcrumbItem,
-    ButtonGroup,
-} from './../../components';
+    Badge
+} from './../../../components';
 
 const FilesLeftNav = () => (
     <React.Fragment>

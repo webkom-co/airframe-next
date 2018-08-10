@@ -19,7 +19,7 @@ import {
 
 import {
     TasksCardGrid
-} from "../components/TasksCardGrid";
+} from "../components/Tasks/TasksCardGrid";
 
 
 const TasksKanban = () => (
