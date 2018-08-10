@@ -1,31 +1,21 @@
 import React from 'react';
-import faker from 'faker';
 
 import { 
     Container,
     Row,
     Col,
-    Button,
     Card,
     CardTitle,
     CardBody,
-    CardText,
     CardFooter,
     CardColumns,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    Media,
-    CustomInput,
     Badge,
-    Avatar,
     UncontrolledTooltip
 } from './../../components';
 
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 import {
     TasksCardGrid
