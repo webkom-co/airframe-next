@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import Holder from 'holderjs';
 import _ from 'lodash';
+import uid from 'uuid/v4';
 import qs from 'query-string';
 
 import colors from './../../colors';
@@ -32,19 +33,19 @@ class HolderTextProvider extends React.Component {
     constructor(props) {
         super(props);
 
-        this.childRef = React.createRef();
+        this.domId = `holderjs--${uid()}`;
     }
 
     componentDidMount() {
         this.initPlaceholder();
+
+        if (typeof window !== 'undefined') {
+            window.onload = this.initPlaceholder.bind(this);
+        }
     }
 
     componentDidUpdate() {
         this.initPlaceholder();
-
-        if (typeof window !== 'undefined') {
-            window.onload(this.initPlaceholder.bind(this));
-        }
     }
 
     initPlaceholder() {
@@ -53,7 +54,7 @@ class HolderTextProvider extends React.Component {
             typeof document !== 'undefined' &&
             document.readyState === 'complete'
         ) {
-            const domElement = ReactDOM.findDOMNode(this.childRef.current);
+            const domElement = document.getElementById(this.domId);
 
             if (domElement) {
                 Holder.run({
@@ -78,7 +79,7 @@ class HolderTextProvider extends React.Component {
         const phPropsQuery = qs.stringify(phProps);
 
         return React.cloneElement(onlyChild, {
-            ref: this.childRef,
+            'id': this.domId,
             'data-src': `holder.js/${this.props.width}x${this.props.height}?${phPropsQuery}`
         });
     }
