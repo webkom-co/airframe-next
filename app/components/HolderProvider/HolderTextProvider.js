@@ -29,20 +29,31 @@ class HolderTextProvider extends React.Component {
         fg: colors['500']
     }
 
+    constructor(props) {
+        super(props);
+
+        this.childRef = React.createRef();
+    }
+
     componentDidMount() {
         this.initPlaceholder();
     }
 
     componentDidUpdate() {
         this.initPlaceholder();
+
+        if (typeof window !== 'undefined') {
+            window.onload(this.initPlaceholder.bind(this));
+        }
     }
 
     initPlaceholder() {
         if (
-            typeof window !== 'undefined',
-            typeof document !== 'undefined'
+            typeof window !== 'undefined' &&
+            typeof document !== 'undefined' &&
+            document.readyState === 'complete'
         ) {
-            const domElement = ReactDOM.findDOMNode(this.childRef);
+            const domElement = ReactDOM.findDOMNode(this.childRef.current);
 
             if (domElement) {
                 Holder.run({
@@ -67,7 +78,7 @@ class HolderTextProvider extends React.Component {
         const phPropsQuery = qs.stringify(phProps);
 
         return React.cloneElement(onlyChild, {
-            ref: (ref) => { this.childRef = ref; },
+            ref: this.childRef,
             'data-src': `holder.js/${this.props.width}x${this.props.height}?${phPropsQuery}`
         });
     }
