@@ -1,12 +1,13 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 var config = require('./../config');
 
 module.exports = {
     name: 'client',
-    devtool: 'inline-source-map',
+    devtool: 'cheap-eval-source-map',
     target: 'web',
     mode: 'development',
     entry: {
@@ -25,6 +26,7 @@ module.exports = {
         ]
     },
     plugins: [
+        new HardSourceWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: config.srcHtmlLayout,
             inject: false

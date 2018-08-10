@@ -3,6 +3,11 @@ import {
     Route,
     Switch
 } from 'react-router';
+
+/* TODO: Somehow importing Universal Component generates
+         a lot of async chunks although it shouldn't when
+         they aren't imported dynamically. Because of this
+         webpack compilation is absurdly slow ~240s on each reload
 import universal from 'react-universal-component';
 
 import { PageLoader } from './../components';
@@ -30,6 +35,7 @@ const UniversalComponent = universal(props => import(`./${props.route}`), {
         }
     }
 });
+*/
 
 //----- Static Route Imports ------
 import Home from './Home';
@@ -104,11 +110,7 @@ const getRoutes = (store) => {
     return (
         <Switch>
             <Route path='/' exact component={Home} />
-            <Route 
-                path='/splitted' 
-                exact 
-                component={() => <UniversalComponent route='Splitted' />} 
-            />
+
             <Route path='/params/:param' component={Params} />
 
             <Route path='/widgets' exact component={Widgets} />
@@ -178,11 +180,6 @@ const getRoutes = (store) => {
             <Route path='/pages/success' component={ Success } />
             <Route path='/pages/danger' component={ Danger } />
             <Route path='/pages/comingsoon' component={ ComingSoon } />
-
-            <Route 
-                path='/redux-example' 
-                component={() => <UniversalComponent route='ReduxExample' store={store} />} 
-            />
         </Switch>
     );
 };
