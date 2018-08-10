@@ -29,7 +29,8 @@ module.exports = {
         new HardSourceWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: config.srcHtmlLayout,
-            inject: false
+            inject: false,
+            chunksSortMode: 'none'
         }),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('development')
