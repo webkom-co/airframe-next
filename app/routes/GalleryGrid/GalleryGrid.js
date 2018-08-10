@@ -9,7 +9,7 @@ import {
 
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 import {
     GalleryCard

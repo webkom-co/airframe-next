@@ -14,7 +14,7 @@ import {
 } from "../components/FilesLeftNav";
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 
 const Files = (props) => (

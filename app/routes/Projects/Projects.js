@@ -1,34 +1,20 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import faker from 'faker';
 
 import { 
     Container,
     Row,
-    Col,
-    Button,
-    InputGroup,
-    Input,
-    InputGroupAddon,
-    Nav,
-    NavItem,
-    NavLink,
-    Badge,
-    Media,
-    Avatar,
-    Breadcrumb,
-    BreadcrumbItem,
-    ButtonGroup,
+    Col
 } from './../../components';
 
 import ProjectsList from './ProjectsList';
 import ProjectsGrid from './ProjectsGrid';
 import {
     ProjectsLeftNav
-} from "../components/ProjectsLeftNav";
+} from "../components/Projects/ProjectsLeftNav";
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 
 const Projects = (props) => (

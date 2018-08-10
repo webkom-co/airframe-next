@@ -2,9 +2,6 @@ import React from 'react';
 import faker from 'faker';
 
 import { 
-    Container,
-    Row,
-    Col,
     Button,
     InputGroup,
     Input,
@@ -14,11 +11,8 @@ import {
     NavLink,
     Badge,
     Media,
-    Avatar,
-    Breadcrumb,
-    BreadcrumbItem,
-    ButtonGroup,
-} from './../../components';
+    Avatar
+} from './../../../components';
 
 const ProjectsLeftNav = () => (
     <React.Fragment>

@@ -14,7 +14,7 @@ import {
 } from "../components/UsersLeftNav";
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 
 const Users = (props) => (

@@ -1,29 +1,33 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import { 
     Button,
     Breadcrumb,
     BreadcrumbItem,
     ButtonGroup,
-} from './../../components';
+} from './../../../components';
 
-const ProjectsSmHeader = () => (
+const ProjectsSmHeader = (props ) => (
     <React.Fragment>
         { /* START Header Nav */}
         <div className="d-flex justify-content-end">
             <Breadcrumb className="mr-auto d-flex align-items-center">
                 <BreadcrumbItem active>
-                    <i className="fa fa-home"></i>
+                    <Link to="/">
+                        <i className="fa fa-home"></i>
+                    </Link>
                 </BreadcrumbItem>
                 <BreadcrumbItem>
-                    Folder
+                    {props.subTitle}
                 </BreadcrumbItem>
                 <BreadcrumbItem active>
-                    Page
+                    {props.title}
                 </BreadcrumbItem>
             </Breadcrumb>
             <ButtonGroup className="p-2">
-                <Button color="secondary" outline className="align-self-center">
+                <Button tag="Link" color="secondary" outline className="align-self-center" to="/">
                     <i className="fa-fw fa fa-bars"></i>
                 </Button>
                 <Button color="secondary" outline className="align-self-center">
@@ -37,5 +41,13 @@ const ProjectsSmHeader = () => (
         { /* END Header Nav */}
     </React.Fragment>
 )
+ProjectsSmHeader.propTypes = {
+    subTitle: PropTypes.node,
+    title: PropTypes.node
+};
+ProjectsSmHeader.defaultProps = {
+    subTitle: "Folder",
+    title: "App"
+};
 
 export { ProjectsSmHeader };

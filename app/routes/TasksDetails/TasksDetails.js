@@ -11,7 +11,6 @@ import {
     Table,
     Button,
     Card,
-    AvatarAddOn,
     CardBody,
     CardFooter,
     UncontrolledButtonDropdown,
@@ -24,13 +23,12 @@ import {
     CustomInput,
     InputGroupAddon,
     Badge,
-    Avatar,
-    UncontrolledTooltip
+    Avatar
 } from './../../components';
 
 import {
     ProjectsSmHeader
-} from "../components/ProjectsSmHeader";
+} from "../components/Projects/ProjectsSmHeader";
 
 import {
     Attachment
