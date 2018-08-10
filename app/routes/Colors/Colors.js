@@ -3,11 +3,6 @@ import React from 'react';
 import {
     Container,
     Row,
-    Card,
-    CardBody,
-    CardHeader,
-    CardFooter,
-    Button,
     Col
 } from './../../components';
 
@@ -17,11 +12,11 @@ import {
 
 import {
     CardRgbaColor
-} from "../components/CardRgbaColor";
+} from "../components/Colors/CardRgbaColor";
 
 import {
     CardColor
-} from "../components/CardColor";
+} from "../components/Colors/CardColor";
 
 const Colors = () => (
     <React.Fragment>

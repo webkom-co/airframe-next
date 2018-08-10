@@ -11,7 +11,7 @@ import FilesList from './FilesList';
 import FilesGrid from './FilesGrid';
 import {
     FilesLeftNav
-} from "../components/FilesLeftNav";
+} from "../components/Files/FilesLeftNav";
 import {
     ProjectsSmHeader
 } from "../components/Projects/ProjectsSmHeader";

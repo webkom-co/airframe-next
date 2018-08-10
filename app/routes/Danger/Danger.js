@@ -6,11 +6,11 @@ import {
 
 import {
     HeaderAuth
-} from "../components/HeaderAuth";
+} from "../components/Pages/HeaderAuth";
 
 import {
     FooterAuth
-} from "../components/FooterAuth";
+} from "../components/Pages/FooterAuth";
 
 const Danger = () => (
     <EmptyLayout>

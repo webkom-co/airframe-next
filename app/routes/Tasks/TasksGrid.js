@@ -1,24 +1,12 @@
 import React from 'react';
-import faker from 'faker';
 
 import { 
-    Badge,
-    Avatar,
-    Card,
-    Media,
-    CardBody,
-    CustomInput,
-    CardColumns,
-    CardFooter,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
-    DropdownItem,
-    DropdownMenu
+    CardColumns
 } from './../../components';
 
 import {
     TasksCardGrid
-} from "../components/TasksCardGrid";
+} from "../components/Tasks/TasksCardGrid";
 
 const TasksGrid = () => (
 

@@ -2,8 +2,8 @@ import React from 'react';
 import faker from 'faker';
 
 import { 
-    Button,
     InputGroup,
+    Button,
     Input,
     InputGroupAddon,
     Nav,

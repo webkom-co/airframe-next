@@ -5,7 +5,7 @@ import {
     NavItem,
     NavLink,
     Badge
-} from './../../components';
+} from './../../../components';
 
 const UsersLeftNav = () => (
     <React.Fragment>

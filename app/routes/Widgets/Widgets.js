@@ -17,7 +17,7 @@ import {
 } from "../components/HeaderDemo";
 import {
     TasksCardGrid
-} from "../components/TasksCardGrid";
+} from "../components/Tasks/TasksCardGrid";
 import {
     ProfileOverviewCard
 } from "../components/Profile/ProfileOverviewCard";

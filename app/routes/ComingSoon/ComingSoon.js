@@ -14,11 +14,11 @@ import {
 
 import {
     HeaderAuth
-} from "../components/HeaderAuth";
+} from "../components/Pages/HeaderAuth";
 
 import {
     FooterAuth
-} from "../components/FooterAuth";
+} from "../components/Pages/FooterAuth";
 
 const ComingSoon = () => (
     <EmptyLayout>
@@ -32,11 +32,11 @@ const ComingSoon = () => (
             { /* END Header */}
             <ul className="list-inline my-5 text-center">
                 <li className="list-inline-item text-center mr-2">
-                    <h2 class="mb-0">16</h2>
+                    <h2 className="mb-0">16</h2>
                     <div>Days</div>
                 </li>
                 <li className="list-inline-item text-center mr-2">
-                    <h2 class="mb-0">34</h2>
+                    <h2 className="mb-0">34</h2>
                     <div>Hours</div>
                 </li>
                 <li className="list-inline-item text-center mr-2">

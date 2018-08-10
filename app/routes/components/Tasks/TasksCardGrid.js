@@ -13,7 +13,7 @@ import {
     DropdownToggle,
     DropdownItem,
     DropdownMenu
-} from './../../components';
+} from './../../../components';
 
 const TasksCardGrid = () => (
     <React.Fragment>

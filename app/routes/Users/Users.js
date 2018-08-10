@@ -11,7 +11,7 @@ import UsersList from './UsersList';
 import UsersGrid from './UsersGrid';
 import {
     UsersLeftNav
-} from "../components/UsersLeftNav";
+} from "../components/Users/UsersLeftNav";
 import {
     ProjectsSmHeader
 } from "../components/Projects/ProjectsSmHeader";
