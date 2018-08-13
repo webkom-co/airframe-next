@@ -9,6 +9,7 @@ import {
     ListGroup,
     ListGroupItem,
     CardDeck, 
+    Progress,
     CardColumns,
     CardTitle,
 } from './../../components'
@@ -39,7 +40,12 @@ import {
 import {
     Chat
 } from "../components/Chat/Chat";
-
+import {
+    SessionsByDevice
+} from "../components/Analytics/SessionsByDevice";
+import {
+    MetricVsTarget
+} from "../components/Analytics/MetricVsTarget";
 
 
 export const Widgets = () => (
@@ -193,6 +199,98 @@ export const Widgets = () => (
                         <Comment />
                         <Comment />
                         <Comment />
+                    </CardBody>
+                </Card>
+                { /* START Card Widget */}
+            </Col>
+        </Row>
+        { /* START Section 3 */}
+
+        { /* START Header 4 */}
+        <Row>
+            <Col lg={ 12 }>
+                <HeaderDemo 
+                    no={4} 
+                    title="Widgets Graphs"
+                    className="mt-5"
+                    subTitle={(
+                        <React.Fragment>
+                            Last Update: <strong>12-23-2018, 4:32:12 PM</strong>, Amount: <strong>2</strong>
+                        </React.Fragment>
+                    )}
+                />
+            </Col>
+        </Row>
+        { /* END Header 4 */}
+        { /* START Section 4 */}
+        <Row>
+            <Col lg={ 6 }>
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-4">
+                            Sessions by Device Type
+                            <span className="small ml-1 text-muted">
+                                #4.01
+                            </span>
+                        </CardTitle>
+                        <Row>
+                            <Col sm={ 4 }>
+                                <SessionsByDevice 
+                                    title="Desktop"
+                                    valuePercent="51,5"
+                                    valuePercentColor="text-primary"
+                                    value="201,345"
+                                    valueColor="text-primary"
+                                />
+                            </Col>
+                            <Col sm={ 4 }>
+                                <SessionsByDevice 
+                                    title="Mobile"
+                                    valuePercent="34,4"
+                                    valuePercentColor="text-info"
+                                    value="134,201"
+                                    valueColor="text-info"
+                                />
+                            </Col>
+                            <Col sm={ 4 }>
+                                <SessionsByDevice 
+                                    title="Tablet"
+                                    valuePercent="20,8"
+                                    value="81,525"
+                                />
+                            </Col>
+                        </Row>
+                        <Progress multi className="mb-4">
+                            <Progress bar value="25" />
+                            <Progress bar color="info" value="30" />
+                            <Progress bar color="secondary" value="45" />
+                        </Progress>
+                        <div className="small">
+                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                            How do your users (visitors), sessions (visits) and pageviews 
+                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                        </div>
+                    </CardBody>
+                </Card>
+                { /* END Card Widget */}
+            </Col>
+            <Col lg={ 6 }>
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-3">
+                            Metrics vs Targets
+                            <span className="small ml-1 text-muted">
+                                #4.02
+                            </span>
+                        </CardTitle>
+                        <MetricVsTarget 
+                            title="Users"
+                            value="168,793"
+                            progressbarColor="danger"
+                            targetValue="169,001"
+                        />
                     </CardBody>
                 </Card>
                 { /* START Card Widget */}
