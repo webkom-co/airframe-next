@@ -1,5 +1,5 @@
 import React from 'react';
-
+import { NavLink as RouterNavLink } from 'react-router-dom';
 import { 
     Nav,
     NavItem,
@@ -12,27 +12,27 @@ const ProfileLeftNav = () => (
         <div className="mb-4">
             <Nav pills vertical>
                 <NavItem>
-                    <NavLink href="/profileedit">
+                    <NavLink tag={ RouterNavLink } to="/profileedit">
                         Profile Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/accountedit">
+                    <NavLink tag={ RouterNavLink } to="/accountedit">
                         Account Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/billingedit">
+                    <NavLink tag={ RouterNavLink } to="/billingedit">
                         Billing Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/settingsedit">
+                    <NavLink tag={ RouterNavLink } to="/settingsedit">
                         Settings Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink href="/sessionsedit">
+                    <NavLink tag={ RouterNavLink } to="/sessionsedit">
                         Sessions Edit
                     </NavLink>
                 </NavItem>

@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Container,
@@ -77,12 +78,12 @@ const ProfileDetails = () => (
                             </div>                                
                             <Row className="mt-3">
                                 <Col sm={ 6 }>
-                                    <Button color="primary" block href="/newemail">
+                                    <Button color="primary" block tag={ Link } to="/newemail">
                                         Message
                                     </Button> 
                                 </Col>
                                 <Col sm={ 6 }>
-                                    <Button color="secondary" outline block  href="/profileedit">
+                                    <Button color="secondary" outline block tag={ Link } to="/profileedit">
                                         Edit
                                     </Button> 
                                 </Col>

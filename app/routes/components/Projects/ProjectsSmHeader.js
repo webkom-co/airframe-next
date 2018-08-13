@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link } from 'react-router-dom';
+import { NavLink, Link } from 'react-router-dom';
 
 import { 
     Button,
@@ -27,10 +27,10 @@ const ProjectsSmHeader = (props ) => (
                 </BreadcrumbItem>
             </Breadcrumb>
             <ButtonGroup className="p-2">
-                <Button tag="Link" color="secondary" outline className="align-self-center" to="/">
+                <Button tag={ NavLink } to="/projects/list" color="secondary" outline className="align-self-center">
                     <i className="fa-fw fa fa-bars"></i>
                 </Button>
-                <Button color="secondary" outline className="align-self-center">
+                <Button tag={ NavLink } to="/projects/grid" color="secondary" outline className="align-self-center">
                     <i className="fa-fw fa fa-th-large"></i>
                 </Button>
             </ButtonGroup>
