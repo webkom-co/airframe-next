@@ -286,6 +286,13 @@ class AppLayout extends React.Component {
                                     <SidebarMenu.Item title="Modals" to='/interface/modals'/>
                                     <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs'/>
                                 </SidebarMenu.Item>
+                                { /* -------- Graphs ---------*/ }
+                                <SidebarMenu.Item
+                                    icon={ <i className="fa fa-fw fa-pie-chart"></i> }
+                                    title="Graphs"
+                                >
+                                    <SidebarMenu.Item title="ReCharts" to='/recharts' exact />
+                                </SidebarMenu.Item>
                                 { /* -------- Forms ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-check-square-o"></i> }

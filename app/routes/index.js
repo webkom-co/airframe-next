@@ -63,6 +63,8 @@ import Dropdowns from './Dropdowns';
 import Modals from './Modals';
 import Breadcrumbs from './Breadcrumbs';
 
+import ReCharts from './ReCharts';
+
 import Forms from './Forms';
 import FormsLayouts from './FormsLayouts';
 import InputGroups from './InputGroups';
@@ -136,10 +138,13 @@ const getRoutes = (store) => {
             <Route path='/interface/modals' component={Modals} />
             <Route path='/interface/breadcrumbs' component={Breadcrumbs} />
 
-            { /* Forms */ }
+            { /* Graphs */ }
             <Route path='/forms' exact component={Forms} />
             <Route path='/formslayouts' exact component={FormsLayouts} />
             <Route path='/inputgroups' exact component={InputGroups} />
+
+            { /* Forms */ }
+            <Route path='/recharts' exact component={ReCharts} />
             
             <Route path='/tables' exact component={Tables} />
             
