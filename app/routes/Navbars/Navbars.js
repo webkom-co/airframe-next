@@ -41,29 +41,34 @@ const Navbars = () => (
             <Row>
                 { /* START Col12 */}
                 <Col lg={ 12 }>
+                    <h6>
+                        Navbar
+                        <span className="small text-muted ml-2">
+                            #1.01
+                        </span>
+                    </h6>
                     <Navbar101 />
                 </Col>
                 { /* END Col12 */}
             </Row>
             { /* END Section 1 */}
-
-            { /* START Header 2 */}
-            <Row>
-                <Col lg={ 12 }>
-                    <HeaderDemo 
-                        no={2} 
-                        title="Navbars Brand" 
-                        className="mt-5"
-                        subTitle="Basic button layout options"
-                    />
-                </Col>
-            </Row>
-            { /* END Header 2 */}
             { /* START Section 2 */}
             <Row>
                 { /* START Col12 */}
                 <Col lg={ 12 }>
+                    <h6>
+                        Navbar
+                        <span className="small text-muted ml-2">
+                            #1.02
+                        </span>
+                    </h6>
                     <Navbar102 />
+                    <h6>
+                        Navbar
+                        <span className="small text-muted ml-2">
+                            #1.03
+                        </span>
+                    </h6>
                     <Navbar103 />
                 </Col>
                 { /* END Col12 */}
@@ -74,7 +79,7 @@ const Navbars = () => (
             <Row>
                 <Col lg={ 12 }>
                     <HeaderDemo 
-                        no={3} 
+                        no={2} 
                         title="Navbars Menu" 
                         className="mt-5"
                         subTitle="Basic button layout options"
@@ -86,11 +91,45 @@ const Navbars = () => (
             <Row>
                 { /* START Col12 */}
                 <Col lg={ 12 }>
+                    <h6>
+                        Navbar
+                        <span className="small text-muted ml-2">
+                            #2.01
+                        </span>
+                    </h6>
                     <Navbar104 />
                 </Col>
                 { /* END Col12 */}
             </Row>
             { /* END Section 3 */}
+            { /* START Header 4 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={4} 
+                        title="Navbars Combined" 
+                        className="mt-5"
+                        subTitle="Basic button layout options"
+                    />
+                </Col>
+            </Row>
+            { /* END Header 4 */}
+            { /* START Section 4 */}
+            <Row>
+                { /* START Col12 */}
+                <Col lg={ 12 }>
+                    <h6>
+                        Navbars
+                        <span className="small text-muted ml-2">
+                            #1.03 (Top) + #2.01 (Bottom)
+                        </span>
+                    </h6>
+                    <Navbar103 />
+                    <Navbar104 />
+                </Col>
+                { /* END Col12 */}
+            </Row>
+            { /* END Section 4 */}
         </Container>
     </React.Fragment>
 );

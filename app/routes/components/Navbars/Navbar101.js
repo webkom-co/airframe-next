@@ -23,7 +23,7 @@ import {
 const Navbar101 = () => (
 <React.Fragment>
     { /* START Navbar */}
-    <Navbar color="white" light expand="md">
+    <Navbar color="white" light expand="md" className="mb-3">
         { /* START Left Side */}
         <span className="text-navbar">
             <Media>

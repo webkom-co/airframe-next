@@ -5,8 +5,6 @@ import {
     Navbar, 
     Nav, 
     DropdownToggle,
-    IconWithBadge,
-    Badge,
     DropdownMenu,
     DropdownItem,
     NavItem,
@@ -44,11 +42,9 @@ const Navbar104 = () => (
                     <i className="fa fa-angle-down ml-2"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownMenu>
                     <DropdownItem>
                         ...
                     </DropdownItem>
-                </DropdownMenu>
                 </DropdownMenu>
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
@@ -59,11 +55,9 @@ const Navbar104 = () => (
                     <i className="fa fa-angle-down ml-2"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownMenu>
                     <DropdownItem>
                         ...
                     </DropdownItem>
-                </DropdownMenu>
                 </DropdownMenu>
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
@@ -74,11 +68,9 @@ const Navbar104 = () => (
                     <i className="fa fa-angle-down ml-2"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownMenu>
                     <DropdownItem>
                         ...
                     </DropdownItem>
-                </DropdownMenu>
                 </DropdownMenu>
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
@@ -89,11 +81,9 @@ const Navbar104 = () => (
                     <i className="fa fa-angle-down ml-2"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownMenu>
                     <DropdownItem>
                         ...
                     </DropdownItem>
-                </DropdownMenu>
                 </DropdownMenu>
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
@@ -104,11 +94,36 @@ const Navbar104 = () => (
                     <i className="fa fa-angle-down ml-2"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                <DropdownMenu>
-                    <DropdownItem>
-                        ...
+                    <DropdownItem header>
+                        Select:
                     </DropdownItem>
-                </DropdownMenu>
+                    <DropdownItem tag={ Link } to="/pages/register">
+                        Register
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/login">
+                        Login
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/forgotpassword">
+                        Forgot Password
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/lockscreen">
+                        Lock Screen
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/error404">
+                        Error 404
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/confirmation">
+                        Confirmation
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/success">
+                        Success
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/danger">
+                        Danger
+                    </DropdownItem>
+                    <DropdownItem tag={ Link } to="/pages/comingsoon">
+                        Coming Soon
+                    </DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
