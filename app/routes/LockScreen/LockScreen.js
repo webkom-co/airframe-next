@@ -34,9 +34,11 @@ const LockScreen = () => (
                     </Label>
                     <Input type="password" name="password" id="password" placeholder="Enter the password to continue..." />
                 </FormGroup>
-                <Button color="primary" block href="/">
-                    Unlock
-                </Button>
+                <Link to="/">
+                    <Button color="primary" block href="/">
+                        Unlock
+                    </Button>
+                </Link>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
