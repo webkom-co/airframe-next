@@ -10,7 +10,7 @@ const SessionsByDevice = (props) => (
             { props.valuePercent }%
         </h2>
         <div className={ `mb-3 ${ props.valueColor }` }>
-            { props.value }%
+            { props.value }
         </div>
     </React.Fragment>
 )

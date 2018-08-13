@@ -149,13 +149,30 @@ const Home = () => (
                         </CardTitle>
                         <Row className="mb-4">
                             <Col lg={ 4 } className="text-right">
-                                <MetricVsTarget />
+                                <MetricVsTarget 
+                                    title="Users"
+                                    value="168,793"
+                                    progressbarColor="danger"
+                                    targetValue="169,001"
+                                />
                             </Col>
                             <Col lg={ 4 } className="text-right">
-                                <MetricVsTarget />
+                                <MetricVsTarget 
+                                    title="Sessions"
+                                    value="529,747"
+                                    progressbarValue="67"
+                                    progressbarColor="success"
+                                    targetValue="782,957"
+                                />
                             </Col>
                             <Col lg={ 4 } className="text-right">
-                                <MetricVsTarget />
+                                <MetricVsTarget 
+                                    title="Pageviews"
+                                    value="1,763,981"
+                                    progressbarValue="34"
+                                    progressbarColor="success"
+                                    targetValue="1,567,334"
+                                />
                             </Col>
                         </Row>
                         <div className="small">
@@ -229,13 +246,29 @@ const Home = () => (
                         </CardTitle>
                         <Row>
                             <Col sm={ 4 }>
-                                <SessionsByDevice />
+                                <SessionsByDevice 
+                                    title="Desktop"
+                                    valuePercent="51,5"
+                                    valuePercentColor="text-primary"
+                                    value="201,345"
+                                    valueColor="text-primary"
+                                />
                             </Col>
                             <Col sm={ 4 }>
-                                <SessionsByDevice />
+                                <SessionsByDevice 
+                                    title="Mobile"
+                                    valuePercent="34,4"
+                                    valuePercentColor="text-info"
+                                    value="134,201"
+                                    valueColor="text-info"
+                                />
                             </Col>
                             <Col sm={ 4 }>
-                                <SessionsByDevice />
+                                <SessionsByDevice 
+                                    title="Tablet"
+                                    valuePercent="20,8"
+                                    value="81,525"
+                                />
                             </Col>
                         </Row>
                         <Progress multi className="mb-4">
@@ -260,31 +293,38 @@ const Home = () => (
                     </CardBody>
                     <ListGroup flush>
                         <ListGroupItem>
-                            <Row>
-                                <Col sm={ 8 } className="col-sm-8 d-flex align-items-start flex-column">
-                                    <h6 className="mb-auto">
-                                        Bounce Rate (Avg)
-                                    </h6>
-                                </Col>
-                                <Col sm={ 4 } className="text-right">
-                                    <h2>
-                                        46,893
-                                    </h2>
-                                    <div className="text-success mb-1">
-                                        <i className="fa fa-caret-up mr-1"></i>
-                                        23,91%
-                                    </div>
-                                    <div className="text-muted">
-                                        vs <span data-faker="[[finance.amount]]">926.00</span> (prev.)
-                                    </div>
-                                </Col>
-                            </Row>
+                            <WebsitePerformance 
+                                title="Bounce Rate (Avg)"
+                                value="46,893"
+                                valuePercentIcon="caret-up"
+                                valuePercentColor="text-success"
+                                valuePercent="23,91"
+                            />
                         </ListGroupItem>
                         <ListGroupItem>
-                            <WebsitePerformance />
+                            <WebsitePerformance 
+                                title="Pageviews (Avg)"
+                                value="2.15"
+                                valuePercentColor="text-danger"
+                                valuePercent="42,82"
+                            />
                         </ListGroupItem>
                         <ListGroupItem>
-                            <WebsitePerformance />
+                            <WebsitePerformance 
+                                title="New Sessions"
+                                value="76,40"
+                                valuePercentIcon="caret-up"
+                                valuePercentColor="text-success"
+                                valuePercent="23,91"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <WebsitePerformance 
+                                title="Time on Site (Avg)"
+                                value="2m:16s"
+                                valuePercentColor="text-danger"
+                                valuePercent="65,28"
+                            />
                         </ListGroupItem>
                     </ListGroup>
                     <CardBody>                
