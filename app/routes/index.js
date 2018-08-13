@@ -62,6 +62,7 @@ import TooltipsPopovers from './TooltipsPopovers';
 import Dropdowns from './Dropdowns';
 import Modals from './Modals';
 import Breadcrumbs from './Breadcrumbs';
+import Navbars from './Navbars';
 
 import ReCharts from './ReCharts';
 
@@ -137,6 +138,7 @@ const getRoutes = (store) => {
             <Route path='/dropdowns' exact component={Dropdowns} />
             <Route path='/interface/modals' component={Modals} />
             <Route path='/interface/breadcrumbs' component={Breadcrumbs} />
+            <Route path='/interface/navbars' component={Navbars} />
 
             { /* Graphs */ }
             <Route path='/forms' exact component={Forms} />

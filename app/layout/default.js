@@ -285,6 +285,7 @@ class AppLayout extends React.Component {
                                     <SidebarMenu.Item title="Dropdowns" to='/dropdowns' exact />
                                     <SidebarMenu.Item title="Modals" to='/interface/modals'/>
                                     <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs'/>
+                                    <SidebarMenu.Item title="Navbars" to='/interface/navbars'/>
                                 </SidebarMenu.Item>
                                 { /* -------- Graphs ---------*/ }
                                 <SidebarMenu.Item
