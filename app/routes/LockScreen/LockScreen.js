@@ -41,12 +41,12 @@ const LockScreen = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/login">
+                <Link to="/pages/login">
                     Sign as Diffrent User
-                </a>
-                <a href="/" className="ml-auto">
+                </Link>
+                <Link to="/" className="ml-auto">
                     Back to Home
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}
