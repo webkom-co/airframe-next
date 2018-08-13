@@ -1,2 +1,26 @@
 @import "./_variables";
 @import "~bootstrap/scss/bootstrap";
+
+/* Modifications */
+.custom-control-empty {
+    &.custom-radio,
+    &.custom-checkbox {
+        .custom-control-label {
+            display: block;
+
+            &::after,
+            &::before {
+                left: -1.25rem;
+            }
+        }
+    }
+}
+
+.input-group-append,
+.input-group-prepend {
+    .form-check-input[type=radio],
+    .form-check-input[type=checkbox] {
+        margin: 0;
+        position: static;
+    }
+}

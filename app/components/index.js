@@ -2,6 +2,7 @@ import App from './App';
 import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
 import CardHeader from './CardHeader';
+import CustomInput from './CustomInput';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
 import HolderProvider from './HolderProvider';
@@ -25,6 +26,7 @@ export {
     AvatarAddOn,
     Card,
     CardHeader,
+    CustomInput,
     EmptyLayout,
     ExtendedDropdown,
     IconWithBadge,
@@ -72,7 +74,6 @@ export {
     Col,
     Collapse,
     Container,
-    CustomInput,
     Dropdown,
     DropdownItem,
     DropdownMenu,
