@@ -2,6 +2,7 @@ import React from 'react';
 import faker from 'faker';
 
 import { 
+    Checkable,
     Container,
     Row,
     Col,
@@ -353,8 +354,8 @@ const MediaObjects = () => (
                                     #1.04
                                 </span>
                             </CardTitle>
-                            <Media>
-                                <Media left top className="mr-4">
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -371,23 +372,21 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
+                                </Checkable.Trigger>
                                 <Media right top>
-                                    <div>
-                                        <CustomInput type="checkbox" id="rightCheckbox1" label="" checked />
-                                    </div>
+                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox1" defaultChecked />
                                 </Media>
-                            </Media>
-                            <Media>
-                                <Media left top className="mr-4">
+                            </Checkable>
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -404,23 +403,21 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
+                                </Checkable.Trigger>
                                 <Media right top>
-                                    <div>
-                                        <CustomInput type="checkbox" id="rightCheckbox2" label="" />
-                                    </div>
+                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox2" />
                                 </Media>
-                            </Media>
-                            <Media>
-                                <Media left top className="mr-4">
+                            </Checkable>
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -437,21 +434,19 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
+                                </Checkable.Trigger>
                                 <Media right top>
-                                    <div>
-                                        <CustomInput type="checkbox" id="rightCheckbox3" label="" />
-                                    </div>
+                                    <Checkable.Input tag={ CustomInput } type="checkbox" id="rightCheckbox3" />
                                 </Media>
-                            </Media>
+                            </Checkable>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -462,8 +457,8 @@ const MediaObjects = () => (
                                     #1.05
                                 </span>
                             </CardTitle>
-                            <Media>
-                                <Media left top className="mr-4">
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -480,23 +475,21 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
-                                <Media right top>
-                                    <div>
-                                        <CustomInput type="radio" id="rightRadio1" name="customRadio" label="" checked />
-                                    </div>
-                                </Media>
-                            </Media>
-                            <Media>
-                                <Media left top className="mr-4">
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } right top>
+                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio1" name="customRadio" defaultChecked />
+                                </Checkable.Trigger>
+                            </Checkable>
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -513,23 +506,21 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
+                                </Checkable.Trigger>
                                 <Media right top>
-                                    <div>
-                                        <CustomInput type="radio" id="rightRadio2" name="customRadio" label="" />
-                                    </div>
+                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio2" name="customRadio" />
                                 </Media>
-                            </Media>
-                            <Media>
-                                <Media left top className="mr-4">
+                            </Checkable>
+                            <Checkable tag={ Media }>
+                                <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
                                         src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -546,21 +537,19 @@ const MediaObjects = () => (
                                             />
                                         ]}
                                     /> 
-                                </Media>
-                                <Media body>
+                                </Checkable.Trigger>
+                                <Checkable.Trigger tag={ Media } body>
                                     <span className="mt-0 h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
                                     <p>
                                         { faker.lorem.sentence() }
                                     </p>
-                                </Media>
+                                </Checkable.Trigger>
                                 <Media right top>
-                                    <div>
-                                        <CustomInput type="radio" id="rightRadio3" name="customRadio" label="" />
-                                    </div>
+                                    <Checkable.Input tag={ CustomInput } type="radio" id="rightRadio3" name="customRadio" />
                                 </Media>
-                            </Media>
+                            </Checkable>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -631,7 +620,7 @@ const MediaObjects = () => (
                             </CardTitle>
                             <Media>
                                 <Media left className="mr-3">
-                                    <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" checked />
+                                    <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" defaultChecked />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">
@@ -1330,7 +1319,7 @@ const MediaObjects = () => (
                             </CardTitle>
                             <Media>
                                 <Media left className="mr-3">
-                                    <CustomInput type="checkbox" id="leftCheckbox1" label="" checked />
+                                    <CustomInput type="checkbox" id="leftCheckbox1" label="" defaultChecked />
                                 </Media>
                                 <Media body>
                                     <span className="mt-0 d-flex h6 mb-1">

@@ -2,6 +2,7 @@ import App from './App';
 import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
 import CardHeader from './CardHeader';
+import Checkable from './Checkable';
 import CustomInput from './CustomInput';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
@@ -26,6 +27,7 @@ export {
     AvatarAddOn,
     Card,
     CardHeader,
+    Checkable,
     CustomInput,
     EmptyLayout,
     ExtendedDropdown,
