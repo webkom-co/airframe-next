@@ -51,6 +51,8 @@
         overflow: hidden;
         position: relative;
         z-index: 0;
+        // Fix for Safari bug where the avatar isn't round sometimes:
+        mask-image: -webkit-radial-gradient(white, black);
     }
 
     &__badge {
