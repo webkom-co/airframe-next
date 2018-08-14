@@ -25,7 +25,10 @@ const Tasks = (props) => (
                     <ProjectsLeftNav />
                 </Col>
                 <Col lg={ 9 }>
-                    <ProjectsSmHeader />
+                    <ProjectsSmHeader 
+                        linkList="/tasks/list"
+                        linkGrid="/tasks/grid"
+                    />
 
                     { 
                         props.match.params.type === "list" ?

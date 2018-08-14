@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Badge,
@@ -69,9 +70,9 @@ const TasksList = () => (
                         <td className="align-middle">
                             <div>
                                 <span className="mr-2">#{ faker.random.number() }</span>
-                                <a href="#">
+                                <Link to="/tasksdetails">
                                     { faker.hacker.phrase() }
-                                </a>
+                                </Link>
                             </div>
                             <p className="mb-0">
                                 <span className="mr-2">
