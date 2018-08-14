@@ -8,6 +8,10 @@ import {
     Col
 } from './../../../components';
 
+import {
+    TinyAreaChart
+} from "./../../Graphs/ReCharts/components/TinyAreaChart";
+
 const WebsitePerformance = (props) => (
     <React.Fragment>
         <Row>
@@ -15,6 +19,7 @@ const WebsitePerformance = (props) => (
                 <h6 className="mb-auto">
                     { props.title }
                 </h6>
+                <TinyAreaChart />
             </Col>
             <Col sm={ 4 } className="text-right">
                 <h2>
