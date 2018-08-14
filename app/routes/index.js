@@ -4,189 +4,153 @@ import {
     Switch
 } from 'react-router';
 
-/* TODO: Somehow importing Universal Component generates
-         a lot of async chunks although it shouldn't when
-         they aren't imported dynamically. Because of this
-         webpack compilation is absurdly slow ~240s on each reload
-import universal from 'react-universal-component';
-
-import { PageLoader } from './../components';
-import { buildReducers } from './../modules';
-
-// UniversalComponent with added support for asynch loading of
-// Redux reducers. UniversalComponent porvides code-splitting
-// with propper SSR support (https://github.com/faceyspacey/react-universal-component)
-const UniversalComponent = universal(props => import(`./${props.route}`), {
-    loading: PageLoader,
-    onLoad: (loadedModule, loadOptions, props) => {
-        const { store } = props;
-        const reducers = loadedModule.exports ? 
-            loadedModule.exports.reducers : loadedModule.reducers;
-
-        if(reducers) {
-            if(!store) {
-                throw 'Universal Component: When you want to ' +  
-                    'asynchronously inject reducers, you need to provide ' +  
-                    'also Redux \'store\' in the Bundle props.';
-            }
-            const updatedReducers = buildReducers(reducers);
-
-            store.replaceReducer(updatedReducers);
-        }
-    }
-});
-*/
-
-//----- Static Route Imports ------
 import Home from './Home';
-import Params from './Params';
 
 import Widgets from './Widgets';
 
 import Cards from './Cards';
 
-import Colors from './Colors';
-import Typography from './Typography';
-import Buttons from './Buttons';
-import Paginations from './Paginations';
-import Images from './Images';
-import Avatars from './Avatars';
-import ProgressBars from './ProgressBars';
-import BadgesLabels from './BadgesLabels';
-import MediaObjects from './MediaObjects';
-import ListGroups from './ListGroups';
-import Alerts from './Alerts';
-import Accordions from './Accordions';
-import TabsPills from './TabsPills';
-import TooltipsPopovers from './TooltipsPopovers';
-import Dropdowns from './Dropdowns';
-import Modals from './Modals';
-import Breadcrumbs from './Breadcrumbs';
-import Navbars from './Navbars';
+import Accordions from './Interface/Accordions';
+import Alerts from './Interface/Alerts';
+import Avatars from './Interface/Avatars';
+import BadgesLabels from './Interface/BadgesLabels';
+import Breadcrumbs from './Interface/Breadcrumbs';
+import Buttons from './Interface/Buttons';
+import Colors from './Interface/Colors';
+import Dropdowns from './Interface/Dropdowns';
+import Images from './Interface/Images';
+import ListGroups from './Interface/ListGroups';
+import MediaObjects from './Interface/MediaObjects';
+import Modals from './Interface/Modals';
+import Navbars from './Interface/Navbars';
+import Paginations from './Interface/Paginations';
+import ProgressBars from './Interface/ProgressBars';
+import TabsPills from './Interface/TabsPills';
+import TooltipPopovers from './Interface/TooltipsPopovers';
+import Typography from './Interface/Typography';
 
-import ReCharts from './ReCharts';
+import ReCharts from './Graphs/ReCharts';
 
-import Forms from './Forms';
-import FormsLayouts from './FormsLayouts';
-import InputGroups from './InputGroups';
+import Forms from './Forms/Forms';
+import FormsLayouts from './Forms/FormsLayouts';
+import InputGroups from './Forms/InputGroups';
 
-import Tables from './Tables';
+import Tables from './Tables/Tables';
 
-import Projects from './Projects';
-import Tasks from './Tasks';
-import TasksKanban from './TasksKanban';
-import TasksDetails from './TasksDetails';
-import Files from './Files';
-import Users from './Users';
-import Clients from './Clients';
-import SearchResults from './SearchResults';
-import ImagesResults from './ImagesResults';
-import VideosResults from './VideosResults';
-import UsersResults from './UsersResults';
-import GalleryGrid from './GalleryGrid';
-import GalleryTable from './GalleryTable';
-import Inbox from './Inbox';
-import NewEmail from './NewEmail';
-import EmailDetails from './EmailDetails';
-import ProfileDetails from './ProfileDetails';
-import ProfileEdit from './ProfileEdit';
-import AccountEdit from './AccountEdit';
-import BillingEdit from './BillingEdit';
-import SettingsEdit from './SettingsEdit';
-import SessionsEdit from './SessionsEdit';
-import Chat from './Chat';
+import AccountEdit from './Apps/AccountEdit';
+import BillingEdit from './Apps/BillingEdit';
+import Chat from './Apps/Chat';
+import Clients from './Apps/Clients';
+import EmailDetails from './Apps/EmailDetails';
+import Files from './Apps/Files';
+import GalleryGrid from './Apps/GalleryGrid';
+import GalleryTable from './Apps/GalleryTable';
+import ImagesResults from './Apps/ImagesResults';
+import Inbox from './Apps/Inbox';
+import NewEmail from './Apps/NewEmail';
+import ProfileDetails from './Apps/ProfileDetails';
+import ProfileEdit from './Apps/ProfileEdit';
+import Projects from './Apps/Projects';
+import SearchResults from './Apps/SearchResults';
+import SessionsEdit from './Apps/SessionsEdit';
+import SettingsEdit from './Apps/SettingsEdit';
+import Tasks from './Apps/Tasks';
+import TasksDetails from './Apps/TasksDetails';
+import TasksKanban from './Apps/TasksKanban';
+import Users from './Apps/Users';
+import UsersResults from './Apps/UsersResults';
+import VideosResults from './Apps/VideosResults';
+
+import ComingSoon from './Pages/ComingSoon';
+import Confirmation from './Pages/Confirmation';
+import Danger from './Pages/Danger';
+import Error404 from './Pages/Error404';
+import ForgotPassword from './Pages/ForgotPassword';
+import LockScreen from './Pages/LockScreen';
+import Login from './Pages/Login';
+import Register from './Pages/Register';
+import Success from './Pages/Success';
 
 import Icons from './Icons';
-
-import Register from './Register';
-import Login from './Login';
-import ForgotPassword from './ForgotPassword';
-import LockScreen from './LockScreen';
-import Error404 from './Error404';
-import Confirmation from './Confirmation';
-import Success from './Success';
-import Danger from './Danger';
-import ComingSoon from './ComingSoon';
 
 //------ Route Definitions --------
 const getRoutes = (store) => {
     return (
         <Switch>
             <Route path='/' exact component={Home} />
-
-            <Route path='/params/:param' component={Params} />
-
+            
             <Route path='/widgets' exact component={Widgets} />
-
+            
             <Route path='/cards' exact component={Cards} />
-
-            { /* Interface */ }
-            <Route path='/colors' exact component={Colors} />
-            <Route path='/typography' exact component={Typography} />
-            <Route path='/buttons' exact component={Buttons} />
-            <Route path='/paginations' exact component={Paginations} />
-            <Route path='/interface/images' exact component={Images} />
-            <Route path='/avatars' exact component={Avatars} />
-            <Route path='/progressbars' exact component={ProgressBars} />
-            <Route path='/badgeslabels' exact component={BadgesLabels} />
-            <Route path='/mediaobjects' exact component={MediaObjects} />
-            <Route path='/listgroups' exact component={ListGroups} />
-            <Route path='/alerts' exact component={Alerts} />
-            <Route path='/accordions' exact component={Accordions} />
-            <Route path='/tabspills' exact component={TabsPills} />
-            <Route path='/tooltipspopovers' exact component={TooltipsPopovers} />
-            <Route path='/dropdowns' exact component={Dropdowns} />
-            <Route path='/interface/modals' component={Modals} />
-            <Route path='/interface/breadcrumbs' component={Breadcrumbs} />
-            <Route path='/interface/navbars' component={Navbars} />
-
-            { /* Graphs */ }
-            <Route path='/forms' exact component={Forms} />
-            <Route path='/formslayouts' exact component={FormsLayouts} />
-            <Route path='/inputgroups' exact component={InputGroups} />
-
-            { /* Forms */ }
-            <Route path='/recharts' exact component={ReCharts} />
             
-            <Route path='/tables' exact component={Tables} />
-            
-            { /* Apps */ }
-            <Route path='/projects/:type' exact component={Projects} />
-            <Route path='/tasks/:type' exact component={Tasks} />
-            <Route path='/taskskanban' exact component={TasksKanban} />
-            <Route path='/tasksdetails' exact component={TasksDetails} />
-            <Route path='/files/:type' exact component={Files} />
-            <Route path='/users/:type' exact component={Users} />
-            <Route path='/searchresults' exact component={SearchResults} />
-            <Route path='/imagesresults' exact component={ImagesResults} />
-            <Route path='/videosresults' exact component={VideosResults} />
-            <Route path='/usersresults' exact component={UsersResults} />
-            <Route path='/gallerygrid' exact component={GalleryGrid} />
-            <Route path='/gallerytable' exact component={GalleryTable} />
-            <Route path='/clients' exact component={Clients} />
-            <Route path='/inbox' exact component={Inbox} />
-            <Route path='/newemail' exact component={NewEmail} />
-            <Route path='/emaildetails' exact component={EmailDetails} /> 
-            <Route path='/profiledetails' exact component={ProfileDetails} />
-            <Route path='/profileedit' exact component={ProfileEdit} />
-            <Route path='/accountedit' exact component={AccountEdit} />
-            <Route path='/billingedit' exact component={BillingEdit} />
-            <Route path='/settingsedit' exact component={SettingsEdit} />
-            <Route path='/sessionsedit' exact component={SessionsEdit} />
-            <Route path='/chat' exact component={Chat} />
+            { /*    Interface Routes   */ }
+            <Route component={ Accordions } path="/interface/accordions" />
+            <Route component={ Alerts } path="/interface/alerts" />
+            <Route component={ Avatars } path="/interface/avatars" />
+            <Route component={ BadgesLabels } path="/interface/badges-and-labels" />
+            <Route component={ Breadcrumbs } path="/interface/breadcrumbs" />
+            <Route component={ Buttons } path="/interface/buttons" />
+            <Route component={ Colors } path="/interface/colors" />
+            <Route component={ Dropdowns } path="/interface/dropdowns" />
+            <Route component={ Images } path="/interface/images" />
+            <Route component={ ListGroups } path="/interface/list-groups" />
+            <Route component={ MediaObjects } path="/interface/media-objects" />
+            <Route component={ Modals } path="/interface/modals" />
+            <Route component={ Navbars } path="/interface/navbars" />
+            <Route component={ Paginations } path="/interface/paginations" />
+            <Route component={ ProgressBars } path="/interface/progress-bars" />
+            <Route component={ TabsPills } path="/interface/tabs-pills" />
+            <Route component={ TooltipPopovers } path="/interface/tooltips-and-popovers" />
+            <Route component={ Typography } path="/interface/typography" />
+
+            { /*    Forms Routes    */ }
+            <Route component={ Forms } path="/forms/forms" />
+            <Route component={ FormsLayouts } path="/forms/forms-layouts" />
+            <Route component={ InputGroups } path="/forms/input-groups" />
+
+            { /*    Graphs Routes   */ }
+            <Route component={ ReCharts } path="/graphs/re-charts" />
+
+            { /*    Tables Routes   */ }
+            <Route component={ Tables } path="/tables/tables" />
+
+            { /*    Apps Routes     */ }
+            <Route component={ AccountEdit } path="/apps/account-edit" />
+            <Route component={ BillingEdit } path="/apps/billing-edit" />
+            <Route component={ Chat } path="/apps/chat" />
+            <Route component={ Clients } path="/apps/clients" />
+            <Route component={ EmailDetails } path="/apps/email-details" />
+            <Route component={ Files } path="/apps/files/:type"/>
+            <Route component={ GalleryGrid } path="/apps/gallery-grid" />
+            <Route component={ GalleryTable } path="/apps/gallery-table" />
+            <Route component={ ImagesResults } path="/apps/images-results" />
+            <Route component={ Inbox } path="/apps/inbox" />
+            <Route component={ NewEmail } path="/apps/new-email" />
+            <Route component={ ProfileDetails } path="/apps/profile-details" />
+            <Route component={ ProfileEdit } path="/apps/profile-edit" />
+            <Route component={ Projects } path="/apps/projects/:type" />
+            <Route component={ SearchResults } path="/apps/search-results" />
+            <Route component={ SessionsEdit } path="/apps/sessions-edit" />
+            <Route component={ SettingsEdit } path="/apps/settings-edit" />
+            <Route component={ Tasks } path="/apps/tasks/:type" />
+            <Route component={ TasksDetails } path="/apps/task-details" />
+            <Route component={ TasksKanban } path="/apps/tasks-kanban" />
+            <Route component={ Users } path="/apps/users/:type" />
+            <Route component={ UsersResults } path="/apps/users-results" />
+            <Route component={ VideosResults } path="/apps/videos-results" />
+
+            { /*    Pages Routes    */ }
+            <Route component={ ComingSoon } path="/pages/coming-soon" />
+            <Route component={ Confirmation } path="/pages/confirmation" />
+            <Route component={ Danger } path="/pages/danger" />
+            <Route component={ Error404 } path="/pages/error-404" />
+            <Route component={ ForgotPassword } path="/pages/forgot-password" />
+            <Route component={ LockScreen } path="/pages/lock-screen" />
+            <Route component={ Login } path="/pages/login" />
+            <Route component={ Register } path="/pages/register" />
+            <Route component={ Success } path="/pages/success" />
 
             <Route path='/icons' exact component={Icons} />
-
-            { /* Pages */ }
-            <Route path='/pages/register' component={ Register } />
-            <Route path='/pages/login' component={ Login } />
-            <Route path='/pages/forgotpassword' component={ ForgotPassword } />
-            <Route path='/pages/lockscreen' component={ LockScreen } />
-            <Route path='/pages/error404' component={ Error404 } />
-            <Route path='/pages/confirmation' component={ Confirmation } />
-            <Route path='/pages/success' component={ Success } />
-            <Route path='/pages/danger' component={ Danger } />
-            <Route path='/pages/comingsoon' component={ ComingSoon } />
         </Switch>
     );
 };

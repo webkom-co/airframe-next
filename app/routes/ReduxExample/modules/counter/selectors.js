@@ -1,1 +1,0 @@
-export const counterValue = state => state.counter.counterValue;

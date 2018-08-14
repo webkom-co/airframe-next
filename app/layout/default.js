@@ -251,11 +251,6 @@ class AppLayout extends React.Component {
                                     title="Widgets"
                                     to='/widgets'
                                 />
-                                <SidebarMenu.Item
-                                    icon={ <i className="fa fa-fw fa-list"></i> }
-                                    title="Params"
-                                    to='/params/0'
-                                />
                                 { /* -------- Cards ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-clone"></i> }
@@ -268,21 +263,21 @@ class AppLayout extends React.Component {
                                     icon={ <i className="fa fa-fw fa-toggle-on"></i> }
                                     title="Interface"
                                 >
-                                    <SidebarMenu.Item title="Colors" to='/colors' exact />
-                                    <SidebarMenu.Item title="Typography" to='/typography' exact />
-                                    <SidebarMenu.Item title="Buttons" to='/buttons' exact />
-                                    <SidebarMenu.Item title="Paginations" to='/Paginations'exact />
+                                    <SidebarMenu.Item title="Colors" to='/interface/colors' />
+                                    <SidebarMenu.Item title="Typography" to='/interface/typography' />
+                                    <SidebarMenu.Item title="Buttons" to='/interface/buttons' />
+                                    <SidebarMenu.Item title="Paginations" to='/interface/paginations' />
                                     <SidebarMenu.Item title="Images" to='/interface/images' />
-                                    <SidebarMenu.Item title="Avatars" to='/avatars' exact />
-                                    <SidebarMenu.Item title="Progress Bars" to='/progressbars' exact />
-                                    <SidebarMenu.Item title="Badges & Labels" to='/badgeslabels' exact />
-                                    <SidebarMenu.Item title="Media Objects" to='/mediaobjects' exact />
-                                    <SidebarMenu.Item title="List Groups" to='/listgroups' exact />
-                                    <SidebarMenu.Item title="Alerts" to='/alerts' exact />
-                                    <SidebarMenu.Item title="Accordions" to='/accordions' exact />
-                                    <SidebarMenu.Item title="Tabs Pills" to='/tabspills' exact />
-                                    <SidebarMenu.Item title="Tooltips & Popovers" to='/tooltipspopovers' exact />
-                                    <SidebarMenu.Item title="Dropdowns" to='/dropdowns' exact />
+                                    <SidebarMenu.Item title="Avatars" to='/interface/avatars' />
+                                    <SidebarMenu.Item title="Progress Bars" to='/interface/progress-bars' />
+                                    <SidebarMenu.Item title="Badges & Labels" to='/interface/badges-and-labels' />
+                                    <SidebarMenu.Item title="Media Objects" to='/interface/media-objects' />
+                                    <SidebarMenu.Item title="List Groups" to='/interface/list-groups' />
+                                    <SidebarMenu.Item title="Alerts" to='/interface/alerts' />
+                                    <SidebarMenu.Item title="Accordions" to='/interface/accordions' />
+                                    <SidebarMenu.Item title="Tabs Pills" to='/interface/tabs-pills' />
+                                    <SidebarMenu.Item title="Tooltips & Popovers" to='/interface/tooltips-and-popovers' />
+                                    <SidebarMenu.Item title="Dropdowns" to='/interface/dropdowns' />
                                     <SidebarMenu.Item title="Modals" to='/interface/modals'/>
                                     <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs'/>
                                     <SidebarMenu.Item title="Navbars" to='/interface/navbars'/>
@@ -292,23 +287,23 @@ class AppLayout extends React.Component {
                                     icon={ <i className="fa fa-fw fa-pie-chart"></i> }
                                     title="Graphs"
                                 >
-                                    <SidebarMenu.Item title="ReCharts" to='/recharts' exact />
+                                    <SidebarMenu.Item title="ReCharts" to='/graphs/re-charts' />
                                 </SidebarMenu.Item>
                                 { /* -------- Forms ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-check-square-o"></i> }
                                     title="Forms"
                                 >
-                                    <SidebarMenu.Item title="Forms" to='/forms' exact />
-                                    <SidebarMenu.Item title="Forms Layouts" to='/formslayouts' exact />
-                                    <SidebarMenu.Item title="Input Groups" to='/inputgroups' exact />
+                                    <SidebarMenu.Item title="Forms" to='/forms/forms' />
+                                    <SidebarMenu.Item title="Forms Layouts" to='/forms/forms-layouts' />
+                                    <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
                                 </SidebarMenu.Item>
                                 { /* -------- Tables ---------*/ }
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-trello"></i> }
                                     title="Tables"
                                 >
-                                    <SidebarMenu.Item title="Tables" to='/tables' exact />
+                                    <SidebarMenu.Item title="Tables" to='/tables/tables' />
                                 </SidebarMenu.Item>
                                 { /* -------- Apps ---------*/ }
                                 <SidebarMenu.Item
@@ -316,48 +311,48 @@ class AppLayout extends React.Component {
                                     title="Apps"
                                 >
                                     <SidebarMenu.Item title="Projects">
-                                        <SidebarMenu.Item title="Projects List" to="/projects/list" exact />
-                                        <SidebarMenu.Item title="Projects Grid" to="/projects/grid" exact />
+                                        <SidebarMenu.Item title="Projects List" to="/apps/projects/list" />
+                                        <SidebarMenu.Item title="Projects Grid" to="/apps/projects/grid" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Tasks">
-                                        <SidebarMenu.Item title="Tasks List" to="/tasks/list" exact />
-                                        <SidebarMenu.Item title="Tasks Grid" to="/tasks/grid" exact />
-                                        <SidebarMenu.Item title="Tasks Kanban" to="/taskskanban" exact />
-                                        <SidebarMenu.Item title="Tasks Details" to="/tasksdetails" exact/>
+                                        <SidebarMenu.Item title="Tasks List" to="/apps/tasks/list" />
+                                        <SidebarMenu.Item title="Tasks Grid" to="/apps/tasks/grid" />
+                                        <SidebarMenu.Item title="Tasks Kanban" to="/apps/tasks-kanban" />
+                                        <SidebarMenu.Item title="Tasks Details" to="/apps/task-details" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Files">
-                                        <SidebarMenu.Item title="Files List" to="/files/list" exact />
-                                        <SidebarMenu.Item title="Files Grid" to="/files/grid" exact />
+                                        <SidebarMenu.Item title="Files List" to="/apps/files/list" />
+                                        <SidebarMenu.Item title="Files Grid" to="/apps/files/grid" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Search Results">
-                                        <SidebarMenu.Item title="Search Results" to="/searchresults" exact />
-                                        <SidebarMenu.Item title="Images Results" to="/imagesresults" exact />
-                                        <SidebarMenu.Item title="Videos Results" to="/videosresults" exact />
-                                        <SidebarMenu.Item title="Users Results" to="/usersresults" exact /> 
+                                        <SidebarMenu.Item title="Search Results" to="/apps/search-results" />
+                                        <SidebarMenu.Item title="Images Results" to="/apps/images-results" />
+                                        <SidebarMenu.Item title="Videos Results" to="/apps/videos-results" />
+                                        <SidebarMenu.Item title="Users Results" to="/apps/users-results" /> 
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Users">
-                                        <SidebarMenu.Item title="Users List" to="/users/list" exact />
-                                        <SidebarMenu.Item title="Users Grid" to="/users/grid" exact />
+                                        <SidebarMenu.Item title="Users List" to="/apps/users/list" />
+                                        <SidebarMenu.Item title="Users Grid" to="/apps/users/grid" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Gallery">
-                                        <SidebarMenu.Item title="Gallery Grid" to="/gallerygrid" exact />
-                                        <SidebarMenu.Item title="Gallery Table" to="/gallerytable" exact />
+                                        <SidebarMenu.Item title="Gallery Grid" to="/apps/gallery-grid" />
+                                        <SidebarMenu.Item title="Gallery Table" to="/apps/gallery-table" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Mailbox">
-                                        <SidebarMenu.Item title="Inbox" to="/inbox" exact />
-                                        <SidebarMenu.Item title="New Email" to="/newemail" exact />
-                                        <SidebarMenu.Item title="Email Details" to="/emaildetails" exact />
+                                        <SidebarMenu.Item title="Inbox" to="/apps/inbox" />
+                                        <SidebarMenu.Item title="New Email" to="/apps/new-email" />
+                                        <SidebarMenu.Item title="Email Details" to="/apps/email-details" />
                                     </SidebarMenu.Item>
                                     <SidebarMenu.Item title="Profile">
-                                        <SidebarMenu.Item title="Profile Details" to="/profiledetails" exact />
-                                        <SidebarMenu.Item title="Profile Edit" to="/profileedit" exact />
-                                        <SidebarMenu.Item title="Account Edit" to="/accountedit" exact />
-                                        <SidebarMenu.Item title="Billing Edit" to="/billingedit" exact />
-                                        <SidebarMenu.Item title="Settings Edit" to="/settingsedit" exact />
-                                        <SidebarMenu.Item title="Sessions Edit" to="/sessionsedit" exact />
+                                        <SidebarMenu.Item title="Profile Details" to="/apps/profile-details" />
+                                        <SidebarMenu.Item title="Profile Edit" to="/apps/profile-edit" />
+                                        <SidebarMenu.Item title="Account Edit" to="/apps/account-edit" />
+                                        <SidebarMenu.Item title="Billing Edit" to="/apps/billing-edit" />
+                                        <SidebarMenu.Item title="Settings Edit" to="/apps/settings-edit" />
+                                        <SidebarMenu.Item title="Sessions Edit" to="/apps/sessions-edit" />
                                     </SidebarMenu.Item>
-                                    <SidebarMenu.Item title="Clients" to="/clients" exact />
-                                    <SidebarMenu.Item title="Chat" to="/chat" exact />
+                                    <SidebarMenu.Item title="Clients" to="/apps/clients" exact />
+                                    <SidebarMenu.Item title="Chat" to="/apps/chat" exact />
                                 </SidebarMenu.Item>
                                 { /* -------- Pages ---------*/ }
                                 <SidebarMenu.Item
@@ -366,31 +361,19 @@ class AppLayout extends React.Component {
                                 >
                                     <SidebarMenu.Item title="Register" to="/pages/register" />
                                     <SidebarMenu.Item title="Login" to="/pages/login" />
-                                    <SidebarMenu.Item title="Forgot Password" to="/pages/forgotpassword" />
-                                    <SidebarMenu.Item title="Lock Screen" to="/pages/lockscreen" />
-                                    <SidebarMenu.Item title="Error 404" to="/pages/error404" />
+                                    <SidebarMenu.Item title="Forgot Password" to="/pages/forgot-password" />
+                                    <SidebarMenu.Item title="Lock Screen" to="/pages/lock-screen" />
+                                    <SidebarMenu.Item title="Error 404" to="/pages/error-404" />
                                     <SidebarMenu.Item title="Confirmation" to="/pages/confirmation" />
                                     <SidebarMenu.Item title="Success" to="/pages/success" />
                                     <SidebarMenu.Item title="Danger" to="/pages/danger" />
-                                    <SidebarMenu.Item title="Coming Soon" to="/pages/comingsoon" />
+                                    <SidebarMenu.Item title="Coming Soon" to="/pages/coming-soon" />
                                 </SidebarMenu.Item>
                                 <SidebarMenu.Item
                                     icon={ <i className="fa fa-fw fa-star-o"></i> }
                                     title="Icons"
                                     to='/icons'
                                 />
-                                <SidebarMenu.Item
-                                    icon={ <i className="fa fa-fw fa-question"></i> }
-                                    title="Example"
-                                >
-                                    <SidebarMenu.Item title="Tutorial">
-                                        <SidebarMenu.Item title="First Tutorial" to="/redux-example" exact />
-                                        <SidebarMenu.Item title="Second Tutorial" to="/splitted" />
-                                    </SidebarMenu.Item>
-                                    <SidebarMenu.Item
-                                        title="Training Videos"
-                                    />
-                                </SidebarMenu.Item>
                             </SidebarMenu>
                         </Sidebar.Section>
 
