@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { NavLink as RouterNavLink } from 'react-router-dom';
 
 import { 
     Nav, 
@@ -26,7 +27,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/searchresults" className="d-flex" active>
+                <NavLink tag={ RouterNavLink } to="/apps/search-results" className="d-flex">
                     All Results
                     <Badge pill color="secondary" className="ml-auto align-self-center">
                         12
@@ -34,7 +35,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/imagesresults" className="d-flex">
+                <NavLink tag={ RouterNavLink } to="/apps/images-results" className="d-flex">
                     Images
                     <Badge pill color="secondary" className="ml-auto align-self-center">
                         5
@@ -42,7 +43,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/videosresults" className="d-flex">
+                <NavLink tag={ RouterNavLink } to="/apps/videos-results" className="d-flex">
                     Videos
                     <Badge pill color="secondary" className="ml-auto align-self-center">
                         10
@@ -50,7 +51,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem>
-                <NavLink href="/usersresults" className="d-flex">
+                <NavLink tag={ RouterNavLink } to="/apps/users-results" className="d-flex">
                     Users
                     <Badge pill color="secondary" className="ml-auto align-self-center">
                         2
