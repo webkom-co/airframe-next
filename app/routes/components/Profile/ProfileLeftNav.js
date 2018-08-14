@@ -12,27 +12,27 @@ const ProfileLeftNav = () => (
         <div className="mb-4">
             <Nav pills vertical>
                 <NavItem>
-                    <NavLink tag={ RouterNavLink } to="/profileedit">
+                    <NavLink tag={ RouterNavLink } to="/apps/profile-edit">
                         Profile Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={ RouterNavLink } to="/accountedit">
+                    <NavLink tag={ RouterNavLink } to="/apps/account-edit">
                         Account Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={ RouterNavLink } to="/billingedit">
+                    <NavLink tag={ RouterNavLink } to="/apps/billing-edit">
                         Billing Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={ RouterNavLink } to="/settingsedit">
+                    <NavLink tag={ RouterNavLink } to="/apps/settings-edit">
                         Settings Edit
                     </NavLink>
                 </NavItem>
                 <NavItem>
-                    <NavLink tag={ RouterNavLink } to="/sessionsedit">
+                    <NavLink tag={ RouterNavLink } to="/apps/sessions-edit">
                         Sessions Edit
                     </NavLink>
                 </NavItem>

@@ -912,7 +912,7 @@ const Dropdowns = () => (
                                 <ExtendedDropdown>
                                     <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
                                         <span className="text-inverse">Messages</span>
-                                        <Link to="/inbox">
+                                        <Link to="/apps/inbox">
                                             <i className="fa fa-pencil"></i>
                                         </Link>
                                     </ExtendedDropdown.Section>
@@ -943,7 +943,7 @@ const Dropdowns = () => (
                                         </ListGroup>
                                     </ExtendedDropdown.Section>
                                     <ExtendedDropdown.Section className="text-center">
-                                        <Link to="/inbox">
+                                        <Link to="/apps/inbox">
                                             See All Messages
                                             <i className="fa fa-angle-right fa-fw ml-2" />
                                         </Link>

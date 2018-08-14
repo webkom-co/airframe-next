@@ -28,7 +28,10 @@ const GalleryTable = () => (
             { /* START Content */}
             <Row>
                 <Col lg={ 12 }>
-                    <ProjectsSmHeader />
+                    <ProjectsSmHeader 
+                        linkList="/apps/gallery-table"
+                        linkGrid="/apps/gallery-grid"
+                    />
                     <Card>
                         { /* START Table */}
                         <Table className="mb-0" hover responsive>

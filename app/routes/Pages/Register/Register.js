@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Form,
@@ -61,7 +62,7 @@ const Register = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/forgotpassword">
+                <Link to="/pages/forgot-password">
                     Forgot Password
                 </Link>
                 <Link to="/pages/login" className="ml-auto">

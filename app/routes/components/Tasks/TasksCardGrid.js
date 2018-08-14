@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Card,
@@ -51,9 +52,9 @@ const TasksCardGrid = () => (
                     </Media>
                     <Media body>
                         <span className="mr-2">#{ faker.random.number() }</span>
-                        <a href="#">
+                        <Link to="/apps/task-details">
                             { faker.hacker.phrase() }
-                        </a>
+                        </Link>
                     </Media>
                 </Media>
                 <p className="mb-0">

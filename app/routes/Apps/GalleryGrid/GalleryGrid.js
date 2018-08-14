@@ -15,7 +15,10 @@ const GalleryGrid = () => (
         { /* START Content */}
         <Row>
             <Col lg={ 12 }>
-                <ProjectsSmHeader />
+                <ProjectsSmHeader 
+                    linkList="/apps/gallery-table"
+                    linkGrid="/apps/gallery-grid"
+                />
                 <CardColumns>
                     <GalleryCard />
                 </CardColumns>

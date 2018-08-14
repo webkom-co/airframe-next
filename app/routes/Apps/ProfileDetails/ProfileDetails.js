@@ -64,12 +64,12 @@ const ProfileDetails = () => (
                             </div>                                
                             <Row className="mt-3">
                                 <Col sm={ 6 }>
-                                    <Button color="primary" block tag={ Link } to="/newemail">
+                                    <Button color="primary" block tag={ Link } to="/apps/new-email">
                                         Message
                                     </Button> 
                                 </Col>
                                 <Col sm={ 6 }>
-                                    <Button color="secondary" outline block tag={ Link } to="/profileedit">
+                                    <Button color="secondary" outline block tag={ Link } to="/apps/profile-edit">
                                         Edit
                                     </Button> 
                                 </Col>

@@ -226,25 +226,25 @@ export const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag={ Link } to="/profiledetails">
+                        <ListGroupItem tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="success"
                                 icon="check"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/profiledetails">
+                        <ListGroupItem tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="danger"
                                 icon="close"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/profiledetails">
+                        <ListGroupItem tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="warning"
                                 icon="exclamation"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/profiledetails">
+                        <ListGroupItem tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="primary"
                                 icon="info"

@@ -20,7 +20,11 @@ const Files = (props) => (
                     <FilesLeftNav />
                 </Col>
                 <Col lg={ 9 }>
-                    <ProjectsSmHeader />
+                    <ProjectsSmHeader 
+                        linkList="/apps/files/list"
+                        linkGrid="/apps/files/grid"
+                    />
+
                     { 
                         props.match.params.type === "list" ?
                             <FilesList /> :

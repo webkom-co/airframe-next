@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Badge,
@@ -45,9 +46,9 @@ const ProjectsList = () => (
                     </td>
                     <td className="align-middle">
                         <div>
-                            <a href="#">
+                            <Link to="/apps/tasks/list">
                                 { faker.company.catchPhrase() }
-                            </a>
+                            </Link>
                         </div>
                         <span>
                             Last Edited by: { faker.name.firstName() } { faker.name.lastName() } <br />
