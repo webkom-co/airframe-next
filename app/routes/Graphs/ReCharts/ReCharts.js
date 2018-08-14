@@ -27,6 +27,7 @@ import { AreaChartFillByValue } from "./components/AreaChartFillByValue";
 import { TwoLevelPieChart } from "./components/TwoLevelPieChart";
 import { StraightAnglePieChart } from "./components/StraightAnglePieChart";
 import { PieChartWithCustomizedLabel } from "./components/PieChartWithCustomizedLabel";
+import { PieChartWithPaddingAngle } from "./components/PieChartWithPaddingAngle";
 import { SpecifiedDomainRadarChart } from "./components/SpecifiedDomainRadarChart";
 import { SimpleRadialBarChart } from "./components/SimpleRadialBarChart";
 import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart";
@@ -541,22 +542,20 @@ export const ReCharts = () => (
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                PieChartWithPaddingAngle
-                                <span className="small ml-1 text-muted">
-                                    #4.05
-                                </span>
-                            </h6>
-                            <p>Pie Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            PieChartWithPaddingAngle
+                            <span className="small ml-1 text-muted">
+                                #4.05
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/3Leoa7f4/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <PieChartWithPaddingAngle />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -671,22 +670,20 @@ export const ReCharts = () => (
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                LineBarAreaComposedChart
-                                <span className="small ml-1 text-muted">
-                                    #6.01
-                                </span>
-                            </h6>
-                            <p>Composed Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            LineBarAreaComposedChart
+                            <span className="small ml-1 text-muted">
+                                #6.01
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/9xopwa9v/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <LineBarAreaComposedChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
