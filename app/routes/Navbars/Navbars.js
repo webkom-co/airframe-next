@@ -21,6 +21,9 @@ import {
 import {
     Navbar104
 } from "../components/Navbars/Navbar104";
+import {
+    Navbar202
+} from "../components/Navbars/Navbar202";
 
 
 const Navbars = () => (
@@ -82,7 +85,7 @@ const Navbars = () => (
                         no={2} 
                         title="Navbars Menu" 
                         className="mt-5"
-                        subTitle="Basic button layout options"
+                        subTitle="The following navbars are worth using for the menu. They are usually used as a second navbar."
                     />
                 </Col>
             </Row>
@@ -98,6 +101,13 @@ const Navbars = () => (
                         </span>
                     </h6>
                     <Navbar104 />
+                    <h6 className="mt-4">
+                        Navbar
+                        <span className="small text-muted ml-2">
+                            #2.02
+                        </span>
+                    </h6>
+                    <Navbar202 />
                 </Col>
                 { /* END Col12 */}
             </Row>
@@ -106,7 +116,7 @@ const Navbars = () => (
             <Row>
                 <Col lg={ 12 }>
                     <HeaderDemo 
-                        no={4} 
+                        no={3} 
                         title="Navbars Combined" 
                         className="mt-5"
                         subTitle="Basic button layout options"
@@ -126,6 +136,15 @@ const Navbars = () => (
                     </h6>
                     <Navbar103 />
                     <Navbar104 />
+
+                    <h6 className="mt-4">
+                        Navbars
+                        <span className="small text-muted ml-2">
+                            #1.03 (Top) + #2.02 (Bottom)
+                        </span>
+                    </h6>
+                    <Navbar103 />
+                    <Navbar202 />
                 </Col>
                 { /* END Col12 */}
             </Row>
