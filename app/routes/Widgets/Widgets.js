@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Container,
@@ -10,6 +11,7 @@ import {
     ListGroupItem,
     CardDeck, 
     Progress,
+    CardFooter,
     CardColumns,
     CardTitle,
 } from './../../components'
@@ -41,12 +43,17 @@ import {
     Chat
 } from "../components/Chat/Chat";
 import {
+    ChatCardFooter
+} from "../components/Chat/ChatCardFooter";
+import {
     SessionsByDevice
 } from "../components/Analytics/SessionsByDevice";
 import {
     MetricVsTarget
 } from "../components/Analytics/MetricVsTarget";
-
+import {
+    Activity
+} from "../components/Dropdowns/Activity";
 
 export const Widgets = () => (
     <Container>
@@ -183,6 +190,9 @@ export const Widgets = () => (
                         <Chat />
                         <Chat />
                     </CardBody>
+                    <CardFooter>
+                        <ChatCardFooter />
+                    </CardFooter>
                 </Card>
                 { /* START Card Widget */}
             </Col>
@@ -190,7 +200,7 @@ export const Widgets = () => (
                 { /* START Card Widget */}
                 <Card className="mb-3">
                     <CardBody>
-                        <CardTitle tag="h6" className="mb-3">
+                        <CardTitle tag="h6" className="mb-4">
                             Comments
                             <span className="small ml-1 text-muted">
                                 #3.02
@@ -200,6 +210,47 @@ export const Widgets = () => (
                         <Comment />
                         <Comment />
                     </CardBody>
+                    <CardFooter>
+                        <ChatCardFooter />
+                    </CardFooter>
+                </Card>
+                { /* START Card Widget */}
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-0">
+                            Activity
+                            <span className="small ml-1 text-muted">
+                                #3.04
+                            </span>
+                        </CardTitle>
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem tag={ Link } to="/profiledetails">
+                            <Activity 
+                                iconColorBelow="success"
+                                icon="check"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem tag={ Link } to="/profiledetails">
+                            <Activity 
+                                iconColorBelow="danger"
+                                icon="close"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem tag={ Link } to="/profiledetails">
+                            <Activity 
+                                iconColorBelow="warning"
+                                icon="exclamation"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem tag={ Link } to="/profiledetails">
+                            <Activity 
+                                iconColorBelow="primary"
+                                icon="info"
+                            />
+                        </ListGroupItem>
+                    </ListGroup>
                 </Card>
                 { /* START Card Widget */}
             </Col>
