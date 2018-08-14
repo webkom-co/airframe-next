@@ -1,16 +1,25 @@
 import React from 'react';
+import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Container,
     Row,
     Col,
     Card,
+    InputGroup,
     CardTitle,
     CardBody,
     Badge,
     CustomInput,
+    InputGroupAddon,
     UncontrolledButtonDropdown,
-    UncontrolledDropdown,
+    Avatar,
+    AvatarAddOn,
+    Media,
+    ListGroupItem,
+    ListGroup,
+    ExtendedDropdown,
     Form,
     Button,
     FormGroup,
@@ -25,6 +34,12 @@ import {
 import {
     HeaderDemo
 } from "../components/HeaderDemo";
+import {
+    Messages
+} from "../components/Dropdowns/Messages";
+import {
+    Activity
+} from "../components/Dropdowns/Activity";
 
 const Dropdowns = () => (
     <React.Fragment>
@@ -833,7 +848,7 @@ const Dropdowns = () => (
             <Row>
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={{ height: '540px' }}>
                         <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: List Group (as Links)
@@ -841,16 +856,58 @@ const Dropdowns = () => (
                                     #5.01
                                 </span>
                             </CardTitle>
-                            <p>
-                                <i>TO-DO...</i>
-                            </p>
+                            <ButtonDropdown isOpen>
+                                <DropdownToggle color="link" caret>
+                                    See Demo
+                                </DropdownToggle>
+                                <ExtendedDropdown>
+                                    <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
+                                        <span>Activity Feed</span>
+                                        <Badge pill>4</Badge>
+                                    </ExtendedDropdown.Section>
+                                    <ExtendedDropdown.Section list>
+                                        <ListGroup>
+                                            <ListGroupItem tag={ Link } to="/widgets">
+                                                <Activity 
+                                                    iconColorBelow="success"
+                                                    icon="check"
+                                                />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag={ Link } to="/widgets">
+                                                <Activity 
+                                                    iconColorBelow="danger"
+                                                    icon="close"
+                                                />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag={ Link } to="/widgets">
+                                                <Activity 
+                                                    iconColorBelow="warning"
+                                                    icon="exclamation"
+                                                />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag={ Link } to="/widgets">
+                                                <Activity 
+                                                    iconColorBelow="primary"
+                                                    icon="info"
+                                                />
+                                            </ListGroupItem>
+                                        </ListGroup>
+                                    </ExtendedDropdown.Section>
+                                    <ExtendedDropdown.Section className="text-center">
+                                        <Link to="/widgets">
+                                            See All Notifications
+                                            <i className="fa fa-angle-right fa-fw ml-2" />
+                                        </Link>
+                                    </ExtendedDropdown.Section>
+                                </ExtendedDropdown>
+                            </ButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
                 { /* END Col6 1 */}
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
-                    <Card className="mb-3">
+                    <Card className="mb-3" style={{ height: '640px' }}>
                         <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: List Group (as Buttons) 
@@ -858,26 +915,51 @@ const Dropdowns = () => (
                                     #5.02
                                 </span>
                             </CardTitle>
-                            <p>
-                                <i>TO-DO...</i>
-                            </p>
-                        </CardBody>
-                    </Card>
-                </Col>
-                { /* END Col6 1 */}
-                { /* START Col6 1 */}
-                <Col lg={ 6 }>
-                    <Card className="mb-3">
-                        <CardBody>
-                            <CardTitle tag="h6">
-                                Dropdown: List Group
-                                <span className="small ml-1 text-muted">
-                                    #5.03
-                                </span>
-                            </CardTitle>
-                            <p>
-                                <i>TO-DO...</i>
-                            </p>
+                            <ButtonDropdown isOpen>
+                                <DropdownToggle color="link" caret>
+                                    See Demo
+                                </DropdownToggle>
+                                <ExtendedDropdown>
+                                    <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
+                                        <span className="text-inverse">Messages</span>
+                                        <Link to="/inbox">
+                                            <i className="fa fa-pencil"></i>
+                                        </Link>
+                                    </ExtendedDropdown.Section>
+                                    <ExtendedDropdown.Section>
+                                        <InputGroup>
+                                            <Input placeholder="Search Messages..." />
+                                            <InputGroupAddon addonType="append">
+                                                <Button outline>
+                                                    <i className="fa fa-search" />
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </ExtendedDropdown.Section>
+                                    <ExtendedDropdown.Section list>
+                                        <ListGroup flush>
+                                            <ListGroupItem tag="button" action>
+                                                <Messages />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag="button" action>
+                                                <Messages />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag="button" action>
+                                                <Messages />
+                                            </ListGroupItem>
+                                            <ListGroupItem tag="button" action>
+                                                <Messages />
+                                            </ListGroupItem>
+                                        </ListGroup>
+                                    </ExtendedDropdown.Section>
+                                    <ExtendedDropdown.Section className="text-center">
+                                        <Link to="/inbox">
+                                            See All Messages
+                                            <i className="fa fa-angle-right fa-fw ml-2" />
+                                        </Link>
+                                    </ExtendedDropdown.Section>
+                                </ExtendedDropdown>
+                            </ButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
