@@ -31,6 +31,8 @@ import { SpecifiedDomainRadarChart } from "./components/SpecifiedDomainRadarChar
 import { SimpleRadialBarChart } from "./components/SimpleRadialBarChart";
 import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart";
 import { TinyLineChart } from "./components/TinyLineChart";
+import { TinyAreaChart } from "./components/TinyAreaChart";
+import { TinyBarChart } from './components/TinyBarChart';
 
 export const ReCharts = () => (
     <Container>
@@ -734,66 +736,60 @@ export const ReCharts = () => (
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                TinyLineChart
-                                <span className="small ml-1 text-muted">
-                                    #7.01
-                                </span>
-                            </h6>
-                            <p>Tiny Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            TinyLineChart
+                            <span className="small ml-1 text-muted">
+                                #7.01
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/exh283uh/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <TinyLineChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                TinyAreaChart
-                                <span className="small ml-1 text-muted">
-                                    #7.02
-                                </span>
-                            </h6>
-                            <p>Tiny Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            TinyAreaChart
+                            <span className="small ml-1 text-muted">
+                                #7.02
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/tv8zfzxo/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <TinyAreaChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                TinyBarChart
-                                <span className="small ml-1 text-muted">
-                                    #7.03
-                                </span>
-                            </h6>
-                            <p>Tiny Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            TinyBarChart
+                            <span className="small ml-1 text-muted">
+                                #7.03
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <TinyBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
