@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import {
     Avatar,
@@ -20,6 +21,7 @@ import {
     ListGroupItem,
     Navbar,
     Nav,
+    NavLink,
     NavItem,
     Media,
     Progress,
@@ -122,7 +124,7 @@ class AppLayout extends React.Component {
                                         </ListGroup>
                                     </ExtendedDropdown.Section>
 
-                                    <ExtendedDropdown.Section className="text-center" tag="a" href="javascript:;">
+                                    <ExtendedDropdown.Section className="text-center" tag={ Link} to="/apps/widgets">
                                         See All Notifications
                                         <i className="fa fa-angle-right fa-fw ml-2" />
                                     </ExtendedDropdown.Section>
@@ -140,15 +142,15 @@ class AppLayout extends React.Component {
                                 <ExtendedDropdown right>
                                     <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
                                         <span>Messages</span>
-                                        <a href="javascript:;">
+                                        <Link to="/apps/new-email">
                                             <i className="fa fa-pencil" />
-                                        </a>
+                                        </Link>
                                     </ExtendedDropdown.Section>
                                     <ExtendedDropdown.Section>
                                         <InputGroup>
                                             <Input placeholder="Search Messages..." />
                                             <InputGroupAddon addonType="append">
-                                                <Button color="white">
+                                                <Button color="secondary" outline>
                                                     <i className="fa fa-search" />
                                                 </Button>
                                             </InputGroupAddon>
@@ -159,7 +161,7 @@ class AppLayout extends React.Component {
                                         <ListGroup>
                                         {
                                             _.times(3, (index) => (
-                                                <ListGroupItem key={ index }>
+                                                <ListGroupItem tag={ Link } to="/apps/email-details" key={ index }>
                                                     <Media>
                                                         <Media left>
                                                             <Avatar.Image
@@ -190,12 +192,18 @@ class AppLayout extends React.Component {
                                         </ListGroup>
                                     </ExtendedDropdown.Section>
 
-                                    <ExtendedDropdown.Section className="text-center" tag="a" href="javascript:;">
+                                    <ExtendedDropdown.Section className="text-center" tag={ Link } to="/apps/inbox">
                                         View All
                                         <i className="fa fa-angle-right fa-fw ml-2" />
                                     </ExtendedDropdown.Section>
                                 </ExtendedDropdown>
                             </UncontrolledDropdown>
+
+                            <NavItem className="ml-2">
+                                <NavLink tag={ Link } to="/pages/login">
+                                    <i className="fa fa-power-off"></i>
+                                </NavLink>
+                            </NavItem>
                         </Nav>
                     </Navbar>
                 </Layout.Navbar>
