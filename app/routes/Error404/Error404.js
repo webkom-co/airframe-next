@@ -36,7 +36,7 @@ const Error404 = () => (
                     <InputGroup>
                         <Input type="text" name="text" id="search" placeholder="Enter search phrase here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary" href="/">
+                            <Button color="primary" tag={ Link } to="/">
                                 <i className="fa fa-search"></i>
                             </Button>
                         </InputGroupAddon>
@@ -46,12 +46,12 @@ const Error404 = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/login">
+                <Link to="/pages/login">
                     Back to Home
-                </a>
-                <a href="/" className="ml-auto">
+                </Link>
+                <Link to="/" className="ml-auto">
                     Support
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}

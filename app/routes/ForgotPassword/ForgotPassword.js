@@ -38,10 +38,10 @@ const ForgotPassword = () => (
                     </FormText>
                 </FormGroup>
                 <div className="d-flex">
-                    <Button color="primary" href="/" className="align-self-center">
+                    <Button color="primary" tag={ Link } to="/" className="align-self-center">
                         Reset Password
                     </Button>
-                    <Button color="secondary" outline href="/" className="align-self-center ml-auto">
+                    <Button color="secondary" outline tag={ Link } to="/" className="align-self-center ml-auto">
                         Back to Home
                     </Button>
                 </div>
@@ -49,12 +49,12 @@ const ForgotPassword = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/login">
+                <Link to="/pages/login">
                     Login
-                </a>
-                <a href="/pages/register" className="ml-auto">
+                </Link>
+                <Link to="/pages/register" className="ml-auto">
                     Register
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}

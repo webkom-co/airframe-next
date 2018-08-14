@@ -24,9 +24,9 @@ const Danger = () => (
             { /* END Header */}
             { /* START Bottom Links */}
             <div className="text-center mb-5">
-                <a href="/">
+                <Link to="/">
                     <i className="fa fa-angle-left mr-2"></i>Correct Errors
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}

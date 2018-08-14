@@ -57,7 +57,7 @@ const ComingSoon = () => (
                     <InputGroup>
                         <Input type="email" name="email" id="email" placeholder="Enter here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary" href="/">
+                            <Button color="primary" tag={ Link } to="/">
                                 Subscribe
                             </Button>
                         </InputGroupAddon>
@@ -70,12 +70,12 @@ const ComingSoon = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/login">
+                <Link to="/">
                     Back to Home
-                </a>
-                <a href="/" className="ml-auto">
+                </Link>
+                <Link to="/" className="ml-auto">
                     Contact
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}

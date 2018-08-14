@@ -29,9 +29,9 @@ const Success = () => (
             { /* END Header */}
             { /* START Bottom Links */}
             <div className="text-center mb-5">
-                <a href="/">
+                <Link to="/">
                     <i className="fa fa-angle-left mr-2"></i>Back to Home
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}

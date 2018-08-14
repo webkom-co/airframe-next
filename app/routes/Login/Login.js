@@ -51,19 +51,19 @@ const Login = () => (
                 <FormGroup>
                     <CustomInput type="checkbox" id="rememberPassword" label="Remember Password" inline />
                 </FormGroup>
-                <Button color="primary" block href="/">
+                <Button color="primary" block tag={ Link } to="/">
                     Sign In
                 </Button>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/forgotpassword">
+                <Link to="/pages/forgotpassword">
                     Forgot Password
-                </a>
-                <a href="/pages/register" className="ml-auto">
+                </Link>
+                <Link to="/pages/register" className="ml-auto">
                     Register
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}
