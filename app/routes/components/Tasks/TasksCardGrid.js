@@ -52,7 +52,7 @@ const TasksCardGrid = () => (
                     </Media>
                     <Media body>
                         <span className="mr-2">#{ faker.random.number() }</span>
-                        <Link to="/tasksdetails">
+                        <Link to="/apps/task-details">
                             { faker.hacker.phrase() }
                         </Link>
                     </Media>

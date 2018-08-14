@@ -27,7 +27,7 @@ const ProjectsCardGrid = () => (
                         <a href="#" className="mr-2">
                             <i className="fa fa-fw fa-star-o"></i>
                         </a>
-                        <Link to="/tasks/grid">
+                        <Link to="/apps/tasks/grid">
                             { faker.company.catchPhrase() }
                         </Link>
                     </div>
