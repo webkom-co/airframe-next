@@ -11,6 +11,27 @@ import {
 } from './../../../components'
 import { HeaderDemo } from "../../components/HeaderDemo";
 
+import { SimpleBarChart } from "./components/SimpleBarChart";
+import { StackedBarChart } from "./components/StackedBarChart";
+import { MixBarChart } from "./components/MixBarChart";
+import { PositiveAndNegativeBarChart } from "./components/PositiveAndNegativeBarChart";
+import { BarChartStackedBySign } from "./components/BarChartStackedBySign";
+import { BarChartHasBackground } from "./components/BarChartHasBackground";
+import { SimpleLineChart } from "./components/SimpleLineChart";
+import { DashedLineChart } from "./components/DashedLineChart";
+import { VerticalLineChart } from "./components/VerticalLineChart";
+import { SimpleAreaChart } from "./components/SimpleAreaChart";
+import { StackedAreaChart } from "./components/StackedAreaChart";
+import { PercentAreaChart } from "./components/PercentAreaChart";
+import { AreaChartFillByValue } from "./components/AreaChartFillByValue";
+import { TwoLevelPieChart } from "./components/TwoLevelPieChart";
+import { StraightAnglePieChart } from "./components/StraightAnglePieChart";
+import { PieChartWithCustomizedLabel } from "./components/PieChartWithCustomizedLabel";
+import { SpecifiedDomainRadarChart } from "./components/SpecifiedDomainRadarChart";
+import { SimpleRadialBarChart } from "./components/SimpleRadialBarChart";
+import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart";
+import { TinyLineChart } from "./components/TinyLineChart";
+
 export const ReCharts = () => (
     <Container>
         { /* START Header 1 */}
@@ -49,6 +70,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <SimpleBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -71,6 +93,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <StackedBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -95,6 +118,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <MixBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -117,6 +141,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <PositiveAndNegativeBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -141,6 +166,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <BarChartStackedBySign />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -163,6 +189,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <BarChartHasBackground />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -206,6 +233,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <SimpleLineChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -228,6 +256,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <DashedLineChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -252,6 +281,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <VerticalLineChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -317,6 +347,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <SimpleAreaChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -339,6 +370,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <StackedAreaChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -363,6 +395,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <PercentAreaChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -428,6 +461,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <TwoLevelPieChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -450,6 +484,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <StraightAnglePieChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}

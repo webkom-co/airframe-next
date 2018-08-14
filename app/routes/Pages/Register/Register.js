@@ -54,19 +54,19 @@ const Register = () => (
                 <FormGroup>
                     <CustomInput type="checkbox" id="acceptTerms" label="Accept Terms and Privacy Policy" inline />
                 </FormGroup>
-                <Button color="primary" block href="/">
+                <Button color="primary" block tag={ Link } to="/">
                     Create Account
                 </Button>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <a href="/pages/forgotpassword">
+                <Link to="/pages/forgotpassword">
                     Forgot Password
-                </a>
-                <a href="/pages/login" className="ml-auto">
+                </Link>
+                <Link to="/pages/login" className="ml-auto">
                     Login
-                </a>
+                </Link>
             </div>
             { /* END Bottom Links */}
             { /* START Footer */}
