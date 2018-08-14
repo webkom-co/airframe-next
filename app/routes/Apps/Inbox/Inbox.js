@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Container,
@@ -80,7 +81,7 @@ const Inbox = () => (
                                     </UncontrolledTooltip>
                                 </ButtonGroup>
                                 <ButtonGroup>
-                                    <Button color="secondary" className="align-self-center" href="/newemail" id="tooltipAddNew">
+                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/new-email" id="tooltipAddNew">
                                         <i className="fa fa-fw fa-pencil"></i>
                                     </Button>
                                     <UncontrolledTooltip placement="bottom" target="tooltipAddNew">
@@ -155,9 +156,9 @@ const Inbox = () => (
                                         </Media>
                                     </td>
                                     <td className="align-middle">
-                                        <a href="/emaildetails">
+                                        <Link to="/apps/email-details">
                                             { faker.company.catchPhrase() }
-                                        </a>
+                                        </Link>
                                         <br />
                                         { faker.lorem.sentence() }
                                     </td>

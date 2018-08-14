@@ -17,7 +17,7 @@ import {
 const SearchResultsLeftNav = () => (
     <React.Fragment>
         { /* START Navigation */}
-        <Nav vertical className="mb-3">
+        <Nav vertical pills className="mb-3">
             <NavItem>
                 <NavLink href="#" className="small d-flex px-1">
                     <span>

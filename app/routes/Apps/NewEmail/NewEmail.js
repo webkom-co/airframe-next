@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import { 
     Container,
@@ -34,18 +35,18 @@ const NewEmail = () => (
                             { /* START Header */}
                             <div className="d-lg-flex justify-content-end mb-4">
                                 <div className="mr-auto d-flex align-items-center">
-                                    <Button color="link" href="/inbox">
+                                    <Button color="link" tag={ Link } to="/apps/inbox">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
                                 </div>
                                 <ButtonToolbar>
                                     <ButtonGroup className="mr-2">
-                                        <Button color="link" href="/inbox">
+                                        <Button color="link" tag={ Link } to="/apps/inbox">
                                             Cancel
                                         </Button>
                                     </ButtonGroup>
                                     <ButtonGroup>
-                                        <Button color="primary" href="/inbox" id="tooltipSend">
+                                        <Button color="primary" tag={ Link } to="/apps/inbox" id="tooltipSend">
                                             <i className="fa fa-send"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipSend">

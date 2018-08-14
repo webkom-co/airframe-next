@@ -36,6 +36,7 @@ import { ProfileOverviewCard } from "../../components/Profile/ProfileOverviewCar
 import { DlRowContacts } from "../../components/Profile/DlRowContacts";
 import { DlRowAddress } from "../../components/Profile/DlRowAddress";
 import { Chat } from "../../components/Chat/Chat";
+import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
 
 const ProfileDetails = () => (
     <React.Fragment>
@@ -236,19 +237,7 @@ const ProfileDetails = () => (
                                         <Chat />
                                     </CardBody>
                                     <CardFooter>
-                                        <InputGroup>
-                                            <InputGroupAddon addonType="prepend">
-                                                <Button color="secondary" outline>
-                                                    <i className="fa fa fa-paperclip"></i>
-                                                </Button>
-                                            </InputGroupAddon>
-                                            <Input placeholder="Your message..." />
-                                            <InputGroupAddon addonType="append">
-                                                <Button color="primary">
-                                                    <i className="fa fa fa-send"></i>
-                                                </Button>
-                                            </InputGroupAddon>
-                                        </InputGroup>
+                                       <ChatCardFooter />
                                     </CardFooter>
                                 </Card>
                             </TabPane>

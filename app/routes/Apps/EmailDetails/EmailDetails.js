@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import { Link } from 'react-router-dom';
 
 import { 
     Container,
@@ -34,7 +35,7 @@ const EmailDetails = () => (
                             { /* START Header */}
                             <div className="d-lg-flex justify-content-end mb-4">
                                 <div className="mr-auto d-flex align-items-center">
-                                    <Button color="link" href="/inbox">
+                                    <Button color="link" tag={ Link } to="/apps/inbox">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
                                 </div>
@@ -79,7 +80,7 @@ const EmailDetails = () => (
                                     </UncontrolledTooltip>
                                 </ButtonGroup>
                                 <ButtonGroup>
-                                    <Button color="secondary" className="align-self-center" href="/newemail" id="tooltipReply">
+                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReply">
                                         <i className="fa fa-fw fa-reply"></i>
                                     </Button>
                                     <UncontrolledTooltip placement="bottom" target="tooltipReply">
@@ -208,7 +209,7 @@ const EmailDetails = () => (
                                     </UncontrolledTooltip>
                                 </ButtonGroup>
                                 <ButtonGroup>
-                                    <Button color="secondary" className="align-self-center" href="/newemail" id="tooltipReplyBtm">
+                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReplyBtm">
                                         <i className="fa fa-fw fa-reply"></i>
                                     </Button>
                                     <UncontrolledTooltip placement="top" target="tooltipReplyBtm">
