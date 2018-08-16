@@ -76,6 +76,7 @@ import Success from './Pages/Success';
 import Icons from './Icons';
 
 //------ Route Definitions --------
+// eslint-disable-next-line no-unused-vars
 const getRoutes = (store) => {
     return (
         <Switch>
@@ -159,4 +160,22 @@ const getRoutes = (store) => {
     );
 };
 
-export { getRoutes };
+//------ Custom Layout Parts --------
+// NOTICE: Provide unique *key*'s as the layout parts are
+// provided through an array.
+const getNavbars = () => [
+    <Route
+        component={ CustomNavbarExample.Navbar }
+        path="/custom-navbar-example"
+        key="navbar__custom-navbar-example"
+    />
+];
+
+const getSidebars = () => [
+];
+
+export {
+    getRoutes,
+    getNavbars,
+    getSidebars
+};
