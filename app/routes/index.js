@@ -6,6 +6,8 @@ import {
 
 import Home from './Home';
 
+import CustomNavbarExample from './CustomNavbarExample';
+
 import Widgets from './Widgets';
 
 import Cards from './Cards';
@@ -79,6 +81,8 @@ const getRoutes = (store) => {
         <Switch>
             <Route path='/' exact component={Home} />
             
+            <Route path='/custom-navbar-example' component={ CustomNavbarExample } />
+
             <Route path='/widgets' exact component={Widgets} />
             
             <Route path='/cards' exact component={Cards} />
