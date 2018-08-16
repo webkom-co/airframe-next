@@ -170,13 +170,14 @@ class Layout extends React.Component {
     }
 
     updateNavbarsPositions() {
+        // eslint-disable-next-line react/no-find-dom-node
         const containerElement = ReactDOM.findDOMNode(this.containerRef.current);
         if (containerElement) {
             const navbarElements = containerElement.querySelectorAll(":scope .layout__navbar");
         
             // Calculate and update style.top of each navbar
             let totalNavbarsHeight = 0;
-            navbarElements.forEach((navbarElement, index) => {
+            navbarElements.forEach((navbarElement) => {
                 const navbarBox = navbarElement.getBoundingClientRect();
                 navbarElement.style.top = `${totalNavbarsHeight}px`;
                 totalNavbarsHeight += navbarBox.height;
