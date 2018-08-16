@@ -9,7 +9,7 @@
 
     &__navbar {
         height: $navbar-height;
-        position: fixed;
+        position: sticky;
         top: 0;
         left: $sidebar-default-width;
         right: 0;
@@ -22,8 +22,9 @@
             border-bottom: 1px solid $navbar-border-color;
         }
 
-        + .layout__content {
-            margin-top: $navbar-height;
+        /* noscript fallback */
+        + .layout__navbar {
+            top: $navbar-height;
         }
     }
 

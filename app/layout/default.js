@@ -207,7 +207,6 @@ class AppLayout extends React.Component {
                         </Nav>
                     </Navbar>
                 </Layout.Navbar>
-
                 { /* -------- Sidebar ------------*/ }
                 <Layout.Sidebar>
                     <Sidebar>

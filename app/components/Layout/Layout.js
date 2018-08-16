@@ -1,4 +1,5 @@
 import React from 'react';
+import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import { Helmet } from 'react-helmet';
 import { withRouter } from 'react-router';
@@ -20,7 +21,11 @@ const findChildByType = (children, targetType) => {
     });
 
     return result;
-}
+};
+const findChildrenByType = (children, targetType) => {
+    return _.filter(React.Children.toArray(children), (child) =>
+        child.type.layoutPartName === targetType.layoutPartName);
+};
 
 const responsiveBreakpoints = {
     'xs': { max: 575.8 },
@@ -54,6 +59,7 @@ class Layout extends React.Component {
         };
 
         this.lastLgSidebarCollapsed = false;
+        this.containerRef = React.createRef();
     }
 
     componentDidMount() {
@@ -144,6 +150,9 @@ class Layout extends React.Component {
                 }, 100);
             }
         }
+
+        // Update positions of STICKY navbars
+        this.updateNavbarsPositions();
     }
 
     updateLayoutOnScreenSize(screenSize) {
@@ -160,6 +169,21 @@ class Layout extends React.Component {
         }
     }
 
+    updateNavbarsPositions() {
+        const containerElement = ReactDOM.findDOMNode(this.containerRef.current);
+        if (containerElement) {
+            const navbarElements = containerElement.querySelectorAll(":scope .layout__navbar");
+        
+            // Calculate and update style.top of each navbar
+            let totalNavbarsHeight = 0;
+            navbarElements.forEach((navbarElement, index) => {
+                const navbarBox = navbarElement.getBoundingClientRect();
+                navbarElement.style.top = `${totalNavbarsHeight}px`;
+                totalNavbarsHeight += navbarBox.height;
+            });
+        }
+    }
+
     toggleSidebar() {
         this.setState({
             sidebarCollapsed: !this.state.sidebarCollapsed
@@ -173,7 +197,7 @@ class Layout extends React.Component {
     render() {
         const { children } = this.props;
         const sidebar = findChildByType(children, LayoutSidebar);
-        const navbar = findChildByType(children, LayoutNavbar);
+        const navbars = findChildrenByType(children, LayoutNavbar);
         const content = findChildByType(children, LayoutContent);
 
         return (
@@ -193,7 +217,7 @@ class Layout extends React.Component {
                     <meta name="description" content={ this.state.pageDescription } />
                     <meta name="keywords" content={ this.state.pageKeywords } />
                 </Helmet>
-                <div className="layout">
+                <div className="layout" ref={ this.containerRef }>
                     { 
                         !this.state.sidebarHidden && React.cloneElement(sidebar, {
                             sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (
@@ -204,7 +228,7 @@ class Layout extends React.Component {
                     }
 
                     <div className="layout__wrap">
-                        { !this.state.navbarHidden && navbar }
+                        { !this.state.navbarHidden && navbars }
 
                         { content }
                     </div>
