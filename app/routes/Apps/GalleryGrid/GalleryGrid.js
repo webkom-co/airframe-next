@@ -9,6 +9,7 @@ import {
 
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { GalleryCard } from "../../components/Gallery/GalleryCard";
+import { Paginations } from "../../components/Paginations";
 
 const GalleryGrid = () => (
     <Container>
@@ -22,6 +23,9 @@ const GalleryGrid = () => (
                 <CardColumns>
                     <GalleryCard />
                 </CardColumns>
+                <div className="d-flex justify-content-center">
+                    <Paginations />
+                </div>
             </Col>
         </Row>
         { /* END Content */}
