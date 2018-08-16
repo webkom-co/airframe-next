@@ -27,6 +27,10 @@ import {
     UncontrolledTabs
 } from './../../../components';
 
+import { Profile } from "../../components/Profile";
+import { DlRowContacts } from "../../components/Profile/DlRowContacts";
+import { DlRowAddress } from "../../components/Profile/DlRowAddress";
+
 const Clients = () => (
     <React.Fragment>
         <Container>
@@ -300,36 +304,7 @@ const Clients = () => (
                 <Col lg={ 4 }>
                     <Card>
                         <CardBody>
-                            <div className="d-flex justify-content-center my-3">
-                                <Avatar.Image
-                                    size="lg"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
-                                    addOns={[
-                                        <AvatarAddOn.Icon 
-                                            className="fa fa-circle"
-                                            color="white"
-                                            key="avatar-icon-bg"
-                                        />,
-                                        <AvatarAddOn.Icon 
-                                            className="fa fa-circle"
-                                            color="danger"
-                                            key="avatar-icon-fg"
-                                        />
-                                    ]}
-                                /> 
-                            </div>
-                            <div className="mb-4 text-center">
-                                <h6>
-                                    { faker.name.firstName() } { faker.name.lastName() }
-                                </h6>
-                                <div className="text-center mt-2">
-                                    { faker.name.jobTitle() }
-                                </div>
-                                <div className="text-center">
-                                    <i className="fa fa-map-marker mr-1"></i>
-                                    { faker.address.city() }
-                                </div>
-                            </div>
+                            <Profile />
                             <div className="text-center pb-1">
                                 <ul className="list-inline">
                                     <li className="list-inline-item text-center">
@@ -387,33 +362,17 @@ const Clients = () => (
                             <div className="mt-4 mb-2">
                                 <span className="small">Contact</span>
                             </div>
-                            <dl className="row">
-                                <dt className="col-sm-3 text-left">Phone</dt>
-                                <dd className="col-sm-9 text-right">340-702-6720</dd>
-                                <dt className="col-sm-3 text-left">Mobile</dt>
-                                <dd className="col-sm-9 text-right">363-999-9380</dd>
-                                <dt className="col-sm-3 text-left">Fax</dt>
-                                <dd className="col-sm-9 text-right">727-613-5840</dd>
-                                <dt className="col-sm-3 text-left">Email</dt>
-                                <dd className="col-sm-9 text-right">
-                                    <a href="#">t.herald@gmail.com</a>
-                                </dd>
-                                <dt className="col-sm-3 text-left">Skype</dt>
-                                <dd className="col-sm-9 text-right"><a href="#">t.herald</a></dd>
-                            </dl>
+                            <DlRowContacts 
+                                leftSideClassName="text-left"
+                                rightSideClassName="text-right"
+                            />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
                             </div>
-                            <dl className="row">
-                                <dt className="col-sm-3 text-left">Adress</dt>
-                                <dd className="col-sm-9 text-right">700 Zemlak Glen</dd>
-                                <dt className="col-sm-3 text-left">City</dt>
-                                <dd className="col-sm-9 text-right">Jacobiton</dd>
-                                <dt className="col-sm-3 text-left">State</dt>
-                                <dd className="col-sm-9 text-right"><a href="#">West Virginia</a></dd>  
-                                <dt className="col-sm-3 text-left">ZIP</dt>
-                                <dd className="col-sm-9 text-right"><a href="#">87032</a></dd>  
-                            </dl>  
+                            <DlRowAddress 
+                                leftSideClassName="text-left"
+                                rightSideClassName="text-right"
+                            />
                         </CardBody>
                     </Card>
                 </Col>
