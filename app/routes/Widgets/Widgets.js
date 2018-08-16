@@ -54,6 +54,12 @@ import {
 import {
     Activity
 } from "../components/Dropdowns/Activity";
+import {
+    WebsitePerformance
+} from "../components/Analytics/WebsitePerformance";
+import {
+    Messages
+} from "../components/Dropdowns/Messages";
 
 export const Widgets = () => (
     <Container>
@@ -77,33 +83,68 @@ export const Widgets = () => (
             { /* START Card Widget */}
             <Card className="mb-3">
                 <CardBody>
-                    <CardTitle tag="h6" className="mb-3">
-                        Example
-                        <span className="small ml-1 text-muted">
-                            #1.01
-                        </span>
-                    </CardTitle>
+                    <ProfileOverviewCard 
+                        title="Total Views"
+                        badgeTitle="Monthly"
+                        badgeColor="primary"
+                        value="6.200"
+                        valueTitle="vs 4.891 prev."
+                        footerTitle="Prev"
+                        footerTitleClassName="text-success"
+                        footerValue="23%"
+                        footerIcon="caret-up"
+                    />
                 </CardBody>
             </Card>
             { /* START Card Widget */}
             { /* START Card Widget */}
             <Card className="mb-3">
                 <CardBody>
-                    <ProfileOverviewCard />
+                    <ProfileOverviewCard 
+                        title="Total Orders"
+                        badgeTitle="Annual"
+                        badgeColor="info"
+                        value="75.938"
+                        valueTitle="vs 55.002 prev."
+                        footerTitle="Prev"
+                        footerTitleClassName="text-danger"
+                        footerValue="12%"
+                        footerIcon="caret-down"
+                    />
                 </CardBody>
             </Card>
             { /* START Card Widget */}
             { /* START Card Widget */}
             <Card className="mb-3">
                 <CardBody>
-                    <ProfileOverviewCard />
+                    <ProfileOverviewCard 
+                        title="Total Visits"
+                        badgeTitle="Daily"
+                        badgeColor="secondary"
+                        value="456"
+                        valueTitle="vs 231 prev."
+                        footerTitle="Prev"
+                        footerTitleClassName="text-success"
+                        footerValue="67%"
+                        footerIcon="caret-up"
+                    />
                 </CardBody>
             </Card>
             { /* START Card Widget */}
             { /* START Card Widget */}
             <Card className="mb-3">
                 <CardBody>
-                    <ProfileOverviewCard />
+                    <ProfileOverviewCard 
+                        title="Total Bounces"
+                        badgeTitle="Reatime"
+                        badgeColor="warning"
+                        value="91"
+                        valueTitle="vs 87 prev."
+                        footerTitle="Prev"
+                        footerTitleClassName="text-success"
+                        footerValue="8%"
+                        footerIcon="caret-up"
+                    />
                 </CardBody>
             </Card>
             { /* START Card Widget */}
@@ -165,14 +206,23 @@ export const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="/inbox" action>
-                            <Attachment />
+                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                            <Attachment 
+                                BgIconClassName="text-primary"
+                                icon="file-word-o"
+                            />
                         </ListGroupItem>
-                        <ListGroupItem tag="a" href="/inbox" action>
-                            <Attachment />
+                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                            <Attachment 
+                                BgIconClassName="text-success"
+                                icon="file-excel-o"
+                            />
                         </ListGroupItem>
-                        <ListGroupItem tag="a" href="/inbox" action>
-                            <Attachment />
+                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                            <Attachment 
+                                BgIconClassName="text-warning"
+                                icon="file-powerpoint-o"
+                            />
                         </ListGroupItem>
                     </ListGroup>
                 </Card>
@@ -193,6 +243,29 @@ export const Widgets = () => (
                     <CardFooter>
                         <ChatCardFooter />
                     </CardFooter>
+                </Card>
+                { /* START Card Widget */}
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-0">
+                            Messages
+                            <span className="small ml-1 text-muted">
+                                #3.05
+                            </span>
+                        </CardTitle>
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                            <Messages />
+                        </ListGroupItem>
+                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                            <Messages />
+                        </ListGroupItem>
+                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                            <Messages />
+                        </ListGroupItem>
+                    </ListGroup>
                 </Card>
                 { /* START Card Widget */}
             </Col>
@@ -325,6 +398,59 @@ export const Widgets = () => (
                     </CardBody>
                 </Card>
                 { /* END Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-0">
+                            Website Performance
+                            <span className="small ml-1 text-muted">
+                                #4.03
+                            </span>
+                        </CardTitle>
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem>
+                            <WebsitePerformance 
+                                title="Bounce Rate (Avg)"
+                                value="46,893"
+                                valuePercentIcon="caret-up"
+                                valuePercentColor="text-success"
+                                valuePercent="23,91"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <WebsitePerformance 
+                                title="Pageviews (Avg)"
+                                value="2.15"
+                                valuePercentColor="text-danger"
+                                valuePercent="42,82"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <WebsitePerformance 
+                                title="New Sessions"
+                                value="76,40"
+                                valuePercentIcon="caret-up"
+                                valuePercentColor="text-success"
+                                valuePercent="23,91"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem>
+                            <WebsitePerformance 
+                                title="Time on Site (Avg)"
+                                value="2m:16s"
+                                valuePercentColor="text-danger"
+                                valuePercent="65,28"
+                            />
+                        </ListGroupItem>
+                    </ListGroup>
+                    <CardBody>                
+                        <div className="small">
+                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                            How do your users (visitors), sessions (visits) and pageviews 
+                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                        </div>
+                    </CardBody>
+                </Card>
             </Col>
             <Col lg={ 6 }>
                 { /* START Card Widget */}
