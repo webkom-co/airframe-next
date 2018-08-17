@@ -1,13 +1,14 @@
 import React from 'react';
 import {
-    Button,
+    DropdownItem,
+    DropdownMenu,
+    DropdownToggle,
     Nav,
     Navbar,
     NavbarBrand,
+    NestedDropdown,
     Form,
     Input,
-    InputGroup,
-    InputGroupAddon,
     Container
 } from './../../../components';
 
@@ -25,35 +26,36 @@ export const LayoutNavbar = () => (
                 <NavbarBrand>
                     Logo?
                 </NavbarBrand>
+
+                <Form inline className="ml-2">
+                    <Input placeholder="Search..." />
+                </Form>
+
                 <Nav className="ml-auto">
-                    <NavbarMessages className="ml-2" />
+                    <NavbarMessages />
                     <NavbarActivityFeed className="ml-2" />
-                    <NavbarUser />
+                    <NavbarUser className="ml-2" />
                 </Nav>
             </Container>
         </Navbar>
 
         <Navbar>
             <Container>
-                <h2 className="h4 m-0">
-                    Navbar 11
-                </h2>
-                <div className="ml-auto">
-                    <Form inline>
-                        <InputGroup>
-                            <Input placeholder="Search..." />
-                            <InputGroupAddon addonType="append">
-                                <Button color="primary">
-                                    <i className="fa fa-fw fa-search"></i>
-                                </Button>
-                            </InputGroupAddon>
-                        </InputGroup>
-                        
-                        <Button className="ml-2" outline>
-                            <i className="fa fa-fw fa-columns"></i>
-                        </Button>
-                    </Form>
-                </div>
+                <Nav>
+                    <NestedDropdown>
+                        <DropdownToggle caret>
+                            Apps
+                        </DropdownToggle>
+                        <DropdownMenu>
+                            <DropdownItem>First Link</DropdownItem>
+                            <DropdownItem>Second Link</DropdownItem>
+                            <NestedDropdown.Submenu title="Third Link">
+                                <DropdownItem>First Nested Link</DropdownItem>
+                                <DropdownItem>Second Nested Link</DropdownItem>
+                            </NestedDropdown.Submenu>
+                        </DropdownMenu>
+                    </NestedDropdown>
+                </Nav>
             </Container>
         </Navbar>
     </React.Fragment>

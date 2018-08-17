@@ -10,6 +10,7 @@ import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
 import Layout, { withPageConfig } from './Layout';
+import NestedDropdown from './NestedDropdown';
 import OuterClick from './OuterClick';
 import PageLoader from './PageLoader';
 import Progress from './Progress';
@@ -35,6 +36,7 @@ export {
     InputGroupAddon,
     HolderProvider,
     Layout,
+    NestedDropdown,
     withPageConfig,
     OuterClick,
     PageLoader,
