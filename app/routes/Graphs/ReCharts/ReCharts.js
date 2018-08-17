@@ -34,6 +34,8 @@ import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart"
 import { TinyLineChart } from "./components/TinyLineChart";
 import { TinyAreaChart } from "./components/TinyAreaChart";
 import { TinyBarChart } from './components/TinyBarChart';
+import { TinyPieChart } from './components/TinyPieChart';
+import { TinyDonutChart } from './components/TinyDonutChart';
 
 export const ReCharts = () => (
     <Container>
@@ -787,6 +789,46 @@ export const ReCharts = () => (
                         </span>
                     </div>
                     <TinyBarChart />
+                </CardBody>
+            </Card>
+            { /* START Card Graph */}
+            { /* START Card Graph */}
+            <Card className="mb-3">
+                <CardBody>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            TinyPieChart
+                            <span className="small ml-1 text-muted">
+                                #7.05
+                            </span>
+                        </h6>
+                        <span className="ml-auto">
+                            <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
+                                <i className="fa fa-external-link"></i>
+                            </Button>
+                        </span>
+                    </div>
+                    <TinyPieChart />
+                </CardBody>
+            </Card>
+            { /* START Card Graph */}
+            { /* START Card Graph */}
+            <Card className="mb-3">
+                <CardBody>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            TinyDonutChart
+                            <span className="small ml-1 text-muted">
+                                #7.06
+                            </span>
+                        </h6>
+                        <span className="ml-auto">
+                            <Button color="link" href="https://jsfiddle.net/alidingling/9kd8rssL/" target="_blank">
+                                <i className="fa fa-external-link"></i>
+                            </Button>
+                        </span>
+                    </div>
+                    <TinyDonutChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
