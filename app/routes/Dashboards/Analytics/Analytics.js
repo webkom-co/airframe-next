@@ -20,28 +20,28 @@ import {
     Table,
     Button,
     Col
-} from './../../components';
+} from './../../../components';
 
 import {
     MetricVsTarget
-} from "../components/Analytics/MetricVsTarget";
+} from "../../components/Analytics/MetricVsTarget";
 import {
     WebsitePerformance
-} from "../components/Analytics/WebsitePerformance";
+} from "../../components/Analytics/WebsitePerformance";
 import {
     SessionsByDevice
-} from "../components/Analytics/SessionsByDevice";
+} from "../../components/Analytics/SessionsByDevice";
 import {
     CardFooterInfo
-} from "../components/CardFooterInfo";
+} from "../../components/CardFooterInfo";
 import {
     LineBarAreaComposedChart
-} from "./../Graphs/ReCharts/components/LineBarAreaComposedChart";
+} from "./../../Graphs/ReCharts/components/LineBarAreaComposedChart";
 import {
     TinyAreaChart
-} from "./../Graphs/ReCharts/components/TinyAreaChart";
+} from "./../../Graphs/ReCharts/components/TinyAreaChart";
 
-const Home = () => (
+const Analytics = () => (
     <Container>
         <Row>
             <Col lg={ 12 }>
@@ -346,4 +346,4 @@ const Home = () => (
     </Container>
 );
 
-export default Home;
+export default Analytics;

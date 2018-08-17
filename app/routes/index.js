@@ -4,7 +4,8 @@ import {
     Switch
 } from 'react-router';
 
-import Home from './Home';
+import Analytics from './Dashboards/Analytics';
+import ProjectsDashboard from './Dashboards/Projects';
 
 import Widgets from './Widgets';
 
@@ -77,7 +78,8 @@ import Icons from './Icons';
 const getRoutes = (store) => {
     return (
         <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path="/dashboards/analytics" exact component={Analytics} />
+            <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
             
             <Route path='/widgets' exact component={Widgets} />
             
