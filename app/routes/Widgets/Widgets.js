@@ -14,6 +14,10 @@ import {
     CardFooter,
     CardColumns,
     CardTitle,
+    InputGroup,
+    Input,
+    InputGroupAddon,
+    Button
 } from './../../components'
 import {
     HeaderDemo
@@ -60,6 +64,12 @@ import {
 import {
     Messages
 } from "../components/Dropdowns/Messages";
+import {
+    TasksMedia
+} from "../components/ProjectsDashboards/TasksMedia";
+import {
+    ProjectsList
+} from "../components/ProjectsDashboards/ProjectsList";
 
 export const Widgets = () => (
     <Container>
@@ -256,18 +266,84 @@ export const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details">
                             <Messages />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details">
                             <Messages />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/apps/email-details">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details">
                             <Messages />
                         </ListGroupItem>
                     </ListGroup>
                 </Card>
                 { /* START Card Widget */}
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-3">
+                            Projects
+                            <span className="small ml-1 text-muted">
+                                #3.07
+                            </span>
+                        </CardTitle>
+                        <InputGroup>
+                            <Input placeholder="Search Projects..." />
+                            <InputGroupAddon addonType="append">
+                                <Button color="secondary" outline tag={ Link } to="/apps/projects/list">
+                                    <i className="fa fa-search"></i>
+                                </Button>
+                            </InputGroupAddon>
+                        </InputGroup>
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
+                            <ProjectsList 
+                                badgeColor="success"
+                                badgeTitle="Active"
+                                progressValue="76"
+                                completeValue="13"
+                                myTasksValue="35"
+                                daysDueValue="6"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
+                            <ProjectsList 
+                                badgeColor="danger"
+                                badgeTitle="Suspended"
+                                progressValue="23"
+                                completeValue="6"
+                                myTasksValue="87"
+                                daysDueValue="15"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
+                            <ProjectsList 
+                                badgeColor="secondary"
+                                badgeTitle="Archived"
+                                progressValue="4"
+                                completeValue="98"
+                                myTasksValue="21"
+                                daysDueValue="7"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
+                            <ProjectsList 
+                                badgeColor="warning"
+                                badgeTitle="Paused"
+                                progressValue="63"
+                                completeValue="98"
+                                myTasksValue="21"
+                                daysDueValue="7"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action tag={ Link } to="/apps/projects/list" className="text-center">
+                            View All Projects
+                            <i className="fa fa-angle-right ml-2"></i>
+                        </ListGroupItem>
+                    </ListGroup>
+                </Card>
+                { /* END Card Widget */}
             </Col>
             <Col lg={ 6 }>
                 { /* START Card Widget */}
@@ -299,25 +375,25 @@ export const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="success"
                                 icon="check"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="danger"
                                 icon="close"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="warning"
                                 icon="exclamation"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
                             <Activity 
                                 iconColorBelow="primary"
                                 icon="info"
@@ -325,7 +401,51 @@ export const Widgets = () => (
                         </ListGroupItem>
                     </ListGroup>
                 </Card>
+                { /* END Card Widget */}
                 { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6" className="mb-3">
+                            Tasks
+                            <span className="small ml-1 text-muted">
+                                #3.06
+                            </span>
+                        </CardTitle>
+                        <InputGroup>
+                            <Input placeholder="Search Tasks..." />
+                            <InputGroupAddon addonType="append">
+                                <Button color="secondary" outline tag={ Link } to="/apps/tasks/list">
+                                    <i className="fa fa-search"></i>
+                                </Button>
+                            </InputGroupAddon>
+                        </InputGroup>
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem action>
+                            <TasksMedia 
+                                iconColor="success"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action>
+                            <TasksMedia 
+                                iconColor="danger"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action>
+                            <TasksMedia 
+                                iconColor="warning"
+                            />
+                        </ListGroupItem>
+                        <ListGroupItem action>
+                            <TasksMedia />
+                        </ListGroupItem>
+                        <ListGroupItem action tag={ Link } to="/apps/tasks/list" className="text-center">
+                            View All Tasks
+                            <i className="fa fa-angle-right ml-2"></i>
+                        </ListGroupItem>
+                    </ListGroup>
+                </Card>
+                { /* END Card Widget */}
             </Col>
         </Row>
         { /* START Section 3 */}
