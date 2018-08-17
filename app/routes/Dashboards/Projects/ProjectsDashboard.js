@@ -26,6 +26,12 @@ import {
 import {
     ProjectsList
 } from "../../components/ProjectsDashboards/ProjectsList";
+import {
+    TinyPieChart
+} from "./../../Graphs/ReCharts/components/TinyPieChart"
+import {
+    TinyDonutChart
+} from "./../../Graphs/ReCharts/components/TinyDonutChart"
 
 const ProjectsDashboard = () => (
     <Container>
@@ -94,7 +100,7 @@ const ProjectsDashboard = () => (
                 </div>
                 <Media>
                     <Media left className="mr-3">
-                        to-do
+                        <TinyDonutChart />
                     </Media>
                     <Media body>
                         <div>
@@ -118,7 +124,7 @@ const ProjectsDashboard = () => (
                 </div>
                 <Media>
                     <Media left className="mr-3">
-                        to-do
+                        <TinyPieChart />
                     </Media>
                     <Media body>
                         <div>
