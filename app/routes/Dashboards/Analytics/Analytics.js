@@ -40,6 +40,9 @@ import {
 import {
     TinyAreaChart
 } from "./../../Graphs/ReCharts/components/TinyAreaChart";
+import {
+    SimpleLineChart
+} from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
 const Analytics = () => (
     <Container>
@@ -289,6 +292,34 @@ const Analytics = () => (
                         </div>
                     </CardBody>
                 </Card>
+                <Card className="mb-3">
+                    <CardBody>
+                        <div className="d-flex mb-4">
+                            <CardTitle tag="h6">
+                                Spend
+                            </CardTitle>
+                            <span className="ml-auto text-right text-muted">
+                                Dec 22, 2016 to<br />
+                                Dec 31, 2016 (prev.)
+                            </span>
+                        </div>
+                        <div className="text-center mb-4">
+                            <h2>
+                               $2,890.12
+                            </h2>
+                            <div className="mb-1 text-success">
+                                <i className="fa mr-1 fa-caret-up"></i>
+                                23.34%
+                            </div>
+                            <div className="text-muted">
+                                vs { faker.finance .amount() } (prev.)
+                            </div>
+                        </div>
+                    </CardBody>
+                    <CardBody className="p-0">
+                        <TinyAreaChart />
+                    </CardBody>
+                </Card>
             </Col>
             <Col lg={ 6 }>
                 <Card className="mb-3">
@@ -334,6 +365,42 @@ const Analytics = () => (
                         </ListGroupItem>
                     </ListGroup>
                     <CardBody>                
+                        <div className="small">
+                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                            How do your users (visitors), sessions (visits) and pageviews 
+                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                        </div>
+                    </CardBody>
+                </Card>
+                <Card className="mb-3">
+                    <CardBody>
+                        <div className="d-flex mb-5">
+                            <div>
+                                <h6 className="mb-0">
+                                    How did my organic traffic perform?
+                                </h6>
+                                <span className="text-muted">
+                                    Dec 22, 2016 to Dec 31, 2016 (prev.)
+                                </span>
+                            </div>
+                            <span className="ml-auto text-right">
+                                Goal:
+                            </span>
+                        </div>
+                        <div className="text-center mb-4">
+                            <h6>Organic Sessons</h6>
+                            <h2>
+                               46,982
+                            </h2>
+                            <div className="mb-1 text-success">
+                                <i className="fa mr-1 fa-caret-up"></i>
+                                23.34% <span className="text-muted"> vs { faker.finance .amount() } (prev.)
+                                </span>
+                            </div>
+                        </div>
+                    </CardBody>
+                    <CardBody>
+                        <SimpleLineChart />
                         <div className="small">
                             <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                             How do your users (visitors), sessions (visits) and pageviews 
