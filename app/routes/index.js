@@ -9,7 +9,8 @@ import ProjectsDashboard from './Dashboards/Projects';
 
 import Widgets from './Widgets';
 
-import Cards from './Cards';
+import Cards from './Cards/Cards';
+import CardsHeaders from './Cards/CardsHeaders';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -83,7 +84,8 @@ const getRoutes = (store) => {
             
             <Route path='/widgets' exact component={Widgets} />
             
-            <Route path='/cards' exact component={Cards} />
+            <Route path='/cards/cards' exact component={Cards} />
+            <Route path='/cards/cardsheaders' exact component={CardsHeaders} />
             
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />

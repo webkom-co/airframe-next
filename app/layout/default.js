@@ -271,7 +271,8 @@ class AppLayout extends React.Component {
                                     icon={ <i className="fa fa-fw fa-clone"></i> }
                                     title="Cards"
                                 >
-                                    <SidebarMenu.Item title="Cards" to='/cards' exact />
+                                    <SidebarMenu.Item title="Cards" to='/cards/cards' exact />
+                                    <SidebarMenu.Item title="Cards Headers" to='/cards/cardsheaders' exact />
                                 </SidebarMenu.Item>
                                 { /* -------- Interface ---------*/ }
                                 <SidebarMenu.Item

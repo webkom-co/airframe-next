@@ -9,11 +9,11 @@ import {
     CardBody,
     CardTitle,
     CardText
-} from './../../components';
+} from './../../../components';
 
 import {
     HeaderDemo
-} from "../components/HeaderDemo";
+} from "../../components/HeaderDemo";
 
 const cardText = ({ cardNo }) => (
     <CardText>
