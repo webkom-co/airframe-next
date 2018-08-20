@@ -7,10 +7,17 @@ import {
     Card,
     Badge,
     ButtonGroup,
+    Progress,
     Button,
     ButtonToolbar,
     Nav,
+    CustomInput,
     NavItem,
+    Input,
+    Form,
+    InputGroup,
+    InputGroupAddon,
+    FormGroup,
     Pagination,
     PaginationItem,
     PaginationLink,
@@ -904,6 +911,471 @@ const Cards = () => (
             </Row>
             { /* END Section 3 */}
 
+            { /* START Header 4 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={4} 
+                        title="Cards Headers - Forms" 
+                        className="mt-5"
+                        subTitle="Provide contextual feedback messages"
+                    />
+                </Col>
+            </Row>
+            { /* END Header 4 */}
+            { /* START Section 4 */}
+            <Row>
+                <Col lg={ 6 }>
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Right Checkbox
+                                </CardTitle>
+                                <CustomInput type="checkbox" className="ml-auto" id="rightCheckbox" label="On/Off" />
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.01"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Right Checkbox Inline
+                                </CardTitle>
+                                <div className="ml-auto d-flex">
+                                    <CustomInput type="checkbox" className="mr-3" id="rightCheckbox1" label="1" />
+                                    <CustomInput type="checkbox" id="rightCheckbox2" label="2" />
+                                </div>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.02"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Right Checkbox Empty
+                                </CardTitle>
+                                <CustomInput type="checkbox" className="ml-auto" id="rightCheckboxEmpty" label="" />
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.03"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    <CustomInput type="checkbox" className="ml-auto" id="leftCheckbox" label="Left Checkbox" inline />
+                                </CardTitle>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.04"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Right Radio
+                                </CardTitle>
+                                <CustomInput type="radio" className="ml-auto" id="rightRadio" label="Select" />
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.05"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    <CustomInput type="radio" className="ml-auto" id="leftRadio" label="Left Radio" />
+                                </CardTitle>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.06"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Right Radio Inline
+                                </CardTitle>
+                                <div className="ml-auto d-flex">
+                                    <CustomInput type="radio" className="mr-3" name="rightRadioInline" id="rightRadioYes" label="Yes" />
+                                    <CustomInput type="radio" name="rightRadioInline" id="rightRadioNo" label="No" />
+                                </div>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.07"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="flex-grow-1">
+                                    Right Custom Select
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <CustomInput type="select" id="exampleCustomSelect" name="customSelect" bsSize="sm" className="ml-auto">
+                                            <option value="">Select...</option>
+                                            <option>One</option>
+                                            <option>Two</option>
+                                            <option>Three</option>
+                                        </CustomInput>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.07"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                </Col> 
+                <Col lg={ 6 }>
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Right Input
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <Input type="text" bsSize="sm" name="text" id="text" className="ml-auto" placeholder="Search..." />
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.09"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Right Input Addon
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">$</InputGroupAddon>
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="Enter Price..." />
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.10"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Right Input Addon
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-user"></i>
+                                            </InputGroupAddon>
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="Enter Nick..." />
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.11"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Input Addon
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                <i className="fa fa-fw fa-envelope-o mr-1"></i>
+                                                Email
+                                            </InputGroupAddon>
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="Enter..." />
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.12"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Radio Addon
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                <Input type="radio" id="leftRadioAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Radio Custom..." id="leftRadio" />
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.13"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Checkbox Addon
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                <Input type="checkbox" id="leftCheckboxAddon" label="" />
+                                            </InputGroupAddon>
+                                            <Input placeholder="Addon Checkbox Custom..." id="leftCheckbox" />
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.14"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Input Button
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="Enter..." />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="primary">
+                                                    Search
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.15"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Input Button
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="Enter..." />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="primary">
+                                                    <i className="fa fa-fw fa-search"></i>
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.16"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Input Button
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <Input placeholder="Left Folders..." id="rightSegmentedDropdown" />
+                                            { /* START Button Dropdown */}
+                                            <UncontrolledButtonDropdown tag={ InputGroupAddon } addonType="append">
+                                                <DropdownToggle color="primary" caret>
+                                                    <i className="fa fa-fw fa-folder-open"></i>
+                                                </DropdownToggle>
+                                                <DropdownMenu persist right>
+                                                    { /* START Dropdown Content */}
+                                                    <DropdownItem header>Select Folder:</DropdownItem>
+                                                    <DropdownItem>
+                                                        <i className="fa fa-folder-o mr-2"></i>
+                                                        Content
+                                                    </DropdownItem>
+                                                    <DropdownItem>
+                                                        <i className="fa fa-folder-o mr-2"></i>
+                                                        My Movies
+                                                    </DropdownItem>
+                                                    <DropdownItem>
+                                                        <i className="fa fa-folder-o mr-2"></i>
+                                                        My Documents
+                                                    </DropdownItem>
+                                                    <DropdownItem>
+                                                        <i className="fa fa-folder-o mr-2"></i>
+                                                        My Pictures
+                                                    </DropdownItem>
+                                                    <DropdownItem>
+                                                        <i className="fa fa-folder-o mr-2"></i>
+                                                        My Music
+                                                    </DropdownItem>
+                                                { /* END Dropdown Content */}
+                                                </DropdownMenu>
+                                            </UncontrolledButtonDropdown>
+                                            { /* END Button Dropdown */}
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.17"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Right Addon & Button
+                                </CardTitle>
+                                <Form inline className="ml-auto">
+                                    <FormGroup>
+                                        <InputGroup size="sm">
+                                            <InputGroupAddon addonType="prepend">
+                                                $
+                                            </InputGroupAddon>
+                                            <Input type="text" name="text" id="text" className="ml-auto" placeholder="0.00" />
+                                            <InputGroupAddon addonType="append">
+                                                <Button color="primary">
+                                                    Add
+                                                </Button>
+                                            </InputGroupAddon>
+                                        </InputGroup>
+                                    </FormGroup>
+                                </Form>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="4.18"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                </Col>
+            </Row>
+            { /* END Section 4 */}
+            { /* START Header 5 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={5} 
+                        title="Cards Headers - Various" 
+                        className="mt-5"
+                        subTitle="Provide contextual feedback messages"
+                    />
+                </Col>
+            </Row>
+            { /* END Header 5 */}
+            { /* START Section 5 */}
+            <Row>
+                <Col lg={ 6 }>
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <Row className="mb-2">
+                                <Col lg={ 6 }>
+                                    <CardTitle tag="h6">
+                                        Right Progressbar
+                                    </CardTitle>
+                                </Col>
+                                <Col lg={ 6 } className="text-right">
+                                    <Progress value={25}>25%</Progress>
+                                </Col>
+                            </Row>
+                            <CardTextDemo 
+                                cardNo="5.01"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                </Col> 
+                <Col lg={ 6 }>
+                   
+                </Col>
+            </Row>
+            { /* END Section 4 */}
         </Container>
     </React.Fragment>
 );
