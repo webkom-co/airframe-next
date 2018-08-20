@@ -15,7 +15,6 @@ import {
     Input,
     ListGroup,
     ListGroupItem,
-    Progress,
     Media,
     Col
 } from './../../../components';
@@ -27,11 +26,8 @@ import {
     ProjectsList
 } from "../../components/ProjectsDashboards/ProjectsList";
 import {
-    TinyPieChart
-} from "./../../Graphs/ReCharts/components/TinyPieChart"
-import {
     TinyDonutChart
-} from "./../../Graphs/ReCharts/components/TinyDonutChart"
+} from "../../components/ProjectsDashboards/TinyDonutChart"
 
 const ProjectsDashboard = () => (
     <Container>
@@ -124,7 +120,7 @@ const ProjectsDashboard = () => (
                 </div>
                 <Media>
                     <Media left className="mr-3">
-                        <TinyPieChart />
+                        <TinyDonutChart />
                     </Media>
                     <Media body>
                         <div>
