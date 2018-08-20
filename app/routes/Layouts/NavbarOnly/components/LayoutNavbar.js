@@ -16,14 +16,14 @@ import {
     Input,
     Container,
     UncontrolledCollapse
-} from './../../../components';
+} from './../../../../components';
 
 import { NavbarActivityFeed } from
-    './../../../layout/components/NavbarActivityFeed';
+    './../../../../layout/components/NavbarActivityFeed';
 import { NavbarMessages } from
-    './../../../layout/components/NavbarMessages';
+    './../../../../layout/components/NavbarMessages';
 import { NavbarUser } from
-    './../../../layout/components/NavbarUser';
+    './../../../../layout/components/NavbarUser';
 
 export const LayoutNavbar = () => (
     <React.Fragment>

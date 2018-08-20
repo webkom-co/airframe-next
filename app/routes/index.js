@@ -7,12 +7,12 @@ import {
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
 
-import CustomNavbarExample from './CustomNavbarExample';
-
 import Widgets from './Widgets';
 
 import Cards from './Cards/Cards';
 import CardsHeaders from './Cards/CardsHeaders';
+
+import NavbarOnly from './Layouts/NavbarOnly';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -84,14 +84,16 @@ const getRoutes = (store) => {
         <Switch>
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
-            
-            <Route path='/custom-navbar-example' component={ CustomNavbarExample } />
 
             <Route path='/widgets' exact component={Widgets} />
             
+            { /*    Cards Routes     */ }
             <Route path='/cards/cards' exact component={Cards} />
             <Route path='/cards/cardsheaders' exact component={CardsHeaders} />
             
+            { /*    Layouts     */ }
+            <Route path='/layouts/navbar-only' component={NavbarOnly} />
+
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />
             <Route component={ Alerts } path="/interface/alerts" />
@@ -169,9 +171,9 @@ const getRoutes = (store) => {
 // provided through an array.
 const getNavbars = () => [
     <Route
-        component={ CustomNavbarExample.Navbar }
-        path="/custom-navbar-example"
-        key="navbar__custom-navbar-example"
+        component={ NavbarOnly.Navbar }
+        path="/layouts/navbar-only"
+        key="navbar__layout--navbar-only"
     />
 ];
 

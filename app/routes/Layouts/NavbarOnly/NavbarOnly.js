@@ -2,14 +2,14 @@ import React from 'react';
 import faker from 'faker';
 import PropTypes from 'prop-types';
 import { withPageConfig } from
-    './../../components/Layout/withPageConfig';
+    './../../../components/Layout/withPageConfig';
 import {
     Container,
     Row,
     Col
-} from './../../components';
+} from './../../../components';
 
-class CustomNavbarExample extends React.Component {
+class NavbarOnly extends React.Component {
     static propTypes = {
         pageConfig: PropTypes.object
     };
@@ -43,8 +43,8 @@ class CustomNavbarExample extends React.Component {
     }
 }
 
-const ExtendedCustomNavbarExample = withPageConfig(CustomNavbarExample);
+const ExtendedNavbarOnly = withPageConfig(NavbarOnly);
 
 export {
-    ExtendedCustomNavbarExample as CustomNavbarExample
+    ExtendedNavbarOnly as NavbarOnly
 };

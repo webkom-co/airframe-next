@@ -29,6 +29,13 @@ export const SidebarNavMenu = () => (
             <SidebarMenu.Item title="Cards" to='/cards/cards' exact />
             <SidebarMenu.Item title="Cards Headers" to='/cards/cardsheaders' exact />
         </SidebarMenu.Item>
+        { /* -------- Layouts ---------*/ }
+        <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-columns"></i>}
+            title="Layouts"
+        >
+            <SidebarMenu.Item title="Navbar Only" to='/layouts/navbar-only' exact />
+        </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-toggle-on"></i>}
