@@ -385,10 +385,22 @@ const Analytics = () => (
                             </div>
                             <span className="ml-auto text-right">
                                 Goal:
+                                <UncontrolledButtonDropdown className="ml-2">
+                                    <DropdownToggle color="secondary" outline caret>
+                                        All
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem header>Select Goal:</DropdownItem>
+                                        <DropdownItem active>All</DropdownItem>
+                                        <DropdownItem>Other</DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>Custom...</DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
                             </span>
                         </div>
                         <div className="text-center mb-4">
-                            <h6>Organic Sessons</h6>
+                            <h6>Organics Sessons</h6>
                             <h2>
                                46,982
                             </h2>
@@ -398,10 +410,8 @@ const Analytics = () => (
                                 </span>
                             </div>
                         </div>
-                    </CardBody>
-                    <CardBody>
                         <SimpleLineChart />
-                        <div className="small">
+                        <div className="small pt-3">
                             <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                             How do your users (visitors), sessions (visits) and pageviews 
                             metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
