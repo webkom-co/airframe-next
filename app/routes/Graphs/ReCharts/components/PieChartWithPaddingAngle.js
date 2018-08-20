@@ -26,7 +26,7 @@ export const PieChartWithPaddingAngle = () => (
                 paddingAngle={5}
             >
                 {
-                    data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+                    data.map((entry, index) => <Cell key={ index } fill={COLORS[index % COLORS.length]}/>)
                 }
             </Pie>
         </PieChart>

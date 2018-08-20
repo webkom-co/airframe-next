@@ -4,13 +4,15 @@ import {
     Switch
 } from 'react-router';
 
-import Home from './Home';
+import Analytics from './Dashboards/Analytics';
+import ProjectsDashboard from './Dashboards/Projects';
 
 import CustomNavbarExample from './CustomNavbarExample';
 
 import Widgets from './Widgets';
 
-import Cards from './Cards';
+import Cards from './Cards/Cards';
+import CardsHeaders from './Cards/CardsHeaders';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -80,13 +82,15 @@ import Icons from './Icons';
 const getRoutes = (store) => {
     return (
         <Switch>
-            <Route path='/' exact component={Home} />
+            <Route path="/dashboards/analytics" exact component={Analytics} />
+            <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
             
             <Route path='/custom-navbar-example' component={ CustomNavbarExample } />
 
             <Route path='/widgets' exact component={Widgets} />
             
-            <Route path='/cards' exact component={Cards} />
+            <Route path='/cards/cards' exact component={Cards} />
+            <Route path='/cards/cardsheaders' exact component={CardsHeaders} />
             
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />

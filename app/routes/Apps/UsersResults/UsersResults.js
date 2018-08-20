@@ -10,6 +10,7 @@ import {
 import { SearchResultsLeftNav } from "../../components/SearchResults/SearchResultsLeftNav";
 import { SearchResultsHeader } from "../../components/SearchResults/SearchResultsHeader";
 import { UsersResultsCard } from "../../components/SearchResults/UsersResultsCard";
+import { Paginations } from "../../components/Paginations";
 
 const UsersResults = () => (
     <React.Fragment>
@@ -24,6 +25,9 @@ const UsersResults = () => (
                     <CardColumns>
                         <UsersResultsCard />
                     </CardColumns>
+                    <div className="d-flex justify-content-center">
+                        <Paginations />
+                    </div>
                 </Col>
             </Row>
             { /* END Content */}

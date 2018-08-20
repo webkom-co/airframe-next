@@ -12,6 +12,7 @@ import { SearchResultsHeader } from
     "../../components/SearchResults/SearchResultsHeader";
 import { SearchResultsCard } from
     "../../components/SearchResults/SearchResultsCard";
+import { Paginations } from "../../components/Paginations";
 
 const SearchResults = () => (
     <React.Fragment>
@@ -24,6 +25,9 @@ const SearchResults = () => (
                 <Col lg={ 9 }>
                     <SearchResultsHeader />
                     <SearchResultsCard />
+                    <div className="d-flex justify-content-center">
+                        <Paginations />
+                    </div>
                 </Col>
             </Row>
             { /* END Content */}

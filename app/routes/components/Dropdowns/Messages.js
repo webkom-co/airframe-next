@@ -39,6 +39,9 @@ const Messages = () => (
                 <p className="mt-2 mb-1">
                     { faker.lorem.sentences() }
                 </p>
+                <span className="small">
+                    { faker.date.past().toString() }
+                </span>
             </Media>
         </Media>
     </React.Fragment>

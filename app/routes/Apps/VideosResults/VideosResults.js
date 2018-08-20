@@ -9,6 +9,7 @@ import {
 import { SearchResultsLeftNav } from "../../components/SearchResults/SearchResultsLeftNav";
 import { SearchResultsHeader } from "../../components/SearchResults/SearchResultsHeader";
 import { VideosResultsCard } from "../../components/SearchResults/VideosResultsCard";
+import { Paginations } from "../../components/Paginations";
 
 const VideosResults = () => (
     <React.Fragment>
@@ -21,6 +22,9 @@ const VideosResults = () => (
                 <Col lg={ 9 }>
                     <SearchResultsHeader />
                     <VideosResultsCard />
+                    <div className="d-flex justify-content-center">
+                        <Paginations />
+                    </div>
                 </Col>
             </Row>
             { /* END Content */}

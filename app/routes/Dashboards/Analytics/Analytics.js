@@ -20,28 +20,31 @@ import {
     Table,
     Button,
     Col
-} from './../../components';
+} from './../../../components';
 
 import {
     MetricVsTarget
-} from "../components/Analytics/MetricVsTarget";
+} from "../../components/Analytics/MetricVsTarget";
 import {
     WebsitePerformance
-} from "../components/Analytics/WebsitePerformance";
+} from "../../components/Analytics/WebsitePerformance";
 import {
     SessionsByDevice
-} from "../components/Analytics/SessionsByDevice";
+} from "../../components/Analytics/SessionsByDevice";
 import {
     CardFooterInfo
-} from "../components/CardFooterInfo";
+} from "../../components/CardFooterInfo";
 import {
     LineBarAreaComposedChart
-} from "./../Graphs/ReCharts/components/LineBarAreaComposedChart";
+} from "./../../Graphs/ReCharts/components/LineBarAreaComposedChart";
 import {
     TinyAreaChart
-} from "./../Graphs/ReCharts/components/TinyAreaChart";
+} from "./../../Graphs/ReCharts/components/TinyAreaChart";
+import {
+    SimpleLineChart
+} from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
-const Home = () => (
+const Analytics = () => (
     <Container>
         <Row>
             <Col lg={ 12 }>
@@ -289,6 +292,34 @@ const Home = () => (
                         </div>
                     </CardBody>
                 </Card>
+                <Card className="mb-3">
+                    <CardBody>
+                        <div className="d-flex mb-4">
+                            <CardTitle tag="h6">
+                                Spend
+                            </CardTitle>
+                            <span className="ml-auto text-right text-muted">
+                                Dec 22, 2016 to<br />
+                                Dec 31, 2016 (prev.)
+                            </span>
+                        </div>
+                        <div className="text-center mb-4">
+                            <h2>
+                               $2,890.12
+                            </h2>
+                            <div className="mb-1 text-success">
+                                <i className="fa mr-1 fa-caret-up"></i>
+                                23.34%
+                            </div>
+                            <div className="text-muted">
+                                vs { faker.finance .amount() } (prev.)
+                            </div>
+                        </div>
+                    </CardBody>
+                    <CardBody className="p-0">
+                        <TinyAreaChart />
+                    </CardBody>
+                </Card>
             </Col>
             <Col lg={ 6 }>
                 <Card className="mb-3">
@@ -341,9 +372,55 @@ const Home = () => (
                         </div>
                     </CardBody>
                 </Card>
+                <Card className="mb-3">
+                    <CardBody>
+                        <div className="d-flex mb-5">
+                            <div>
+                                <h6 className="mb-0">
+                                    How did my organic traffic perform?
+                                </h6>
+                                <span className="text-muted">
+                                    Dec 22, 2016 to Dec 31, 2016 (prev.)
+                                </span>
+                            </div>
+                            <span className="ml-auto text-right">
+                                Goal:
+                                <UncontrolledButtonDropdown className="ml-2">
+                                    <DropdownToggle color="secondary" outline caret>
+                                        All
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem header>Select Goal:</DropdownItem>
+                                        <DropdownItem active>All</DropdownItem>
+                                        <DropdownItem>Other</DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>Custom...</DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </span>
+                        </div>
+                        <div className="text-center mb-4">
+                            <h6>Organics Sessons</h6>
+                            <h2>
+                               46,982
+                            </h2>
+                            <div className="mb-1 text-success">
+                                <i className="fa mr-1 fa-caret-up"></i>
+                                23.34% <span className="text-muted"> vs { faker.finance .amount() } (prev.)
+                                </span>
+                            </div>
+                        </div>
+                        <SimpleLineChart />
+                        <div className="small pt-3">
+                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                            How do your users (visitors), sessions (visits) and pageviews 
+                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                        </div>
+                    </CardBody>
+                </Card>
             </Col>
         </Row>
     </Container>
 );
 
-export default Home;
+export default Analytics;
