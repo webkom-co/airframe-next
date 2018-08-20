@@ -6,11 +6,20 @@ import {
     Col,
     Card,
     Badge,
+    ButtonGroup,
+    Button,
+    ButtonToolbar,
     Nav,
     NavItem,
-    NavLink,
+    Pagination,
+    PaginationItem,
+    PaginationLink,
     TabPane,
     UncontrolledTabs,
+    UncontrolledButtonDropdown,
+    DropdownMenu,
+    DropdownItem,
+    DropdownToggle,
     CardHeader,
     CardBody,
     CardTitle
@@ -418,6 +427,482 @@ const Cards = () => (
                 </Col>
             </Row>
             { /* END Section 2 */}
+
+            { /* START Header 3 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={3} 
+                        title="Cards Headers - Buttons" 
+                        className="mt-5"
+                        subTitle="Provide contextual feedback messages"
+                    />
+                </Col>
+            </Row>
+            { /* END Header 3 */}
+            { /* START Section 3 */}
+            <Row>
+                <Col lg={ 6 }>
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex">
+                                <CardTitle tag="h6">
+                                    Pagination
+                                </CardTitle>
+                                <Pagination size="sm" aria-label="Page navigation example" className="ml-auto">                                    <PaginationItem>
+                                    <PaginationLink previous href="#">
+                                        <i className="fa fa-angle-left"></i>
+                                    </PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem active>
+                                        <PaginationLink href="#">
+                                            1
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#">
+                                            2
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink href="#">
+                                            3
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                    <PaginationItem>
+                                        <PaginationLink next href="#">
+                                            <i className="fa fa-angle-right"></i>
+                                        </PaginationLink>
+                                    </PaginationItem>
+                                </Pagination>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.01"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Group
+                                </CardTitle>
+                                <ButtonGroup className="ml-auto" size="sm">
+                                    <Button outline>
+                                        <i className="fa fa-angle-left mr-2"></i>
+                                        Prev
+                                    </Button>
+                                    <Button outline>
+                                        Next
+                                        <i className="fa fa-angle-right ml-2"></i>
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.02"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Buttons Left
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-2">
+                                    Add
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.03"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Right
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-auto">
+                                    Button
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.04"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Right
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-auto">
+                                    <i className="fa fa-gear"></i>
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.05"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Link Right Icon
+                                </CardTitle>
+                                <Button color="link" size="sm" className="ml-auto pt-0">
+                                    <i className="fa fa-pencil"></i>
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.06"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Vertical Button Group
+                                </CardTitle>
+                                <ButtonGroup vertical size="sm" className="ml-auto">
+                                    <Button outline>
+                                        <i className="fa fa-angle-up"></i>
+                                    </Button>
+                                    <Button outline>
+                                        <i className="fa fa-angle-down"></i>
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.07"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Checkbox
+                                </CardTitle>
+                                <ButtonGroup className="ml-auto" size="sm">
+                                    <Button outline>
+                                        All
+                                    </Button>
+                                    <Button outline>
+                                        Videos
+                                    </Button>
+                                    <Button outline>
+                                        Docs
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.08"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Radio
+                                </CardTitle>
+                                <ButtonGroup className="ml-auto" size="sm">
+                                    <Button outline>
+                                        <i className="fa fa-star-o"></i>
+                                    </Button>
+                                    <Button outline>
+                                        <i className="fa fa-star-half-o"></i>
+                                    </Button>
+                                    <Button outline>
+                                        <i className="fa fa-star"></i>
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.09"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Buttons Nesting
+                                </CardTitle>
+                                <ButtonGroup className="ml-auto" size="sm">
+                                    <Button outline>
+                                        Prev
+                                    </Button>
+                                    <Button outline>
+                                        Next
+                                    </Button>
+                                    <UncontrolledButtonDropdown>
+                                        <DropdownToggle size="sm" outline caret>
+                                           More
+                                        </DropdownToggle>
+                                        <DropdownMenu right>
+                                            <DropdownItem header>Jump to:</DropdownItem>
+                                            <DropdownItem>First</DropdownItem>
+                                            <DropdownItem>End</DropdownItem>
+                                            <DropdownItem divider />
+                                            <DropdownItem>Custom...</DropdownItem>
+                                        </DropdownMenu>
+                                    </UncontrolledButtonDropdown>
+                                </ButtonGroup>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.10"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                </Col>
+                <Col lg={ 6 }>
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Right Icon-Left
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-auto">
+                                    <i className="fa fa-plus mr-2"></i>Button
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.11"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Right Icon-Right
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-auto">
+                                    Button<i className="fa fa-copy ml-2"></i>
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.12"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Right Toolbar
+                                </CardTitle>
+                                <ButtonToolbar className="ml-auto">
+                                    <Button color="primary" size="sm" className="mr-2">
+                                        Save
+                                    </Button>
+                                    <Button color="primary" outline size="sm">
+                                        Cancel
+                                    </Button>
+                                </ButtonToolbar>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.13"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Right Toolbar Icons Only
+                                </CardTitle>
+                                <ButtonToolbar className="ml-auto">
+                                    <Button color="primary" size="sm" className="mr-2">
+                                        <i className="fa fa-fw fa-check"></i>
+                                    </Button>
+                                    <Button color="primary" outline size="sm">
+                                        <i className="fa fa-fw fa-close"></i>
+                                    </Button>
+                                </ButtonToolbar>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.14"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Button Icon-Left
+                                </CardTitle>
+                                <Button outline size="sm" className="ml-3">
+                                    <i className="fa fa-fw fa-gear"></i>
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.15"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6" className="mb-0 align-self-center">
+                                    Button Left Icon-Left
+                                </CardTitle>
+                                <Button color="link" size="sm" className="ml-3">
+                                    Link
+                                </Button>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.16"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Dropdown
+                                </CardTitle>
+                                <UncontrolledButtonDropdown className="ml-auto">
+                                    <DropdownToggle size="sm" outline caret>
+                                       Menu
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem header>Menu</DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-user fa-fw mr-2"></i>
+                                            Profile
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-gear fa-fw mr-2"></i>
+                                            Settings
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-sign-out fa-fw mr-2"></i>
+                                            Log Out
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.17"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Dropdown Icon
+                                </CardTitle>
+                                <UncontrolledButtonDropdown className="ml-auto">
+                                    <DropdownToggle size="sm" outline caret>
+                                        <i className="fa fa-bars mr-1"></i>
+                                    </DropdownToggle>
+                                    <DropdownMenu right>
+                                        <DropdownItem header>Menu</DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-user fa-fw mr-2"></i>
+                                            Profile
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-gear fa-fw mr-2"></i>
+                                            Settings
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-sign-out fa-fw mr-2"></i>
+                                            Log Out
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.18"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                    { /* START Card */}
+                    <Card className="mb-3">
+                        <CardBody>
+                            <div className="d-flex mb-3">
+                                <CardTitle tag="h6">
+                                    Button Toolbar
+                                </CardTitle>
+                                <ButtonToolbar className="ml-auto">
+                                    <ButtonGroup size="sm" className="mr-2">
+                                        <Button outline>
+                                            <i className="fa fa-fw fa-bold"></i>
+                                        </Button>
+                                        <Button outline>
+                                            <i className="fa fa-fw fa-underline"></i>
+                                        </Button>
+                                        <Button outline>
+                                            <i className="fa fa-fw fa-eraser"></i>
+                                        </Button>
+                                    </ButtonGroup>
+                                    <ButtonGroup size="sm">
+                                        <Button outline>
+                                            <i className="fa fa-fw fa-link"></i>
+                                        </Button>
+                                        <Button outline>
+                                            <i className="fa fa-fw fa-image"></i>
+                                        </Button>
+                                    </ButtonGroup>
+                                </ButtonToolbar>
+                            </div>
+                            <CardTextDemo 
+                                cardNo="3.19"
+                            />
+                        </CardBody>
+                    </Card>
+                    { /* END Card */}
+                </Col>
+            </Row>
+            { /* END Section 3 */}
 
         </Container>
     </React.Fragment>
