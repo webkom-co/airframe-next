@@ -5,30 +5,33 @@ import { SidebarMenu } from './../../components';
 export const SidebarNavMenu = () => (
     <SidebarMenu>
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-home"></i> }
+            icon={<i className="fa fa-fw fa-home"></i>}
+            title="Dashboards"
+        >
+            <SidebarMenu.Item title="Analytics" to='/dashboards/analytics' exact />
+            <SidebarMenu.Item title="Projects" to='/dashboards/projects' exact />
+        </SidebarMenu.Item>
+        <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-home"></i>}
             title="Home"
             to='/'
         />
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-magic"></i> }
-            title="Custom Navbar Example"
-            to='/custom-navbar-example'
-        />
-        <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-th"></i> }
+            icon={<i className="fa fa-fw fa-th"></i>}
             title="Widgets"
             to='/widgets'
         />
         { /* -------- Cards ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-clone"></i> }
+            icon={<i className="fa fa-fw fa-clone"></i>}
             title="Cards"
         >
-            <SidebarMenu.Item title="Cards" to='/cards' exact />
+            <SidebarMenu.Item title="Cards" to='/cards/cards' exact />
+            <SidebarMenu.Item title="Cards Headers" to='/cards/cardsheaders' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-toggle-on"></i> }
+            icon={<i className="fa fa-fw fa-toggle-on"></i>}
             title="Interface"
         >
             <SidebarMenu.Item title="Colors" to='/interface/colors' />
@@ -46,20 +49,20 @@ export const SidebarNavMenu = () => (
             <SidebarMenu.Item title="Tabs Pills" to='/interface/tabs-pills' />
             <SidebarMenu.Item title="Tooltips & Popovers" to='/interface/tooltips-and-popovers' />
             <SidebarMenu.Item title="Dropdowns" to='/interface/dropdowns' />
-            <SidebarMenu.Item title="Modals" to='/interface/modals'/>
-            <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs'/>
-            <SidebarMenu.Item title="Navbars" to='/interface/navbars'/>
+            <SidebarMenu.Item title="Modals" to='/interface/modals' />
+            <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs' />
+            <SidebarMenu.Item title="Navbars" to='/interface/navbars' />
         </SidebarMenu.Item>
         { /* -------- Graphs ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-pie-chart"></i> }
+            icon={<i className="fa fa-fw fa-pie-chart"></i>}
             title="Graphs"
         >
             <SidebarMenu.Item title="ReCharts" to='/graphs/re-charts' />
         </SidebarMenu.Item>
         { /* -------- Forms ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-check-square-o"></i> }
+            icon={<i className="fa fa-fw fa-check-square-o"></i>}
             title="Forms"
         >
             <SidebarMenu.Item title="Forms" to='/forms/forms' />
@@ -68,14 +71,14 @@ export const SidebarNavMenu = () => (
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-trello"></i> }
+            icon={<i className="fa fa-fw fa-trello"></i>}
             title="Tables"
         >
             <SidebarMenu.Item title="Tables" to='/tables/tables' />
         </SidebarMenu.Item>
         { /* -------- Apps ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-mouse-pointer"></i> }
+            icon={<i className="fa fa-fw fa-mouse-pointer"></i>}
             title="Apps"
         >
             <SidebarMenu.Item title="Projects">
@@ -96,7 +99,7 @@ export const SidebarNavMenu = () => (
                 <SidebarMenu.Item title="Search Results" to="/apps/search-results" />
                 <SidebarMenu.Item title="Images Results" to="/apps/images-results" />
                 <SidebarMenu.Item title="Videos Results" to="/apps/videos-results" />
-                <SidebarMenu.Item title="Users Results" to="/apps/users-results" /> 
+                <SidebarMenu.Item title="Users Results" to="/apps/users-results" />
             </SidebarMenu.Item>
             <SidebarMenu.Item title="Users">
                 <SidebarMenu.Item title="Users List" to="/apps/users/list" />
@@ -124,7 +127,7 @@ export const SidebarNavMenu = () => (
         </SidebarMenu.Item>
         { /* -------- Pages ---------*/ }
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-copy"></i> }
+            icon={<i className="fa fa-fw fa-copy"></i>}
             title="Pages"
         >
             <SidebarMenu.Item title="Register" to="/pages/register" />
@@ -138,9 +141,9 @@ export const SidebarNavMenu = () => (
             <SidebarMenu.Item title="Coming Soon" to="/pages/coming-soon" />
         </SidebarMenu.Item>
         <SidebarMenu.Item
-            icon={ <i className="fa fa-fw fa-star-o"></i> }
+            icon={<i className="fa fa-fw fa-star-o"></i>}
             title="Icons"
             to='/icons'
         />
-    </SidebarMenu>
+    </SidebarMenu >
 );
