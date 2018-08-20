@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import { Helmet } from 'react-helmet';
 import { withRouter } from 'react-router';
 import _ from 'lodash';
@@ -200,6 +201,9 @@ class Layout extends React.Component {
         const sidebar = findChildByType(children, LayoutSidebar);
         const navbars = findChildrenByType(children, LayoutNavbar);
         const content = findChildByType(children, LayoutContent);
+        const layoutClass = classNames('layout', {
+            'layout--only-navbar': this.state.sidebarHidden && !this.state.navbarHidden
+        });
 
         return (
             <PageConfigContext.Provider
@@ -218,7 +222,7 @@ class Layout extends React.Component {
                     <meta name="description" content={ this.state.pageDescription } />
                     <meta name="keywords" content={ this.state.pageKeywords } />
                 </Helmet>
-                <div className="layout" ref={ this.containerRef }>
+                <div className={ layoutClass } ref={ this.containerRef }>
                     { 
                         !this.state.sidebarHidden && React.cloneElement(sidebar, {
                             sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (

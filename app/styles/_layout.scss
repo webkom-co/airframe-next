@@ -66,4 +66,9 @@
     &__wrap {
         flex: 1 1 auto;
     }
+
+    &--only-navbar .layout__navbar {
+        background: $navbar-background-color;
+        border-bottom: 1px solid $navbar-border-color;
+    }
 }
