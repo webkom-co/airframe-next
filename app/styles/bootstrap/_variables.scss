@@ -38,21 +38,53 @@ $green:   #28a745;
 $teal:    #20c997;
 $cyan:    #17a2b8;
 
+$facebook:  #3A5E95;
+$twitter:  #60ADDB;
+$lastfm:    #E01132;
+$pinterest: #BD0520;
+$linkedin: #057CB2;
+$medium:  #5cb85c;
+$skype:   #0AB2EF;
+$foursquare:   #F84978;
+$android:   #A6C843;
+$spotify:   #2FD665;
+$paypal: #2A9AD7;
+$dribbble: #F16898;
+$youtube: #ED1922;
+$windows: #10BFF2;
+$amazon: #FEA320;
+
 $colors: ();
 $colors: map-merge((
-  "blue":       $blue,
-  "indigo":     $indigo,
-  "purple":     $purple,
-  "pink":       $pink,
-  "red":        $red,
-  "orange":     $orange,
-  "yellow":     $yellow,
-  "green":      $green,
-  "teal":       $teal,
-  "cyan":       $cyan,
-  "white":      $white,
-  "gray":       $gray-600,
-  "gray-dark":  $gray-800
+    "blue":         $blue,
+    "indigo":       $indigo,
+    "purple":       $purple,
+    "pink":         $pink,
+    "red":          $red,
+    "orange":       $orange,
+    "yellow":       $yellow,
+    "green":        $green,
+    "teal":         $teal,
+    "cyan":         $cyan,
+    "white":        $white,
+    "gray":         $gray-600,
+    "gray-dark":    $gray-800,
+
+    "facebook":     $facebook,
+    "twitter":      $twitter,
+    "lastfm":       $lastfm,
+    "pinterest":    $pinterest,
+    "linkedin":     $linkedin,
+    "medium":       $medium,
+    "skype":        $skype,
+    "foursquare":   $foursquare,
+    "android":      $android,
+    "spotify":      $spotify,
+    "paypal":       $paypal,
+    "dribble":      $dribbble,
+    "youtube":      $youtube,
+    "windows":      $windows,
+    "amazon":       $amazon
 ), $colors);
 
 $primary:       $blue;
@@ -919,3 +951,33 @@ $pre-scrollable-max-height:         340px;
 // Printing
 $print-page-size:                   a3;
 $print-body-min-width:              map-get($grid-breakpoints, "lg");
+
+// Helpers (Custom)
+$border-radius-helpers-sizes: (
+    0: 0,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px,
+    30: 30px
+);
+
+$border-helpers-sizes: (
+    0: 0,
+    1: 1px,
+    2: 2px,
+    3: 3px,
+    4: 4px,
+    5: 5px
+);
+
+$border-helpers-styles: (
+    'solid': solid,
+    'dashed': dashed,
+    'dotted': dotted
+);
+
+$font-helpers-weight: 100, 200, 300, 400, 500, 600 , 700, 800, 900;
+
+$font-helpers-sizes: 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20;

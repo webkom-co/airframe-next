@@ -1,5 +1,7 @@
-@import "./_variables";
+@import "./variables";
 @import "~bootstrap/scss/bootstrap";
+
+@import "./helpers";
 
 /* Modifications */
 .custom-control-empty {
@@ -7,7 +9,6 @@
     &.custom-checkbox {
         .custom-control-label {
             display: block;
-
             &::after,
             &::before {
                 left: -1.25rem;
@@ -23,4 +24,169 @@
         margin: 0;
         position: static;
     }
+}
+
+// Shadow Boxes for CARDS .shadow-box-*-*
+// ---------------------------------------------
+.shadow-box-light {
+    box-shadow: 0px 0px 5px 0px rgba(196, 196, 196, 0.59) !important;
+}
+
+.shadow-box-down {
+    box-shadow: 0px 3px 4px -1px rgba(196, 196, 196, 0.51) !important;
+}
+
+.shadow-box-inset-down {
+    box-shadow: inset 0px 4px 6px -4px rgba(194, 194, 194, 1) !important;
+}
+
+.shadow-box-hard-down {
+    box-shadow: -1px 6px 0px -2px rgba(196, 196, 196, 0.38) !important;
+}
+
+.shadow-box-inset-hard-down {
+    box-shadow: inset 0px 6px 0px -1px rgba(196, 196, 196, 0.38) !important;
+}
+
+.shadow-box-hard {
+    box-shadow: 0px 0px 0px 3px rgba(194, 194, 194, 0.34) !important;
+}
+
+.shadow-box-none {
+    box-shadow: none !important;
+}
+
+// Text inside HR LINE
+// ---------------------------------------------
+.hr-text {
+    display: flex;
+    align-items: center;
+    &:before,
+    &:after {
+        flex: 1 1 auto;
+        border-top: 1px solid $gray-400;
+    }
+    &:after {
+        content: " ";
+    }
+    >*:first-child {
+        padding-left: 0;
+        padding-right: 1rem;
+        text-align: left;
+        color: $text-muted;
+    }
+    &.hr-text-center {
+        &:before {
+            content: " ";
+        }
+        >*:first-child {
+            text-align: center;
+            padding-left: 1rem;
+        }
+    }
+    &.hr-text-right {
+        &:before {
+            content: " ";
+        }
+        &:after {
+            content: none;
+        }
+        >*:first-child {
+            text-align: right;
+            padding-left: 1rem;
+            padding-right: 0;
+        }
+    }
+}
+
+// CARET DISABLED in Dropdowns
+// ---------------------------------------------
+.no-caret::after {
+    display: none !important;
+}
+
+// Responsive to CARD COLUMNS (Optional from Boosttrap)
+// ---------------------------------------------
+.card-columns {
+    @include media-breakpoint-only(xl) {
+        column-count: 3;
+    }
+    @include media-breakpoint-only(lg) {
+        column-count: 2;
+    }
+    @include media-breakpoint-only(sm) {
+        column-count: 1;
+    }
+}
+
+// Variation Line TABS (demo: cards/cards-headers.html #2.07a )
+// ---------------------------------------------
+.tabs-line .nav-tabs .nav-link {
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+}
+
+.tabs-line .nav-tabs .nav-link i {
+    color: $gray-200;
+}
+
+.tabs-line .nav-tabs .nav-link .ml-2 {
+    color: $text-muted;
+}
+
+.tabs-line .nav-tabs .nav-link.active {
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom: 1px solid $primary;
+    box-shadow: inset 2px -6px 0px -3px $primary;
+}
+
+.tabs-line .nav-tabs .nav-link.active:hover {
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom: 1px solid $primary;
+    box-shadow: inset 2px -6px 0px -3px $primary;
+}
+
+.tabs-line .nav-tabs .nav-link:hover {
+    background-color: transparent;
+    border-top: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-left: 1px solid transparent;
+    border-top-left-radius: 0rem;
+    border-top-right-radius: 0rem;
+    border-bottom: 1px solid $gray-400;
+    box-shadow: inset 2px -6px 0px -3px $gray-400;
+}
+
+// Overwritten MODALS in Bootstrap
+// ---------------------------------------------
+.modal-header {
+    border-bottom: 0px solid transparent;
+    padding-right: 20px;
+    padding-left: 20px;
+    padding-bottom: 0px;
+}
+
+.modal-body {
+    padding-right: 20px;
+    padding-left: 20px;
+}
+
+.modal-footer {
+    border-top: 0px solid transparent;
+    padding-top: 0px;
+    padding-right: 20px;
+    padding-left: 20px;
 }
