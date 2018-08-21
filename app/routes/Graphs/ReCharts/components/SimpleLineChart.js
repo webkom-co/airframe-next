@@ -8,7 +8,9 @@ import {
     ResponsiveContainer,
     Legend, 
     LineChart 
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -29,8 +31,8 @@ const SimpleLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke="#8884d8" activeDot={{r: 8}}/>
-           <Line type="monotone" dataKey="uv" stroke="#82ca9d" />
+           <Line type="monotone" dataKey="pv" stroke={ colors['danger'] } activeDot={{r: 8}}/>
+           <Line type="monotone" dataKey="uv" stroke={ colors['warning'] } />
       </LineChart>
     </ResponsiveContainer>
 
