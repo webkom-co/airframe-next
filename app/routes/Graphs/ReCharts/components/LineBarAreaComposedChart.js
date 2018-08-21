@@ -11,7 +11,9 @@ import {
     Area,
     Bar,
     Line
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [{name: 'Page A', uv: 590, pv: 800, amt: 1400},
               {name: 'Page B', uv: 868, pv: 967, amt: 1506},
@@ -29,9 +31,9 @@ const LineBarAreaComposedChart = () => (
           <YAxis />
           <Tooltip />
           <Legend />
-          <Area type='monotone' dataKey='amt' fill='#8884d8' stroke='#8884d8'/>
-          <Bar dataKey='pv' barSize={20} fill='#413ea0' />
-          <Line type='monotone' dataKey='uv' stroke='#ff7300' />
+          <Area type='monotone' dataKey='amt' fill={ colors['primary-04'] } stroke={ colors['primary'] } />
+          <Bar dataKey='pv' barSize={20} fill={ colors['info-07'] } />
+          <Line type='monotone' dataKey='uv' stroke={ colors['purple'] } />
        </ComposedChart>
     </ResponsiveContainer>
 );

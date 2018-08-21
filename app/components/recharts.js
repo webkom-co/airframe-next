@@ -11,6 +11,10 @@ export {
 };
 
 export {
+    Area,
+    AreaChart,
+    Bar,
+    BarChart,
     CartesianAxis,
     Cell,
     ComposedChart,

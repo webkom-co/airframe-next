@@ -3,7 +3,9 @@ import {
     Pie, 
     ResponsiveContainer,
     PieChart
-} from 'recharts';
+}  from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [{name: 'Group A', value: 400}, {name: 'Group B', value: 300},
                   {name: 'Group C', value: 300}, {name: 'Group D', value: 200},
@@ -12,7 +14,7 @@ const data = [{name: 'Group A', value: 400}, {name: 'Group B', value: 300},
 const StraightAnglePieChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <PieChart>
-            <Pie startAngle={180} endAngle={0} data={data} cx={200} cy={200} outerRadius={80} fill="#8884d8" label/>
+            <Pie startAngle={180} endAngle={0} data={data} cx={200} cy={200} outerRadius={80} fill={ colors['primary-08'] } label/>
        </PieChart>
     </ResponsiveContainer>
 

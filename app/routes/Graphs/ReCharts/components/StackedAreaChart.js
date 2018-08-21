@@ -7,7 +7,9 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Area
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -27,9 +29,9 @@ const StackedAreaChart = () => (
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip/>
-            <Area type='monotone' dataKey='uv' stackId="1" stroke='#8884d8' fill='#8884d8' />
-            <Area type='monotone' dataKey='pv' stackId="1" stroke='#82ca9d' fill='#82ca9d' />
-            <Area type='monotone' dataKey='amt' stackId="1" stroke='#ffc658' fill='#ffc658' />
+            <Area type='monotone' dataKey='uv' stackId="1" stroke={ colors['purple'] } fill={ colors['purple-04'] } />
+            <Area type='monotone' dataKey='pv' stackId="1" stroke={ colors['primary'] } fill={ colors['primary-04'] } />
+            <Area type='monotone' dataKey='amt' stackId="1" stroke={ colors['info'] } fill={ colors['info-04'] } />
         </AreaChart>
     </ResponsiveContainer>
 

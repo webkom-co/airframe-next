@@ -4,7 +4,9 @@ import {
     Pie,
     Cell,
     ResponsiveContainer
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
     {name: 'Group A', value: 400},
@@ -13,7 +15,7 @@ const data = [
     {name: 'Group D', value: 200}
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = [ colors['info-04'], colors['info-07'], colors['primary-08'], colors['purple']];
 
 export const PieChartWithPaddingAngle = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>

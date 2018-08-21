@@ -8,7 +8,9 @@ import {
     ResponsiveContainer,
     Legend, 
     Bar 
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -29,8 +31,8 @@ const StackedBarChart = () => (
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="pv" stackId="a" fill="#8884d8" />
-            <Bar dataKey="uv" stackId="a" fill="#82ca9d" />
+            <Bar dataKey="pv" stackId="a" fill={ colors['info-07'] } />
+            <Bar dataKey="uv" stackId="a" fill={ colors['purple'] } />
         </BarChart>
     </ResponsiveContainer>
 

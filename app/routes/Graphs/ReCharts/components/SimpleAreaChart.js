@@ -7,7 +7,9 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Area
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -27,7 +29,7 @@ const SimpleAreaChart = () => (
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip/>
-            <Area type='monotone' dataKey='uv' stroke='#8884d8' fill='#8884d8' />
+            <Area type='monotone' dataKey='uv' stroke={ colors['info'] } fill={ colors['info-03'] } />
       </AreaChart>
     </ResponsiveContainer>
 

@@ -4,14 +4,16 @@ import {
     ResponsiveContainer,
     BarChart, 
     Bar
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = _.times(20, () => ({ pv: Math.random() * 100 }));
 
 const TinyBarChart = () => (
     <ResponsiveContainer width='100%' height={ 40 }>
         <BarChart data={data}>
-            <Bar dataKey='pv' fill='#8884d8'/>
+            <Bar dataKey='pv' fill={ colors['primary'] } />
         </BarChart>
     </ResponsiveContainer>
 );

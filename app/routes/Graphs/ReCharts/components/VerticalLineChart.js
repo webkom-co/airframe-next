@@ -8,7 +8,9 @@ import {
     ResponsiveContainer,
     Legend, 
     LineChart 
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -29,8 +31,8 @@ const VerticalLineChart = () => (
            <YAxis dataKey="name" type="category"/>
            <Tooltip/>
            <Legend />
-           <Line dataKey="pv" stroke="#8884d8" />
-           <Line dataKey="uv" stroke="#82ca9d" />
+           <Line dataKey="pv" stroke={ colors['info-07'] } />
+           <Line dataKey="uv" stroke={ colors['purple'] } />
       </LineChart>
     </ResponsiveContainer>
 

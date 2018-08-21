@@ -8,7 +8,9 @@ import {
     ResponsiveContainer,
     Legend, 
     Bar 
-} from 'recharts';
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, female: 2400, male: 2400},
@@ -29,9 +31,9 @@ const MixBarChart = () => (
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="female" stackId="a" fill="#8884d8" />
-            <Bar dataKey="male" stackId="a" fill="#82ca9d" />
-            <Bar dataKey="uv" fill="#ffc658"/>
+            <Bar dataKey="female" stackId="a" fill={ colors['purple'] } />
+            <Bar dataKey="male" stackId="a" fill={ colors['info-07'] } />
+            <Bar dataKey="uv" fill={ colors['primary-08'] } />
         </BarChart>
     </ResponsiveContainer>
 
