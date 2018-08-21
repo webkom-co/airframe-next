@@ -27,7 +27,7 @@ import { NavbarUser } from
 
 export const LayoutNavbar = () => (
     <React.Fragment>
-        <Navbar navbar light expand="sm">
+        <Navbar navbar light expand>
             <Container>
                 <NavbarToggler id="navbar-navigation-toggler" className="mr-2"/>
                 <NavbarBrand>
@@ -38,7 +38,7 @@ export const LayoutNavbar = () => (
                     <Input placeholder="Search..." />
                 </Form>
 
-                <Nav className="ml-auto">
+                <Nav className="ml-auto" navbar>
                     <NavbarMessages />
                     <NavbarActivityFeed className="ml-1" />
                     <NavbarUser className="ml-1" />
