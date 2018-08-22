@@ -31,14 +31,11 @@ export const LayoutNavbar = () => (
     <React.Fragment>
         <Navbar navbar light expand>
             <Container>
-                <NavbarToggler id="navbar-navigation-toggler" className="mr-2"/>
-                <NavbarBrand>
-                    <NavLink tag={ Link } to="/" className="pl-0 pr-2">
-                        <i className="fa fa-send mr-3"></i>
-                        <span className="h5">
+                <NavbarBrand tag={ Link } to="/" className="pl-0 pr-2 text-primary">
+                    <i className="fa fa-send mr-3"></i>
+                    <span className="h5">
                         airframe
-                        </span>
-                    </NavLink>
+                    </span>
                 </NavbarBrand>
 
                 <Form inline className="ml-2 d-none d-sm-block">
@@ -87,10 +84,14 @@ export const LayoutNavbar = () => (
             </Container>
         </Navbar>
 
-        <Navbar navbar light expand="sm" className="py-0">
+        <Navbar navbar light expand="md">
             <Container>
+                <h4 className="d-xs-block d-md-none my-0">
+                    Navbar Only
+                </h4>
+                <NavbarToggler id="navbar-navigation-toggler" className="ml-auto"/>
                 <UncontrolledCollapse navbar toggler="#navbar-navigation-toggler">
-                    <Nav navbar className="py-1">
+                    <Nav navbar>
                         <NavItem>
                             <NavLink tag={ Link } to="/">
                                 <i className="fa fa-home"></i>
