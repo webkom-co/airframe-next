@@ -1,7 +1,8 @@
 import React from 'react';
 import {
     Route,
-    Switch
+    Switch,
+    Redirect
 } from 'react-router';
 
 import Analytics from './Dashboards/Analytics';
@@ -82,6 +83,8 @@ import Icons from './Icons';
 const getRoutes = (store) => {
     return (
         <Switch>
+            <Redirect from="/" to="/dashboards/analytics" exact />
+            
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
 
@@ -164,7 +167,7 @@ const getRoutes = (store) => {
             <Route path='/icons' exact component={Icons} />
 
             { /*    404    */ }
-            <Route component={Error404} />
+            <Redirect to="/pages/error-404" />
         </Switch>
     );
 };
