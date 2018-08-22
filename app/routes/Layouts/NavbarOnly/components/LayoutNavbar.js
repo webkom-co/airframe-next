@@ -86,10 +86,12 @@ export const LayoutNavbar = () => (
 
         <Navbar navbar light expand="md">
             <Container>
-                <h4 className="d-xs-block d-md-none my-0">
+                <h5 className="d-xs-block d-md-none my-0">
                     Navbar Only
-                </h4>
-                <NavbarToggler id="navbar-navigation-toggler" className="ml-auto"/>
+                </h5>
+                <NavbarToggler id="navbar-navigation-toggler" className="ml-auto">
+                    <i className="fa fa-fw fa-bars"></i>
+                </NavbarToggler>
                 <UncontrolledCollapse navbar toggler="#navbar-navigation-toggler">
                     <Nav navbar>
                         <NavItem>
