@@ -162,6 +162,9 @@ const getRoutes = (store) => {
             <Route component={ Success } path="/pages/success" />
 
             <Route path='/icons' exact component={Icons} />
+
+            { /*    404    */ }
+            <Route component={Error404} />
         </Switch>
     );
 };
