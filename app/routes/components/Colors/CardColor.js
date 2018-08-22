@@ -4,10 +4,12 @@ import {
     Card, 
     CardTitle, 
     CardBody, 
-    CardHeader } from 'reactstrap';
+    CardHeader
+} from './../../../components';
+
+import { InfoPopover } from './InfoPopover';
 
 const CardColor = (props) => (
-
     <Card className="mb-3">
         <CardHeader className={ `bg-${ props.color }` } style={{ height: '120px' }} />
         <CardBody>
@@ -33,10 +35,10 @@ const CardColor = (props) => (
                 </dd>
                 <dt className="col-sm-4">More</dt>
                 <dd className="col-sm-8 text-inverse">
-                    <a href="#">
+                    <InfoPopover colorId={ props.color } href="javascript:;">
                         Details 
                         <i className="fa fa-angle-up ml-1"></i>
-                    </a>
+                    </InfoPopover>
                 </dd>
             </dl>
         </CardBody>

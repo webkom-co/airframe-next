@@ -1,72 +1,36 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import _ from 'lodash';
 import { 
     Card, 
     CardBody, 
     CardFooter,
     Button,
-    CardHeader } from 'reactstrap';
+    CardHeader
+} from './../../../components';
+
+import { InfoPopover } from './InfoPopover';
 
 const CardRgbaColor = (props) => (
-
     <Card className="mb-3">
-        <CardHeader className={ `d-flex justify-content-center bg-${ props.color }-01` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-01 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardHeader>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-02` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-02 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-03` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-03 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-04` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-04 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-05` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-05 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-06` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-06 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-07` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-07 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardBody className={ `d-flex justify-content-center bg-${ props.color }-08` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-08 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardBody>
-        <CardFooter className={ `d-flex justify-content-center bg-${ props.color }-09` }>
-            <Button color="link" className="h6 text-dark p-1 mb-0">
-                { props.color }-09 
-                <i className="fa fa-angle-up ml-1"></i>
-            </Button>
-        </CardFooter>
+    {
+        _.times(9, (index) => {
+            let Tag = CardFooter;
+            Tag = index === 0 ? CardHeader : CardBody;
+            Tag = index === 8 ? CardFooter : CardBody;
+            const colorId = `${ props.color }-0${ index + 1 }`
+            return (
+                <Tag className={ `d-flex justify-content-center b-0 bg-${ colorId }` } key={ index }>
+                    <InfoPopover className="h6 text-dark p-1 mb-0" colorId={ colorId } tag={ Button } color="link">
+                        { colorId } 
+                        <i className="fa fa-angle-up ml-1"></i>
+                    </InfoPopover>
+                </Tag>
+            );
+        })
+    }
     </Card>
-
-)
+);
 CardRgbaColor.propTypes = {
     color: PropTypes.node
 };
