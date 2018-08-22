@@ -1,13 +1,23 @@
 import { CartesianGrid } from './Recharts/CartesianGrid';
+import { PolarGrid } from './Recharts/PolarGrid';
 import { XAxis } from './Recharts/XAxis';
 import { YAxis } from './Recharts/YAxis';
 import { ZAxis } from './Recharts/ZAxis';
+import { PolarRadiusAxis } from './Recharts/PolarRadiusAxis';
+import { ValueLabel } from './Recharts/ValueLabel';
+import { DefAreaValueColor } from './Recharts/DefAreaValueColor';
+import { PieValueLabel } from './Recharts/PieValueLabel';
 
 export {
     CartesianGrid,
+    PolarGrid,
+    DefAreaValueColor,
+    ValueLabel,
     XAxis,
     YAxis,
-    ZAxis
+    ZAxis,
+    PolarRadiusAxis,
+    PieValueLabel
 };
 
 export {
@@ -43,8 +53,6 @@ export {
     Pie,
     PieChart,
     PolarAngleAxis,
-    PolarGrid,
-    PolarRadiusAxis,
     PolarRadiusAxisDomain,
     Polygon,
     Radar,

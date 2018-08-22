@@ -1,4 +1,5 @@
 import React from 'react';
+
 import { 
     Line, 
     CartesianGrid, 
@@ -7,8 +8,11 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Legend, 
-    LineChart 
-} from 'recharts';
+    LineChart,
+    ValueLabel
+} from './../../../../components/recharts';
+
+import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -20,20 +24,17 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
-const CustomizedLabelLineChart = () => (
+export const CustomizedLabelLineChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
-        <LineChart layout="vertical" width={600} height={300} data={data}
-            margin={{top: 20, right: 30, left: 20, bottom: 5}}>
+        <LineChart data={data}
+            margin={{top: 15, right: 30, left: 20, bottom: 5}}>
+           <XAxis dataKey="name"/>
+           <YAxis/>
            <CartesianGrid strokeDasharray="3 3"/>
-           <XAxis type="number" />
-           <YAxis dataKey="name" type="category"/>
            <Tooltip/>
            <Legend />
-           <Line dataKey="pv" stroke="#8884d8" />
-           <Line dataKey="uv" stroke="#82ca9d" />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } label={ <ValueLabel /> } />
+           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } />
       </LineChart>
     </ResponsiveContainer>
-
-)
-
-export { CustomizedLabelLineChart };
+);

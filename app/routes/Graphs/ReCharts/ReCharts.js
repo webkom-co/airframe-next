@@ -20,6 +20,7 @@ import { BarChartHasBackground } from "./components/BarChartHasBackground";
 import { SimpleLineChart } from "./components/SimpleLineChart";
 import { DashedLineChart } from "./components/DashedLineChart";
 import { VerticalLineChart } from "./components/VerticalLineChart";
+import { CustomizedLabelLineChart } from './components/CustomizedLabelLineChart';
 import { SimpleAreaChart } from "./components/SimpleAreaChart";
 import { StackedAreaChart } from "./components/StackedAreaChart";
 import { PercentAreaChart } from "./components/PercentAreaChart";
@@ -28,14 +29,16 @@ import { TwoLevelPieChart } from "./components/TwoLevelPieChart";
 import { StraightAnglePieChart } from "./components/StraightAnglePieChart";
 import { PieChartWithCustomizedLabel } from "./components/PieChartWithCustomizedLabel";
 import { PieChartWithPaddingAngle } from "./components/PieChartWithPaddingAngle";
+import { PieChartWithPaddingAngleHalf } from "./components/PieChartWithPaddingAngleHalf";
 import { SpecifiedDomainRadarChart } from "./components/SpecifiedDomainRadarChart";
-import { SimpleRadialBarChart } from "./components/SimpleRadialBarChart";
+import { SimpleRadialBarChart } from './components/SimpleRadialBarChart';
 import { LineBarAreaComposedChart } from "./components/LineBarAreaComposedChart";
 import { TinyLineChart } from "./components/TinyLineChart";
 import { TinyAreaChart } from "./components/TinyAreaChart";
 import { TinyBarChart } from './components/TinyBarChart';
 import { TinyPieChart } from './components/TinyPieChart';
 import { TinyDonutChart } from './components/TinyDonutChart';
+import { VerticalComposedChart } from './components/VerticalComposedChart';
 
 export const ReCharts = () => (
     <Container>
@@ -309,6 +312,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <CustomizedLabelLineChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -423,6 +427,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <AreaChartFillByValue />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -536,6 +541,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <PieChartWithCustomizedLabel />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -564,22 +570,20 @@ export const ReCharts = () => (
             { /* START Card Graph */}
             <Card className="mb-3">
                 <CardBody>
-                    <div className="d-flex">
-                        <div>
-                            <h6 className="card-title mb-1">
-                                PieChartWithPaddingAngle
-                                <span className="small ml-1 text-muted">
-                                    #4.05
-                                </span>
-                            </h6>
-                            <p>Pie Charts</p>
-                        </div>
+                    <div className="d-flex align-items-center mb-3">
+                        <h6 className="card-title mb-1">
+                            PieChartWithPaddingAngleHalf
+                            <span className="small ml-1 text-muted">
+                                #4.05
+                            </span>
+                        </h6>
                         <span className="ml-auto">
                             <Button color="link" href="https://jsfiddle.net/alidingling/3Leoa7f4/" target="_blank">
                                 <i className="fa fa-external-link"></i>
                             </Button>
                         </span>
                     </div>
+                    <PieChartWithPaddingAngleHalf />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -623,6 +627,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <SpecifiedDomainRadarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -645,6 +650,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <SimpleRadialBarChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}
@@ -708,6 +714,7 @@ export const ReCharts = () => (
                             </Button>
                         </span>
                     </div>
+                    <VerticalComposedChart />
                 </CardBody>
             </Card>
             { /* START Card Graph */}

@@ -17,11 +17,11 @@ const data = [
 const COLORS = [ colors['info-04'], colors['info-07'], colors['primary-08'], colors['purple']];
 
 const TinyDonutChart = () => (
-    <PieChart width={ 80 } height={ 80 }>
+    <PieChart width={ 30 } height={ 30 }>
         <Pie
             data={data}  
-            innerRadius={ 20 }
-            outerRadius={ 35 } 
+            innerRadius={ 8 }
+            outerRadius={ 15 } 
             fill="#8884d8"
         >
             {

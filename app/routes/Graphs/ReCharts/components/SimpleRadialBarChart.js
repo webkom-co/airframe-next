@@ -23,12 +23,11 @@ const data = [
   };
 
 const SimpleRadialBarChart = () => (
-    <ResponsiveContainer width='100%' aspect={6.0/3.0}>
-        <RadialBarChart cx={150} cy={150} innerRadius={20} outerRadius={140} barSize={10} data={data}>
+    <ResponsiveContainer width='100%' aspect={ 1 / 1}>
+        <RadialBarChart cx={ 150 } innerRadius={20} outerRadius={140} barSize={10} data={data}>
             <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='uv'/>
-            <Legend iconSize={10} width={120} height={140} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
+            <Legend iconSize={10} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
         </RadialBarChart>
-    );
     </ResponsiveContainer>
 
 )

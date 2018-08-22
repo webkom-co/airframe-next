@@ -1,16 +1,16 @@
 import React from 'react';
-import { 
-    Line, 
+import {
+    Area,
+    Line,
+    Bar,
     CartesianGrid, 
     XAxis, 
     YAxis, 
     Tooltip, 
     ResponsiveContainer,
-    Legend, 
-    LineChart 
+    Legend,
+    ComposedChart
 } from './../../../../components/recharts';
-
-import colors from './../../../../colors';
 
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
@@ -22,19 +22,18 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
-const VerticalLineChart = () => (
+export const VerticalComposedChart = () => (
     <ResponsiveContainer width='100%' aspect={ 6.0/3.0 }>
-        <LineChart layout="vertical" data={data}
-            margin={{top: 20, right: 30, left: 20, bottom: 5}}>
-           <CartesianGrid strokeDasharray="3 3"/>
-           <XAxis type="number" />
-           <YAxis dataKey="name" type="category"/>
-           <Tooltip/>
-           <Legend />
-           <Line dataKey="pv" stroke={ colors['info-07'] } />
-           <Line dataKey="uv" stroke={ colors['purple'] } />
-      </LineChart>
+        <ComposedChart layout="vertical" width={600} height={400} data={data}
+            margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+            <CartesianGrid />
+            <XAxis type="number"/>
+            <YAxis dataKey="name" type="category"/>
+            <Tooltip/>
+            <Legend/>
+            <Area dataKey='amt' fill='#8884d8' stroke='#8884d8'/>
+            <Bar dataKey='pv' barSize={20} fill='#413ea0'/>
+            <Line dataKey='uv' stroke='#ff7300'/>
+        </ComposedChart>
     </ResponsiveContainer>
 );
-
-export { VerticalLineChart };
