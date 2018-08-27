@@ -935,8 +935,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-facebook"
+                                        className="fa fa-circle"
                                         color="facebook"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-facebook"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -950,11 +955,16 @@ const Home = () => (
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
                                         color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="twitter"
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
                                         className="fa fa-twitter"
-                                        color="twitter"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -971,8 +981,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-linkedin"
+                                        className="fa fa-circle"
                                         color="linkedin"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-linkedin"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1050,8 +1065,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-facebook"
+                                        className="fa fa-circle"
                                         color="facebook"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-facebook"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1065,11 +1085,16 @@ const Home = () => (
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
                                         color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="twitter"
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
                                         className="fa fa-twitter"
-                                        color="twitter"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1086,8 +1111,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-linkedin"
+                                        className="fa fa-circle"
                                         color="linkedin"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-linkedin"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1165,8 +1195,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-facebook"
+                                        className="fa fa-circle"
                                         color="facebook"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-facebook"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1180,11 +1215,16 @@ const Home = () => (
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
                                         color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="twitter"
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
                                         className="fa fa-twitter"
-                                        color="twitter"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
@@ -1201,8 +1241,13 @@ const Home = () => (
                                         key="avatar-icon-bg"
                                     />,
                                     <AvatarAddOn.Icon 
-                                        className="fa fa-linkedin"
+                                        className="fa fa-circle"
                                         color="linkedin"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-linkedin"
+                                        color="white"
                                         key="avatar-icon-fg"
                                         small
                                     />
