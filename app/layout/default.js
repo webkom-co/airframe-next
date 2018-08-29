@@ -6,8 +6,8 @@ import { Layout } from './../components';
 import { NavbarDefault } from './components/NavbarDefault';
 import { SidebarDefault } from './components/SidebarDefault';
 
+import './../styles/bootstrap.scss';
 import './../styles/main.scss';
-import './../styles/bootstrap/bootstrap.scss';
 import './../styles/plugins/plugins.scss';
 
 import {
