@@ -57,7 +57,7 @@ const NavbarMessages = (props) => (
                 <ListGroup>
                 {
                     _.times(3, (index) => (
-                        <ListGroupItem tag={ Link } to="/apps/email-details" key={ index }>
+                        <ListGroupItem tag={ Link } to="/apps/email-details" key={ index } action>
                             <Media>
                                 <Media left>
                                     <Avatar.Image
