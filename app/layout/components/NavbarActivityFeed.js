@@ -47,7 +47,7 @@ const NavbarActivityFeed = (props) => (
         </DropdownToggle>
         <ExtendedDropdown right>
             <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
-                <span>Activity Feed</span>
+                <h6 className="mb-0">Activity Feed</h6>
                 <Badge pill>4</Badge>
             </ExtendedDropdown.Section>
 
