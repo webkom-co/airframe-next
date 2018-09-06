@@ -5,13 +5,15 @@ import {
     Cell
 } from 'recharts';
 
+import colors from './../../../colors';
+
 const data = [
     {name: 'Group A', value: 400},
     {name: 'Group B', value: 300},
     {name: 'Group C', value: 300}
 ];
 
-const COLORS = ['#0088FE', '#00C49F', '#FFBB28', '#FF8042'];
+const COLORS = [ colors['primary'], colors['purple'], colors['info'], colors['yellow']];
 
 const TinyDonutChart = () => (
     <PieChart width={ 80 } height={ 80 }>
