@@ -4,7 +4,7 @@ import { CardText } from './../../components';
 
 const CardTextDemo = (props) => (
     <CardText>
-        <span className="mr-2 text-muted">
+        <span className="mr-2">
             #{ props.cardNo }
         </span> 
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
