@@ -43,7 +43,7 @@ const ProjectsDashboard = () => (
                 </p>
             </Col>
             <Col lg={ 3 }>
-                <div className="small text-center my-2">
+                <div className="hr-text hr-text-center my-2">
                     <span>Payments</span>
                 </div>
                 <Row>
@@ -66,7 +66,7 @@ const ProjectsDashboard = () => (
                         </h4>
                     </Col>
                 </Row>
-                <div className="small text-center mt-3 mb-2">
+                <div className="hr-text hr-text-center mb-2 mt-3">
                     <span>Invoices</span>
                 </div>
                 <Row>
@@ -91,7 +91,7 @@ const ProjectsDashboard = () => (
                 </Row>
             </Col>
             <Col lg={ 3 }>
-                <div className="small text-left my-2">
+                <div className="hr-text hr-text-left my-2">
                     <span>All Tasks</span>
                 </div>
                 <Media>
@@ -115,7 +115,7 @@ const ProjectsDashboard = () => (
                 </Media>
             </Col>
             <Col lg={ 3 }>
-                <div className="small text-left my-2">
+                <div className="hr-text hr-text-left my-2">
                     <span>All Projects</span>
                 </div>
                 <Media>
@@ -139,7 +139,7 @@ const ProjectsDashboard = () => (
                 </Media>
             </Col>
             <Col lg={ 3 }>
-                <div className="small text-left my-2">
+                <div className="hr-text hr-text-left my-2">
                     <span>My Stats</span>
                 </div>
                 <Table size="sm">
