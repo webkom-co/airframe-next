@@ -12,11 +12,6 @@ export const SidebarNavMenu = () => (
             <SidebarMenu.Item title="Projects" to='/dashboards/projects' exact />
         </SidebarMenu.Item>
         <SidebarMenu.Item
-            icon={<i className="fa fa-fw fa-home"></i>}
-            title="Home"
-            to='/'
-        />
-        <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-th"></i>}
             title="Widgets"
             to='/widgets'

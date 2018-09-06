@@ -83,7 +83,7 @@ import Icons from './Icons';
 const getRoutes = (store) => {
     return (
         <Switch>
-            <Redirect from="/" to="/dashboards/analytics" exact />
+            <Redirect from="/" to="/dashboards/projects" exact />
             
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
