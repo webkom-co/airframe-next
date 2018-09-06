@@ -37,7 +37,7 @@ const NavbarMessages = (props) => (
         </DropdownToggle>
         <ExtendedDropdown right>
             <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
-                <span>Messages</span>
+                <h6 className="pb-0">Messages</h6>
                 <Link to="/apps/new-email">
                     <i className="fa fa-pencil" />
                 </Link>
