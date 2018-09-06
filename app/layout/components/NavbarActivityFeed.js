@@ -55,7 +55,7 @@ const NavbarActivityFeed = (props) => (
                 <ListGroup>
                 {
                     _.times(4, (index) => (
-                        <ListGroupItem key={ index }>
+                        <ListGroupItem key={ index } action>
                             <Media>
                                 <Media left>
                                     { activityFeedIcons[index] }
