@@ -42,10 +42,10 @@ const SidebarBottomB = () => (
                                     /> 
                                 </Media>
                                 <Media body>
-                                    <span className="mt-0 d-flex h6 mb-1">
+                                    <span className="mt-0 d-flex h6 mb-1 text-truncate">
                                         { faker.name.firstName() } { faker.name.lastName() } <i className="fa fa-fw fa-angle-up ml-1"></i>
                                     </span>
-                                    <p className="small">
+                                    <p className="small text-truncate">
                                         { faker.name.jobTitle() }
                                     </p>
                                 </Media>
