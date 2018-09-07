@@ -177,58 +177,34 @@ const Typography = () => (
                             </p>
                             <div>
                                 <p className="text-gray-100 p-2 bg-dark">
-                                    This is an example for 
-                                    <code className="text-gray-100 b-1 b-gray-600">
-                                        .text-gray-100
-                                    </code>
+                                    This is an example for <code>.text-gray-100</code>
                                 </p>
                                 <p className="text-gray-200 p-2 bg-dark">
-                                    This is an example for 
-                                    <code className="text-gray-200 b-1 b-gray-600">
-                                        .text-gray-200
-                                    </code>
+                                    This is an example for <code>.text-gray-200</code>
                                 </p>
                                 <p className="text-gray-300 p-2 bg-dark">
-                                    This is an example for 
-                                    <code className="text-gray-300 b-1 b-gray-600">
-                                        .text-gray-300
-                                    </code>
+                                    This is an example for <code>.text-gray-300</code>
                                 </p>
                                 <p className="text-gray-400 p-2 bg-dark">
-                                    This is an example for 
-                                    <code className="text-gray-400 b-1 b-gray-600">
-                                        .text-gray-400
-                                    </code>
+                                    This is an example for <code>.text-gray-400</code>
                                 </p>
                                 <p className="text-gray-500 p-2 bg-dark">
                                     This is an example for 
-                                    <code className="text-gray-500 b-1 b-gray-600">
-                                        .text-gray-500
-                                    </code>
+                                    <code>.text-gray-500</code>
                                 </p>
                                 <p className="text-gray-600 p-2 bg-gray-100">
-                                    This is an example for 
-                                    <code className="text-gray-600 b-1 b-gray-200">
-                                        .text-gray-600
-                                    </code>
+                                    This is an example for <code className="text-gray-600 b-1 b-gray-200">.text-gray-600</code>
                                 </p>
                                 <p className="text-gray-700 p-2 bg-gray-100">
-                                    This is an example for 
-                                    <code className="text-gray-700 b-1 b-gray-200">
-                                        .text-gray-700
-                                    </code>
+                                    This is an example for <code>.text-gray-700</code>
                                 </p>
                                 <p className="text-gray-800 p-2 bg-gray-100">
                                     This is an example for 
-                                    <code className="text-gray-800 b-1 b-gray-200">
-                                        .text-gray-800
-                                    </code>
+                                    <code>.text-gray-800</code>
                                 </p>
                                 <p className="text-gray-900 p-2">
                                     This is an example for 
-                                    <code className="text-gray-900 b-1 b-gray-200">
-                                        .text-gray-900
-                                    </code>
+                                    <code>.text-gray-900</code>
                                 </p>
                             </div>
                         </CardBody>
@@ -246,51 +222,28 @@ const Typography = () => (
                             </p>
                             <div>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-primary">
-                                        Primary Link
-                                    </a>
+                                    This is an example <a href="#" className="text-primary">Primary Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-secondary">
-                                        Secondary Link
-                                    </a>
+                                    This is an example <a href="#" className="text-secondary">Secondary Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-success">
-                                        Success Link
-                                    </a>
+                                    This is an example <a href="#" className="text-success">Success Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-danger">
-                                        Danger Link
-                                    </a>
+                                    This is an example <a href="#" className="text-danger">Danger Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-warning">
-                                        Warning Link
-                                    </a>
+                                    This is an example <a href="#" className="text-warning">Warning Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-info">
-                                        Info Link
-                                    </a>
+                                    This is an example <a href="#" className="text-info">Info Link</a>
                                 </p>
                                 <p>
-                                    This is an example 
-                                    <a href="#" className="text-dark">
-                                        Dark Link
-                                    </a>
+                                    This is an example <a href="#" className="text-dark">Dark Link</a>
                                 </p>
                                 <p>
-                                    <a href="#" className="text-light bg-dark">
-                                        Light Link
-                                    </a>
+                                    <a href="#" className="text-light bg-dark">Light Link</a>
                                 </p>
                             </div>
                         </CardBody>
