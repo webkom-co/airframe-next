@@ -58,7 +58,7 @@ const Cards = () => (
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardHeader tag="h6" className="bg-white">
+                        <CardHeader tag="h6">
                             White Card
                         </CardHeader>
                         <CardBody>
