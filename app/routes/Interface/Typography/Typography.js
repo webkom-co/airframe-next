@@ -103,45 +103,28 @@ const Typography = () => (
                             <div>
                                 <p className="text-facebook">
                                     <i className="fa fa-fw fa-facebook mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-facebook b-1 b-gray-200">
-                                        .text-facebook
-                                    </code>
+                                    This is an example for <code>.text-facebook</code>
                                 </p>
                                 <p className="text-twitter">
                                     <i className="fa fa-fw fa-twitter mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-twitter b-1 b-gray-200">
-                                        .text-twitter
-                                    </code>
+                                    This is an example for <code>.text-twitter</code>
                                 </p>
                                 <p className="text-lastfm">
                                     <i className="fa fa-fw fa-lastfm mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-lastfm b-1 b-gray-200">
-                                        .text-lastfm
-                                    </code>
+                                    This is an example for <code>.text-lastfm</code>
                                 </p>
                                 <p className="text-pinterest">
                                     <i className="fa fa-fw fa-pinterest mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-pinterest b-1 b-gray-200">
-                                        .text-pinterest
-                                    </code>
+                                    This is an example for <code>.text-pinterest</code>
                                 </p>
                                 <p className="text-linkedin">
                                     <i className="fa fa-fw fa-linkedin mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-linkedin b-1 b-gray-200">
-                                        .text-linkedin
-                                    </code>
+                                    This is an example for <code>.text-linkedin</code>
                                 </p>
                                 <p className="text-medium">
                                     <i className="fa fa-fw fa-medium mr-1"></i>
                                     This is an example for 
-                                    <code className="text-medium b-1 b-gray-200">
-                                        .text-medium
-                                    </code>
+                                    <code>.text-medium</code>
                                 </p>
                                 <p className="text-skype">
                                     <i className="fa fa-fw fa-skype mr-1"></i>
