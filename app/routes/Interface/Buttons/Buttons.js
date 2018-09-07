@@ -10,6 +10,10 @@ import {
     Card,
     CardBody,
     CardTitle,
+    UncontrolledButtonDropdown,
+    DropdownToggle,
+    DropdownMenu,
+    DropdownItem,
     CardText
 } from './../../../components';
 
@@ -259,7 +263,7 @@ const Buttons = () => (
                                 </code>
                             </p>
                             <Button color="facebook">
-                                <i className="fa fa-facebook mr-2"></i>
+                                <i className="fa fa-twitter mr-2"></i>
                                 Twitter Button</Button>{' '}
                         </CardBody>
                     </Card>
@@ -277,7 +281,7 @@ const Buttons = () => (
                                     &lt;Button color="lastfm"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
-                            <Button color="facebook">
+                            <Button color="lastfm">
                                 <i className="fa fa-lastfm mr-2"></i>
                                 LastFM Button</Button>{' '}
                         </CardBody>
@@ -374,7 +378,7 @@ const Buttons = () => (
                                     &lt;Button color="spotify"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
-                            <Button color="facebook">
+                            <Button color="spotify">
                                 <i className="fa fa-spotify mr-2"></i>
                                 Spotify Button</Button>{' '}
                         </CardBody>
@@ -393,8 +397,8 @@ const Buttons = () => (
                                     &lt;Button color="foursquare"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
-                            <Button color="pinterest">
-                                <i className="fa fa-pinterest mr-2"></i>
+                            <Button color="foursquare">
+                                <i className="fa fa-foursquare mr-2"></i>
                                 Foursquare Button</Button>{' '}
                         </CardBody>
                     </Card>
@@ -434,7 +438,7 @@ const Buttons = () => (
                                 </code>
                             </p>
                             <Button color="youtube">
-                                <i className="fa fa-youtube mr-2"></i>
+                                <i className="fa fa-play mr-2"></i>
                                 Youtube Button</Button>{' '}
                         </CardBody>
                     </Card>
@@ -452,8 +456,8 @@ const Buttons = () => (
                                     &lt;Button color="windows"&gt;...&lt;/Button&gt;{' '}
                                 </code>
                             </p>
-                            <Button color="android">
-                                <i className="fa fa-android mr-2"></i>
+                            <Button color="windows">
+                                <i className="fa fa-windows mr-2"></i>
                                 Windows Button</Button>{' '}
                         </CardBody>
                     </Card>
@@ -544,7 +548,35 @@ const Buttons = () => (
                             <p>
                                 Below example:
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" caret>
+                                    Default Button
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -558,7 +590,7 @@ const Buttons = () => (
                             <p>
                                 Button with Contextual Colors
                             </p>
-                             <Button outline color="secondary">
+                             <Button color="secondary">
                                 Default Button
                             </Button>{' '}
                         </CardBody>
@@ -591,7 +623,35 @@ const Buttons = () => (
                             <p>
                                 Colored button with dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="primary" caret>
+                                    Dropdown
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -684,15 +744,43 @@ const Buttons = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
-                                Button: Dropdown
+                                Button: Link Dropdown
                                 <span className="small ml-1 text-muted">
-                                    #3.06
+                                    #3.12
                                 </span>
                             </CardTitle>
                             <p>
                                 Colored button with dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="link" caret>
+                                    Dropdown
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -707,7 +795,7 @@ const Buttons = () => (
                                 Button with a single icon only
                             </p>
                             <Button outline color="secondary">
-                                <i className="fa fa-bars"></i>
+                                <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
                         </CardBody>
                     </Card>
@@ -723,7 +811,7 @@ const Buttons = () => (
                                 Button with a single icon only
                             </p>
                             <Button outline color="secondary">
-                                <i className="fa fa-bars"></i>
+                                <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
                         </CardBody>
                     </Card>
@@ -740,7 +828,35 @@ const Buttons = () => (
                             <p>
                                 Icon button with dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    <i className="fa fa-fw fa-bars"></i>
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -755,7 +871,7 @@ const Buttons = () => (
                                 Button with a single icon only
                             </p>
                             <Button color="secondary">
-                                <i className="fa fa-bars"></i>
+                                <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
                         </CardBody>
                     </Card>
@@ -771,7 +887,7 @@ const Buttons = () => (
                                 Works with all button types
                             </p>
                             <Button color="secondary">
-                                <i className="fa fa-bars"></i>
+                                <i className="fa fa-fw fa-bars"></i>
                             </Button>{' '}
                         </CardBody>
                     </Card>
@@ -786,7 +902,35 @@ const Buttons = () => (
                             <p>
                                 Icon button with dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" caret>
+                                    <i className="fa fa-fw fa-bars"></i>
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -874,10 +1018,12 @@ const Buttons = () => (
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Large Button
                             </Button>{' '}
+                            <br />
                             <Button color="secondary" className="mb-2">
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Default Button
                             </Button>{' '}
+                            <br />
                             <Button color="secondary" outline>
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Small Button
@@ -901,10 +1047,12 @@ const Buttons = () => (
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Large Button
                             </Button>{' '}
+                            <br />
                             <Button color="secondary" className="mb-2">
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Default Button
                             </Button>{' '}
+                            <br />
                             <Button color="secondary" outline>
                                 <i className="fa fa-folder-open-o mr-2"></i>
                                 Small Button
@@ -1052,7 +1200,35 @@ const Buttons = () => (
                             <p>
                                 Additional option for right icon
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropdown <i className="fa fa-fw fa-envelope-o mx-1"></i>
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
@@ -1068,7 +1244,35 @@ const Buttons = () => (
                             <p>
                                 Additional option for left icon
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    <i className="fa fa-fw fa-envelope-o"></i> Dropdown 
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
 
@@ -1102,7 +1306,35 @@ const Buttons = () => (
                             <p>
                                 Basic button dropup example
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown direction="up">
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropup
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1116,7 +1348,36 @@ const Buttons = () => (
                             <p>
                                 Dropdown button with icon
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    <i className="fa fa-fw fa-user mr-1"></i>
+                                    Dropdown
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1130,7 +1391,36 @@ const Buttons = () => (
                             <p>
                                 Segmented button dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Group Dropdown */}
+                            <ButtonGroup>
+                                <Button outline>Segmented</Button>
+                                <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret />
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            { /* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1144,7 +1434,35 @@ const Buttons = () => (
                             <p>
                                 Dropup attached to <code>.r-30</code> button
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown direction="up">
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropup
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>        
                 </Col>
@@ -1160,7 +1478,35 @@ const Buttons = () => (
                             <p>
                                 Rouned button menu with icon
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropdown
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1174,7 +1520,36 @@ const Buttons = () => (
                             <p>
                                 Rounded button with segments
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Group Dropdown */}
+                            <ButtonGroup>
+                                <Button outline>Segmented</Button>
+                                <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret />
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            { /* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1188,7 +1563,35 @@ const Buttons = () => (
                             <p>
                                 Dropup attached to icon button
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown direction="up">
+                                <DropdownToggle color="secondary" outline caret>
+                                    <i className="fa fa-fw fa-gear"></i>
+                                </DropdownToggle>
+                                <DropdownMenu>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1202,7 +1605,38 @@ const Buttons = () => (
                             <p>
                                 Segmented button dropdown
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Group Dropdown */}
+                            <ButtonGroup>
+                                <Button outline>
+                                    <i className="fa fa-fw fa-gear"></i>
+                                </Button>
+                                <UncontrolledButtonDropdown direction="up">
+                                    <DropdownToggle color="secondary" outline caret />
+                                    <DropdownMenu right>
+                                        <DropdownItem header>
+                                            Your Options
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                            View
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-ticket mr-2"></i>
+                                            Add Task
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                            Add Files
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-trash mr-2"></i>
+                                            Delete
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            { /* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
@@ -1218,7 +1652,38 @@ const Buttons = () => (
                             <p>
                                 Dropdown in segmented icon button
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Group Dropdown */}
+                            <ButtonGroup>
+                                <Button outline>
+                                    <i className="fa fa-fw fa-gear"></i>
+                                </Button>
+                                <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret />
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            { /* END Button Group Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1232,7 +1697,35 @@ const Buttons = () => (
                             <p>
                                 Basic button dropright example
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown direction="right">
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropright
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1246,7 +1739,35 @@ const Buttons = () => (
                             <p>
                                 Basic button dropright example
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown direction="left">
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropleft
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
@@ -1260,7 +1781,35 @@ const Buttons = () => (
                             <p>
                                 Basic button dropleft example
                             </p>
-                            <i>TO-DO...</i>
+                            { /* START Button Dropdown */}
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle color="secondary" outline caret>
+                                    Dropdown Menu Right
+                                </DropdownToggle>
+                                <DropdownMenu right>
+                                    <DropdownItem header>
+                                        Your Options
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-folder-open mr-2"></i>
+                                        View
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-ticket mr-2"></i>
+                                        Add Task
+                                    </DropdownItem>
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-paperclip mr-2"></i>
+                                        Add Files
+                                    </DropdownItem>
+                                    <DropdownItem divider />
+                                    <DropdownItem>
+                                        <i className="fa fa-fw fa-trash mr-2"></i>
+                                        Delete
+                                    </DropdownItem>
+                                </DropdownMenu>
+                            </UncontrolledButtonDropdown>
+                            { /* END Button Dropdown */}
                         </CardBody>
                     </Card>
                 </Col>
