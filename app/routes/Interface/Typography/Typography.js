@@ -123,57 +123,36 @@ const Typography = () => (
                                 </p>
                                 <p className="text-medium">
                                     <i className="fa fa-fw fa-medium mr-1"></i>
-                                    This is an example for 
-                                    <code>.text-medium</code>
+                                    This is an example for <code>.text-medium</code>
                                 </p>
                                 <p className="text-skype">
                                     <i className="fa fa-fw fa-skype mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-skype b-1 b-gray-200">
-                                        .text-skype
-                                    </code>
+                                    This is an example for <code>.text-skype</code>
                                 </p>
                                 <p className="text-foursquare">
                                     <i className="fa fa-fw fa-foursquare mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-foursquare b-1 b-gray-200">
-                                        .text-foursquare
-                                    </code>
+                                    This is an example for <code>.text-foursquare</code>
                                 </p>
                                 <p className="text-android">
                                     <i className="fa fa-fw fa-android mr-1"></i>
                                     This is an example for 
-                                    <code className="text-android b-1 b-gray-200">
-                                        .text-android
-                                    </code>
+                                    <code>.text-android</code>
                                 </p>
                                 <p className="text-spotify">
                                     <i className="fa fa-fw fa-spotify mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-spotify b-1 b-gray-200">
-                                        .text-spotify
-                                    </code>
+                                    This is an example for <code>.text-spotify</code>
                                 </p>
                                 <p className="text-youtube">
                                     <i className="fa fa-fw fa-youtube mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-youtube b-1 b-gray-200">
-                                        .text-youtube
-                                    </code>
+                                    This is an example for <code>.text-youtube</code>
                                 </p>
                                 <p className="text-windows">
                                     <i className="fa fa-fw fa-windows mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-windows b-1 b-gray-200">
-                                        .text-windows
-                                    </code>
+                                    This is an example for <code>.text-windows</code>
                                 </p>
                                 <p className="text-amazon">
                                     <i className="fa fa-fw fa-amazon mr-1"></i>
-                                    This is an example for 
-                                    <code className="text-amazon b-1 b-gray-200">
-                                        .text-amazon
-                                    </code>
+                                    This is an example for <code>.text-amazon</code>
                                 </p>
                             </div>
                         </CardBody>
