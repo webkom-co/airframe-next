@@ -50,10 +50,7 @@ const Typography = () => (
                                 variables for your project.
                             </p>
                             <div>
-                                <p className="text-secondary">This is an example for 
-                                    <code>
-                                        .text-secondary
-                                    </code>
+                                <p className="text-secondary">This is an example for <code>.text-secondary</code>
                                 </p>
                                 <p className="text-success">
                                     This is an example for 
