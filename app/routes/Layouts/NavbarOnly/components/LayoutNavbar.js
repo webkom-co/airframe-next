@@ -10,6 +10,7 @@ import {
     Avatar,
     AvatarAddOn,
     Navbar,
+    UncontrolledTooltip,
     NavbarBrand,
     NavbarToggler,
     NestedDropdown,
@@ -26,22 +27,36 @@ import { NavbarMessages } from
     './../../../../layout/components/NavbarMessages';
 import { NavbarUser } from
     './../../../../layout/components/NavbarUser';
+import { SwitchVersion } from
+'./../../../components/Dropdowns/SwitchVersion';
+import { DropdownProfile } from
+'./../../../components/Dropdowns/DropdownProfile';
 
 export const LayoutNavbar = () => (
     <React.Fragment>
         <Navbar navbar light expand>
             <Container>
-                <NavbarBrand tag={ Link } to="/" className="pl-0 pr-2 text-primary">
-                    <i className="fa fa-send mr-3"></i>
-                    <span className="h5">
-                        airframe
-                    </span>
-                </NavbarBrand>
-
-                <Form inline className="ml-2 d-none d-sm-block">
-                    <Input placeholder="Search..." />
-                </Form>
-
+                { /* START Navbar: Left Side */}
+                <Nav>
+                    <NavLink tag={ Link } to="/" className="align-self-center pr-0">
+                        <i className="fa fa-send fa-lg fa-fw" id="#tooltipBackToHome"></i>
+                    </NavLink>
+                    { /* START Navbar: Dropdown */}
+                    <UncontrolledDropdown nav inNavbar>
+                        <DropdownToggle nav>
+                            <div className="h5 fw-600 sidebar-logo mb-1 text-left">
+                                airframe <i className="fa fa-angle-down"></i>
+                            </div>
+                            <div className="job-title small text-left">
+                                Version: React, 1.0.0
+                            </div>
+                        </DropdownToggle>
+                        <SwitchVersion />
+                    </UncontrolledDropdown>
+                    { /* END Navbar: Dropdown */}
+                </Nav>
+                { /* END Navbar: Left Side */}
+                { /* START Navbar: Right Side */}
                 <Nav className="ml-auto" navbar>
                     <NavbarMessages className="ml-1" />
                     <NavbarActivityFeed className="ml-1" />
@@ -65,22 +80,14 @@ export const LayoutNavbar = () => (
                                 ]}
                             /> 
                         </DropdownToggle>
-                        <DropdownMenu right>
-                            <DropdownItem>
-                            Option 1
-                            </DropdownItem>
-                            <DropdownItem>
-                            Option 2
-                            </DropdownItem>
-                            <DropdownItem divider />
-                            <DropdownItem>
-                                Reset
-                            </DropdownItem>
-                        </DropdownMenu>
+                        <DropdownProfile  
+                            right  
+                        />
                     </UncontrolledDropdown>
                     { /* END Navbar: Dropdown */}
                     <NavbarUser className="ml-1" />
                 </Nav>
+                { /* END Navbar: Right Side */}
             </Container>
         </Navbar>
 

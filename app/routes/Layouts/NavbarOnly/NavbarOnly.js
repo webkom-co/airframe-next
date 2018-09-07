@@ -35,6 +35,10 @@ class NavbarOnly extends React.Component {
             <Container>
                 <Row>
                     <Col>
+                        <div className="d-flex mb-3">
+                            <h3 className="pb-0">Navbar Only</h3>
+                            <span className="badge badge-secondary badge-pill align-self-center ml-2">Default</span>
+                        </div>
                         { faker.lorem.paragraphs() }
                     </Col>
                 </Row>

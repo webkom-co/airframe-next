@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { 
@@ -7,9 +8,9 @@ import {
     DropdownItem
 } from './../../../components';
 
-const DropdownProfile = () => (
+const DropdownProfile = (props) => (
     <React.Fragment>
-        <DropdownMenu>
+        <DropdownMenu right={ props.right } >
             <DropdownItem header>
                 { faker.name.firstName() } { faker.name.lastName() }
             </DropdownItem>
@@ -31,5 +32,12 @@ const DropdownProfile = () => (
         </DropdownMenu>
     </React.Fragment>
 )
+DropdownProfile.propTypes = {
+    position: PropTypes.string,
+    right: PropTypes.bool
+};
+DropdownProfile.defaultProps = {
+    position: ""
+};
 
 export { DropdownProfile };
