@@ -7,8 +7,8 @@ import {
 
 import { SidebarNavMenu } from './SidebarNavMenu';
 
-import { SidebarTopB } from '../../routes/components/Sidebar/SidebarTopB'
-import { SidebarBottomB } from '../../routes/components/Sidebar/SidebarBottomB'
+import { SidebarTopA } from '../../routes/components/Sidebar/SidebarTopA'
+import { SidebarBottomA } from '../../routes/components/Sidebar/SidebarBottomA'
 
 export const SidebarDefault = () => (
     <Sidebar>
@@ -17,11 +17,11 @@ export const SidebarDefault = () => (
                 <i className="fa fa-times-circle fa-fw"></i>
             </SidebarTrigger>
         </Sidebar.Close>
-        <SidebarTopB />
+        <SidebarTopA />
         <Sidebar.Section fluid cover>
             { /* Sidebar Menu */ }
             <SidebarNavMenu />
         </Sidebar.Section>
-        <SidebarBottomB />
+        <SidebarBottomA />
     </Sidebar>
 );
