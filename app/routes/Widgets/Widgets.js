@@ -88,7 +88,7 @@ export const Widgets = () => (
         { /* START MAIN HEADER */}
         <Row>
             <Col lg={ 12 }>
-                <div className="d-flex mt-3 mb-4">
+                <div className="d-flex mt-3 mb-5">
                     <h1 className="display-4 mr-3 mb-0 align-self-start">
                         Widgets
                     </h1>
