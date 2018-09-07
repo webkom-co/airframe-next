@@ -51,74 +51,74 @@ const Typography = () => (
                             </p>
                             <div>
                                 <p className="text-secondary">This is an example for 
-                                    <code className="text-secondary b-1 b-gray-200">
+                                    <code>
                                         .text-secondary
                                     </code>
                                 </p>
                                 <p className="text-success">
                                     This is an example for 
-                                    <code className="text-success b-1 b-gray-200">
+                                    <code>
                                         .text-success
                                     </code>
                                 </p>
                                 <p className="text-danger">
                                     This is an example for 
-                                    <code className="text-danger b-1 b-gray-200">
+                                    <code>
                                         .text-success
                                     </code>
                                 </p>
                                 <p className="text-warning">
                                     This is an example for 
-                                    <code className="text-warning b-1 b-gray-200">
+                                    <code>
                                         .text-warning
                                     </code>
                                 </p>
                                 <p className="text-info">
                                     This is an example for 
-                                    <code className="text-info b-1 b-gray-200">
+                                    <code>
                                         .text-info
                                     </code>
                                 </p>
 
                                 <p className="text-dark">
                                     This is an example for 
-                                    <code className="text-dark b-1 b-gray-200">
+                                    <code>
                                         .text-dark
                                     </code>
                                 </p>
                                 <p className="text-body">
                                     This is an example for 
-                                    <code className="text-body b-1 b-gray-200">
+                                    <code>
                                         .text-body
                                     </code>
                                 </p>
                                 <p className="text-muted">
                                     This is an example for 
-                                    <code className="text-muted b-1 b-gray-200">
+                                    <code>
                                         .text-muted
                                     </code>
                                 </p>
                                 <p className="text-black-50">
                                     This is an example for 
-                                    <code className="text-black-50 b-1 b-gray-200">
+                                    <code>
                                         .text-black-50
                                     </code>
                                 </p>
                                 <p className="text-white p-2 bg-dark">
                                     This is an example for 
-                                    <code className="text-white b-1 b-gray-600">
+                                    <code>
                                         .text-white
                                     </code>
                                 </p>
                                 <p className="text-light p-2 bg-dark">
                                     This is an example for 
-                                    <code className="text-light b-1 b-gray-600">
+                                    <code>
                                         .text-light
                                     </code>
                                 </p>
                                 <p className="text-white-50 p-2 bg-dark">
                                     This is an example for 
-                                    <code className="text-white-50 b-1 b-gray-600">
+                                    <code>
                                         .text-white-50
                                     </code>
                                 </p>
