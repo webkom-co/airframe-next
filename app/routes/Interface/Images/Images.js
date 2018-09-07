@@ -297,7 +297,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">Default Title</CardTitle>
@@ -318,7 +318,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -334,7 +334,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -355,7 +355,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -397,7 +397,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -417,7 +417,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -438,7 +438,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -457,7 +457,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -479,7 +479,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -499,7 +499,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardText>
@@ -532,7 +532,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -560,7 +560,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -588,7 +588,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -613,7 +613,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -665,7 +665,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
@@ -691,7 +691,7 @@ const Images = () => (
                         iconChar=""
                         size={ 32 }
                     >
-                        <CardImg />
+                        <CardImg top />
                     </HolderProvider.Icon>
                     <CardBody>
                         <CardTitle className="h6">
