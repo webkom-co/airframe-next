@@ -199,12 +199,10 @@ const Typography = () => (
                                     This is an example for <code>.text-gray-700</code>
                                 </p>
                                 <p className="text-gray-800 p-2 bg-gray-100">
-                                    This is an example for 
-                                    <code>.text-gray-800</code>
+                                    This is an example for <code>.text-gray-800</code>
                                 </p>
                                 <p className="text-gray-900 p-2">
-                                    This is an example for 
-                                    <code>.text-gray-900</code>
+                                    This is an example for <code>.text-gray-900</code>
                                 </p>
                             </div>
                         </CardBody>
