@@ -1533,105 +1533,105 @@ const Home = () => (
                                 Large size avatar example
                             </p>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="facebook"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-facebook" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="twitter"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-twitter" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="lastfm"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-lastfm" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="pinterest"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-pinterest" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="linkedin"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-linkedin" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="medium"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-medium" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="skype"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-skype" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="foursquare"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-foursquare" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="android"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-android" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="spotify"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-spotify" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="paypal"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-paypal" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="dribbble"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-dribbble" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="youtube"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-youtube" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="windows"
                                 fgColor="white"
                                 className="mr-1"
                                 >
                                 <i className="fa fa-windows" />
                             </Avatar.Font>
                             <Avatar.Font 
-                                bgColor="secondary"
+                                bgColor="amazon"
                                 fgColor="white"
                                 className="mr-1"
                                 >
