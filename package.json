@@ -6,8 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "npm run start:dev",
-    "build:server": "webpack --config ./build/webpack.config.server.prod.js",
-    "build:client": "webpack --config ./build/webpack.config.client.prod.js --display-chunks --json > ./dist/stats.webpack.json",
+    "build:server": "mkdir -p dist && webpack --config ./build/webpack.config.server.prod.js",
+    "build:client": "mkdir -p dist && webpack --config ./build/webpack.config.client.prod.js --display-chunks --json > ./dist/stats.webpack.json",
     "start:dev": "node ./build/cli-tools.js --clear serve && webpack-dev-server --config ./build/webpack.config.client.dev.js",
     "start:prod": "node ./build/cli-tools.js --clear dist --create dist && npm run build:client && npm run build:server && node ./dist/server.js",
     "build:prod": "node ./build/cli-tools.js --clear dist --create dist && npm run build:client && npm run build:server"
@@ -78,7 +78,7 @@
     "redux-thunk": "^2.3.0",
     "reselect": "^3.0.1",
     "uuid": "^3.3.2",
-    "webpack-cli": "^3.0.8",
+    "webpack-cli": "^3.1.0",
     "webpack-flush-chunks": "^2.0.1"
   }
 }
