@@ -12,6 +12,8 @@ import {
     ComposedChart
 } from './../../../../components/recharts';
 
+import colors from './../../../../colors';
+
 const data = [
       {name: 'Page A', uv: 4000, pv: 2400, amt: 2400},
       {name: 'Page B', uv: 3000, pv: 1398, amt: 2210},
@@ -31,9 +33,9 @@ export const VerticalComposedChart = () => (
             <YAxis dataKey="name" type="category"/>
             <Tooltip/>
             <Legend/>
-            <Area dataKey='amt' fill='#8884d8' stroke='#8884d8'/>
-            <Bar dataKey='pv' barSize={20} fill='#413ea0'/>
-            <Line dataKey='uv' stroke='#ff7300'/>
+            <Area dataKey='amt' fill={ colors['info-03'] } stroke={ colors['info'] } />
+            <Bar dataKey='pv' barSize={20} fill={ colors['primary'] } />
+            <Line dataKey='uv' stroke={ colors['purple'] }/>
         </ComposedChart>
     </ResponsiveContainer>
 );
