@@ -54,11 +54,11 @@ const NavbarActivityFeed = (props) => (
             <ExtendedDropdown.Section list>
                 <ListGroup>
                 {
-                    _.times(4, (index) => (
+                    _.times(7, (index) => (
                         <ListGroupItem key={ index } action>
                             <Media>
                                 <Media left>
-                                    { activityFeedIcons[index] }
+                                    { activityFeedIcons[index%4] }
                                 </Media>
                                 <Media body>
                                     <span className="h6">

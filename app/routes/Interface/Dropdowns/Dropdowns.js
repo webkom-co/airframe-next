@@ -852,30 +852,30 @@ const Dropdowns = () => (
                                 </DropdownToggle>
                                 <ExtendedDropdown>
                                     <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
-                                        <span>Activity Feed</span>
+                                        <h6 className="mb-0">Activity Feed</h6>
                                         <Badge pill>4</Badge>
                                     </ExtendedDropdown.Section>
                                     <ExtendedDropdown.Section list>
                                         <ListGroup>
-                                            <ListGroupItem tag={ Link } to="/widgets">
+                                            <ListGroupItem tag={ Link } to="/widgets" action>
                                                 <Activity 
                                                     iconColorBelow="success"
                                                     icon="check"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem tag={ Link } to="/widgets">
+                                            <ListGroupItem tag={ Link } to="/widgets" action>
                                                 <Activity 
                                                     iconColorBelow="danger"
                                                     icon="close"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem tag={ Link } to="/widgets">
+                                            <ListGroupItem tag={ Link } to="/widgets" action>
                                                 <Activity 
                                                     iconColorBelow="warning"
                                                     icon="exclamation"
                                                 />
                                             </ListGroupItem>
-                                            <ListGroupItem tag={ Link } to="/widgets">
+                                            <ListGroupItem tag={ Link } to="/widgets" action>
                                                 <Activity 
                                                     iconColorBelow="primary"
                                                     icon="info"
@@ -911,7 +911,7 @@ const Dropdowns = () => (
                                 </DropdownToggle>
                                 <ExtendedDropdown>
                                     <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
-                                        <span className="text-inverse">Messages</span>
+                                        <h6 className="mb-0">Messages</h6>
                                         <Link to="/apps/inbox">
                                             <i className="fa fa-pencil"></i>
                                         </Link>
@@ -920,7 +920,7 @@ const Dropdowns = () => (
                                         <InputGroup>
                                             <Input placeholder="Search Messages..." />
                                             <InputGroupAddon addonType="append">
-                                                <Button outline>
+                                                <Button>
                                                     <i className="fa fa-search" />
                                                 </Button>
                                             </InputGroupAddon>
