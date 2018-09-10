@@ -13,71 +13,11 @@ import {
 } from './../../../../components';
 
 /*eslint-disable */
-const avatarStatus = [
-    <Avatar.Image
-        size="md"
-        src="http://bs4.webkom.co/img/avatars/2.jpg"
-        addOns={[
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="white"
-                key="avatar-icon-bg"
-            />,
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="danger"
-                key="avatar-icon-fg"
-            />
-        ]}
-    /> ,
-    <Avatar.Image
-        size="md"
-        src="http://bs4.webkom.co/img/avatars/2.jpg"
-        addOns={[
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="white"
-                key="avatar-icon-bg"
-            />,
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="success"
-                key="avatar-icon-fg"
-            />
-        ]}
-    /> ,
-    <Avatar.Image
-        size="md"
-        src="http://bs4.webkom.co/img/avatars/2.jpg"
-        addOns={[
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="white"
-                key="avatar-icon-bg"
-            />,
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="warning"
-                key="avatar-icon-fg"
-            />
-        ]}
-    /> ,
-    <Avatar.Image
-        size="md"
-        src="http://bs4.webkom.co/img/avatars/2.jpg"
-        addOns={[
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="white"
-                key="avatar-icon-bg"
-            />,
-            <AvatarAddOn.Icon 
-                className="fa fa-circle"
-                color="secondary"
-                key="avatar-icon-fg"
-            />
-        ]}
-    /> 
+const colorStatus = [
+    "danger",
+    "success",
+    "warning",
+    "secondary"
 ];
 /*eslint-enable */
 
@@ -85,7 +25,7 @@ const TrTableDefault = () => (
     <React.Fragment>
         {
             _.times(4, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         <div className="text-inverse">
                             { faker.name.firstName() } { faker.name.lastName() }
@@ -105,7 +45,22 @@ const TrTableDefault = () => (
                     <td className="align-middle">
                         <Media>
                             <Media left middle className="mr-3">
-                                { avatarStatus[index%4] } 
+                                <Avatar.Image
+                                    size="md"
+                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    addOns={[
+                                        <AvatarAddOn.Icon 
+                                            className="fa fa-circle"
+                                            color="white"
+                                            key="avatar-icon-bg"
+                                        />,
+                                        <AvatarAddOn.Icon 
+                                            className="fa fa-circle"
+                                            color={ colorStatus[index%4] }
+                                            key="avatar-icon-fg"
+                                        />
+                                    ]}
+                                /> 
                             </Media>
                             <Media body>
                                 <div className="mt-0 d-flex">
