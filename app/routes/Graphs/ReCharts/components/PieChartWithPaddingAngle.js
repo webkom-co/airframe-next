@@ -15,7 +15,7 @@ const data = [
     {name: 'Group D', value: 200}
 ];
 
-const COLORS = [ colors['info-04'], colors['info-07'], colors['primary-08'], colors['purple']];
+const COLORS = [ colors['info'], colors['info-06'], colors['primary'], colors['purple']];
 
 export const PieChartWithPaddingAngle = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
