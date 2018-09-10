@@ -9,6 +9,8 @@ import {
     PolarRadiusAxis
 } from './../../../../components/recharts';
 
+import colors from './../../../../colors';
+
 const data = [
     { subject: 'Math', A: 120, B: 110, fullMark: 150 },
     { subject: 'Chinese', A: 98, B: 130, fullMark: 150 },
@@ -24,8 +26,8 @@ const SpecifiedDomainRadarChart = () => (
           <PolarGrid stroke="green" />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis angle={30} domain={[0, 150]} />
-          <Radar name="Mike" dataKey="A" stroke="#8884d8" fill="#8884d8" fillOpacity={0.6}/>
-          <Radar name="Lily" dataKey="B" stroke="#82ca9d" fill="#82ca9d" fillOpacity={0.6}/>
+          <Radar name="Mike" dataKey="A" stroke={ colors['purple'] } fill={ colors['purple'] } fillOpacity={0.3}/>
+          <Radar name="Lily" dataKey="B" stroke={ colors['primary'] } fill={ colors['primary'] } fillOpacity={0.3}/>
           <Legend />
         </RadarChart>
     </ResponsiveContainer>
