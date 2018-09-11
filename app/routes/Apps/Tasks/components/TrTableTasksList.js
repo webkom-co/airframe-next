@@ -3,37 +3,35 @@ import faker from 'faker';
 import { Link } from 'react-router-dom';
 
 import { 
-    Card,
-    CardBody,
     Badge,
     Avatar,
-    Media,
     CustomInput,
-    CardFooter,
     UncontrolledButtonDropdown,
     DropdownToggle,
-    DropdownItem,
-    DropdownMenu
-} from './../../../components';
+    DropdownMenu,
+    DropdownItem
+} from './../../../../components';
 
-import { randomArray } from './../../../utilities';
+import { randomArray } from './../../../../utilities';
 
-const badgesColors = [
-    "primary",
+const badges = [
     "secondary",
-    "info",
-    "danger",
     "success",
-    "warning"
+    "warning",
+    "info",
+    "secondary",
+    "primary"
 ];
 
-const TasksCardGrid = () => (
+const TrTableTasksList = () => (
     <React.Fragment>
-        { /* START Card */}
-        <Card>
-            <CardBody>
+        <tr>
+            <td className="align-middle">
+                <CustomInput type="checkbox" id="tasksList1" label="" inline />
+            </td>
+            <td className="align-middle">
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="secondary" outline caret size="sm" className="mb-2">
+                    <DropdownToggle color="secondary" outline caret size="sm">
                         <i className="fa fa-circle text-success mr-2"></i>
                         Small 
                     </DropdownToggle>
@@ -57,52 +55,44 @@ const TasksCardGrid = () => (
                         </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
-                <Media className="mb-2">
-                    <Media left middle className="mr-2">
-                        <CustomInput type="checkbox" id="tasksGrid1" label="" />
-                    </Media>
-                    <Media body>
-                        <span className="mr-2">#{ faker.random.number() }</span>
-                        <Link to="/apps/task-details">
-                            { faker.hacker.phrase() }
-                        </Link>
-                    </Media>
-                </Media>
+            </td>
+            <td className="align-middle">
+                <div>
+                    <span className="mr-2">#{ faker.random.number() }</span>
+                    <Link to="/apps/task-details">
+                        { faker.hacker.phrase() }
+                    </Link>
+                </div>
                 <p className="mb-0">
-                    { faker.lorem.sentence() }
+                    <span className="mr-2">
+                        { faker.lorem.sentence() }
+                    </span>
+                    <Badge pill color={ randomArray(badges) } className="mr-1">
+                        { faker.commerce.department() }
+                    </Badge>
+                    <Badge pill color={ randomArray(badges) } className="mr-1">
+                        { faker.commerce.department() }
+                    </Badge>
                 </p>
-            </CardBody>
-            <CardFooter className="d-flex align-items-center">
-                <Badge pill color={ randomArray(badgesColors) } className="mr-1">
-                    { faker.commerce.department() }
-                </Badge>
-                <Badge pill color={ randomArray(badgesColors) } className="mr-1">
-                    { faker.commerce.department() }
-                </Badge>
-            </CardFooter>
-            <CardFooter>
+            </td>
+            <td className="align-middle">
                 <Avatar.Image
-                    size="md"
+                    size="sm"
+                    className="mr-1"
                     src="http://bs4.webkom.co/img/avatars/2.jpg"
-                    className="mr-2"
                 />
                 <Avatar.Image
-                    size="md"
+                    size="sm"
+                    className="mr-1"
                     src="http://bs4.webkom.co/img/avatars/2.jpg"
-                    className="mr-2"
                 />
-                <Avatar.Image
-                    size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
-                    className="mr-2"
-                />
-            </CardFooter>
-            <CardFooter className="d-flex">
-                <span className="align-self-center">
-                    20 Sep, Fri, 2018
-                </span>
-                <UncontrolledButtonDropdown className="align-self-center ml-auto">
-                    <DropdownToggle color="secondary" outline caret size="sm">
+            </td>
+            <td className="align-middle">
+                16-Jul-2016
+            </td>
+            <td className="align-middle text-right">
+                <UncontrolledButtonDropdown>
+                    <DropdownToggle color="secondary" outline size="sm" caret>
                         <i className="fa fa-gear"></i>
                     </DropdownToggle>
                     <DropdownMenu right>
@@ -125,10 +115,9 @@ const TasksCardGrid = () => (
                         </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
-            </CardFooter>
-        </Card>
-        { /* END Card */}
+            </td>
+        </tr>
     </React.Fragment>
 )
 
-export { TasksCardGrid };
+export { TrTableTasksList };

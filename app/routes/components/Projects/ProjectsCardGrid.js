@@ -14,18 +14,31 @@ import {
     DropdownMenu,
     DropdownItem
 } from './../../../components';
+
 import { randomArray } from './../../../utilities';
 
 const badges = [
     <Badge pill color="success" className="mb-2" key="badge-active">
         Active
     </Badge>,
-    <Badge pill color="danger" className="mb-2" key="badge-busy">
-        Busy
+    <Badge pill color="danger" className="mb-2" key="badge-suspended">
+        Suspended
     </Badge>,
-    <Badge pill color="warning" className="mb-2" key="badge-away">
-        Away
-    </Badge>
+    <Badge pill color="warning" className="mb-2" key="badge-waiting">
+        Waiting
+    </Badge>,
+    <Badge pill color="secondary" className="mb-2" key="badge-paused">
+        Paused
+    </Badge>,
+];
+
+const taskCompleted = [
+    "15",
+    "28",
+    "30",
+    "80",
+    "57",
+    "90"
 ];
 
 const ProjectsCardGrid = () => (
@@ -34,7 +47,6 @@ const ProjectsCardGrid = () => (
             <Card>
                 <CardBody>
                     { randomArray(badges) }
-
                     <div className="mb-2">
                         <a href="#" className="mr-2">
                             <i className="fa fa-fw fa-star-o"></i>
@@ -49,7 +61,7 @@ const ProjectsCardGrid = () => (
                     </span>
                 </CardBody>
                 <CardFooter>
-                    <Progress value={2 * 5} style={{height: "5px"}} className="mb-2" />
+                    <Progress value={ randomArray(taskCompleted) } style={{height: "5px"}} className="mb-2" />
                     <div>
                         Tasks Completed: 
                         <span className="text-inverse">
