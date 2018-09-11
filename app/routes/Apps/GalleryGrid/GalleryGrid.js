@@ -17,10 +17,19 @@ const GalleryGrid = () => (
         <Row>
             <Col lg={ 12 }>
                 <ProjectsSmHeader 
+                    subTitle="Gallery Grid"
                     linkList="/apps/gallery-table"
                     linkGrid="/apps/gallery-grid"
                 />
                 <CardColumns>
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
+                    <GalleryCard />
                     <GalleryCard />
                 </CardColumns>
                 <div className="d-flex justify-content-center">

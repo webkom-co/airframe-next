@@ -14,6 +14,20 @@ import {
     CardBody
 } from './../../../components';
 
+import { randomArray } from './../../../utilities';
+
+const status = [
+    "success",
+    "danger",
+    "warning",
+    "secondary"
+];
+const badges = [
+    "info",
+    "primary",
+    "secondary"
+];
+
 const GalleryCard = () => (
     <React.Fragment>
         { /* START Card */}
@@ -22,7 +36,7 @@ const GalleryCard = () => (
                 iconChar=""
                 size={ 32 }
             >
-            <CardImg />
+            <CardImg top />
             </HolderProvider.Icon>
             <CardBody>
                 <div className="d-flex mb-3">
@@ -55,7 +69,7 @@ const GalleryCard = () => (
                                 />,
                                 <AvatarAddOn.Icon 
                                     className="fa fa-circle"
-                                    color="danger"
+                                    color={ randomArray(status) }
                                     key="avatar-icon-fg"
                                 />
                             ]}
@@ -72,13 +86,13 @@ const GalleryCard = () => (
                 </Media>
             </CardBody>
             <CardFooter>
-                <Badge pill color="primary" className="mr-1">
+                <Badge pill color={ randomArray(badges) } className="mr-1">
                     { faker.commerce.department() }
                 </Badge>
-                <Badge pill color="secondary" className="mr-1">
+                <Badge pill color={ randomArray(badges) } className="mr-1">
                     { faker.commerce.department() }
                 </Badge>
-                <Badge pill color="secondary" className="mr-1">
+                <Badge pill color={ randomArray(badges) } className="mr-1">
                     { faker.commerce.department() }
                 </Badge>
             </CardFooter>
