@@ -8,6 +8,17 @@ const UsersGrid = () => (
 	<React.Fragment>
 		<CardColumns>
 			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
+			<UsersCardGrid />
 		</CardColumns>
 		<div className="d-flex justify-content-center">
 			<Paginations />

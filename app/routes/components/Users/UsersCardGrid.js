@@ -28,7 +28,7 @@ const UsersCardGrid = () => (
                         Add To Favorites
                     </UncontrolledTooltip>
                     <UncontrolledButtonDropdown className="ml-auto">
-                        <DropdownToggle color="link" caret size="sm">
+                        <DropdownToggle color="link" size="sm">
                             <i className="fa fa-bars"></i>
                         </DropdownToggle>
                         <DropdownMenu right>
