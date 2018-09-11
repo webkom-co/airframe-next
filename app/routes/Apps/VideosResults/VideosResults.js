@@ -22,6 +22,11 @@ const VideosResults = () => (
                 <Col lg={ 9 }>
                     <SearchResultsHeader />
                     <VideosResultsCard />
+                    <VideosResultsCard />
+                    <VideosResultsCard />
+                    <VideosResultsCard />
+                    <VideosResultsCard />
+                    <VideosResultsCard />
                     <div className="d-flex justify-content-center">
                         <Paginations />
                     </div>

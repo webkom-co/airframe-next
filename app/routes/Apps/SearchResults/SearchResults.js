@@ -25,6 +25,12 @@ const SearchResults = () => (
                 <Col lg={ 9 }>
                     <SearchResultsHeader />
                     <SearchResultsCard />
+                    <SearchResultsCard />
+                    <SearchResultsCard />
+                    <SearchResultsCard />
+                    <SearchResultsCard />
+                    <SearchResultsCard />
+                    <SearchResultsCard />
                     <div className="d-flex justify-content-center">
                         <Paginations />
                     </div>

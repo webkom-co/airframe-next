@@ -6,6 +6,46 @@ import {
     CardBody
 } from './../../../components';
 
+import { randomArray } from './../../../utilities';
+
+const stars = [
+    <span key="stars5">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+    </span>,
+    <span key="stars4">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars4">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars2">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars1">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+];
+
 const SearchResultsCard = () => (
     <React.Fragment>
         <Card className="mb-3">
@@ -19,7 +59,7 @@ const SearchResultsCard = () => (
                         { faker.internet.url() }
                     </span>
                     <span className="mx-1">·</span>
-                    <i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star-o"></i>
+                    { randomArray(stars) }
                     <span className="mx-1">·</span>
                     <span>
                         Votes

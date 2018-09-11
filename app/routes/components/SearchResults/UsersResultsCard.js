@@ -17,6 +17,14 @@ import {
     Profile
 } from "./../Profile";
 
+import { randomArray } from './../../../utilities';
+
+const badgesColors = [
+    "info",
+    "primary",
+    "secondary"
+];
+
 const UsersResultsCard = () => (
     <React.Fragment>
         { /* START Card */}
@@ -30,7 +38,7 @@ const UsersResultsCard = () => (
                         Add To Favorites
                     </UncontrolledTooltip>
                     <UncontrolledButtonDropdown className="ml-auto">
-                        <DropdownToggle color="link" caret size="sm">
+                        <DropdownToggle color="link" size="sm">
                             <i className="fa fa-bars"></i>
                         </DropdownToggle>
                         <DropdownMenu right>
@@ -69,13 +77,13 @@ const UsersResultsCard = () => (
                             Labels
                         </span>
                     </div>
-                    <Badge pill color="secondary" className="mr-1">
+                    <Badge pill color={ randomArray(badgesColors) } className="mr-1">
                         { faker.commerce.department() }
                     </Badge>
-                    <Badge pill color="primary" className="mr-1">
+                    <Badge pill color={ randomArray(badgesColors) } className="mr-1">
                         { faker.commerce.department() }
                     </Badge>
-                    <Badge pill color="primary">
+                    <Badge pill color={ randomArray(badgesColors) }>
                         { faker.commerce.department() }
                     </Badge>
                 </div>

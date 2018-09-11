@@ -14,6 +14,52 @@ import {
     CardBody
 } from './../../../components';
 
+import { randomArray } from './../../../utilities';
+
+const status = [
+    "warning",
+    "danger",
+    "success",
+    "secondary"
+];
+const stars = [
+    <span key="stars5">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+    </span>,
+    <span key="stars4">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars4">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars2">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star text-warning"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+    <span key="stars1">
+        <i className="fa fa-fw fa-star text-warning" />
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+        <i className="fa fa-fw fa-star-o"></i>
+    </span>,
+];
+
 const VideosResultsCard = () => (
     <React.Fragment>
         <CardGroup className="mb-3">
@@ -41,10 +87,10 @@ const VideosResultsCard = () => (
                                 </div>
                             </div>
                             <div className="ml-auto text-right">
-                                <Button color="link">
+                                <Button color="link" className="pr-0">
                                     <i className="fa fa-heart-o"></i>
                                 </Button>
-                                <Button color="link">
+                                <Button color="link" className="pr-0">
                                     <i className="fa fa-bars"></i>
                                 </Button>
                             </div>
@@ -52,7 +98,7 @@ const VideosResultsCard = () => (
                         <dl className="row mb-0">
                             <dt className="col-sm-3">Rating: </dt>
                             <dd className="col-sm-9">
-                                <i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star text-warning"></i><i className="fa fa-fw fa-star-o"></i><i className="fa fa-fw fa-star-o"></i><i className="fa fa-fw fa-star-o"></i>
+                                { randomArray(stars) }
                             </dd>
                             <dt className="col-sm-3">Category: </dt>
                             <dd className="col-sm-9">
@@ -81,7 +127,7 @@ const VideosResultsCard = () => (
                                                 />,
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
-                                                    color="danger"
+                                                    color={ randomArray(status) }
                                                     key="avatar-icon-fg"
                                                 />
                                             ]}

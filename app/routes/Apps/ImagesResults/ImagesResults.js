@@ -24,6 +24,14 @@ const ImagesResults = () => (
                     <SearchResultsHeader />
                     <CardColumns>
                         <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
+                        <ImagesResultsCard />
                     </CardColumns>
                     <div className="d-flex justify-content-center">
                         <Paginations />

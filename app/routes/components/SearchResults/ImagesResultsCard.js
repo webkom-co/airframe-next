@@ -12,6 +12,15 @@ import {
     CardBody
 } from './../../../components';
 
+import { randomArray } from './../../../utilities';
+
+const status = [
+    "danger",
+    "success",
+    "warning",
+    "secondary"
+];
+
 const ImagesResultsCard = () => (
     <React.Fragment>
         { /* START Card */}
@@ -50,7 +59,7 @@ const ImagesResultsCard = () => (
                                 />,
                                 <AvatarAddOn.Icon 
                                     className="fa fa-circle"
-                                    color="danger"
+                                    color={ randomArray(status) }
                                     key="avatar-icon-fg"
                                 />
                             ]}
