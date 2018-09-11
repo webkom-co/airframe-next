@@ -21,6 +21,7 @@ const Projects = (props) => (
                 </Col>
                 <Col lg={ 9 }>
                     <ProjectsSmHeader 
+                        subTitle={props.match.params.type === "list"?"Projects List":"Projects Grid"}
                         linkList="/apps/projects/list"
                         linkGrid="/apps/projects/grid"
                     />
