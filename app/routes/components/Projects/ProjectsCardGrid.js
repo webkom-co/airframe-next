@@ -14,15 +14,27 @@ import {
     DropdownMenu,
     DropdownItem
 } from './../../../components';
+import { randomArray } from './../../../utilities';
+
+const badges = [
+    <Badge pill color="success" className="mb-2" key="badge-active">
+        Active
+    </Badge>,
+    <Badge pill color="danger" className="mb-2" key="badge-busy">
+        Busy
+    </Badge>,
+    <Badge pill color="warning" className="mb-2" key="badge-away">
+        Away
+    </Badge>
+];
 
 const ProjectsCardGrid = () => (
     <React.Fragment>
             { /* START Card */}
             <Card>
                 <CardBody>
-                    <Badge pill color="success" className="mb-2">
-                        Active
-                    </Badge>
+                    { randomArray(badges) }
+
                     <div className="mb-2">
                         <a href="#" className="mr-2">
                             <i className="fa fa-fw fa-star-o"></i>
