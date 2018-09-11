@@ -1,6 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 import _ from 'lodash';
+import PropTypes from 'prop-types';
 
 import { 
     UncontrolledButtonDropdown,
@@ -21,13 +22,13 @@ const colorStatus = [
 ];
 /*eslint-enable */
 
-const TrTableDefault = () => (
+const TrTableDefault = (props) => (
     <React.Fragment>
         {
             _.times(4, (index) => (
                 <tr key={ index }>
                     <td className="align-middle">
-                        <div className="text-inverse">
+                        <div className={ props.projectColor }>
                             { faker.name.firstName() } { faker.name.lastName() }
                         </div>
                         <span>
@@ -51,7 +52,7 @@ const TrTableDefault = () => (
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
-                                            color="white"
+                                            color="text-white"
                                             key="avatar-icon-bg"
                                         />,
                                         <AvatarAddOn.Icon 
@@ -110,5 +111,12 @@ const TrTableDefault = () => (
         }
     </React.Fragment>
 )
+
+TrTableDefault.propTypes = {
+    projectColor: PropTypes.node
+};
+TrTableDefault.defaultProps = {
+    projectColor: "text-inverse"
+};
 
 export { TrTableDefault };
