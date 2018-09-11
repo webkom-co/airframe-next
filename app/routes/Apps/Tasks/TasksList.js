@@ -36,6 +36,8 @@ const TasksList = () => (
                     <TrTableTasksList />
                     <TrTableTasksList />
                     <TrTableTasksList />
+                    <TrTableTasksList />
+                    <TrTableTasksList />
                 </tbody>
             </Table>
             { /* END Table */}

@@ -20,9 +20,13 @@ const Tasks = (props) => (
                     <ProjectsLeftNav />
                 </Col>
                 <Col lg={ 9 }>
-                    <ProjectsSmHeader 
+                    <ProjectsSmHeader
+                        subTitle="Projects"
+                            subTitleLink="/apps/projects/list"
+                        title={props.match.params.type === "list"?"Tasks List":"Tasks Grid"} 
                         linkList="/apps/tasks/list"
                         linkGrid="/apps/tasks/grid"
+                        btnShowKanban
                     />
 
                     { 
