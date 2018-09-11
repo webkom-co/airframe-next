@@ -55,7 +55,7 @@ const TrTableContextual = () => (
             _.times(12, (index) => (
                 <tr className={ trColor[index%12] }>
                     <td className="align-middle">
-                        1
+                        #{ faker.finance.mask() }
                     </td>
                     <td className="align-middle">
                         { faker.name.firstName() } { faker.name.lastName() }

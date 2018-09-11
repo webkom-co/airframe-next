@@ -1,26 +1,13 @@
 import React from 'react';
-import faker from 'faker';
 
 import { 
     Container,
     Row,
     Col,
-    Media,
-    Avatar,
-    AvatarAddOn,
     Card,
-    Button,
-    ButtonGroup,
     CardTitle,
     CardBody,
-    Progress,
     Table,
-    Badge,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
-    DropdownMenu,
-    DropdownItem,
-    UncontrolledTooltip
 } from './../../../components';
 
 import {
