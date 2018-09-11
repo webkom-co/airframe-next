@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 
 import { CardColumns } from './../../../components';
 import { ProjectsCardGrid } from "../../components/Projects/ProjectsCardGrid";
@@ -7,7 +8,11 @@ import { Paginations } from "../../components/Paginations";
 const ProjectsGrid = () => (
     <React.Fragment>
         <CardColumns>
-            <ProjectsCardGrid />
+       	{
+            _.times(12, () => (
+            	<ProjectsCardGrid />
+            ))
+        }
         </CardColumns>
         <div className="d-flex justify-content-center">
             <Paginations />

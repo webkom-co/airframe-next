@@ -41,7 +41,7 @@ const ProjectsSmHeader = (props ) => (
                     Show Grid
                 </UncontrolledTooltip>
             </ButtonGroup>
-            <Button color="secondary" className="align-self-center" id="tooltipAddNew">
+            <Button color="primary" className="align-self-center" id="tooltipAddNew">
                 <i className="fa-fw fa fa-plus"></i>
             </Button>
             <UncontrolledTooltip placement="bottom" target="tooltipAddNew">
