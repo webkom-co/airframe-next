@@ -22,7 +22,14 @@ const TasksKanban = () => (
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>
-                    <ProjectsSmHeader />
+                    <ProjectsSmHeader 
+                        btnShowKanban
+                        linkList="/apps/tasks/list"
+                        linkGrid="/apps/tasks/grid"
+                        title="Tasks Kanban"
+                        subTitle="Projects"
+                            subTitleLink="/apps/projects/list"
+                    />
                     <CardColumns>
                         { /* START Card */}
                         <Card>

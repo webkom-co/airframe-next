@@ -15,17 +15,39 @@ const ProjectsSmHeader = (props ) => (
         { /* START Header Nav */}
         <div className="d-flex justify-content-end">
             <Breadcrumb className="mr-auto d-flex align-items-center">
+                { /* START 1st */}
                 <BreadcrumbItem active>
                     <Link to="/">
                         <i className="fa fa-home"></i>
                     </Link>
                 </BreadcrumbItem>
-                <BreadcrumbItem>
-                    {props.subTitle}
-                </BreadcrumbItem>
-                <BreadcrumbItem active>
-                    {props.title}
-                </BreadcrumbItem>
+                { /* END 1st */}
+
+                { /* START 2nd */}
+                { 
+                    props.title ? (
+                        <BreadcrumbItem>
+                            <Link to={ props.subTitleLink }>
+                                {props.subTitle}
+                            </Link>
+                        </BreadcrumbItem>
+                    ): (
+                        <BreadcrumbItem active>
+                            {props.subTitle}
+                        </BreadcrumbItem>
+                    )
+                }
+                { /* END 2nd */}
+
+                { /* START 3rd */}
+                {
+                    props.title && (
+                        <BreadcrumbItem active>
+                            {props.title}
+                        </BreadcrumbItem>  
+                    )
+                }
+                { /* END 3rd */}
             </Breadcrumb>
             <ButtonGroup className="p-2">
                 <Button tag={ NavLink } to={ `${ props.linkList }` } color="secondary" outline className="align-self-center" id="tooltipShowList">
@@ -40,6 +62,18 @@ const ProjectsSmHeader = (props ) => (
                 <UncontrolledTooltip placement="bottom" target="tooltipShowGrid">
                     Show Grid
                 </UncontrolledTooltip>
+                    {
+                        props.btnShowKanban && (
+                            <React.Fragment>
+                                <Button tag={ NavLink } to={ `${ props.linkKanban }` } color="secondary" outline className="align-self-center" id="tooltipShowKanban">
+                                    <i className="fa-fw fa fa-trello"></i>
+                                </Button>
+                                <UncontrolledTooltip placement="bottom" target="tooltipShowKanban">
+                                    Show Kanban
+                                </UncontrolledTooltip>
+                             </React.Fragment>
+                            )
+                    }
             </ButtonGroup>
             <Button color="primary" className="align-self-center" id="tooltipAddNew">
                 <i className="fa-fw fa fa-plus"></i>
@@ -54,14 +88,18 @@ const ProjectsSmHeader = (props ) => (
 ProjectsSmHeader.propTypes = {
     subTitle: PropTypes.node,
     title: PropTypes.node,
+    subTitleLink: PropTypes.string,
     linkList: PropTypes.node,
-    linkGrid: PropTypes.node
+    linkGrid: PropTypes.node,
+    btnShowKanban: PropTypes.bool,
+        linkKanban: PropTypes.node
 };
 ProjectsSmHeader.defaultProps = {
     subTitle: "Folder",
-    title: "App",
     linkList: "#",
-    linkGrid: "#"
+    linkGrid: "#",
+    btnShowKanban: false,
+        linkKanban: "/apps/tasks-kanban"
 };
 
 export { ProjectsSmHeader };

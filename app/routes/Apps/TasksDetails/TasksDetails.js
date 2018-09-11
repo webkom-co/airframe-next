@@ -201,7 +201,11 @@ const TasksDetails = () => (
                     { /* END Left Nav  */}                   
                 </Col>
                 <Col lg={ 9 }>
-                    <ProjectsSmHeader />
+                    <ProjectsSmHeader 
+                        subTitle="Tasks"
+                            subTitleLink="/apps/tasks/grid"
+                        title="Task Details"
+                    />
                     { /* START Right Content */}
                     <Card>
                         <CardBody>
