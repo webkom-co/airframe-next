@@ -8,9 +8,17 @@ const FilesGrid = () => (
     <React.Fragment>
         <CardColumns>
             <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
+            <FilesCardGrid />
         </CardColumns>
         <div className="d-flex justify-content-center">
-        <Paginations />
+        	<Paginations />
         </div>
     </React.Fragment>
 );

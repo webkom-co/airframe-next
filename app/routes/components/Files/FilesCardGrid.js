@@ -15,6 +15,17 @@ import {
     DropdownItem
 } from './../../../components';
 
+import { randomArray } from './../../../utilities';
+
+const badges = [
+    "secondary",
+    "success",
+    "warning",
+    "info",
+    "secondary",
+    "primary"
+];
+
 const FilesCardGrid = () => (
     <React.Fragment>
             { /* START Card */}
@@ -40,13 +51,13 @@ const FilesCardGrid = () => (
                     </div>
                 </CardBody>
                 <CardFooter>
-                    <Badge color="primary" pill className="mr-1">
+                    <Badge color={ randomArray(badges) } pill className="mr-1">
                         { faker.commerce.department() }   
                     </Badge>
-                    <Badge color="primary" pill className="mr-1">
+                    <Badge color={ randomArray(badges) } pill className="mr-1">
                         { faker.commerce.department() }   
                     </Badge>
-                    <Badge color="secondary" pill className="mr-1">
+                    <Badge color={ randomArray(badges) } pill className="mr-1">
                         { faker.commerce.department() }   
                     </Badge>
                 </CardFooter>
