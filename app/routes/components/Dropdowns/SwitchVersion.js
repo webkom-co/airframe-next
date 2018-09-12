@@ -11,11 +11,11 @@ const SwitchVersion = () => (
     <React.Fragment>
         <DropdownMenu>
             <DropdownItem header>
-                Choose Version
+                Bootstrap 4 Versions:
             </DropdownItem>
             <DropdownItem href="http://bs4.webkom.co" className="d-flex">
                 <span>
-                    Jquery 1.0.0
+                    Jquery 2.0.0 <small>(Jekyll)</small>
                     <br />
                     <span className="small">
                         Sun, Jun 12, 2018 4:43:12 PM
@@ -25,7 +25,7 @@ const SwitchVersion = () => (
             </DropdownItem>
             <DropdownItem href="http://react.bs4.webkom.co" active className="d-flex">
                 <span>
-                    React 1.0.0
+                    React 2.0.0
                     <br />
                     <span className="small">
                         Sun, Jun 12, 2018 4:43:12 PM
@@ -36,6 +36,30 @@ const SwitchVersion = () => (
             <DropdownItem href="http://angular.bs4.webkom.co" className="d-flex">
                 <span>
                     Angular 1.0.0
+                    <br />
+                    <span className="small">
+                        Sun, Jun 12, 2018 4:43:12 PM
+                    </span>
+                </span>
+                <i className="fa fa-fw ml-auto align-self-center pl-2" />
+            </DropdownItem>
+            <DropdownItem divider />
+            <DropdownItem header>
+                Other Products
+            </DropdownItem>
+            <DropdownItem href="http://jquery.bs4.webkom.co" className="d-flex">
+                <span>
+                    jquery.bs4.webkom.co <small>(npm)</small>
+                    <br />
+                    <span className="small">
+                        Sun, Jun 12, 2018 4:43:12 PM
+                    </span>
+                </span>
+                <i className="fa fa-fw ml-auto align-self-center pl-2" />
+            </DropdownItem>
+            <DropdownItem href="http://spin.webkom.co/v2" className="d-flex">
+                <span>
+                    spin.webkom.co/v2 <small>(Jekyll)</small>
                     <br />
                     <span className="small">
                         Sun, Jun 12, 2018 4:43:12 PM
