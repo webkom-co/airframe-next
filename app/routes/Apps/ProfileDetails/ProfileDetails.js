@@ -36,6 +36,7 @@ import { ProfileOverviewCard } from "../../components/Profile/ProfileOverviewCar
 import { DlRowContacts } from "../../components/Profile/DlRowContacts";
 import { DlRowAddress } from "../../components/Profile/DlRowAddress";
 import { Chat } from "../../components/Chat/Chat";
+import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
 
 const ProfileDetails = () => (
@@ -228,6 +229,8 @@ const ProfileDetails = () => (
                                         </UncontrolledButtonDropdown>
                                     </CardHeader>
                                     <CardBody>
+                                        <Chat />
+                                        <ChatRight />
                                         <Chat />
                                         <div className="mt-4 mb-3 text-center">
                                             <span className="small">
