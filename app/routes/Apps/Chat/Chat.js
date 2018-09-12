@@ -11,6 +11,7 @@ import {
 } from './../../../components';
 
 import { Chat } from "../../components/Chat/Chat";
+import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatLeftNav } from "../../components/Chat/ChatLeftNav";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
 import { ChatCardHeader } from "../../components/Chat/ChatCardHeader";
@@ -30,14 +31,14 @@ const Clients = () => (
                         </CardHeader>
                         <CardBody>
                             <Chat />
+                            <ChatRight />
                             <Chat />
-                            <Chat />
-                            <Chat />
+                            <ChatRight />
                             <div className="small mb-3 mt-4 text-center">
                                 Yesterday
                             </div>
                             <Chat />
-                            <Chat />
+                            <ChatRight />
                             <Chat />
                         </CardBody>
                         <CardFooter>

@@ -19,10 +19,25 @@ const status = [
     "secondary"
 ];
 
-const Chat = (props) => (
+const ChatRight = (props) => (
     <React.Fragment>
         <Media className="mb-2">
-            <Media left className="mr-3">
+            <Media body>
+                <Card body className={ `mb-2 ${ props.cardClassName }` }>
+                    <p className="mb-0">
+                        { faker.lorem.paragraph() }
+                    </p>                                                   
+                </Card>
+                <div className="mb-2 text-right">
+                    <span className="text-inverse mr-2">
+                        { faker.name.firstName() } { faker.name.firstName() }
+                    </span>
+                    <span className="small">
+                        13-Jun-2015, 08:13
+                    </span>
+                </div>
+            </Media>
+            <Media right className="ml-3">
                 <Avatar.Image
                     size="md"
                     src="http://bs4.webkom.co/img/avatars/2.jpg"
@@ -41,29 +56,14 @@ const Chat = (props) => (
                     ]}
                 />
             </Media>
-            <Media body>
-                <Card body className={ `mb-2 ${ props.cardClassName }` }>
-                    <p className="mb-0">
-                        { faker.lorem.paragraph() }
-                    </p>                                                   
-                </Card>
-                <div className="mb-2">
-                    <span className="text-inverse mr-2">
-                        { faker.name.firstName() } { faker.name.firstName() }
-                    </span>
-                    <span className="small">
-                        13-Jun-2015, 08:13
-                    </span>
-                </div>
-            </Media>
         </Media>
     </React.Fragment>
 )
-Chat.propTypes = {
+ChatRight.propTypes = {
     cardClassName: PropTypes.node
 };
-Chat.defaultProps = {
+ChatRight.defaultProps = {
     cardClassName: "bg-white"
 };
 
-export { Chat };
+export { ChatRight };
