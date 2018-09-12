@@ -13,9 +13,9 @@ const SwitchVersion = () => (
             <DropdownItem header>
                 Bootstrap 4 Versions:
             </DropdownItem>
-            <DropdownItem href="http://bs4.webkom.co" className="d-flex">
+            <DropdownItem href="http://jquery.bs4.webkom.co" className="d-flex">
                 <span>
-                    Jquery 2.0.0 <small>(Jekyll)</small>
+                    Jquery 2.0.0 <small>(npm)</small>
                     <br />
                     <span className="small">
                         Sun, Jun 12, 2018 4:43:12 PM
@@ -47,17 +47,18 @@ const SwitchVersion = () => (
             <DropdownItem header>
                 Other Products
             </DropdownItem>
-            <DropdownItem href="http://jquery.bs4.webkom.co" className="d-flex">
+            <DropdownItem href="http://bs4.webkom.co" className="d-flex">
+                <i className="fa fa-send fa-fw mr-3 align-self-center" />
                 <span>
-                    jquery.bs4.webkom.co <small>(npm)</small>
+                    bs4.webkom.co <small>(Jekyll)</small>
                     <br />
                     <span className="small">
                         Sun, Jun 12, 2018 4:43:12 PM
                     </span>
                 </span>
-                <i className="fa fa-fw ml-auto align-self-center pl-2" />
             </DropdownItem>
             <DropdownItem href="http://spin.webkom.co/v2" className="d-flex">
+                <i className="fa fa-bandcamp fa-fw mr-3 align-self-center" />
                 <span>
                     spin.webkom.co/v2 <small>(Jekyll)</small>
                     <br />
@@ -65,7 +66,6 @@ const SwitchVersion = () => (
                         Sun, Jun 12, 2018 4:43:12 PM
                     </span>
                 </span>
-                <i className="fa fa-fw ml-auto align-self-center pl-2" />
             </DropdownItem>
         </DropdownMenu>
     </React.Fragment>
