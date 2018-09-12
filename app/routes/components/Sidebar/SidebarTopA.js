@@ -23,7 +23,7 @@ const SidebarTopA = () => (
             <Tools.DefaultOnly>
                 <div className="mb-4">
                     <Link to="/" className="h4 fw-600 text-primary">
-                        airframe
+                        react.bs4
                     </Link>
                 </div>
             </Tools.DefaultOnly>
