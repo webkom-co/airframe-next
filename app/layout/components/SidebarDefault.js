@@ -1,8 +1,10 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 import {
     Sidebar,
-    SidebarTrigger
+    SidebarTrigger,
+    Tools
 } from './../../components';
 
 import { SidebarNavMenu } from './SidebarNavMenu';
@@ -17,11 +19,26 @@ export const SidebarDefault = () => (
                 <i className="fa fa-times-circle fa-fw"></i>
             </SidebarTrigger>
         </Sidebar.Close>
-        <SidebarTopA />
-        <Sidebar.Section fluid cover>
-            { /* Sidebar Menu */ }
-            <SidebarNavMenu />
+        
+        <Sidebar.Section>
+            { /* START Logo */ }
+            <Tools.DefaultOnly>
+                <Link to="/" className="h4 fw-600 text-primary">
+                    react.bs4
+                </Link>
+            </Tools.DefaultOnly>
+            { /* END Logo */ }
         </Sidebar.Section>
-        <SidebarBottomA />
+
+        <Sidebar.MobileFluid>
+            <SidebarTopA />
+            
+            <Sidebar.Section fluid cover>
+                { /* Sidebar Menu */ }
+                <SidebarNavMenu />
+            </Sidebar.Section>
+
+            <SidebarBottomA />
+        </Sidebar.MobileFluid>
     </Sidebar>
 );

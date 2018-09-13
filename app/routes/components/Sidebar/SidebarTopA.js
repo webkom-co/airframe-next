@@ -18,16 +18,7 @@ import avatarImg from '../../../images/avatars/avatar-1.jpg';
 const SidebarTopA = () => (
     <React.Fragment>
         { /* START Sidebar TOP: A */ }
-        <Sidebar.Section>
-            { /* START Logo */ }
-            <Tools.DefaultOnly>
-                <div className="mb-4">
-                    <Link to="/" className="h4 fw-600 text-primary">
-                        react.bs4
-                    </Link>
-                </div>
-            </Tools.DefaultOnly>
-            { /* END Logo */ }
+        <Sidebar.Section className="pt-0">
             { /* START Avatar */ }
             <Link to="/">
                 <Tools.SlimProps

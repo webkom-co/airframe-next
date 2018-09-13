@@ -51,7 +51,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@owczar/dashboard-style--main": "^0.1.0",
+    "@owczar/dashboard-style--main": "^0.1.5",
     "bootstrap": "^4.1.1",
     "express": "^4.16.3",
     "faker": "^4.1.0",
