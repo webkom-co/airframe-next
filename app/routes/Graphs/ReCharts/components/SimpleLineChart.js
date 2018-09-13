@@ -7,7 +7,8 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Legend, 
-    LineChart 
+    LineChart,
+    Dot
 } from './../../../../components/recharts';
 
 import colors from './../../../../colors';
@@ -22,6 +23,14 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
+const generateDot = ({stroke, ...other}) => (
+    <Dot
+        { ...other }
+        fill={ stroke }
+        stroke={ colors['white'] }
+    />
+);
+
 const SimpleLineChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <LineChart data={data}
@@ -31,11 +40,10 @@ const SimpleLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } activeDot={{r: 8}}/>
+           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } dot={generateDot} activeDot={{r: 8}}/>
            <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } />
       </LineChart>
     </ResponsiveContainer>
-
-)
+);
 
 export { SimpleLineChart };
