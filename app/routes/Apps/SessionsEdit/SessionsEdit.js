@@ -12,7 +12,7 @@ import {
 
 import { ProfileLeftNav } from "../../components/Profile/ProfileLeftNav";
 import { ProfileHeader } from "../../components/Profile/ProfileHeader";
-import { TrResponsive } from "../../components/Tables/TrResponsive";
+import { TrTableResponsive } from "./../../Tables/Tables/components/TrTableResponsive";
 
 const BillingEdit = () => (
     <React.Fragment>
@@ -47,7 +47,7 @@ const BillingEdit = () => (
                                 </tr>
                             </thead>
                             <tbody>
-                                <TrResponsive />
+                                <TrTableResponsive />
                             </tbody>
                         </Table>
                         { /* END Table */}
