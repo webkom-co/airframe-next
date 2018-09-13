@@ -19,6 +19,7 @@ import {
     Avatar, 
     AvatarAddOn 
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 const Navbar101 = () => (
 <React.Fragment>
@@ -30,7 +31,7 @@ const Navbar101 = () => (
                 <Media left className="mr-3 align-self-center">
                     <Avatar.Image
                         size="sm"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        src={ randomAvatar() }
                         addOns={[
                             <AvatarAddOn.Icon 
                                 className="fa fa-circle"

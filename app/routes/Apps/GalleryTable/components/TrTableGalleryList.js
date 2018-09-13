@@ -13,7 +13,7 @@ import {
     UncontrolledTooltip
 } from './../../../../components';
 
-import { randomArray } from './../../../../utilities';
+import { randomArray, randomAvatar } from './../../../../utilities';
 
 const status = [
     "secondary",
@@ -69,7 +69,7 @@ const TrTableGalleryList = () => (
                     <Media left className="align-self-center mr-3">
                         <Avatar.Image
                             size="md"
-                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                            src={ randomAvatar() }
                             addOns={[
                                 <AvatarAddOn.Icon 
                                     className="fa fa-circle"

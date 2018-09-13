@@ -12,8 +12,9 @@ import {
     DropdownMenu,
     DropdownItem
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
-import avatarImg from '../../../images/avatars/avatar-1.jpg';
+const avatarImg = randomAvatar();
 
 const SidebarTopA = () => (
     <React.Fragment>

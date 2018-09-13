@@ -8,6 +8,7 @@ import {
     Avatar,
     AvatarAddOn
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 const ProfileHeader = () => (
     <React.Fragment>
@@ -16,7 +17,7 @@ const ProfileHeader = () => (
             <Media left middle className="mr-3 align-self-center">
               <Avatar.Image
                 size="lg"
-                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                src={ randomAvatar() }
                 className="mr-2"
                 addOns={[
                     <AvatarAddOn.Icon 

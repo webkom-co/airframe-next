@@ -17,6 +17,7 @@ import {
     AvatarAddOn,
     UncontrolledTooltip
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { MailboxLeftNav } from "../../components/Mailbox/MailboxLeftNav";
 import { Attachment } from "../../components/Attachment";
@@ -96,7 +97,7 @@ const EmailDetails = () => (
                                         <Media left className="align-self-center mr-4">
                                             <Avatar.Image
                                                 size="md"
-                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                src={ randomAvatar() }
                                                 addOns={[
                                                     <AvatarAddOn.Icon 
                                                         className="fa fa-circle"

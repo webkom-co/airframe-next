@@ -12,6 +12,7 @@ import {
     DropdownMenu,
     DropdownItem
 } from './../../../../components';
+import { randomAvatar } from './../../../../utilities';
 
 /*eslint-disable */
 const status = [
@@ -76,7 +77,7 @@ const TrTableProjectsList = () => (
                     <td className="align-middle">
                         <Avatar.Image
                             size="md"
-                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                            src={ randomAvatar() }
                         />
                     </td>
                     <td className="align-middle text-right">

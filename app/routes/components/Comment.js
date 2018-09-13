@@ -7,6 +7,7 @@ import {
     AvatarAddOn,
     UncontrolledTooltip 
 } from './../../components';
+import { randomAvatar } from './../../utilities';
 
 const Comment = (props) => (
 
@@ -14,7 +15,7 @@ const Comment = (props) => (
         <Media left className="mr-3">
             <Avatar.Image
                 size="md"
-                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                src={ randomAvatar() }
                 className="mr-2"
                 addOns={[
                     <AvatarAddOn.Icon 

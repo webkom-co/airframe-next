@@ -11,7 +11,7 @@ import {
     DropdownItem
 } from './../../../../components';
 
-import { randomArray } from './../../../../utilities';
+import { randomArray, randomAvatar } from './../../../../utilities';
 
 const badges = [
     "secondary",
@@ -47,7 +47,7 @@ const TrTableFilesList = () => (
             <td className="align-middle">
                 <Avatar.Image
                     size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                 />
             </td>
             <td className="align-middle">

@@ -22,6 +22,7 @@ import {
     CustomInput,
     Badge,
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { HeaderDemo } from "../../components/HeaderDemo";
 
@@ -59,7 +60,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -87,7 +88,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -115,7 +116,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -153,7 +154,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -183,7 +184,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -213,7 +214,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -253,7 +254,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -284,7 +285,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -315,7 +316,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -356,7 +357,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -387,7 +388,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -418,7 +419,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -459,7 +460,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -490,7 +491,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -521,7 +522,7 @@ const MediaObjects = () => (
                                 <Checkable.Trigger tag={ Media } left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -677,7 +678,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -705,7 +706,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -733,7 +734,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -775,7 +776,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -803,7 +804,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -831,7 +832,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -869,7 +870,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -897,7 +898,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -925,7 +926,7 @@ const MediaObjects = () => (
                                 <Media right top>
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -955,7 +956,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -986,7 +987,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1017,7 +1018,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1058,7 +1059,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1089,7 +1090,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1120,7 +1121,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1161,7 +1162,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1194,7 +1195,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1227,7 +1228,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1393,7 +1394,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1426,7 +1427,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1459,7 +1460,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1502,7 +1503,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1535,7 +1536,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1568,7 +1569,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1611,7 +1612,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1644,7 +1645,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1677,7 +1678,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1724,7 +1725,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1755,7 +1756,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1786,7 +1787,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1827,7 +1828,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1866,7 +1867,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1905,7 +1906,7 @@ const MediaObjects = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1982,7 +1983,7 @@ const MediaObjects = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -2012,7 +2013,7 @@ const MediaObjects = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -2042,7 +2043,7 @@ const MediaObjects = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -2088,7 +2089,7 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                    src={ randomAvatar() }
                                                     addOns={[
                                                         <AvatarAddOn.Icon 
                                                             className="fa fa-circle"
@@ -2120,7 +2121,7 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                    src={ randomAvatar() }
                                                     addOns={[
                                                         <AvatarAddOn.Icon 
                                                             className="fa fa-circle"
@@ -2152,7 +2153,7 @@ const MediaObjects = () => (
                                             <Media left top className="mr-4">
                                                 <Avatar.Image
                                                     size="md"
-                                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                    src={ randomAvatar() }
                                                     addOns={[
                                                         <AvatarAddOn.Icon 
                                                             className="fa fa-circle"

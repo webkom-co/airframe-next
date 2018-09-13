@@ -16,7 +16,7 @@ import {
     DropdownMenu
 } from './../../../components';
 
-import { randomArray } from './../../../utilities';
+import { randomArray, randomAvatar } from './../../../utilities';
 
 const badgesColors = [
     "primary",
@@ -83,17 +83,17 @@ const TasksCardGrid = () => (
             <CardFooter>
                 <Avatar.Image
                     size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                     className="mr-2"
                 />
                 <Avatar.Image
                     size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                     className="mr-2"
                 />
                 <Avatar.Image
                     size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                     className="mr-2"
                 />
             </CardFooter>

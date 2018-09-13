@@ -6,7 +6,7 @@ import {
     AvatarAddOn
 } from './../../components';
 
-import { randomArray } from './../../utilities';
+import { randomArray, randomAvatar } from './../../utilities';
 
 const Profile = () => { 
 
@@ -82,7 +82,7 @@ const Profile = () => {
             <div className="d-flex justify-content-center my-3">
                 <Avatar.Image
                     size="lg"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                     addOns={[
                         <AvatarAddOn.Icon 
                             className="fa fa-circle"

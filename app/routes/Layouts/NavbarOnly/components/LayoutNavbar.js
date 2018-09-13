@@ -10,16 +10,13 @@ import {
     Avatar,
     AvatarAddOn,
     Navbar,
-    UncontrolledTooltip,
-    NavbarBrand,
     NavbarToggler,
     NestedDropdown,
     UncontrolledDropdown,
-    Form,
-    Input,
     Container,
     UncontrolledCollapse
 } from './../../../../components';
+import { randomAvatar } from './../../../../utilities';
 
 import { NavbarActivityFeed } from
     './../../../../layout/components/NavbarActivityFeed';
@@ -65,7 +62,7 @@ export const LayoutNavbar = () => (
                         <DropdownToggle nav>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"

@@ -26,6 +26,7 @@ import {
     UncontrolledTooltip,
     UncontrolledTabs
 } from './../../../components';
+import { randomAvatar } from '../../../utilities';
 
 import { Profile } from "../../components/Profile";
 import { DlRowContacts } from "../../components/Profile/DlRowContacts";
@@ -107,7 +108,7 @@ const Clients = () => (
                                                         <Media left className="align-self-center mr-3">
                                                             <Avatar.Image
                                                                 size="md"
-                                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                                src={ randomAvatar() }
                                                                 addOns={[
                                                                     <AvatarAddOn.Icon 
                                                                         className="fa fa-circle"
@@ -200,7 +201,7 @@ const Clients = () => (
                                                 <td className="align-middle">
                                                     <Avatar.Image
                                                         size="sm"
-                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        src={ randomAvatar() }
                                                         className="mr-2"
                                                         addOns={[
                                                             <AvatarAddOn.Icon 
@@ -217,7 +218,7 @@ const Clients = () => (
                                                     />
                                                     <Avatar.Image
                                                         size="sm"
-                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        src={ randomAvatar() }
                                                         className="mr-2"
                                                         addOns={[
                                                             <AvatarAddOn.Icon 
@@ -234,7 +235,7 @@ const Clients = () => (
                                                     />
                                                     <Avatar.Image
                                                         size="sm"
-                                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                        src={ randomAvatar() }
                                                         className="mr-2"
                                                         addOns={[
                                                             <AvatarAddOn.Icon 

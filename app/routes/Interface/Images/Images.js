@@ -19,6 +19,7 @@ import {
     CardFooter,
     HolderProvider
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { HeaderDemo } from "../../components/HeaderDemo";
 
@@ -629,7 +630,7 @@ const Images = () => (
                             <Media left middle className="mr-3">
                                 <Avatar.Image
                                     size="md"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
@@ -706,7 +707,7 @@ const Images = () => (
                         <div>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -723,7 +724,7 @@ const Images = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -740,7 +741,7 @@ const Images = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 

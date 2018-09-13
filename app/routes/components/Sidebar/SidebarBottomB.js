@@ -10,6 +10,7 @@ import {
     Avatar,
     AvatarAddOn
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { DropdownProfile } from '../Dropdowns/DropdownProfile';
 import { FooterAuth } from '../Pages/FooterAuth';
@@ -26,7 +27,7 @@ const SidebarBottomB = () => (
                                 <Media left middle className="mr-3">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"

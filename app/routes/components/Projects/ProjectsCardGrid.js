@@ -15,7 +15,7 @@ import {
     DropdownItem
 } from './../../../components';
 
-import { randomArray } from './../../../utilities';
+import { randomArray, randomAvatar } from './../../../utilities';
 
 const badges = [
     <Badge pill color="success" className="mb-2" key="badge-active">
@@ -72,17 +72,17 @@ const ProjectsCardGrid = () => (
                 <CardFooter>
                     <Avatar.Image
                         size="md"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        src={ randomAvatar() }
                         className="mr-2"
                     />
                     <Avatar.Image
                         size="md"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        src={ randomAvatar() }
                         className="mr-2"
                     />
                     <Avatar.Image
                         size="md"
-                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                        src={ randomAvatar() }
                         className="mr-2"
                     />
                 </CardFooter>

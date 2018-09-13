@@ -19,6 +19,7 @@ import {
     CustomInput,
     CardText
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { HeaderDemo } from "../../components/HeaderDemo";
 
@@ -320,7 +321,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -350,7 +351,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -380,7 +381,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -430,7 +431,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -460,7 +461,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -490,7 +491,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -532,7 +533,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -562,7 +563,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -592,7 +593,7 @@ const ListGroups = () => (
                                     <Media right top>
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -626,7 +627,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -659,7 +660,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -692,7 +693,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -737,7 +738,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -772,7 +773,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -807,7 +808,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -911,7 +912,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -946,7 +947,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -981,7 +982,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1097,7 +1098,7 @@ const ListGroups = () => (
                                     <Media right top className="ml-2">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1127,7 +1128,7 @@ const ListGroups = () => (
                                     <Media right top className="ml-2">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1157,7 +1158,7 @@ const ListGroups = () => (
                                     <Media right top className="ml-2">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1191,7 +1192,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1224,7 +1225,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1257,7 +1258,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1302,7 +1303,7 @@ const ListGroups = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1335,7 +1336,7 @@ const ListGroups = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1368,7 +1369,7 @@ const ListGroups = () => (
                                 <Media left top className="mr-4">
                                     <Avatar.Image
                                         size="md"
-                                        src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                        src={ randomAvatar() }
                                         addOns={[
                                             <AvatarAddOn.Icon 
                                                 className="fa fa-circle"
@@ -1479,7 +1480,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1514,7 +1515,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"
@@ -1549,7 +1550,7 @@ const ListGroups = () => (
                                     <Media left top className="mr-4">
                                         <Avatar.Image
                                             size="md"
-                                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                            src={ randomAvatar() }
                                             addOns={[
                                                 <AvatarAddOn.Icon 
                                                     className="fa fa-circle"

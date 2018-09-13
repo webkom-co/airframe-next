@@ -12,7 +12,7 @@ import {
     DropdownItem
 } from './../../../../components';
 
-import { randomArray } from './../../../../utilities';
+import { randomArray, randomAvatar } from './../../../../utilities';
 
 const badges = [
     "secondary",
@@ -79,12 +79,12 @@ const TrTableTasksList = () => (
                 <Avatar.Image
                     size="sm"
                     className="mr-1"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                 />
                 <Avatar.Image
                     size="sm"
                     className="mr-1"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                 />
             </td>
             <td className="align-middle">

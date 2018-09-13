@@ -1,10 +1,12 @@
 import React from 'react';
 import faker from 'faker';
+
 import { 
     Avatar, 
     AvatarAddOn,
     Media
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 const Messages = () => (
     <React.Fragment>
@@ -12,7 +14,7 @@ const Messages = () => (
             <Media left className="mr-4">
                 <Avatar.Image
                     size="md"
-                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                    src={ randomAvatar() }
                     addOns={[
                         <AvatarAddOn.Icon 
                             className="fa fa-circle"

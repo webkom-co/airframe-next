@@ -12,7 +12,7 @@ import {
     Media
 } from './../../../../components';
 
-import { randomArray } from './../../../../utilities';
+import { randomArray, randomAvatar } from './../../../../utilities';
 
 const status = [
     "warning",
@@ -62,7 +62,7 @@ const TrTableInbox = (props) => (
                         </div>
                         <Avatar.Image
                             size="md"
-                            src="http://bs4.webkom.co/img/avatars/2.jpg"
+                            src={ randomAvatar() }
                             addOns={[
                                 <AvatarAddOn.Icon 
                                     className="fa fa-circle"

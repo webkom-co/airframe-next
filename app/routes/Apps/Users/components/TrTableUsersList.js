@@ -1,6 +1,5 @@
 import React from 'react';
 import faker from 'faker';
-import { Link } from 'react-router-dom';
 
 import { 
     Media,
@@ -13,7 +12,7 @@ import {
     DropdownItem
 } from './../../../../components';
 
-import { randomArray } from './../../../../utilities';
+import { randomArray, randomAvatar } from './../../../../utilities';
 
 const TrTableUsersList = () => {
 
@@ -100,7 +99,7 @@ const TrTableUsersList = () => {
                         <Media left className="d-flex align-self-center mr-3">
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="align-self-center"
                                 addOns={[
                                     <AvatarAddOn.Icon 

@@ -25,6 +25,7 @@ import {
     Badge,
     Avatar
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { Attachment } from "../../components/Attachment";
@@ -133,7 +134,7 @@ const TasksDetails = () => (
                                         <Media left middle className="mr-3 align-self-center">
                                             <Avatar.Image
                                                 size="md"
-                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                src={ randomAvatar() }
                                             />
                                         </Media>
                                         <Media body>
@@ -154,7 +155,7 @@ const TasksDetails = () => (
                                         <Media left middle className="mr-3 align-self-center">
                                             <Avatar.Image
                                                 size="md"
-                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                src={ randomAvatar() }
                                             />
                                         </Media>
                                         <Media body>
@@ -175,7 +176,7 @@ const TasksDetails = () => (
                                         <Media left middle className="mr-3 align-self-center">
                                             <Avatar.Image
                                                 size="md"
-                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                src={ randomAvatar() }
                                             />
                                         </Media>
                                         <Media body>

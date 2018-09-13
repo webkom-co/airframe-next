@@ -13,6 +13,7 @@ import {
     AvatarAddOn,
     NavLink
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 const ChatLeftNav = () => (
     <React.Fragment>
@@ -45,7 +46,7 @@ const ChatLeftNav = () => (
                             <Media left className="align-self-start mr-3">
                                 <Avatar.Image
                                     size="sm"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
@@ -77,7 +78,7 @@ const ChatLeftNav = () => (
                             <Media left className="align-self-start mr-3">
                                 <Avatar.Image
                                     size="sm"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
@@ -109,7 +110,7 @@ const ChatLeftNav = () => (
                             <Media left className="align-self-start mr-3">
                                 <Avatar.Image
                                     size="sm"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"

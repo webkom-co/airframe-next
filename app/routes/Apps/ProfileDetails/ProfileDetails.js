@@ -10,10 +10,7 @@ import {
     DropdownToggle,
     DropdownItem,
     DropdownMenu,
-    InputGroup,
     UncontrolledButtonDropdown,
-    InputGroupAddon,
-    Input,
     Card,
     ButtonGroup,
     Button,
@@ -30,6 +27,7 @@ import {
     NavItem,
     UncontrolledTabs
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { Profile } from "../../components/Profile";
 import { ProfileOverviewCard } from "../../components/Profile/ProfileOverviewCard";
@@ -278,7 +276,7 @@ const ProfileDetails = () => (
                                                         <Media left className="align-self-center mr-3">
                                                             <Avatar.Image
                                                                 size="sm"
-                                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                                                src={ randomAvatar() }
                                                                 addOns={[
                                                                     <AvatarAddOn.Icon 
                                                                         className="fa fa-circle"

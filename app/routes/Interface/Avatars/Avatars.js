@@ -10,6 +10,7 @@ import {
     CardBody,
     CardTitle,
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 import { HeaderDemo } from "../../components/HeaderDemo";
 
@@ -49,15 +50,15 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                              <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                              <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                         </CardBody>
                     </Card>
@@ -76,17 +77,17 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                         </CardBody>
@@ -106,17 +107,17 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                              <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                              <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                             />
                         </CardBody>
@@ -159,15 +160,15 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                             />
                         </CardBody>
                     </Card>
@@ -278,7 +279,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -295,7 +296,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -312,7 +313,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -329,7 +330,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -361,7 +362,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -378,7 +379,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -395,7 +396,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -412,7 +413,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -444,7 +445,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -461,7 +462,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -478,7 +479,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -495,7 +496,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -550,7 +551,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="primary" key="avatar-badge">
@@ -560,7 +561,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="danger" key="avatar-badge">
@@ -570,7 +571,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="secondary" key="avatar-badge">
@@ -580,7 +581,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="success" key="avatar-badge">
@@ -605,7 +606,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="primary" key="avatar-badge">
@@ -615,7 +616,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="danger" key="avatar-badge">
@@ -625,7 +626,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="secondary" key="avatar-badge">
@@ -635,7 +636,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="success" key="avatar-badge">
@@ -660,7 +661,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="primary" key="avatar-badge">
@@ -670,7 +671,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="danger" key="avatar-badge">
@@ -680,7 +681,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="secondary" key="avatar-badge">
@@ -690,7 +691,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="success" key="avatar-badge">
@@ -738,7 +739,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="primary" key="avatar-badge">
@@ -748,7 +749,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="danger" key="avatar-badge">
@@ -758,7 +759,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="secondary" key="avatar-badge">
@@ -768,7 +769,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="success" key="avatar-badge">
@@ -793,7 +794,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="primary" key="avatar-badge">
@@ -803,7 +804,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="danger" key="avatar-badge">
@@ -813,7 +814,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="secondary" key="avatar-badge">
@@ -823,7 +824,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Badge color="success" key="avatar-badge">
@@ -848,7 +849,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="primary" key="avatar-badge">
@@ -858,7 +859,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="danger" key="avatar-badge">
@@ -868,7 +869,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="secondary" key="avatar-badge">
@@ -878,7 +879,7 @@ const Home = () => (
                             />
                              <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="success" key="avatar-badge">
@@ -926,7 +927,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -949,7 +950,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -972,7 +973,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -995,7 +996,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-1"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1018,7 +1019,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="lg"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1056,7 +1057,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1079,7 +1080,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1102,7 +1103,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1125,7 +1126,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1148,7 +1149,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="md"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1186,7 +1187,7 @@ const Home = () => (
                             </p>
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1209,7 +1210,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1232,7 +1233,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1255,7 +1256,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 
@@ -1278,7 +1279,7 @@ const Home = () => (
                             />
                             <Avatar.Image
                                 size="sm"
-                                src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                src={ randomAvatar() }
                                 className="mr-2"
                                 addOns={[
                                     <AvatarAddOn.Icon 

@@ -13,6 +13,7 @@ import {
     Media,
     Avatar
 } from './../../../components';
+import { randomAvatar } from './../../../utilities';
 
 const ProjectsLeftNav = () => (
     <React.Fragment>
@@ -106,7 +107,7 @@ const ProjectsLeftNav = () => (
                             <Media left middle className="mr-3 align-self-center">
                                 <Avatar.Image
                                     size="md"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                 />
                             </Media>
                             <Media body>
@@ -127,7 +128,7 @@ const ProjectsLeftNav = () => (
                             <Media left middle className="mr-3 align-self-center">
                                 <Avatar.Image
                                     size="md"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                 />
                             </Media>
                             <Media body>
@@ -148,7 +149,7 @@ const ProjectsLeftNav = () => (
                             <Media left middle className="mr-3 align-self-center">
                                 <Avatar.Image
                                     size="md"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                 />
                             </Media>
                             <Media body>

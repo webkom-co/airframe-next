@@ -12,6 +12,7 @@ import {
     Avatar,
     AvatarAddOn
 } from './../../../../components';
+import { randomAvatar } from './../../../../utilities';
 
 /*eslint-disable */
 const colorStatus = [
@@ -48,7 +49,7 @@ const TrTableDefault = (props) => (
                             <Media left middle className="mr-3">
                                 <Avatar.Image
                                     size="md"
-                                    src="http://bs4.webkom.co/img/avatars/2.jpg"
+                                    src={ randomAvatar() }
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
