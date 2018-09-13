@@ -271,7 +271,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover responsive>
+                        <Table className="mb-0" borderless responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
