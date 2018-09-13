@@ -18,7 +18,7 @@ const NavbarDefault = () => (
             <NavItem className="mr-3">
                 <SidebarTrigger/>
             </NavItem>
-            <NavItem>
+            <NavItem className="d-none d-md-block">
                 <span className="navbar-text">
                     <Link to="/">
                         <i className="fa fa-home"></i>

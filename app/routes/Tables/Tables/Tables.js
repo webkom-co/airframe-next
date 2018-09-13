@@ -78,7 +78,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0">
+                        <Table className="mb-0" responsive>
                             <thead>
                                 <tr>
                                     <th>Project</th>
@@ -157,7 +157,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" striped>
+                        <Table className="mb-0" striped responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -194,7 +194,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -234,7 +234,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
                                     <th>ID</th>
@@ -271,7 +271,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -310,7 +310,7 @@ const Tables = () => (
                                 Add <code>bordered</code> for borders on all sides of the table and cells.
                             </p>
                             { /* START Table */}
-                            <Table className="mb-0" bordered>
+                            <Table className="mb-0" bordered responsive>
                                 <thead>
                                     <tr>
                                         <th>Ticket</th>
@@ -351,7 +351,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead className="thead-light">
                                 <tr>
                                     <th>#</th>
@@ -405,7 +405,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
                                     <th>Invoice</th>
@@ -444,7 +444,7 @@ const Tables = () => (
                             </p>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" dark>
+                        <Table className="mb-0" dark responsive>
                             <thead>
                                 <tr>
                                     <th>Project</th>
