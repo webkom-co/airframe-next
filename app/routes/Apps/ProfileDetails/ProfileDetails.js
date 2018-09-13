@@ -38,6 +38,7 @@ import { DlRowAddress } from "../../components/Profile/DlRowAddress";
 import { Chat } from "../../components/Chat/Chat";
 import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
+import { TrTableMessages } from "./components/TrTableMessages";
 
 const ProfileDetails = () => (
     <React.Fragment>
@@ -271,56 +272,15 @@ const ProfileDetails = () => (
                                             </tr>
                                         </thead>
                                         <tbody>
-                                            { /* START TR */}
-                                            <tr>
-                                                <td className="align-middle">
-                                                    <Media>
-                                                        <Media left className="align-self-center mr-3">
-                                                            <Avatar.Image
-                                                                size="sm"
-                                                                src="http://bs4.webkom.co/img/avatars/2.jpg"
-                                                                addOns={[
-                                                                    <AvatarAddOn.Icon 
-                                                                        className="fa fa-circle"
-                                                                        color="white"
-                                                                        key="avatar-icon-bg"
-                                                                    />,
-                                                                    <AvatarAddOn.Icon 
-                                                                        className="fa fa-circle"
-                                                                        color="danger"
-                                                                        key="avatar-icon-fg"
-                                                                    />
-                                                                ]}
-                                                            />
-                                                        </Media>
-                                                        <Media body>
-                                                            <div className="mt-0 d-flex">
-                                                                { faker.name.firstName() } { faker.name.lastName() }
-                                                            </div>
-                                                            <span>
-                                                                { faker.address.state() }
-                                                            </span>
-                                                        </Media>
-                                                    </Media>
-                                                </td>
-                                                <td className="align-middle">
-                                                    <a href="/emaildetails">
-                                                        { faker.company.catchPhrase() }
-                                                    </a>
-                                                    <br />
-                                                    <div>
-                                                        { faker.lorem.sentence() }
-                                                    </div>
-                                                    <Badge color="primary" pill className="mr-1">
-                                                        { faker.commerce.department() }   
-                                                    </Badge>
-                                                </td>
-                                                <td className="align-middle text-right">
-                                                    30-Jun-2014<br />
-                                                    01:54 PM
-                                                </td>
-                                            </tr>
-                                        { /* END TR */}
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
+                                           <TrTableMessages />
                                         </tbody>
                                     </Table>
                                     { /* END Table */}
