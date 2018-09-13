@@ -15,7 +15,7 @@ import {
 
 import { ProfileLeftNav } from "./../../components/Profile/ProfileLeftNav";
 import { ProfileHeader } from "./../../components/Profile/ProfileHeader";
-import { TrBorderless } from "./../../components/Tables/TrBorderless";
+import { TrTableBorderless } from "./../../Tables/Tables/components/TrTableBorderless";
 
 const BillingEdit = () => (
     <React.Fragment>
@@ -122,7 +122,7 @@ const BillingEdit = () => (
                            </CardTitle>
                         </CardBody>
                         { /* START Table */}
-                        <Table className="mb-0" hover>
+                        <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
                                     <th>#</th>
@@ -137,7 +137,7 @@ const BillingEdit = () => (
                                 </tr>
                             </thead>
                             <tbody>
-                                <TrBorderless />
+                                <TrTableBorderless />
                             </tbody>
                         </Table>
                         { /* END Table */}
