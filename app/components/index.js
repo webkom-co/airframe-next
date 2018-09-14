@@ -1,3 +1,4 @@
+import Accordion from './Accordion';
 import App from './App';
 import Avatar, { AvatarAddOn } from './Avatar';
 import Card from './Card';
@@ -23,6 +24,7 @@ import UncontrolledPopover from './UncontrolledPopover';
 import UncontrolledTabs from './UncontrolledTabs';
 
 export {
+    Accordion,
     App,
     Avatar,
     AvatarAddOn,

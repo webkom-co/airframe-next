@@ -19,7 +19,7 @@ SidebarSection.propTypes = {
     children: PropTypes.node,
     fluid: PropTypes.bool,
     cover: PropTypes.bool,
-    className: PropTypes.className
+    className: PropTypes.string
 };
 
 export {

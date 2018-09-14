@@ -2,6 +2,7 @@ import React from 'react';
 import faker from 'faker';
 
 import {
+    Accordion,
     Container,
     Row,
     Col,
@@ -148,51 +149,41 @@ const Accordions = () => (
                             Below is an example of default accordion based on <code>Card</code>, <code>h6</code>, <code>&lt;i className="fa fa-fw fa-plus" /&gt;</code>
                             and <code>UncontrolledCollapse</code>.
                         </p>
-                        <Card className="mb-2">
-                            <CardHeader className="h6 bg-none bb-0">
-                                <a href="" id="accordion102">
-                                    <i className="fa fa-fw fa-plus mr-2"></i>
-                                    Accordion Card #1
-                                </a>
-                            </CardHeader>
-                            <UncontrolledCollapse toggler="#accordion102">
-                                <CardBody className="pt-0">
-                                  <CardText>
-                                      { faker.lorem.paragraph() }
-                                  </CardText>
-                                </CardBody>
-                            </UncontrolledCollapse>
-                        </Card>
-                        <Card className="mb-2">
-                            <CardHeader className="h6 bg-none bb-0">
-                                <a href="" id="accordion102a">
-                                    <i className="fa fa-fw fa-plus mr-2"></i>
-                                    Accordion Card #2
-                                </a>
-                            </CardHeader>
-                            <UncontrolledCollapse toggler="#accordion102a">
-                                <CardBody className="pt-0">
-                                  <CardText>
-                                      { faker.lorem.paragraph() }
-                                  </CardText>
-                                </CardBody>
-                            </UncontrolledCollapse>
-                        </Card>
-                        <Card className="mb-2">
-                            <CardHeader className="h6 bg-none bb-0">
-                                <a href="" id="accordion102b">
-                                    <i className="fa fa-fw fa-plus mr-2"></i>
-                                    Accordion Card #3
-                                </a>
-                            </CardHeader>
-                            <UncontrolledCollapse toggler="#accordion102b">
-                                <CardBody className="pt-0">
-                                  <CardText>
-                                      { faker.lorem.paragraph() }
-                                  </CardText>
-                                </CardBody>
-                            </UncontrolledCollapse>
-                        </Card>
+                        <Accordion className="mb-2" initialOpen>
+                            <Accordion.Header>
+                                <Accordion.Indicator className="mr-2"/>
+                                Accordion Card #1
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <CardText>
+                                    { faker.lorem.paragraph() }
+                                </CardText>
+                            </Accordion.Body>
+                        </Accordion>
+
+                        <Accordion className="mb-2">
+                            <Accordion.Header>
+                                <Accordion.Indicator className="mr-2"/>
+                                Accordion Card #2
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <CardText>
+                                    { faker.lorem.paragraph() }
+                                </CardText>
+                            </Accordion.Body>
+                        </Accordion>
+
+                        <Accordion className="mb-2">
+                            <Accordion.Header>
+                                <Accordion.Indicator className="mr-2"/>
+                                Accordion Card #3
+                            </Accordion.Header>
+                            <Accordion.Body>
+                                <CardText>
+                                    { faker.lorem.paragraph() }
+                                </CardText>
+                            </Accordion.Body>
+                        </Accordion>
                     </div>
                     { /* END Example */}
                     { /* START Example */}

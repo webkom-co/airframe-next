@@ -14,7 +14,7 @@ const SidebarMobileFluid = (props) => {
 
 SidebarMobileFluid.propTypes = {
     children: PropTypes.node,
-    className: PropTypes.className
+    className: PropTypes.string
 };
 
 export {
