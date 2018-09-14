@@ -7,7 +7,8 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Legend, 
-    LineChart 
+    LineChart,
+    Dot
 } from './../../../../components/recharts';
 
 import colors from './../../../../colors';
@@ -22,6 +23,14 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
+const generateDot = ({stroke, ...other}) => (
+    <Dot
+        { ...other }
+        fill={ stroke }
+        stroke={ colors['white'] }
+    />
+);
+
 const DashedLineChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <LineChart width={600} height={300} data={data}
@@ -31,7 +40,7 @@ const DashedLineChart = () => (
            <YAxis/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } activeDot={{r: 8}} strokeDasharray="5 5" />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } activeDot={{r: 8}} dot={generateDot} strokeDasharray="5 5" />
            <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } strokeDasharray="3 4 5 2" />
       </LineChart>
     </ResponsiveContainer>
