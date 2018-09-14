@@ -1,19 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import classNames from 'classnames';
 import {
     CardHeader
 } from './..';
 
 import { Consumer } from './context';
+import classes from './AccordionHeader.scss';
 
 export const AccordionHeader = (props) => (
     <Consumer>
     {
         ({ onToggle }) => (
-            <CardHeader className="h6 bg-none bb-0">
-                <a href="javascript:;" onClick={ onToggle } className='d-block'>
-                    { props.children }
-                </a>
+            <CardHeader
+                className={
+                    classNames(
+                        props.className,
+                        classes.header
+                    )
+                }
+                onClick={ onToggle}
+            >
+                { props.children }
             </CardHeader>
         )   
     }
@@ -21,5 +29,6 @@ export const AccordionHeader = (props) => (
 );
 AccordionHeader.propTypes = {
     children: PropTypes.node,
-    onClick: PropTypes.func
+    onClick: PropTypes.func,
+    className: PropTypes.string
 };

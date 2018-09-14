@@ -42,7 +42,8 @@ export class Accordion extends React.Component {
     }
 
     render() {
-        const { className, children, ...otherProps } = this.props;
+        /* eslint-disable-next-line no-unused-vars */
+        const { className, children, initialOpen, ...otherProps } = this.props;
 
         return (
             <Provider
