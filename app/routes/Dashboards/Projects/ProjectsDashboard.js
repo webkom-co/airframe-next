@@ -30,6 +30,9 @@ import {
 import {
     TinyDonutChart
 } from "../../components/ProjectsDashboards/TinyDonutChart"
+import {
+    TimelineMini
+} from "../../components/Timeline/TimelineMini"
 
 const ProjectsDashboard = () => (
     <Container>
@@ -217,14 +220,47 @@ const ProjectsDashboard = () => (
             <Col lg={ 4 }>
                 <Card className="mb-3">
                     <CardBody>
-                        <CardTitle tag="h6" className="mb-3">
+                        <CardTitle tag="h6">
                             Timeline Mini
                         </CardTitle>
-                    </CardBody>
-                    <CardBody className="py-5 text-center">
-                        <i className="text-muted">
-                            To-Do...
-                        </i>
+                        <TimelineMini 
+                            showPillDate
+                                pillDate="2 Days ago"
+                            icon="times-circle"
+                                iconClassName="text-danger"
+                            badgeTitle="Alert"
+                                badgeColor="danger"
+                        />
+                        <TimelineMini 
+                            icon="question-circle"
+                                iconClassName="text-warning"
+                            badgeTitle="Warning"
+                                badgeColor="warning"
+                        />
+                        <TimelineMini 
+                            icon="info-circle"
+                                iconClassName="text-info"
+                            badgeTitle="Info"
+                                badgeColor="info"
+                        />
+                        <TimelineMini 
+                            showPillDate
+                                pillDate="Yesterday"
+                            icon="plus-circle"
+                                iconClassName="text-primary"
+                            badgeTitle="Message"
+                                badgeColor="primary"
+                        />
+                        <TimelineMini 
+                            icon="check-circle"
+                                iconClassName="text-success"
+                            badgeTitle="Success"
+                                badgeColor="success"
+                        />
+                        <TimelineMini 
+                            icon="circle"
+                            badgeTitle="Obsolete"
+                        />
                     </CardBody>
                     <ListGroup flush>
                         <ListGroupItem action tag={ Link } to="/pages/timeline" className="text-center">
