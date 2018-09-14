@@ -24,6 +24,7 @@ import {
     DropdownItem,
     Button
 } from './../../components'
+import { HeaderMain } from "../components/HeaderMain";
 import {
     HeaderDemo
 } from "../components/HeaderDemo";
@@ -49,8 +50,11 @@ import {
     Comment
 } from "../components/Comment";
 import {
-    Chat
-} from "../components/Chat/Chat";
+    ChatLeft
+} from "../components/Chat/ChatLeft";
+import {
+    ChatRight
+} from "../components/Chat/ChatRight";
 import {
     ChatCardFooter
 } from "../components/Chat/ChatCardFooter";
@@ -85,17 +89,10 @@ import {
 
 export const Widgets = () => (
     <Container>
-        { /* START MAIN HEADER */}
-        <Row>
-            <Col lg={ 12 }>
-                <div className="d-flex mt-3 mb-5">
-                    <h1 className="display-4 mr-3 mb-0 align-self-start">
-                        Widgets
-                    </h1>
-                </div>
-            </Col>
-        </Row>
-        { /* END MAIN HEADER */}
+        <HeaderMain 
+            title="Widgets"
+            className="mb-5 mt-4"
+        />
         { /* START Header 1 */}
         <Row>
             <Col lg={ 12 }>
@@ -269,9 +266,9 @@ export const Widgets = () => (
                                 #3.03
                             </span>
                         </CardTitle>
-                        <Chat />
-                        <Chat />
-                        <Chat />
+                        <ChatLeft />
+                        <ChatRight />
+                        <ChatLeft />
                     </CardBody>
                     <CardFooter>
                         <ChatCardFooter />

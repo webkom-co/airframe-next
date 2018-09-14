@@ -6,7 +6,7 @@ import {
     Row,
     Col
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import UsersList from './UsersList';
 import UsersGrid from './UsersGrid';
 import { UsersLeftNav } from "../../components/Users/UsersLeftNav";
@@ -15,6 +15,10 @@ import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 const Users = (props) => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Users"
+                className="mb-5 mt-4"
+            />
             <Row>
                 <Col lg={ 3 }>
                     <UsersLeftNav />

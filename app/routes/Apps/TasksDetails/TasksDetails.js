@@ -26,7 +26,7 @@ import {
     Avatar
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { Attachment } from "../../components/Attachment";
 import { Comment } from "../../components/Comment";
@@ -34,6 +34,10 @@ import { Comment } from "../../components/Comment";
 const TasksDetails = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Tasks Details"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 3 }>

@@ -19,6 +19,8 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import {
     TasksMedia
 } from "../../components/ProjectsDashboards/TasksMedia";
@@ -33,11 +35,9 @@ const ProjectsDashboard = () => (
     <Container>
         <Row className="mb-5">
             <Col lg={ 12 }>
-                <div className="d-flex mt-3 mb-4">
-                    <h1 className="display-4 mr-3 mb-0 align-self-start">
-                        Projects
-                    </h1>
-                </div>
+                <HeaderMain 
+                    title="Projects"
+                />
                 <p>
                     { faker.lorem.paragraph() }
                 </p>

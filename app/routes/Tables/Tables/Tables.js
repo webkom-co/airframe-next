@@ -10,6 +10,8 @@ import {
     Table,
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import {
     HeaderDemo
 } from "../../components/HeaderDemo";
@@ -45,6 +47,10 @@ import {
 const Tables = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Tables"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>

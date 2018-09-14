@@ -31,7 +31,7 @@ import {
     CardBody,
     CardTitle
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import {
     HeaderDemo
 } from "../../components/HeaderDemo";
@@ -43,6 +43,9 @@ import {
 const Cards = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Cards Headers"
+            />
             { /* START MAIN HEADER */}
             <Row>
                 <Col lg={ 12 }>

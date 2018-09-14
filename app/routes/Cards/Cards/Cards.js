@@ -11,6 +11,8 @@ import {
     CardText
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import {
     HeaderDemo
 } from "../../components/HeaderDemo";
@@ -35,6 +37,9 @@ const cardContent = (title = 'Some Card Title') => (
 const Cards = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Cards"
+            />
             { /* START MAIN HEADER */}
             <Row>
                 <Col lg={ 12 }>

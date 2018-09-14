@@ -20,7 +20,7 @@ import {
     CardText
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const cardText = ({ cardNo }) => (
@@ -43,6 +43,10 @@ const cardContent = (title = 'Some Card Title') => (
 const ListGroups = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="List Groups"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

@@ -11,12 +11,16 @@ import {
     CardTitle,
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const Home = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Avatars"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

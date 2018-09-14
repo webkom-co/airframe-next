@@ -7,6 +7,8 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import TasksList from './TasksList';
 import TasksGrid from './TasksGrid';
 import { ProjectsLeftNav } from "../../components/Projects/ProjectsLeftNav";
@@ -15,6 +17,10 @@ import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 const Tasks = (props) => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Tasks"
+                className="mb-5 mt-4"
+            />
             <Row>
                 <Col lg={ 3 }>
                     <ProjectsLeftNav />

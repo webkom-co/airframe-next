@@ -9,7 +9,7 @@ import {
     CardBody,
     CardTitle
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProfileLeftNav } from "../../components/Profile/ProfileLeftNav";
 import { ProfileHeader } from "../../components/Profile/ProfileHeader";
 import { TrTableResponsive } from "./../../Tables/Tables/components/TrTableResponsive";
@@ -17,6 +17,10 @@ import { TrTableResponsive } from "./../../Tables/Tables/components/TrTableRespo
 const BillingEdit = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Sessions Edit"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 12 }>

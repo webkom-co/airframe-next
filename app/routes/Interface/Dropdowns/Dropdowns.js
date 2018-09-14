@@ -26,7 +26,7 @@ import {
     DropdownMenu,
     DropdownItem
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 import { Messages } from "../../components/Dropdowns/Messages";
 import { Activity } from "../../components/Dropdowns/Activity";
@@ -34,6 +34,10 @@ import { Activity } from "../../components/Dropdowns/Activity";
 const Dropdowns = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Dropdowns"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

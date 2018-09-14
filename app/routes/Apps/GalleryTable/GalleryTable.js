@@ -19,6 +19,8 @@ import {
     Col
 } from './../../../components';
 
+
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { Paginations } from "../../components/Paginations";
 
@@ -27,6 +29,10 @@ import { TrTableGalleryList } from "./components/TrTableGalleryList";
 const GalleryTable = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Gallery Table"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 12 }>

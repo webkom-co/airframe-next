@@ -18,12 +18,17 @@ import {
     UncontrolledTooltip
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { MailboxLeftNav } from "../../components/Mailbox/MailboxLeftNav";
 import { Attachment } from "../../components/Attachment";
 
 const NewEmail = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="New Email"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 3 }>
