@@ -10,13 +10,17 @@ import {
     BreadcrumbItem,
     CardTitle,
 } from './../../../components'
-
+import { HeaderMain } from "../../components/HeaderMain";
 import {
     HeaderDemo
 } from "../../components/HeaderDemo";
 
 export const Breadcrumbs = () => (
     <Container>
+        <HeaderMain 
+            title="Breadcrumbs"
+            className="mb-5 mt-4"
+        />
         { /* START Header 1 */}
         <Row>
             <Col lg={ 12 }>

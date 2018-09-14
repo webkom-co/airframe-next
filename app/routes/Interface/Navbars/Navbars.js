@@ -6,6 +6,7 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 import { Navbar101 } from "../../components/Navbars/Navbar101";
 import { Navbar102 } from "../../components/Navbars/Navbar102";
@@ -16,6 +17,10 @@ import { Navbar202 } from "../../components/Navbars/Navbar202";
 const Navbars = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Navbars"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

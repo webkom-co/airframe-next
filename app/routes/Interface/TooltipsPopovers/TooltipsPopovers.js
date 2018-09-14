@@ -16,11 +16,16 @@ import {
     PopoverBody
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const TooltipsPopovers = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Tooltips & Popovers"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>

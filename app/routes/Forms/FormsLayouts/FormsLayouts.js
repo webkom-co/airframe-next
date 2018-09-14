@@ -17,12 +17,16 @@ import {
     Input, 
     FormText
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const FormsLayouts = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Forms Layouts"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>

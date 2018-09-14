@@ -24,6 +24,7 @@ import {
     UncontrolledTooltip
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { MailboxLeftNav } from "../../components/Mailbox/MailboxLeftNav";
 import { Paginations } from "../../components/Paginations";
 import { TrTableInbox } from "./components/TrTableInbox";
@@ -31,6 +32,10 @@ import { TrTableInbox } from "./components/TrTableInbox";
 const Inbox = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Inbox"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 3 }>

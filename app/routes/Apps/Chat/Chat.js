@@ -9,8 +9,8 @@ import {
     Card,
     CardFooter
 } from './../../../components';
-
-import { Chat } from "../../components/Chat/Chat";
+import { HeaderMain } from "../../components/HeaderMain";
+import { ChatLeft } from "../../components/Chat/ChatLeft";
 import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatLeftNav } from "../../components/Chat/ChatLeftNav";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
@@ -19,6 +19,10 @@ import { ChatCardHeader } from "../../components/Chat/ChatCardHeader";
 const Clients = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Chat"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 3 }>
@@ -30,16 +34,16 @@ const Clients = () => (
                             <ChatCardHeader />
                         </CardHeader>
                         <CardBody>
-                            <Chat />
+                            <ChatLeft />
                             <ChatRight />
-                            <Chat />
+                            <ChatLeft />
                             <ChatRight />
                             <div className="small mb-3 mt-4 text-center">
                                 Yesterday
                             </div>
-                            <Chat />
+                            <ChatLeft />
                             <ChatRight />
-                            <Chat />
+                            <ChatLeft />
                         </CardBody>
                         <CardFooter>
                             <ChatCardFooter />

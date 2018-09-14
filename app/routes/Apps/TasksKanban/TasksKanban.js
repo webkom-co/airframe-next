@@ -13,12 +13,18 @@ import {
     UncontrolledTooltip
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { TasksCardGrid } from "../../components/Tasks/TasksCardGrid";
 
 const TasksKanban = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Tasks Kanban"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>

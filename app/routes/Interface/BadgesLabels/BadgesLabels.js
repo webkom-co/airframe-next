@@ -9,12 +9,16 @@ import {
     CardBody,
     Badge,
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const BadgesLabels = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Badges & Labels"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

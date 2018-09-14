@@ -11,12 +11,16 @@ import {
     CardText,
     UncontrolledCollapse
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const Accordions = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Accordions"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

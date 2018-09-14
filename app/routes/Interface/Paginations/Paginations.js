@@ -11,12 +11,16 @@ import {
     PaginationItem,
     PaginationLink
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const Paginations = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Paginations"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row> 
                 <Col lg={ 12 }>

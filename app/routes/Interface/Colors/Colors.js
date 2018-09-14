@@ -6,6 +6,8 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import { HeaderDemo } from "../../components/HeaderDemo";
 import { CardRgbaColor } from "../../components/Colors/CardRgbaColor";
 import { CardColor } from "../../components/Colors/CardColor";
@@ -13,6 +15,10 @@ import { CardColor } from "../../components/Colors/CardColor";
 const Colors = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Colors"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

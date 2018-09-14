@@ -8,7 +8,7 @@ import {
     CardTitle,
     CardBody
 } from './../../components';
-
+import { HeaderMain } from "../components/HeaderMain";
 import {
     HeaderDemo
 } from "../components/HeaderDemo";
@@ -16,6 +16,10 @@ import {
 const Icons = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Icons"
+                className="mb-5 mt-4"
+            />
             { /* START Card */}
             <Card className="mb-3">
                 <CardBody>

@@ -9,6 +9,7 @@ import {
     CardDeck, 
     Button
 } from './../../../components'
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 import { SimpleBarChart } from "./components/SimpleBarChart";
@@ -42,6 +43,10 @@ import { VerticalComposedChart } from './components/VerticalComposedChart';
 
 export const ReCharts = () => (
     <Container>
+        <HeaderMain 
+            title="ReCharts"
+            className="mb-5 mt-4"
+        />
         { /* START Header 1 */}
         <Row>
             <Col lg={ 12 }>

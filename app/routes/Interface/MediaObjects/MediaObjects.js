@@ -23,12 +23,16 @@ import {
     Badge,
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const MediaObjects = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Media Objects"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

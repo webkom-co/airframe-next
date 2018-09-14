@@ -6,13 +6,17 @@ import {
     CardColumns,
     Col
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 import { GalleryCard } from "../../components/Gallery/GalleryCard";
 import { Paginations } from "../../components/Paginations";
 
 const GalleryGrid = () => (
     <Container>
+        <HeaderMain 
+            title="Gallery Grid"
+            className="mb-5 mt-4"
+        />
         { /* START Content */}
         <Row>
             <Col lg={ 12 }>

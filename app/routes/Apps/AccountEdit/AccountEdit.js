@@ -15,12 +15,17 @@ import {
     Form
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProfileLeftNav } from "../../components/Profile/ProfileLeftNav";
 import { ProfileHeader } from "../../components/Profile/ProfileHeader";
 
 const AccountEdit = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Account Edit"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 12 }>

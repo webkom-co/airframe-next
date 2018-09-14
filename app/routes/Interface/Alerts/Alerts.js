@@ -8,12 +8,16 @@ import {
     Button,
     Media,
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const Alerts = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Alerts"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

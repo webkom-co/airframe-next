@@ -18,13 +18,17 @@ import {
     UncontrolledTooltip
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { MailboxLeftNav } from "../../components/Mailbox/MailboxLeftNav";
 import { Attachment } from "../../components/Attachment";
 
 const EmailDetails = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Email Details"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 3 }>

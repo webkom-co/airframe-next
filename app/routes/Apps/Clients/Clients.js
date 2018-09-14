@@ -23,6 +23,7 @@ import {
     UncontrolledTabs
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { Profile } from "../../components/Profile";
 import { DlRowContacts } from "../../components/Profile/DlRowContacts";
 import { DlRowAddress } from "../../components/Profile/DlRowAddress";
@@ -32,6 +33,10 @@ import { TrTableCompanies } from "./components/TrTableCompanies";
 const Clients = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Clients"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 8 }>

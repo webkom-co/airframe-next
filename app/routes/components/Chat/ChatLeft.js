@@ -19,7 +19,7 @@ const status = [
     "secondary"
 ];
 
-const Chat = (props) => (
+const ChatLeft = (props) => (
     <React.Fragment>
         <Media className="mb-2">
             <Media left className="mr-3">
@@ -59,11 +59,11 @@ const Chat = (props) => (
         </Media>
     </React.Fragment>
 )
-Chat.propTypes = {
+ChatLeft.propTypes = {
     cardClassName: PropTypes.node
 };
-Chat.defaultProps = {
+ChatLeft.defaultProps = {
     cardClassName: "bg-white"
 };
 
-export { Chat };
+export { ChatLeft };

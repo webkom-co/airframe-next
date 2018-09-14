@@ -7,6 +7,8 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import FilesList from './FilesList';
 import FilesGrid from './FilesGrid';
 import { FilesLeftNav } from "../../components/Files/FilesLeftNav";
@@ -15,6 +17,10 @@ import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
 const Files = (props) => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Files"
+                className="mb-5 mt-4"
+            />
             <Row>
                 <Col lg={ 3 }>
                     <FilesLeftNav />

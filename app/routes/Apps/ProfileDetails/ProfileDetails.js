@@ -24,12 +24,13 @@ import {
     NavItem,
     UncontrolledTabs
 } from './../../../components';
+import { HeaderMain } from "../../components/HeaderMain";
 
 import { Profile } from "../../components/Profile";
 import { ProfileOverviewCard } from "../../components/Profile/ProfileOverviewCard";
 import { DlRowContacts } from "../../components/Profile/DlRowContacts";
 import { DlRowAddress } from "../../components/Profile/DlRowAddress";
-import { Chat } from "../../components/Chat/Chat";
+import { ChatLeft } from "../../components/Chat/ChatLeft";
 import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
 import { TrTableMessages } from "./components/TrTableMessages";
@@ -37,6 +38,10 @@ import { TrTableMessages } from "./components/TrTableMessages";
 const ProfileDetails = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Profile Details"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 4 }>
@@ -224,15 +229,15 @@ const ProfileDetails = () => (
                                         </UncontrolledButtonDropdown>
                                     </CardHeader>
                                     <CardBody>
-                                        <Chat />
+                                        <ChatLeft />
                                         <ChatRight />
-                                        <Chat />
+                                        <ChatLeft />
                                         <div className="mt-4 mb-3 text-center">
                                             <span className="small">
                                                 Yesterday
                                             </span>
                                         </div>
-                                        <Chat />
+                                        <ChatRight />
                                     </CardBody>
                                     <CardFooter>
                                        <ChatCardFooter />

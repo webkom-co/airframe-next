@@ -22,6 +22,8 @@ import {
     Col
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 import {
     MetricVsTarget
 } from "../../components/Analytics/MetricVsTarget";
@@ -49,9 +51,10 @@ const Analytics = () => (
         <Row>
             <Col lg={ 12 }>
                 <div className="d-flex mt-3 mb-5">
-                    <h1 className="display-4 mr-3 mb-0 align-self-start">
-                        Analytics
-                    </h1>
+                    <HeaderMain 
+                        title="Analytics"
+                        className="mt-0"
+                    />
                     <ButtonToolbar className="ml-auto">
                         <ButtonGroup className="align-self-start mr-2">
                             <UncontrolledButtonDropdown className="ml-auto flex-column">

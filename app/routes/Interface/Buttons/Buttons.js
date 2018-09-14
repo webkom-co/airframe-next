@@ -16,7 +16,7 @@ import {
     DropdownItem,
     CardText
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { HeaderDemo } from "../../components/HeaderDemo";
 
 const cardText = ({ cardNo }) => (
@@ -39,6 +39,10 @@ const cardContent = (title = 'Some Card Title') => (
 const Buttons = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Buttons"
+                className="mb-5 mt-4"
+            />
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

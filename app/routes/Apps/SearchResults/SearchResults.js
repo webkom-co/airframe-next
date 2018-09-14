@@ -5,7 +5,7 @@ import {
     Row,
     Col
 } from './../../../components';
-
+import { HeaderMain } from "../../components/HeaderMain";
 import { SearchResultsLeftNav } from
     "../../components/SearchResults/SearchResultsLeftNav";
 import { SearchResultsHeader } from
@@ -17,6 +17,10 @@ import { Paginations } from "../../components/Paginations";
 const SearchResults = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Search Results"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 3 }>

@@ -13,6 +13,7 @@ import {
     Progress
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import { ProfileLeftNav } from "./../../components/Profile/ProfileLeftNav";
 import { ProfileHeader } from "./../../components/Profile/ProfileHeader";
 import { TrTableBorderless } from "./../../Tables/Tables/components/TrTableBorderless";
@@ -20,6 +21,10 @@ import { TrTableBorderless } from "./../../Tables/Tables/components/TrTableBorde
 const BillingEdit = () => (
     <React.Fragment>
         <Container>
+            <HeaderMain 
+                title="Billing Edit"
+                className="mb-5 mt-4"
+            />
             { /* START Content */}
             <Row>
                 <Col lg={ 12 }>
