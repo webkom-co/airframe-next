@@ -18,7 +18,8 @@ const COLORS = [ colors['primary'], colors['purple'], colors['info'], colors['ye
 const TinyDonutChart = () => (
     <PieChart width={ 80 } height={ 80 }>
         <Pie
-            data={data}  
+            data={data}
+            stroke={ colors['white'] }
             innerRadius={ 20 }
             outerRadius={ 35 } 
             fill="#8884d8"

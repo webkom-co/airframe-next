@@ -22,6 +22,7 @@ export const PieChartWithPaddingAngle = () => (
         <PieChart>
             <Pie
                 data={data} 
+                stroke={ colors['white'] }
                 innerRadius={60}
                 outerRadius={80} 
                 fill="#8884d8"

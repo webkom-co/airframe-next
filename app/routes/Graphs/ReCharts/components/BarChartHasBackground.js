@@ -31,8 +31,8 @@ const BarChartHasBackground = () => (
            <YAxis/>
            <Tooltip/>
            <Legend />
-           <Bar dataKey="pv" fill={ colors['info-07'] } background={{ fill: '#eee' }} />
-           <Bar dataKey="uv" fill={ colors['purple'] } />
+           <Bar dataKey="pv" fill={ colors['info-07'] } background={{ fill: colors['200'] }} barSize={ 12 } />
+           <Bar dataKey="uv" fill={ colors['purple'] } barSize={ 12 } />
       </BarChart>
     </ResponsiveContainer>
 

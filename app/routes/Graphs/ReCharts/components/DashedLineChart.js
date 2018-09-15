@@ -40,8 +40,8 @@ const DashedLineChart = () => (
            <YAxis/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } activeDot={{r: 8}} dot={generateDot} strokeDasharray="5 5" />
-           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } strokeDasharray="3 4 5 2" />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } activeDot={{r: 5}} dot={generateDot} strokeDasharray="5 5" />
+           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} strokeDasharray="3 4 5 2" />
       </LineChart>
     </ResponsiveContainer>
 

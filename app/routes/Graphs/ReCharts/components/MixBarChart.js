@@ -31,9 +31,9 @@ const MixBarChart = () => (
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="female" stackId="a" fill={ colors['purple'] } />
-            <Bar dataKey="male" stackId="a" fill={ colors['info-07'] } />
-            <Bar dataKey="uv" fill={ colors['primary-08'] } />
+            <Bar dataKey="female" stackId="a" fill={ colors['purple'] } barSize={ 12 } />
+            <Bar dataKey="male" stackId="a" fill={ colors['info-07'] } barSize={ 12 } />
+            <Bar dataKey="uv" fill={ colors['primary-08'] } barSize={ 12 } />
         </BarChart>
     </ResponsiveContainer>
 
