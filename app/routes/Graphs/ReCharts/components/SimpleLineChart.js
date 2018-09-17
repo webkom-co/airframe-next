@@ -40,8 +40,8 @@ const SimpleLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } dot={generateDot} activeDot={{r: 8}}/>
-           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } dot={generateDot} activeDot={{r: 5}} />
+           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } dot={generateDot} activeDot={{r: 5}} />
       </LineChart>
     </ResponsiveContainer>
 );

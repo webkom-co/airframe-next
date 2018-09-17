@@ -9,7 +9,8 @@ import {
     ResponsiveContainer,
     Legend, 
     LineChart,
-    ValueLabel
+    ValueLabel,
+    Dot
 } from './../../../../components/recharts';
 
 import colors from './../../../../colors';
@@ -24,6 +25,14 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
+const generateDot = ({stroke, ...other}) => (
+    <Dot
+        { ...other }
+        fill={ stroke }
+        stroke={ colors['white'] }
+    />
+);
+
 export const CustomizedLabelLineChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <LineChart data={data}
@@ -33,8 +42,8 @@ export const CustomizedLabelLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } label={ <ValueLabel /> } />
-           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } label={ <ValueLabel /> } activeDot={{r: 5}} dot={generateDot} />
+           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
       </LineChart>
     </ResponsiveContainer>
 );

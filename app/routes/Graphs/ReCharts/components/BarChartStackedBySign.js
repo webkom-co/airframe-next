@@ -33,8 +33,8 @@ const BarChartStackedBySign = () => (
            <Tooltip/>
            <Legend />
            <ReferenceLine y={0} stroke='#000'/>
-           <Bar dataKey="pv" fill={ colors['info-07'] } stackId="stack" />
-           <Bar dataKey="uv" fill={ colors['purple'] } stackId="stack" />
+           <Bar dataKey="pv" fill={ colors['info-07'] } stackId="stack" barSize={ 12 } />
+           <Bar dataKey="uv" fill={ colors['purple'] } stackId="stack" barSize={ 12 } />
       </BarChart>
     </ResponsiveContainer>
 

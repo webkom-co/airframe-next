@@ -33,8 +33,8 @@ const SimpleBarChart = () => (
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 4 } />
-            <Bar dataKey="uv" fill={ colors['primary'] } barSize={ 4 } />
+            <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 12 } />
+            <Bar dataKey="uv" fill={ colors['primary'] } barSize={ 12 } />
         </BarChart>
     </ResponsiveContainer>
 

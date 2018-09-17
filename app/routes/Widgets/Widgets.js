@@ -85,7 +85,9 @@ import {
 import {
     TinyAreaChart
 } from "../Graphs/ReCharts/components/TinyAreaChart";
-
+import {
+    TimelineMini
+} from "../components/Timeline/TimelineMini";
 
 export const Widgets = () => (
     <Container>
@@ -461,6 +463,59 @@ export const Widgets = () => (
                         </ListGroupItem>
                         <ListGroupItem action tag={ Link } to="/apps/tasks/list" className="text-center">
                             View All Tasks
+                            <i className="fa fa-angle-right ml-2"></i>
+                        </ListGroupItem>
+                    </ListGroup>
+                </Card>
+                { /* END Card Widget */}
+                { /* START Card Widget */}
+                <Card className="mb-3">
+                    <CardBody>
+                        <CardTitle tag="h6">
+                            Timeline Mini
+                        </CardTitle>
+                        <TimelineMini 
+                            showPillDate
+                                pillDate="2 Days ago"
+                            icon="times-circle"
+                                iconClassName="text-danger"
+                            badgeTitle="Alert"
+                                badgeColor="danger"
+                        />
+                        <TimelineMini 
+                            icon="question-circle"
+                                iconClassName="text-warning"
+                            badgeTitle="Warning"
+                                badgeColor="warning"
+                        />
+                        <TimelineMini 
+                            icon="info-circle"
+                                iconClassName="text-info"
+                            badgeTitle="Info"
+                                badgeColor="info"
+                        />
+                        <TimelineMini 
+                            showPillDate
+                                pillDate="Yesterday"
+                            icon="plus-circle"
+                                iconClassName="text-primary"
+                            badgeTitle="Message"
+                                badgeColor="primary"
+                        />
+                        <TimelineMini 
+                            icon="check-circle"
+                                iconClassName="text-success"
+                            badgeTitle="Success"
+                                badgeColor="success"
+                        />
+                        <TimelineMini 
+                            icon="circle"
+                            badgeTitle="Obsolete"
+                        />
+                    </CardBody>
+                    <ListGroup flush>
+                        <ListGroupItem action tag={ Link } to="/pages/timeline" className="text-center">
+                            Timeline Details
                             <i className="fa fa-angle-right ml-2"></i>
                         </ListGroupItem>
                     </ListGroup>

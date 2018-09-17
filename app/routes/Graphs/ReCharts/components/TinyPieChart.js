@@ -21,6 +21,7 @@ const TinyPieChart = () => (
         <Pie
             data={data}  
             fill="#8884d8"
+            stroke={ colors['white'] }
             outerRadius={ 15 } 
         >
             {

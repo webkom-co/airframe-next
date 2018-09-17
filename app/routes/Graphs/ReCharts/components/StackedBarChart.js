@@ -31,8 +31,8 @@ const StackedBarChart = () => (
             <YAxis/>
             <Tooltip/>
             <Legend />
-            <Bar dataKey="pv" stackId="a" fill={ colors['info-07'] } />
-            <Bar dataKey="uv" stackId="a" fill={ colors['purple'] } />
+            <Bar dataKey="pv" stackId="a" fill={ colors['info-07'] } barSize={ 12 } />
+            <Bar dataKey="uv" stackId="a" fill={ colors['purple'] } barSize={ 12 } />
         </BarChart>
     </ResponsiveContainer>
 

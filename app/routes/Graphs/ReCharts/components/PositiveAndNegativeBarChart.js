@@ -33,8 +33,8 @@ const PositiveAndNegativeBarChart = () => (
            <Tooltip/>
            <Legend />
            <ReferenceLine y={0} stroke='#000'/>
-           <Bar dataKey="pv" fill={ colors['info-07'] } />
-           <Bar dataKey="uv" fill={ colors['purple'] } />
+           <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 12 } />
+           <Bar dataKey="uv" fill={ colors['purple'] } barSize={ 12 } />
       </BarChart>
     </ResponsiveContainer>
 

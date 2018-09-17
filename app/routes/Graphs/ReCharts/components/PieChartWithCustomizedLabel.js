@@ -22,6 +22,7 @@ export const PieChartWithCustomizedLabel = () => (
         <PieChart>
             <Pie
                 data={data} 
+                stroke={ colors['white'] }
                 labelLine={false}
                 label={<PieValueLabel />}
                 outerRadius={80} 

@@ -9,7 +9,8 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Legend,
-    ComposedChart
+    ComposedChart,
+    Dot
 } from './../../../../components/recharts';
 
 import colors from './../../../../colors';
@@ -24,6 +25,14 @@ const data = [
       {name: 'Page G', uv: 3490, pv: 4300, amt: 2100},
 ];
 
+const generateDot = ({stroke, ...other}) => (
+    <Dot
+        { ...other }
+        fill={ stroke }
+        stroke={ colors['white'] }
+    />
+);
+
 export const VerticalComposedChart = () => (
     <ResponsiveContainer width='100%' aspect={ 6.0/3.0 }>
         <ComposedChart layout="vertical" width={600} height={400} data={data}
@@ -35,7 +44,7 @@ export const VerticalComposedChart = () => (
             <Legend/>
             <Area dataKey='amt' fill={ colors['info-03'] } stroke={ colors['info'] } />
             <Bar dataKey='pv' barSize={20} fill={ colors['primary'] } />
-            <Line dataKey='uv' stroke={ colors['purple'] }/>
+            <Line dataKey='uv' stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
         </ComposedChart>
     </ResponsiveContainer>
 );
