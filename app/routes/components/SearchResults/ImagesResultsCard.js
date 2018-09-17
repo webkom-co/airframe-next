@@ -29,7 +29,7 @@ const ImagesResultsCard = () => (
                 iconChar=""
                 size={ 32 }
             >
-            <CardImg />
+            <CardImg top />
             </HolderProvider.Icon>
             <CardBody>
                 <div className="d-flex mb-3">

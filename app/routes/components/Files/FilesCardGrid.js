@@ -34,7 +34,7 @@ const FilesCardGrid = () => (
                     iconChar=""
                     size={ 32 }
                 >
-                    <CardImg />
+                    <CardImg top />
                 </HolderProvider.Icon>
                 <CardBody>
                     <h6 className="mb-2">
