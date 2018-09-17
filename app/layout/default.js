@@ -1,10 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch, Route } from 'react-router';
+import { Switch } from 'react-router';
 
 import { Layout } from './../components';
-import { NavbarDefault } from './components/NavbarDefault';
-import { SidebarDefault } from './components/SidebarDefault';
 
 import './../styles/bootstrap.scss';
 import './../styles/main.scss';
@@ -29,16 +27,12 @@ class AppLayout extends React.Component {
                 <Layout.Navbar>
                     <Switch>
                         { getNavbars() }
-
-                        <Route component={ NavbarDefault } />
                     </Switch>
                 </Layout.Navbar>
                 { /* -------- Sidebar ------------*/ }
                 <Layout.Sidebar>
                     <Switch>
                         { getSidebars() }
-                        
-                        <Route component={ SidebarDefault } />
                     </Switch>
                 </Layout.Sidebar>
 

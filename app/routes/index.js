@@ -5,6 +5,7 @@ import {
     Redirect
 } from 'react-router';
 
+// ----------- Pages Imports ---------------
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
 
@@ -14,6 +15,7 @@ import Cards from './Cards/Cards';
 import CardsHeaders from './Cards/CardsHeaders';
 
 import NavbarOnly from './Layouts/NavbarOnly';
+import LayoutA from './Layouts/LayoutA';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -78,6 +80,13 @@ import Success from './Pages/Success';
 
 import Icons from './Icons';
 
+// ----------- Layout Imports ---------------
+import { DefaultNavbar } from './../layout/components/DefaultNavbar';
+import { DefaultSidebar } from './../layout/components/DefaultSidebar';
+
+import { LayoutANavbar } from './../layout/components/LayoutANavbar';
+import { LayoutASidebar } from './../layout/components/LayoutASidebar';
+
 //------ Route Definitions --------
 // eslint-disable-next-line no-unused-vars
 const getRoutes = (store) => {
@@ -96,6 +105,7 @@ const getRoutes = (store) => {
             
             { /*    Layouts     */ }
             <Route path='/layouts/navbar-only' component={NavbarOnly} />
+            <Route path='/layouts/layout-a' component={LayoutA} />
 
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />
@@ -176,6 +186,17 @@ const getRoutes = (store) => {
 // NOTICE: Provide unique *key*'s as the layout parts are
 // provided through an array.
 const getNavbars = () => [
+    // Default Navbar:
+    <Route
+        component={ DefaultNavbar }
+        key="navbar__layout--default"
+    />,
+    // Other Navbars:
+    <Route
+        component={ LayoutANavbar }
+        path="/layouts/layout-a"
+        key="navbar__layout--layout-a"
+    />,
     <Route
         component={ NavbarOnly.Navbar }
         path="/layouts/navbar-only"
@@ -184,6 +205,17 @@ const getNavbars = () => [
 ];
 
 const getSidebars = () => [
+    // Default Sidebar:
+    <Route
+        component={ DefaultSidebar }
+        key="sidebar__layout--default"
+    />,
+    // OtherSidebars
+    <Route
+        component={ LayoutASidebar }
+        path="/layouts/layout-a"
+        key="sidebar__layout--layout-a"
+    />
 ];
 
 export {
