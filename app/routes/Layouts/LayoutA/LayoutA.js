@@ -13,7 +13,7 @@ export const LayoutA = () => (
         <Row>
             <Col>
                 <HeaderMain 
-                    title="Layout A"
+                    title="Sidebar A"
                     className="mb-5 mt-4"
                 />
 
