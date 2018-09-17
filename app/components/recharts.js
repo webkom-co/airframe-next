@@ -4,6 +4,7 @@ import { XAxis } from './Recharts/XAxis';
 import { YAxis } from './Recharts/YAxis';
 import { ZAxis } from './Recharts/ZAxis';
 import { PolarRadiusAxis } from './Recharts/PolarRadiusAxis';
+import { PolarAngleAxis } from './Recharts/PolarAngleAxis';
 import { ValueLabel } from './Recharts/ValueLabel';
 import { DefAreaValueColor } from './Recharts/DefAreaValueColor';
 import { PieValueLabel } from './Recharts/PieValueLabel';
@@ -17,6 +18,7 @@ export {
     YAxis,
     ZAxis,
     PolarRadiusAxis,
+    PolarAngleAxis,
     PieValueLabel
 };
 
@@ -52,7 +54,6 @@ export {
     PickedCSSStyleDeclarationKeys,
     Pie,
     PieChart,
-    PolarAngleAxis,
     PolarRadiusAxisDomain,
     Polygon,
     Radar,

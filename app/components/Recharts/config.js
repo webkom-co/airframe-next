@@ -15,10 +15,21 @@ export default {
         strokeWidth: 2,
         style: {
             fontSize: '12px'
+        },
+        tick: {
+            fill: colors['primary']
         }
     },
     polarRadiusAxis: {
-        stroke: colors['400']
+        stroke: colors['400'],
+        tick: {
+            fill: colors['danger']
+        }
+    },
+    polarAngleAxis: {
+        tick: {
+            fill: colors['warning']
+        }
     },
     label: {
         fontSize: 10,

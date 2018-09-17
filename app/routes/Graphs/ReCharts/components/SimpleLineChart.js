@@ -31,6 +31,14 @@ const generateDot = ({stroke, ...other}) => (
     />
 );
 
+const generateActiveDot = (props) => (
+    <Dot
+        { ...props }
+        stroke={ colors['white'] }
+        r={ 5 }
+    />
+);
+
 const SimpleLineChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <LineChart data={data}
@@ -40,8 +48,8 @@ const SimpleLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } dot={generateDot} activeDot={{r: 5}} />
-           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } dot={generateDot} activeDot={{r: 5}} />
+           <Line type="monotone" dataKey="pv" stroke={ colors['info'] } dot={generateDot} activeDot={generateActiveDot} />
+           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } dot={generateDot} activeDot={generateActiveDot} />
       </LineChart>
     </ResponsiveContainer>
 );

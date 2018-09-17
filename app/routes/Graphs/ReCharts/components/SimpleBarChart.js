@@ -29,8 +29,8 @@ const SimpleBarChart = () => (
             margin={{top: 5, right: 30, left: 20, bottom: 5}}
         >
             <CartesianGrid strokeDasharray="3 3"/>
-            <XAxis dataKey="name" tick={{ fill: colors['primary'] }}/>
-            <YAxis tick={{ fill: colors['success'] }}/>
+            <XAxis dataKey="name" />
+            <YAxis />
             <Tooltip
                 contentStyle={{
                     background: colors['warning'],
