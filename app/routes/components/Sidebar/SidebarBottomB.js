@@ -6,6 +6,8 @@ import {
     Tools,
     UncontrolledButtonDropdown,
     DropdownToggle,
+    UncontrolledPopover,
+    PopoverBody,
     Media,
     Avatar,
     AvatarAddOn
@@ -19,7 +21,7 @@ const SidebarBottomB = () => (
     <React.Fragment>
         { /* START Sidebar BOTTOM: B */ }
         <Sidebar.Section>
-            { /* Capacity / Storage (non-slim only) */ }
+            { /* START DESKTOP View */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown direction="up" className="mb-3">
                     <DropdownToggle color="link" className="text-left pl-0 pb-0">
@@ -54,8 +56,50 @@ const SidebarBottomB = () => (
                     </DropdownToggle>
                     <DropdownProfile />
                 </UncontrolledButtonDropdown>
+            </Tools.DefaultOnly>
+            { /* END DESKTOP View */ }
+            { /* START SLIM Only View */ }
+            <Tools.SlimOnly>
+                <div className="text-center">
+                    <UncontrolledButtonDropdown direction="right" className="mb-3">
+                        <DropdownToggle color="link" className="text-left pl-0 pb-0">
+                            <Avatar.Image
+                                size="sm"
+                                src={ randomAvatar() }
+                                addOns={[
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="white"
+                                        key="avatar-icon-bg"
+                                    />,
+                                    <AvatarAddOn.Icon 
+                                        className="fa fa-circle"
+                                        color="success"
+                                        key="avatar-icon-fg"
+                                    />
+                                ]}
+                            /> 
+                        </DropdownToggle>
+                        <DropdownProfile />
+                    </UncontrolledButtonDropdown>
+                </div>
+            </Tools.SlimOnly>
+            { /* END SLIM Only View  */ }
+            { /* START DESKTOP View */ }
+            <Tools.DefaultOnly>
                 <FooterAuth />
             </Tools.DefaultOnly>
+            { /* END DESKTOP View */ }
+            { /* START SLIM Only View */ }
+            <Tools.SlimOnly>
+                <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
+                    <UncontrolledPopover placement="left" target="UncontrolledSidebarPopoverFooter">
+                        <PopoverBody>
+                            { faker.lorem.paragraph() }
+                        </PopoverBody>
+                    </UncontrolledPopover>
+            </Tools.SlimOnly>
+            { /* END SLIM Only View */ }
         </Sidebar.Section>
         { /* END Sidebar BOTTOM: B */ }
     </React.Fragment>

@@ -20,7 +20,7 @@ const SidebarTopA = () => (
     <React.Fragment>
         { /* START Sidebar TOP: A */ }
         <Sidebar.Section className="pt-0">
-            { /* START Avatar */ }
+            { /* START SIDEBAR-SLIM: Avatar */ }
             <Link to="/">
                 <Tools.SlimProps
                     slimProps={{ size: 'md' }}
@@ -43,9 +43,9 @@ const SidebarTopA = () => (
                     />
                 </Tools.SlimProps>
             </Link>
-            { /* END Avatar */ }
+            { /* END SIDEBAR-SLIM: Avatar */ }
             <br />
-            { /* User Info (non-slim only) */ }
+            { /* START SIDEBAR-DEFAULT: Dropdown */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown>
                     <DropdownToggle color="link" className="pl-0 pb-0">
@@ -78,6 +78,7 @@ const SidebarTopA = () => (
                     { faker.name.jobTitle() }
                 </span>
             </Tools.DefaultOnly>
+            { /* END SIDEBAR-DEFAULT: Dropdown */ }
         </Sidebar.Section>
         { /* END Sidebar TOP: A */ }
     </React.Fragment>

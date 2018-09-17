@@ -14,31 +14,35 @@ import { SidebarBottomA } from '../../routes/components/Sidebar/SidebarBottomA'
 
 export const DefaultSidebar = () => (
     <Sidebar>
+        { /* START SIDEBAR-OVERLAY: Close (x) */ }
         <Sidebar.Close>
             <SidebarTrigger tag={ 'a' } href="javascript:;">
                 <i className="fa fa-times-circle fa-fw"></i>
             </SidebarTrigger>
         </Sidebar.Close>
+        { /* START SIDEBAR-OVERLAY: Close (x) */ }
         
         <Sidebar.Section>
-            { /* START Logo */ }
+            { /* START SIDEBAR: Only for Desktop */ }
             <Tools.DefaultOnly>
                 <Link to="/" className="h4 fw-600 text-primary">
                     react.bs4
                 </Link>
             </Tools.DefaultOnly>
-            { /* END Logo */ }
+            { /* START SIDEBAR: Only for Desktop */ }
         </Sidebar.Section>
 
+        { /* START SIDEBAR: Only for Mobile */ }
         <Sidebar.MobileFluid>
             <SidebarTopA />
             
             <Sidebar.Section fluid cover>
-                { /* Sidebar Menu */ }
+                { /* SIDEBAR: Menu */ }
                 <DefaultSidebarNav />
             </Sidebar.Section>
 
             <SidebarBottomA />
         </Sidebar.MobileFluid>
+        { /* END SIDEBAR: Only for Mobile */ }
     </Sidebar>
 );
