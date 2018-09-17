@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import faker from 'faker';
 import _ from 'lodash';
 import PropTypes from 'prop-types';
@@ -38,9 +37,9 @@ const NavbarMessages = (props) => (
         <ExtendedDropdown right>
             <ExtendedDropdown.Section className="d-flex justify-content-between align-items-center">
                 <h6 className="mb-0">Messages</h6>
-                <Link to="/apps/new-email">
+                <ExtendedDropdown.Link to="/apps/new-email">
                     <i className="fa fa-pencil" />
-                </Link>
+                </ExtendedDropdown.Link>
             </ExtendedDropdown.Section>
             <ExtendedDropdown.Section>
                 <InputGroup>
@@ -57,7 +56,7 @@ const NavbarMessages = (props) => (
                 <ListGroup>
                 {
                     _.times(3, (index) => (
-                        <ListGroupItem tag={ Link } to="/apps/email-details" key={ index } action>
+                        <ListGroupItem tag={ ExtendedDropdown.Link } to="/apps/email-details" key={ index } action>
                             <Media>
                                 <Media left>
                                     <Avatar.Image
@@ -88,7 +87,7 @@ const NavbarMessages = (props) => (
                 </ListGroup>
             </ExtendedDropdown.Section>
 
-            <ExtendedDropdown.Section className="text-center" tag={ Link } to="/apps/inbox">
+            <ExtendedDropdown.Section className="text-center" tag={ ExtendedDropdown.Link } to="/apps/inbox">
                 View All
                 <i className="fa fa-angle-right fa-fw ml-2" />
             </ExtendedDropdown.Section>
