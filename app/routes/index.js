@@ -77,6 +77,7 @@ import LockScreen from './Pages/LockScreen';
 import Login from './Pages/Login';
 import Register from './Pages/Register';
 import Success from './Pages/Success';
+import Timeline from './Pages/Timeline';
 
 import Icons from './Icons';
 
@@ -173,6 +174,7 @@ const getRoutes = (store) => {
             <Route component={ Login } path="/pages/login" />
             <Route component={ Register } path="/pages/register" />
             <Route component={ Success } path="/pages/success" />
+            <Route component={ Timeline } path="/pages/timeline" />
 
             <Route path='/icons' exact component={Icons} />
 
