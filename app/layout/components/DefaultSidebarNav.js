@@ -142,6 +142,7 @@ export const DefaultSidebarNav = () => (
             <SidebarMenu.Item title="Success" to="/pages/success" />
             <SidebarMenu.Item title="Danger" to="/pages/danger" />
             <SidebarMenu.Item title="Coming Soon" to="/pages/coming-soon" />
+            <SidebarMenu.Item title="Timeline" to="/pages/timeline" />
         </SidebarMenu.Item>
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-star-o"></i>}
