@@ -7,7 +7,7 @@ import {
     Tooltip, 
     ResponsiveContainer,
     Legend, 
-    Bar 
+    Bar
 } from './../../../../components/recharts';
 
 import colors from './../../../../colors';
@@ -29,10 +29,19 @@ const SimpleBarChart = () => (
             margin={{top: 5, right: 30, left: 20, bottom: 5}}
         >
             <CartesianGrid strokeDasharray="3 3"/>
-            <XAxis dataKey="name"/>
-            <YAxis/>
-            <Tooltip/>
-            <Legend />
+            <XAxis dataKey="name" tick={{ fill: colors['primary'] }}/>
+            <YAxis tick={{ fill: colors['success'] }}/>
+            <Tooltip
+                contentStyle={{
+                    background: colors['warning'],
+                    border: `1px solid ${colors['danger']}`,
+                    color: colors['white']
+                }}
+                cursor={{
+                    fill: colors['info-04']
+                }}
+            />
+            <Legend wrapperStyle={{ color: colors['twitter'] }}/>
             <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 12 } />
             <Bar dataKey="uv" fill={ colors['primary'] } barSize={ 12 } />
         </BarChart>
