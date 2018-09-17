@@ -466,6 +466,7 @@ const Tables = () => (
                             <tbody>
                                 <TrTableDefault 
                                     projectColor="text-white"
+                                    leaderStatus="900"
                                 />
                             </tbody>
                         </Table>

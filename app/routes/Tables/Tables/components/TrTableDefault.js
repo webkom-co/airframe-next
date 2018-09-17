@@ -53,7 +53,7 @@ const TrTableDefault = (props) => (
                                     addOns={[
                                         <AvatarAddOn.Icon 
                                             className="fa fa-circle"
-                                            color="text-white"
+                                            color={ props.leaderStatus }
                                             key="avatar-icon-bg"
                                         />,
                                         <AvatarAddOn.Icon 
@@ -114,10 +114,12 @@ const TrTableDefault = (props) => (
 )
 
 TrTableDefault.propTypes = {
-    projectColor: PropTypes.node
+    projectColor: PropTypes.node,
+    leaderStatus: PropTypes.node,
 };
 TrTableDefault.defaultProps = {
-    projectColor: "text-inverse"
+    projectColor: "text-inverse",
+    leaderStatus: "white"
 };
 
 export { TrTableDefault };
