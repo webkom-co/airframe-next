@@ -185,10 +185,6 @@ const getRoutes = (store) => {
 //------ Custom Layout Parts --------
 const getNavbars = () => (
     <Switch>
-        { /* Default Navbar: */}
-        <Route
-            component={ DefaultNavbar }
-        />
         { /* Other Navbars: */}
         <Route
             component={ LayoutANavbar }
@@ -198,19 +194,23 @@ const getNavbars = () => (
             component={ NavbarOnly.Navbar }
             path="/layouts/navbar-only"
         />
+        { /* Default Navbar: */}
+        <Route
+            component={ DefaultNavbar }
+        />
     </Switch>  
 );
 
 const getSidebars = () => (
     <Switch>
-        { /* Default Sidebar: */}
-        <Route
-            component={ DefaultSidebar }
-        />
         { /* Other Sidebars: */}
         <Route
             component={ LayoutASidebar }
             path="/layouts/layout-a"
+        />
+        { /* Default Sidebar: */}
+        <Route
+            component={ DefaultSidebar }
         />
     </Switch>
 );

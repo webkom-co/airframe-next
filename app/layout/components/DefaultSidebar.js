@@ -12,7 +12,7 @@ import { DefaultSidebarNav } from './DefaultSidebarNav';
 import { SidebarTopA } from '../../routes/components/Sidebar/SidebarTopA'
 import { SidebarBottomA } from '../../routes/components/Sidebar/SidebarBottomA'
 
-export const SidebarDefault = () => (
+export const DefaultSidebar = () => (
     <Sidebar>
         <Sidebar.Close>
             <SidebarTrigger tag={ 'a' } href="javascript:;">
