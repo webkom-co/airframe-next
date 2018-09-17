@@ -183,40 +183,37 @@ const getRoutes = (store) => {
 };
 
 //------ Custom Layout Parts --------
-// NOTICE: Provide unique *key*'s as the layout parts are
-// provided through an array.
-const getNavbars = () => [
-    // Default Navbar:
-    <Route
-        component={ DefaultNavbar }
-        key="navbar__layout--default"
-    />,
-    // Other Navbars:
-    <Route
-        component={ LayoutANavbar }
-        path="/layouts/layout-a"
-        key="navbar__layout--layout-a"
-    />,
-    <Route
-        component={ NavbarOnly.Navbar }
-        path="/layouts/navbar-only"
-        key="navbar__layout--navbar-only"
-    />
-];
+const getNavbars = () => (
+    <Switch>
+        { /* Default Navbar: */}
+        <Route
+            component={ DefaultNavbar }
+        />
+        { /* Other Navbars: */}
+        <Route
+            component={ LayoutANavbar }
+            path="/layouts/layout-a"
+        />
+        <Route
+            component={ NavbarOnly.Navbar }
+            path="/layouts/navbar-only"
+        />
+    </Switch>  
+);
 
-const getSidebars = () => [
-    // Default Sidebar:
-    <Route
-        component={ DefaultSidebar }
-        key="sidebar__layout--default"
-    />,
-    // OtherSidebars
-    <Route
-        component={ LayoutASidebar }
-        path="/layouts/layout-a"
-        key="sidebar__layout--layout-a"
-    />
-];
+const getSidebars = () => (
+    <Switch>
+        { /* Default Sidebar: */}
+        <Route
+            component={ DefaultSidebar }
+        />
+        { /* Other Sidebars: */}
+        <Route
+            component={ LayoutASidebar }
+            path="/layouts/layout-a"
+        />
+    </Switch>
+);
 
 export {
     getRoutes,

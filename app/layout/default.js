@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Switch } from 'react-router';
 
 import { Layout } from './../components';
 
@@ -25,15 +24,11 @@ class AppLayout extends React.Component {
             <Layout sidebarSlim>
                 { /* --------- Navbar ----------- */ }
                 <Layout.Navbar>
-                    <Switch>
-                        { getNavbars() }
-                    </Switch>
+                    { getNavbars() }
                 </Layout.Navbar>
                 { /* -------- Sidebar ------------*/ }
                 <Layout.Sidebar>
-                    <Switch>
-                        { getSidebars() }
-                    </Switch>
+                    { getSidebars() }
                 </Layout.Sidebar>
 
                 { /* -------- Content ------------*/ }
