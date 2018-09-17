@@ -29,8 +29,9 @@ export const DefaultSidebarNav = () => (
             icon={<i className="fa fa-fw fa-columns"></i>}
             title="Layouts"
         >
-            <SidebarMenu.Item title="Navbar Only" to='/layouts/navbar-only' exact />
-            <SidebarMenu.Item title="Layout A" to='/layouts/layout-a' exact />
+            <SidebarMenu.Item title="Navbar" to='/layouts/navbar-only' exact />
+            <SidebarMenu.Item title="Sidebar (Default)" to='/' exact />
+            <SidebarMenu.Item title="Sidebar (Default)" to='/layouts/layout-a' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
