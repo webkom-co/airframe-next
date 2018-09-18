@@ -34,6 +34,8 @@ import { ChatLeft } from "../../components/Chat/ChatLeft";
 import { ChatRight } from "../../components/Chat/ChatRight";
 import { ChatCardFooter } from "../../components/Chat/ChatCardFooter";
 import { TrTableMessages } from "./components/TrTableMessages";
+import { TimelineDefault } from "../../components/Timeline/TimelineDefault";
+
 
 const ProfileDetails = () => (
     <React.Fragment>
@@ -147,7 +149,7 @@ const ProfileDetails = () => (
                         { /* END Pills Nav */}
                         <UncontrolledTabs.TabContent>
                             <TabPane tabId="overview">
-                                <CardGroup>
+                                <CardGroup className="mb-5">
                                     <Card body>
                                         <ProfileOverviewCard 
                                             title="Views"
@@ -188,6 +190,44 @@ const ProfileDetails = () => (
                                         />
                                     </Card>
                                 </CardGroup>
+                                <TimelineDefault 
+                                    showPillDate
+                                        pillDate="Today"
+                                    smallIconColor="danger"
+                                    iconCircleColor="danger"
+                                        iconCircle="exclamation"
+                                />
+                                <TimelineDefault
+                                    showPillDate
+                                        pillDate="Yesterday"
+                                    smallIconColor="info"
+                                    iconCircleColor="info"
+                                        iconCircle="comment"
+                                />
+                                <TimelineDefault
+                                    showPillDate
+                                        pillDate="2 Days ago"
+                                    smallIconColor="primary"
+                                    iconCircleColor="primary"
+                                        iconCircle="envelope"
+                                />
+                                <TimelineDefault 
+                                    showPillDate
+                                        pillDate="3 Months ago"
+                                    smallIconColor="warning"
+                                    iconCircleColor="warning"
+                                        iconCircle="clock-o"
+                                />
+                                <TimelineDefault 
+                                    showPillDate
+                                        pillDate="Year ago"
+                                    smallIconColor="success"
+                                    iconCircleColor="success"
+                                        iconCircle="check"
+                                />
+                                <TimelineDefault 
+                                    iconCircle="close"
+                                />
                             </TabPane>
                             <TabPane tabId="detailContact">
                                 <Card body>
