@@ -85,8 +85,8 @@ import Icons from './Icons';
 import { DefaultNavbar } from './../layout/components/DefaultNavbar';
 import { DefaultSidebar } from './../layout/components/DefaultSidebar';
 
-import { LayoutANavbar } from './../layout/components/LayoutANavbar';
-import { LayoutASidebar } from './../layout/components/LayoutASidebar';
+import { SidebarANavbar } from './../layout/components/SidebarANavbar';
+import { SidebarASidebar } from './../layout/components/SidebarASidebar';
 
 //------ Route Definitions --------
 // eslint-disable-next-line no-unused-vars
@@ -189,7 +189,7 @@ const getNavbars = () => (
     <Switch>
         { /* Other Navbars: */}
         <Route
-            component={ LayoutANavbar }
+            component={ SidebarANavbar }
             path="/layouts/layout-a"
         />
         <Route
@@ -207,7 +207,7 @@ const getSidebars = () => (
     <Switch>
         { /* Other Sidebars: */}
         <Route
-            component={ LayoutASidebar }
+            component={ SidebarASidebar }
             path="/layouts/layout-a"
         />
         { /* Default Sidebar: */}

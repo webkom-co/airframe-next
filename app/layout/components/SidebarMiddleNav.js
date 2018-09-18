@@ -2,7 +2,7 @@ import React from 'react';
 
 import { SidebarMenu } from './../../components';
 
-export const DefaultSidebarNav = () => (
+export const SidebarMiddleNav = () => (
     <SidebarMenu>
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-home"></i>}
@@ -31,7 +31,7 @@ export const DefaultSidebarNav = () => (
         >
             <SidebarMenu.Item title="Navbar" to='/layouts/navbar-only' exact />
             <SidebarMenu.Item title="Sidebar (Default)" to='/' exact />
-            <SidebarMenu.Item title="Sidebar (Default)" to='/layouts/layout-a' exact />
+            <SidebarMenu.Item title="Sidebar A" to='/layouts/layout-a' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item

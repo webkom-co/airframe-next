@@ -11,7 +11,7 @@ import { NavbarActivityFeed } from './NavbarActivityFeed';
 import { NavbarMessages } from './NavbarMessages';
 import { NavbarUser } from './NavbarUser';
 
-export const LayoutANavbar = () => (
+export const SidebarANavbar = () => (
     <Navbar light color="none" expand="xs">
         <Nav navbar>
             <NavItem className="mr-3">

@@ -23,20 +23,25 @@ export const LayoutA = () => (
                 </p>
                 <ul>
                     <li>
-                        Top Fixed Section: <code>/app/routes/components/Sidebar/<strong>SidebarTopB</strong></code>
+                        Main Sidebar: <code>/app/layout/components/<strong>SidebarASidebar</strong></code>
                     </li>
-                    <li>
-                        Middle Section <i>(navigation)</i>: <code>/app/routes/components/Sidebar/<strong>DefaultSidebarNav</strong></code>
-                    </li>
-                    <li>
-                        Bottom Section <i>(footer)</i>: <code>/app/routes/components/Sidebar/<strong>SidebarBottomB</strong></code>
-                    </li>
+                    <ul>
+                        <li>
+                            Top Fixed Section: <code>/app/routes/components/Sidebar/<strong>SidebarTopB</strong></code>
+                        </li>
+                        <li>
+                            Middle Section <i>(navigation)</i>: <code>/app/layout/components/<strong>SidebarMiddleNav</strong></code>
+                        </li>
+                        <li>
+                            Bottom Section <i>(footer)</i>: <code>/app/routes/components/Sidebar/<strong>SidebarBottomB</strong></code>
+                        </li>
+                    </ul>
                 </ul>
                 <hr/>
                 <h6>Sidebar Code Example:</h6>
                 <pre>
                     <code>
-                    &lt;Sidebar&gt; <br /><br />
+                    &lt;Sidebar&gt; <br />
                         &nbsp; /* START SIDEBAR-OVERLAY: Close (x) */ <br />
                         &nbsp; &lt;Sidebar.Close&gt;<br />
                         &nbsp; &nbsp; &lt;SidebarTrigger tag={ 'a' } href="javascript:;"&gt;<br />
@@ -56,12 +61,12 @@ export const LayoutA = () => (
                         &nbsp; &nbsp; /* START SIDEBAR: Everywhere */<br />
                         &nbsp; &nbsp; &lt; Sidebar.Section fluid cover&gt;<br />
                         &nbsp; &nbsp; /* SIDEBAR: Menu */<br />
-                        &nbsp; &nbsp; <strong>&lt;DefaultSidebarNav /&gt;</strong><br />
+                        &nbsp; &nbsp; <strong>&lt;SidebarMiddleNav /&gt;</strong><br />
                         &nbsp; &nbsp; &lt;/Sidebar.Section&gt;<br />
                         &nbsp; &nbsp; /* END SIDEBAR: Everywhere */<br />
                         &nbsp; &nbsp; <strong>&lt;SidebarBottomB /&gt;</strong><br />
                         &nbsp; &lt;/Sidebar.MobileFluid&gt;<br />
-                        &nbsp; /* END SIDEBAR: Mobile Scroll Wrapper */<br /><br />
+                        &nbsp; /* END SIDEBAR: Mobile Scroll Wrapper */<br />
                     &lt;/Sidebar&gt;
                     </code>
                 </pre>
@@ -72,22 +77,23 @@ export const LayoutA = () => (
                 </p>
                 <ul>
                     <li>
-                        Main Navbar <i>(top)</i>: <code>/app/layout/components/<strong>LayoutANavbar</strong></code>
+                        Main Navbar: <code>/app/layout/components/<strong>SidebarANavbar</strong></code>
                     </li>
-                    <li>
-                        Top Right <i>(icon bell with badge)</i>: <code>/app/layout/components/<strong>NavbarActivityFeed</strong></code>
-                    </li>
-                    <li>
-                        Top Right <i>(icon envelope with badge)</i>: <code>/app/layout/components/<strong>NavbarMessages</strong></code>
-                    </li>
-                    <li>
-                        Top Right <i>(icon power off)</i>: <code>/app/layout/components/<strong>NavbarUser</strong></code>
-                    </li>
+                    <ul>
+                        <li>
+                            Top Right <i>(icon bell with badge)</i>: <code>/app/layout/components/<strong>NavbarActivityFeed</strong></code>
+                        </li>
+                        <li>
+                            Top Right <i>(icon envelope with badge)</i>: <code>/app/layout/components/<strong>NavbarMessages</strong></code>
+                        </li>
+                        <li>
+                            Top Right <i>(icon power off)</i>: <code>/app/layout/components/<strong>NavbarUser</strong></code>
+                        </li>
+                    </ul>
                 </ul>
-                <strong>Navbar Code Example:</strong>
-
+                <h6>Navbar Code Example:</h6>
                 <pre>
-                    <code><br />
+                    <code>
                         &lt;Navbar light color="none" expand="xs"&gt;<br />
                             &nbsp; &lt;Nav navbar&gt;<br />
                             &nbsp; &nbsp; &lt;NavItem className="mr-3"&gt;<br />

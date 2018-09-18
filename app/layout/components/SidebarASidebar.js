@@ -7,12 +7,12 @@ import {
     SidebarTrigger
 } from './../../components';
 
-import { DefaultSidebarNav } from './DefaultSidebarNav';
+import { SidebarMiddleNav } from './SidebarMiddleNav';
 
 import { SidebarTopB } from '../../routes/components/Sidebar/SidebarTopB'
 import { SidebarBottomB } from '../../routes/components/Sidebar/SidebarBottomB'
 
-export const LayoutASidebar = () => (
+export const SidebarASidebar = () => (
     <Sidebar>
         { /* START SIDEBAR-OVERLAY: Close (x) */ }
         <Sidebar.Close>
@@ -33,7 +33,7 @@ export const LayoutASidebar = () => (
             { /* START SIDEBAR: Everywhere */ }
             <Sidebar.Section fluid cover>
                 { /* SIDEBAR: Menu */ }
-                <DefaultSidebarNav />
+                <SidebarMiddleNav />
             </Sidebar.Section>
             { /* END SIDEBAR: Everywhere */ }
             <SidebarBottomB />

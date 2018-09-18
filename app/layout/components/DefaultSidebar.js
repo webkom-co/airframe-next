@@ -7,7 +7,7 @@ import {
     Tools
 } from './../../components';
 
-import { DefaultSidebarNav } from './DefaultSidebarNav';
+import { SidebarMiddleNav } from './SidebarMiddleNav';
 
 import { SidebarTopA } from '../../routes/components/Sidebar/SidebarTopA'
 import { SidebarBottomA } from '../../routes/components/Sidebar/SidebarBottomA'
@@ -38,7 +38,7 @@ export const DefaultSidebar = () => (
             
             <Sidebar.Section fluid cover>
                 { /* SIDEBAR: Menu */ }
-                <DefaultSidebarNav />
+                <SidebarMiddleNav />
             </Sidebar.Section>
 
             <SidebarBottomA />
