@@ -18,6 +18,11 @@ export const DefaultNavbar = () => (
             <NavItem className="mr-3">
                 <SidebarTrigger/>
             </NavItem>
+            <NavItem className="navbar-brand h5 mb-0 d-lg-none">
+                <Link to="/">
+                    react.bs4
+                </Link>
+            </NavItem>
             <NavItem className="d-none d-md-block">
                 <span className="navbar-text">
                     <Link to="/">
