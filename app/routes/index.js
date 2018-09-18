@@ -15,6 +15,7 @@ import Cards from './Cards/Cards';
 import CardsHeaders from './Cards/CardsHeaders';
 
 import NavbarOnly from './Layouts/NavbarOnly';
+import SidebarDefault from './Layouts/SidebarDefault';
 import SidebarA from './Layouts/SidebarA';
 
 import Accordions from './Interface/Accordions';
@@ -106,6 +107,7 @@ const getRoutes = (store) => {
             
             { /*    Layouts     */ }
             <Route path='/layouts/navbar-only' component={NavbarOnly} />
+            <Route path='/layouts/sidebar-default' component={SidebarDefault} />
             <Route path='/layouts/sidebar-a' component={SidebarA} />
 
             { /*    Interface Routes   */ }

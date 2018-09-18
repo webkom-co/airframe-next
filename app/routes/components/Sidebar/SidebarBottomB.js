@@ -16,6 +16,7 @@ import { randomAvatar } from './../../../utilities';
 
 import { DropdownProfile } from '../Dropdowns/DropdownProfile';
 import { FooterAuth } from '../Pages/FooterAuth';
+import { FooterText } from '../FooterText';
 
 const SidebarBottomB = () => (
     <React.Fragment>
@@ -92,12 +93,14 @@ const SidebarBottomB = () => (
             { /* END DESKTOP View */ }
             { /* START SLIM Only View */ }
             <Tools.SlimOnly>
-                <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
-                    <UncontrolledPopover placement="left" target="UncontrolledSidebarPopoverFooter">
+                <div className="text-center">
+                    <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
+                    <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
                         <PopoverBody>
-                            { faker.lorem.paragraph() }
+                            <FooterText />
                         </PopoverBody>
                     </UncontrolledPopover>
+                </div>
             </Tools.SlimOnly>
             { /* END SLIM Only View */ }
         </Sidebar.Section>
