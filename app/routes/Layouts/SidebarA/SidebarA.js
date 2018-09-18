@@ -8,7 +8,7 @@ import {
 } from './../../../components';
 import { HeaderMain } from "../../components/HeaderMain";
 
-export const LayoutA = () => (
+export const SidebarA = () => (
     <Container>
         <Row>
             <Col>

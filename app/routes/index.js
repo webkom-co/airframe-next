@@ -15,7 +15,7 @@ import Cards from './Cards/Cards';
 import CardsHeaders from './Cards/CardsHeaders';
 
 import NavbarOnly from './Layouts/NavbarOnly';
-import LayoutA from './Layouts/LayoutA';
+import SidebarA from './Layouts/SidebarA';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -106,7 +106,7 @@ const getRoutes = (store) => {
             
             { /*    Layouts     */ }
             <Route path='/layouts/navbar-only' component={NavbarOnly} />
-            <Route path='/layouts/layout-a' component={LayoutA} />
+            <Route path='/layouts/sidebar-a' component={SidebarA} />
 
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />
@@ -190,7 +190,7 @@ const getNavbars = () => (
         { /* Other Navbars: */}
         <Route
             component={ SidebarANavbar }
-            path="/layouts/layout-a"
+            path="/layouts/sidebar-a"
         />
         <Route
             component={ NavbarOnly.Navbar }
@@ -208,7 +208,7 @@ const getSidebars = () => (
         { /* Other Sidebars: */}
         <Route
             component={ SidebarASidebar }
-            path="/layouts/layout-a"
+            path="/layouts/sidebar-a"
         />
         { /* Default Sidebar: */}
         <Route
