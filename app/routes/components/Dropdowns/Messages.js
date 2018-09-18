@@ -6,7 +6,14 @@ import {
     AvatarAddOn,
     Media
 } from './../../../components';
-import { randomAvatar } from './../../../utilities';
+import { randomArray, randomAvatar } from './../../../utilities';
+
+const status = [
+    "success",
+    "danger",
+    "warning",
+    "secondary"
+];
 
 const Messages = () => (
     <React.Fragment>
@@ -23,7 +30,7 @@ const Messages = () => (
                         />,
                         <AvatarAddOn.Icon 
                             className="fa fa-circle"
-                            color="success"
+                            color={ randomArray(status) }
                             key="avatar-icon-fg"
                         />
                     ]}
