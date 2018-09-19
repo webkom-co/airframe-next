@@ -754,7 +754,7 @@ const Typography = () => (
             <Row>
                 <Col lg={ 12 }>
                     <HeaderDemo 
-                        no={4} 
+                        no={5} 
                         title="Lists" 
                         className="mt-5"
                         subTitle="For quoting blocks of content from another source within your document."
@@ -858,6 +858,103 @@ const Typography = () => (
                 </Col>
             </Row>
             { /* END Section 5 */}
+            { /* START Header 6 */}
+            <Row>
+                <Col lg={ 12 }>
+                    <HeaderDemo 
+                        no={6} 
+                        title="Code" 
+                        className="mt-5"
+                        subTitle="Documentation and examples for displaying inline and multiline blocks of code with Bootstrap."
+                    />
+                </Col>
+            </Row>
+            { /* END Header 6 */}
+            { /* START Section 6 */}
+            <Row>
+                <Col lg={ 6 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Code: Inline Code
+                                <span className="small ml-1 text-muted">
+                                    #6.01
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Wrap inline snippets of code with <code>&lt;code&gt;</code>. 
+                                Be sure to escape HTML angle brackets.
+                            </p>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Code: Variables
+                                <span className="small ml-1 text-muted">
+                                    #6.03
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                For indicating variables use the <code>&lt;var&gt;</code> tag.
+                            </p>
+                            <var>y</var> = <var>m</var><var>x</var> + <var>b</var>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Code: User Input
+                                <span className="small ml-1 text-muted">
+                                    #6.04
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Use the <code>&lt;kbd&gt;</code> to indicate input that is typically entered via keyboard.
+                            </p>
+                            To switch directories, type <kbd>cd</kbd> followed by the name of 
+                            the directory.<br />
+                            To edit settings, press <kbd><kbd>ctrl</kbd> + <kbd>,</kbd></kbd>
+                        </CardBody>
+                    </Card>
+                </Col>
+                <Col lg={ 6 }>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Code: Sample Output
+                                <span className="small ml-1 text-muted">
+                                    #6.05
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                For indicating sample output from a program use the <code>&lt;samp&gt;</code> tag.
+                            </p>
+                            <samp>This text is meant to be treated as sample output from a computer program.</samp>
+                        </CardBody>
+                    </Card>
+                    <Card className="mb-3">
+                        <CardBody>
+                            <CardTitle tag="h6">
+                                Code: Code Blocks
+                                <span className="small ml-1 text-muted">
+                                    #6.02
+                                </span>
+                            </CardTitle>
+                            <p className="card-text">
+                                Use <code>&lt;pre&gt;</code>s for multiple lines of code. Once again, be sure to 
+                                escape any angle brackets in the code for proper rendering. 
+                                You may optionally add the <code>.pre-scrollable</code> class, \
+                                which will set a max-height of 340px and provide a y-axis scrollbar.
+                            </p>
+                            <code>&lt;p&gt;Sample text here...&lt;/p&gt;
+                            &lt;p&gt;And another line of sample text here...&lt;/p&gt;
+                            </code>
+                        </CardBody>
+                    </Card>
+                </Col>
+            </Row>
+            { /* END Section 6 */}
         </Container>
     </React.Fragment>
 );
