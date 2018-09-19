@@ -27,7 +27,7 @@ const data = [
 const SimpleRadialBarChart = () => (
     <ResponsiveContainer width='100%' aspect={ 1 / 1}>
         <RadialBarChart cx={ 150 } innerRadius={20} outerRadius={140} barSize={10} data={data}>
-            <RadialBar minAngle={15} label={{ position: 'insideStart', fill: '#fff' }} background clockWise={true} dataKey='uv'/>
+            <RadialBar minAngle={15} label={{ position: 'insideStart', fill: colors['900'], fontSize: '10px' }} background clockWise={true} dataKey='uv'/>
             <Legend iconSize={10} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
         </RadialBarChart>
     </ResponsiveContainer>
