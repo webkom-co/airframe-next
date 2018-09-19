@@ -19,7 +19,15 @@ const data = [
 const StraightAnglePieChart = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <PieChart>
-            <Pie startAngle={180} endAngle={0} data={data} outerRadius={80} fill={ colors['primary-08'] } stroke={ colors['white'] } label/>
+            <Pie
+                startAngle={180}
+                endAngle={0}
+                data={data}
+                outerRadius={80}
+                fill={ colors['primary-08'] }
+                stroke={ colors['white'] }
+                label={{fill: colors['800'], fontSize: '12px'}}
+            />
        </PieChart>
     </ResponsiveContainer>
 
