@@ -1,0 +1,104 @@
+import React from 'react';
+import faker from 'faker';
+import {
+    Container,
+    Row,
+    Table,
+    Col
+} from './../../../components';
+
+import { HeaderMain } from "../../components/HeaderMain";
+import {
+    CardSystem
+} from "./components/CardSystem"
+import {
+    TrSystem
+} from "./components/TrSystem"
+
+const TrColors =  [
+        {
+            fill: "400",
+            stroke: "primary"
+        },
+        {
+            fill: "400",
+            stroke: "info"
+        },
+        {
+            fill: "400",
+            stroke: "purple"
+        },
+        {
+            fill: "400",
+            stroke: "secondary"
+        }
+    ]
+
+const System = () => (
+    <Container>
+        <Row className="mb-5">
+            <Col lg={ 12 }>
+                <HeaderMain 
+                    title="System"
+                    className="mb-5"
+                />
+            </Col>
+            <Col lg={ 3 }>
+               <CardSystem
+                    badgeColor="primary"
+                    pieColor="primary"
+               />
+            </Col>
+            <Col lg={ 3 }>
+               <CardSystem
+                    badgeColor="info"
+                    pieColor="info"
+               />
+            </Col>
+            <Col lg={ 3 }>
+                <CardSystem
+                    badgeColor="purple"
+                    pieColor="purple"
+               />
+            </Col>
+            <Col lg={ 3 }>
+                <CardSystem
+                    pieColor="secondary"
+               />
+            </Col>
+            <Col lg={ 12 }>
+                <h6 className="mt-5">Processes</h6>
+                <p className="pb-3">
+                    { faker.lorem.paragraph() }
+                </p>
+                <Table responsive>
+                    <thead>
+                        <tr>
+                            <th>Name</th>
+                            <th>Memory</th>
+                            <th>CPU</th>
+                            <th>Traffic</th>
+                            <th>Disk I/O</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <TrSystem 
+                            colors={TrColors}
+                        />
+                        <TrSystem 
+                            colors={TrColors}
+                        />
+                        <TrSystem 
+                            colors={TrColors}
+                        />
+                        <TrSystem 
+                            colors={TrColors}
+                        />
+                    </tbody>
+                </Table>
+            </Col>
+        </Row>
+    </Container>
+);
+
+export default System;

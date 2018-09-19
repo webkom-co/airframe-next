@@ -8,6 +8,7 @@ import {
 // ----------- Pages Imports ---------------
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
+import System from './Dashboards/System';
 
 import Widgets from './Widgets';
 
@@ -98,6 +99,7 @@ const getRoutes = (store) => {
             
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
+            <Route path="/dashboards/system" exact component={System} />
 
             <Route path='/widgets' exact component={Widgets} />
             
