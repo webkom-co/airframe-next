@@ -108,15 +108,13 @@ const ProfileDetails = () => (
                                 <span className="small">Contact</span>
                             </div>
                             <DlRowContacts 
-                                leftSideClassName="text-left"
-                                rightSideClassName="text-right"
                             />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
                             </div>
                             <DlRowAddress 
-                                leftSideClassName="text-left"
-                                rightSideClassName="text-right"
+                                leftSideClassName="text-lg-left"
+                                rightSideClassName="text-lg-right"
                             />
                         </CardBody>
                     </Card>
@@ -124,7 +122,7 @@ const ProfileDetails = () => (
                 <Col lg={ 8 }>
                     <UncontrolledTabs initialActiveTabId="overview">
                         { /* START Pills Nav */}
-                        <Nav pills className="mb-4">
+                        <Nav pills className="mb-4 flex-column flex-md-row mt-4 mt-lg-0">
                             <NavItem>
                                 <UncontrolledTabs.NavLink tabId="overview">
                                     Overview
@@ -238,7 +236,9 @@ const ProfileDetails = () => (
                                     <div className="mt-4 mb-2">
                                         <span className="small">Address</span>
                                     </div>
-                                    <DlRowAddress />
+                                    <DlRowAddress 
+                                        leftSideClassName="text-lg-right"
+                                    />
                                 </Card>
                             </TabPane>
                             <TabPane tabId="chat">

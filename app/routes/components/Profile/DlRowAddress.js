@@ -20,8 +20,8 @@ DlRowAddress.propTypes = {
     rightSideClassName: PropTypes.node
 };
 DlRowAddress.defaultProps = {
-    leftSideClassName: "text-right",
-    rightSideClassName: "text-left"
+    leftSideClassName: "",
+    rightSideClassName: ""
 };
 
 export { DlRowAddress };

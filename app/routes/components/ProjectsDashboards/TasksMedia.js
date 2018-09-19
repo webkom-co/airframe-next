@@ -12,7 +12,7 @@ const TasksMedia = (props) => (
     <React.Fragment>
         <Media>
             <Media left className="mr-3">
-                <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox1" label="" />
+                <CustomInput className="pt-0 mt-0" type="checkbox" id={`taskMedia-${ props.id }` } label="" />
             </Media>
             <Media body>
                 <div className="mt-0 mb-2">
@@ -31,10 +31,12 @@ const TasksMedia = (props) => (
     </React.Fragment>
 )
 TasksMedia.propTypes = {
-    iconColor: PropTypes.node
+    iconColor: PropTypes.node,
+    id: PropTypes.node,
 };
 TasksMedia.defaultProps = {
-    iconColor: "muted"
+    iconColor: "muted",
+    id: "1"
 };
 
 export { TasksMedia };
