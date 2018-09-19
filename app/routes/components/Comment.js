@@ -7,7 +7,14 @@ import {
     AvatarAddOn,
     UncontrolledTooltip 
 } from './../../components';
-import { randomAvatar } from './../../utilities';
+import { randomArray, randomAvatar } from './../../utilities';
+
+const status = [
+    "success",
+    "danger",
+    "warning",
+    "secondary"
+];
 
 const Comment = (props) => (
 
@@ -25,7 +32,7 @@ const Comment = (props) => (
                     />,
                     <AvatarAddOn.Icon 
                         className="fa fa-circle"
-                        color="success"
+                        color={ randomArray(status) }
                         key="avatar-icon-fg"
                     />
                 ]}

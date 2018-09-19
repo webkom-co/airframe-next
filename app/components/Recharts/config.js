@@ -17,7 +17,7 @@ export default {
             fontSize: '12px'
         },
         tick: {
-            fill: colors['primary']
+            fill: colors['900']
         }
     },
     polarRadiusAxis: {
@@ -28,7 +28,10 @@ export default {
     },
     polarAngleAxis: {
         tick: {
-            fill: colors['warning']
+            fill: colors['900']
+        },
+        style: {
+            fontSize: '12px'
         }
     },
     label: {

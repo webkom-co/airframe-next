@@ -43,7 +43,7 @@ const SimpleBarChart = () => (
             />
             <Legend wrapperStyle={{ color: colors['twitter'] }}/>
             <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 12 } />
-            <Bar dataKey="uv" fill={ colors['primary'] } barSize={ 12 } />
+            <Bar dataKey="uv" fill={ colors['purple'] } barSize={ 12 } />
         </BarChart>
     </ResponsiveContainer>
 

@@ -16,23 +16,25 @@ import {
 const ProjectsList = () => (
     <Card className="mb-3">
         { /* START Table */}
-        <Table className="mb-0" hover>
-            <thead>
-                <tr>
-                    <th className="align-middle bt-0">Star</th>
-                    <th className="align-middle bt-0">Project</th>
-                    <th className="align-middle bt-0">Status</th>
-                    <th className="align-middle bt-0">Tasks Completed</th>
-                    <th className="align-middle bt-0">People</th>
-                    <th className="align-middle bt-0 text-right">
-                        Actions
-                    </th>
-                </tr>
-            </thead>
-            <tbody>
-                <TrTableProjectsList />
-            </tbody>
-        </Table>
+        <div className="table-responsive-xl">
+            <Table className="mb-0" hover>
+                <thead>
+                    <tr>
+                        <th className="align-middle bt-0">Star</th>
+                        <th className="align-middle bt-0">Project</th>
+                        <th className="align-middle bt-0">Status</th>
+                        <th className="align-middle bt-0">Tasks Completed</th>
+                        <th className="align-middle bt-0">People</th>
+                        <th className="align-middle bt-0 text-right">
+                            Actions
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <TrTableProjectsList />
+                </tbody>
+            </Table>
+        </div>
         { /* END Table */}
         <CardFooter className="d-flex justify-content-center pb-0">
             <Pagination aria-label="Page navigation example">

@@ -46,17 +46,6 @@ const Cards = () => (
             <HeaderMain 
                 title="Cards Headers"
             />
-            { /* START MAIN HEADER */}
-            <Row>
-                <Col lg={ 12 }>
-                    <div className="d-flex mt-3 mb-5">
-                        <h1 className="display-4 mr-3 mb-0 align-self-start">
-                            Cards Headers
-                        </h1>
-                    </div>
-                </Col>
-            </Row>
-            { /* END MAIN HEADER */}
             { /* START Header 1 */}
             <Row>
                 <Col lg={ 12 }>

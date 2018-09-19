@@ -15,7 +15,8 @@ import Cards from './Cards/Cards';
 import CardsHeaders from './Cards/CardsHeaders';
 
 import NavbarOnly from './Layouts/NavbarOnly';
-import LayoutA from './Layouts/LayoutA';
+import SidebarDefault from './Layouts/SidebarDefault';
+import SidebarA from './Layouts/SidebarA';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -85,8 +86,8 @@ import Icons from './Icons';
 import { DefaultNavbar } from './../layout/components/DefaultNavbar';
 import { DefaultSidebar } from './../layout/components/DefaultSidebar';
 
-import { LayoutANavbar } from './../layout/components/LayoutANavbar';
-import { LayoutASidebar } from './../layout/components/LayoutASidebar';
+import { SidebarANavbar } from './../layout/components/SidebarANavbar';
+import { SidebarASidebar } from './../layout/components/SidebarASidebar';
 
 //------ Route Definitions --------
 // eslint-disable-next-line no-unused-vars
@@ -106,7 +107,8 @@ const getRoutes = (store) => {
             
             { /*    Layouts     */ }
             <Route path='/layouts/navbar-only' component={NavbarOnly} />
-            <Route path='/layouts/layout-a' component={LayoutA} />
+            <Route path='/layouts/sidebar-default' component={SidebarDefault} />
+            <Route path='/layouts/sidebar-a' component={SidebarA} />
 
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />
@@ -189,8 +191,8 @@ const getNavbars = () => (
     <Switch>
         { /* Other Navbars: */}
         <Route
-            component={ LayoutANavbar }
-            path="/layouts/layout-a"
+            component={ SidebarANavbar }
+            path="/layouts/sidebar-a"
         />
         <Route
             component={ NavbarOnly.Navbar }
@@ -207,8 +209,8 @@ const getSidebars = () => (
     <Switch>
         { /* Other Sidebars: */}
         <Route
-            component={ LayoutASidebar }
-            path="/layouts/layout-a"
+            component={ SidebarASidebar }
+            path="/layouts/sidebar-a"
         />
         { /* Default Sidebar: */}
         <Route
