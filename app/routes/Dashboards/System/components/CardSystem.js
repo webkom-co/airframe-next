@@ -14,18 +14,41 @@ import {
     TinyBarChart
 } from "./TinyBarChart"
 
+import { randomArray } from './../../../../utilities';
+
+const percents = [
+    "15",
+    "25",
+    "30",
+    "35",
+    "40",
+    "45",
+    "55",
+    "60",
+    "75",
+    "80",
+    "95"
+];
+
+const caret = [
+    "down",
+    "up"
+];
+
 const CardSystem = (props) => (
     <Card>
-       <CardBody>
+       <CardBody className="pb-0">
            <div className="d-flex">
                <span>
                     <Badge pill className="mb-3" color={ props.badgeColor } >
-                        <i className="fa fa-fw fa-caret-down" />
-                        12%
+                        <i className={` fa fa-fw fa-caret-${ randomArray(caret) }`} />
+                        { randomArray(percents) }%
                     </Badge>
-                    <h6 className="mb-0">Memory</h6>
+                    <h6 className="mb-0">
+                        { props.title }
+                    </h6>
                     <h2 className="mb-3">
-                        25 %
+                        { randomArray(percents) } <small>{ props.unit }</small>
                     </h2>
                 </span>
                 <span className="text-right ml-auto">
@@ -40,11 +63,15 @@ const CardSystem = (props) => (
 );
 
 CardSystem.propTypes = {
+    title: PropTypes.node,
     badgeColor: PropTypes.spring,
+    unit: PropTypes.node,
     pieColor: PropTypes.spring
 };
 CardSystem.defaultProps = {
+    title: "Waiting...",
     badgeColor: "secondary",
+    unit: "%",
     pieColor: "500"
 };
 

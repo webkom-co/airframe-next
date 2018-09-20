@@ -45,31 +45,38 @@ const System = () => (
             </Col>
             <Col lg={ 3 }>
                <CardSystem
+                    title="Memory"
                     badgeColor="primary"
                     pieColor="primary"
                />
             </Col>
             <Col lg={ 3 }>
                <CardSystem
+                    title="CPU"
+                    unit="Mb"
                     badgeColor="info"
                     pieColor="info"
                />
             </Col>
             <Col lg={ 3 }>
                 <CardSystem
+                    title="Traffic"
+                    unit="Kb"
                     badgeColor="purple"
                     pieColor="purple"
                />
             </Col>
             <Col lg={ 3 }>
                 <CardSystem
+                    title="Disk I/O"
+                    unit="Kb"
                     pieColor="secondary"
                />
             </Col>
             <Col lg={ 12 }>
                 <h6 className="mt-5">Processes</h6>
                 <p className="pb-3">
-                    { faker.lorem.paragraph() }
+                    { faker.lorem.paragraphs() }
                 </p>
                 <Table responsive>
                     <thead>
