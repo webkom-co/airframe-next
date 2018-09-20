@@ -101,6 +101,9 @@ const System = () => (
                         <TrSystem 
                             colors={TrColors}
                         />
+                        <TrSystem 
+                            colors={TrColors}
+                        />
                     </tbody>
                 </Table>
             </Col>
