@@ -37,9 +37,6 @@ const SimpleBarChart = () => (
                     border: `1px solid ${colors['danger']}`,
                     color: colors['white']
                 }}
-                cursor={{
-                    fill: colors['info-04']
-                }}
             />
             <Legend wrapperStyle={{ color: colors['twitter'] }}/>
             <Bar dataKey="pv" fill={ colors['info-07'] } barSize={ 12 } />

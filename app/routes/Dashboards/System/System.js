@@ -13,7 +13,7 @@ import {
 } from "./components/CardSystem"
 import {
     TrSystem
-} from "./components/TrSystem"
+} from "./components/trSystem"
 
 const TrColors =  [
         {

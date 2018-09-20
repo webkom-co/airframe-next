@@ -8,6 +8,7 @@ import { PolarAngleAxis } from './Recharts/PolarAngleAxis';
 import { ValueLabel } from './Recharts/ValueLabel';
 import { DefAreaValueColor } from './Recharts/DefAreaValueColor';
 import { PieValueLabel } from './Recharts/PieValueLabel';
+import { Tooltip } from './Recharts/Tooltip';
 
 export {
     CartesianGrid,
@@ -19,7 +20,8 @@ export {
     ZAxis,
     PolarRadiusAxis,
     PolarAngleAxis,
-    PieValueLabel
+    PieValueLabel,
+    Tooltip
 };
 
 export {
@@ -75,7 +77,6 @@ export {
     Text,
     TickFormatterFunction,
     TickGeneratorFunction,
-    Tooltip,
     TooltipFormatter,
     Treemap
 } from 'recharts';

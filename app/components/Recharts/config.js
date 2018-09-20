@@ -41,5 +41,10 @@ export default {
     pieLabel: {
         fontSize: 12,
         fill: colors[100]
+    },
+    tooltip: {
+        cursor: {
+            fill: colors['light-08']
+        }
     }
 };
