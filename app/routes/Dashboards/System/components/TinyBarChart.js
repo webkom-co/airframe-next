@@ -10,15 +10,16 @@ import {
 
 import colors from './../../../../colors';
 
-const data = _.times(20, () => ({ pv: Math.random() * 100 }));
-
-const TinyBarChart = (props) => (
-    <ResponsiveContainer width='100%' height={ 80 }>
-        <BarChart data={data}>
-            <Bar dataKey='pv' fill={ colors[ props.barColor ] } />
-        </BarChart>
-    </ResponsiveContainer>
-);
+const TinyBarChart = (props) => {
+        const data = _.times(20, () => ({ pv: 20+Math.random() * 100 }));
+        return (
+            <ResponsiveContainer width='100%' height={ 80 }>
+                <BarChart data={data}>
+                    <Bar dataKey='pv' fill={ colors[ props.barColor ] } />
+                </BarChart>
+            </ResponsiveContainer>
+        )
+};
 
 TinyBarChart.propTypes = {
     barColor: PropTypes.spring

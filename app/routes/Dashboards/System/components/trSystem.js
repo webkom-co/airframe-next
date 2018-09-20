@@ -59,6 +59,13 @@ const tdValue = [
     "65"
 ];
 
+const tdUnits = [
+    "",
+    "Mb",
+    "%",
+    "Kb/s"
+];
+
 const TrSystem = (props) => (
     <tr>
         <td style={{ width: '20%' }}>
@@ -84,7 +91,7 @@ const TrSystem = (props) => (
             _.map(props.colors, (color,index)=>(
                 <td style={{ width: '20%' }} key={index}>
                     <h6 className="mb-0">
-                        { randomArray(tdValue) }
+                        { randomArray(tdValue) } {tdUnits[index]}
                     </h6>
                     <TinyAreaChart 
                         strokeColor={color.stroke} 
