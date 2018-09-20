@@ -40,6 +40,7 @@ const ProjectsDashboard = () => (
             <Col lg={ 12 }>
                 <HeaderMain 
                     title="Projects"
+                    className="mb-4 mb-lg-5"
                 />
                 <p>
                     { faker.lorem.paragraph() }
@@ -50,7 +51,7 @@ const ProjectsDashboard = () => (
                     <span>Payments</span>
                 </div>
                 <Row>
-                    <Col sm={ 6 } className="text-center">
+                    <Col xs={ 6 } className="text-center">
                         <p className="text-center mb-0">
                             <i className="fa fa-circle text-primary mr-2"></i> 
                             Today
@@ -59,7 +60,7 @@ const ProjectsDashboard = () => (
                             $3,267
                         </h4>
                     </Col>
-                    <Col sm={ 6 } className="text-center">
+                    <Col xs={ 6 } className="text-center">
                         <p className="text-center mb-0">
                             <i className="fa fa-circle text-info mr-2"></i> 
                             This Month
@@ -72,8 +73,8 @@ const ProjectsDashboard = () => (
                 <div className="hr-text hr-text-center mb-2 mt-3">
                     <span>Invoices</span>
                 </div>
-                <Row>
-                    <Col sm={ 6 } className="text-center">
+                <Row className="mb-4 mb-xl-0">
+                    <Col xs={ 6 } className="text-center">
                         <p className="text-center mb-0">
                             <i className="fa fa-circle text-warning mr-2"></i> 
                             Due
@@ -82,7 +83,7 @@ const ProjectsDashboard = () => (
                             $4,007
                         </h4>
                     </Col>
-                    <Col sm={ 6 } className="text-center">
+                    <Col xs={ 6 } className="text-center">
                         <p className="text-center mb-0">
                             <i className="fa fa-circle text-danger mr-2"></i> 
                             Overdue
@@ -93,7 +94,7 @@ const ProjectsDashboard = () => (
                     </Col>
                 </Row>
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 }>
                 <div className="hr-text hr-text-left my-2">
                     <span>All Tasks</span>
                 </div>
@@ -117,7 +118,7 @@ const ProjectsDashboard = () => (
                     </Media>
                 </Media>
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 } className="mb-4 mb-lg-0">
                 <div className="hr-text hr-text-left my-2">
                     <span>All Projects</span>
                 </div>

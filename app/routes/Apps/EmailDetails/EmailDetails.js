@@ -11,6 +11,7 @@ import {
     ButtonGroup,
     CardBody,
     CardFooter,
+    ButtonToolbar,
     Badge,
     Media,
     Avatar,
@@ -39,64 +40,66 @@ const EmailDetails = () => (
                         <CardBody>
                             { /* START Header */}
                             <div className="d-lg-flex justify-content-end mb-4">
-                                <div className="mr-auto d-flex align-items-center">
+                                <div className="mr-auto d-flex align-items-center mb-3 mb-xl-0">
                                     <Button color="link" tag={ Link } to="/apps/inbox">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
                                 </div>
-                                <ButtonGroup className="mr-2">
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipPrev">
-                                        <i className="fa fa-fw fa-angle-left"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipPrev">
-                                        Prev Message
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline id="tooltipNext">
-                                        <i className="fa fa-fw fa-angle-right"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipNext">
-                                        Next Message
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
-                                <ButtonGroup className="mr-2">
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipForward">
-                                        <i className="fa fa-fw fa-mail-forward"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipForward">
-                                        Forward
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipFav">
-                                        <i className="fa fa-fw fa-star"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipFav">
-                                        Add to Favorites
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipPrint">
-                                        <i className="fa fa-fw fa-print"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipPrint">
-                                        Print
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline id="tooltipDelete">
-                                        <i className="fa fa-fw fa-trash"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipDelete">
-                                        Delete
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
-                                <ButtonGroup>
-                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReply">
-                                        <i className="fa fa-fw fa-reply"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipReply">
-                                        Reply
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
+                                <ButtonToolbar>
+                                    <ButtonGroup className="mr-2 mb-3 mb-sm-0">
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipPrev">
+                                            <i className="fa fa-fw fa-angle-left"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipPrev">
+                                            Prev Message
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipNext">
+                                            <i className="fa fa-fw fa-angle-right"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipNext">
+                                            Next Message
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                    <ButtonGroup className="mr-2">
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipForward">
+                                            <i className="fa fa-fw fa-mail-forward"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipForward">
+                                            Forward
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipFav">
+                                            <i className="fa fa-fw fa-star"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipFav">
+                                            Add to Favorites
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipPrint">
+                                            <i className="fa fa-fw fa-print"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipPrint">
+                                            Print
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipDelete">
+                                            <i className="fa fa-fw fa-trash"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipDelete">
+                                            Delete
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                    <ButtonGroup className="ml-auto ml-lg-0">
+                                        <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReply">
+                                            <i className="fa fa-fw fa-reply"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipReply">
+                                            Reply
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                </ButtonToolbar>
                             </div>
                             { /* END Header */}
                             { /* START Message */}
                             <div className="mb-4">
-                                <div className="d-flex">
+                                <div className="d-flex flex-column flex-md-row">
                                     <Media>
                                         <Media left className="align-self-center mr-4">
                                             <Avatar.Image
@@ -125,7 +128,7 @@ const EmailDetails = () => (
                                             </samp>
                                         </Media>
                                     </Media>
-                                    <div className="ml-auto text-right">
+                                    <div className="ml-md-auto align-self-start text-left text-md-right mt-2 mt-md-0">
                                         18-Jun-2012<br />
                                         08:43 PM
                                     </div>
@@ -169,11 +172,9 @@ const EmailDetails = () => (
                                 />
                             </div>
                         </CardBody>
-                        <CardFooter className="text-right">
-                            <div className="d-lg-flex justify-content-end">
-                                <div className="mr-auto d-flex align-items-center">
-                                </div>
-                                <ButtonGroup className="mr-2">
+                        <CardFooter>
+                            <ButtonToolbar className="flex-column flex-lg-row">
+                                <ButtonGroup className="mb-2 mb-lg-0">
                                     <Button color="secondary" outline className="align-self-center" id="tooltipPrevBtm">
                                         <i className="fa fa-fw fa-angle-left"></i>
                                     </Button>
@@ -187,41 +188,43 @@ const EmailDetails = () => (
                                         Next Message
                                     </UncontrolledTooltip>
                                 </ButtonGroup>
-                                <ButtonGroup className="mr-2">
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipForwardBtm">
-                                        <i className="fa fa-fw fa-mail-forward"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="top" target="tooltipForwardBtm">
-                                        Forward
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipFavBtm">
-                                        <i className="fa fa-fw fa-star"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="top" target="tooltipFavBtm">
-                                        Add to Favorites
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipPrintBtm">
-                                        <i className="fa fa-fw fa-print"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="top" target="tooltipPrintBtm">
-                                        Print
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline id="tooltipDeleteBtm">
-                                        <i className="fa fa-fw fa-trash"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="top" target="tooltipDeleteBtm">
-                                        Delete
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
-                                <ButtonGroup>
-                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReplyBtm">
-                                        <i className="fa fa-fw fa-reply"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="top" target="tooltipReplyBtm">
-                                        Reply
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
-                            </div>
+                                <ButtonToolbar className="flex-column flex-sm-row ml-0 ml-lg-auto">
+                                    <ButtonGroup className="mr-2 mb-2 mb-sm-0">
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipForwardBtm">
+                                            <i className="fa fa-fw fa-mail-forward"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="top" target="tooltipForwardBtm">
+                                            Forward
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipFavBtm">
+                                            <i className="fa fa-fw fa-star"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="top" target="tooltipFavBtm">
+                                            Add to Favorites
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipPrintBtm">
+                                            <i className="fa fa-fw fa-print"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="top" target="tooltipPrintBtm">
+                                            Print
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline id="tooltipDeleteBtm">
+                                            <i className="fa fa-fw fa-trash"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="top" target="tooltipDeleteBtm">
+                                            Delete
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                    <ButtonGroup className="ml-0 ml-md-auto m-lg-0">
+                                        <Button color="primary" className="align-self-center" tag={ Link } to="/apps/inbox" id="tooltipReplyBtm">
+                                            <i className="fa fa-fw fa-reply"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="top" target="tooltipReplyBtm">
+                                            Reply
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                </ButtonToolbar>
+                            </ButtonToolbar>
                         </CardFooter>
                     </Card>
                 </Col>

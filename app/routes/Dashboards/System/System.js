@@ -40,17 +40,17 @@ const System = () => (
             <Col lg={ 12 }>
                 <HeaderMain 
                     title="System"
-                    className="mb-5"
+                    className="mb-4 mb-lg-5"
                 />
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 }>
                <CardSystem
                     title="Memory"
                     badgeColor="primary"
                     pieColor="primary"
                />
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 }>
                <CardSystem
                     title="CPU"
                     unit="Mb"
@@ -58,7 +58,7 @@ const System = () => (
                     pieColor="info"
                />
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 }>
                 <CardSystem
                     title="Traffic"
                     unit="Kb"
@@ -66,7 +66,7 @@ const System = () => (
                     pieColor="purple"
                />
             </Col>
-            <Col lg={ 3 }>
+            <Col lg={ 3 } md={ 6 }>
                 <CardSystem
                     title="Disk I/O"
                     unit="Kb"
