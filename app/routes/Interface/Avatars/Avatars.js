@@ -55,10 +55,12 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="lg"
@@ -82,17 +84,17 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                         </CardBody>
                     </Card>
@@ -112,17 +114,17 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-2"
                             />
                         </CardBody>
                     </Card>
@@ -165,14 +167,17 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
+                                className="mr-2"
                             />
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
+                                className="mr-2"
                             />
                         </CardBody>
                     </Card>
@@ -191,19 +196,19 @@ const Home = () => (
                             </p>
                             <Avatar.Font
                                 bgColor="purple"
-                                className="mr-1"
+                                className="mr-2"
                             >
                                 VN
                             </Avatar.Font>
                             <Avatar.Font
                                 bgColor="secondary"
-                                className="mr-1"
+                                className="mr-2"
                             >
                                 FS
                             </Avatar.Font>
                             <Avatar.Font
                                 bgColor="danger"
-                                className="mr-1"
+                                className="mr-2"
                             >
                                 +4
                             </Avatar.Font>
@@ -225,21 +230,21 @@ const Home = () => (
                             <Avatar.Font 
                                 bgColor="200"
                                 fgColor="500"
-                                className="mr-1"
+                                className="mr-2"
                                 >
                                 <i className="fa fa-user" />
                             </Avatar.Font>
                             <Avatar.Font 
                                 bgColor="200"
                                 fgColor="500"
-                                className="mr-1"
+                                className="mr-2"
                                 >
                                 <i className="fa fa-plus" />
                             </Avatar.Font>
                             <Avatar.Font 
                                 bgColor="200"
                                 fgColor="500"
-                                className="mr-1"
+                                className="mr-2"
                                 >
                                 <i className="fa fa-bars" />
                             </Avatar.Font>
@@ -284,7 +289,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -301,7 +306,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -318,7 +323,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -335,7 +340,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -367,7 +372,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -384,7 +389,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -401,7 +406,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -418,7 +423,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -450,7 +455,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -467,7 +472,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -484,7 +489,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -501,7 +506,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -556,7 +561,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="primary" key="avatar-badge">
                                         4
@@ -566,7 +571,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="danger" key="avatar-badge">
                                         12
@@ -576,7 +581,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="secondary" key="avatar-badge">
                                         4
@@ -586,7 +591,7 @@ const Home = () => (
                              <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="success" key="avatar-badge">
                                         7
@@ -611,7 +616,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="primary" key="avatar-badge">
                                         4
@@ -621,7 +626,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="danger" key="avatar-badge">
                                         12
@@ -631,7 +636,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="secondary" key="avatar-badge">
                                         4
@@ -641,7 +646,7 @@ const Home = () => (
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge pill color="success" key="avatar-badge">
                                         7
@@ -799,7 +804,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="primary" key="avatar-badge">
                                         4
@@ -809,7 +814,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="danger" key="avatar-badge">
                                         12
@@ -819,7 +824,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="secondary" key="avatar-badge">
                                         4
@@ -829,7 +834,7 @@ const Home = () => (
                              <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Badge color="success" key="avatar-badge">
                                         7
@@ -932,7 +937,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -955,7 +960,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -978,7 +983,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1001,7 +1006,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-1"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1024,7 +1029,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="lg"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1062,7 +1067,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1085,7 +1090,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1108,7 +1113,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1131,7 +1136,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1154,7 +1159,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="md"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1192,7 +1197,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1215,7 +1220,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1238,7 +1243,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1261,7 +1266,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
@@ -1284,7 +1289,7 @@ const Home = () => (
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
-                                className="mr-2"
+                                className="mr-3"
                                 addOns={[
                                     <AvatarAddOn.Icon 
                                         className="fa fa-circle"
