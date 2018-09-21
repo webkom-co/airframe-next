@@ -46,7 +46,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="primary">
-                            <h6 className="mb-1">Morning!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Morning!
+                            </h6>
                             Were glad to see you again and wish you a nice day.
                         </Alert>
                     </div>
@@ -60,7 +62,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="danger">
-                            <h6 className="mb-1">Oh Snap!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Oh Snap!
+                            </h6> 
                             Change a few things up and try submitting again.
                         </Alert>
                     </div>
@@ -74,7 +78,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="info">
-                            <h6 className="mb-1">Heads Up!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Heads Up!
+                            </h6> 
                             This alert needs your attention, but its not super important.
                         </Alert>
                     </div>
@@ -92,7 +98,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="warning">
-                            <h6 className="mb-1">Warning!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Warning!
+                            </h6> 
                             Better check yourself, youre not looking too good.
                         </Alert>
                     </div>
@@ -106,7 +114,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="success">
-                            <h6 className="mb-1">Well Done!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Well Done!
+                            </h6> 
                             You successfully read this important alert message.
                         </Alert>
                     </div>
@@ -120,7 +130,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="dark">
-                            <h6 className="mb-1">Attention!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Attention
+                            </h6> 
                             This alert needs your attention, but its not important.
                         </Alert> 
                     </div>
@@ -155,7 +167,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="primary">
-                            <h6 className="mb-1">Morning!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Morning!
+                            </h6>
                             Were glad to see you again and wish you a nice day.
                         </Alert>
                     </div>
@@ -169,7 +183,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="danger">
-                            <h6 className="mb-1">Oh Snap!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Oh Snap!
+                            </h6> 
                             Change a few things up and try submitting again.
                         </Alert>
                     </div>
@@ -183,7 +199,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="info">
-                            <h6 className="mb-1">Heads Up!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Heads Up!
+                            </h6> 
                             This alert needs your attention, but its not super important.
                         </Alert>
                     </div>
@@ -201,7 +219,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="warning">
-                            <h6 className="mb-1">Warning!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Warning!
+                            </h6> 
                             Better check yourself, youre not looking too good.
                         </Alert>
                     </div>
@@ -215,7 +235,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="success">
-                            <h6 className="mb-1">Well Done!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Well Done!
+                            </h6> 
                             You successfully read this important alert message.
                         </Alert>
                     </div>
@@ -229,7 +251,9 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="dark">
-                            <h6 className="mb-1">Attention!</h6>
+                            <h6 className="mb-1 alert-heading">
+                                Attention
+                            </h6> 
                             This alert needs your attention, but its not important.
                         </Alert> 
                     </div>
@@ -264,8 +288,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="primary">
-                            <i className="fa fa-play-circle text-primary mr-2"></i>
-                            <strong>Morning</strong> Were glad to see you again and wish you a nice day.
+                            <i className="fa fa-play-circle mr-1 alert-icon"></i>
+                            <span> 
+                                <strong className="alert-heading">Welcome!</strong> We're glad to see you again and wish you a nice day.
+                            </span>
                         </Alert>
                     </div>
                     { /* END Example */}
@@ -278,8 +304,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="danger">
-                            <i className="fa fa-times-circle text-danger mr-2"></i>
-                            <strong>Danger!</strong> Change a few things up and try submitting again.
+                            <i className="fa fa-times-circle mr-1 alert-icon"></i> 
+                            <span> 
+                                <strong className="alert-heading">Danger!</strong> Change a few things up and try submitting again.
+                            </span>
                         </Alert>
                     </div>
                     { /* END Example */}
@@ -292,8 +320,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="info">
-                            <i className="fa fa-info-circle text-info mr-2"></i>
-                            <strong>Information!</strong> This alert needs your attention, but its not important.
+                            <i className="fa fa-info-circle mr-1 alert-icon"></i>
+                            <span> 
+                                <strong className="alert-heading">Information!</strong> This alert needs your attention, but it's not important.
+                            </span>
                         </Alert>
                     </div>
                     { /* END Example */}
@@ -310,8 +340,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="warning">
-                            <i className="fa fa-exclamation-circle text-warning mr-2"></i>
-                            <strong>Warning!</strong> This alert needs your attention, but its not important.
+                            <i className="fa fa-exclamation-circle mr-1 alert-icon"></i> 
+                            <span>
+                                <strong className="alert-heading">Warning!</strong> Better check yourself, you're not looking too good.
+                            </span>
                         </Alert>
                     </div>
                     { /* END Example */}
@@ -324,8 +356,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="success">
-                            <i className="fa fa-check-circle text-success mr-2"></i>
-                            <strong>Success!</strong> You successfully read this important alert message.
+                            <i className="fa fa-check-circle mr-1 alert-icon"></i>
+                            <span>
+                                <strong className="alert-heading">Success!</strong> You successfully read this important alert message.
+                            </span>
                         </Alert>
                     </div>
                     { /* END Example */}
@@ -338,8 +372,10 @@ const Alerts = () => (
                             </span>
                         </h6>
                         <Alert color="dark">
-                            <i className="fa fa-question-circle text-dark mr-2"></i>
-                            <strong>Attention!</strong> This alert needs your attention, but it's not important.
+                            <i className="fa fa-question-circle mr-1 alert-icon"></i>
+                            <span>
+                                <strong className="alert-heading">Attention!</strong> This alert needs your attention, but it's not important.
+                            </span>
                         </Alert> 
                     </div>
                     { /* END Example */}
@@ -375,10 +411,12 @@ const Alerts = () => (
                         <Alert color="primary">
                             <Media>
                                 <Media left middle className="mr-2">
-                                    <i className="fa fa-fw fa-play text-primary fa-2x"></i> 
+                                    <i className="fa fa-caret-right fa-fw fa-2x alert-icon"></i> 
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Welcome</h6>
+                                    <h6 className="mb-1 alert-heading">
+                                        Welcome!
+                                    </h6>
                                     We're glad to see you again and wish you a nice day.
                                 </Media>
                             </Media>
@@ -396,10 +434,12 @@ const Alerts = () => (
                         <Alert color="danger">
                             <Media>
                                 <Media left middle className="mr-2">
-                                    <i className="fa fa-fw fa-close text-danger fa-2x"></i> 
+                                    <i className="fa fa-close fa-fw fa-2x alert-icon"></i> 
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Danger!</h6>
+                                    <h6 className="mb-1 alert-heading">
+                                        Danger!
+                                    </h6> 
                                     Change a few things up and try submitting.
                                 </Media>
                             </Media>
@@ -417,10 +457,12 @@ const Alerts = () => (
                         <Alert color="info">
                             <Media>
                                 <Media left middle className="mr-2">
-                                    <i className="fa fa-fw fa-info text-info fa-2x"></i> 
+                                    <i className="fa fa-info fa-fw fa-2x alert-icon"></i>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Information</h6>
+                                    <h6 className="mb-1 alert-heading">
+                                        Information!
+                                    </h6>  
                                     This alert needs your attention, but it's not important.
                                 </Media>
                             </Media>
@@ -442,10 +484,12 @@ const Alerts = () => (
                         <Alert color="warning">
                             <Media>
                                 <Media left middle className="mr-2">
-                                    <i className="fa fa-fw fa-exclamation text-warning fa-2x"></i> 
+                                    <i className="fa fa-exclamation fa-fw fa-2x alert-icon"></i>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Warning!</h6>
+                                    <h6 className="mb-1 alert-heading">
+                                        Warning!
+                                    </h6> 
                                     Better check yourself, you're not looking too good.
                                 </Media>
                             </Media>
@@ -463,11 +507,13 @@ const Alerts = () => (
                         <Alert color="success">
                             <Media>
                                 <Media left middle className="mr-2">
-                                    <i className="fa fa-fw fa-check text-success fa-2x"></i> 
+                                    <i className="fa fa-check fa-fw fa-2x alert-icon"></i>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Success</h6>
-                                    You successfully read this important alert message.
+                                    <h6 className="mb-1 alert-heading">
+                                        Success!
+                                    </h6> 
+                                     You successfully read this important alert message.
                                 </Media>
                             </Media>
                         </Alert>
@@ -484,11 +530,13 @@ const Alerts = () => (
                         <Alert color="dark">
                             <Media>
                                 <Media left top className="mr-2">
-                                    <i className="fa fa-fw fa-question text-dark fa-2x"></i> 
+                                    <i className="fa fa-question fa-fw fa-2x alert-icon"></i>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Attention</h6>
-                                    This alert needs your attention, but its not important.
+                                    <h6 className="mb-1 alert-heading">
+                                        Attention!
+                                    </h6> 
+                                    This alert needs your attention, but it's not important.
                                 </Media>
                             </Media>
                         </Alert> 
@@ -527,15 +575,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-primary"></i>
-                                        <i className="fa fa-caret-right fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-stack-2x alert-bg-icon"></i>
+                                        <i className="fa fa-caret-right fa-stack-1x fa-inverse alert-icon"></i>
                                     </span>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Welcome</h6>
-                                    <p className="mb-2">We're glad to see you again and wish you a nice day.</p>
-                                    <Button color="primary">I Understand</Button>{' '}
-                                    <Button color="primary" outline>Cancel</Button>{' '}
+                                    <h6 className="alert-heading mb-1">
+                                        Welcome!
+                                    </h6>
+                                    We're glad to see you again and wish you a nice day.
+                                    <div className="mt-2">
+                                        <Button color="primary">I Understand</Button>{' '}
+                                        <Button color="primary" outline>Cancel</Button>{' '}
+                                    </div>
                                 </Media>
                             </Media>
                         </Alert>
@@ -553,15 +605,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-danger"></i>
-                                        <i className="fa fa-close fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-fw fa-stack-2x alert-bg-icon"></i>
+                                        <i className="fa fa-close fa-stack-1x fa-inverse alert-icon"></i>
                                     </span>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Danger!</h6>
-                                    <p className="mb-2">Change a few things up and try submitting.</p>
-                                    <Button color="danger">I Understand</Button>{' '}
-                                    <Button color="danger" outline>Cancel</Button>{' '}
+                                    <h6 className="alert-heading mb-1">
+                                        Danger!
+                                    </h6>
+                                    Change a few things up and try submitting.
+                                    <div className="mt-2">
+                                        <Button color="danger">I Understand</Button>{' '}
+                                        <Button color="danger" outline>Cancel</Button>{' '}
+                                    </div>
                                 </Media>
                             </Media>
                         </Alert>
@@ -579,15 +635,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-info"></i>
-                                        <i className="fa fa-info fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-fw fa-stack-2x alert-bg-icon"></i>
+                                        <i className="fa fa-info fa-stack-1x fa-inverse alert-icon"></i>
                                     </span> 
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Information</h6>
-                                    <p className="mb-2">This alert needs your attention, but it's not important.</p>
-                                    <Button color="info">I Understand</Button>{' '}
-                                    <Button color="info" outline>Cancel</Button>{' '}                                    
+                                    <h6 className="alert-heading mb-1"> 
+                                        Information!
+                                    </h6>
+                                    This alert needs your attention, but it's not important.
+                                    <div className="mt-2">
+                                        <Button color="info">I Understand</Button>{' '}
+                                        <Button color="info" outline>Cancel</Button>{' '}
+                                    </div>                                  
                                 </Media>
                             </Media>
                         </Alert>
@@ -609,15 +669,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-warning"></i>
-                                        <i className="fa fa-exclamation fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-fw fa-stack-2x alert-bg-icon"></i>
+                                        <i className="fa fa-exclamation fa-stack-1x fa-inverse alert-icon"></i>
                                     </span> 
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Warning!</h6>
-                                    <p className="mb-2">Better check yourself, you're not looking too good.</p>
-                                    <Button color="warning">I Understand</Button>{' '}
-                                    <Button color="warning" outline>Cancel</Button>{' '}       
+                                    <h6 className="alert-heading mb-1">
+                                        Warning!
+                                    </h6>
+                                    Better check yourself, you're not looking too good.
+                                    <div className="mt-2">
+                                        <Button color="warning">I Understand</Button>{' '}
+                                        <Button color="warning" outline>Cancel</Button>{' '}
+                                    </div>       
                                 </Media>
                             </Media>
                         </Alert>
@@ -635,15 +699,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-success"></i>
-                                        <i className="fa fa-check fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-fw fa-stack-2x alert-bg-icon"></i>
+                                        <i className="fa fa-check fa-stack-1x fa-inverse alert-icon"></i>
                                     </span>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Success</h6>
-                                    <p className="mb-2">You successfully read this important alert message.</p>
-                                    <Button color="success">I Understand</Button>{' '}
-                                    <Button color="success" outline>Cancel</Button>{' '}       
+                                    <h6 className="alert-heading mb-1">
+                                        Success!
+                                    </h6>
+                                    You successfully read this important alert message.
+                                    <div className="mt-2">
+                                        <Button color="success">I Understand</Button>{' '}
+                                        <Button color="success" outline>Cancel</Button>{' '}
+                                    </div>          
                                 </Media>
                             </Media>
                         </Alert>
@@ -661,15 +729,19 @@ const Alerts = () => (
                             <Media>
                                 <Media left middle className="mr-3">
                                     <span className="fa-stack fa-lg">
-                                        <i className="fa fa-circle fa-stack-2x text-dark"></i>
-                                        <i className="fa fa-question fa-stack-1x text-white"></i>
+                                        <i className="fa fa-circle fa-fw fa-stack-2x"></i>
+                                        <i className="fa fa-question fa-stack-1x fa-inverse alert-icon"></i>
                                     </span>
                                 </Media>
                                 <Media body>
-                                    <h6 className="mb-1">Attention</h6>
-                                    <p className="mb-2">This alert needs your attention, but its not important.</p>
-                                    <Button color="dark">I Understand</Button>{' '}
-                                    <Button color="dark" outline>Cancel</Button>{' '}
+                                    <h6 className="alert-heading">
+                                        Attention!
+                                    </h6>
+                                    This alert needs your attention, but it's not important.
+                                    <div className="mt-2">
+                                        <Button color="dark">I Understand</Button>{' '}
+                                        <Button color="dark" outline>Cancel</Button>{' '}
+                                    </div> 
                                 </Media>
                             </Media>
                         </Alert> 
