@@ -6,8 +6,6 @@ import _ from 'lodash';
 import { Avatar } from './Avatar';
 import { AvatarFont } from './AvatarFont';
 
-import classes from './AvatarImage.scss';
-
 class AvatarImage extends React.Component {
     static propTypes = {
         src: PropTypes.string.isRequired,
@@ -31,13 +29,13 @@ class AvatarImage extends React.Component {
 
     render() {
         const { src, placeholder, alt, className, ...avatarProps } = this.props;
-        const parentClass = classNames(classes['avatar-image'], {
-            [classes['avatar-image--loaded']]: this.state.imgLoaded
+        const parentClass = classNames('avatar-image', {
+            'avatar-image--loaded': this.state.imgLoaded
         }, className);
 
         return (
             <div className={ parentClass }>
-                <Avatar className={ classes['avatar-image__image'] } {...avatarProps}>
+                <Avatar className="avatar-image__image" {...avatarProps}>
                     <img
                         src={ src }
                         alt={ alt }
@@ -46,7 +44,7 @@ class AvatarImage extends React.Component {
                 </Avatar>
                 {
                     !this.state.imgLoaded && (
-                        <AvatarFont className={ classes['avatar-image__placeholder'] } {...avatarProps}>
+                        <AvatarFont className="avatar-image__placeholder" {...avatarProps}>
                             { placeholder }
                         </AvatarFont>
                     )

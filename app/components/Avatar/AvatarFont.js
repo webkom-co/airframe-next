@@ -5,7 +5,6 @@ import classNames from 'classnames';
 import { Avatar } from './Avatar';
 
 import avatarColors from './../../colors.scss';
-import classes from './AvatarFont.scss';
 
 const AvatarFont = (props) => {
     const {
@@ -16,11 +15,12 @@ const AvatarFont = (props) => {
         fgColorCustom,
         ...avatarProps
     } = props;
-    const parentClass = classNames(classes['avatar-font'],
-        classes[`avatar-font--${avatarProps.size}`],
+    const parentClass = classNames(
+        'avatar-font',
+        `avatar-font--${avatarProps.size}`,
         bgColor && avatarColors[`bg-color--${ bgColor }`]
     );
-    const childClass = classNames(classes['avatar-font__text'],
+    const childClass = classNames('avatar-font__text',
         fgColor && avatarColors[`fg-color--${ fgColor }`]
     );
     const parentCustomStyle = bgColorCustom ? {
