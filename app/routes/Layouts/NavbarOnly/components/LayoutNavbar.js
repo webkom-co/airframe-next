@@ -25,9 +25,9 @@ import { NavbarMessages } from
 import { NavbarUser } from
     './../../../../layout/components/NavbarUser';
 import { SwitchVersion } from
-'./../../../components/Dropdowns/SwitchVersion';
+    './../../../components/Dropdowns/SwitchVersion';
 import { DropdownProfile } from
-'./../../../components/Dropdowns/DropdownProfile';
+    './../../../components/Dropdowns/DropdownProfile';
 
 export const LayoutNavbar = () => (
     <React.Fragment>
@@ -35,17 +35,31 @@ export const LayoutNavbar = () => (
             <Container>
                 { /* START Navbar: Left Side */}
                 <Nav>
-                    <NavLink tag={ Link } to="/" className="align-self-center pr-0">
-                        <i className="fa fa-send fa-lg fa-fw" id="#tooltipBackToHome"></i>
+                    { /* START Logo */}
+                    <NavLink tag={ Link } to="/" className="align-self-center pr-0 pl-0 pl-md-3">
+                        { /* START Logo: Visible on: md, lg, xl */}
+                        <i className="fa fa-send fa-lg fa-fw d-none d-lg-block" id="#tooltipBackToHome"></i>
+                        { /* END Logo: Visible on: md, lg, xl */}
+                        { /* START Logo: Visible on: xs, sm */}
+                        <i className="fa fa-send fa-fw d-lg-none"></i>
+                        { /* END Logo: Visible on: xs, sm */}
                     </NavLink>
+                    { /* END Logo */}
                     { /* START Navbar: Dropdown */}
                     <UncontrolledDropdown nav inNavbar>
                         <DropdownToggle nav>
-                            <div className="h5 fw-600 sidebar-logo mb-1 text-left">
+                            { /* START Logotype: Visible on: md, lg, xl */}
+                            <div className="h5 fw-600 sidebar-logo mb-1 text-left d-none d-lg-block">
                                 airframe <i className="fa fa-angle-down"></i>
                             </div>
-                            <div className="job-title small text-left">
-                                Version: React, 1.0.0
+                            { /* END Logotype: Visible on: md, lg, xl */}
+                            { /* START Logotype: Visible on: xs, sm */}
+                            <div className="h6 fw-600 sidebar-logo mb-0 text-left d-lg-none">
+                                airframe <i className="fa fa-angle-down"></i>
+                            </div>
+                            { /* END Logotype: Visible on: xs, sm */}
+                            <div className="job-title small text-left d-flex">
+                                <span className="d-none d-lg-block">Version: </span>React, 1.0.0
                             </div>
                         </DropdownToggle>
                         <SwitchVersion />
@@ -93,7 +107,7 @@ export const LayoutNavbar = () => (
                 <h5 className="d-xs-block d-md-none my-0">
                     Navbar Only
                 </h5>
-                <NavbarToggler id="navbar-navigation-toggler" className="ml-auto">
+                <NavbarToggler id="navbar-navigation-toggler" className="ml-auto pr-0 b-0">
                     <i className="fa fa-fw fa-bars"></i>
                 </NavbarToggler>
                 <UncontrolledCollapse navbar toggler="#navbar-navigation-toggler">
