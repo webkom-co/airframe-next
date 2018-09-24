@@ -326,7 +326,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -337,7 +337,7 @@ const Forms = () => (
                                                     Left Text Helper
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -348,7 +348,7 @@ const Forms = () => (
                                                     Center Text Helper
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 }>
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -370,7 +370,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -382,7 +382,7 @@ const Forms = () => (
                                                     We'll never share your email.
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -394,7 +394,7 @@ const Forms = () => (
                                                     We'll never share your email.
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 }>
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -417,7 +417,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -430,7 +430,7 @@ const Forms = () => (
                                                     </Badge>
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -443,7 +443,7 @@ const Forms = () => (
                                                     </Badge>
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 }>
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -615,7 +615,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-5 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -631,7 +631,7 @@ const Forms = () => (
                                                     Example help text that remains unchanged.
                                                 </FormText>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -668,7 +668,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -677,7 +677,7 @@ const Forms = () => (
                                                     bsSize="lg" 
                                                 />
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="select" 
                                                     name="select" 
@@ -690,7 +690,7 @@ const Forms = () => (
                                                     <option>Three</option>
                                                 </Input>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <CustomInput 
                                                     type="select" 
                                                     name="customSelect" 
@@ -714,7 +714,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -722,7 +722,7 @@ const Forms = () => (
                                                     placeholder="Default Input"
                                                 />
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="select" 
                                                     name="select" 
@@ -757,7 +757,7 @@ const Forms = () => (
                                     </Label>
                                     <Col sm={9}>
                                         <Row>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="text" 
                                                     name="" 
@@ -766,7 +766,7 @@ const Forms = () => (
                                                     bsSize="sm" 
                                                 />
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 } className="mb-3 mb-md-0">
                                                 <Input 
                                                     type="select" 
                                                     name="select" 
@@ -779,7 +779,7 @@ const Forms = () => (
                                                     <option>Three</option>
                                                 </Input>
                                             </Col>
-                                            <Col>
+                                            <Col sm={ 12 } lg={ 4 }>
                                                 <CustomInput 
                                                     type="select" 
                                                     name="customSelect" 

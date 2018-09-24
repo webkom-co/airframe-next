@@ -7,7 +7,7 @@ import {
 } from 'reactstrap';
 
 const Attachment = (props) => (
-        <Media className="mb-4">
+        <Media className={ `${ props.mediaClassName }` }>
             <Media left className="mr-2">
                 <span className="fa-stack fa-lg">
                     <i className={ `fa fa-square fa-stack-2x fa-${ props.BgIcon } fa-stack-1x ${ props.BgIconClassName }` }></i>
@@ -44,12 +44,14 @@ const Attachment = (props) => (
 
 )
 Attachment.propTypes = {
+    mediaClassName: PropTypes.node,
     icon: PropTypes.node,
     iconClassName: PropTypes.node,
     BgIcon: PropTypes.node,
     BgIconClassName: PropTypes.node
 };
 Attachment.defaultProps = {
+    mediaClassName: "",
     icon: "question",
     iconClassName: "text-white",
     BgIcon: "square",
