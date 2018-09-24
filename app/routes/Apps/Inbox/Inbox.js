@@ -7,7 +7,7 @@ import {
     Container,
     Row,
     Col,
-    Media,
+    ButtonToolbar,
     Avatar,
     AvatarAddOn,
     Card,
@@ -45,7 +45,7 @@ const Inbox = () => (
                     <Card className="mb-3">
                         <CardBody>
                             <div className="d-lg-flex justify-content-end">
-                                <div className="mr-auto d-flex align-items-center">
+                                <div className="mr-auto d-flex align-items-center mb-3 mb-lg-0">
                                     <InputGroup>
                                         <Input placeholder="Search for..." />
                                         <InputGroupAddon addonType="append">
@@ -55,46 +55,48 @@ const Inbox = () => (
                                         </InputGroupAddon>
                                     </InputGroup>
                                 </div>
-                                <ButtonGroup className="mr-2">
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipRefresh">
-                                        <i className="fa fa-fw fa-refresh"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipRefresh">
-                                        Refresh
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipFav">
-                                        <i className="fa fa-fw fa-star"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipFav">
-                                        Add to Favorites
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipTag">
-                                        <i className="fa fa-fw fa-tag"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipTag">
-                                        Tag
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline className="align-self-center" id="tooltipBan">
-                                        <i className="fa fa-fw fa-ban"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipBan">
-                                        Ban this User
-                                    </UncontrolledTooltip>
-                                    <Button color="secondary" outline id="tooltipDelete">
-                                        <i className="fa fa-fw fa-trash"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipDelete">
-                                        Delete
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
-                                <ButtonGroup>
-                                    <Button color="primary" className="align-self-center" tag={ Link } to="/apps/new-email" id="tooltipAddNew">
-                                        <i className="fa fa-fw fa-pencil"></i>
-                                    </Button>
-                                    <UncontrolledTooltip placement="bottom" target="tooltipAddNew">
-                                        Add New
-                                    </UncontrolledTooltip>
-                                </ButtonGroup>
+                                <ButtonToolbar>
+                                    <ButtonGroup className="mr-2">
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipRefresh">
+                                            <i className="fa fa-fw fa-refresh"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipRefresh">
+                                            Refresh
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipFav">
+                                            <i className="fa fa-fw fa-star"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipFav">
+                                            Add to Favorites
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipTag">
+                                            <i className="fa fa-fw fa-tag"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipTag">
+                                            Tag
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline className="align-self-center" id="tooltipBan">
+                                            <i className="fa fa-fw fa-ban"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipBan">
+                                            Ban this User
+                                        </UncontrolledTooltip>
+                                        <Button color="secondary" outline id="tooltipDelete">
+                                            <i className="fa fa-fw fa-trash"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipDelete">
+                                            Delete
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                    <ButtonGroup className="ml-auto ml-lg-0">
+                                        <Button color="primary" className="align-self-center" tag={ Link } to="/apps/new-email" id="tooltipAddNew">
+                                            <i className="fa fa-fw fa-pencil"></i>
+                                        </Button>
+                                        <UncontrolledTooltip placement="bottom" target="tooltipAddNew">
+                                            Add New
+                                        </UncontrolledTooltip>
+                                    </ButtonGroup>
+                                </ButtonToolbar>
                             </div>
                         </CardBody>
                         { /* START Table */}

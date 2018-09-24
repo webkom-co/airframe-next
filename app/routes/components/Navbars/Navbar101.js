@@ -1,19 +1,10 @@
 import React from 'react';
-import faker from 'faker';
 import { Link } from 'react-router-dom';
 
 import { 
     Navbar, 
-    Media, 
     Nav, 
-    Input,
-    Form, 
     DropdownToggle,
-    IconWithBadge,
-    Badge,
-    DropdownMenu,
-    DropdownItem,
-    NavItem,
     NavLink,
     UncontrolledDropdown,
     Avatar, 
@@ -21,14 +12,53 @@ import {
 } from './../../../components';
 import { randomAvatar } from './../../../utilities';
 
+
+import { NavbarActivityFeed } from
+    './../../../layout/components/NavbarActivityFeed';
+import { NavbarMessages } from
+    './../../../layout/components/NavbarMessages';
+import { NavbarUser } from
+    './../../../layout/components/NavbarUser';
+import { DropdownProfile } from
+    '../Dropdowns/DropdownProfile';
+
+import { LogoNavbar } from
+    '../Logos/LogoNavbar';
+import { LogotypeNavbar } from
+    '../Logos/LogotypeNavbar';
+import { SwitchVersion } from
+    '../Dropdowns/SwitchVersion';
+
 const Navbar101 = () => (
 <React.Fragment>
     { /* START Navbar */}
-    <Navbar color="white" light expand="md" className="mb-3">
-        { /* START Left Side */}
-        <span className="text-navbar">
-            <Media>
-                <Media left className="mr-3 align-self-center">
+    <Navbar color="white" light expand className="mb-3">
+        { /* START Navbar: Left Side */}
+        <Nav>
+            { /* START Logo */}
+            <NavLink tag={ Link } to="/" className="align-self-center pr-0 pl-0">
+                <LogoNavbar />
+            </NavLink>
+            { /* END Logo */}
+            { /* START Navbar: Dropdown */}
+            <UncontrolledDropdown nav inNavbar>
+                <DropdownToggle nav className="py-0">
+                    <LogotypeNavbar 
+                        logoH="h6"
+                    />
+                </DropdownToggle>
+                <SwitchVersion />
+            </UncontrolledDropdown>
+            { /* END Navbar: Dropdown */}
+        </Nav>
+        { /* END Navbar: Left Side */}
+        { /* START Navbar: Right Side */}
+        <Nav className="ml-auto" navbar>
+            <NavbarMessages className="ml-1" />
+            <NavbarActivityFeed className="ml-1" />
+            { /* START Navbar: Dropdown */}
+            <UncontrolledDropdown nav inNavbar className="ml-1">
+                <DropdownToggle nav>
                     <Avatar.Image
                         size="sm"
                         src={ randomAvatar() }
@@ -45,76 +75,15 @@ const Navbar101 = () => (
                             />
                         ]}
                     /> 
-                </Media>
-                <Media body>
-                    <span className="mt-0 d-flex mb-0">
-                        { faker.name.firstName() } { faker.name.lastName() }
-                    </span>
-                    <p className="small mb-0">
-                        { faker.name.jobTitle() }
-                    </p>
-                </Media>
-            </Media>
-        </span>
-        { /* END Left Side */}
-        { /* START Right Side */}
-        <Nav className="ml-auto" navbar>
-            <Form inline className="mr-3">
-                <Input type="text" name="text" placeholder="Search for..." />
-            </Form>
-            { /* START Navbar: Dropdown */}
-            <UncontrolledDropdown nav inNavbar className="mr-2">
-                <DropdownToggle nav>
-                    <IconWithBadge
-                        badge={ <Badge pill color="warning">2</Badge> }
-                    >
-                        <i className="fa fa-envelope-o fa-fw" />
-                    </IconWithBadge>
                 </DropdownToggle>
-                <DropdownMenu right>
-                    <DropdownItem>
-                    Option 1
-                    </DropdownItem>
-                    <DropdownItem>
-                    Option 2
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                        Reset
-                    </DropdownItem>
-                </DropdownMenu>
+                <DropdownProfile  
+                    right  
+                />
             </UncontrolledDropdown>
             { /* END Navbar: Dropdown */}
-            { /* START Navbar: Dropdown */}
-            <UncontrolledDropdown nav inNavbar className="mr-2">
-                <DropdownToggle nav>
-                    <IconWithBadge
-                        badge={ <Badge pill color="primary">6</Badge> }
-                    >
-                        <i className="fa fa-envelope-o fa-fw" />
-                    </IconWithBadge>
-                </DropdownToggle>
-                <DropdownMenu right>
-                    <DropdownItem>
-                    Option 1
-                    </DropdownItem>
-                    <DropdownItem>
-                    Option 2
-                    </DropdownItem>
-                    <DropdownItem divider />
-                    <DropdownItem>
-                        Reset
-                    </DropdownItem>
-                </DropdownMenu>
-            </UncontrolledDropdown>
-            { /* END Navbar: Dropdown */}
-            <NavItem>
-                <NavLink tag={ Link } to="/pages/login">
-                    <i className="fa fa-power-off"></i>
-                </NavLink>
-            </NavItem>
+            <NavbarUser className="ml-1" />
         </Nav>
-        { /* END Right Side */}
+        { /* END Navbar: Right Side */}
     </Navbar>
     { /* END Navbar */}
 </React.Fragment>

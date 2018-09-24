@@ -14,14 +14,14 @@ import {
 
 const WebsitePerformance = (props) => (
     <React.Fragment>
-        <Row>
-            <Col sm={ 8 } className="col-sm-8 d-flex align-items-start flex-column">
+        <Row className="flex-column-reverse flex-lg-row">
+            <Col sm={ 12 } lg={ 8 } className="d-flex align-items-start flex-column">
                 <h6 className="mb-auto">
                     { props.title }
                 </h6>
                 <TinyAreaChart />
             </Col>
-            <Col sm={ 4 } className="text-right">
+            <Col sm={ 12 } lg={ 4 } className="text-center text-lg-right">
                 <h2>
                     { props.value }
                 </h2>

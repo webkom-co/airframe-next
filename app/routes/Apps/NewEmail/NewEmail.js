@@ -38,8 +38,8 @@ const NewEmail = () => (
                     <Card className="mb-3">
                         <CardBody>
                             { /* START Header */}
-                            <div className="d-lg-flex justify-content-end mb-4">
-                                <div className="mr-auto d-flex align-items-center">
+                            <div className="flex-column flex-md-row d-flex mb-4">
+                                <div className="mr-md-auto mr-sm-0">
                                     <Button color="link" tag={ Link } to="/apps/inbox">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
@@ -75,7 +75,7 @@ const NewEmail = () => (
                                     </InputGroupAddon>
                                 </InputGroup>
                                 <Row className="mb-3">
-                                    <Col>
+                                    <Col sm={12} lg={6} className="mb-3 mb-lg-0">
                                         <InputGroup>
                                             <InputGroupAddon addonType="prepend">
                                                 CC:
@@ -83,7 +83,7 @@ const NewEmail = () => (
                                             <Input placeholder="Enter email(s)..." />
                                         </InputGroup>
                                     </Col>
-                                    <Col>
+                                    <Col sm={12} lg={6}>
                                         <InputGroup>
                                             <InputGroupAddon addonType="prepend">
                                                 BCC:

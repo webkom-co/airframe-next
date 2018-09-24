@@ -36,7 +36,7 @@ const caret = [
 ];
 
 const CardSystem = (props) => (
-    <Card>
+    <Card className="mb-3 mb-lg-0">
        <CardBody className="pb-0">
            <div className="d-flex">
                <span>

@@ -1613,7 +1613,7 @@ const InputGroups = () => (
                                 </span>
                             </CardTitle>
                             { /* START Form */}
-                            <Form>
+                            <Form className="table-responsive">
                                 { /* START Input */}
                                 <FormGroup row>
                                     <Label for="leftFileInput" sm={3}>
