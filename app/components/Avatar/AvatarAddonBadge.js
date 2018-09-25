@@ -4,10 +4,10 @@ import classNames from 'classnames';
 import { Badge } from 'reactstrap';
 
 const AvatarAddonBadge = (props) => {
-    const { children, className, ...badgeProps } = props;
+    const { children, ...badgeProps } = props;
 
     return (
-        <Badge className={classNames('avatar__badge', className)} {...badgeProps}>
+        <Badge {...badgeProps}>
             { children }
         </Badge>
     );
