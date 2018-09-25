@@ -58,7 +58,7 @@ const Dropdowns = () => (
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '300px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Default
                                 <span className="small ml-1 text-muted">
@@ -68,8 +68,8 @@ const Dropdowns = () => (
                             <p>
                                 Default dropdown menu styling.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -78,7 +78,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -86,7 +86,7 @@ const Dropdowns = () => (
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '300px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Active
                                 <span className="small ml-1 text-muted">
@@ -96,8 +96,8 @@ const Dropdowns = () => (
                             <p>
                                 Make the link active with <code>active</code> class.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -106,7 +106,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem active>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -114,7 +114,7 @@ const Dropdowns = () => (
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '300px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Disabled
                                 <span className="small ml-1 text-muted">
@@ -124,8 +124,8 @@ const Dropdowns = () => (
                             <p>
                                 Disable the link with <code>disabled</code> class.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -134,7 +134,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -163,7 +163,7 @@ const Dropdowns = () => (
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Default Header
                                 <span className="small ml-1 text-muted">
@@ -173,8 +173,8 @@ const Dropdowns = () => (
                             <p>
                                 Basic <code>header</code> styling of label sections.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -184,11 +184,11 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Header Left Icon
                                 <span className="small ml-1 text-muted">
@@ -198,8 +198,8 @@ const Dropdowns = () => (
                             <p>
                                 Display left/right positioned icons.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -212,7 +212,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -220,7 +220,7 @@ const Dropdowns = () => (
                 { /* START Col6 2 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Header Right Icon
                                 <span className="small ml-1 text-muted">
@@ -230,8 +230,8 @@ const Dropdowns = () => (
                             <p>
                                 Basic <code>header</code> styling of label sections.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -244,11 +244,11 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Header Left & Right Icon
                                 <span className="small ml-1 text-muted">
@@ -258,8 +258,8 @@ const Dropdowns = () => (
                             <p>
                                 Display left/right positioned icons
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -273,7 +273,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -302,7 +302,7 @@ const Dropdowns = () => (
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Left Icon
                                 <span className="small ml-1 text-muted">
@@ -312,8 +312,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown icons in left position.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -332,11 +332,11 @@ const Dropdowns = () => (
                                         Logout
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Right Icon
                                 <span className="small ml-1 text-muted">
@@ -346,8 +346,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown icons in right position.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -366,11 +366,11 @@ const Dropdowns = () => (
                                         <i className="fa fa-fw fa-sign-out align-self-center ml-auto"></i>
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Right Badge
                                 <span className="small ml-1 text-muted">
@@ -380,8 +380,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown menu items with <code>Badge</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -406,11 +406,11 @@ const Dropdowns = () => (
                                         </Badge>
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Right Pills
                                 <span className="small ml-1 text-muted">
@@ -420,8 +420,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown menu items with <code>Badge pill</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -446,11 +446,11 @@ const Dropdowns = () => (
                                         </Badge>
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Left Badge
                                 <span className="small ml-1 text-muted">
@@ -460,8 +460,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown menu items with <code>Badge pill</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -486,7 +486,7 @@ const Dropdowns = () => (
                                         Logout
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -494,7 +494,7 @@ const Dropdowns = () => (
                 { /* START Col6 2 */}
                 <Col lg={ 6 }>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Left Pills
                                 <span className="small ml-1 text-muted">
@@ -504,8 +504,8 @@ const Dropdowns = () => (
                             <p>
                                 Dropdown menu items with <code>Badge pill</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -530,11 +530,11 @@ const Dropdowns = () => (
                                         Logout
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Right & Left Icons
                                 <span className="small ml-1 text-muted">
@@ -544,8 +544,8 @@ const Dropdowns = () => (
                             <p>
                                 Basic <code>header</code> styling of label sections.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -567,11 +567,11 @@ const Dropdowns = () => (
                                         <i className="fa fa-fw fa-sign-out align-self-center ml-auto"></i>
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Left Radios
                                 <span className="small ml-1 text-muted">
@@ -581,8 +581,8 @@ const Dropdowns = () => (
                             <p>
                                 Left positioned <code>radio</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -616,11 +616,11 @@ const Dropdowns = () => (
                                         />
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '320px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Left Checkboxes
                                 <span className="small ml-1 text-muted">
@@ -630,8 +630,8 @@ const Dropdowns = () => (
                             <p>
                                 Left positioned <code>checkbox</code>.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist>
@@ -662,11 +662,11 @@ const Dropdowns = () => (
                                         />
                                     </DropdownItem>
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardBody style={{ height: '390px' }}>
+                        <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: Forms 
                                 <span className="small ml-1 text-muted">
@@ -676,8 +676,8 @@ const Dropdowns = () => (
                             <p>
                                 with Buttons, Inputs and Checkbox.
                             </p>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle caret color="link">
+                            <UncontrolledButtonDropdown>
+                                <DropdownToggle caret color="secondary" outline>
                                     Dropdown
                                 </DropdownToggle>
                                 <DropdownMenu persist className="p-4">
@@ -697,9 +697,8 @@ const Dropdowns = () => (
                                             <Button color="primary">Sign In</Button>{' '}
                                         </FormGroup>
                                      </Form>
-
                                 </DropdownMenu>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -842,7 +841,7 @@ const Dropdowns = () => (
             <Row>
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
-                    <Card className="mb-3" style={{ height: '540px' }}>
+                    <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: List Group (as Links)
@@ -850,8 +849,9 @@ const Dropdowns = () => (
                                     #5.01
                                 </span>
                             </CardTitle>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle color="link" caret>
+                            <p>Mainly used components together with "Navbar".</p>
+                            <UncontrolledButtonDropdown direction="up">
+                                <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
                                 <ExtendedDropdown>
@@ -894,14 +894,14 @@ const Dropdowns = () => (
                                         </Link>
                                     </ExtendedDropdown.Section>
                                 </ExtendedDropdown>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
                 { /* END Col6 1 */}
                 { /* START Col6 1 */}
                 <Col lg={ 6 }>
-                    <Card className="mb-3" style={{ height: '640px' }}>
+                    <Card className="mb-3">
                         <CardBody>
                             <CardTitle tag="h6">
                                 Dropdown: List Group (as Buttons) 
@@ -909,8 +909,9 @@ const Dropdowns = () => (
                                     #5.02
                                 </span>
                             </CardTitle>
-                            <ButtonDropdown isOpen>
-                                <DropdownToggle color="link" caret>
+                            <p>Mainly used components together with "Navbar".</p>
+                            <UncontrolledButtonDropdown direction="up">
+                                <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
                                 <ExtendedDropdown>
@@ -953,7 +954,7 @@ const Dropdowns = () => (
                                         </Link>
                                     </ExtendedDropdown.Section>
                                 </ExtendedDropdown>
-                            </ButtonDropdown>
+                            </UncontrolledButtonDropdown>
                         </CardBody>
                     </Card>
                 </Col>
