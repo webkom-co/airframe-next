@@ -158,14 +158,14 @@ const Home = () => (
                             <CardTitle tag="h6">
                                 Avatars: Photos
                                 <span className="small ml-1 text-muted">
-                                    #2.02
+                                    #2.01
                                 </span>
                             </CardTitle>
                             <p className="card-text">
                                 Large size avatar example
                             </p>
                             <Avatar.Image
-                                size="md"
+                                size="lg"
                                 src={ randomAvatar() }
                                 className="mr-2"
                             />
@@ -175,7 +175,7 @@ const Home = () => (
                                 className="mr-2"
                             />
                              <Avatar.Image
-                                size="md"
+                                size="sm"
                                 src={ randomAvatar() }
                                 className="mr-2"
                             />
@@ -195,19 +195,22 @@ const Home = () => (
                                 Large size avatar example
                             </p>
                             <Avatar.Font
-                                bgColor="purple"
+                                size="lg"
+                                bgColor="primary"
                                 className="mr-2"
                             >
                                 VN
                             </Avatar.Font>
                             <Avatar.Font
-                                bgColor="secondary"
+                                size="md"
+                                bgColor="info"
                                 className="mr-2"
                             >
                                 FS
                             </Avatar.Font>
                             <Avatar.Font
-                                bgColor="danger"
+                                size="sm"
+                                bgColor="secondary"
                                 className="mr-2"
                             >
                                 +4
@@ -227,23 +230,23 @@ const Home = () => (
                             <p className="card-text">
                                 Large size avatar example
                             </p>
-                            <Avatar.Font 
+                            <Avatar.Font
+                                size="lg"
                                 bgColor="200"
-                                fgColor="500"
                                 className="mr-2"
                                 >
                                 <i className="fa fa-user" />
                             </Avatar.Font>
                             <Avatar.Font 
+                                size="md"
                                 bgColor="200"
-                                fgColor="500"
                                 className="mr-2"
                                 >
                                 <i className="fa fa-plus" />
                             </Avatar.Font>
                             <Avatar.Font 
+                                size="sm"
                                 bgColor="200"
-                                fgColor="500"
                                 className="mr-2"
                                 >
                                 <i className="fa fa-bars" />
