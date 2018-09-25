@@ -24,7 +24,7 @@ const SidebarTopB = () => (
                         Back to Home
                     </UncontrolledTooltip>
                     <UncontrolledDropdown>
-                        <DropdownToggle color="link">
+                        <DropdownToggle color="link" className="btn-switch-version">
                             <div className="h4 fw-600 sidebar-logo mb-1 text-left">
                                 react.bs4 <i className="fa fa-angle-down ml-1"></i>
                             </div>

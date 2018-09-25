@@ -20,7 +20,7 @@ const SidebarBottomA = () => (
             { /* START DESKTOP View */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown direction="up" className="mb-3">
-                    <DropdownToggle color="link" className="text-left pl-0 pb-0">
+                    <DropdownToggle color="link" className="btn-switch-version text-left pl-0 pb-0">
                         React 1.0.0 <i className="fa fa-angle-up ml-2"></i>
                         <br />
                         <span className="small">

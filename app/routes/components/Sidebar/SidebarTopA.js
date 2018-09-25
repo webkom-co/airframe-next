@@ -48,7 +48,7 @@ const SidebarTopA = () => (
             { /* START SIDEBAR-DEFAULT: Dropdown */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="link" className="pl-0 pb-0">
+                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile">
                         { faker.name.firstName() } { faker.name.lastName() }
                         <i className="fa fa-angle-down ml-2"></i>
                     </DropdownToggle>

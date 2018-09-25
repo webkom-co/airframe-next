@@ -63,7 +63,7 @@ const SidebarBottomB = () => (
             <Tools.SlimOnly>
                 <div className="text-center">
                     <UncontrolledButtonDropdown direction="right" className="mb-3">
-                        <DropdownToggle color="link" className="text-left pl-0 pb-0">
+                        <DropdownToggle color="link" className="btn-profile text-left pl-0 pb-0">
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }
