@@ -29,11 +29,12 @@ const AvatarFont = (props) => {
     const childCustomStyle = fgColorCustom ? {
         color: fgColorCustom
     } : { };
-    const child = typeof children === 'string' ? 
+    const child = (
         <span>
             { children }
-        </span> :
-        React.Children.only(children);
+        </span>
+    );
+
     return (
         <Avatar { ...avatarProps }>
             <div className={ parentClass } style={parentCustomStyle}>
@@ -57,7 +58,8 @@ AvatarFont.propTypes = {
 };
 AvatarFont.defaultProps = {
     bgColor: '400',
-    fgColor: 'white'
+    fgColor: 'white',
+    size: 'md'
 };
 
 export { AvatarFont };
