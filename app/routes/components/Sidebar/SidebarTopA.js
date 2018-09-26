@@ -23,7 +23,7 @@ const SidebarTopA = () => (
             { /* START SIDEBAR-SLIM: Avatar */ }
             <Link to="/">
                 <Tools.SlimProps
-                    slimProps={{ size: 'md' }}
+                    slimProps={{ size: 'sm' }}
                 >
                     <Avatar.Image
                         size="lg"
