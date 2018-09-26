@@ -67,12 +67,12 @@ const ProfileDetails = () => (
                                 </ul>
                             </div>                                
                             <Row className="mt-3">
-                                <Col sm={ 6 }>
-                                    <Button color="primary" block tag={ Link } to="/apps/new-email">
+                                <Col sm={ 6 } md={ 6 }>
+                                    <Button color="primary" block tag={ Link } to="/apps/new-email" className="mb-3 mb-lg-0">
                                         Message
                                     </Button> 
                                 </Col>
-                                <Col sm={ 6 }>
+                                <Col sm={ 6 } md={ 6 }>
                                     <Button color="secondary" outline block tag={ Link } to="/apps/profile-edit">
                                         Edit
                                     </Button> 
@@ -107,7 +107,9 @@ const ProfileDetails = () => (
                             <div className="mt-4 mb-2">
                                 <span className="small">Contact</span>
                             </div>
-                            <DlRowContacts 
+                            <DlRowContacts
+                                leftSideClassName="text-lg-left"
+                                rightSideClassName="text-lg-right"
                             />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
@@ -232,7 +234,9 @@ const ProfileDetails = () => (
                                     <div className="mb-2">
                                         <span className="small">Contact</span>
                                     </div>
-                                    <DlRowContacts />
+                                    <DlRowContacts 
+                                    leftSideClassName="text-lg-right"
+                                    />
                                     <div className="mt-4 mb-2">
                                         <span className="small">Address</span>
                                     </div>

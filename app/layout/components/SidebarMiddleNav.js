@@ -151,5 +151,10 @@ export const SidebarMiddleNav = () => (
             title="Icons"
             to='/icons'
         />
+        <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-bookmark-o"></i>}
+            title="Docs"
+            to='/'
+        />
     </SidebarMenu >
 );
