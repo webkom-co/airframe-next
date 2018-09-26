@@ -43,7 +43,7 @@ export const VerticalComposedChart = () => (
             <Tooltip/>
             <Legend/>
             <Area dataKey='amt' fill={ colors['info-03'] } stroke={ colors['info'] } />
-            <Bar dataKey='pv' barSize={20} fill={ colors['primary'] } />
+            <Bar dataKey='pv' barSize={12} fill={ colors['primary'] } />
             <Line dataKey='uv' stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
         </ComposedChart>
     </ResponsiveContainer>

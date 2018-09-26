@@ -42,8 +42,8 @@ export const CustomizedLabelLineChart = () => (
            <CartesianGrid strokeDasharray="3 3"/>
            <Tooltip/>
            <Legend />
-           <Line type="monotone" dataKey="pv" stroke={ colors['info-07'] } label={ <ValueLabel /> } activeDot={{r: 5}} dot={generateDot} />
-           <Line type="monotone" dataKey="uv" stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
+           <Line dataKey="pv" stroke={ colors['info-07'] } label={ <ValueLabel /> } activeDot={{r: 5}} dot={generateDot} />
+           <Line dataKey="uv" stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
       </LineChart>
     </ResponsiveContainer>
 );

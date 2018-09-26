@@ -40,9 +40,9 @@ const LineBarAreaComposedChart = () => (
           <YAxis />
           <Tooltip />
           <Legend />
-          <Area type='monotone' dataKey='amt' fill={ colors['primary-04'] } stroke={ colors['primary'] } />
-          <Bar dataKey='pv' barSize={20} fill={ colors['info-07'] } />
-          <Line type='monotone' dataKey='uv' stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
+          <Area dataKey='amt' fill={ colors['primary-04'] } stroke={ colors['primary'] } />
+          <Bar dataKey='pv' barSize={12} fill={ colors['info-07'] } />
+          <Line dataKey='uv' stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
        </ComposedChart>
     </ResponsiveContainer>
 );

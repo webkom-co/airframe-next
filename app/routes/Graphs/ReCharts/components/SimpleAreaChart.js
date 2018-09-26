@@ -29,7 +29,7 @@ const SimpleAreaChart = () => (
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip/>
-            <Area type='monotone' dataKey='uv' stroke={ colors['info'] } fill={ colors['info-03'] } />
+            <Area dataKey='uv' stroke={ colors['info'] } fill={ colors['info-03'] } />
       </AreaChart>
     </ResponsiveContainer>
 
