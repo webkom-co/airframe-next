@@ -41,7 +41,7 @@ const GalleryCard = () => (
             <CardBody>
                 <div className="d-flex mb-3">
                     <span>
-                        <a className="h6">
+                        <a className="h6" href="#">
                             { faker.commerce.productName() }
                         </a>
                         <br />
