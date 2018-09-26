@@ -19,6 +19,7 @@ const TinyDonutChart = () => (
     <PieChart width={ 80 } height={ 80 }>
         <Pie
             data={data}
+            dataKey="value"
             stroke={ colors['white'] }
             innerRadius={ 20 }
             outerRadius={ 35 } 

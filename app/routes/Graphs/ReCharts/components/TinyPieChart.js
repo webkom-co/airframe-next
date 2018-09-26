@@ -19,7 +19,8 @@ const COLORS = [ colors['info-04'], colors['info-07'], colors['primary-08'], col
 const TinyPieChart = () => (
     <PieChart width={ 30 } height={ 30 }>
         <Pie
-            data={data}  
+            data={data}
+            dataKey="value"
             fill="#8884d8"
             stroke={ colors['white'] }
             outerRadius={ 15 } 

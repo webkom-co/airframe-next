@@ -67,7 +67,7 @@ const TrTableBorderless = () => (
     <React.Fragment>
         {
             _.times(5, (index) => (
-                <tr>
+                <tr key={ index }>
                     { status[index%2] }
                     <td className="align-middle">
                         <samp>{ faker.random.number() }</samp>

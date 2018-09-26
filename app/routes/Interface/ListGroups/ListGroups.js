@@ -737,7 +737,7 @@ const ListGroups = () => (
                             </span>
                         </h6>
                         <ListGroup>
-                            <ListGroupItem tag="button" action href="#">
+                            <ListGroupItem href="#">
                                 <Media>
                                     <Media left top className="mr-4">
                                         <Avatar.Image
@@ -772,7 +772,7 @@ const ListGroups = () => (
                                     </Media>
                                 </Media>
                             </ListGroupItem>
-                            <ListGroupItem  tag="button" action href="#">
+                            <ListGroupItem href="#">
                                 <Media>
                                     <Media left top className="mr-4">
                                         <Avatar.Image
@@ -807,7 +807,7 @@ const ListGroups = () => (
                                     </Media>
                                 </Media>
                             </ListGroupItem>
-                            <ListGroupItem  tag="button" action href="#">
+                            <ListGroupItem href="#">
                                 <Media>
                                     <Media left top className="mr-4">
                                         <Avatar.Image
@@ -857,7 +857,7 @@ const ListGroups = () => (
                             <ListGroupItem tag="button" action href="#">
                                 <Media>
                                     <Media left top className="mr-3">
-                                        <i class="fa fa-file-pdf-o fa-fw fa-lg text-danger"></i>
+                                        <i className="fa fa-file-pdf-o fa-fw fa-lg text-danger"></i>
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
@@ -872,7 +872,7 @@ const ListGroups = () => (
                             <ListGroupItem  tag="button" action href="#">
                                 <Media>
                                     <Media left top className="mr-3">
-                                        <i class="fa fa-file-word-o fa-fw fa-lg text-primary"></i>
+                                        <i className="fa fa-file-word-o fa-fw fa-lg text-primary"></i>
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
@@ -887,7 +887,7 @@ const ListGroups = () => (
                             <ListGroupItem  tag="button" action href="#">
                                 <Media>
                                     <Media left top className="mr-3">
-                                        <i class="fa fa-file-excel-o fa-fw fa-lg text-success"></i>
+                                        <i className="fa fa-file-excel-o fa-fw fa-lg text-success"></i>
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
@@ -941,7 +941,7 @@ const ListGroups = () => (
                                     </Media>
                                     <Media right top>
                                         <div>
-                                            <CustomInput type="radio" id="rightRadio1" name="customRadio" label="" checked />
+                                            <CustomInput type="radio" id="rightRadio1" name="customRadio" label="" defaultChecked />
                                         </div>
                                     </Media>
                                 </Media>
@@ -1031,7 +1031,7 @@ const ListGroups = () => (
                             <ListGroupItem>
                                 <Media>
                                     <Media left className="mr-3">
-                                        <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" checked />
+                                        <CustomInput type="radio" id="leftRadio1" name="leftRadio" label="" defaultChecked />
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">
@@ -1509,7 +1509,7 @@ const ListGroups = () => (
                                     </Media>
                                     <Media right top className="ml-2">
                                         <div>
-                                            <CustomInput type="checkbox" id="rightCheckbox1" label="" checked />
+                                            <CustomInput type="checkbox" id="rightCheckbox1" label="" defaultChecked />
                                         </div>
                                     </Media>
                                 </Media>
@@ -1599,7 +1599,7 @@ const ListGroups = () => (
                             <ListGroupItem>
                                 <Media>
                                     <Media left className="mr-3">
-                                        <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox1" label="" checked />
+                                        <CustomInput className="pt-0 mt-0" type="checkbox" id="leftCheckbox1" label="" defaultChecked />
                                     </Media>
                                     <Media body>
                                         <span className="mt-0 d-flex h6 mb-1">

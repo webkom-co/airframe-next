@@ -595,7 +595,7 @@ const Dropdowns = () => (
                                             id="DropdownLeftRadios1" 
                                             name="DropdownLeftRadios" 
                                             label="Minimal" 
-                                            checked 
+                                            defaultChecked 
                                         />
                                     </DropdownItem>
                                     <DropdownItem>
@@ -643,7 +643,7 @@ const Dropdowns = () => (
                                             type="checkbox" 
                                             id="DropdownLeftCheckbox1" 
                                             label="ReactJS" 
-                                            checked 
+                                            defaultChecked 
                                         />
                                     </DropdownItem>
                                     <DropdownItem>

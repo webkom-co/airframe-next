@@ -123,7 +123,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem className="d-flex px-2 mb-2">
-                <CustomInput type="radio" id="radio1" name="rating" label="Clothing" inline checked />
+                <CustomInput type="radio" id="radio1" name="rating" label="Clothing" inline defaultChecked />
                 <span className="small ml-auto align-self-center">
                     ({ faker.finance.mask() })
                 </span>
@@ -159,7 +159,7 @@ const SearchResultsLeftNav = () => (
                 </NavLink>
             </NavItem>
             <NavItem className="d-flex px-2 mb-2">
-                <CustomInput type="checkbox" id="checkbox1" label="Garden" inline checked />
+                <CustomInput type="checkbox" id="checkbox1" label="Garden" inline defaultChecked />
                 <span className="small ml-auto align-self-center">
                     ({ faker.finance.mask() })
                 </span>

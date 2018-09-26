@@ -19,7 +19,7 @@ const TrTableHeads = () => (
     <React.Fragment>
         {
             _.times(4, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         1
                     </td>

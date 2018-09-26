@@ -21,7 +21,8 @@ export const PieChartWithPaddingAngle = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <PieChart>
             <Pie
-                data={data} 
+                data={data}
+                dataKey="value"
                 stroke={ colors['white'] }
                 innerRadius={60}
                 outerRadius={80} 

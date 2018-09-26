@@ -87,7 +87,7 @@ const Profile = () => {
                         <AvatarAddOn.Icon 
                             className="fa fa-circle"
                             color="white"
-                            key="avatar-icon-bg"
+                            key="avatar-icon-white-bg"
                         />,
                         ...randomArray(avatar)
                     ]}

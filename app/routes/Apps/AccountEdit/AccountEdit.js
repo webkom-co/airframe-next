@@ -56,7 +56,7 @@ const AccountEdit = () => (
                                             type="password" 
                                             name="password" 
                                             id="oldPassword" 
-                                            value="********"
+                                            defaultValue="********"
                                         />
                                     </Col>
                                 </FormGroup>
@@ -71,7 +71,7 @@ const AccountEdit = () => (
                                             type="password" 
                                             name="password" 
                                             id="newPassword" 
-                                            value="********"
+                                            defaultValue="********"
                                         />
                                     </Col>
                                 </FormGroup>
@@ -86,7 +86,7 @@ const AccountEdit = () => (
                                             type="password" 
                                             name="password" 
                                             id="confirmNewPassword" 
-                                            value="********"
+                                            defaultValue="********"
                                         />
                                     </Col>
                                 </FormGroup>

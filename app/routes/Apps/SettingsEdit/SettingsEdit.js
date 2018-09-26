@@ -63,7 +63,7 @@ const SettingsEdit = () => (
                                     <p className="mb-2">
                                         Do you want notify you by email whenever contacts send you a message?
                                     </p>
-                                    <CustomInput type="radio" id="privateMessageYes" name="privateMessage" label="Yes" checked />
+                                    <CustomInput type="radio" id="privateMessageYes" name="privateMessage" label="Yes" defaultChecked />
                                     <CustomInput type="radio" id="privateMessageNo" name="privateMessage" label="No" />
                                 </FormGroup>
                                 { /* END Input */}
@@ -88,7 +88,7 @@ const SettingsEdit = () => (
                                     <p className="mb-2">
                                         Notify me via email when...
                                     </p>
-                                    <CustomInput type="radio" id="someoneComments" name="ActivityNotifications" label="Someone Comments" checked />
+                                    <CustomInput type="radio" id="someoneComments" name="ActivityNotifications" label="Someone Comments" defaultChecked />
                                     <CustomInput type="radio" id="someoneMentions" name="ActivityNotifications" label="Someone Mentions" />
                                     <CustomInput type="radio" id="anyoneFollowsMe" name="ActivityNotifications" label="Anyone Follows Me" />
                                 </FormGroup>

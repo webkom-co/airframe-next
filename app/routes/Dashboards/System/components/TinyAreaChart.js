@@ -21,8 +21,8 @@ const TinyAreaChart = (props) => {
 };
 
 TinyAreaChart.propTypes = {
-    strokeColor: PropTypes.spring,
-    fillColor: PropTypes.spring
+    strokeColor: PropTypes.string,
+    fillColor: PropTypes.string
 };
 TinyAreaChart.defaultProps = {
     strokeColor: "600",

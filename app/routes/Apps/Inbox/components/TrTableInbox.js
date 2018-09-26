@@ -34,16 +34,16 @@ const TrTableInbox = (props) => (
         <tr>
             <td className="align-middle">
                 {
-                    ( Math.round(Math.random()) )?(
+                    (Math.round(Math.random())) ? (
                         <span>
                             <i className="fa fa-circle fa-fw text-primary" id={`newMessage-${ props.id }` }></i>
                             <UncontrolledTooltip placement="bottom" target={`#newMessage-${ props.id }` }>
                                 New Message
                             </UncontrolledTooltip>
                         </span>
-                        ):(
+                    ) : (
                              <span></span>
-                        )
+                    )
                 }
             </td>
             <td className="align-middle">

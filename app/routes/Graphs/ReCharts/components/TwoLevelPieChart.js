@@ -33,12 +33,14 @@ const TwoLevelPieChart = () => (
         <PieChart>
             <Pie
                 data={data01}
+                dataKey="value"
                 outerRadius={60}
                 fill={ colors['info-07'] }
                 stroke={ colors['white'] }
             />
             <Pie
                 data={data02}
+                dataKey="value"
                 innerRadius={70}
                 outerRadius={90}
                 fill={ colors['purple'] }

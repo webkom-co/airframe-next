@@ -28,7 +28,7 @@ const TrTableFilesList = () => (
             <td className="align-middle">
                 <Media>
                     <Media left middle>
-                       <i className="fa fa-fw fa-folder-o fa-3x mr-2" object></i>
+                       <i className="fa fa-fw fa-folder-o fa-3x mr-2"></i>
                     </Media>
                     <Media body>
                         <div className="text-inverse">

@@ -64,9 +64,9 @@ const CardSystem = (props) => (
 
 CardSystem.propTypes = {
     title: PropTypes.node,
-    badgeColor: PropTypes.spring,
+    badgeColor: PropTypes.string,
     unit: PropTypes.node,
-    pieColor: PropTypes.spring
+    pieColor: PropTypes.string
 };
 CardSystem.defaultProps = {
     title: "Waiting...",

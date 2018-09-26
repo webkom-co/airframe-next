@@ -8,8 +8,6 @@ import {
 
 import colors from './../../../../colors';
 
-
-
 const TinyDonutChart = (props) => {
     const data = [
         {name: 'Group A', value: 40+Math.random()*100},
@@ -19,6 +17,7 @@ const TinyDonutChart = (props) => {
         <PieChart width={ 80 } height={ 80 }>
             <Pie
                 data={data}
+                dataKey="value"
                 stroke={ colors[ props.strokeColor ] }
                 innerRadius={ 26 }
                 outerRadius={ 35 } 
@@ -31,9 +30,9 @@ const TinyDonutChart = (props) => {
 };
 
 TinyDonutChart.propTypes = {
-    pieColor: PropTypes.spring,
-    strokeColor: PropTypes.spring,
-    pieBg: PropTypes.spring
+    pieColor: PropTypes.string,
+    strokeColor: PropTypes.string,
+    pieBg: PropTypes.string
 };
 TinyDonutChart.defaultProps = {
     pieColor: "primary",

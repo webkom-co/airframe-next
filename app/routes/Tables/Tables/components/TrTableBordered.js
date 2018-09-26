@@ -21,7 +21,7 @@ const TrTableBordered = () => (
     <React.Fragment>
         {
             _.times(5, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         <span className="text-inverse">
                             { faker.company.catchPhrase() }

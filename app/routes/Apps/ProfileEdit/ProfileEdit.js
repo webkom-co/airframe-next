@@ -124,36 +124,32 @@ const ProfileEdit = () => (
                                         After Logging
                                     </Label>
                                     <Col sm={8}>
-                                        <Form>
-                                            <FormGroup>
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem12"
-                                                    name="afterLogging"
-                                                    label="Available" 
-                                                    checked
-                                                />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem22"
-                                                    name="afterLogging"
-                                                    label="Inactive" 
-                                            
-                                                />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem33" 
-                                                    name="afterLogging"
-                                                    label="Busy" 
-                                                />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem34" 
-                                                    name="afterLogging"
-                                                    label="Offline" 
-                                                />
-                                            </FormGroup>
-                                        </Form>
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem12"
+                                            name="afterLogging"
+                                            label="Available" 
+                                            defaultChecked
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem22"
+                                            name="afterLogging"
+                                            label="Inactive" 
+                                    
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem33" 
+                                            name="afterLogging"
+                                            label="Busy" 
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem34" 
+                                            name="afterLogging"
+                                            label="Offline" 
+                                        />
                                     </Col>
                                 </FormGroup>
                                 <div className="small mt-4 mb-3">

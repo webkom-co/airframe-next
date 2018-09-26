@@ -118,11 +118,11 @@ const Inbox = () => (
                             {
                                 _.times(11, (index) => (
                                     <TrTableInbox 
-                                        id={index}
+                                        id={index.toString()}
                                         key={index}
                                     />            
-                                    ))
-                                }
+                                ))
+                            }
                             </tbody>
                         </Table>
                         { /* END Table */}

@@ -19,7 +19,7 @@ const TrTableSmall = () => (
     <React.Fragment>
         {
             _.times(4, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         #{ faker.finance.mask() }
                     </td>

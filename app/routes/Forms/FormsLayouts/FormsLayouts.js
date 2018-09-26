@@ -59,14 +59,14 @@ const FormsLayouts = () => (
                             <Form>
                                 { /* START Input */}
                                 <FormGroup row>
-                                    <Label for="input" sm={4}>
+                                    <Label for="input-1" sm={4}>
                                         Input
                                     </Label>
                                     <Col sm={8}>
                                         <Input 
                                             type="text" 
                                             name="" 
-                                            id="input" 
+                                            id="input-1" 
                                             placeholder="Enter Name..." 
                                         />
                                     </Col>
@@ -74,14 +74,14 @@ const FormsLayouts = () => (
                                 { /* END Input */}
                                 { /* START Input */}
                                 <FormGroup row>
-                                    <Label for="inputPassword" sm={4}>
+                                    <Label for="inputPassword-1" sm={4}>
                                         Password
                                     </Label>
                                     <Col sm={8}>
                                         <Input 
                                             type="password" 
                                             name="password" 
-                                            id="inputPassword" 
+                                            id="inputPassword-1" 
                                             placeholder="Password..." 
                                         />
                                     </Col>
@@ -89,50 +89,46 @@ const FormsLayouts = () => (
                                 { /* END Input */}
                                 { /* START Radios */}
                                 <FormGroup row>
-                                    <Label for="operatingSystem" sm={4} className="pt-0">
+                                    <Label for="operatingSystem11" sm={4} className="pt-0">
                                         Operating System
                                     </Label>
                                     <Col sm={8}>
-                                        <Form>
-                                            <FormGroup>
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem12"
-                                                    name="operatingSystem"
-                                                    label="OSX" 
-                                                    inline
-                                                    checked
-                                                />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem22"
-                                                    name="operatingSystem"
-                                                    label="Windows" 
-                                                    inline
-                                                />
-                                                <CustomInput 
-                                                    type="radio" 
-                                                    id="operatingSystem33" 
-                                                    name="operatingSystem"
-                                                    label="Linux" 
-                                                    inline
-                                                    disabled
-                                                />
-                                            </FormGroup>
-                                        </Form>
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem11"
+                                            name="operatingSystem"
+                                            label="OSX" 
+                                            inline
+                                            defaultChecked
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem12"
+                                            name="operatingSystem"
+                                            label="Windows" 
+                                            inline
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem13" 
+                                            name="operatingSystem"
+                                            label="Linux" 
+                                            inline
+                                            disabled
+                                        />
                                     </Col>
                                 </FormGroup>
                                 { /* END Radios */}
                                 { /* START Select */}
                                 <FormGroup row>
-                                    <Label for="country" sm={4}>
+                                    <Label for="country-selector-1" sm={4}>
                                         Country
                                     </Label>
                                     <Col sm={8}>
                                         <CustomInput 
                                             type="select" 
                                             name="customSelect" 
-                                            id="country"  
+                                            id="country-selector-1"  
                                         >
                                             <option value="">Select Country...</option>
                                             <option>United States of America (US)</option>
@@ -159,14 +155,14 @@ const FormsLayouts = () => (
                                 { /* END File Select */}
                                 { /* START Textarea */}
                                 <FormGroup row>
-                                    <Label for="message" sm={4}>
+                                    <Label for="message-1" sm={4}>
                                         Message
                                     </Label>
                                     <Col sm={8}>
                                         <Input 
                                             type="textarea" 
                                             name="text" 
-                                            id="message" 
+                                            id="message-1" 
                                             placeholder="Enter Your Message..." 
                                             className="mb-2"
                                         />
@@ -214,40 +210,37 @@ const FormsLayouts = () => (
                                 { /* END Input */}
                                 { /* START Radios */}
                                 <FormGroup>
-                                    <Form>
-                                        <FormGroup>
-                                            <CustomInput 
-                                                type="radio" 
-                                                name="operatingSystem"
-                                                id="operatingSystem13"
-                                                label="OSX" 
-                                                inline
-                                                checked
-                                            />
-                                            <CustomInput 
-                                                type="radio" 
-                                                name="operatingSystem"
-                                                id="operatingSystem23"
-                                                label="Windows" 
-                                                inline
-                                            />
-                                            <CustomInput 
-                                                type="radio"  
-                                                name="operatingSystem"
-                                                id="operatingSystem33"
-                                                label="Linux" 
-                                                inline
-                                                disabled
-                                            />
-                                        </FormGroup>
-                                    </Form>
+                                    <CustomInput 
+                                        type="radio" 
+                                        name="operatingSystem"
+                                        id="operatingSystem21"
+                                        label="OSX" 
+                                        inline
+                                        defaultChecked
+                                    />
+                                    <CustomInput 
+                                        type="radio" 
+                                        name="operatingSystem"
+                                        id="operatingSystem22"
+                                        label="Windows" 
+                                        inline
+                                    />
+                                    <CustomInput 
+                                        type="radio"  
+                                        name="operatingSystem"
+                                        id="operatingSystem23"
+                                        label="Linux" 
+                                        inline
+                                        disabled
+                                    />
                                 </FormGroup>
                                 { /* END Radios */}
                                 { /* START Select */}
                                 <FormGroup>
                                     <CustomInput 
                                         type="select" 
-                                        name="customSelect"  
+                                        name="customSelect"
+                                        id="country-selector"
                                     >
                                         <option value="">Select Country...</option>
                                         <option>United States of America (US)</option>
@@ -260,7 +253,7 @@ const FormsLayouts = () => (
                                 { /* END Select */}
                                 { /* START File Select */}
                                 <FormGroup>
-                                    <CustomInput type="file" id="addCv" name="customFile" label="Choose file..." />
+                                    <CustomInput type="file" id="addCv1" name="customFile" label="Choose file..." />
                                     <FormText color="muted">
                                         Accepted formats: pdf, doc, txt. Max file size 7Mb
                                     </FormText>
@@ -301,26 +294,26 @@ const FormsLayouts = () => (
                             <Form>
                                 { /* START Input */}
                                 <FormGroup>
-                                    <Label for="input">
+                                    <Label for="input-2">
                                         Input
                                     </Label>
                                     <Input 
                                         type="text" 
                                         name="" 
-                                        id="input" 
+                                        id="input-2" 
                                         placeholder="Enter Name..." 
                                     />
                                 </FormGroup>
                                 { /* END Input */}
                                 { /* START Input */}
                                 <FormGroup>
-                                    <Label for="inputPassword">
+                                    <Label for="inputPassword-2">
                                         Password
                                     </Label>
                                     <Input 
                                         type="password" 
                                         name="password" 
-                                        id="inputPassword" 
+                                        id="inputPassword-2" 
                                         placeholder="Password..." 
                                     />
                                 </FormGroup>
@@ -330,44 +323,42 @@ const FormsLayouts = () => (
                                     <Label for="operatingSystem" className="pt-0">
                                         Operating System
                                     </Label>
-                                    <Form>
-                                        <FormGroup>
-                                            <CustomInput 
-                                                type="radio" 
-                                                id="operatingSystem1"
-                                                name="operatingSystem"
-                                                label="OSX" 
-                                                inline
-                                                checked
-                                            />
-                                            <CustomInput 
-                                                type="radio" 
-                                                id="operatingSystem2" 
-                                                name="operatingSystem"
-                                                label="Windows" 
-                                                inline
-                                            />
-                                            <CustomInput 
-                                                type="radio" 
-                                                id="operatingSystem3" 
-                                                name="operatingSystem"
-                                                label="Linux" 
-                                                inline
-                                                disabled
-                                            />
-                                        </FormGroup>
-                                    </Form>
+                                    <div>
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem1"
+                                            name="operatingSystem"
+                                            label="OSX" 
+                                            inline
+                                            defaultChecked
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem2" 
+                                            name="operatingSystem"
+                                            label="Windows" 
+                                            inline
+                                        />
+                                        <CustomInput 
+                                            type="radio" 
+                                            id="operatingSystem3" 
+                                            name="operatingSystem"
+                                            label="Linux" 
+                                            inline
+                                            disabled
+                                        />
+                                    </div>
                                 </FormGroup>
                                 { /* END Radios */}
                                 { /* START Select */}
                                 <FormGroup>
-                                    <Label for="country">
+                                    <Label for="country-selector-2">
                                         Country
                                     </Label>
                                     <CustomInput 
                                         type="select" 
                                         name="customSelect" 
-                                        id="country"  
+                                        id="country-selector-2"  
                                     >
                                         <option value="">Select Country...</option>
                                         <option>United States of America (US)</option>
@@ -380,10 +371,10 @@ const FormsLayouts = () => (
                                 { /* END Select */}
                                 { /* START File Select */}
                                 <FormGroup>
-                                    <Label for="addCv">
+                                    <Label for="addCv2">
                                         Add CV
                                     </Label>
-                                    <CustomInput type="file" id="addCv" name="customFile" label="Choose file..." />
+                                    <CustomInput type="file" id="addCv2" name="customFile" label="Choose file..." />
                                     <FormText color="muted">
                                         Accepted formats: pdf, doc, txt. Max file size 7Mb
                                     </FormText>
@@ -391,13 +382,13 @@ const FormsLayouts = () => (
                                 { /* END File Select */}
                                 { /* START Textarea */}
                                 <FormGroup>
-                                    <Label for="message">
+                                    <Label for="message-2">
                                         Message
                                     </Label>
                                         <Input 
                                             type="textarea" 
                                             name="text" 
-                                            id="message" 
+                                            id="message-2" 
                                             placeholder="Enter Your Message..." 
                                             className="mb-2"
                                         />
@@ -463,7 +454,7 @@ const FormsLayouts = () => (
                                         <InputGroupAddon addonType="prepend">
                                             Country
                                         </InputGroupAddon>
-                                        <CustomInput type="select" id="country" name="customSelect">
+                                        <CustomInput type="select" id="country-selector-3" name="customSelect">
                                             <option value="">Select...</option>
                                             <option>United Kingdom</option>
                                             <option>United States</option>

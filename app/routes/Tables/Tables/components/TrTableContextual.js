@@ -53,7 +53,7 @@ const TrTableContextual = () => (
     <React.Fragment>
         {
             _.times(12, (index) => (
-                <tr className={ trColor[index%12] }>
+                <tr className={ trColor[index%12] } key={ index }>
                     <td className="align-middle">
                         #{ faker.finance.mask() }
                     </td>

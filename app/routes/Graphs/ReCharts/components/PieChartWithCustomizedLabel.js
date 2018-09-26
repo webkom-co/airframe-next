@@ -21,7 +21,8 @@ export const PieChartWithCustomizedLabel = () => (
     <ResponsiveContainer width='100%' aspect={6.0/3.0}>
         <PieChart>
             <Pie
-                data={data} 
+                data={data}
+                dataKey="value"
                 stroke={ colors['white'] }
                 labelLine={false}
                 label={<PieValueLabel />}
@@ -29,7 +30,7 @@ export const PieChartWithCustomizedLabel = () => (
                 fill="#8884d8"
             >
                 {
-                    data.map((entry, index) => <Cell fill={COLORS[index % COLORS.length]}/>)
+                    data.map((entry, index) => <Cell key={ index } fill={COLORS[index % COLORS.length]}/>)
                 }
             </Pie>
         </PieChart>

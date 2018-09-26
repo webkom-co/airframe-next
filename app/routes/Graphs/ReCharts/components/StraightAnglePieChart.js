@@ -23,6 +23,7 @@ const StraightAnglePieChart = () => (
                 startAngle={180}
                 endAngle={0}
                 data={data}
+                dataKey="value"
                 outerRadius={80}
                 fill={ colors['primary-08'] }
                 stroke={ colors['white'] }

@@ -43,7 +43,7 @@ const TrTableProjectsList = () => (
     <React.Fragment>
         {
             _.times(12, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         <div className="text-inverse">
                             <a href="#">

@@ -25,7 +25,7 @@ const TrTableStriped = () => (
     <React.Fragment>
         {
             _.times(4, (index) => (
-                <tr>
+                <tr key={ index }>
                     <td className="align-middle">
                         { no[index%4] }.
                     </td>

@@ -32,7 +32,7 @@ import { NavbarNavigation } from
 
 export const LayoutNavbar = () => (
     <React.Fragment>
-        <Navbar navbar light expand>
+        <Navbar light expand>
             <Container>
                 { /* START Navbar: Left Side */}
                 <Nav>
@@ -86,7 +86,7 @@ export const LayoutNavbar = () => (
             </Container>
         </Navbar>
 
-        <Navbar navbar light expand="md">
+        <Navbar light expand="md">
             <Container>
                 <h5 className="d-xs-block d-md-none my-0">
                     Navbar Only

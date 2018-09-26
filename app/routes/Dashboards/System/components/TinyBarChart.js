@@ -22,7 +22,7 @@ const TinyBarChart = (props) => {
 };
 
 TinyBarChart.propTypes = {
-    barColor: PropTypes.spring
+    barColor: PropTypes.string
 };
 TinyBarChart.defaultProps = {
     barColor: "200"

@@ -11,7 +11,7 @@ import { NavbarNavigation } from
 const Navbar201 = () => (
 <React.Fragment>
     { /* START Navbar */}
-    <Navbar navbar light  color="white" expand="md">
+    <Navbar light color="white" expand="md">
         <h5 className="d-xs-block d-md-none my-0">
             Navbar Only
         </h5>

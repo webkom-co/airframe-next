@@ -9,8 +9,8 @@ const ProjectsGrid = () => (
     <React.Fragment>
         <CardColumns>
        	{
-            _.times(12, () => (
-            	<ProjectsCardGrid />
+            _.times(12, (index) => (
+            	<ProjectsCardGrid key={ index } />
             ))
         }
         </CardColumns>
