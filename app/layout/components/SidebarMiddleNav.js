@@ -154,7 +154,7 @@ export const SidebarMiddleNav = () => (
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-bookmark-o"></i>}
             title="Docs"
-            to='/'
+            href='https://webkom.gitbook.io'
         />
     </SidebarMenu >
 );
