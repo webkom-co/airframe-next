@@ -69,16 +69,16 @@ const Typography = () => (
                                     This is an example for <code>.text-info</code>
                                 </p>
 
-                                <p className="text-dark">
-                                    This is an example for <code>.text-dark</code>
-                                </p>
                                 <p className="text-body">
                                     This is an example for <code>.text-body </code>
                                 </p>
                                 <p className="text-muted">
                                     This is an example for <code>.text-muted</code>
                                 </p>
-                                <p className="text-black-50">
+                                <p className="text-dark p-2 bg-gray-500">
+                                    This is an example for <code>.text-dark</code>
+                                </p>
+                                <p className="text-black-50 p-2 bg-gray-500">
                                     This is an example for <code>.text-black-50</code>
                                 </p>
                                 <p className="text-white p-2 bg-dark">
@@ -197,7 +197,7 @@ const Typography = () => (
                                     <code>.text-gray-500</code>
                                 </p>
                                 <p className="text-gray-600 p-2 bg-gray-100">
-                                    This is an example for <code className="text-gray-600 b-1 b-gray-200">.text-gray-600</code>
+                                    This is an example for <code>.text-gray-600</code>
                                 </p>
                                 <p className="text-gray-700 p-2 bg-gray-100">
                                     This is an example for <code>.text-gray-700</code>

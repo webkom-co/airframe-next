@@ -13,7 +13,7 @@ const data = _.times(20, () => ({ pv: Math.random() * 100 }));
 const TinyAreaChart = () => (
     <ResponsiveContainer width='100%' height={ 40 }>
         <AreaChart data={data}>
-            <Area type='monotone' dataKey='pv' stroke={ colors['primary'] } fill={ colors['primary-04'] } />
+            <Area dataKey='pv' stroke={ colors['primary'] } fill={ colors['primary-04'] } />
         </AreaChart>
     </ResponsiveContainer>
 );

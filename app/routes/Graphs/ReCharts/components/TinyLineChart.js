@@ -22,7 +22,7 @@ const generateDot = ({stroke, ...other}) => (
 const TinyLineChart = () => (
     <ResponsiveContainer width='100%' height={ 40 }>
         <LineChart data={data}>
-            <Line type='monotone' dataKey='pv' stroke={ colors['primary-07'] } strokeWidth={2} activeDot={{r: 5}} dot={generateDot} />
+            <Line dataKey='pv' stroke={ colors['primary-07'] } strokeWidth={2} activeDot={{r: 5}} dot={generateDot} />
         </LineChart>
     </ResponsiveContainer>
 );

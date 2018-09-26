@@ -40,7 +40,7 @@ export const AreaChartFillByValue = () => (
                     negativeColor={ colors['danger-05'] }
                 />
             </defs>
-            <Area type="monotone" dataKey="uv" stroke="#000" fill="url(#splitColor)" />
+            <Area dataKey="uv" stroke="#000" fill="url(#splitColor)" />
         </AreaChart>
     </ResponsiveContainer>
 

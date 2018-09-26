@@ -580,7 +580,7 @@ export const Widgets = () => (
                                 />
                             </Col>
                         </Row>
-                        <Progress multi className="mb-4">
+                        <Progress multi className="mb-4" style={{height: "5px"}}>
                             <Progress bar value="25" />
                             <Progress bar color="info" value="30" />
                             <Progress bar color="secondary" value="45" />

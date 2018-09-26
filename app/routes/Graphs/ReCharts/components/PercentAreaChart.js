@@ -29,9 +29,9 @@ const PercentAreaChart = () => (
             <XAxis dataKey="name"/>
             <YAxis/>
             <Tooltip/>
-            <Area type='monotone' dataKey='uv' stackId="1" stroke={ colors['purple'] } fill={ colors['purple-04'] } />
-            <Area type='monotone' dataKey='pv' stackId="1" stroke={ colors['primary'] } fill={ colors['primary-04'] } />
-            <Area type='monotone' dataKey='amt' stackId="1" stroke={ colors['info'] } fill={ colors['info-04'] } />
+            <Area dataKey='uv' stackId="1" stroke={ colors['purple'] } fill={ colors['purple-04'] } />
+            <Area dataKey='pv' stackId="1" stroke={ colors['primary'] } fill={ colors['primary-04'] } />
+            <Area dataKey='amt' stackId="1" stroke={ colors['info'] } fill={ colors['info-04'] } />
         </AreaChart>
     </ResponsiveContainer>
 
