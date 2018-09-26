@@ -10,10 +10,17 @@ import { MenuContext } from './MenuContext';
  * Renders a collapse trigger or a ReactRouter Link 
  */
 const SidebarMenuItemLink = (props) => (
-    props.to ? (
-        <Link to={ props.to } className={`${props.classBase}__entry__link`}>
-            { props.children }
-        </Link>
+    (props.to || props.href) ? (
+        props.to ? (
+            <Link to={ props.to } className={`${props.classBase}__entry__link`}>
+                { props.children }
+            </Link>
+        ) : (
+            <a href={ props.href } target="_blank" className={`${props.classBase}__entry__link`}>
+                { props.children }
+            </a>
+        )
+        
     ) : (
         <a
             href="javascript:;"
@@ -26,6 +33,7 @@ const SidebarMenuItemLink = (props) => (
 )
 SidebarMenuItemLink.propTypes = {
     to: PropTypes.string,
+    href: PropTypes.string,
     active: PropTypes.bool,
     onToggle: PropTypes.func,
     children: PropTypes.node,
@@ -52,6 +60,7 @@ export class SidebarMenuItem extends React.Component {
         icon: PropTypes.node,
         title: PropTypes.string,
         to: PropTypes.string,
+        href: PropTypes.string,
         exact: PropTypes.bool
     }
 
@@ -106,6 +115,7 @@ export class SidebarMenuItem extends React.Component {
             <li className={ itemClass }>
                 <SidebarMenuItemLink
                     to={ this.props.to || null }
+                    href={ this.props.href || null }
                     onToggle={ this.toggleNode.bind(this) }
                     classBase={ classBase }
                 >
