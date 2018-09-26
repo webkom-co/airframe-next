@@ -112,10 +112,12 @@ const NewEmail = () => (
                                 <Attachment 
                                     BgIconClassName="text-primary"
                                     icon="file-word-o"
+                                    mediaClassName="mb-3"
                                 />
                                 <Attachment 
                                     BgIconClassName="text-success"
                                     icon="file-excel-o"
+                                    mediaClassName="mb-3"
                                 />
                                 <Attachment 
                                     BgIconClassName="text-warning"
