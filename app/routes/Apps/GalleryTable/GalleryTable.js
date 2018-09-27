@@ -1,20 +1,10 @@
 import React from 'react';
-import faker from 'faker';
 
 import { 
     Container,
     Row,
-    Avatar,
-    Media,
-    UncontrolledTooltip,
-    Button,
-    HolderProvider,
     Table,
-    AvatarAddOn,
-    CardImg,
-    CustomInput,
     CardFooter,
-    Badge,
     Card,
     Col
 } from './../../../components';
@@ -57,13 +47,27 @@ const GalleryTable = () => (
                             </thead>
                             <tbody>
                                 <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
-                                <TrTableGalleryList />
+                                <TrTableGalleryList 
+                                    id="2"
+                                />
+                                <TrTableGalleryList 
+                                    id="3"
+                                />
+                                <TrTableGalleryList 
+                                    id="4"
+                                />
+                                <TrTableGalleryList 
+                                    id="5"
+                                />
+                                <TrTableGalleryList 
+                                    id="6"
+                                />
+                                <TrTableGalleryList 
+                                    id="7"
+                                />
+                                <TrTableGalleryList 
+                                    id="8"
+                                />
                             </tbody>
                         </Table>
                         { /* END Table */}

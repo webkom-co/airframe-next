@@ -93,14 +93,30 @@ const Clients = () => (
                                         </thead>
                                         <tbody>
                                             <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
-                                            <TrTableClients />
+                                            <TrTableClients 
+                                                id="2"
+                                            />
+                                            <TrTableClients 
+                                                id="3"
+                                            />
+                                            <TrTableClients 
+                                                id="4"
+                                            />
+                                            <TrTableClients 
+                                                id="5"
+                                            />
+                                            <TrTableClients 
+                                                id="6"
+                                            />
+                                            <TrTableClients 
+                                                id="7"
+                                            />
+                                            <TrTableClients 
+                                                id="8"
+                                            />
+                                            <TrTableClients 
+                                                id="9"
+                                            />
                                         </tbody>
                                     </Table>
                                     { /* END Table */}
@@ -120,17 +136,39 @@ const Clients = () => (
                                         </thead>
                                         <tbody>
                                             <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
-                                            <TrTableCompanies />
+                                            <TrTableCompanies 
+                                                id="2"
+                                            />
+                                            <TrTableCompanies 
+                                                id="3"
+                                            />
+                                            <TrTableCompanies 
+                                                id="4"
+                                            />
+                                            <TrTableCompanies 
+                                                id="5"
+                                            />
+                                            <TrTableCompanies 
+                                                id="6"
+                                            />
+                                            <TrTableCompanies 
+                                                id="7"
+                                            />
+                                            <TrTableCompanies 
+                                                id="8"
+                                            />
+                                            <TrTableCompanies 
+                                                id="9"
+                                            />
+                                            <TrTableCompanies 
+                                                id="10"
+                                            />
+                                            <TrTableCompanies 
+                                                id="11"
+                                            />
+                                            <TrTableCompanies 
+                                                id="12"
+                                            />
                                         </tbody>
                                     </Table>
                                     { /* END Table */}

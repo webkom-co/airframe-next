@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 
 import { 
     Media,
@@ -14,7 +15,7 @@ import {
 
 import { randomArray, randomAvatar } from './../../../../utilities';
 
-const TrTableUsersList = () => {
+const TrTableUsersList = (props) => {
 
     const avatar = [
         [
@@ -87,7 +88,7 @@ const TrTableUsersList = () => {
         <React.Fragment>
             <tr>
              <td className="align-middle">
-                <CustomInput type="checkbox" id="usersList1" label="" inline />
+                <CustomInput type="checkbox" id={`TrTableUsersList-${ props.id }` } label="" inline />
              </td>
              <td className="align-middle">
                 <a href="#">
@@ -165,5 +166,11 @@ const TrTableUsersList = () => {
         </React.Fragment>
     )
 }
+TrTableUsersList.propTypes = {
+    id: PropTypes.node
+};
+TrTableUsersList.defaultProps = {
+    id: "1"
+};
 
 export { TrTableUsersList };

@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 
 import { 
     Badge,
@@ -27,11 +28,11 @@ const badges = [
     "info"
 ];
 
-const TrTableGalleryList = () => (
+const TrTableGalleryList = (props) => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id="clientCheckbox" label="" inline />
+                <CustomInput type="checkbox" id={`trTableGalleryList-${ props.id }` } label="" inline />
             </td>
             <td className="align-middle">
                 <HolderProvider.Icon
@@ -102,15 +103,22 @@ const TrTableGalleryList = () => (
                 Format: .png
             </td>
             <td className="align-middle text-right">
-                <Button color="secondary" outline id="tooltipDownload">
-                    <i className="fa fa-download"></i>
+                <Button color="secondary" outline id={`trTableGalleryListTooltip-${ props.id }` }>
+                    <i className="fa fa-fw fa-download"></i>
                 </Button>
-                <UncontrolledTooltip placement="top" target="tooltipDownload">
+                <UncontrolledTooltip placement="left" target={`trTableGalleryListTooltip-${ props.id }` }>
                    Download
                 </UncontrolledTooltip>
             </td>
         </tr>
     </React.Fragment>
 )
+
+TrTableGalleryList.propTypes = {
+    id: PropTypes.node
+};
+TrTableGalleryList.defaultProps = {
+    id: "1"
+};
 
 export { TrTableGalleryList };

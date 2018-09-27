@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 
 import { 
     Badge,
@@ -25,17 +26,17 @@ const tag = [
     "info"
 ];
 
-const TrTableClients = () => (
+const TrTableClients = (props) => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id="clientCheckbox" label="" inline />
+                <CustomInput type="checkbox" id={`trTableClients-${ props.id }` } label="" inline />
             </td>
             <td className="align-middle">
-                <a href="#" id="tooltipAddToFavorites">
+                <a href="#" id={`trTableClientsTooltip-${ props.id }` }>
                     <i className="fa fa-fw fa-star-o"></i>
                 </a>
-                <UncontrolledTooltip placement="top" target="tooltipAddToFavorites">
+                <UncontrolledTooltip placement="top" target={`trTableClientsTooltip-${ props.id }` }>
                     Add To Favorites
                 </UncontrolledTooltip>
             </td>
@@ -83,5 +84,11 @@ const TrTableClients = () => (
         </tr>
     </React.Fragment>
 )
+TrTableClients.propTypes = {
+    id: PropTypes.node
+};
+TrTableClients.defaultProps = {
+    id: "1"
+};
 
 export { TrTableClients };

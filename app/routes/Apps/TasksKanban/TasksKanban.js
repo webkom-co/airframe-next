@@ -74,8 +74,12 @@ const TasksKanban = () => (
                                 </div>
                                 { /* END CardHeader */}
                                 <TasksCardGrid />
-                                <TasksCardGrid />
-                                <TasksCardGrid />
+                                <TasksCardGrid 
+                                    id="2"
+                                />
+                                <TasksCardGrid 
+                                    id="3"
+                                />
                             </CardBody>
                             { /* START Card Footer */}
                             <CardFooter className="text-center">
@@ -123,8 +127,12 @@ const TasksKanban = () => (
                                     </span>
                                 </div>
                                 { /* END CardHeader */}
-                                <TasksCardGrid />
-                                <TasksCardGrid />
+                                <TasksCardGrid 
+                                    id="4"
+                                />
+                                <TasksCardGrid 
+                                    id="5"
+                                />
                             </CardBody>
                             { /* START Card Footer */}
                             <CardFooter className="text-center">
@@ -172,7 +180,9 @@ const TasksKanban = () => (
                                     </span>
                                 </div>
                                 { /* END CardHeader */}
-                                <TasksCardGrid />
+                                <TasksCardGrid 
+                                    id="6"
+                                />
                             </CardBody>
                             { /* START Card Footer */}
                             <CardFooter className="text-center">

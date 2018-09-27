@@ -27,14 +27,30 @@ const GalleryGrid = () => (
                 />
                 <CardColumns>
                     <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
-                    <GalleryCard />
+                    <GalleryCard 
+                        id="2"
+                    />
+                    <GalleryCard 
+                        id="3"
+                    />
+                    <GalleryCard 
+                        id="4"
+                    />
+                    <GalleryCard 
+                        id="5"
+                    />
+                    <GalleryCard 
+                        id="6"
+                    />
+                    <GalleryCard 
+                        id="7"
+                    />
+                    <GalleryCard 
+                        id="8"
+                    />
+                    <GalleryCard 
+                        id="9"
+                    />
                 </CardColumns>
                 <div className="d-flex justify-content-center">
                     <Paginations />
