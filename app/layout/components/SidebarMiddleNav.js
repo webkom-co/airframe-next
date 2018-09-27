@@ -156,5 +156,14 @@ export const SidebarMiddleNav = () => (
             title="Docs"
             href='https://webkom.gitbook.io'
         />
+        { /* -------- Versions ---------*/ }
+        <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-folder-open-o"></i>}
+            title="Versions"
+        >
+            <SidebarMenu.Item title="React 2.0" href='https://spin.webkom.co' />
+            <SidebarMenu.Item title="React 1.0" href='https://v1.react.spin.webkom.co' />
+            <SidebarMenu.Item title="JQuery 1.0" to="https://v1.spin.webkom.co" />
+        </SidebarMenu.Item>
     </SidebarMenu >
 );
