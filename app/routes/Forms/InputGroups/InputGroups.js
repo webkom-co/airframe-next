@@ -1486,7 +1486,7 @@ const InputGroups = () => (
                                         <InputGroup>
                                             <Input placeholder="Addon Radio Native..." id="rightCustomRadio" />
                                             <InputGroupAddon addonType="append">
-                                                <CustomInput type="radio" id="rightCustomRadioAddon" label="" />
+                                                <CustomInput type="radio" id="rightCustomRadioAddonNative" label="" />
                                             </InputGroupAddon>
                                         </InputGroup>
                                     </Col>

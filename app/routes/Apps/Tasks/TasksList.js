@@ -30,15 +30,33 @@ const TasksList = () => (
                     </thead>
                     <tbody>
                         <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
-                        <TrTableTasksList />
+                        <TrTableTasksList 
+                            id="2"
+                        />
+                        <TrTableTasksList 
+                            id="3"
+                        />
+                        <TrTableTasksList 
+                            id="4"
+                        />
+                        <TrTableTasksList 
+                            id="5"
+                        />
+                        <TrTableTasksList 
+                            id="6"
+                        />
+                        <TrTableTasksList 
+                            id="7"
+                        />
+                        <TrTableTasksList 
+                            id="8"
+                        />
+                        <TrTableTasksList 
+                            id="9"
+                        />
+                        <TrTableTasksList 
+                            id="10"
+                        />
                     </tbody>
                 </Table>
             </div>

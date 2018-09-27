@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 
 import { 
     Card,
@@ -7,6 +8,7 @@ import {
     HolderProvider,
     Media,
     Avatar,
+    CustomInput,
     UncontrolledTooltip,
     AvatarAddOn,
     Badge,
@@ -28,7 +30,7 @@ const badges = [
     "secondary"
 ];
 
-const GalleryCard = () => (
+const GalleryCard = (props) => (
     <React.Fragment>
         { /* START Card */}
         <Card className="mb-3">
@@ -39,23 +41,30 @@ const GalleryCard = () => (
             <CardImg top />
             </HolderProvider.Icon>
             <CardBody>
-                <div className="d-flex mb-3">
-                    <span>
-                        <a className="h6" href="#">
-                            { faker.commerce.productName() }
-                        </a>
-                        <br />
-                        <span href="#">
-                            { faker.system.fileName() }
+                <Media className="mb-3">
+                    <Media left>
+                        <CustomInput type="checkbox" id={`galleryCard-${ props.id }` } label="" className="pr-2" />
+                    </Media>
+                    <Media body>
+                        <span>
+                            <span className="h6" href="#">
+                                { faker.commerce.productName() }
+                            </span>
+                            <br />
+                            <span href="#">
+                                { faker.system.fileName() }
+                            </span>
                         </span>
-                    </span>
-                    <a href="#" className="ml-auto" id="tooltipDownload">
-                        <i className="fa fa-download"></i>
-                    </a>
-                    <UncontrolledTooltip placement="top" target="tooltipDownload">
-                       Download
-                    </UncontrolledTooltip>
-                </div>
+                    </Media>
+                    <Media right>
+                        <a href="#" className="ml-auto" id={`galleryCardTooltip-${ props.id }` }>
+                            <i className="fa fa-download"></i>
+                        </a>
+                        <UncontrolledTooltip placement="top" target={`galleryCardTooltip-${ props.id }` }>
+                            Download
+                        </UncontrolledTooltip>
+                    </Media>
+                </Media>
                 <Media>
                     <Media left className="align-self-center mr-3">
                         <Avatar.Image
@@ -100,5 +109,11 @@ const GalleryCard = () => (
         { /* END Card */}
     </React.Fragment>
 )
+GalleryCard.propTypes = {
+    id: PropTypes.node
+};
+GalleryCard.defaultProps = {
+    id: "1"
+};
 
 export { GalleryCard };

@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { 
@@ -27,7 +28,7 @@ const badgesColors = [
     "warning"
 ];
 
-const TasksCardGrid = () => (
+const TasksCardGrid = (props) => (
     <React.Fragment>
         { /* START Card */}
         <Card>
@@ -59,7 +60,7 @@ const TasksCardGrid = () => (
                 </UncontrolledButtonDropdown>
                 <Media className="mb-2">
                     <Media left middle className="mr-2">
-                        <CustomInput type="checkbox" id="tasksGrid1" label="" />
+                        <CustomInput type="checkbox" id={`TasksCardGrid-${ props.id }` } label="" />
                     </Media>
                     <Media body>
                         <span className="mr-2">#{ faker.random.number() }</span>
@@ -130,5 +131,12 @@ const TasksCardGrid = () => (
         { /* END Card */}
     </React.Fragment>
 )
+
+TasksCardGrid.propTypes = {
+    id: PropTypes.node
+};
+TasksCardGrid.defaultProps = {
+    id: "1"
+};
 
 export { TasksCardGrid };

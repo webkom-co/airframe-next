@@ -8,14 +8,30 @@ const TasksGrid = () => (
     <React.Fragment>
         <CardColumns>
             <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
-            <TasksCardGrid />
+            <TasksCardGrid 
+                id="2"
+            />
+            <TasksCardGrid 
+                id="3"
+            />
+            <TasksCardGrid 
+                id="4"
+            />
+            <TasksCardGrid 
+                id="5"
+            />
+            <TasksCardGrid 
+                id="6"
+            />
+            <TasksCardGrid 
+                id="7"
+            />
+            <TasksCardGrid 
+                id="8"
+            />
+            <TasksCardGrid 
+                id="9"
+            />
         </CardColumns>
         <div className="d-flex justify-content-center">
             <Paginations />

@@ -33,14 +33,30 @@ const UsersList = () => (
                     </thead>
                     <tbody>
                         <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
-                        <TrTableUsersList />
+                        <TrTableUsersList 
+                            id="2"
+                        />
+                        <TrTableUsersList 
+                            id="3"
+                        />
+                        <TrTableUsersList 
+                            id="4"
+                        />
+                        <TrTableUsersList 
+                            id="5"
+                        />
+                        <TrTableUsersList 
+                            id="6"
+                        />
+                        <TrTableUsersList 
+                            id="7"
+                        />
+                        <TrTableUsersList 
+                            id="8"
+                        />
+                        <TrTableUsersList 
+                            id="9"
+                        />
                     </tbody>
                 </Table>
             </div>

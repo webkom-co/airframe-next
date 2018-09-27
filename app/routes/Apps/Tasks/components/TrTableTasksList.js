@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import PropTypes from 'prop-types';
 import { Link } from 'react-router-dom';
 
 import { 
@@ -23,11 +24,11 @@ const badges = [
     "primary"
 ];
 
-const TrTableTasksList = () => (
+const TrTableTasksList = (props) => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id="tasksList1" label="" inline />
+                <CustomInput type="checkbox" id={`TrTableTasksList-${ props.id }` } label="" inline />
             </td>
             <td className="align-middle">
                 <UncontrolledButtonDropdown>
@@ -119,5 +120,12 @@ const TrTableTasksList = () => (
         </tr>
     </React.Fragment>
 )
+
+TrTableTasksList.propTypes = {
+    id: PropTypes.node
+};
+TrTableTasksList.defaultProps = {
+    id: "1"
+};
 
 export { TrTableTasksList };

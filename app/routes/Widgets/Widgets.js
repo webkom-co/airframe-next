@@ -446,20 +446,25 @@ export const Widgets = () => (
                         <ListGroupItem action>
                             <TasksMedia 
                                 iconColor="success"
+                                id="1"
                             />
                         </ListGroupItem>
                         <ListGroupItem action>
                             <TasksMedia 
                                 iconColor="danger"
+                                id="2"
                             />
                         </ListGroupItem>
                         <ListGroupItem action>
                             <TasksMedia 
                                 iconColor="warning"
+                                id="3"
                             />
                         </ListGroupItem>
                         <ListGroupItem action>
-                            <TasksMedia />
+                            <TasksMedia 
+                                id="4"
+                            />
                         </ListGroupItem>
                         <ListGroupItem action tag={ Link } to="/apps/tasks/list" className="text-center">
                             View All Tasks
