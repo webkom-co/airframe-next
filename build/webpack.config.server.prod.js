@@ -2,7 +2,6 @@ var path = require('path');
 var fs = require('fs');
 var webpack = require('webpack');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 var config = require('./../config');
 
@@ -44,8 +43,7 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         }),
         new webpack.HashedModuleIdsPlugin(),
-        new ExtractCssChunks(),
-        new UglifyJsPlugin()
+        new ExtractCssChunks()
     ],
     module: {
         rules: [

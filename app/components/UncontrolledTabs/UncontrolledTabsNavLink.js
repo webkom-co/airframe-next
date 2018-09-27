@@ -22,7 +22,6 @@ const UncontrolledTabsNavLink = (props) => (
     </Consumer>
 );
 UncontrolledTabsNavLink.propTypes = {
-    ...NavLink.propTypes,
     tabId: PropTypes.string.isRequired
 };
 

@@ -14,8 +14,5 @@ const UncontrolledTabsTabContent = (props) => (
     }
     </Consumer>
 );
-UncontrolledTabsTabContent.propTypes = {
-    ...TabContent.propTypes
-};
 
 export { UncontrolledTabsTabContent };

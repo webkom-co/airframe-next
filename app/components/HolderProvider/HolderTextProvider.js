@@ -1,7 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
-import Holder from 'holderjs';
 import _ from 'lodash';
 import uid from 'uuid/v4';
 import qs from 'query-string';
@@ -13,7 +11,11 @@ class HolderTextProvider extends React.Component {
         bg: PropTypes.string,
         fg: PropTypes.string,
         text: PropTypes.string,
-        size: PropTypes.oneOfType([
+        width: PropTypes.oneOfType([
+            PropTypes.number,
+            PropTypes.string
+        ]),
+        height: PropTypes.oneOfType([
             PropTypes.number,
             PropTypes.string
         ]),
@@ -54,6 +56,7 @@ class HolderTextProvider extends React.Component {
             typeof document !== 'undefined' &&
             document.readyState === 'complete'
         ) {
+            const Holder = require('holderjs');
             const domElement = document.getElementById(this.domId);
 
             if (domElement) {

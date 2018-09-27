@@ -22,35 +22,6 @@ import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
 import UncontrolledPopover from './UncontrolledPopover';
 import UncontrolledTabs from './UncontrolledTabs';
-
-export {
-    Accordion,
-    App,
-    Avatar,
-    AvatarAddOn,
-    Card,
-    CardHeader,
-    Checkable,
-    CustomInput,
-    EmptyLayout,
-    ExtendedDropdown,
-    IconWithBadge,
-    InputGroupAddon,
-    HolderProvider,
-    Layout,
-    NestedDropdown,
-    withPageConfig,
-    OuterClick,
-    PageLoader,
-    Progress,
-    Sidebar,
-    SidebarMenu,
-    SidebarTrigger,
-    Tools,
-    UncontrolledPopover,
-    UncontrolledTabs,
-    UncontrolledModal
-};
 // Export non overriden Reactstrap components
 export {
     Alert,
@@ -120,7 +91,6 @@ export {
     TabContent,
     Table,
     TabPane,
-    Tag,
     Tooltip,
     UncontrolledAlert,
     UncontrolledButtonDropdown,
@@ -128,3 +98,31 @@ export {
     UncontrolledCollapse,
     UncontrolledTooltip
 } from 'reactstrap';
+export {
+    Accordion,
+    App,
+    Avatar,
+    AvatarAddOn,
+    Card,
+    CardHeader,
+    Checkable,
+    CustomInput,
+    EmptyLayout,
+    ExtendedDropdown,
+    IconWithBadge,
+    InputGroupAddon,
+    HolderProvider,
+    Layout,
+    NestedDropdown,
+    withPageConfig,
+    OuterClick,
+    PageLoader,
+    Progress,
+    Sidebar,
+    SidebarMenu,
+    SidebarTrigger,
+    Tools,
+    UncontrolledPopover,
+    UncontrolledTabs,
+    UncontrolledModal
+};

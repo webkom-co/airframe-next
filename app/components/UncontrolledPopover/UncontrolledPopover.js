@@ -4,9 +4,6 @@ import _ from 'lodash';
 import {
     Popover
 } from 'reactstrap';
-import {
-    OuterClick
-} from './..';
 
 class UncontrollerPopover extends React.Component {
     constructor(props) {
@@ -18,12 +15,13 @@ class UncontrollerPopover extends React.Component {
     }
 
     componentDidMount() {
-        const { target, triggerEvent } = this.props;
+        const { target } = this.props;
 
         if (typeof document !== 'undefined') {
             this.triggerElement = document.querySelector(`#${target}`);
 
             if (!this.triggerElement) {
+                // eslint-disable-next-line no-console
                 console.error('UncontrolledPopover: \'target\' element has not been found in the DOM via querySelector');
                 return;
             }
@@ -62,12 +60,10 @@ class UncontrollerPopover extends React.Component {
     }
 }
 UncontrollerPopover.propTypes = {
-    ...Popover.propTypes,
     activateTrigger: PropTypes.bool,
     activeClassName: PropTypes.string
 };
 UncontrollerPopover.defaultProps = {
-    ...Popover.defaultProps,
     activateTrigger: true,
     activeClassName: 'active'
 };

@@ -92,7 +92,7 @@ import { SidebarASidebar } from './../layout/components/SidebarASidebar';
 
 //------ Route Definitions --------
 // eslint-disable-next-line no-unused-vars
-const getRoutes = (store) => {
+const getRoutes = () => {
     return (
         <Switch>
             <Redirect from="/" to="/dashboards/projects" exact />

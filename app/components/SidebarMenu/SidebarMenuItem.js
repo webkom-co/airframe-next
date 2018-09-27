@@ -16,7 +16,12 @@ const SidebarMenuItemLink = (props) => (
                 { props.children }
             </Link>
         ) : (
-            <a href={ props.href } target="_blank" className={`${props.classBase}__entry__link`}>
+            <a
+                href={ props.href }
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${props.classBase}__entry__link`}
+            >
                 { props.children }
             </a>
         )

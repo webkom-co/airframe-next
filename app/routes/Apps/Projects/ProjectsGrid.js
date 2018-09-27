@@ -8,9 +8,9 @@ import { Paginations } from "../../components/Paginations";
 const ProjectsGrid = () => (
     <React.Fragment>
         <CardColumns>
-       	{
+        {
             _.times(12, (index) => (
-            	<ProjectsCardGrid key={ index } />
+                <ProjectsCardGrid key={ index } />
             ))
         }
         </CardColumns>

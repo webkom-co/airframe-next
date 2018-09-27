@@ -1,30 +1,18 @@
 import React from 'react';
-import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader'
-
-import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 import AppLayout from './../../layout/default';
 import { getRoutes } from './../../routes';
 
-const AppClient = props => {
-    const { history, store } = props;
-    
+const AppClient = () => {
     return (
-        <Provider store={store}>
-            <ConnectedRouter history={history}>
-                <AppLayout>
-                    { getRoutes(store) }
-                </AppLayout>
-            </ConnectedRouter>
-        </Provider>
+        <Router>
+            <AppLayout>
+                { getRoutes() }
+            </AppLayout>
+        </Router>
     );
-}
-
-AppClient.propTypes = {
-    history: PropTypes.object.isRequired,
-    store: PropTypes.object.isRequired
 }
 
 export default hot(module)(AppClient);

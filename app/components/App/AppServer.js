@@ -1,37 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import { hot } from 'react-hot-loader';
-
-import { Provider } from 'react-redux';
-import { ConnectedRouter } from 'react-router-redux';
+import { StaticRouter } from 'react-router';
 
 import { getRoutes } from './../../routes';
 import AppLayout from './../../layout/default';
 
-import FakeStaticContext from './FakeStaticContext';
+const context = { };
 
 const AppServer = props => {
-    const { 
-        history, 
-        store
-    } = props;
+    const { url } = props;
 
     return (
-        <Provider store={store}>
-            <FakeStaticContext>
-                <ConnectedRouter history={history}>
-                    <AppLayout>
-                        { getRoutes(store) }
-                    </AppLayout>
-                </ConnectedRouter>
-            </FakeStaticContext>
-        </Provider>
+        <StaticRouter context={ context } location={ url }>
+            <AppLayout>
+                { getRoutes() }
+            </AppLayout>
+        </StaticRouter>
     );
 }
 
 AppServer.propTypes = {
-    history: PropTypes.object.isRequired,
-    store: PropTypes.object.isRequired
+    url: PropTypes.string
 }
 
 export default hot(module)(AppServer);

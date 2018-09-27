@@ -2,7 +2,7 @@ var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
-var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 
 var config = require('./../config');
 
@@ -31,10 +31,10 @@ module.exports = {
         }),
         new webpack.HashedModuleIdsPlugin(),
         new ExtractCssChunks(),
+        new OptimizeCssAssetsPlugin(),
         new webpack.DefinePlugin({
             'process.env.NODE_ENV': JSON.stringify('production')
-        }),
-        new UglifyJsPlugin()
+        })
     ],
     module: {
         rules: [

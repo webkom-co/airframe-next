@@ -8,7 +8,6 @@ import { Provider } from './context';
 
 class UncontrolledModal extends React.Component {
     static propTypes = {
-        ...Modal.propTypes,
         target: PropTypes.string.isRequired
     }
 
@@ -27,6 +26,7 @@ class UncontrolledModal extends React.Component {
             this.triggerElement = document.querySelector(`#${this.props.target}`);
 
             if (!this.triggerElement) {
+                // eslint-disable-next-line no-console
                 console.error('UncontrolledModal: \'target\' element has not been found in the DOM via querySelector');
                 return;
             }
