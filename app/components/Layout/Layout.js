@@ -40,7 +40,8 @@ class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         sidebarSlim: PropTypes.bool,
-        location: PropTypes.object
+        location: PropTypes.object,
+        favIcons: PropTypes.array
     }
 
     constructor(props) {
@@ -197,7 +198,7 @@ class Layout extends React.Component {
     }
 
     render() {
-        const { children } = this.props;
+        const { children, favIcons } = this.props;
         const sidebar = findChildByType(children, LayoutSidebar);
         const navbars = findChildrenByType(children, LayoutNavbar);
         const content = findChildByType(children, LayoutContent);
@@ -221,7 +222,12 @@ class Layout extends React.Component {
                     <title>{ config.siteTitle + (this.state.pageTitle ? ` - ${this.state.pageTitle}` : '') }</title>
                     <link rel="canonical" href={ config.siteCannonicalUrl } />
                     <meta name="description" content={ this.state.pageDescription } />
-                    <meta name="keywords" content={ this.state.pageKeywords } />
+
+                    {
+                        _.map(favIcons, (favIcon, index) => (
+                            <link { ...favIcon } key={ index } />
+                        ))
+                    }
                 </Helmet>
                 <div className={ layoutClass } ref={ this.containerRef }>
                     { 
