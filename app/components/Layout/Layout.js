@@ -54,7 +54,7 @@ class Layout extends React.Component {
             screenSize: '',
             animationsDisabled: true,
 
-            pageTitle: config.siteTitle,
+            pageTitle: null,
             pageDescription: config.siteDescription,
             pageKeywords: config.siteKeywords
         };
@@ -212,12 +212,13 @@ class Layout extends React.Component {
                     sidebarSlim: !!this.props.sidebarSlim,
 
                     toggleSidebar: this.toggleSidebar.bind(this),
-                    setElementsVisibility: this.setElementsVisibility.bind(this) 
+                    setElementsVisibility: this.setElementsVisibility.bind(this),
+                    changeMeta: (metaData) => { this.setState(metaData) }
                 }}
             >
                 <Helmet>
                     <meta charSet="utf-8" />
-                    <title>{ this.state.pageTitle }</title>
+                    <title>{ config.siteTitle + (this.state.pageTitle ? ` - ${this.state.pageTitle}` : '') }</title>
                     <link rel="canonical" href={ config.siteCannonicalUrl } />
                     <meta name="description" content={ this.state.pageDescription } />
                     <meta name="keywords" content={ this.state.pageKeywords } />

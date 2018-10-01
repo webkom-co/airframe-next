@@ -18,6 +18,7 @@ import {
     Media,
     Col
 } from './../../../components';
+import { setupPage } from './../../../components/Layout/setupPage';
 
 import { HeaderMain } from "../../components/HeaderMain";
 
@@ -342,4 +343,6 @@ const ProjectsDashboard = () => (
     </Container>
 );
 
-export default ProjectsDashboard;
+export default setupPage({
+    pageTitle: 'Projects Dashboard'
+})(ProjectsDashboard);

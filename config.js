@@ -20,7 +20,7 @@ var config = {
     // Site Config ====================================================
     siteTitle:              'React Dashboard',
     siteDescription:        'Initial React Dashboard seed project',
-    siteCannonicalUrl:      'http://localhost:4000',
+    siteCannonicalUrl:      'http://localhost:4100',
     siteKeywords:           'react dashboard seed',
     scssIncludes:           []
 }

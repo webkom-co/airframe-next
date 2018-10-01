@@ -10,7 +10,7 @@ import ExtendedDropdown from './ExtendedDropdown';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
-import Layout, { withPageConfig } from './Layout';
+import Layout, { withPageConfig, setupPage } from './Layout';
 import NestedDropdown from './NestedDropdown';
 import OuterClick from './OuterClick';
 import PageLoader from './PageLoader';
@@ -115,6 +115,7 @@ export {
     Layout,
     NestedDropdown,
     withPageConfig,
+    setupPage,
     OuterClick,
     PageLoader,
     Progress,
