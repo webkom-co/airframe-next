@@ -3,6 +3,7 @@ var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 var ExtractCssChunks = require("extract-css-chunks-webpack-plugin");
 var OptimizeCssAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+var TerserPlugin = require('terser-webpack-plugin');
 
 var config = require('./../config');
 
@@ -36,6 +37,9 @@ module.exports = {
             'process.env.NODE_ENV': JSON.stringify('production')
         })
     ],
+    optimization: {
+        minimizer: [new TerserPlugin()]
+    },
     module: {
         rules: [
             {
