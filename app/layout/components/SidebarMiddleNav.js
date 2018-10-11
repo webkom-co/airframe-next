@@ -73,6 +73,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Forms" to='/forms/forms' />
             <SidebarMenu.Item title="Forms Layouts" to='/forms/forms-layouts' />
             <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
+            <SidebarMenu.Item title="Selects" to='/forms/selects' />
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }
         <SidebarMenu.Item

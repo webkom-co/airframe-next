@@ -54,6 +54,7 @@
   "dependencies": {
     "@owczar/dashboard-style--main": "^0.1.8",
     "bootstrap": "^4.1.1",
+    "cross-fetch": "^2.2.2",
     "express": "^4.16.3",
     "faker": "^4.1.0",
     "font-awesome": "^4.7.0",
@@ -69,6 +70,7 @@
     "react-responsive": "^5.0.0",
     "react-router": "^4.3.1",
     "react-router-dom": "^4.3.1",
+    "react-select": "^2.1.0",
     "react-universal-component": "^3.0.3",
     "reactstrap": "^6.3.0",
     "recharts": "^1.2.0",
