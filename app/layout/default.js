@@ -6,6 +6,7 @@ import { Layout } from './../components';
 import './../styles/bootstrap.scss';
 import './../styles/main.scss';
 import './../styles/plugins/plugins.scss';
+import './../styles/plugins/plugins.css';
 
 import {
     getNavbars,
