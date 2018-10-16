@@ -12,7 +12,8 @@ import {
     Button,
     InputGroup,
     InputGroupAddon,
-    StarRating
+    StarRating,
+    ButtonGroup
 } from './../../../../components';
 import { CustomExportCSV } from './';
 import { randomArray } from './../../../../utilities';
@@ -248,27 +249,27 @@ export class AdvancedTableA extends React.Component {
                                         <i className="fa fa-search fa-fw"></i>
                                     </InputGroupAddon>
                                 </InputGroup>
-                                <CustomExportCSV
-                                    className="mr-2"
-                                    { ...props.csvProps }
-                                >
-                                    Export
-                                </CustomExportCSV>
-                                <Button
-                                    size="sm"
-                                    outline
-                                    className="mr-2"
-                                    onClick={ this.handleDeleteRow.bind(this) }
-                                >
-                                    Delete
-                                </Button>
-                                <Button
-                                    size="sm"
-                                    outline
-                                    onClick={ this.handleAddRow.bind(this) }
-                                >
-                                    Add <i className="fa fa-fw fa-plus text-success"></i>
-                                </Button>
+                                <ButtonGroup>
+                                    <CustomExportCSV
+                                        { ...props.csvProps }
+                                    >
+                                        Export
+                                    </CustomExportCSV>
+                                    <Button
+                                        size="sm"
+                                        outline
+                                        onClick={ this.handleDeleteRow.bind(this) }
+                                    >
+                                        Delete
+                                    </Button>
+                                    <Button
+                                        size="sm"
+                                        outline
+                                        onClick={ this.handleAddRow.bind(this) }
+                                    >
+                                        Add <i className="fa fa-fw fa-plus text-success"></i>
+                                    </Button>
+                                </ButtonGroup>
                             </div>
                         </div>
                         <BootstrapTable
