@@ -2,7 +2,7 @@ import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
 import filterFactory, { Comparator, dateFilter } from 'react-bootstrap-table2-filter'
-import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
+import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import _ from 'lodash';
 import faker from 'faker';
 import moment from 'moment';
@@ -10,12 +10,10 @@ import moment from 'moment';
 import {
     Badge,
     Button,
-    InputGroup,
-    InputGroupAddon,
     StarRating,
     ButtonGroup
 } from './../../../../components';
-import { CustomExportCSV } from './';
+import { CustomExportCSV, CustomSearch } from './';
 import { randomArray } from './../../../../utilities';
 import {
     buildCustomTextFilter,
@@ -50,8 +48,6 @@ const generateRow = (index) => ({
     satisfaction: Math.round(Math.random() * 6),
     inStockDate: faker.date.past()
 });
-
-const { SearchBar } = Search;
 
 export class AdvancedTableA extends React.Component {
     constructor() {
@@ -205,6 +201,7 @@ export class AdvancedTableA extends React.Component {
                 comparatorClassName: 'd-none',
                 dateClassName: 'form-control form-control-sm',
                 comparator: Comparator.GT,
+                getFilter: filter => { this.stockDateFilter = filter; }
             }),
             sort: true,
             sortCaret
@@ -240,15 +237,10 @@ export class AdvancedTableA extends React.Component {
                                 AdvancedTable A
                             </h6>
                             <div className="d-flex ml-auto">
-                                <InputGroup className="mr-2">
-                                    <SearchBar
-                                        { ...props.searchProps }
-                                        className="form-control form-control-sm"
-                                    />
-                                    <InputGroupAddon addonType="append">
-                                        <i className="fa fa-search fa-fw"></i>
-                                    </InputGroupAddon>
-                                </InputGroup>
+                                <CustomSearch
+                                    className="mr-2"
+                                    { ...props.searchProps }
+                                />
                                 <ButtonGroup>
                                     <CustomExportCSV
                                         { ...props.csvProps }
@@ -267,7 +259,7 @@ export class AdvancedTableA extends React.Component {
                                         outline
                                         onClick={ this.handleAddRow.bind(this) }
                                     >
-                                        Add <i className="fa fa-fw fa-plus text-success"></i>
+                                        Add <i className="fa fa-fw fa-plus"></i>
                                     </Button>
                                 </ButtonGroup>
                             </div>
