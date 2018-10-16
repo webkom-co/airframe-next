@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import uid from 'uuid/v4';
 import { customFilter, Comparator, FILTER_TYPES } from 'react-bootstrap-table2-filter';
 
 import { CustomInput, Input } from './../../../../components';
@@ -38,6 +39,9 @@ class NumberFilter extends React.Component {
             value: '',
             comparator: props.comparator
         }
+
+        this.comparatorInputId = uid();
+        this.valueInputId = uid();
     }
 
     componentDidMount() {
@@ -76,6 +80,7 @@ class NumberFilter extends React.Component {
                         onChange={(e) => { this.setState({ comparator: e.target.value }) }}
                         value={ comparator }
                         className="d-block mr-1"
+                        id={this.comparatorInputId}
                     >
                         <option value=""></option>
 
@@ -94,10 +99,11 @@ class NumberFilter extends React.Component {
             }
                 <Input
                     type="number"
-                    size="sm"
+                    bsSize="sm"
                     onChange={(e) => { this.setState({ value: e.target.value }) }}
                     value={ this.state.value }
                     placeholder={ placeholder }
+                    id={this.valueInputId}
                 />
             </div>
         )

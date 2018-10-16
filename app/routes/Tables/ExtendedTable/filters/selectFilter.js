@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 import { customFilter } from 'react-bootstrap-table2-filter';
+import uid from 'uuid/v4';
 
 import { CustomInput } from './../../../../components';
 
@@ -20,6 +21,7 @@ class SelectFilter extends React.Component {
         this.state = {
             value: ''
         }
+        this.inputId = uid();
     }
 
     componentDidMount() {
@@ -45,12 +47,13 @@ class SelectFilter extends React.Component {
                 onChange={(e) => { this.setState({ value: e.target.value }) }}
                 value={ this.state.value }
                 className="d-block"
+                id={this.inputId}
             >
                 <option value="">{ placeholder }</option>
 
                 {
-                    _.map(options, ({ value, label }) => (
-                        <option value={value}>{ label }</option>
+                    _.map(options, ({ value, label }, index) => (
+                        <option value={value} key={ index }>{ label }</option>
                     ))
                 }
             </CustomInput>

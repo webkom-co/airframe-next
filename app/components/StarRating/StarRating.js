@@ -31,9 +31,12 @@ export const StarRating = (props) => {
                             key: i,
                             className: `fa fa-fw ${ i <= currentStars ? 'fa-star' : 'fa-star-o' }`,
                             style: i <= currentStars ? { color: starColor } : { },
-                            href: isInterctive && 'javascript:;',
                             onClick: () => isInterctive && onSelect(i)
                         };
+
+                        if (isInterctive) {
+                            starProps['href'] = 'javascript:;';
+                        }
 
                         stars.push(<StartElement { ...starProps } key={ i }></StartElement>);
                     }

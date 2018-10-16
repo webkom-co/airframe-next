@@ -1,7 +1,7 @@
 import React from 'react';
 import BootstrapTable from 'react-bootstrap-table-next';
 import paginationFactory from 'react-bootstrap-table2-paginator';
-import filterFactory, { numberFilter, Comparator, dateFilter } from 'react-bootstrap-table2-filter'
+import filterFactory, { Comparator, dateFilter } from 'react-bootstrap-table2-filter'
 import ToolkitProvider, { Search } from 'react-bootstrap-table2-toolkit';
 import _ from 'lodash';
 import faker from 'faker';
@@ -101,8 +101,8 @@ export class AdvancedTableA extends React.Component {
     handleResetFilters() {
         this.nameFilter('');
         this.qualityFilter('');
-        this.priceFilter(0);
-        this.satisfactionFilter(0);
+        this.priceFilter('');
+        this.satisfactionFilter('');
     }
 
     createColumnDefinitions() {
