@@ -43,6 +43,7 @@ import ReCharts from './Graphs/ReCharts';
 import Forms from './Forms/Forms';
 import FormsLayouts from './Forms/FormsLayouts';
 import InputGroups from './Forms/InputGroups';
+import Typeahead from './Forms/Typeahead';
 
 import Tables from './Tables/Tables';
 
@@ -136,6 +137,7 @@ const getRoutes = () => {
             <Route component={ Forms } path="/forms/forms" />
             <Route component={ FormsLayouts } path="/forms/forms-layouts" />
             <Route component={ InputGroups } path="/forms/input-groups" />
+            <Route component={ Typeahead } path="/forms/typeahead" />
 
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
