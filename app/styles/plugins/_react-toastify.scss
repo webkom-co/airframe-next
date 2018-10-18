@@ -1,1 +1,29 @@
 @import "~react-toastify/scss/main.scss";
+@import "../variables.scss";
+
+.Toastify__toast {
+	padding: 20px;
+	border-radius: 3px;
+}
+.Toastify__toast p {
+	color:  $black;
+}
+
+// Toastiy: "SUCCESS" Alert
+.Toastify__toast--success h6 {
+	color:  $success;
+	font-weight: 600;
+}
+.Toastify__toast--success .fa-check {
+	color:  $success;
+}
+.Toastify__toast--success .fa-check-circle {
+	color:  $success !important;
+}
+.Toastify__toast--success {
+	background-color: lighten($success, 46% );
+	border: 1px solid lighten($success, 32% );
+}
+.Toastify__close-button--success {
+	color: $success;
+}

@@ -37,20 +37,22 @@ const initialState = {
 // eslint-disable-next-line react/prop-types
 const contentSuccess = ({ closeToast }) => (
     <Media>
-        <Media middle left>
-            <i className="fa fa-fw fa-2x fa-check text-white"></i>
+        <Media middle left className="mr-3">
+            <i className="fa fa-fw fa-2x fa-check"></i>
         </Media>
         <Media body>
-            <Media heading>
-                Success Heading
+            <Media heading tag="h6">
+                Success!
             </Media>
-            { faker.lorem.sentence() }
+            <p>
+                You successfully read this important alert message.
+            </p>
             <div className="d-flex mt-2">
-                <Button color="light" outline onClick={() => { closeToast }} size="sm">
-                    Dismiss
+                <Button color="success" onClick={() => { closeToast }} >
+                    I Understand
                 </Button>
-                <Button color="success" outline onClick={() => { closeToast }} size="sm" className="ml-2">
-                    OK
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-success">
+                    Cancel
                 </Button>
             </div>
         </Media>
@@ -192,7 +194,11 @@ export class Notifications extends React.Component {
                     </Button>
                 </div>
 
-                <ToastContainer />
+                <ToastContainer 
+                    autoClose={50000}
+                    draggable={false}
+                    hideProgressBar={true}
+                />
             </Container>
         );
     }
