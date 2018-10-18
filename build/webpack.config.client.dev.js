@@ -1,7 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var HardSourceWebpackPlugin = require('hard-source-webpack-plugin');
 
 var config = require('./../config');
 
@@ -26,7 +25,6 @@ module.exports = {
         ]
     },
     plugins: [
-        new HardSourceWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: config.srcHtmlLayout,
             inject: false,
