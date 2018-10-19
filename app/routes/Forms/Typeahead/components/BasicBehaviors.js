@@ -31,13 +31,13 @@ export class BasicBehaviors extends React.Component {
     
         const checkboxes = [
             /* eslint-disable max-len */
-            {checked: disabled, children: 'Disable the input', name: 'disabled'},
-            {checked: dropup, children: 'Dropup menu', name: 'dropup'},
-            {checked: flip, children: 'Flip the menu position when it reaches the viewport bounds', name: 'flip'},
-            {checked: !!minLength, children: 'Require minimum input before showing results (2 chars)', name: 'minLength'},
-            {checked: emptyLabel, children: 'Hide the menu when there are no results', name: 'emptyLabel'},
-            {checked: selectHintOnEnter, children: 'Select the hinted result by pressing enter', name: 'selectHintOnEnter'},
-            {checked: highlightOnlyResult, children: 'Highlight the only result', name: 'highlightOnlyResult'},
+            {checked: disabled, label: 'Disable the input', name: 'disabled'},
+            {checked: dropup, label: 'Dropup menu', name: 'dropup'},
+            {checked: flip, label: 'Flip the menu position when it reaches the viewport bounds', name: 'flip'},
+            {checked: !!minLength, label: 'Require minimum input before showing results (2 chars)', name: 'minLength'},
+            {checked: emptyLabel, label: 'Hide the menu when there are no results', name: 'emptyLabel'},
+            {checked: selectHintOnEnter, label: 'Select the hinted result by pressing enter', name: 'selectHintOnEnter'},
+            {checked: highlightOnlyResult, label: 'Highlight the only result', name: 'highlightOnlyResult'},
             /* eslint-enable max-len */
         ];
 
