@@ -6,10 +6,11 @@ import {
 } from './../../../../components';
 
 export const ButtonInput = (props) => (
-    <Button
+    <Button outline
         onClick={props.onClick}
     >
-        {props.value}
+        <i className="fa fa-fw fa-calendar-o mr-1" />
+        { props.value }
     </Button>
 )
 
