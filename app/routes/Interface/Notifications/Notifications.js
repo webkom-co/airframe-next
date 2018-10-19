@@ -4,12 +4,20 @@ import faker from 'faker';
 import _ from 'lodash';
 
 import {
+    Container,
+    Row,
     Button,
+    CardBody,
+    Col,
+    CardHeader,
+    Card,
+    CardFooter,
     Media,
     FormGroup,
-    CustomInput,
-    Container
+    CustomInput
 } from './../../../components';
+
+import { HeaderMain } from "../../components/HeaderMain";
 
 const positions = [
     { label: 'top-left', value: 'top-left' },
@@ -61,20 +69,22 @@ const contentSuccess = ({ closeToast }) => (
 // eslint-disable-next-line react/prop-types
 const contentError = ({ closeToast }) => (
     <Media>
-        <Media middle left>
-            <i className="fa fa-fw fa-2x fa-times text-white"></i>
+        <Media middle left className="mr-3">
+            <i className="fa fa-fw fa-2x fa-close"></i>
         </Media>
         <Media body>
-            <Media heading>
-                Error Heading
+            <Media heading tag="h6">
+                Danger!
             </Media>
-            { faker.lorem.sentence() }
+            <p>
+                Change a few things up and try submitting.
+            </p>
             <div className="d-flex mt-2">
-                <Button color="light" outline onClick={() => { closeToast }} size="sm">
-                    Dismiss
+                <Button color="danger" onClick={() => { closeToast }}>
+                    I Understand
                 </Button>
-                <Button color="danger" outline onClick={() => { closeToast }} size="sm" className="ml-2">
-                    OK
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-danger">
+                    Cancel
                 </Button>
             </div>
         </Media>
@@ -83,20 +93,22 @@ const contentError = ({ closeToast }) => (
 // eslint-disable-next-line react/prop-types
 const contentInfo = ({ closeToast }) => (
     <Media>
-        <Media middle left>
-            <i className="fa fa-fw fa-2x fa-info text-white"></i>
+        <Media middle left className="mr-3">
+            <i className="fa fa-fw fa-2x fa-info"></i>
         </Media>
         <Media body>
-            <Media heading>
-                Info Heading
+            <Media heading tag="h6">
+                Information!
             </Media>
-            { faker.lorem.sentence() }
+            <p>
+                This alert needs your attention, but it's not important.
+            </p>
             <div className="d-flex mt-2">
-                <Button color="light" outline onClick={() => { closeToast }} size="sm">
-                    Dismiss
+                <Button color="info" onClick={() => { closeToast }} >
+                    I Understand
                 </Button>
-                <Button color="info" outline onClick={() => { closeToast }} size="sm" className="ml-2">
-                    OK
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-info">
+                    Cancel
                 </Button>
             </div>
         </Media>
@@ -105,20 +117,22 @@ const contentInfo = ({ closeToast }) => (
 // eslint-disable-next-line react/prop-types
 const contentWarning = ({ closeToast }) => (
     <Media>
-        <Media middle left>
-            <i className="fa fa-fw fa-2x fa-exclamation text-white"></i>
+        <Media middle left className="mr-3">
+            <i className="fa fa-fw fa-2x fa-exclamation"></i>
         </Media>
         <Media body>
-            <Media heading>
-                Warning Heading
+            <Media heading tag="h6">
+                Warning!
             </Media>
-            { faker.lorem.sentence() }
+            <p>
+                Better check yourself, you're not looking too good.
+            </p>
             <div className="d-flex mt-2">
-                <Button color="light" outline onClick={() => { closeToast }} size="sm">
-                    Dismiss
+                <Button color="warning" onClick={() => { closeToast }} className="text-white">
+                    I Understand
                 </Button>
-                <Button color="warning" outline onClick={() => { closeToast }} size="sm" className="ml-2">
-                    OK
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-warning">
+                    Cancel
                 </Button>
             </div>
         </Media>
@@ -127,17 +141,22 @@ const contentWarning = ({ closeToast }) => (
 // eslint-disable-next-line react/prop-types
 const contentDefault = ({ closeToast }) => (
     <Media>
+        <Media middle left className="mr-3">
+            <i className="fa fa-fw fa-2x fa-question"></i>
+        </Media>
         <Media body>
-            <Media heading>
-                Default Heading
+            <Media heading tag="h6">
+                Attention!
             </Media>
-            { faker.lorem.sentence() }
+            <p>
+                This alert needs your attention, but it's not important.
+            </p>
             <div className="d-flex mt-2">
-                <Button outline onClick={() => { closeToast }} size="sm">
-                    Dismiss
+                <Button color="secondary" onClick={() => { closeToast }} className="text-white">
+                    I Understand
                 </Button>
-                <Button outline onClick={() => { closeToast }} size="sm" className="ml-2">
-                    OK
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-secondary">
+                    Cancel
                 </Button>
             </div>
         </Media>
@@ -151,50 +170,64 @@ export class Notifications extends React.Component {
     render() {
         return (
             <Container>
-                <div className="d-flex">
-                    <FormGroup>
-                    {
-                        _.map(positions, (position) => (
-                            <CustomInput
-                                label={ position.label }
-                                checked={ position.value === this.state.position }
-                                onChange={ () => { this.setState({position: position.value}) } }
-                                type="radio"
-                                key={`pos-${position.value}`}
-                                id={`pos-${position.value}`}
-                            />
-                        ))
-                    }
-                    </FormGroup>
-                    
-                    <FormGroup className="ml-5">
-                    {
-                        _.map(types, (type) => (
-                            <CustomInput
-                                label={ type.label }
-                                checked={ type.value === this.state.type }
-                                onChange={ () => { this.setState({type: type.value}) } }
-                                type="radio"
-                                key={`pos-${type.value}`}
-                                id={`pos-${type.value}`}
-                            />
-                        ))
-                    }
-                    </FormGroup>
-                </div>
-                <div className="d-flex">
-                    <Button size="sm" color="primary" onClick={ this._showHandler }>
-                        Show Toast
-                    </Button>
-                    <Button size="sm" color="danger" onClick={ this._clearHandler } className="ml-2">
-                        Clear All
-                    </Button>
-                    <Button size="sm" color="secondary" onClick={ this._resetHandler } className="ml-2">
-                        Reset
-                    </Button>
-                </div>
+                <HeaderMain 
+                    title="Notifications"
+                    className="mb-4 mt-4"
+                />
+                <p>
+                    <strong>React-Toastify</strong> allow you to add notification to your app with ease.<br/>
+                    Specially written CSS are available in: <code>/app/styles/plugins/_react-toastify.scss</code>
+                </p>
+                <Card className="mb-3">
+                    <CardBody>
+                        <div className="d-flex mb-2">
+                            <FormGroup>
+                                <h6 className="mb-3">Position</h6>
+                                {
+                                    _.map(positions, (position) => (
+                                        <CustomInput
+                                            label={ position.label }
+                                            checked={ position.value === this.state.position }
+                                            onChange={ () => { this.setState({position: position.value}) } }
+                                            type="radio"
+                                            key={`pos-${position.value}`}
+                                            id={`pos-${position.value}`}
+                                        />
+                                    ))
+                                }
+                            </FormGroup>
+                            <FormGroup className="ml-5">
+                                <h6 className="mb-3">Type</h6>
+                                {
+                                    _.map(types, (type) => (
+                                        <CustomInput
+                                            label={ type.label }
+                                            checked={ type.value === this.state.type }
+                                            onChange={ () => { this.setState({type: type.value}) } }
+                                            type="radio"
+                                            key={`pos-${type.value}`}
+                                            id={`pos-${type.value}`}
+                                        />
+                                    ))
+                                }
+                            </FormGroup>
+                        </div>
+                        <div className="d-flex ">
+                            <Button color="primary" onClick={ this._showHandler }>
+                                Show Toast
+                            </Button>
+                            <Button color="link" onClick={ this._clearHandler } className="ml-2">
+                                Clear All
+                            </Button>
+                            <Button color="link" onClick={ this._resetHandler } className="ml-2">
+                                Reset
+                            </Button>
+                        </div>
+                    </CardBody>
+                </Card>
 
                 <ToastContainer 
+                    position={this.state.position}
                     autoClose={50000}
                     draggable={false}
                     hideProgressBar={true}
