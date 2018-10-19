@@ -1,0 +1,58 @@
+@import './../../styles/variables.scss';
+
+.wizard {
+    display: flex;
+    align-items: center;
+}
+
+.wizard-step {
+    flex: 0 1 auto;
+    display: flex;
+    align-items: center;
+    text-decoration: none !important;
+
+    &--active {
+        .wizard-step__icon {
+            background: $primary;
+        }
+        .wizard-step__content {
+            color: $body-color;
+        }
+    }
+
+    &--disabled {
+        opacity: 0.4;
+        cursor: not-allowed;
+    }
+
+    &--complete {
+        .wizard-step__icon {
+            background: $success;
+        }
+    }
+
+    &__icon {
+        flex: 0 0 30px;
+        width: 30px;
+        height: 30px;
+        margin-right: 10px;
+        background: $gray-300;
+        border-radius: 50%;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        > * {
+            color: #fff;
+        }
+    }
+
+    &__content {
+        color: $text-muted;
+    }
+
+    + .wizard-step {
+        margin-left: 20px;
+    }
+}
