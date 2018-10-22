@@ -5,12 +5,14 @@ import moment from 'moment';
 import {
     Container,
     Input,
+    InputGroup,
+    InputGroupAddon,
     Row,
     Card,
     Col,
     CardBody
 } from './../../../components';
-import { Example, ButtonInput } from './components';
+import { Example, ButtonInput, AddonInput } from './components';
 
 import { HeaderMain } from "../../components/HeaderMain";
 
@@ -46,7 +48,7 @@ export class DatePickerExamples extends React.Component {
                                         <DatePicker
                                             customInput={ <ButtonInput /> }
                                             selected={this.state.startDate}
-                                            onChange={this._handleChange}
+                                            onChange={this._handleChangeStart}
                                         />
                                     )}
                                 >
@@ -70,7 +72,7 @@ export class DatePickerExamples extends React.Component {
                                         <DatePicker
                                             inline
                                             selected={this.state.startDate}
-                                            onChange={this._handleChange}
+                                            onChange={this._handleChangeStart}
                                         />
                                     )}
                                 >
@@ -94,25 +96,26 @@ export class DatePickerExamples extends React.Component {
                                     title="Range"
                                     no="1.03"
                                     exampleInput={(
-                                        <React.Fragment>
+                                        <div className="d-flex">
                                             <DatePicker
-                                                customInput={ <Input /> }
+                                                customInput={ <AddonInput /> }
                                                 selected={this.state.startDate}
                                                 selectsStart
                                                 startDate={this.state.startDate}
                                                 endDate={this.state.endDate}
-                                                onChange={this.handleChangeStart}
+                                                onChange={this._handleChangeStart}
                                             />
 
                                             <DatePicker
-                                                customInput={ <Input /> }
+                                                className="ml-2"
+                                                customInput={ <AddonInput /> }
                                                 selected={this.state.endDate}
                                                 selectsEnd
                                                 startDate={this.state.startDate}
                                                 endDate={this.state.endDate}
-                                                onChange={this.handleChangeEnd}
+                                                onChange={this._handleChangeEnd}
                                             />
-                                        </React.Fragment>
+                                        </div>
                                     )}
                                 >
                                 {   
@@ -142,7 +145,11 @@ export class DatePickerExamples extends React.Component {
         )
     }
 
-    _handleChange = (date) => (
-        this.setState({ date })
+    _handleChangeStart = (startDate) => (
+        this.setState({ startDate })
+    )
+
+    _handleChangeEnd = (endDate) => (
+        this.setState({ endDate })
     )
 }
