@@ -37,6 +37,7 @@ import ProgressBars from './Interface/ProgressBars';
 import TabsPills from './Interface/TabsPills';
 import TooltipPopovers from './Interface/TooltipsPopovers';
 import Typography from './Interface/Typography';
+import Notifications from './Interface/Notifications';
 import CropImage from './Interface/CropImage';
 
 import ReCharts from './Graphs/ReCharts';
@@ -136,6 +137,7 @@ const getRoutes = () => {
             <Route component={ TabsPills } path="/interface/tabs-pills" />
             <Route component={ TooltipPopovers } path="/interface/tooltips-and-popovers" />
             <Route component={ Typography } path="/interface/typography" />
+            <Route component={ Notifications } path="/interface/notifications" />
             <Route component={ CropImage } path="/interface/crop-image" />
 
             { /*    Forms Routes    */ }
