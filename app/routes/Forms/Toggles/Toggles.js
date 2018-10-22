@@ -9,6 +9,9 @@ import {
 } from './../../../components';
 import Toggle from 'react-toggle';
 
+import { HeaderMain } from "../../components/HeaderMain";
+import { HeaderDemo } from "../../components/HeaderDemo";
+
 import classes from './Toggles.scss';
 
 export class Toggles extends React.Component {
@@ -26,6 +29,11 @@ export class Toggles extends React.Component {
     render() {
         return (
             <Container>
+                <HeaderMain 
+                    title="Toggles"
+                    className="mb-5 mt-4"
+                />
+                <p className="mb-4">An elegant, accessible toggle component for React. Also a glorified checkbox.</p>
                 <Row>
                     <Col lg={ 6 }>
                         <Table>
