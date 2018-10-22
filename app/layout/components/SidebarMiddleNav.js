@@ -80,6 +80,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Typeahead" to='/forms/typeahead' />
             <SidebarMenu.Item title="Toggles" to='/forms/toggles' />
             <SidebarMenu.Item title="Editor" to='/forms/editor' />
+            <SidebarMenu.Item title="Date Picker" to='/forms/date-picker' />
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }
         <SidebarMenu.Item
