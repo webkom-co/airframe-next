@@ -7,6 +7,8 @@ import {
     Card
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 export class Editor extends React.Component {
     state = {
         text: `
@@ -36,6 +38,13 @@ export class Editor extends React.Component {
     render() {
         return (
             <Container>
+                <HeaderMain 
+                    title="Editor"
+                    className="mb-5 mt-4"
+                />
+                <p>
+                    <strong>Quill</strong> is a modern rich text editor built for compatibility and extensibility.
+                </p>
                 <Card>
                     <ReactQuill
                         value={ this.state.text }
