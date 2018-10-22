@@ -1,1 +1,3 @@
-@import "./_react-bootstrap-typeahead.css";
+@import "~react-toggle/style.css";
+@import '~react-bootstrap-typeahead/css/Typeahead.css';
+@import '~react-bootstrap-typeahead/css/Typeahead-bs4.css';

@@ -72,6 +72,7 @@
     "react-router-dom": "^4.3.1",
     "react-toastify": "^4.4.0",
     "react-text-mask": "^5.4.3",
+    "react-toggle": "^4.0.2",
     "react-universal-component": "^3.0.3",
     "reactstrap": "^6.3.0",
     "recharts": "^1.2.0",
