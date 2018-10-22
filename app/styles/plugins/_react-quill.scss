@@ -1,0 +1,28 @@
+/* React Quill Overrides */
+@import "./../bootstrap.scss";
+
+.card .quill {
+    display: flex;
+    flex-direction: column;
+
+    .ql-toolbar {
+        @extend .card-header;
+    
+        flex: 0 0 auto;
+        border-width: 0 0 1px 0;
+    }
+
+    .ql-container {
+        font-family: inherit;
+        font-size: inherit;
+        
+        flex: 1 1 auto;
+        border: none;
+        display: flex;
+        flex-direction: column;
+
+        .ql-editor {
+            flex: 1 1 auto;
+        }
+    }
+}
