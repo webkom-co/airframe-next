@@ -50,9 +50,8 @@ export class AsyncSearch extends React.Component {
                 onChange={this._handleChange}
                 type="checkbox"
                 id={`control-${name}`}
-            >
-                {label}
-            </CustomInput>
+                label={label}
+            />
         ));
     }
   

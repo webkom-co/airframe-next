@@ -35,13 +35,12 @@ export class MenuAlignment extends React.Component {
                         <CustomInput
                             checked={align === value}
                             key={value || 'default'}
-                            onChange={() => this.setState({bsSize: value})}
+                            onChange={() => this.setState({align: value})}
                             type="radio"
                             value={value}
                             id={`input-align-${value}`}
-                        >
-                            { label }
-                        </CustomInput>
+                            label={ label }
+                        />
                     ))
                 }
                 </FormGroup>

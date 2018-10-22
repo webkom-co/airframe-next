@@ -54,9 +54,8 @@ export class CustomFilteringExample extends React.Component {
                             type="radio"
                             value={value}
                             id={`capital-option-${value}`}
-                        >
-                            {label}
-                        </CustomInput>
+                            label={label}
+                        />
                     ))
                 }
                 </FormGroup>

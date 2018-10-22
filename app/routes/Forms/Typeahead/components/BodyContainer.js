@@ -42,18 +42,16 @@ export class BodyContainer extends React.Component {
                         onChange={this._handleChange}
                         type="checkbox"
                         id="enable-attach-menu"
-                    >
-                        Attach menu to document body
-                    </CustomInput>
+                        label="Attach menu to document body"
+                    />
                     <CustomInput
                         checked={dropup}
                         name="dropup"
                         onChange={this._handleChange}
                         type="checkbox"
                         id="enable-dropup-menu"
-                    >
-                        Dropup menu
-                    </CustomInput>
+                        label="Dropup menu"
+                    />
                 </FormGroup>
             </React.Fragment>
         );

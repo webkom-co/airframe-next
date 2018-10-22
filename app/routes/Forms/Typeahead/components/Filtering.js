@@ -51,9 +51,8 @@ export class FilteringExample extends React.Component {
                         onChange={(e) => this.setState({caseSensitive: e.target.checked})}
                         type="checkbox"
                         id="case-sensitive-enabled"
-                    >
-                        Case-sensitive filtering
-                    </CustomInput>
+                        label="Case-sensitive filtering"
+                    />
                     <CustomInput
                         checked={!ignoreDiacritics}
                         onChange={(e) => {
@@ -61,9 +60,8 @@ export class FilteringExample extends React.Component {
                         }}
                         type="checkbox"
                         id="ignore-diactrical-enabled"
-                    >
-                        Don&apos;t ignore diacritical marks
-                    </CustomInput>
+                        label="Don't ignore diacritical marks"
+                    />
                 </FormGroup>
             </React.Fragment>
         );

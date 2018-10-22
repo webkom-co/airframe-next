@@ -52,9 +52,8 @@ export class RenderingExample extends React.Component {
                             type="radio"
                             value={value}
                             id={`rendering-type-${value}`}
-                        >
-                            {label}
-                        </CustomInput>
+                            label={label}
+                        />
                     ))}
                 </FormGroup>
             </React.Fragment>
