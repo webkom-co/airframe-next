@@ -46,6 +46,7 @@ import FormsLayouts from './Forms/FormsLayouts';
 import InputGroups from './Forms/InputGroups';
 import Wizard from './Forms/Wizard';
 import TextMask from './Forms/TextMask';
+import Typeahead from './Forms/Typeahead';
 
 import Tables from './Tables/Tables';
 
@@ -142,6 +143,7 @@ const getRoutes = () => {
             <Route component={ InputGroups } path="/forms/input-groups" />
             <Route component={ Wizard } path="/forms/wizard" />
             <Route component={ TextMask } path="/forms/text-mask" />
+            <Route component={ Typeahead } path="/forms/typeahead" />
 
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />

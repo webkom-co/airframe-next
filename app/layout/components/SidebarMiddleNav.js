@@ -76,6 +76,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
             <SidebarMenu.Item title="Wizard" to='/forms/wizard' />
             <SidebarMenu.Item title="Text Mask" to='/forms/text-mask' />
+            <SidebarMenu.Item title="Typeahead" to='/forms/typeahead' />
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }
         <SidebarMenu.Item
