@@ -1,0 +1,24 @@
+/* RC Sliders Overrides */
+@import "./../variables.scss";
+
+.rc-slider {
+    .rc-slider-track {
+        background-color: $primary;
+    }
+
+    .rc-slider-dot-active {
+        border-color: $primary;
+    }
+
+    .rc-slider-handle {
+        border-color: $primary;
+
+        &:active {
+            border-color: darken($primary, 10%);
+            box-shadow: 0 0 5px darken($primary, 10%);
+        }
+        &:hover {
+            border-color: darken($primary, 5%);
+        }
+    }
+}
