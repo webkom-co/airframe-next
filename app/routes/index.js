@@ -43,6 +43,7 @@ import ReCharts from './Graphs/ReCharts';
 import Forms from './Forms/Forms';
 import FormsLayouts from './Forms/FormsLayouts';
 import InputGroups from './Forms/InputGroups';
+import Toggles from './Forms/Toggles';
 
 import Tables from './Tables/Tables';
 
@@ -136,6 +137,7 @@ const getRoutes = () => {
             <Route component={ Forms } path="/forms/forms" />
             <Route component={ FormsLayouts } path="/forms/forms-layouts" />
             <Route component={ InputGroups } path="/forms/input-groups" />
+            <Route component={ Toggles } path="/forms/toggles" />
 
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
