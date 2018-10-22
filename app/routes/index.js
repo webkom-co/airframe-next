@@ -140,11 +140,8 @@ const getRoutes = () => {
             <Route component={ Forms } path="/forms/forms" />
             <Route component={ FormsLayouts } path="/forms/forms-layouts" />
             <Route component={ InputGroups } path="/forms/input-groups" />
-<<<<<<< HEAD
             <Route component={ Wizard } path="/forms/wizard" />
-=======
             <Route component={ TextMask } path="/forms/text-mask" />
->>>>>>> f79e5af4e6369c08744b6de4c4177f74df44b0cb
 
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
