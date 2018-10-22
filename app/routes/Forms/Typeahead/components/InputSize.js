@@ -39,9 +39,8 @@ export class InputSize extends React.Component {
                             type="radio"
                             value={value}
                             id={`input-size-${label}`}
-                        >
-                            { label }
-                        </CustomInput>
+                            label={ label }
+                        />
                     ))
                 }
                 </FormGroup>

@@ -29,9 +29,8 @@ export class PaginationExample extends React.Component {
                         onChange={(e) => this.setState({paginate: !!e.target.checked})}
                         type="checkbox"
                         id="enable-pagination"
-                    >
-                        Paginate results
-                    </CustomInput>
+                        label="Paginate results"
+                    />
                 </FormGroup>
             </React.Fragment>
         );

@@ -29,9 +29,8 @@ export class BasicExample extends React.Component {
                         onChange={(e) => this.setState({multiple: e.target.checked})}
                         type="checkbox"
                         id="basic-example-multiselect"
-                    >
-                        Multi-Select
-                    </CustomInput>
+                        label="Multi-Select"
+                    />
                 </FormGroup>
             </React.Fragment>
         );
