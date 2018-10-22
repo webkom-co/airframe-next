@@ -82,8 +82,10 @@ export class ExampleProvider extends React.Component {
                 <Col lg={ 6 } >
                 {
                     (!imageUrl) && (
-                        <div className="d-flex align-items-center bg-gray-200 h-100 p-4">
-                            <span className="d-block text-gray-500 text-center h2">
+                        <div className="d-flex align-items-center justify-content-center b-2 b-dashed h-100 p-4">
+                            <span className="d-block text-muted text-center">
+                                <i className="fa fa-fw fa-info-circle mb-2 fa-2x"></i>
+                                <br />
                                 Select the part of the image on the left and click &quot;Crop&quot;
                             </span>
                         </div>
@@ -103,7 +105,7 @@ export class ExampleProvider extends React.Component {
                     <Button color="primary" onClick={ this._crop }>
                         Crop
                     </Button>
-                    <Button outline onClick={ this._reset } className="ml-2">
+                    <Button color="link" onClick={ this._reset } className="ml-2">
                         Reset
                     </Button>
                 </Col>
