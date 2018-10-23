@@ -47,13 +47,13 @@ import {
 export class Analytics extends React.Component {
     state = {
         layouts: {
-            'metrics-v-targets': { h: 3, minH: 3, maxH: 3 },
-            'analytics-audience-metrics': { h: 5, minH: 5, maxH: 5 },
-            'traffic-channels': { md: 6, lg: 6, xl: 6, h: 3, minH: 3, maxH: 3 },
-            'sessions': { md: 6, lg: 6, xl: 6, h: 3, minH: 3, maxH: 3 },
-            'spend': { md: 6, lg: 6, xl: 6, h: 3, minH: 3, maxH: 3 },
-            'website-performance': { md: 6, lg: 6, xl: 6, h: 7, minH: 7, maxH: 7 },
-            'organic-traffic': { md: 6, lg: 6, xl: 6, h: 5, minH: 5, maxH: 5 }
+            'metrics-v-targets': { h: 3 },
+            'analytics-audience-metrics': { h: 5 },
+            'traffic-channels': { md: 6, h: 3 },
+            'sessions': { md: 6, h: 3 },
+            'spend': { md: 6, h: 3 },
+            'website-performance': { md: 6, h: 7 },
+            'organic-traffic': { md: 6, h: 5 }
         }
     }
 
