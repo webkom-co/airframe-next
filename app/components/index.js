@@ -7,6 +7,7 @@ import Checkable from './Checkable';
 import CustomInput from './CustomInput';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
+import Grid from './FloatGrid';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
@@ -109,6 +110,7 @@ export {
     CustomInput,
     EmptyLayout,
     ExtendedDropdown,
+    Grid,
     IconWithBadge,
     InputGroupAddon,
     HolderProvider,

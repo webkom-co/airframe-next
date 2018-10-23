@@ -1,0 +1,23 @@
+@import './../../styles/variables.scss';
+@import '~bootstrap/scss/mixins/breakpoints';
+
+.floatGridParent {
+    margin: 0 auto;
+
+    &.static {
+        @media (min-width: breakpoint-min('sm', $grid-breakpoints)) {
+            width: map-get($grid-breakpoints, 'sm');
+        }
+        @media (min-width: breakpoint-min('md', $grid-breakpoints)) {
+            width: map-get($grid-breakpoints, 'md');
+        }
+        @media (min-width: breakpoint-min('lg', $grid-breakpoints)) {
+            width: map-get($grid-breakpoints, 'lg');
+        }
+    }
+}
+
+.floatCol {
+    padding-left: 15px;
+    padding-right: 15px;
+}
