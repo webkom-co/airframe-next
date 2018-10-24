@@ -84,7 +84,7 @@ export class Toggles extends React.Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td className="text-inverse">
                                         Diabled, Unchecked
                                     </td>
                                     <td className="text-right">
@@ -94,7 +94,7 @@ export class Toggles extends React.Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td className="text-inverse">
                                         Disabled, Checked
                                     </td>
                                     <td className="text-right">
@@ -104,7 +104,7 @@ export class Toggles extends React.Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
+                                    <td className="text-inverse">
                                         Custom className
                                     </td>
                                     <td className="text-right">
@@ -115,8 +115,8 @@ export class Toggles extends React.Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        Custom icons
+                                    <td className="text-inverse">
+                                        Custom Icons
                                     </td>
                                     <td className="text-right">
                                         <Toggle
@@ -129,8 +129,8 @@ export class Toggles extends React.Component {
                                     </td>
                                 </tr>
                                 <tr>
-                                    <td>
-                                        No icons
+                                    <td className="text-inverse">
+                                        No Icons
                                     </td>
                                     <td className="text-right">
                                         <Toggle
@@ -159,7 +159,7 @@ export class Toggles extends React.Component {
                                             <Toggle
                                                 defaultChecked={this.state.baconIsReady}
                                                 onChange={() => { this.setState({baconIsReady: !this.state.baconIsReady}) }} />
-                                            <span className="ml-2">Wrapper label tag</span>
+                                            <span className="ml-2 text-inverse">Wrapper label tag</span>
                                         </label>
                                     </td>
                                 </tr>
@@ -169,7 +169,7 @@ export class Toggles extends React.Component {
                                             id='cheese-status'
                                             defaultChecked={this.state.cheeseIsReady}
                                             onChange={ () => { this.setState({cheeseIsReady: !this.state.cheeseIsReady}) } } />
-                                        <label htmlFor='cheese-status' className="ml-2 mb-0">Adjacent label tag</label>
+                                        <label htmlFor='cheese-status' className="ml-2 mb-0 text-inverse">Adjacent label tag</label>
                                     </td>
                                 </tr>
                                 <tr>
@@ -179,7 +179,7 @@ export class Toggles extends React.Component {
                                             defaultChecked={this.state.biscuitIsReady}
                                             aria-labelledby='biscuit-label'
                                             onChange={ () => { this.setState({biscuitIsReady: !this.state.biscuitIsReady}) } } />
-                                        <span id='biscuit-label' className="ml-2">Adjacent label, but not standard tag</span>
+                                        <span id='biscuit-label' className="ml-2 text-inverse">Adjacent label, but not standard tag</span>
                                     </td>
                                 </tr>
                                 <tr>
@@ -188,7 +188,7 @@ export class Toggles extends React.Component {
                                             defaultChecked={this.state.eggsAreReady}
                                             aria-label='No label tag'
                                             onChange={ () => { this.setState({eggsAreReady: !this.state.eggsAreReady}) } } />
-                                        <span className="ml-2">No label tag</span>
+                                        <span className="ml-2 text-inverse">No label tag</span>
                                     </td>
                                 </tr>
                             </tbody>
