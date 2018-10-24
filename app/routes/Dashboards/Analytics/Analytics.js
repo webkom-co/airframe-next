@@ -203,7 +203,7 @@ export class Analytics extends React.Component {
                         rowHeight={ 55 }
                     >
                         <Grid.Col { ...(this._applyColumn('metric-v-target-users')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
                                         Metric vs Target - <i>Users</i>
@@ -225,7 +225,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('metric-v-target-sessions')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
                                         Metric vs Target - <i>Sessions</i>
@@ -248,7 +248,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('metric-v-target-pageviews')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
                                         Metric vs Target - <i>Pageviews</i>
@@ -271,7 +271,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('analytics-audience-metrics')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
                                         Analytics Audience Metrics
@@ -282,7 +282,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('traffic-channels')) }>
-                            <Card className="mb-3 d-flex flex-column">
+                            <Card className="d-flex flex-column">
                                 <CardBody className="flex-grow-0">
                                     <CardTitle tag="h6" className="mb-0">
                                         Traffic Channels
@@ -329,7 +329,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('sessions')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
                                         Sessions by Device Type
@@ -375,7 +375,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('spend')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody>
                                     <div className="d-flex mb-4">
                                         <CardTitle tag="h6">
@@ -405,7 +405,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('website-performance')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-0">
                                         Website Performance
@@ -457,7 +457,7 @@ export class Analytics extends React.Component {
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('organic-traffic')) }>
-                            <Card className="mb-3">
+                            <Card>
                                 <CardBody className="d-flex flex-column">
                                     <div className="d-flex mb-5">
                                         <div>

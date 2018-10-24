@@ -92,7 +92,7 @@ export class Row extends React.Component {
                         // props if defined for controlled type
                         x: _.isUndefined(child.props[`${breakPoint}X`]) ?
                             rowCounter : child.props[`${breakPoint}X`],
-                        h: config.h || 1,
+                        h: child.props[`${breakPoint}H`] || config.h || 1,
                         minH: config.minH || (config.h || 1),
                         maxH: config.maxH || (config.h || 1),
                     },
@@ -134,7 +134,8 @@ export class Row extends React.Component {
                     ...(element),
                     [breakPoint]: element.w,
                     [`${breakPoint}X`]: element.x,
-                    [`${breakPoint}Y`]: element.y
+                    [`${breakPoint}Y`]: element.y,
+                    [`${breakPoint}H`]: element.h
                 }
             }
         }

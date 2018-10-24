@@ -3,6 +3,27 @@
 
 .react-grid-layout {
     margin: 0 (-$grid-gutter-width / 2);
+
+    .react-grid-item.react-grid-placeholder {
+        background: none;
+        z-index: 2;
+        transition-duration: 100ms;
+        user-select: none;
+        position: relative;
+    
+        &:after {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            transform: translate(-50%, 0);
+            content: " ";
+            background: rgba($primary, 0.1);
+            border-radius: 4px;
+            border: 2px dashed rgba($primary, 0.5);
+            height: calc(100% - #{$grid-gutter-width / 2});
+            width: calc(100% - #{$grid-gutter-width});
+        }
+    }
 }
 
 .float-column {
@@ -11,6 +32,7 @@
 
     > .card {
         flex: 1 1 auto;
+        margin-bottom: $grid-gutter-width / 2;
 
         + .react-resizable-handle {
             bottom: $grid-gutter-width / 2;
