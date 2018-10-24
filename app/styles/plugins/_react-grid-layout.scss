@@ -1,0 +1,20 @@
+/* React Grid Layout Overrides */
+@import "./../variables.scss";
+
+.react-grid-layout {
+    margin: 0 (-$grid-gutter-width / 2);
+}
+
+.float-column {
+    display: flex;
+    flex-direction: column;
+
+    > .card {
+        flex: 1 1 auto;
+
+        + .react-resizable-handle {
+            bottom: $grid-gutter-width / 2;
+            right: $grid-gutter-width / 2;
+        }
+    }
+}

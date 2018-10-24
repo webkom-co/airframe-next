@@ -1,6 +1,7 @@
 import React from 'react';
 import faker from 'faker';
 import {
+    Container,
     Row,
     ButtonToolbar,
     ButtonGroup,
@@ -47,174 +48,205 @@ import {
 export class Analytics extends React.Component {
     state = {
         layouts: {
-            'metrics-v-targets': { h: 3 },
-            'analytics-audience-metrics': { h: 5 },
-            'traffic-channels': { md: 6, h: 3 },
-            'sessions': { md: 6, h: 3 },
-            'spend': { md: 6, h: 3 },
-            'website-performance': { md: 6, h: 7 },
-            'organic-traffic': { md: 6, h: 5 }
+            'metric-v-target-users': { h: 6, md: 4 },
+            'metric-v-target-sessions': { h: 6, md: 4 },
+            'metric-v-target-pageviews': { h: 6, md: 4 },
+            'analytics-audience-metrics': { h: 10, minH: 7 },
+            'traffic-channels': { md: 6, h: 5 },
+            'sessions': { md: 6, h: 6, maxH: 9 },
+            'spend': { md: 6, h: 6 },
+            'website-performance': { md: 6, h: 12 },
+            'organic-traffic': { md: 6, h: 10 }
         }
     }
 
     _applyColumn = (columnId) => ({
         ...this.state.layouts[columnId],
+        i: columnId,
         key: columnId
     })
 
     render() {
         return (
             <React.Fragment>
-                <div className="d-flex mt-3 mb-5">
-                    <HeaderMain 
-                        title="Analytics"
-                        className="mt-0"
-                    />
-                    <ButtonToolbar className="ml-auto">
-                        <ButtonGroup className="align-self-start mr-2">
-                            <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                <DropdownToggle color="secondary" outline caret className="mb-2">
-                                    <i className="fa fa-globe mr-2"></i>
-                                    www.webkom.co
-                                </DropdownToggle>
-                                <div className="small">
-                                    Last 30 Days vs Previous Period
-                                </div>
-                                <DropdownMenu>
-                                    <DropdownItem header>
-                                        Select Site:
-                                    </DropdownItem>
-                                    <DropdownItem active>
+                <Container fluid={ false }>
+                    <div className="d-flex mt-3 mb-5">
+                        <HeaderMain 
+                            title="Analytics"
+                            className="mt-0"
+                        />
+                        <ButtonToolbar className="ml-auto">
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                                        <i className="fa fa-globe mr-2"></i>
                                         www.webkom.co
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        www.spin.webkom.co
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        <i className="fa fa-fw fa-plus mr-2"></i>
-                                        Add New
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
-                        </ButtonGroup>
-                        <ButtonGroup className="align-self-start mr-2">
-                            <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                <DropdownToggle color="secondary" outline caret className="mb-2">
-                                    <i className="fa fa-calendar-o mr-2"></i>
-                                    Last Month
-                                </DropdownToggle>
-                                <div className="small">
-                                    Jan 01, 2017 to Jan 31, 2017
-                                </div>
-                                <DropdownMenu>
-                                    <DropdownItem header>
-                                        Select Period:
-                                    </DropdownItem>
-                                    <DropdownItem active>
+                                    </DropdownToggle>
+                                    <div className="small">
+                                        Last 30 Days vs Previous Period
+                                    </div>
+                                    <DropdownMenu>
+                                        <DropdownItem header>
+                                            Select Site:
+                                        </DropdownItem>
+                                        <DropdownItem active>
+                                            www.webkom.co
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            www.spin.webkom.co
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            <i className="fa fa-fw fa-plus mr-2"></i>
+                                            Add New
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                                        <i className="fa fa-calendar-o mr-2"></i>
                                         Last Month
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last 3 Months
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last 6 Months
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last Year
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Custom...
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
-                        </ButtonGroup>
-                        <ButtonGroup className="align-self-start mr-2">
-                            <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                <DropdownToggle color="secondary" outline caret className="mb-2">
-                                    <i className="fa fa-calendar-o mr-2"></i>
-                                    Previous Period
-                                </DropdownToggle>
-                                <div className="small">
-                                    Jan 01, 2017 to Jan 31, 2017
-                                </div>
-                                <DropdownMenu>
-                                    <DropdownItem header>
-                                        Select Period:
-                                    </DropdownItem>
-                                    <DropdownItem active>
+                                    </DropdownToggle>
+                                    <div className="small">
+                                        Jan 01, 2017 to Jan 31, 2017
+                                    </div>
+                                    <DropdownMenu>
+                                        <DropdownItem header>
+                                            Select Period:
+                                        </DropdownItem>
+                                        <DropdownItem active>
+                                            Last Month
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last 3 Months
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last 6 Months
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last Year
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            Custom...
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                                        <i className="fa fa-calendar-o mr-2"></i>
                                         Previous Period
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last 3 Months
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last 6 Months
-                                    </DropdownItem>
-                                    <DropdownItem>
-                                        Last Year
-                                    </DropdownItem>
-                                    <DropdownItem divider />
-                                    <DropdownItem>
-                                        Custom...
-                                    </DropdownItem>
-                                </DropdownMenu>
-                            </UncontrolledButtonDropdown>
-                        </ButtonGroup>
-                        <ButtonGroup className="align-self-start">
-                            <Button color="primary" className="mb-2">
-                                <i className="fa fa-check mr-2"></i>
-                                Apply
-                            </Button>
-                        </ButtonGroup>
-                    </ButtonToolbar>
-                </div>
+                                    </DropdownToggle>
+                                    <div className="small">
+                                        Jan 01, 2017 to Jan 31, 2017
+                                    </div>
+                                    <DropdownMenu>
+                                        <DropdownItem header>
+                                            Select Period:
+                                        </DropdownItem>
+                                        <DropdownItem active>
+                                            Previous Period
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last 3 Months
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last 6 Months
+                                        </DropdownItem>
+                                        <DropdownItem>
+                                            Last Year
+                                        </DropdownItem>
+                                        <DropdownItem divider />
+                                        <DropdownItem>
+                                            Custom...
+                                        </DropdownItem>
+                                    </DropdownMenu>
+                                </UncontrolledButtonDropdown>
+                            </ButtonGroup>
+                            <ButtonGroup className="align-self-start">
+                                <Button color="primary" className="mb-2">
+                                    <i className="fa fa-check mr-2"></i>
+                                    Apply
+                                </Button>
+                            </ButtonGroup>
+                        </ButtonToolbar>
+                    </div>
+                </Container>
 
                 <Grid>
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
                         onColumnsOptimized={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }
-                        rowHeight={ 150 }
+                        rowHeight={ 55 }
                     >
-                        <Grid.Col { ...(this._applyColumn('metrics-v-targets')) }>
+                        <Grid.Col { ...(this._applyColumn('metric-v-target-users')) }>
                             <Card className="mb-3">
                                 <CardBody>
-                                    <CardTitle tag="h6" className="mb-4">
-                                        Metrics vs Targets
+                                    <CardTitle tag="h6" className="mb-2">
+                                        Metric vs Target - <i>Users</i>
                                     </CardTitle>
-                                    <Row className="mb-4">
-                                        <Col lg={ 4 } className="text-right">
-                                            <MetricVsTarget 
-                                                title="Users"
-                                                value="168,793"
-                                                progressbarColor="danger"
-                                                targetValue="169,001"
-                                            />
-                                        </Col>
-                                        <Col lg={ 4 } className="text-right">
-                                            <MetricVsTarget 
-                                                title="Sessions"
-                                                value="529,747"
-                                                progressbarValue="67"
-                                                progressbarColor="success"
-                                                targetValue="782,957"
-                                            />
-                                        </Col>
-                                        <Col lg={ 4 } className="text-right">
-                                            <MetricVsTarget 
-                                                title="Pageviews"
-                                                value="1,763,981"
-                                                progressbarValue="34"
-                                                progressbarColor="success"
-                                                targetValue="1,567,334"
-                                            />
-                                        </Col>
-                                    </Row>
+                                    <div className="text-right mb-3">
+                                        <MetricVsTarget 
+                                            title="Users"
+                                            value="168,793"
+                                            progressbarColor="danger"
+                                            targetValue="169,001"
+                                        />
+                                    </div>
                                     <div className="small">
                                         <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users (visitors), sessions (visits) and pageviews 
+                                        How do your users (visitors) 
+                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                    </div>
+                                </CardBody>
+                            </Card>
+                        </Grid.Col>
+                        <Grid.Col { ...(this._applyColumn('metric-v-target-sessions')) }>
+                            <Card className="mb-3">
+                                <CardBody>
+                                    <CardTitle tag="h6" className="mb-2">
+                                        Metric vs Target - <i>Sessions</i>
+                                    </CardTitle>
+                                    <div className="text-right mb-3">
+                                        <MetricVsTarget 
+                                            title="Sessions"
+                                            value="529,747"
+                                            progressbarValue="67"
+                                            progressbarColor="success"
+                                            targetValue="782,957"
+                                        />
+                                    </div>
+                                    <div className="small">
+                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                                        How do your users sessions (visits) 
+                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                    </div>
+                                </CardBody>
+                            </Card>
+                        </Grid.Col>
+                        <Grid.Col { ...(this._applyColumn('metric-v-target-pageviews')) }>
+                            <Card className="mb-3">
+                                <CardBody>
+                                    <CardTitle tag="h6" className="mb-2">
+                                        Metric vs Target - <i>Pageviews</i>
+                                    </CardTitle>
+                                    <div className="text-right mb-3">
+                                        <MetricVsTarget 
+                                            title="Pageviews"
+                                            value="1,763,981"
+                                            progressbarValue="34"
+                                            progressbarColor="success"
+                                            targetValue="1,567,334"
+                                        />
+                                    </div>
+                                    <div className="small">
+                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                                        How do your pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
                                     </div>
                                 </CardBody>
@@ -222,18 +254,18 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('analytics-audience-metrics')) }>
                             <Card className="mb-3">
-                                <CardBody>
+                                <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
                                         Analytics Audience Metrics
                                     </CardTitle>
-                                    <LineBarAreaComposedChart />
+                                    <LineBarAreaComposedChart height="100%" className="flex-fill"/>
                                     <CardFooterInfo />
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('traffic-channels')) }>
-                            <Card className="mb-3">
-                                <CardBody>
+                            <Card className="mb-3 d-flex flex-column">
+                                <CardBody className="flex-grow-0">
                                     <CardTitle tag="h6" className="mb-0">
                                         Traffic Channels
                                     </CardTitle>
@@ -269,7 +301,7 @@ export class Analytics extends React.Component {
                                         </tr>
                                     </tbody>
                                 </Table>
-                                <CardBody>                
+                                <CardBody className="mt-auto flex-grow-0">                
                                     <div className="small">
                                         <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                                         How do your users (visitors), sessions (visits) and pageviews 
@@ -280,7 +312,7 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(this._applyColumn('sessions')) }>
                             <Card className="mb-3">
-                                <CardBody>
+                                <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
                                         Sessions by Device Type
                                     </CardTitle>
@@ -316,7 +348,7 @@ export class Analytics extends React.Component {
                                         <Progress bar color="info" value="30" />
                                         <Progress bar color="secondary" value="45" />
                                     </Progress>
-                                    <div className="small">
+                                    <div className="small mt-auto">
                                         <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                                         How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
@@ -405,8 +437,10 @@ export class Analytics extends React.Component {
                                     </div>
                                 </CardBody>
                             </Card>
+                        </Grid.Col>
+                        <Grid.Col { ...(this._applyColumn('organic-traffic')) }>
                             <Card className="mb-3">
-                                <CardBody>
+                                <CardBody className="d-flex flex-column">
                                     <div className="d-flex mb-5">
                                         <div>
                                             <h6 className="mb-0">
@@ -443,7 +477,7 @@ export class Analytics extends React.Component {
                                             </span>
                                         </div>
                                     </div>
-                                    <SimpleLineChart />
+                                    <SimpleLineChart height="100%" className="flex-fill"/>
                                     <div className="small pt-3">
                                         <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                                         How do your users (visitors), sessions (visits) and pageviews 

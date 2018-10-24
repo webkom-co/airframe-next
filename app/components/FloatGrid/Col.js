@@ -43,7 +43,7 @@ export class Col extends React.Component {
         const otherProps = _.omit(this.props, [..._.keys(Col.propTypes),
             'minW', 'maxW', 'minH', 'moved', 'static', 'isDraggable', 'isResizable']);
 
-        const floatColClasses = classNames(className, classes.floatCol);
+        const floatColClasses = classNames(className, classes.floatCol, 'float-column');
 
         return (
             active ? (

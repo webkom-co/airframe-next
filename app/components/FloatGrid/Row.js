@@ -19,10 +19,12 @@ export class Row extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         columns: PropTypes.object,
-        onLayoutChange: PropTypes.func
+        onLayoutChange: PropTypes.func,
+        rowHeight: PropTypes.number
     };
 
     static defaultProps = {
+        rowHeight: 100
     };
 
     constructor(props) {
@@ -30,9 +32,9 @@ export class Row extends React.Component {
     }
 
     render() {
-        const { children } = this.props;
+        const { children, rowHeight } = this.props;
         const layouts = this._calculateLayouts(children);
-        console.log(layouts);
+
         return (
             <ResponsiveGrid
                 cols={{ xl: 12, lg: 12, md: 12, sm: 12, xs: 12 }}
@@ -40,7 +42,8 @@ export class Row extends React.Component {
                 layouts={ layouts }
                 padding={ [ 0, 0 ] }
                 margin={ [ 0, 0 ] }
-                onLayoutChange={ (currentLayout, allLayouts) => { console.log(currentLayout); console.log(allLayouts); } }
+                rowHeight={ rowHeight }
+                onLayoutChange={ (currentLayout, allLayouts) => { console.log('Current Layout: ', currentLayout); console.log('All Layouts: ', allLayouts); } }
                 onBreakpointChange={ newBreakpoint => this.currentLayout = newBreakpoint }
             >
                 { children }
@@ -57,7 +60,7 @@ export class Row extends React.Component {
         let found = 12;
         for (let bp of _.drop(breakPointSteps, _.indexOf(breakPointSteps, breakpoint))) {
             if (!_.isUndefined(definition[bp])) {
-                found = bp;
+                found = definition[bp];
             }
         }
         return found;
@@ -65,45 +68,58 @@ export class Row extends React.Component {
 
     _calculateLayouts = (children) => {
         let output = { };
+        const childrenArray = React.Children.toArray(children);
         for (let breakPoint of breakPointSteps) {
-            let bpData = { };
             let rowChildren = [];
             let rowCounter = 0;
             let y = 0;
-            for (let child of React.Children.toArray(children)) {
+            for (let child of childrenArray) {
+                let bpData = { };
                 // Save the props for current child and breakpoint
                 const config = _.pick(child.props, [
+                    'i',
                     'h', 'minH', 'maxH',
-                    breakPoint, `${breakPoint}MinW`, `${breakPoint}MaxW`
+                    `${breakPoint}X`, `${breakPoint}Y`,
+                    breakPoint, `${breakPoint}MinW`, `${breakPoint}MaxW`,
+                    'moved', 'static', 'isResizable', 'isDraggable'
                 ]);
                 // Calculate the needed definition
                 bpData = Object.assign(bpData, {
                     ...config,
                     // Add default heights when none provided
                     ...{
+                        x: config[`${breakPoint}X`] || rowCounter,
                         h: config.h || 1,
                         minH: config.minH || (config.h || 1),
                         maxH: config.maxH || (config.h || 1),
                     },
-                    x: config[breakPoint] ||
+                    w: config[breakPoint] ||
                         this._findClosestBreakpoint(breakPoint, child.props),
                     // Set the y to the calculated value
-                    y
+                    y: config[`${breakPoint}Y`] || y
                 });
                 rowChildren = [...rowChildren, bpData];
-                rowCounter =+ bpData.x;
-                if (rowCounter + bpData.x >= TOTAL_ROW) {
+                rowCounter += bpData.w;
+                if (rowCounter + bpData.x > TOTAL_ROW) {
                     // Increase by the largest found height
-                    y =+ _.max(_.map(rowChildren, 'h'));
+                    y += _.max(_.map(rowChildren, 'h'));
                     rowCounter = 0;
                     rowChildren = [];
                 }
-            }
-            output = {
-                ...output,
-                [breakPoint]: bpData
+                output = {
+                    ...output,
+                    [breakPoint]: [...(output[breakPoint] || []), bpData]
+                }
             }
         }
         return output;
+    }
+
+    /**
+     * Transform the calculated layout to a structure
+     * which is provided by `layouts` props
+     */
+    _transformForChangeHandler = (layouts) => {
+
     }
 }

@@ -1,4 +1,6 @@
 import React from 'react';
+import PropTypes from 'prop-types';
+import _ from 'lodash';
 
 import {  
     ResponsiveContainer,
@@ -31,8 +33,16 @@ const generateDot = ({stroke, ...other}) => (
     />
 );
 
-const LineBarAreaComposedChart = () => (
-    <ResponsiveContainer width='100%' aspect={6.0/3.0}>
+const LineBarAreaComposedChart = ({height, className}) => (
+    <ResponsiveContainer
+        width='100%'
+        className={ className }
+        {...(!_.isUndefined(height) ? {
+            height
+        } : {
+            aspect: 2 / 1
+        })}
+    >
         <ComposedChart data={data}
             margin={{top: 20, right: 20, bottom: 20, left: 20}}>
           <CartesianGrid stroke='#f5f5f5'/>
@@ -46,5 +56,9 @@ const LineBarAreaComposedChart = () => (
        </ComposedChart>
     </ResponsiveContainer>
 );
+LineBarAreaComposedChart.propTypes = {
+    height: PropTypes.string,
+    className: PropTypes.string
+}
 
 export { LineBarAreaComposedChart };
