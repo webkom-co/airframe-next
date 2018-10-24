@@ -3,6 +3,7 @@ import { Typeahead } from 'react-bootstrap-typeahead';
 
 import {
     CustomInput,
+    Card,
     FormGroup
 } from './../../../../components';
 import options from './exampleData';
@@ -18,9 +19,8 @@ export class BodyContainer extends React.Component {
 
         return (
             <React.Fragment>
-                <div
+                <Card
                     style={{
-                        border: '1px solid #ddd',
                         height: '116px',
                         overflowY: 'scroll',
                         padding: '40px',
@@ -34,7 +34,7 @@ export class BodyContainer extends React.Component {
                             placeholder="Choose a state..."
                         />
                     </div>
-                </div>
+                </Card>
                 <FormGroup className="mt-2">
                     <CustomInput
                         checked={bodyContainer}
