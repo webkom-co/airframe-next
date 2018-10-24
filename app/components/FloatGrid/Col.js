@@ -14,21 +14,24 @@ export class Col extends React.Component {
         md: PropTypes.number,
         sm: PropTypes.number,
         xs: PropTypes.number,
+        xl: PropTypes.number,
 
         lgH: PropTypes.number,
         mdH: PropTypes.number,
         smH: PropTypes.number,
         xsH: PropTypes.number,
 
+        xlX: PropTypes.number,
         lgX: PropTypes.number,
         mdX: PropTypes.number,
         smX: PropTypes.number,
         xsX: PropTypes.number,
 
+        xlY: PropTypes.number,
         lgY: PropTypes.number,
         mdY: PropTypes.number,
         smY: PropTypes.number,
-        xsY: PropTypes.number,
+        xsY: PropTypes.number, 
 
         children: PropTypes.node
     }
@@ -39,9 +42,9 @@ export class Col extends React.Component {
 
     render() {
         const { active, children, className } = this.props;
-        const bsColumnProps = _.pick(this.props, ['lg', 'md', 'sm', 'xs']);
+        const bsColumnProps = _.pick(this.props, ['xl', 'lg', 'md', 'sm', 'xs']);
         const otherProps = _.omit(this.props, [..._.keys(Col.propTypes),
-            'minW', 'maxW', 'minH', 'moved', 'static', 'isDraggable', 'isResizable']);
+            'minW', 'maxW', 'minH', 'maxH', 'moved', 'static', 'isDraggable', 'isResizable']);
 
         const floatColClasses = classNames(className, classes.floatCol, 'float-column');
 

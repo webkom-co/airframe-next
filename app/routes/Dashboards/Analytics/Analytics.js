@@ -1,5 +1,6 @@
 import React from 'react';
 import faker from 'faker';
+import _ from 'lodash';
 import {
     Container,
     Row,
@@ -45,19 +46,21 @@ import {
     SimpleLineChart
 } from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
+const LAYOUT = {
+    'metric-v-target-users': { h: 6, md: 4 },
+    'metric-v-target-sessions': { h: 6, md: 4 },
+    'metric-v-target-pageviews': { h: 6, md: 4 },
+    'analytics-audience-metrics': { h: 10, minH: 7 },
+    'traffic-channels': { md: 6, h: 5 },
+    'sessions': { md: 6, h: 6, maxH: 9 },
+    'spend': { md: 6, h: 6 },
+    'website-performance': { md: 6, h: 12 },
+    'organic-traffic': { md: 6, h: 10 }
+}
+
 export class Analytics extends React.Component {
     state = {
-        layouts: {
-            'metric-v-target-users': { h: 6, md: 4 },
-            'metric-v-target-sessions': { h: 6, md: 4 },
-            'metric-v-target-pageviews': { h: 6, md: 4 },
-            'analytics-audience-metrics': { h: 10, minH: 7 },
-            'traffic-channels': { md: 6, h: 5 },
-            'sessions': { md: 6, h: 6, maxH: 9 },
-            'spend': { md: 6, h: 6 },
-            'website-performance': { md: 6, h: 12 },
-            'organic-traffic': { md: 6, h: 10 }
-        }
+        layouts: _.clone(LAYOUT)
     }
 
     _applyColumn = (columnId) => ({
@@ -65,6 +68,12 @@ export class Analytics extends React.Component {
         i: columnId,
         key: columnId
     })
+
+    _resetLayout = () => {
+        this.setState({
+            layouts: _.clone(LAYOUT)
+        })
+    }
 
     render() {
         return (
@@ -168,9 +177,19 @@ export class Analytics extends React.Component {
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
                             <ButtonGroup className="align-self-start">
-                                <Button color="primary" className="mb-2">
+                                <Button color="primary" className="mb-2 mr-2">
                                     <i className="fa fa-check mr-2"></i>
                                     Apply
+                                </Button>
+                            </ButtonGroup>
+                            <ButtonGroup>
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    className="mb-2 align-self-start"
+                                    onClick={this._resetLayout}
+                                >
+                                    <i className="fa fa-times"></i>
                                 </Button>
                             </ButtonGroup>
                         </ButtonToolbar>
@@ -180,7 +199,6 @@ export class Analytics extends React.Component {
                 <Grid>
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
-                        onColumnsOptimized={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }
                         rowHeight={ 55 }
                     >

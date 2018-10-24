@@ -27,12 +27,11 @@ export class Row extends React.Component {
         rowHeight: 100
     };
 
-    constructor(props) {
-        super(props);
-    }
+    _lastChildren = null;
+    _lastGeneratedLayouts = null;
 
     render() {
-        const { children, rowHeight } = this.props;
+        const { children, rowHeight, onLayoutChange } = this.props;
         const layouts = this._calculateLayouts(children);
 
         return (
@@ -43,7 +42,9 @@ export class Row extends React.Component {
                 padding={ [ 0, 0 ] }
                 margin={ [ 0, 0 ] }
                 rowHeight={ rowHeight }
-                onLayoutChange={ (currentLayout, allLayouts) => { console.log('Current Layout: ', currentLayout); console.log('All Layouts: ', allLayouts); } }
+                onLayoutChange={(currentLayout, allLayouts) => {
+                    onLayoutChange(this._transformForChangeHandler(allLayouts))
+                }}
                 onBreakpointChange={ newBreakpoint => this.currentLayout = newBreakpoint }
             >
                 { children }
@@ -79,7 +80,6 @@ export class Row extends React.Component {
                 const config = _.pick(child.props, [
                     'i',
                     'h', 'minH', 'maxH',
-                    `${breakPoint}X`, `${breakPoint}Y`,
                     breakPoint, `${breakPoint}MinW`, `${breakPoint}MaxW`,
                     'moved', 'static', 'isResizable', 'isDraggable'
                 ]);
@@ -88,15 +88,20 @@ export class Row extends React.Component {
                     ...config,
                     // Add default heights when none provided
                     ...{
-                        x: config[`${breakPoint}X`] || rowCounter,
+                        // Set the x to the calculated value or take from the 
+                        // props if defined for controlled type
+                        x: _.isUndefined(child.props[`${breakPoint}X`]) ?
+                            rowCounter : child.props[`${breakPoint}X`],
                         h: config.h || 1,
                         minH: config.minH || (config.h || 1),
                         maxH: config.maxH || (config.h || 1),
                     },
                     w: config[breakPoint] ||
                         this._findClosestBreakpoint(breakPoint, child.props),
-                    // Set the y to the calculated value
-                    y: config[`${breakPoint}Y`] || y
+                    // Set the y to the calculated value or take from the 
+                    // props if defined for controlled type
+                    y: _.isUndefined(child.props[`${breakPoint}Y`]) ?
+                        y : child.props[`${breakPoint}Y`]
                 });
                 rowChildren = [...rowChildren, bpData];
                 rowCounter += bpData.w;
@@ -120,6 +125,19 @@ export class Row extends React.Component {
      * which is provided by `layouts` props
      */
     _transformForChangeHandler = (layouts) => {
-
+        let output = { };
+        for (let breakPoint of breakPointSteps) {
+            const bpLayout = layouts[breakPoint];
+            for (let element of bpLayout) {
+                output[element.i] = {
+                    ...(output[element.i]),
+                    ...(element),
+                    [breakPoint]: element.w,
+                    [`${breakPoint}X`]: element.x,
+                    [`${breakPoint}Y`]: element.y
+                }
+            }
+        }
+        return output;
     }
 }
