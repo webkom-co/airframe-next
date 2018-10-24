@@ -10,6 +10,7 @@
     
         flex: 0 0 auto;
         border-width: 0 0 1px 0;
+        background-color: $gray-100;
     }
 
     .ql-container {
@@ -23,6 +24,15 @@
 
         .ql-editor {
             flex: 1 1 auto;
+            color: $body-color;
+            background: $white;
         }
+    }
+
+    .ql-snow .ql-stroke {
+        stroke: $body-color;
+    }
+    .ql-snow .ql-fill {
+        fill: $body-color;
     }
 }
