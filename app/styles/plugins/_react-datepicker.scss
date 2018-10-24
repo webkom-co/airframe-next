@@ -1,1 +1,50 @@
 /* React Datepicker Overrides */
+
+// Card
+.react-datepicker {
+	border: solid 1px $gray-400 !important;
+}
+.react-datepicker__header {
+	background-color: $gray-200 !important;
+	border-bottom: solid 1px $gray-400 !important;
+}
+
+// Card Header
+.react-datepicker__navigation--next {
+	border-left-color: $gray-500 !important;
+}
+.react-datepicker__navigation--next:hover {
+	border-left-color: $gray-600 !important;
+}
+.react-datepicker__navigation--previous {
+	border-right-color: $gray-500 !important;
+}
+.react-datepicker__navigation--previous:hover {
+	border-right-color: $gray-600 !important;
+}
+
+// Month Header
+.react-datepicker__current-month {
+	color: $black !important;
+}
+.react-datepicker__day-name {
+	color: $body-color !important;
+}
+
+// Active Day
+.react-datepicker__day--selected {
+	color: $white !important;
+	background-color: $primary !important;
+}
+// Hover Day
+.react-datepicker__day:hover {
+	background-color: $gray-200 !important;
+}
+
+// Triangle 
+.react-datepicker__triangle {
+	border-bottom-color: $gray-200 !important;
+}
+.react-datepicker__triangle::before {
+	border-bottom-color: $gray-400 !important;
+}
