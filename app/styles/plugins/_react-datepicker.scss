@@ -57,16 +57,16 @@
 
 // Triangle Top
 [data-placement^="bottom"] .react-datepicker__triangle {
-	border-bottom-color: $gray-800 !important;
+	border-bottom-color: $gray-200 !important;
 }
 [data-placement^="bottom"] .react-datepicker__triangle::before {
-	border-bottom-color: $gray-800 !important;
+	border-bottom-color: $gray-400 !important;
 }
 
 // Triangle Bottom
 [data-placement^="top"] .react-datepicker__triangle {
-	border-top-color: $gray-700 !important;
+	border-top-color: $gray-400 !important;
 }
 [data-placement^="top"] .react-datepicker__triangle::before {
-	border-top-color: $gray-700 !important;
+	border-top-color: $gray-400 !important;
 }
