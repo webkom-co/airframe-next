@@ -36,3 +36,46 @@
         fill: $body-color;
     }
 }
+
+// Button SVG modifiers
+ .quill .ql-snow {
+     .ql-stroke {
+         stroke: $gray-500;
+     }
+
+     .ql-fill {
+         fill: $gray-500;
+     }
+ } 
+
+ // Hover button SVG modifiers
+ .quill .ql-snow.ql-toolbar button:hover {
+     .ql-stroke {
+         stroke: $primary;
+     }
+     .ql-fill {
+         fill: $primary;
+     }
+ }
+
+ // Active button SVG modifiers
+ .quill .ql-snow.ql-toolbar button.ql-active {
+     .ql-stroke {
+         stroke: $primary;
+     }
+     .ql-fill {
+         fill: $primary;
+     }
+ }
+
+ // Focus button SVG modifiers
+ .quill .ql-snow.ql-toolbar button:focus {
+     outline: none;
+
+     .ql-stroke {
+         stroke: $primary;
+     }
+     .ql-fill {
+         fill: $primary;
+     }
+ } 

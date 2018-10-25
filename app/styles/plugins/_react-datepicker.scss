@@ -41,10 +41,31 @@
 	background-color: $gray-200 !important;
 }
 
-// Triangle 
-.react-datepicker__triangle {
-	border-bottom-color: $gray-200 !important;
+
+// Day In Range
+.react-datepicker__month--selecting-range .react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range) {
+	background-color: $primary !important;
+	color: $white !important;
 }
-.react-datepicker__triangle::before {
-	border-bottom-color: $gray-400 !important;
+
+// Day in Selecting Range
+.react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
+	background-color: lighten($primary, 10%) !important;
+	color: $white !important;
+}
+
+// Triangle Top
+[data-placement^="bottom"] .react-datepicker__triangle {
+	border-bottom-color: $gray-800 !important;
+}
+[data-placement^="bottom"] .react-datepicker__triangle::before {
+	border-bottom-color: $gray-800 !important;
+}
+
+// Triangle Bottom
+[data-placement^="top"] .react-datepicker__triangle {
+	border-top-color: $gray-700 !important;
+}
+[data-placement^="top"] .react-datepicker__triangle::before {
+	border-top-color: $gray-700 !important;
 }
