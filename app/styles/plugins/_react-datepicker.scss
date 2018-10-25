@@ -38,19 +38,20 @@
 }
 // Hover Day
 .react-datepicker__day:hover {
-	background-color: $gray-200 !important;
+	background-color: $primary !important;
+	color: $white !important;
 }
 
 
 // Day In Range
 .react-datepicker__month--selecting-range .react-datepicker__day--in-range:not(.react-datepicker__day--in-selecting-range) {
-	background-color: $primary !important;
+	background-color: lighten($primary, 15%) !important;
 	color: $white !important;
 }
 
 // Day in Selecting Range
 .react-datepicker__day--in-selecting-range:not(.react-datepicker__day--in-range) {
-	background-color: lighten($primary, 10%) !important;
+	background-color: $primary !important;
 	color: $white !important;
 }
 
