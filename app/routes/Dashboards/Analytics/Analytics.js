@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import faker from 'faker';
 import _ from 'lodash';
 import {
@@ -31,9 +32,6 @@ import {
     WebsitePerformance
 } from "../../components/Analytics/WebsitePerformance";
 import {
-    SessionsByDevice
-} from "../../components/Analytics/SessionsByDevice";
-import {
     CardFooterInfo
 } from "../../components/CardFooterInfo";
 import {
@@ -46,16 +44,40 @@ import {
     SimpleLineChart
 } from "./../../Graphs/ReCharts/components/SimpleLineChart";
 
+import classes from './Analytics.scss';
+
 const LAYOUT = {
     'metric-v-target-users': { h: 6, md: 4 },
     'metric-v-target-sessions': { h: 6, md: 4 },
     'metric-v-target-pageviews': { h: 6, md: 4 },
     'analytics-audience-metrics': { h: 10, minH: 7 },
     'traffic-channels': { md: 6, h: 5 },
-    'sessions': { md: 6, h: 6, maxH: 9 },
+    'sessions': { md: 6, h: 6, maxH: 9, minW: 3 },
     'spend': { md: 6, h: 6 },
     'website-performance': { md: 6, h: 12 },
     'organic-traffic': { md: 6, h: 10 }
+}
+
+const SessionByDevice = (props) => (
+    <div className={classes['session']}>
+        <div className={classes['session__title']}>
+            { props.title }
+        </div>
+        <div className={classes['session__values']}>
+            <div className={`${classes['session__percentage']} text-${props.color}`}>
+                { props.valuePercent }%
+            </div>
+            <div className={`${classes['session__value']} text-${props.color}`}>
+                { props.value }
+            </div>
+        </div>
+    </div>
+);
+SessionByDevice.propTypes = {
+    title: PropTypes.node,
+    color: PropTypes.string,
+    valuePercent: PropTypes.string,
+    value: PropTypes.string
 }
 
 export class Analytics extends React.Component {
@@ -334,39 +356,32 @@ export class Analytics extends React.Component {
                                     <CardTitle tag="h6" className="mb-4">
                                         Sessions by Device Type
                                     </CardTitle>
-                                    <Row>
-                                        <Col sm={ 4 }>
-                                            <SessionsByDevice 
-                                                title="Desktop"
-                                                valuePercent="51,5"
-                                                valuePercentColor="text-primary"
-                                                value="201,345"
-                                                valueColor="text-primary"
-                                            />
-                                        </Col>
-                                        <Col sm={ 4 }>
-                                            <SessionsByDevice 
-                                                title="Mobile"
-                                                valuePercent="34,4"
-                                                valuePercentColor="text-info"
-                                                value="134,201"
-                                                valueColor="text-info"
-                                            />
-                                        </Col>
-                                        <Col sm={ 4 }>
-                                            <SessionsByDevice 
-                                                title="Tablet"
-                                                valuePercent="20,8"
-                                                value="81,525"
-                                            />
-                                        </Col>
-                                    </Row>
-                                    <Progress multi className="mb-4">
+                                    <div className={classes['sessions']}>
+                                        <SessionByDevice 
+                                            title="Desktop"
+                                            color="primary"
+                                            valuePercent="51,5"
+                                            value="201,345"
+                                        />
+                                        <SessionByDevice 
+                                            title="Mobile"
+                                            color="info"
+                                            valuePercent="34,4"
+                                            value="134,201"
+                                        />
+                                        <SessionByDevice 
+                                            title="Mobile"
+                                            color="muted"
+                                            valuePercent="20,8"
+                                            value="81,525"
+                                        />
+                                    </div>
+                                    <Progress multi className={ classes['sessions-progress'] }>
                                         <Progress bar value="25" />
                                         <Progress bar color="info" value="30" />
                                         <Progress bar color="secondary" value="45" />
                                     </Progress>
-                                    <div className="small mt-auto">
+                                    <div className={`${classes['sessions-info']} small mt-auto`}>
                                         <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
                                         How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?

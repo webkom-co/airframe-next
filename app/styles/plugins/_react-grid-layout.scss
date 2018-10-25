@@ -40,3 +40,20 @@
         }
     }
 }
+
+// Internal Breakpoint System
+//=====================================
+.float-column {
+    // Reset column sizes
+    [class^="col-"] {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+
+    &--size-lg {
+        .col-md-4 {
+            flex: 0 0 (100% / 3);
+            max-width: (100% / 3);
+        }
+    }
+}
