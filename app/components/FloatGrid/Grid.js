@@ -21,7 +21,7 @@ export class Grid extends React.Component {
     }
 
     state = {
-        gridSize: { width: 0, height: 0 }
+        gridSize: { w: 0, h: 0 }
     }
     _gridRef = React.createRef();
     _resizeDebounceTimeout = 0;
@@ -29,8 +29,8 @@ export class Grid extends React.Component {
     componentDidMount() {
         this.setState({
             gridSize: {
-                width: this._gridRef.current.clientWidth,
-                height: this._gridRef.current.clientHeight
+                w: this._gridRef.current.clientWidth,
+                h: this._gridRef.current.clientHeight
             }
         });
 
@@ -50,7 +50,8 @@ export class Grid extends React.Component {
         const { gridSize } = this.state;
         const modifiedChildren = React.Children.map(children, child => (
             React.cloneElement(child, {
-                active
+                active,
+                gridSize
             })
         ));
 
@@ -64,12 +65,10 @@ export class Grid extends React.Component {
                     value={{
                         gridUnitsToPx: (w, h) => {
                             return {
-                                wPx: w / 12 * gridSize.width,
+                                wPx: w / 12 * gridSize.w,
                                 hPx: h * rowHeight
                             }
                         },
-                        rowHeight,
-                        gridSize
                     }}
                 >
                     <div
@@ -93,7 +92,7 @@ export class Grid extends React.Component {
     _resizeHandler = () => {
         clearInterval(this._resizeDebounceTimeout);
 
-        this._resizeDebounceTimeout = setInterval(() => {
+        this._resizeDebounceTimeout = setTimeout(() => {
             this.setState({
                 gridSize: {
                     w: this._gridRef.current.clientWidth,

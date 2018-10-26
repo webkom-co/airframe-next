@@ -22,6 +22,7 @@ import {
     Button,
     Col
 } from './../../../components';
+import { applyColumn } from './../../../components/FloatGrid';
 
 import { HeaderMain } from "../../components/HeaderMain";
 
@@ -51,7 +52,7 @@ const LAYOUT = {
     'metric-v-target-sessions': { h: 6, md: 4 },
     'metric-v-target-pageviews': { h: 6, md: 4 },
     'analytics-audience-metrics': { h: 10, minH: 7 },
-    'traffic-channels': { md: 6, h: 5 },
+    'traffic-channels': { md: 6, h: 6 },
     'sessions': { md: 6, h: 6, maxH: 9, minW: 3 },
     'spend': { md: 6, h: 6 },
     'website-performance': { md: 6, h: 12 },
@@ -85,12 +86,6 @@ export class Analytics extends React.Component {
         layouts: _.clone(LAYOUT)
     }
 
-    _applyColumn = (columnId) => ({
-        ...this.state.layouts[columnId],
-        i: columnId,
-        key: columnId
-    })
-
     _resetLayout = () => {
         this.setState({
             layouts: _.clone(LAYOUT)
@@ -98,6 +93,8 @@ export class Analytics extends React.Component {
     }
 
     render() {
+        const { layouts } = this.state;
+
         return (
             <React.Fragment>
                 <Container fluid={ false }>
@@ -224,7 +221,7 @@ export class Analytics extends React.Component {
                         columnSizes={ this.state.layouts }
                         rowHeight={ 55 }
                     >
-                        <Grid.Col { ...(this._applyColumn('metric-v-target-users')) }>
+                        <Grid.Col { ...(applyColumn('metric-v-target-users', layouts)) }>
                             <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
@@ -246,7 +243,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('metric-v-target-sessions')) }>
+                        <Grid.Col { ...(applyColumn('metric-v-target-sessions', layouts)) }>
                             <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
@@ -269,7 +266,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('metric-v-target-pageviews')) }>
+                        <Grid.Col { ...(applyColumn('metric-v-target-pageviews', layouts)) }>
                             <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-2">
@@ -292,7 +289,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('analytics-audience-metrics')) }>
+                        <Grid.Col { ...(applyColumn('analytics-audience-metrics', layouts)) }>
                             <Card>
                                 <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
@@ -303,7 +300,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('traffic-channels')) }>
+                        <Grid.Col { ...(applyColumn('traffic-channels', layouts)) }>
                             <Card className="d-flex flex-column">
                                 <CardBody className="flex-grow-0">
                                     <CardTitle tag="h6" className="mb-0">
@@ -350,7 +347,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('sessions')) }>
+                        <Grid.Col { ...(applyColumn('sessions', layouts)) }>
                             <Card>
                                 <CardBody className="d-flex flex-column">
                                     <CardTitle tag="h6" className="mb-4">
@@ -389,7 +386,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('spend')) }>
+                        <Grid.Col { ...(applyColumn('spend', layouts)) }>
                             <Card>
                                 <CardBody>
                                     <div className="d-flex mb-4">
@@ -419,7 +416,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('website-performance')) }>
+                        <Grid.Col { ...(applyColumn('website-performance', layouts)) }>
                             <Card>
                                 <CardBody>
                                     <CardTitle tag="h6" className="mb-0">
@@ -471,7 +468,7 @@ export class Analytics extends React.Component {
                                 </CardBody>
                             </Card>
                         </Grid.Col>
-                        <Grid.Col { ...(this._applyColumn('organic-traffic')) }>
+                        <Grid.Col { ...(applyColumn('organic-traffic', layouts)) }>
                             <Card>
                                 <CardBody className="d-flex flex-column">
                                     <div className="d-flex mb-5">

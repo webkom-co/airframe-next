@@ -36,6 +36,7 @@ const generateDot = ({stroke, ...other}) => (
 const LineBarAreaComposedChart = ({height, className}) => (
     <ResponsiveContainer
         width='100%'
+        minHeight='250px'
         className={ className }
         {...(!_.isUndefined(height) ? {
             height

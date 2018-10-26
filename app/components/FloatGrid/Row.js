@@ -24,20 +24,30 @@ export class Row extends React.Component {
         children: PropTypes.node,
         columns: PropTypes.object,
         onLayoutChange: PropTypes.func,
-        rowHeight: PropTypes.number
+        rowHeight: PropTypes.number,
+        gridSize: PropTypes.object
     };
 
     static contextType = FloatGridContext;
 
+    _lastLayouts = { };
     state = {
         trueColSizes: { },
         activeLayout: 'xl'
     }
 
+    componentDidUpdate(nextProps) {
+        if (!_.isEqual(nextProps.gridSize, this.props.gridSize)) {
+            if (!_.isEmpty(this._lastLayouts)) {
+                this._updateTrueColSizes(this._lastLayouts[this.state.activeLayout]);
+            }
+        }
+    }
+
     render() {
         const { children, rowHeight, onLayoutChange } = this.props;
         const { trueColSizes } = this.state;
-        const layouts = this._calculateLayouts(children);
+        const layouts = this._lastLayouts = this._calculateLayouts(children);
         const adjustedChildren = simplifyChildrenArray(
             React.Children.map(children, (child) =>
                 React.cloneElement(child, { trueSize: trueColSizes[child.props.i] })));
@@ -54,19 +64,16 @@ export class Row extends React.Component {
                     // Notify the parent
                     onLayoutChange(this._transformForChangeHandler(allLayouts));
                     // Recalculate true sizes
-                    //const trueColSizes = { };
-                    //const activeLayout = layouts[this.state.activeLayout];
-                    for (let child of currentLayout) {
-                        trueColSizes[child.i] = this.context.gridUnitsToPx(child.w, child.h);
-                    }
-                    this.setState({ trueColSizes });
+                    this._updateTrueColSizes(currentLayout);
                 }}
-                onBreakpointChange={ newBreakpoint => this.currentLayout = newBreakpoint }
+                onBreakpointChange={(activeLayout) => {
+                    this.setState({ activeLayout });
+                }}
                 onResize={
                     (layout, oldItem, newItem) => {
                         this.setState({
                             trueColSizes: {
-                                ...this.state.trueColSizes,
+                                ...trueColSizes,
                                 [newItem.i]: this.context.gridUnitsToPx(newItem.w, newItem.h)
                             }
                         });
@@ -76,6 +83,14 @@ export class Row extends React.Component {
                 { adjustedChildren }
             </ResponsiveGrid>
         );
+    }
+
+    _updateTrueColSizes = (layout) => {
+        const { trueColSizes } = this.state;
+        for (let child of layout) {
+            trueColSizes[child.i] = this.context.gridUnitsToPx(child.w, child.h);
+        }
+        this.setState({ trueColSizes });
     }
 
     /**
