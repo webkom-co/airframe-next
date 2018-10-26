@@ -57,6 +57,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Modals" to='/interface/modals' />
             <SidebarMenu.Item title="Breadcrumbs" to='/interface/breadcrumbs' />
             <SidebarMenu.Item title="Navbars" to='/interface/navbars' />
+            <SidebarMenu.Item title="Calendar" to='/interface/calendar' />
         </SidebarMenu.Item>
         { /* -------- Graphs ---------*/ }
         <SidebarMenu.Item
