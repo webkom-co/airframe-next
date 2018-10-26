@@ -26,14 +26,12 @@ import {
     TasksMedia
 } from "../../components/ProjectsDashboards/TasksMedia";
 import {
-    ProjectsList
-} from "../../components/ProjectsDashboards/ProjectsList";
-import {
     TinyDonutChart
 } from "../../components/ProjectsDashboards/TinyDonutChart"
 import {
     TimelineMini
 } from "../../components/Timeline/TimelineMini"
+import { DraggableProjects } from './DraggableProjects';
 
 const ProjectsDashboard = () => (
     <Container>
@@ -291,52 +289,7 @@ const ProjectsDashboard = () => (
                             </InputGroupAddon>
                         </InputGroup>
                     </CardBody>
-                    <ListGroup flush>
-                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
-                            <ProjectsList 
-                                badgeColor="success"
-                                badgeTitle="Active"
-                                progressValue="76"
-                                completeValue="13"
-                                myTasksValue="35"
-                                daysDueValue="6"
-                            />
-                        </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
-                            <ProjectsList 
-                                badgeColor="danger"
-                                badgeTitle="Suspended"
-                                progressValue="23"
-                                completeValue="6"
-                                myTasksValue="87"
-                                daysDueValue="15"
-                            />
-                        </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
-                            <ProjectsList 
-                                badgeColor="secondary"
-                                badgeTitle="Archived"
-                                progressValue="4"
-                                completeValue="98"
-                                myTasksValue="21"
-                                daysDueValue="7"
-                            />
-                        </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/projects/list">
-                            <ProjectsList 
-                                badgeColor="warning"
-                                badgeTitle="Paused"
-                                progressValue="63"
-                                completeValue="98"
-                                myTasksValue="21"
-                                daysDueValue="7"
-                            />
-                        </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/projects/list" className="text-center">
-                            View All Projects
-                            <i className="fa fa-angle-right ml-2"></i>
-                        </ListGroupItem>
-                    </ListGroup>
+                    <DraggableProjects />
                 </Card>
             </Col>
         </Row>
