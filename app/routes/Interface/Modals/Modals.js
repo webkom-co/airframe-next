@@ -577,7 +577,8 @@ export const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault401">
+                        <UncontrolledModal target="modalDefault401" className="modal-primary">
+                            <ModalHeader className="py-1" />
                             <ModalBody className="table-primary text-center px-5">
                                 <div className="my-5">
                                     <i className="fa fa-5x fa-play fa-fw text-primary mb-3"></i>
@@ -593,6 +594,7 @@ export const Modals = () => (
                                     </UncontrolledModal.Close>
                                 </div>
                             </ModalBody>
+                            <ModalFooter className="py-1" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
