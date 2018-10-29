@@ -10,16 +10,17 @@
         transition-duration: 100ms;
         user-select: none;
         position: relative;
-    
+        opacity: 0.7;
+
         &:after {
             position: absolute;
             left: 50%;
             top: 0;
             transform: translate(-50%, 0);
             content: " ";
-            background: rgba($primary, 0.1);
+            background: rgba($primary, 0.3);
             border-radius: 4px;
-            border: 2px dashed rgba($primary, 0.5);
+            border: 2px dashed $primary;
             height: calc(100% - #{$grid-gutter-width / 2});
             width: calc(100% - #{$grid-gutter-width});
         }
@@ -37,6 +38,23 @@
         + .react-resizable-handle {
             bottom: $grid-gutter-width / 2;
             right: $grid-gutter-width / 2;
+        }
+
+        > .card-header {
+            position:relative;
+            padding-left: 2rem;
+            cursor: move;
+            user-select: none;
+
+            &:before {
+                position: absolute;
+                font: normal normal normal 14px/1 FontAwesome;
+                content: "\f142";
+                top: 50%;
+                left: 1rem;
+                transform: translateY(-50%);
+                color: $text-muted;
+            }
         }
     }
 }
