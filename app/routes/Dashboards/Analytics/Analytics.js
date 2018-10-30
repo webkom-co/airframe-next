@@ -13,6 +13,7 @@ import {
     DropdownItem,
     Grid,
     Card,
+    Media,
     CardBody,
     ListGroup,
     ListGroupItem,
@@ -224,10 +225,8 @@ export class Analytics extends React.Component {
                     >
                         <Grid.Col { ...(applyColumn('metric-v-target-users', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Metric vs Target - <i>Users</i>
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
                                 </CardHeader>
                                 <CardBody className="pt-2">
                                     <div className="text-right mb-3">
@@ -248,10 +247,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('metric-v-target-sessions', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Metric vs Target - <i>Sessions</i>
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
                                 </CardHeader>
                                 <CardBody className="pt-2">
                                     <div className="text-right mb-3">
@@ -273,10 +270,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('metric-v-target-pageviews', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Metric vs Target - <i>Pageviews</i>
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
                                 </CardHeader>
                                 <CardBody className="pt-2">
                                     <div className="text-right mb-3">
@@ -298,10 +293,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('analytics-audience-metrics', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Analytics Audience Metrics
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Analytics Audience Metrics
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
                                     <LineBarAreaComposedChart height="100%" className="flex-fill"/>
@@ -311,10 +304,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('traffic-channels', layouts)) }>
                             <Card className="d-flex flex-column">
-                                <CardHeader className="flex-grow-0">
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Traffic Channels
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Traffic Channels
                                 </CardHeader>
                                 <Table responsive className="table mb-0">
                                     <thead>
@@ -358,10 +349,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('sessions', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Sessions by Device Type
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Sessions by Device Type
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
                                     <div className={classes['sessions']}>
@@ -399,18 +388,16 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('spend', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Spend
-                                    </CardTitle>
+                                <CardHeader className="d-flex bb-0 pt-3 bg-none" tag="h6">
+                                    <span>
+                                        <i className="fa fa-ellipsis-v mr-2"></i> Spend
+                                    </span>
+                                    <span className="ml-auto text-right text-muted">
+                                        Dec 22, 2016 to<br />
+                                        Dec 31, 2016 (prev.)
+                                    </span>
                                 </CardHeader>
                                 <CardBody>
-                                    <div className="d-flex mb-4">
-                                        <span className="ml-auto text-right text-muted">
-                                            Dec 22, 2016 to<br />
-                                            Dec 31, 2016 (prev.)
-                                        </span>
-                                    </div>
                                     <div className="text-center mb-4">
                                         <h2>
                                         $2,890.12
@@ -431,10 +418,8 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('website-performance', layouts)) }>
                             <Card>
-                                <CardHeader>
-                                    <CardTitle tag="h6" className="mb-0">
-                                        Website Performance
-                                    </CardTitle>
+                                <CardHeader className="bb-0 pt-3 bg-none" tag="h6">
+                                    <i className="fa fa-ellipsis-v mr-2"></i> Website Performance
                                 </CardHeader>
                                 <ListGroup flush>
                                     <ListGroupItem>
@@ -483,30 +468,21 @@ export class Analytics extends React.Component {
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('organic-traffic', layouts)) }>
                             <Card>
-                                <CardHeader className="d-flex mb-5">
-                                    <div>
-                                        <h6 className="mb-0">
-                                            How did my organic traffic perform?
-                                        </h6>
-                                        <span className="text-muted">
-                                            Dec 22, 2016 to Dec 31, 2016 (prev.)
-                                        </span>
-                                    </div>
-                                    <span className="ml-auto text-right">
-                                        Goal:
-                                        <UncontrolledButtonDropdown className="ml-2">
-                                            <DropdownToggle color="secondary" outline caret>
-                                                All
-                                            </DropdownToggle>
-                                            <DropdownMenu right>
-                                                <DropdownItem header>Select Goal:</DropdownItem>
-                                                <DropdownItem active>All</DropdownItem>
-                                                <DropdownItem>Other</DropdownItem>
-                                                <DropdownItem divider />
-                                                <DropdownItem>Custom...</DropdownItem>
-                                            </DropdownMenu>
-                                        </UncontrolledButtonDropdown>
-                                    </span>
+                                <CardHeader className="d-flex bb-0 pt-3 bg-none">
+                                    <Media>
+                                        <Media left className="mr-3">
+                                            <i className="fa fa-ellipsis-v"></i> 
+                                        </Media>
+                                        <Media body>
+                                            <span className="h6">
+                                                How did my organic traffic perform?
+                                            </span>
+                                            <br />
+                                            <span className="text-muted">
+                                                Dec 22, 2016 to Dec 31, 2016 (prev.)
+                                            </span>
+                                        </Media>
+                                    </Media>
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
                                     <div className="text-center mb-4">
