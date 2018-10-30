@@ -10,7 +10,7 @@ import {
     Card,
     CardHeader,
     CardBody,
-    CardFooter,
+    CardTitle,
     UncontrolledDropdown,
     DropdownMenu,
     DropdownToggle,
@@ -29,7 +29,7 @@ export class DragAndDropLayout extends React.Component {
 
         this.state = {
             layouts: this._lastLayout,
-            compactType: null,
+            compactType: 'vertical',
             fluid: false,
             texts: this._generateTexts(this._lastLayout)
         }
@@ -66,7 +66,7 @@ export class DragAndDropLayout extends React.Component {
 
         return (
             <React.Fragment>
-                <Container>
+                <Container fluid={ fluid }>
                     <HeaderMain title="Drag &amp; Drop Layout" />
                     <p>
                         React-Grid_layout is a grid layout system much like Packery or Gridster for React. Unlike those systems, it is responsive and supports breakpoints. These breakpoints can be provided in the same way as in Reactstrap&apos;s Grid system.
@@ -84,6 +84,7 @@ export class DragAndDropLayout extends React.Component {
                                     { compactType === "vertical" && "Vertical" }
                                     { compactType === "horizontal" && "Horizontal" }
                                 </strong>
+                                <i className="fa fa-angle-down ml-2" />
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem
@@ -114,8 +115,9 @@ export class DragAndDropLayout extends React.Component {
                                     { !fluid && "Container" }
                                     { fluid && "Fluid" }
                                 </strong>
+                                <i className="fa fa-angle-down ml-2" />
                             </DropdownToggle>
-                            <DropdownMenu right>
+                            <DropdownMenu right >
                                 <DropdownItem
                                     active={!fluid} 
                                     onClick={() => this.selectFluid(false)}
@@ -152,14 +154,14 @@ export class DragAndDropLayout extends React.Component {
                                 .map((layoutKey) => (
                                     <Grid.Col {...applyColumn(layoutKey, this.state.layouts)} key={ layoutKey }>
                                         <Card>
-                                            <CardHeader>
-                                                { texts[layoutKey].title }
+                                            <CardHeader className="bb-0 pb-0 bg-none">
+                                                <CardTitle className="h6 my-0">
+                                                    { texts[layoutKey].title }
+                                                </CardTitle>
                                             </CardHeader>
                                             <CardBody style={{ overflow: "hidden" }}>
                                                 { texts[layoutKey].desc }
                                             </CardBody>
-                                            <CardFooter>
-                                            </CardFooter>
                                         </Card>
                                     </Grid.Col>
                                 ))

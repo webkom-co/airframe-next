@@ -41,11 +41,9 @@
         }
 
         > .card-header {
-            position:relative;
-            padding-left: 2rem;
             cursor: move;
             user-select: none;
-
+            /*
             &:before {
                 position: absolute;
                 font: normal normal normal 14px/1 FontAwesome;
@@ -55,6 +53,7 @@
                 transform: translateY(-50%);
                 color: $text-muted;
             }
+            */
         }
     }
 }
