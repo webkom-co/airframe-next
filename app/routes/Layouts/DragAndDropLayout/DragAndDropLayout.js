@@ -67,12 +67,12 @@ export class DragAndDropLayout extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid={ fluid }>
-                    <HeaderMain title="Drag &amp; Drop Layout" />
+                    <HeaderMain title="Drag &amp; Drop Layout" className="mb-5 mt-4" />
                     <p>
-                        React-Grid_layout is a grid layout system much like Packery or Gridster for React. Unlike those systems, it is responsive and supports breakpoints. These breakpoints can be provided in the same way as in Reactstrap&apos;s Grid system.
+                        <strong>React-Grid Layout</strong> is a grid layout system much like Packery or Gridster for React. Unlike those systems, it is responsive and supports breakpoints. These breakpoints can be provided in the same way as in Reactstrap&apos;s Grid system.
                     </p>
-                    <div className="d-flex align-items-center">
-                        <Button outline onClick={ this.generateLayoutHandler }>
+                    <div className="d-flex align-items-center pb-4">
+                        <Button color="primary" onClick={ this.generateLayoutHandler }>
                             Generate New Layout
                         </Button>
 
@@ -133,8 +133,8 @@ export class DragAndDropLayout extends React.Component {
                             </DropdownMenu>
                         </UncontrolledDropdown>
 
-                        <Button outline className="ml-2" onClick={ this.resetLayoutHandler }>
-                            <i className="fa fa-times-circle fa-fw mr-2" />Reset
+                        <Button color="link" className="ml-2" onClick={ this.resetLayoutHandler }>
+                            <i className="fa fa-times-circle text-danger fa-fw mr-1" />Reset
                         </Button>
                     </div>
                 </Container>
@@ -154,12 +154,10 @@ export class DragAndDropLayout extends React.Component {
                                 .map((layoutKey) => (
                                     <Grid.Col {...applyColumn(layoutKey, this.state.layouts)} key={ layoutKey }>
                                         <Card>
-                                            <CardHeader className="bb-0 pb-0 bg-none">
-                                                <CardTitle className="h6 my-0">
-                                                    { texts[layoutKey].title }
-                                                </CardTitle>
+                                            <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
+                                                <i className="fa fa-ellipsis-v mr-2"></i> { texts[layoutKey].title }
                                             </CardHeader>
-                                            <CardBody style={{ overflow: "hidden" }}>
+                                            <CardBody style={{ overflow: "hidden" }} className="pt-3">
                                                 { texts[layoutKey].desc }
                                             </CardBody>
                                         </Card>
