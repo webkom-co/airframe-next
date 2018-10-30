@@ -18,6 +18,7 @@ import CardsHeaders from './Cards/CardsHeaders';
 import NavbarOnly from './Layouts/NavbarOnly';
 import SidebarDefault from './Layouts/SidebarDefault';
 import SidebarA from './Layouts/SidebarA';
+import DragAndDropLayout from './Layouts/DragAndDropLayout';
 
 import Accordions from './Interface/Accordions';
 import Alerts from './Interface/Alerts';
@@ -111,6 +112,7 @@ const getRoutes = () => {
             <Route path='/layouts/navbar-only' component={NavbarOnly} />
             <Route path='/layouts/sidebar-default' component={SidebarDefault} />
             <Route path='/layouts/sidebar-a' component={SidebarA} />
+            <Route path='/layouts/dnd-layout' component={DragAndDropLayout} />
 
             { /*    Interface Routes   */ }
             <Route component={ Accordions } path="/interface/accordions" />

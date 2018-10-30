@@ -45,7 +45,7 @@ export class Row extends React.Component {
     }
 
     render() {
-        const { children, rowHeight, onLayoutChange } = this.props;
+        const { children, rowHeight, onLayoutChange, ...otherProps } = this.props;
         const { trueColSizes } = this.state;
         const layouts = this._lastLayouts = this._calculateLayouts(children);
         const adjustedChildren = simplifyChildrenArray(
@@ -79,6 +79,7 @@ export class Row extends React.Component {
                         });
                     }
                 }
+                { ...otherProps }
             >
                 { adjustedChildren }
             </ResponsiveGrid>

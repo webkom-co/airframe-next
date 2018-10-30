@@ -39,6 +39,16 @@ export class Grid extends React.Component {
         }
     }
 
+    componentDidUpdate(nextProps) {
+        // HACK
+        if (
+            typeof window !== 'undefined' &&
+            nextProps.fluid !== this.props.fluid
+        ) {
+            window.dispatchEvent(new Event('resize'));
+        }
+    }
+
     componentWillUnmount() {
         if (typeof window !== 'undefined') {
             window.removeEventListener('resize', this._resizeHandler);
@@ -50,6 +60,7 @@ export class Grid extends React.Component {
         const { gridSize } = this.state;
         const modifiedChildren = React.Children.map(children, child => (
             React.cloneElement(child, {
+                ...otherProps,
                 active,
                 gridSize
             })
@@ -74,7 +85,6 @@ export class Grid extends React.Component {
                     <div
                         className={ floatWrapClasses }
                         ref={ this._gridRef }
-                        { ...otherProps }
                     >
                         <div className={ classes.floatGridWrap }>
                             { modifiedChildren }

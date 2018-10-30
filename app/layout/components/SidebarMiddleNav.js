@@ -33,6 +33,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Navbar" to='/layouts/navbar-only' exact />
             <SidebarMenu.Item title="Sidebar Default" to='/layouts/sidebar-default' exact />
             <SidebarMenu.Item title="Sidebar A" to='/layouts/sidebar-a' exact />
+            <SidebarMenu.Item title="Drag &amp; Drop" to='/layouts/dnd-layout' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
