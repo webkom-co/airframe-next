@@ -6,7 +6,7 @@ import _ from 'lodash';
 import { Avatar } from './Avatar';
 import { AvatarFont } from './AvatarFont';
 
-class AvatarImage extends React.Component {
+class AvatarImage extends React.PureComponent {
     static propTypes = {
         src: PropTypes.string.isRequired,
         placeholder: PropTypes.node,

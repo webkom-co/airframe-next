@@ -11,7 +11,8 @@ import {
 } from './../../components/HeaderDemo';
 
 import {
-    MultipleVerticalLists
+    MultipleVerticalLists,
+    DraggableTable
 } from './components';
 
 export class DragAndDropElements extends React.Component {
@@ -23,12 +24,23 @@ export class DragAndDropElements extends React.Component {
                     Beautiful, accessible drag and drop for React lists.
                 </p>
 
-                <HeaderDemo
-                    no="#1.01"
-                    title="Mutliple Verical Lists"
-                    subtitle="Stress test??"
-                />
-                <MultipleVerticalLists />
+                <div className="pt-4">
+                    <HeaderDemo
+                        no="#1.01"
+                        title="Mutliple Verical Lists"
+                        subTitle="Both list are draggable horizontally and inner list elements can be swapped or reorderd"
+                    />
+                    <MultipleVerticalLists />
+                </div>
+
+                <div className="pt-4">
+                    <HeaderDemo
+                        no="#1.02"
+                        title="Table"
+                        subTitle="Allows reordering of the table rows"
+                    />
+                    <DraggableTable />
+                </div>
             </Container>
         );
     }

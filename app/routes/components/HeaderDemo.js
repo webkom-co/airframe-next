@@ -18,7 +18,10 @@ const HeaderDemo = (props) => (
     </Media>
 )
 HeaderDemo.propTypes = {
-    no: PropTypes.number,
+    no: PropTypes.oneOfType([
+        PropTypes.string,
+        PropTypes.number
+    ]),
     title: PropTypes.string,
     subTitle: PropTypes.string,
     className: PropTypes.string
