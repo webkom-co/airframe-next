@@ -37,6 +37,7 @@ import ProgressBars from './Interface/ProgressBars';
 import TabsPills from './Interface/TabsPills';
 import TooltipPopovers from './Interface/TooltipsPopovers';
 import Typography from './Interface/Typography';
+import DragAndDropElements from './Interface/DragAndDropElements';
 
 import ReCharts from './Graphs/ReCharts';
 
@@ -131,6 +132,7 @@ const getRoutes = () => {
             <Route component={ TabsPills } path="/interface/tabs-pills" />
             <Route component={ TooltipPopovers } path="/interface/tooltips-and-popovers" />
             <Route component={ Typography } path="/interface/typography" />
+            <Route component={ DragAndDropElements } path="/interface/drag-and-drop-elements" />
 
             { /*    Forms Routes    */ }
             <Route component={ Forms } path="/forms/forms" />
