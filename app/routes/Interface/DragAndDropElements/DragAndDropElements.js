@@ -12,7 +12,8 @@ import {
 
 import {
     MultipleVerticalLists,
-    DraggableTable
+    DraggableTable,
+    HorizontalLists
 } from './components';
 
 export class DragAndDropElements extends React.Component {
@@ -40,6 +41,14 @@ export class DragAndDropElements extends React.Component {
                         subTitle="Allows reordering of the table rows"
                     />
                     <DraggableTable />
+                </div>
+                <div className="pt-4">
+                    <HeaderDemo
+                        no="#1.03"
+                        title="Horizontal Lists"
+                        subTitle="Items can be reaordered and moved between lists"
+                    />
+                    <HorizontalLists />
                 </div>
             </Container>
         );
