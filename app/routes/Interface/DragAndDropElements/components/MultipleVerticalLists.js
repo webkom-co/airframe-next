@@ -8,6 +8,7 @@ import {
 } from 'react-beautiful-dnd';
 import uid from 'uuid/v4';
 import faker from 'faker';
+import classNames from 'classnames';
 import {
     Card,
     CardHeader,
@@ -18,6 +19,7 @@ import {
 } from './../../../../components';
 import { randomAvatar, randomArray } from './../../../../utilities';
 import { reorder, move } from './utilities';
+import classes from './common.scss';
 
 //  Utility Functions
 //=========================================================
@@ -30,27 +32,37 @@ const generateItem = () => ({
     status: randomArray(['success', 'warning', 'danger'])
 });
 
+const getListClass = (isDraggedOver) =>
+    classNames(classes['list'], {
+        [classes['list--drag-over']]: isDraggedOver
+    });
+
+const getItemClass = (isDragging) =>
+    classNames(classes['list-group-item'], {
+        [classes['list-group-item--dragging']]: isDragging
+    });
+
 //  Draggable List Component
 //=========================================================
 const VerticalList = React.memo((props) => {
     return (
         <Droppable droppableId={ props.listId }>
-            {(provided) => (
+            {(provided, snapshot) => (
                 <div
                     ref={provided.innerRef}
-                    className="list-group list-group-flush flex-grow-1"
+                    className={`list-group list-group-flush flex-grow-1 ${getListClass(snapshot.isDraggingOver)}`}
                 >                    
                     {props.items.map((item, index) => (
                         <Draggable
                             key={item.id}
                             draggableId={item.id}
                             index={index}>
-                            {(provided) => (
+                            {(provided, draggableSnapshot) => (
                                 <div
                                     ref={provided.innerRef}
                                     {...provided.draggableProps}
                                     {...provided.dragHandleProps}
-                                    className="list-group-item"
+                                    className={`list-group-item ${getItemClass(draggableSnapshot.isDragging)}`}
                                 >
                                     <Media>
                                         <Media left className="align-self-center pr-3">

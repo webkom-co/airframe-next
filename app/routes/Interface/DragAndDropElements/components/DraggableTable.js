@@ -8,6 +8,7 @@ import {
     Droppable,
     Draggable
 } from 'react-beautiful-dnd';
+import classNames from 'classnames';
 
 import {
     Table,
@@ -21,6 +22,7 @@ import {
 } from './../../../../components';
 import { randomAvatar, randomArray } from './../../../../utilities';
 import { reorder } from './utilities';
+import classes from './common.scss';
 
 const allSkills = ['JavaScript', 'Photoshop', 'Management', 'Bootstrap',
     'PHP', 'Sketch', 'MySQL', 'Mongo', 'Node.js', 'TypeScript'];
@@ -38,6 +40,16 @@ const generateUser = () => ({
         title: 'www.webkom.co'
     } : null
 });
+
+const getTableClass = (isDraggedOver) =>
+    classNames(classes['table'], {
+        [classes['table--drag-over']]: isDraggedOver
+    });
+
+const getRowClass = (isDragging) =>
+    classNames(classes['row'], {
+        [classes['row--dragging']]: isDragging
+    });
 
 // Custom Table Cell - keeps cell width when the row
 // is detached from the table
@@ -117,7 +129,7 @@ const DraggableRow = (props) => (
         <tr
             ref={ provided.innerRef }
             { ...provided.draggableProps }
-            className={snapshot.isDragging ? 'bg-white' : ''}
+            className={getRowClass(snapshot.isDragging)}
         >
             <TableCell className="align-middle" { ...provided.dragHandleProps }>
                 <i className="fa fa-fw fa-arrows-v fa-lg d-block mx-auto text-muted" />
@@ -252,10 +264,11 @@ export class DraggableTable extends React.Component {
                             </tr>
                         </thead>
                         <Droppable droppableId="table">
-                        {(provided) => (
+                        {(provided, snapshot) => (
                             <tbody
                                 ref={provided.innerRef}
                                 {...provided.droppableProps}
+                                className={getTableClass(snapshot.isDraggingOver)}
                             >
                                 {_.map(this.state.users, (user, index) => (
                                     <DraggableRow
