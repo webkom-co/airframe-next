@@ -93,6 +93,7 @@ export const SidebarMiddleNav = () => (
             title="Tables"
         >
             <SidebarMenu.Item title="Tables" to='/tables/tables' />
+            <SidebarMenu.Item title="Extended Tables" to='/tables/extended-table' />
         </SidebarMenu.Item>
         { /* -------- Apps ---------*/ }
         <SidebarMenu.Item

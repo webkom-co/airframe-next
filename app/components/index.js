@@ -20,6 +20,7 @@ import Progress from './Progress';
 import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
+import StarRating from './StarRating';
 import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
 import UncontrolledPopover from './UncontrolledPopover';
@@ -128,6 +129,7 @@ export {
     Sidebar,
     SidebarMenu,
     SidebarTrigger,
+    StarRating,
     Tools,
     UncontrolledPopover,
     UncontrolledTabs,

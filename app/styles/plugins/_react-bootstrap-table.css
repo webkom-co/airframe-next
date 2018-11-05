@@ -1,0 +1,14 @@
+/*@import "~react-bootstrap-table-next/dist/react-bootstrap-table2.min.css";*/
+
+.react-bootstrap-table th.sortable {
+    white-space: nowrap;
+}
+
+.react-bootstrap-table th,
+.react-bootstrap-table td {
+    vertical-align: middle !important;
+}
+
+.react-bootstrap-table-pagination-list .pagination {
+    justify-content: flex-end;
+}

@@ -57,6 +57,7 @@ import Dropzone from './Forms/Dropzone';
 import Selects from './Forms/Selects';
 
 import Tables from './Tables/Tables';
+import ExtendedTable from './Tables/ExtendedTable';
 
 import AccountEdit from './Apps/AccountEdit';
 import BillingEdit from './Apps/BillingEdit';
@@ -168,6 +169,7 @@ const getRoutes = () => {
 
             { /*    Tables Routes   */ }
             <Route component={ Tables } path="/tables/tables" />
+            <Route component={ ExtendedTable } path="/tables/extended-table" />
 
             { /*    Apps Routes     */ }
             <Route component={ AccountEdit } path="/apps/account-edit" />
