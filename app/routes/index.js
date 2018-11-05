@@ -54,6 +54,7 @@ import Toggles from './Forms/Toggles';
 import Editor from './Forms/Editor';
 import DatePicker from './Forms/DatePicker';
 import Dropzone from './Forms/Dropzone';
+import Selects from './Forms/Selects';
 
 import Tables from './Tables/Tables';
 
@@ -160,6 +161,8 @@ const getRoutes = () => {
             <Route component={ DatePicker } path="/forms/date-picker" />
             <Route component={ Dropzone } path="/forms/dropzone" />
 
+            <Route component={ Selects } path="/forms/selects" />
+            
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
 
