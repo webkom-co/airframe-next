@@ -55,6 +55,7 @@ import Editor from './Forms/Editor';
 import DatePicker from './Forms/DatePicker';
 import Dropzone from './Forms/Dropzone';
 import Selects from './Forms/Selects';
+import Sliders from './Forms/Sliders';
 
 import Tables from './Tables/Tables';
 import ExtendedTable from './Tables/ExtendedTable';
@@ -161,6 +162,7 @@ const getRoutes = () => {
             <Route component={ Editor } path="/forms/editor" />
             <Route component={ DatePicker } path="/forms/date-picker" />
             <Route component={ Dropzone } path="/forms/dropzone" />
+            <Route component={ Sliders } path="/forms/sliders" />
 
             <Route component={ Selects } path="/forms/selects" />
             

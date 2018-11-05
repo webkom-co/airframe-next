@@ -63,6 +63,7 @@
     "moment": "^2.22.2",
     "prop-types": "^15.6.2",
     "query-string": "^6.1.0",
+    "rc-slider": "^8.6.3",
     "react": "^16.5.0",
     "react-bootstrap-typeahead": "^3.2.4",
     "react-datepicker": "^1.7.0",
