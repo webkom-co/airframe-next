@@ -153,21 +153,22 @@ class Column extends React.Component {
 
 //  Demo Component
 //=========================================================
+const initialState = {
+    listAItems: _.times(_.random(2, 4), generateItem),
+    listBItems: _.times(_.random(3, 8), generateItem),
+    listCItems: _.times(_.random(3, 8), generateItem),
+    lists: [
+        { id: 'listA', title: 'All Candidates' },
+        { id: 'listB', title: 'Candidates waiting for an interview' },
+        { id: 'listC', title: 'Candidates who are ready for Testing' }
+    ]
+};
 export class MultipleVerticalLists extends React.Component {
     static propTypes = {
         className: PropTypes.string
     }
 
-    state = {
-        listAItems: _.times(_.random(2, 4), generateItem),
-        listBItems: _.times(_.random(3, 8), generateItem),
-        listCItems: _.times(_.random(3, 8), generateItem),
-        lists: [
-            { id: 'listA', title: 'All Candidates' },
-            { id: 'listB', title: 'Candidates waiting for an interview' },
-            { id: 'listC', title: 'Candidates who are ready for Testing' }
-        ]
-    }
+    state = _.clone(initialState);
 
     constructor (props) {
         super(props);
@@ -219,6 +220,10 @@ export class MultipleVerticalLists extends React.Component {
 
             this.setState(_.mapKeys(result, (val, key) => `${key}Items`));
         }
+    }
+
+    recoverInitialState() {
+        this.setState(initialState);
     }
 
     render() {

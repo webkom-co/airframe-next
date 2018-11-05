@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
+import classNames from 'classnames';
 import {
     DragDropContext,
     Droppable,
@@ -16,12 +17,18 @@ import {
 } from './../../../../components';
 import { randomAvatar, randomArray } from './../../../../utilities';
 import { reorder, move } from './utilities';
+import classes from './common.scss';
 
 const generateItem = () => ({
     id: uid(),
     avatarUrl: randomAvatar(),
     status: randomArray(['success', 'warning', 'danger'])
 });
+
+const getListClass = (isDraggedOver) =>
+    classNames(classes['list'], {
+        [classes['list--drag-over']]: isDraggedOver
+    });
 
 const RowList = (props) => (
     <Card className={props.className}>
@@ -34,9 +41,9 @@ const RowList = (props) => (
             droppableId={ props.listId }
             direction="horizontal"
         >
-            {(provided) => (
+            {(provided, snapshot) => (
                 <div
-                    className="card-body d-flex"
+                    className={`card-body d-flex ${getListClass(snapshot.isDraggingOver)}`}
                     style={{ overflowX: 'auto' }}
                     ref={provided.innerRef}
                     {...provided.droppableProps}
@@ -88,17 +95,17 @@ RowList.propTypes = {
     title: PropTypes.string.isRequired,
     className: PropTypes.stirng
 }
-
+const initialState = {
+    listAItems: _.times(_.random(3, 8), generateItem),
+    listBItems: _.times(_.random(3, 8), generateItem),
+    listCItems: _.times(_.random(3, 8), generateItem)
+};
 export class HorizontalLists extends React.Component {
     static propTypes = {
         className: PropTypes.string
     }
 
-    state = {
-        listAItems: _.times(_.random(3, 8), generateItem),
-        listBItems: _.times(_.random(3, 8), generateItem),
-        listCItems: _.times(_.random(3, 8), generateItem),
-    }
+    state = _.clone(initialState);
 
     constructor (props) {
         super(props);
@@ -135,6 +142,10 @@ export class HorizontalLists extends React.Component {
 
             this.setState(_.mapKeys(result, (val, key) => `${key}Items`));
         }
+    }
+
+    recoverInitialState() {
+        this.setState(initialState);
     }
 
     render() {

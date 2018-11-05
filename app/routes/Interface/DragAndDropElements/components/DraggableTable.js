@@ -218,13 +218,15 @@ DraggableRow.propTypes = {
 
 // Demo Component
 // ========================================================
+const initialState = _.times(5, generateUser);
+
 export class DraggableTable extends React.Component {
     static propTypes = {
-        className: PropTypes.string
+        className: PropTypes.string,
     }
 
     state = {
-        users: _.times(5, generateUser)
+        users: initialState
     }
 
     constructor(props) {
@@ -241,6 +243,12 @@ export class DraggableTable extends React.Component {
         const users = reorder(this.state.users,
             source.index, destination.index);
         this.setState({ users });
+    }
+
+    recoverInitialState() {
+        this.setState({
+            users: initialState
+        });
     }
 
     render() {

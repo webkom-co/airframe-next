@@ -1,7 +1,8 @@
 import React from 'react';
 
 import {
-    Container
+    Container,
+    Button
 } from './../../../components';
 import {
     HeaderMain
@@ -17,13 +18,30 @@ import {
 } from './components';
 
 export class DragAndDropElements extends React.Component {
+    multipleVerticalListsRef = React.createRef();
+    draggableTableRef = React.createRef();
+    horizontalLists = React.createRef();
+
+    onResetState = () => {
+        this.multipleVerticalListsRef.current.recoverInitialState();
+        this.draggableTableRef.current.recoverInitialState();
+        this.horizontalLists.current.recoverInitialState();
+    }
+
     render() {
         return (
             <Container>
-                <HeaderMain title="Drag &amp; Drop Elements" />
-                <p>
-                    Beautiful, accessible drag and drop for React lists.
-                </p>
+                <div className="d-flex">
+                    <div>
+                        <HeaderMain title="Drag &amp; Drop Elements" />
+                        <p>
+                            Beautiful, accessible drag and drop for React lists.
+                        </p>
+                    </div>
+                    <Button onClick={ this.onResetState } className="ml-auto align-self-center">
+                        Reset Layout
+                    </Button>
+                </div>
 
                 <div className="pt-4">
                     <HeaderDemo
@@ -31,7 +49,7 @@ export class DragAndDropElements extends React.Component {
                         title="Mutliple Verical Lists"
                         subTitle="Both list are draggable horizontally and inner list elements can be swapped or reorderd"
                     />
-                    <MultipleVerticalLists />
+                    <MultipleVerticalLists ref={ this.multipleVerticalListsRef }/>
                 </div>
 
                 <div className="pt-4">
@@ -40,7 +58,7 @@ export class DragAndDropElements extends React.Component {
                         title="Table"
                         subTitle="Allows reordering of the table rows"
                     />
-                    <DraggableTable />
+                    <DraggableTable ref={ this.draggableTableRef }/>
                 </div>
                 <div className="pt-4">
                     <HeaderDemo
@@ -48,7 +66,7 @@ export class DragAndDropElements extends React.Component {
                         title="Horizontal Lists"
                         subTitle="Items can be reaordered and moved between lists"
                     />
-                    <HorizontalLists />
+                    <HorizontalLists ref={ this.horizontalLists }/>
                 </div>
             </Container>
         );
