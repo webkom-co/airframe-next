@@ -60,6 +60,7 @@ export const SidebarMiddleNav = () => (
             <SidebarMenu.Item title="Notifications" to='/interface/notifications' />
             <SidebarMenu.Item title="Crop Image" to='/interface/crop-image' />
             <SidebarMenu.Item title="Drag &amp; Drop Elements" to='/interface/drag-and-drop-elements' />
+            <SidebarMenu.Item title="Calendar" to='/interface/calendar' />
         </SidebarMenu.Item>
         { /* -------- Graphs ---------*/ }
         <SidebarMenu.Item
