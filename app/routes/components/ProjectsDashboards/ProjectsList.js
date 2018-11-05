@@ -12,7 +12,7 @@ const ProjectsList = (props) => (
         <div className="d-flex flex-column">
             <div className="mb-3 d-flex justify-content-between">
                 <span className="mb-0 text-inverse">
-                     { faker.commerce.productName() }
+                     { props.title || faker.commerce.productName() }
                 </span>
                 <Badge color={ `${ props.badgeColor }` } pill className="align-self-center">
                     { props.badgeTitle }
@@ -49,8 +49,9 @@ const ProjectsList = (props) => (
     </React.Fragment>
 )
 ProjectsList.propTypes = {
-    badgeColor: PropTypes.node,
-    badgeTitle: PropTypes.node,
+    title: PropTypes.string,
+    badgeColor: PropTypes.string,
+    badgeTitle: PropTypes.string,
     progressValue: PropTypes.string,
     completeValue: PropTypes.string,
     myTasksValue: PropTypes.string,

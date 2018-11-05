@@ -37,8 +37,12 @@ import ProgressBars from './Interface/ProgressBars';
 import TabsPills from './Interface/TabsPills';
 import TooltipPopovers from './Interface/TooltipsPopovers';
 import Typography from './Interface/Typography';
+<<<<<<< HEAD
 import Notifications from './Interface/Notifications';
 import CropImage from './Interface/CropImage';
+=======
+import DragAndDropElements from './Interface/DragAndDropElements';
+>>>>>>> 2c51aa9ec8227d43e321666fe7e1f7d869f71fb5
 
 import ReCharts from './Graphs/ReCharts';
 
@@ -141,6 +145,7 @@ const getRoutes = () => {
             <Route component={ Typography } path="/interface/typography" />
             <Route component={ Notifications } path="/interface/notifications" />
             <Route component={ CropImage } path="/interface/crop-image" />
+            <Route component={ DragAndDropElements } path="/interface/drag-and-drop-elements" />
 
             { /*    Forms Routes    */ }
             <Route component={ Forms } path="/forms/forms" />
