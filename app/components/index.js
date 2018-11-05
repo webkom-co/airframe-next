@@ -5,6 +5,7 @@ import Card from './Card';
 import CardHeader from './CardHeader';
 import Checkable from './Checkable';
 import CustomInput from './CustomInput';
+import Divider from './Divider';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
 import Grid from './FloatGrid';
@@ -110,6 +111,7 @@ export {
     CardHeader,
     Checkable,
     CustomInput,
+    Divider,
     EmptyLayout,
     ExtendedDropdown,
     Grid,

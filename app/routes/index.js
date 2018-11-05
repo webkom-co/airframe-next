@@ -53,6 +53,7 @@ import Typeahead from './Forms/Typeahead';
 import Toggles from './Forms/Toggles';
 import Editor from './Forms/Editor';
 import DatePicker from './Forms/DatePicker';
+import Dropzone from './Forms/Dropzone';
 
 import Tables from './Tables/Tables';
 
@@ -157,6 +158,7 @@ const getRoutes = () => {
             <Route component={ Toggles } path="/forms/toggles" />
             <Route component={ Editor } path="/forms/editor" />
             <Route component={ DatePicker } path="/forms/date-picker" />
+            <Route component={ Dropzone } path="/forms/dropzone" />
 
             { /*    Graphs Routes   */ }
             <Route component={ ReCharts } path="/graphs/re-charts" />
