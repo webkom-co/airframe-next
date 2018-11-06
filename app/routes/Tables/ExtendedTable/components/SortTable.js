@@ -38,6 +38,12 @@ export const SortTable = () => (
         <h6 className="mt-0">
             Sort Table
         </h6>
-        <BootstrapTable keyField='id' data={ data } columns={ columns } bordered={ false } />
+        <BootstrapTable
+            classes="table-responsive-sm"
+            keyField='id'
+            data={ data }
+            columns={ columns }
+            bordered={ false }
+        />
     </React.Fragment>
 );

@@ -78,6 +78,7 @@ export const CellEdit = () => (
             Cell Edit
         </h6>
         <BootstrapTable
+            classes="table-responsive"
             keyField='id'
             data={ data }
             columns={ columns }
