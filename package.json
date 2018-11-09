@@ -4,7 +4,7 @@
   "description": "Seed project for flexible light React/Bootstrap 4 dashboards.",
   "main": "index.js",
   "scripts": {
-    "dev": "node ./server.js",
+    "dev": "NODE_ENV=development node ./server.js",
     "build": "next build",
     "start": "NODE_ENV=production node ./server.js"
   },
@@ -36,10 +36,12 @@
     "fs-extra": "^7.0.0",
     "holderjs": "^2.9.4",
     "lodash": "^4.17.11",
+    "mobile-detect": "^1.4.3",
     "next": "^7.0.2",
     "next-fonts": "^0.10.0",
     "next-images": "^1.0.1",
     "node-sass": "^4.10.0",
+    "nprogress": "^0.2.0",
     "prop-types": "^15.6.2",
     "query-string": "^6.1.0",
     "react": "^16.6.0",

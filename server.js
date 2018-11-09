@@ -20,6 +20,6 @@ app.prepare().then(() => {
     }).listen(PORT, err => {
         if (err) throw err;
         //eslint-disable-next-line
-        console.log(`> Ready on http://localhost:${5000}`);
+        console.log(`> Ready on http://localhost:${PORT}`);
     });
 });

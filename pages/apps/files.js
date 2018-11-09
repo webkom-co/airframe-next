@@ -8,9 +8,8 @@ import {
 } from './../../components';
 
 import { HeaderMain } from "../../features/HeaderMain";
-
-import { FilesList } from '../../features/FilesList';
-import { FilesGrid } from '../../features/FilesGrid';
+import { FilesList } from '../../features/Files/FilesList';
+import { FilesGrid } from '../../features/Files/FilesGrid';
 import { FilesLeftNav } from "../../features/Files/FilesLeftNav";
 import { ProjectsSmHeader } from "../../features/Projects/ProjectsSmHeader";
 

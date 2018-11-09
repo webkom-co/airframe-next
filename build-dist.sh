@@ -8,9 +8,11 @@ echo "> ...Done!"
 
 npm run build
 
-mkdir dist
+mkdir -p dist/.next
 cp -r ./.next ./dist
+cp -r ./static ./dist
 cp ./server.js ./dist
-cp ./server-package.json ./dist/package.json
+cp ./package.json ./dist
+cp ./.npmrc ./dist
 
 echo "Finished! "

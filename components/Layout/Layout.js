@@ -41,7 +41,8 @@ class Layout extends React.Component {
         children: PropTypes.node,
         sidebarSlim: PropTypes.bool,
         router: PropTypes.object,
-        favIcons: PropTypes.array
+        favIcons: PropTypes.array,
+        isMobile: PropTypes.bool
     }
 
     constructor(props) {
@@ -51,7 +52,7 @@ class Layout extends React.Component {
             sidebarHidden: false,
             navbarHidden: false,
             footerHidden: false,
-            sidebarCollapsed: false,
+            sidebarCollapsed: !!props.isMobile,
             screenSize: '',
             animationsDisabled: true,
 
@@ -60,7 +61,7 @@ class Layout extends React.Component {
             pageKeywords: config.siteKeywords
         };
 
-        this.lastLgSidebarCollapsed = false;
+        this.lastLgSidebarCollapsed = this.state.sidebarCollapsed;
         this.containerRef = React.createRef();
     }
 
@@ -120,10 +121,10 @@ class Layout extends React.Component {
             if (prevState.sidebarCollapsed !== this.state.sidebarCollapsed) {
                 // Most of the devices
                 const styleUpdate = this.state.sidebarCollapsed ? {
-                        overflowY: 'auto',
+                        //overflowY: 'auto',
                         touchAction: 'auto'
                     }: {
-                        overflowY: 'hidden',
+                        //overflowY: 'hidden',
                         touchAction: 'none'
                     }
                 Object.assign(this.bodyElement.style, styleUpdate);
@@ -219,10 +220,10 @@ class Layout extends React.Component {
             >
                 <Head>
                     <meta charSet="utf-8" />
+                    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui"/>
                     <title>{ config.siteTitle + (this.state.pageTitle ? ` - ${this.state.pageTitle}` : '') }</title>
                     <link rel="canonical" href={ config.siteCannonicalUrl } />
                     <meta name="description" content={ this.state.pageDescription } />
-
                     {
                         _.map(favIcons, (favIcon, index) => (
                             <link { ...favIcon } key={ index } />

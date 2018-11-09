@@ -5,14 +5,13 @@ import {
     Container,
     Row,
     Col
-} from './../../../components';
+} from './../../components';
 
-import { HeaderMain } from "../../components/HeaderMain";
-
+import { HeaderMain } from "../../features/HeaderMain";
 import { ProjectsList } from '../../features/Projects/ProjectsList';
 import { ProjectsGrid } from '../../features/Projects/ProjectsGrid';
-import { ProjectsLeftNav } from "../../components/Projects/ProjectsLeftNav";
-import { ProjectsSmHeader } from "../../components/Projects/ProjectsSmHeader";
+import { ProjectsLeftNav } from "../../features/Projects/ProjectsLeftNav";
+import { ProjectsSmHeader } from "../../features/Projects/ProjectsSmHeader";
 
 const Projects = (props) => (
     <React.Fragment>

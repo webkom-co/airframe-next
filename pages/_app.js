@@ -1,5 +1,9 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import App, { Container } from 'next/app';
+import Router from 'next/app';
+import MobileDetect from 'mobile-detect';
+import NProgress from 'nprogress';
 
 import {
     Layout
@@ -21,13 +25,34 @@ const favIcons = [
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/static/images/favicons/favicon-16x16.png' }
 ];
 
+Router.onRouteChangeStart = () => { console.log('started'); Progress.start(); };
+Router.onRouteChangeComplete = () => NProgress.done();
+Router.onRouteChangeError = () => NProgress.done();
+
 export default class DashboardApp extends App {
+    static propTypes = {
+        isMobile: PropTypes.bool
+    }
+
+    static getInitialProps({ Component, router, ctx }) {
+        const { req } = ctx;
+        const pageProps = Component.getInitialProps ? 
+            Component.getInitialProps(ctx) : {};
+
+        if (req) {
+            const md = new MobileDetect(req.headers['user-agent']);
+            return { ...pageProps, isMobile: !!md.mobile() };
+        }
+
+        return { ...pageProps, isMobile: false }
+    }
+
     render () {
-        const { Component, pageProps } = this.props;
+        const { Component, pageProps, isMobile } = this.props;
 
         return (
             <Container>
-                <Layout sidebarSlim favIcons={ favIcons }>
+                <Layout sidebarSlim favIcons={ favIcons } isMobile={isMobile}>
                     { /* --------- Navbar ----------- */ }
                     <Layout.Navbar>
                         <DefaultNavbar />

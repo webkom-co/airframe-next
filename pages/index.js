@@ -1,4 +1,5 @@
 import React from 'react';
+import Router from 'next/router';
 
 class Index extends React.Component {
     static getInitialProps({res}) {
