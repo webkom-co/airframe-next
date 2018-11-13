@@ -13,7 +13,8 @@ class SidebarMenu extends React.Component {
         currentUrl: PropTypes.string,
         slim: PropTypes.bool,
         router: PropTypes.object,
-        pageConfig: PropTypes.object
+        pageConfig: PropTypes.object,
+        disabled: PropTypes.bool
     }
 
     constructor(props) {
@@ -109,7 +110,8 @@ class SidebarMenu extends React.Component {
             )
         );
         const sidebarMenuClass = classNames('sidebar-menu', {
-            'sidebar-menu--slim': isSlim
+            'sidebar-menu--slim': isSlim,
+            'sidebar-menu--disabled': this.props.disabled
         });
 
         return (
