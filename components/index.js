@@ -10,6 +10,7 @@ import ExtendedDropdown from './ExtendedDropdown';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
+import IsInteractive from './IsInteractive';
 import Layout, { withPageConfig, setupPage } from './Layout';
 import Link from './Link';
 import NestedDropdown from './NestedDropdown';
@@ -114,6 +115,7 @@ export {
     ExtendedDropdown,
     IconWithBadge,
     InputGroupAddon,
+    IsInteractive,
     HolderProvider,
     Layout,
     Link,
