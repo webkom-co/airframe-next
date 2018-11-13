@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import App, { Container } from 'next/app';
-import Router from 'next/app';
+import Router from 'next/router';
 import MobileDetect from 'mobile-detect';
 import NProgress from 'nprogress';
 
@@ -25,16 +25,16 @@ const favIcons = [
     { rel: 'icon', type: 'image/png', sizes: '16x16', href: '/static/images/favicons/favicon-16x16.png' }
 ];
 
-Router.onRouteChangeStart = () => { console.log('started'); Progress.start(); };
-Router.onRouteChangeComplete = () => NProgress.done();
-Router.onRouteChangeError = () => NProgress.done();
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default class DashboardApp extends App {
     static propTypes = {
         isMobile: PropTypes.bool
     }
 
-    static getInitialProps({ Component, router, ctx }) {
+    static getInitialProps({ Component, ctx }) {
         const { req } = ctx;
         const pageProps = Component.getInitialProps ? 
             Component.getInitialProps(ctx) : {};
