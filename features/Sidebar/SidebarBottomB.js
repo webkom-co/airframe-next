@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import faker from 'faker';
 
 import { 
@@ -12,20 +13,21 @@ import {
     Avatar,
     AvatarAddOn
 } from './../../components';
+import isInteractive from './../../components/IsInteractive';
 import { randomAvatar } from './../../core/utilities';
 
 import { DropdownProfile } from '../Dropdowns/DropdownProfile';
 import { FooterAuth } from '../Pages/FooterAuth';
 import { FooterText } from '../FooterText';
 
-const SidebarBottomB = () => (
+const SidebarBottomB = ({ isInteractive }) => (
     <React.Fragment>
         { /* START Sidebar BOTTOM: B */ }
         <Sidebar.Section>
             { /* START DESKTOP View */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown direction="up" className="mb-3">
-                    <DropdownToggle color="link" className="btn-profile text-left pl-0 pb-0">
+                    <DropdownToggle color="link" className="btn-profile text-left pl-0 pb-0" disabled={!isInteractive}>
                             <Media>
                                 <Media left middle className="mr-3">
                                     <Avatar.Image
@@ -107,5 +109,9 @@ const SidebarBottomB = () => (
         { /* END Sidebar BOTTOM: B */ }
     </React.Fragment>
 )
+SidebarBottomB.propTypes = {
+    isInteractive: PropTypes.bool
+};
+const SidebarBottomBConnected = isInteractive(SidebarBottomB);
 
-export { SidebarBottomB };
+export { SidebarBottomBConnected as SidebarBottomB };

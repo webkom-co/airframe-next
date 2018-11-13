@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import faker from 'faker';
 
 import { 
@@ -12,11 +13,12 @@ import {
     DropdownItem,
     Link
 } from './../../components';
+import isInteractive from './../../components/IsInteractive';
 import { randomAvatar } from './../../core/utilities';
 
 const avatarImg = randomAvatar();
 
-const SidebarTopA = () => (
+const SidebarTopA = ({ isInteractive }) => (
     <React.Fragment>
         { /* START Sidebar TOP: A */ }
         <Sidebar.Section className="pt-0">
@@ -48,7 +50,7 @@ const SidebarTopA = () => (
             { /* START SIDEBAR-DEFAULT: Dropdown */ }
             <Tools.DefaultOnly>
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile">
+                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile" disabled={!isInteractive}>
                         { faker.name.firstName() } { faker.name.lastName() }
                         <i className="fa fa-angle-down ml-2"></i>
                     </DropdownToggle>
@@ -82,6 +84,10 @@ const SidebarTopA = () => (
         </Sidebar.Section>
         { /* END Sidebar TOP: A */ }
     </React.Fragment>
-)
+);
+SidebarTopA.propTypes = {
+    isInteractive: PropTypes.bool
+};
+const SidebarTopAConnected = isInteractive(SidebarTopA);
 
-export { SidebarTopA };
+export { SidebarTopAConnected as SidebarTopA };

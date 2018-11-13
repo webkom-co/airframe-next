@@ -10,6 +10,7 @@ const breakpoints = {
 };
 
 /**
+ *  TODO: Hacky while rendering on Server
  *  Match media running on server and client
  *  unfortunetly doesn't work beacause of
  *  getInitialProps isn't called on child components
@@ -49,12 +50,19 @@ export class UniversalMatchMedia extends React.PureComponent {
         const { children, reqWidth, ...otherProps } = this.props;
 
         if (onServer) {
+            /*
             const deviceWidth = reqWidth || 1200;
             return (
                 <MatchMedia { ...otherProps } values={{ deviceWidth }}>
                     { children }
                 </MatchMedia> 
             )
+            */
+           return otherProps['minWidth'] >= 992 && (
+               <React.Fragment>
+                   { children }
+               </React.Fragment>
+           );
         }
 
         return (
