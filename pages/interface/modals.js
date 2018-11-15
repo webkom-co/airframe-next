@@ -68,7 +68,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="secondary" outline>
+                                <UncontrolledModal.Close color="link" className="text-primary">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="primary">
@@ -108,7 +108,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="secondary" outline>
+                                <UncontrolledModal.Close color="link" className="text-primary">
                                     <i className="fa fa-close mr-2"></i> 
                                     Close
                                 </UncontrolledModal.Close>
@@ -169,7 +169,7 @@ const Modals = () => (
                             { faker.lorem.paragraph() }
                         </ModalBody>
                         <ModalFooter>
-                            <UncontrolledModal.Close color="secondary" size="sm" outline>
+                            <UncontrolledModal.Close color="link" className="text-primary" size="sm">
                                 Close
                             </UncontrolledModal.Close>
                             <UncontrolledModal.Close color="primary" size="sm">
@@ -205,7 +205,7 @@ const Modals = () => (
                             { faker.lorem.paragraph() }
                         </ModalBody>
                         <ModalFooter>
-                            <UncontrolledModal.Close color="secondary" outline> 
+                            <UncontrolledModal.Close color="link" className="text-primary"> 
                                 Close
                             </UncontrolledModal.Close>
                             <UncontrolledModal.Close color="primary"> 
@@ -230,7 +230,7 @@ const Modals = () => (
                         See Modal  <i className="fa fa-angle-right ml-1"></i>
                     </Button>
                     { /* START Example Modal */}
-                    <UncontrolledModal target="modalDefault203"  size="lg">
+                    <UncontrolledModal target="modalDefault203" size="lg">
                         <ModalHeader tag="h5">
                             Modal: Large Size
                             <span className="small ml-1 text-muted">
@@ -241,10 +241,10 @@ const Modals = () => (
                             { faker.lorem.paragraph() }
                         </ModalBody>
                         <ModalFooter>
-                            <UncontrolledModal.Close color="secondary" outline  size="lg"> 
+                            <UncontrolledModal.Close color="link" className="text-primary" size="lg"> 
                                 Close
                             </UncontrolledModal.Close>
-                            <UncontrolledModal.Close color="primary"  size="lg"> 
+                            <UncontrolledModal.Close color="primary" size="lg"> 
                                 Save
                             </UncontrolledModal.Close>
                         </ModalFooter>
@@ -293,20 +293,18 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault301">
+                        <UncontrolledModal target="modalDefault301" className="modal-outline-primary">
                             <ModalHeader tag="h6">
-                                <span className="text-primary">
-                                    Modal: Primary
-                                </span>
+                                Modal: Primary
                                 <span className="small ml-1 text-muted">
-                                    #1.01
+                                    #3.01
                                 </span>
                             </ModalHeader>
                             <ModalBody>
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="primary" outline>
+                                <UncontrolledModal.Close color="link">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="primary">
@@ -326,9 +324,7 @@ const Modals = () => (
                 <Card className="mb-3 text-center">
                     <CardBody>
                         <CardTitle tag="h6" className="mb-3">
-                            <span className="text-danger">
-                                Modal: Danger
-                            </span>
+                            Modal: Danger
                             <span className="small ml-1 text-muted">
                                 #3.02
                             </span>
@@ -337,7 +333,7 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault302">
+                        <UncontrolledModal target="modalDefault302" className="modal-outline-danger">
                             <ModalHeader tag="h6">
                                 <span className="text-danger">
                                     Modal: Danger
@@ -350,7 +346,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="danger" outline>
+                                <UncontrolledModal.Close color="link" className="text-danger">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="danger">
@@ -370,9 +366,7 @@ const Modals = () => (
                 <Card className="mb-3 text-center">
                     <CardBody>
                         <CardTitle tag="h6" className="mb-3">
-                            <span className="text-info">
-                                Modal: Info
-                            </span>
+                            Modal: Info
                             <span className="small ml-1 text-muted">
                                 #3.03
                             </span>
@@ -381,7 +375,7 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault303">
+                        <UncontrolledModal target="modalDefault303" className="modal-outline-info">
                             <ModalHeader tag="h6">
                                 <span className="text-info">
                                     Modal: Info
@@ -394,7 +388,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="info" outline>
+                                <UncontrolledModal.Close color="link" className="text-info">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="info">
@@ -414,9 +408,7 @@ const Modals = () => (
                 <Card className="mb-3 text-center">
                     <CardBody>
                         <CardTitle tag="h6" className="mb-3">
-                            <span className="text-warning">
-                                Modal: Warning
-                            </span>
+                            Modal: Warning
                             <span className="small ml-1 text-muted">
                                 #3.04
                             </span>
@@ -425,7 +417,7 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault304">
+                        <UncontrolledModal target="modalDefault304" className="modal-outline-warning">
                             <ModalHeader tag="h6">
                                 <span className="text-warning">
                                     Modal: Warning
@@ -438,7 +430,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="warning" outline>
+                                <UncontrolledModal.Close color="link" className="text-warning">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="warning">
@@ -458,9 +450,7 @@ const Modals = () => (
                 <Card className="mb-3 text-center">
                     <CardBody>
                         <CardTitle tag="h6" className="mb-3">
-                            <span className="text-success">
-                                Modal: Success
-                            </span>
+                            Modal: Success
                             <span className="small ml-1 text-muted">
                                 #3.05
                             </span>
@@ -469,7 +459,7 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault305">
+                        <UncontrolledModal target="modalDefault305" className="modal-outline-success">
                             <ModalHeader tag="h6">
                                 <span className="text-success">
                                     Modal: Success
@@ -482,7 +472,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="success" outline>
+                                <UncontrolledModal.Close color="link" className="text-success">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="success">
@@ -502,9 +492,7 @@ const Modals = () => (
                 <Card className="mb-3 text-center">
                     <CardBody>
                         <CardTitle tag="h6" className="mb-3">
-                            <span className="text-dark">
-                                Modal: Dark
-                            </span>
+                            Modal: Dark
                             <span className="small ml-1 text-muted">
                                 #3.06
                             </span>
@@ -513,7 +501,7 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault306">
+                        <UncontrolledModal target="modalDefault306" className="modal-outline-dark">
                             <ModalHeader tag="h6">
                                 <span className="text-dark">
                                     Modal: Dark
@@ -526,7 +514,7 @@ const Modals = () => (
                                 { faker.lorem.paragraph() }
                             </ModalBody>
                             <ModalFooter>
-                                <UncontrolledModal.Close color="dark" outline>
+                                <UncontrolledModal.Close color="link" className="text-dark">
                                     Close
                                 </UncontrolledModal.Close>
                                 <UncontrolledModal.Close color="dark">
@@ -576,22 +564,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault401">
-                            <ModalBody className="table-primary text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-play fa-fw text-primary mb-3"></i>
-                                    <h6>Welcome</h6>
-                                    <p>
-                                        We&apos;re glad to see you again and wish you a nice day.
-                                    </p>
-                                    <UncontrolledModal.Close color="primary" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="primary" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                        <UncontrolledModal target="modalDefault401" className="modal-primary">
+                            <ModalHeader className="py-3" />
+                            <ModalBody className="text-center px-5">
+                                <i className="fa fa-5x fa-play fa-fw mb-3 modal-icon"></i>
+                                <h6>Welcome</h6>
+                                <p className="modal-text">
+                                    We're glad to see you again and wish you a nice day.
+                                </p>
+                                <UncontrolledModal.Close color="primary" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close color="link" className="text-primary">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -614,22 +602,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault402">
+                        <UncontrolledModal target="modalDefault402" className="modal-danger">
+                            <ModalHeader className="py-3" />
                             <ModalBody className="table-danger text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-close fa-fw text-danger mb-3"></i>
-                                    <h6>Danger</h6>
-                                    <p>
-                                        Change a few things up and try submitting.
-                                    </p>
-                                    <UncontrolledModal.Close color="danger" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="danger" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                                <i className="fa fa-5x fa-close fa-fw modal-icon mb-3"></i>
+                                <h6>Danger</h6>
+                                <p className="modal-text">
+                                    Change a few things up and try submitting.
+                                </p>
+                                <UncontrolledModal.Close color="danger" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close color="link" className="text-danger">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -652,22 +640,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault403">
+                        <UncontrolledModal target="modalDefault403" className="modal-info">
+                            <ModalHeader className="py-3" />
                             <ModalBody className="table-info text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-info fa-fw text-info mb-3"></i>
-                                    <h6>Information</h6>
-                                    <p>
-                                        This alert needs your attention, but it&apos;s not important.
-                                    </p>
-                                    <UncontrolledModal.Close color="info" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="info" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                                <i className="fa fa-5x fa-info fa-fw modal-icon mb-3"></i>
+                                <h6>Information</h6>
+                                <p className="modal-text">
+                                    This alert needs your attention, but it's not important.
+                                </p>
+                                <UncontrolledModal.Close color="info" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close  color="link" className="text-info">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -690,22 +678,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault404">
+                        <UncontrolledModal target="modalDefault404" className="modal-warning">
+                            <ModalHeader className="py-3" />
                             <ModalBody className="table-warning text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-exclamation fa-fw text-warning mb-3"></i>
-                                    <h6>Warning</h6>
-                                    <p>
-                                        Better check yourself, you&apos;re not looking too good.
-                                    </p>
-                                    <UncontrolledModal.Close color="warning" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="warning" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                                <i className="fa fa-5x fa-exclamation fa-fw modal-icon mb-3"></i>
+                                <h6>Warning</h6>
+                                <p className="modal-text">
+                                    Better check yourself, you're not looking too good.
+                                </p>
+                                <UncontrolledModal.Close color="warning" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close color="link" className="text-warning">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -728,22 +716,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault405">
+                        <UncontrolledModal target="modalDefault405" className="modal-success">
+                            <ModalHeader className="py-3" />
                             <ModalBody className="table-success text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-check fa-fw text-success mb-3"></i>
-                                    <h6>Success</h6>
-                                    <p>
-                                        Better check yourself, you&apos;re not looking too good.
-                                    </p>
-                                    <UncontrolledModal.Close color="success" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="success" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                                <i className="fa fa-5x fa-check fa-fw modal-icon mb-3"></i>
+                                <h6>Success</h6>
+                                <p className="modal-text">
+                                    Better check yourself, you're not looking too good.
+                                </p>
+                                <UncontrolledModal.Close color="success" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close color="link" className="text-success">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -766,22 +754,22 @@ const Modals = () => (
                             See Modal  <i className="fa fa-angle-right ml-1"></i>
                         </Button>
                         { /* START Example Modal */}
-                        <UncontrolledModal target="modalDefault406">
+                        <UncontrolledModal target="modalDefault406" className="modal-dark">
+                            <ModalHeader className="py-3" />
                             <ModalBody className="table-light text-center px-5">
-                                <div className="my-5">
-                                    <i className="fa fa-5x fa-exclamation fa-fw text-secondary mb-3"></i>
-                                    <h6>Attention</h6>
-                                    <p>
-                                        This alert needs your attention, but it&apos;s not important.
-                                    </p>
-                                    <UncontrolledModal.Close color="secondary" className="mr-2">
-                                        Save
-                                    </UncontrolledModal.Close>
-                                    <UncontrolledModal.Close color="secondary" outline>
-                                        Close
-                                    </UncontrolledModal.Close>
-                                </div>
+                                <i className="fa fa-5x fa-exclamation fa-fw modal-icon mb-3"></i>
+                                <h6>Attention</h6>
+                                <p className="modal-text">
+                                    This alert needs your attention, but it's not important.
+                                </p>
+                                <UncontrolledModal.Close color="secondary" className="mr-2">
+                                    Save
+                                </UncontrolledModal.Close>
+                                <UncontrolledModal.Close color="link" className="text-secondary">
+                                    Close
+                                </UncontrolledModal.Close>
                             </ModalBody>
+                            <ModalFooter className="py-3" />
                         </UncontrolledModal>
                     { /* END Example Modal */}
                     </CardBody>
@@ -793,5 +781,4 @@ const Modals = () => (
         { /* START Section 3 */}
     </Container>
 );
-
 export default Modals;

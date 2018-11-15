@@ -26,9 +26,9 @@
     "file-loader": "^2.0.0"
   },
   "dependencies": {
-    "@owczar/dashboard-style--main": "^0.1.8",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
+    "@owczar/dashboard-style--main": "^0.1.14",
     "bootstrap": "^4.1.1",
     "compression": "^1.7.3",
     "express": "^4.16.4",
