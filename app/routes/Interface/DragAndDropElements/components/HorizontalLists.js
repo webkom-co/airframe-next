@@ -162,13 +162,13 @@ export class HorizontalLists extends React.Component {
                     <RowList
                         listId="listB"
                         items={ this.state.listBItems }
-                        title="Candidates waiting for an interview"
+                        title="Candidates Interview"
                         className="mt-4"
                     />
                     <RowList
                         listId="listC"
                         items={ this.state.listCItems }
-                        title="Candidates who are ready for Testing"
+                        title="Candidates Testing"
                         className="mt-4"
                     />
                 </DragDropContext>

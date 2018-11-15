@@ -136,7 +136,7 @@ class Column extends React.Component {
                         {...provided.draggableProps}
                     >
                         <Card className="h-100">
-                            <CardHeader {...provided.dragHandleProps}>
+                            <CardHeader {...provided.dragHandleProps} className="b-0 bg-none">
                                 <CardTitle className="h6 mb-0">
                                     <i className="fa fa-ellipsis-v mr-3 text-muted" />
                                     { title }
@@ -159,8 +159,8 @@ const initialState = {
     listCItems: _.times(_.random(3, 8), generateItem),
     lists: [
         { id: 'listA', title: 'All Candidates' },
-        { id: 'listB', title: 'Candidates waiting for an interview' },
-        { id: 'listC', title: 'Candidates who are ready for Testing' }
+        { id: 'listB', title: 'Candidates Interview' },
+        { id: 'listC', title: 'Candidates Testing' }
     ]
 };
 export class MultipleVerticalLists extends React.Component {
