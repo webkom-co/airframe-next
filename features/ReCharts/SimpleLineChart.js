@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { 
     Line, 
     CartesianGrid, 
@@ -39,8 +40,16 @@ const generateActiveDot = (props) => (
     />
 );
 
-const SimpleLineChart = () => (
-    <ResponsiveContainer width='100%' aspect={6.0/3.0}>
+const SimpleLineChart = ({height, className}) => (
+    <ResponsiveContainer
+        width='100%'
+        className={ className }
+        {...(!_.isUndefined(height) ? {
+            height
+        } : {
+            aspect: 2 / 1
+        })}
+    >
         <LineChart data={data}
             margin={{top: 5, right: 30, left: 20, bottom: 5}}>
            <XAxis dataKey="name"/>
@@ -53,5 +62,9 @@ const SimpleLineChart = () => (
       </LineChart>
     </ResponsiveContainer>
 );
+SimpleLineChart.propTypes = {
+    height: PropTypes.string,
+    className: PropTypes.string
+}
 
 export { SimpleLineChart };

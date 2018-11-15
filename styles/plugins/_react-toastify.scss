@@ -1,0 +1,96 @@
+@import "~react-toastify/scss/main.scss";
+@import "../variables.scss";
+
+.Toastify__toast {
+	padding: 20px;
+	border-radius: 3px;
+}
+.Toastify__toast p {
+	color:  $black;
+}
+
+// Toastiy: "SUCCESS" Alert
+.Toastify__toast--success h6 {
+	color:  $success;
+	font-weight: 600;
+}
+.Toastify__toast--success .fa-check {
+	color:  $success;
+}
+.Toastify__toast--success .fa-check-circle {
+	color:  $success !important;
+}
+.Toastify__toast--success {
+	background-color: lighten($success, 46% );
+	border: 1px solid lighten($success, 32% );
+}
+.Toastify__close-button--success {
+	color: $success;
+}
+
+// Toastiy: "INFO" Alert
+.Toastify__toast--info h6 {
+	color:  $info;
+	font-weight: 600;
+}
+.Toastify__toast--info .fa-info {
+	color:  $info;
+}
+.Toastify__toast--info {
+	background-color: lighten($info, 46% );
+	border: 1px solid lighten($info, 32% );
+}
+.Toastify__close-button--info {
+	color: $info;
+}
+
+// Toastiy: "WARNING" Alert
+.Toastify__toast--warning h6 {
+	color:  $warning;
+	font-weight: 600;
+}
+.Toastify__toast--warning .fa-exclamation {
+	color:  $warning;
+}
+.Toastify__toast--warning {
+	background-color: lighten($warning, 37% );
+	border: 1px solid lighten($warning, 26% );
+}
+.Toastify__close-button--warning {
+	color: $warning;
+}
+
+// Toastiy: "ERROR" Alert
+.Toastify__toast--error h6 {
+	color:  $danger;
+	font-weight: 600;
+}
+.Toastify__toast--error .fa-close {
+	color:  $danger;
+}
+.Toastify__toast--error {
+	background-color: lighten($danger, 37% );
+	border: 1px solid lighten($danger, 32% );
+}
+.Toastify__close-button--error {
+	color: $danger;
+}
+
+// Toastiy: "DEFAULT" Alert
+.Toastify__toast--default h6 {
+	color:  $black;
+	font-weight: 600;
+}
+.Toastify__toast--default p {
+	color:  $text-muted;
+}
+.Toastify__toast--default .fa-close {
+	color:  $text-muted;
+}
+.Toastify__toast--default {
+	background-color: $white;
+	border: 1px solid $gray-400;
+}
+.Toastify__close-button--default {
+	color: $black;
+}

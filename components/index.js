@@ -5,8 +5,10 @@ import Card from './Card';
 import CardHeader from './CardHeader';
 import Checkable from './Checkable';
 import CustomInput from './CustomInput';
+import Divider from './Divider';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
+import Grid from './FloatGrid';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
@@ -19,11 +21,13 @@ import Progress from './Progress';
 import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
+import StarRating from './StarRating';
 import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
 import UncontrolledPopover from './UncontrolledPopover';
 import UncontrolledTabs from './UncontrolledTabs';
 import UniversalMatchMedia from './UniversalMatchMedia';
+import Wizard from './Wizard';
 
 // Export non overriden Reactstrap components
 export {
@@ -110,8 +114,10 @@ export {
     CardHeader,
     Checkable,
     CustomInput,
+    Divider,
     EmptyLayout,
     ExtendedDropdown,
+    Grid,
     IconWithBadge,
     InputGroupAddon,
     IsInteractive,
@@ -126,9 +132,11 @@ export {
     Sidebar,
     SidebarMenu,
     SidebarTrigger,
+    StarRating,
     Tools,
     UncontrolledPopover,
     UncontrolledTabs,
     UncontrolledModal,
-    UniversalMatchMedia
+    UniversalMatchMedia,
+    Wizard
 };
