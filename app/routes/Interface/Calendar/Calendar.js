@@ -7,6 +7,7 @@ import {
     Container
 } from './../../../components';
 
+import { HeaderMain } from "../../components/HeaderMain";
 import events from './events';
 
 const DragAndDropCalendar = withDragAndDrop(BigCalendar)
@@ -83,6 +84,10 @@ export class Calendar extends React.Component {
     render() {
         return (
             <Container>
+                <HeaderMain 
+                    title="Calendar"
+                    className="mb-5 mt-4"
+                />
                 <DragAndDropCalendar
                     style={{
                         minHeight: '720px'
