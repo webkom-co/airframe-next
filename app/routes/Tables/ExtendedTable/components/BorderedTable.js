@@ -27,6 +27,12 @@ export const BorderedTable = () => (
         <h6 className="mt-0">
             Bordered Table
         </h6>
-        <BootstrapTable keyField='id' data={ data } columns={ columns } bordered />
+        <BootstrapTable
+            classes='table-responsive-sm'
+            keyField='id'
+            data={ data }
+            columns={ columns }
+            bordered
+        />
     </React.Fragment>
 );

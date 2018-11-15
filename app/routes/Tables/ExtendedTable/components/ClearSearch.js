@@ -48,6 +48,7 @@ export const ClearSearch = () => (
                     </div>
                 </div>
                 <BootstrapTable
+                    classes="table-responsive-sm"
                     bordered={ false }
                     { ...props.baseProps }
                 />
