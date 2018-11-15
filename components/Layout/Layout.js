@@ -63,40 +63,43 @@ class Layout extends React.Component {
 
         this.lastLgSidebarCollapsed = this.state.sidebarCollapsed;
         this.containerRef = React.createRef();
+        this.layoutAdjuster
     }
 
-    componentDidMount() {
-        // Determine the current window size
-        // and set it up in the context state
-        const layoutAdjuster = () => {
-            const { screenSize } = this.state;
-            let currentScreenSize;
+    // Determine the current window size
+    // and set it up in the context state
+    layoutAdjuster = () => {
+        const { screenSize } = this.state;
+        let currentScreenSize;
 
-            _.forOwn(responsiveBreakpoints, (value, key) => {
-                const queryParts = [
-                    `${ _.isUndefined(value.min) ? '' : `(min-width: ${value.min}px)` }`,
-                    `${ _.isUndefined(value.max) ? '' : `(max-width: ${value.max}px)`}`
-                ];
-                const query = _.compact(queryParts).join(' and ');
+        _.forOwn(responsiveBreakpoints, (value, key) => {
+            const queryParts = [
+                `${ _.isUndefined(value.min) ? '' : `(min-width: ${value.min}px)` }`,
+                `${ _.isUndefined(value.max) ? '' : `(max-width: ${value.max}px)`}`
+            ];
+            const query = _.compact(queryParts).join(' and ');
 
-                if (window.matchMedia(query).matches) {
-                    currentScreenSize = key;
-                }
-            });
-
-            if (screenSize !== currentScreenSize) {
-                this.setState({ screenSize: currentScreenSize });
-                this.updateLayoutOnScreenSize(currentScreenSize);
+            if (window.matchMedia(query).matches) {
+                currentScreenSize = key;
             }
-        };
+        });
 
+        if (screenSize !== currentScreenSize) {
+            this.setState({ screenSize: currentScreenSize });
+            this.updateLayoutOnScreenSize(currentScreenSize);
+        }
+    };
+
+    resize = () => {
+        setTimeout(this.layoutAdjuster, 0);
+    };
+
+    componentDidMount() {
         // Add window initialization
         if (typeof window !== 'undefined') {
-            window.addEventListener('resize', () => {
-                setTimeout(layoutAdjuster.bind(this), 0);
-            });
+            window.addEventListener('resize', this.resize);
             
-            layoutAdjuster();
+            this.layoutAdjuster();
 
             window.requestAnimationFrame(() => {
                 this.setState({ animationsDisabled: false });
@@ -156,6 +159,10 @@ class Layout extends React.Component {
 
         // Update positions of STICKY navbars
         this.updateNavbarsPositions();
+    }
+
+    componentWillUnmount() {
+        window.removeEventListener('resize', this.resize);
     }
 
     updateLayoutOnScreenSize(screenSize) {
@@ -232,7 +239,7 @@ class Layout extends React.Component {
                 </Head>
                 <div className={ layoutClass } ref={ this.containerRef }>
                     { 
-                        !this.state.sidebarHidden && React.cloneElement(sidebar, {
+                        !this.state.sidebarHidden && sidebar && React.cloneElement(sidebar, {
                             sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (
                                 this.state.screenSize === 'lg' || this.state.screenSize === 'xl'
                             ),

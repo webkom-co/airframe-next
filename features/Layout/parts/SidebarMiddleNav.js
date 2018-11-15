@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import { SidebarMenu } from './../../components';
-import isInteractive from './../../components/IsInteractive';
+import { SidebarMenu } from './../../../components';
+import isInteractive from './../../../components/IsInteractive';
 
 const SidebarMiddleNav = ({ isInteractive }) => (
     <SidebarMenu disabled={ !isInteractive }>

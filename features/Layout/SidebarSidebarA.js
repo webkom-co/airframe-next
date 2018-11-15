@@ -5,12 +5,12 @@ import {
     SidebarTrigger
 } from './../../components';
 
-import { SidebarMiddleNav } from './SidebarMiddleNav';
+import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
 
-import { SidebarTopB } from '../../Sidebar/SidebarTopB'
-import { SidebarBottomB } from '../../Sidebar/SidebarBottomB'
+import { SidebarTopB } from '../Sidebar/SidebarTopB'
+import { SidebarBottomB } from '../Sidebar/SidebarBottomB'
 
-export const SidebarASidebar = () => (
+export const SidebarSidebarA = () => (
     <Sidebar>
         { /* START SIDEBAR-OVERLAY: Close (x) */ }
         <Sidebar.Close>

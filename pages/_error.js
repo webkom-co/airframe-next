@@ -8,12 +8,15 @@ export default class Page extends React.Component {
     }
 
     static async getInitialProps({ res }) {
-        if (res.statusCode === 404) {
-            res.writeHead(301, {Location: `/pages/error-404`});
-            res.end();
-        }
+        if (res) {
+            if (res.statusCode === 404) {
+                res.writeHead(301, {Location: `/pages/error-404`});
+                res.end();
+            }
 
-        return { statusCode: res.statusCode }
+            return { statusCode: res.statusCode }
+        }
+        return { };
     }
 
     render() {

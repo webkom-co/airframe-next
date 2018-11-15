@@ -7,12 +7,12 @@ import {
     Tools
 } from './../../components';
 
-import { SidebarMiddleNav } from './SidebarMiddleNav';
+import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
 
 import { SidebarTopA } from './../Sidebar/SidebarTopA'
 import { SidebarBottomA } from './../Sidebar/SidebarBottomA'
 
-export const DefaultSidebar = () => (
+export const SidebarDefault = () => (
     <Sidebar>
         { /* START SIDEBAR-OVERLAY: Close (x) */ }
         <Sidebar.Close>

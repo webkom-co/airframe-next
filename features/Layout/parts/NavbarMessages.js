@@ -17,7 +17,7 @@ import {
     Input,
     InputGroupAddon,
     Button
-} from './../../components';
+} from './../../../components';
 
 const messagesColors = [
     "text-success",

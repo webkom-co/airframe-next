@@ -5,7 +5,7 @@ import {
     Link,
     NavItem,
     NavLink
-} from './../../components';
+} from './../../../components';
 
 const NavbarUser = (props) => (
     <NavItem { ...props }>

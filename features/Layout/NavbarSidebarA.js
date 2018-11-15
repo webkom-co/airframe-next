@@ -8,11 +8,11 @@ import {
     SidebarTrigger
 } from './../../components';
 
-import { NavbarActivityFeed } from './NavbarActivityFeed';
-import { NavbarMessages } from './NavbarMessages';
-import { NavbarUser } from './NavbarUser';
+import { NavbarActivityFeed } from './parts/NavbarActivityFeed';
+import { NavbarMessages } from './parts/NavbarMessages';
+import { NavbarUser } from './parts/NavbarUser';
 
-export const SidebarANavbar = () => (
+export const NavbarSidebarA = () => (
     <Navbar light color="none" expand="xs">
         <Nav navbar>
             <NavItem className="mr-3">
