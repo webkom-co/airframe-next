@@ -6,7 +6,7 @@ import {
 } from './..';
 
 import { Consumer } from './context';
-import classes from './AccordionHeader.scss';
+import './../../styles/elements/accordion-header.scss';
 
 export const AccordionHeader = (props) => (
     <Consumer>
@@ -16,7 +16,7 @@ export const AccordionHeader = (props) => (
                 className={
                     classNames(
                         props.className,
-                        classes.header
+                        'accordion-header'
                     )
                 }
                 onClick={ onToggle}

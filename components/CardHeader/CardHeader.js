@@ -5,14 +5,14 @@ import {
     CardHeader as BsCardHeader
 } from 'reactstrap';
 
-import classes from './CardHeader.scss';
+import './../../styles/elements/card-header.scss';
 
 const CardHeader = (props) => {
     const { type, color, className, children, ...otherProps } = props;
     const cardHeaderClass = classNames(className,
-        classes['custom-card-header'],
-        type && classes[`custom-card-header--${ type }`],
-        color && classes[`custom-card-header--color-${ color }`]
+        'custom-card-header',
+        type && `custom-card-header--${ type }`,
+        color && `custom-card-header--color-${ color }`
     );
     return (
         <BsCardHeader className={ cardHeaderClass } { ...otherProps }>

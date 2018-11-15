@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@owczar/dashboard-style--main": "^0.1.8",
+    "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "bootstrap": "^4.1.1",
     "compression": "^1.7.3",
