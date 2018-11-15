@@ -27,6 +27,12 @@ export const BasicTable = () => (
         <h6 className="mt-0">
             Basic Table
         </h6>
-        <BootstrapTable keyField='id' data={ data } columns={ columns } bordered={ false } />
+        <BootstrapTable
+            classes="table-responsive-sm"
+            keyField='id'
+            data={ data }
+            columns={ columns }
+            bordered={ false }
+        />
     </React.Fragment>
 );

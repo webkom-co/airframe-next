@@ -24,7 +24,8 @@ class NumberFilter extends React.Component {
         placeholder: PropTypes.string,
         getFilter: PropTypes.func,
         comparators: PropTypes.array,
-        comparator: PropTypes.string
+        comparator: PropTypes.string,
+        onClick: PropTypes.func
     }
 
     static defaultProps = {
@@ -67,6 +68,14 @@ class NumberFilter extends React.Component {
         }
     }
 
+    handleClick(e) {
+        e.stopPropagation();
+
+        if (this.props.onClick) {
+            this.props.onClick(e);
+        }
+    }
+
     render() {
         const { placeholder, comparators } = this.props;
         const { comparator } = this.state;
@@ -78,6 +87,7 @@ class NumberFilter extends React.Component {
                         type="select"
                         bsSize="sm"
                         onChange={(e) => { this.setState({ comparator: e.target.value }) }}
+                        onClick={this.handleClick}
                         value={ comparator }
                         className="d-block mr-1"
                         id={this.comparatorInputId}
@@ -101,6 +111,7 @@ class NumberFilter extends React.Component {
                     type="number"
                     bsSize="sm"
                     onChange={(e) => { this.setState({ value: e.target.value }) }}
+                    onClick={this.handleClick}
                     value={ this.state.value }
                     placeholder={ placeholder }
                     id={this.valueInputId}

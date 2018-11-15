@@ -57,6 +57,7 @@ export const LargeTable = () => (
             </CardHeader>
             <div className={ classes['table-scroll-wrap'] }>
                 <BootstrapTable
+                    classes="table-responsive-sm"                
                     keyField='id'
                     data={ data }
                     columns={ columns }
