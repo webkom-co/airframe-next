@@ -9,6 +9,7 @@ import {
 import Analytics from './Dashboards/Analytics';
 import ProjectsDashboard from './Dashboards/Projects';
 import System from './Dashboards/System';
+import Monitor from './Dashboards/Monitor';
 
 import Widgets from './Widgets';
 
@@ -100,6 +101,7 @@ const getRoutes = () => {
             <Route path="/dashboards/analytics" exact component={Analytics} />
             <Route path="/dashboards/projects" exact component={ProjectsDashboard} />
             <Route path="/dashboards/system" exact component={System} />
+            <Route path="/dashboards/monitor" exact component={Monitor} />
 
             <Route path='/widgets' exact component={Widgets} />
             
