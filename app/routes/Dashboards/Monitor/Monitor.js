@@ -1,5 +1,4 @@
 import React from 'react';
-import faker from 'faker';
 import { Link } from 'react-router-dom';
 import {
     Container,
@@ -9,14 +8,7 @@ import {
     Badge,
     Table,
     CardTitle,
-    Button,
-    InputGroup,
-    InputGroupAddon,
-    Input,
     Progress,
-    ListGroup,
-    ListGroupItem,
-    Media,
     Col
 } from './../../../components';
 import { setupPage } from './../../../components/Layout/setupPage';
@@ -24,17 +16,26 @@ import { setupPage } from './../../../components/Layout/setupPage';
 import { HeaderMain } from "../../components/HeaderMain";
 
 import {
-    TasksMedia
-} from "../../components/ProjectsDashboards/TasksMedia";
-import {
-    ProjectsList
-} from "../../components/ProjectsDashboards/ProjectsList";
-import {
     TinyDonutChart
-} from "../../components/ProjectsDashboards/TinyDonutChart"
+} from "../../components/Monitor/TinyDonutChart"
 import {
-    TimelineMini
-} from "../../components/Timeline/TimelineMini"
+    TinyDonutChartBig
+} from "../../components/Monitor/TinyDonutChartBig"
+import {
+    TrTableMonitor
+} from "../../components/Monitor/TrTableMonitor"
+import {
+    TinyAreaChart
+} from "../../components/Monitor/TinyAreaChart"
+
+/*eslint-disable */
+const progressCompletion = [
+    "25",
+    "50",
+    "75",
+    "97"
+];
+/*eslint-enable */
 
 const Monitor = () => (
     <Container>
@@ -75,30 +76,33 @@ const Monitor = () => (
                                 <h6 className="mb-1">Memory <small>(Ram)</small></h6>
                                 <p>GSkill 2 x 8 GB DDR3 @1333 Mhz</p>
                             </div>
-                            <div className="mb-3">
-                                <h2 className="mb-0">52 <small>GB</small></h2>
-                                <span>Total Memory</span>
+                            <div className="mb-3 d-flex">
+                                <TinyDonutChart />
+                                <div className="ml-2 align-self-center">
+                                    <h2 className="mb-0">52 <small>GB</small></h2>
+                                    <span>Total Memory</span>
+                                </div>
                             </div>
                             <div className="d-flex justify-content-between">
                                 <div className="text-left">
                                     <div className="small mb-2">
                                         <i className="fa fa-circle fa-fw text-info"></i> Allocated
                                     </div>
-                                    <h6 className="mb-0">48,775 MB</h6>
+                                    <h6 className="mb-0">48,7 MB</h6>
                                     <span>79%</span>
                                 </div>
                                 <div className="text-left">
                                     <div className="small mb-2">
                                         <i className="fa fa-circle fa-fw text-primary"></i> In Cache
                                     </div>
-                                    <h6 className="mb-0">26,938 MB</h6>
+                                    <h6 className="mb-0">26,9 MB</h6>
                                     <span>65%</span>
                                 </div>
                                 <div className="text-left">
                                     <div className="small mb-2">
-                                        <i className="fa fa-circle fa-fw text-muted"></i> Available
+                                        <i className="fa fa-circle fa-fw text-gray-300"></i> Available
                                     </div>
-                                    <h6 className="mb-0">2,775 MB</h6>
+                                    <h6 className="mb-0">2,7 MB</h6>
                                     <span>34%</span>
                                 </div>
                             </div>
@@ -122,6 +126,7 @@ const Monitor = () => (
                                 <p>Intel Celeron G1610 @2.60Ghz</p>
                             </div>
                         </div>
+                        <TinyAreaChart />
                     </CardBody>
                 </Card>
                 <Card className="mb-3">
@@ -129,12 +134,11 @@ const Monitor = () => (
                         <CardTitle tag="h6" className="mb-4">
                            Hardware Temperature
                         </CardTitle>
-                        <div>
+                        <div className="mb-4">
                             <div>
-                                <h6 className="mb-1">CPU <small>(idle)</small></h6>
-                                <p>Intel Celeron G1610 @2.60Ghz</p>
+                                <h6>CPU <small>(idle)</small></h6>
                             </div>
-                            <div className="d-flex justify-content-between">
+                            <div className="d-flex justify-content-between mb-3">
                                 <div className="text-left">
                                     <i className="fa fa-caret-down fa-fw text-danger"></i>Min: 19ºC
                                 </div>
@@ -145,6 +149,41 @@ const Monitor = () => (
                                     <i className="fa fa-caret-up fa-fw text-success"></i>Min: 32ºC
                                 </div>
                             </div>
+                            <TinyAreaChart />
+                        </div>
+                        <div className="mb-4">
+                            <div>
+                                <h6>HDD1 WD30EZRX <small>(ada0)</small></h6>
+                            </div>
+                            <div className="d-flex justify-content-between mb-3">
+                                <div className="text-left">
+                                    <i className="fa fa-caret-down fa-fw text-danger"></i>Min: 19ºC
+                                </div>
+                                <div className="text-left">
+                                    <i className="fa fa-caret-up fa-fw text-success"></i>Min: 26ºC
+                                </div>
+                                <div className="text-left">
+                                    <i className="fa fa-caret-up fa-fw text-success"></i>Min: 32ºC
+                                </div>
+                            </div>
+                            <TinyAreaChart />
+                        </div>
+                        <div>
+                            <div>
+                                <h6>HDD1 WD30EZRX <small>(ada1)</small></h6>
+                            </div>
+                            <div className="d-flex justify-content-between mb-3">
+                                <div className="text-left">
+                                    <i className="fa fa-caret-down fa-fw text-danger"></i>Min: 19ºC
+                                </div>
+                                <div className="text-left">
+                                    <i className="fa fa-caret-up fa-fw text-success"></i>Min: 26ºC
+                                </div>
+                                <div className="text-left">
+                                    <i className="fa fa-caret-up fa-fw text-success"></i>Min: 32ºC
+                                </div>
+                            </div>
+                            <TinyAreaChart />
                         </div>
                     </CardBody>
                 </Card>
@@ -154,33 +193,129 @@ const Monitor = () => (
                     Nesciunt odit eius nihil molestiae tenetur earum enim quidem. Aperiam non sapiente voluptatum in doloremque rerum magnam quae sed. 
                     Quisquam eos non voluptate sapiente qui temporibus harum in illo. Aliquid at dolor labore. Qui error modi.
                 </p>
-                <div className="hr-text hr-text-left mt-2 mb-4">
+                <div className="hr-text hr-text-left mt-4 mb-4">
                     <span>Volume Status</span>
                 </div>
                 <Row className="mb-5">
-                    <Col lg={ 4 }>
+                    <Col lg={ 3 }>
                         <div>
                             <div className="mb-3">
                                 <h6 className="mb-1">Path</h6>
                                 <Badge color="secondary" pill>/mtn/volume1</Badge>
                             </div>
-                            <div className="mb-3">
-                                <h2 className="mb-0">52% <small>GB</small></h2>
+                            <div className="mb-0">
+                                <h2 className="mb-0">2.24 <small>TiB</small></h2>
                                 <span>Volume Size</span>
                             </div>
+                            <TinyDonutChartBig 
+                                pieColor="primary"
+                            />
                             <div className="d-flex justify-content-between">
                                 <div className="text-left">
                                     <div className="small mb-2">
-                                        <i className="fa fa-circle fa-fw text-primary"></i> Used Space
+                                        <i className="fa fa-circle fa-fw text-purple"></i> Used Space
                                     </div>
-                                    <h6 className="mb-0">48,775 MB</h6>
+                                    <h6 className="mb-0">483,7 MB</h6>
                                     <span>79%</span>
                                 </div>
                                 <div className="text-left">
                                     <div className="small mb-2">
-                                        <i className="fa fa-circle fa-fw text-muted"></i> Free Space
+                                        <i className="fa fa-circle fa-fw text-gray-300"></i> Free Space
                                     </div>
-                                    <h6 className="mb-0">26,938 MB</h6>
+                                    <h6 className="mb-0">269,3 MB</h6>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={ 3 }>
+                        <div>
+                            <div className="mb-3">
+                                <h6 className="mb-1">Path</h6>
+                                <Badge color="secondary" pill>/mtn/volume1</Badge>
+                            </div>
+                            <div className="mb-0">
+                                <h2 className="mb-0">5.07 <small>TiB</small></h2>
+                                <span>Volume Size</span>
+                            </div>
+                            <TinyDonutChartBig 
+                                pieColor="purple"
+                            />
+                            <div className="d-flex justify-content-between">
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-purple"></i> Used Space
+                                    </div>
+                                    <h6 className="mb-0">48,7 MB</h6>
+                                    <span>79%</span>
+                                </div>
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-gray-300"></i> Free Space
+                                    </div>
+                                    <h6 className="mb-0">26,9 MB</h6>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={ 3 }>
+                        <div>
+                            <div className="mb-3">
+                                <h6 className="mb-1">Path</h6>
+                                <Badge color="secondary" pill>/mtn/volume1</Badge>
+                            </div>
+                            <div className="mb-0">
+                                <h2 className="mb-0">3.16 <small>TiB</small></h2>
+                                <span>Volume Size</span>
+                            </div>
+                            <TinyDonutChartBig 
+                                pieColor="success"
+                            />
+                            <div className="d-flex justify-content-between">
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-success"></i> Used Space
+                                    </div>
+                                    <h6 className="mb-0">483,3 MB</h6>
+                                    <span>79%</span>
+                                </div>
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-gray-300"></i> Free Space
+                                    </div>
+                                    <h6 className="mb-0">262,9 MB</h6>
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                    </Col>
+                    <Col lg={ 3 }>
+                        <div>
+                            <div className="mb-3">
+                                <h6 className="mb-1">Path</h6>
+                                <Badge color="secondary" pill>/mtn/volume1</Badge>
+                            </div>
+                            <div className="mb-0">
+                                <h2 className="mb-0">9.27 <small>TiB</small></h2>
+                                <span>Volume Size</span>
+                            </div>
+                            <TinyDonutChartBig 
+                                pieColor="yellow"
+                            />
+                            <div className="d-flex justify-content-between">
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-yellow"></i> Used Space
+                                    </div>
+                                    <h6 className="mb-0">482,7 MB</h6>
+                                    <span>79%</span>
+                                </div>
+                                <div className="text-left">
+                                    <div className="small mb-2">
+                                        <i className="fa fa-circle fa-fw text-gray-300"></i> Free Space
+                                    </div>
+                                    <h6 className="mb-0">26,9 MB</h6>
                                     <span>65%</span>
                                 </div>
                             </div>
@@ -201,23 +336,7 @@ const Monitor = () => (
                         </tr>
                     </thead>
                     <tbody>
-                        <tr>
-                            <td className="align-middle">
-                                <span className="text-inverse">HDD1</span> <span className="small">(ada0)</span>
-                            </td>
-                            <td className="align-middle">
-                                Mirror <Badge color="secondary" pill className="ml-2">/mtn/volume1</Badge>
-                            </td>
-                            <td className="align-middle">
-                                <Progress value="44" style={{height: "5px"}} />
-                            </td>
-                            <td>
-                                <span className="text-inverse">7.3.5 TiB</span> / 9.3.1 TiB
-                            </td>
-                            <td className="text-right">
-                                Healthly <i className="fa fa-fw fa-check-circle text-success"></i>
-                            </td>
-                        </tr>
+                        <TrTableMonitor />
                     </tbody>
                 </Table>
             </Col>
