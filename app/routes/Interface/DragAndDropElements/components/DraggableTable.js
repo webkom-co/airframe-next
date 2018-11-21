@@ -131,7 +131,11 @@ const DraggableRow = (props) => (
             { ...provided.draggableProps }
             className={getRowClass(snapshot.isDragging)}
         >
-            <TableCell className="align-middle" { ...provided.dragHandleProps }>
+            <TableCell
+                className="align-middle"
+                isDragOccurring={snapshot.isDragging}
+                { ...provided.dragHandleProps }
+            >
                 <i className="fa fa-fw fa-arrows-v fa-lg d-block mx-auto text-muted" />
             </TableCell>
             <TableCell
