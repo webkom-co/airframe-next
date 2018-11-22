@@ -4,7 +4,6 @@ import _ from 'lodash';
 import classNames from 'classnames';
 
 import { Col as BootstrapCol } from './../';
-import classes from './common.scss';
 
 // Twice Smaller than Bootstrap breakpoints
 const breakPoints = [
@@ -70,7 +69,7 @@ export class Col extends React.Component {
         const otherProps = _.omit(this.props, [..._.keys(Col.propTypes),
             'minW', 'maxW', 'minH', 'maxH', 'moved', 'static', 'isDraggable', 'isResizable']);
         const floatColBpId = trueSize ? getCurrentbreakPoint(trueSize.wPx, breakPoints) : 'xl';
-        const floatColClasses = classNames(className, classes.floatCol,
+        const floatColClasses = classNames(className, 'float-col',
             'float-column', `float-column--size-${floatColBpId}`);
 
         return (

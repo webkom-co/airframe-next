@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 import { Grid as ReactGrid } from './../';
 import { FloatGridContext } from './floatGridContext';
-import classes from './common.scss';
+import './../../styles/components/float-grid.scss';
 
 export class Grid extends React.Component {
     static propTypes = {
@@ -67,8 +67,8 @@ export class Grid extends React.Component {
         ));
 
         const floatWrapClasses = classNames({
-            [classes.static]: !fluid
-        }, className, classes.floatGridParent);
+            ['float-grid-parent__static']: !fluid
+        }, className, 'float-grid-parent');
 
         return(
             active ? (
@@ -86,9 +86,7 @@ export class Grid extends React.Component {
                         className={ floatWrapClasses }
                         ref={ this._gridRef }
                     >
-                        <div className={ classes.floatGridWrap }>
-                            { modifiedChildren }
-                        </div>
+                        { modifiedChildren }
                     </div>
                 </FloatGridContext.Provider>
             ) : (
