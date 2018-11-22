@@ -9,11 +9,11 @@ import {
 } from './../../components';
 
 import { NavbarActivityFeed } from
-    './../Layout/NavbarActivityFeed';
+    './../Layout/parts/NavbarActivityFeed';
 import { NavbarMessages } from
-    './../Layout/NavbarMessages';
+    './../Layout/parts/NavbarMessages';
 import { NavbarUser } from
-    './../Layout/NavbarUser';
+    './../Layout/parts/NavbarUser';
 
 const Navbar202 = () => (
 <React.Fragment>

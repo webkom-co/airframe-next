@@ -14,6 +14,7 @@ import {
     CardHeader,
     Card,
     CardBody,
+    FloatGrid,
     ListGroup,
     ListGroupItem,
     Progress,
@@ -21,7 +22,6 @@ import {
     Button,
     Media
 } from './../../components';
-import { applyColumn } from './../../../components/FloatGrid';
 
 import { HeaderMain } from "../../features/HeaderMain";
 import { MetricVsTarget } from "../../features/Analytics/MetricVsTarget";
