@@ -16,8 +16,8 @@ import {
     Media,
     Avatar,
     AvatarAddOn
-} from './../../../../components';
-import { randomAvatar, randomArray } from './../../../../utilities';
+} from './../../components';
+import { randomAvatar, randomArray } from './../../core/utilities';
 import { reorder, move } from './utilities';
 
 //  Utility Functions
