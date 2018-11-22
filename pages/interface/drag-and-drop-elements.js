@@ -34,36 +34,35 @@ export default class DragAndDropElements extends React.Component {
             <Container>
                 <div className="d-flex">
                     <div>
-                        <HeaderMain title="Drag &amp; Drop Elements" />
-                        <p>
-                            Beautiful, accessible drag and drop for React lists.
-                        </p>
+                        <HeaderMain title="Drag &amp; Drop Elements" 
+                            className="mb-5 mt-4"
+                        />
                     </div>
-                    <Button onClick={ this.onResetState } className="ml-auto align-self-center">
+                    <Button onClick={ this.onResetState } className="ml-auto align-self-center" color="primary" outline>
                         Reset Layout
                     </Button>
                 </div>
 
-                <div className="pt-4">
+                <div className="mb-5">
                     <HeaderDemo
-                        no="#1.01"
+                        no="1"
                         title="Mutliple Verical Lists"
                         subTitle="Both list are draggable horizontally and inner list elements can be swapped or reorderd"
                     />
                     <MultipleVerticalLists ref={ this.multipleVerticalListsRef }/>
                 </div>
 
-                <div className="pt-4">
+                <div className="mb-5">
                     <HeaderDemo
-                        no="#1.02"
+                        no="2"
                         title="Table"
                         subTitle="Allows reordering of the table rows"
                     />
                     <DraggableTable ref={ this.draggableTableRef }/>
                 </div>
-                <div className="pt-4">
+                <div>
                     <HeaderDemo
-                        no="#1.03"
+                        no="3"
                         title="Horizontal Lists"
                         subTitle="Items can be reaordered and moved between lists"
                     />

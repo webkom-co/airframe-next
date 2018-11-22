@@ -12,44 +12,50 @@ import {
     SortTable
 } from './../../features/ExtendedTable';
 
+import { HeaderMain } from "../../features/HeaderMain";
+
 export const ExtendedTable = () => (
     <Container className="tables-extended-table">
-        <Row>
+        <HeaderMain 
+            title="Extended Tables"
+            className="mb-5 mt-4"
+        />
+        <Row className="mb-5">
             <Col>
                 <AdvancedTableA />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mb-5">
             <Col>
                 <AdvancedTableB />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <BasicTable />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <LargeTable />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <BorderedTable />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <SortTable />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <ClearSearch />
             </Col>
         </Row>
-        <Row className="mt-4">
+        <Row className="mt-5">
             <Col>
                 <CellEdit />
             </Col>

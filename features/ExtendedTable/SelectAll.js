@@ -33,6 +33,7 @@ export const SelectAll = () => (
             Select All
         </h6>
         <BootstrapTable
+            classes="table-responsive"
             keyField='id'
             data={ data }
             columns={ columns }

@@ -8,6 +8,7 @@ import {
 } from './../../components';
 
 import events from './../../features/Calendar/events';
+import { HeaderMain } from "./../../features/HeaderMain";
 
 const DragAndDropCalendar = withDragAndDrop(BigCalendar)
 const localizer = BigCalendar.momentLocalizer(moment) 
@@ -82,6 +83,10 @@ export default class Calendar extends React.Component {
     render() {
         return (
             <Container>
+                <HeaderMain 
+                    title="Calendar"
+                    className="mb-5 mt-4"
+                />
                 <DragAndDropCalendar
                     style={{
                         minHeight: '720px'

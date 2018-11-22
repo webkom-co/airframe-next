@@ -15,6 +15,8 @@ import {
     FilesList
 } from './../../features/Dropzone';
 
+import { HeaderMain } from "../../components/HeaderMain";
+
 export class Dropzone extends React.Component {
     state = {
         isOver: false,
@@ -30,15 +32,14 @@ export class Dropzone extends React.Component {
 
         return (
             <Container>
+                <HeaderMain 
+                    title="Dropzone"
+                    className="mb-5 mt-4"
+                />
                 { /*    DropZone    */ }
-                <div>
+                <div className="mb-4">
                     <p className="mb-3">
                         Simple HTML5-compliant drag&apos;n&apos;drop zone for files built with React.js.
-                    </p>
-                    <p className='small text-uppercase text-muted'>
-                        <strong>
-                            Example demonstrating drag nad drop of native files
-                        </strong>
                     </p>
                     <FileDrop
                         className={dropzoneClass}
@@ -48,13 +49,13 @@ export class Dropzone extends React.Component {
                         onDrop={this._filesDropped}
                     >
                         <i className="fa fa-cloud-upload fa-fw fa-3x mb-3"></i>
-                        <h4 className='m-t-0'>
+                        <h5 className='mt-0'>
                             Upload Your files
-                        </h4>
+                        </h5>
                         <p>
                             Drag a file here or <span className='text-primary'>browse</span> for a file to upload.
                         </p>
-                        <p>
+                        <p className="small">
                             JPG, GIF, PNG, MOV, and AVI. Please choose files under 2GB for upload. File sizes are 400x300px.
                         </p>
                     </FileDrop>

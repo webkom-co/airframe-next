@@ -12,7 +12,8 @@ class SelectFilter extends React.Component {
         onFilter: PropTypes.func.isRequired,
         options: PropTypes.array.isRequired,
         placeholder: PropTypes.string,
-        getFilter: PropTypes.func
+        getFilter: PropTypes.func,
+        onClick: PropTypes.func
     }
 
     constructor() {
@@ -22,6 +23,7 @@ class SelectFilter extends React.Component {
             value: ''
         }
         this.inputId = uid();
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -38,6 +40,14 @@ class SelectFilter extends React.Component {
         }
     }
 
+    handleClick(e) {
+        e.stopPropagation();
+
+        if (this.props.onClick) {
+            this.props.onClick(e);
+        }
+    }
+
     render() {
         const { placeholder, options } = this.props;
         return (
@@ -45,6 +55,7 @@ class SelectFilter extends React.Component {
                 type="select"
                 bsSize="sm"
                 onChange={(e) => { this.setState({ value: e.target.value }) }}
+                onClick={ this.handleClick }
                 value={ this.state.value }
                 className="d-block"
                 id={this.inputId}

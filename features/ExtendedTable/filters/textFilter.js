@@ -13,7 +13,8 @@ class TextFilter extends React.Component {
         column: PropTypes.object.isRequired,
         onFilter: PropTypes.func.isRequired,
         placeholder: PropTypes.string,
-        getFilter: PropTypes.func
+        getFilter: PropTypes.func,
+        onClick: PropTypes.func
     }
 
     constructor() {
@@ -22,6 +23,8 @@ class TextFilter extends React.Component {
         this.state = {
             value: ''
         }
+
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
@@ -38,6 +41,14 @@ class TextFilter extends React.Component {
         }
     }
 
+    handleClick(e) {
+        e.stopPropagation();
+
+        if (this.props.onClick) {
+            this.props.onClick(e);
+        }
+    }
+
     render() {
         const { onFilter, placeholder } = this.props;
         return (
@@ -51,6 +62,7 @@ class TextFilter extends React.Component {
                     type="text"
                     bsSize="sm"
                     onChange={(e) => this.setState({value: e.target.value})}
+                    onClick={ this.handleClick }
                     value={ this.state.value }
                     placeholder={ placeholder }
                 />

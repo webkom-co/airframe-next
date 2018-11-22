@@ -217,6 +217,7 @@ export class AdvancedTableB extends React.Component {
                             </div>
                         </div>
                         <BootstrapTable
+                            classes="table-responsive-lg"
                             bordered={ false }
                             expandRow={ expandRow }
                             responsive

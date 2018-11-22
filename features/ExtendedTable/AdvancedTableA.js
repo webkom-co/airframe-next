@@ -265,6 +265,7 @@ export class AdvancedTableA extends React.Component {
                             </div>
                         </div>
                         <BootstrapTable
+                            classes="table-responsive"
                             pagination={ paginationDef }
                             filter={ filterFactory() }
                             selectRow={ selectRowConfig }

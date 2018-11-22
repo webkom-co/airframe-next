@@ -130,7 +130,11 @@ const DraggableRow = (props) => (
             { ...provided.draggableProps }
             className={getRowClass(snapshot.isDragging)}
         >
-            <TableCell className="align-middle" { ...provided.dragHandleProps }>
+            <TableCell
+                className="align-middle"
+                isDragOccurring={snapshot.isDragging}
+                { ...provided.dragHandleProps }
+            >
                 <i className="fa fa-fw fa-arrows-v fa-lg d-block mx-auto text-muted" />
             </TableCell>
             <TableCell
@@ -254,20 +258,20 @@ export class DraggableTable extends React.Component {
         return (
             <Card className={ this.props.className }>
                 <CardHeader className="bg-none bb-0">
-                    <CardTitle className="h6 mb-0">
-                        Queue of Candidates for the Tests
+                    <CardTitle className="h6">
+                        Queue of Candidates
                     </CardTitle>
                 </CardHeader>
                 <DragDropContext onDragEnd={this.onDragEnd}>
                     <Table className="mb-0">
                         <thead>
                             <tr>
-                                <td className="bt-0"></td>
-                                <td className="bt-0"></td>
-                                <td className="bt-0">First &amp; Last name:</td>
-                                <td className="bt-0">Skills:</td>
-                                <td className="bt-0">Interview Passed in:</td>
-                                <td className="bt-0 text-right">Protfolio:</td>
+                                <th className="bt-0"></th>
+                                <th className="bt-0">Photo</th>
+                                <th className="bt-0">Name</th>
+                                <th className="bt-0">Skills</th>
+                                <th className="bt-0">Interview Passed in</th>
+                                <th className="bt-0 text-right">Portfolio</th>
                             </tr>
                         </thead>
                         <Droppable droppableId="table">

@@ -14,39 +14,39 @@ import {
 } from './utilities';
 
 export const FilesList = ({ files, onFileRemove }) => (
-    <Table responsive hover className="mt-2">
+    <Table responsive hover className="mt-3">
         <thead>
             <tr>
-                <th></th>
-                <th>File Name</th>
-                <th>Size</th>
-                <th>Owner</th>
-                <th>Modified Date</th>
-                <th className="text-right">Actions</th>
+                <th className="bt-0"></th>
+                <th className="bt-0">File Name</th>
+                <th className="bt-0">Size</th>
+                <th className="bt-0">Owner</th>
+                <th className="bt-0">Modified Date</th>
+                <th className="bt-0 text-right">Actions</th>
             </tr>
         </thead>
         <tbody>
         {
             _.map(files, (file, index) => (
                 <tr key={ index }>
-                    <td>
+                    <td className="align-middle">
                         <div className='ph--small'>
                             <i className={`fa fa-fw fa-2x ${getFileIcon(file)}`} />
                         </div>
                     </td>
-                    <td>
+                    <td className="align-middle">
                         { file.name }
                     </td>
-                    <td className="text-uppercase">
+                    <td className="align-middle text-uppercase">
                         { numeral(file.size).format('0.00a') }B
                     </td>
-                    <td>
+                    <td className="align-middle">
                         You
                     </td>
-                    <td>
+                    <td className="align-middle">
                         { moment(file.modifiedDate).format('DD-MMM-YYYY, HH:mm') }
                     </td>
-                    <td className="text-right">
+                    <td className="text-right align-middle">
                         <Button
                             color="link"
                             onClick={() => {onFileRemove(file)}}

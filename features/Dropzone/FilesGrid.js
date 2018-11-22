@@ -17,7 +17,7 @@ import {
 } from './utilities';
 
 export const FilesGrid = ({ files, onFileRemove }) => (
-    <Row className="mt-2">
+    <Row className="mt-4">
     {
         _.map(files, (file, index) => (
             <Col lg={ 4 } md={ 6 } key={index}>
@@ -25,11 +25,11 @@ export const FilesGrid = ({ files, onFileRemove }) => (
                     <div className="card-img-top ph--large">
                         <i className={`fa fa-fw fa-3x ${getFileIcon(file)}`} />
                     </div>
-                    <CardBody>
-                        <p className="d-flex align-items-center mb-0">
-                            <strong className="text-truncate">
+                    <CardBody className="pt-2">
+                        <p className="d-flex align-items-center mb-0 mt-0">
+                            <h6 className="text-truncate mb-0">
                                 { file.name }
-                            </strong>
+                            </h6>
                             <Button
                                 color="link"
                                 onClick={() => {onFileRemove(file)}}
