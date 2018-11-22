@@ -51,7 +51,7 @@
     "webpack-node-externals": "^1.7.2"
   },
   "dependencies": {
-    "@owczar/dashboard-style--main": "^0.1.8",
+    "@owczar/dashboard-style--main": "^0.1.14",
     "bootstrap": "^4.1.1",
     "cross-fetch": "^2.2.2",
     "express": "^4.16.3",
