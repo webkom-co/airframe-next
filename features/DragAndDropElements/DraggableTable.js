@@ -46,8 +46,8 @@ const getTableClass = (isDraggedOver) =>
     });
 
 const getRowClass = (isDragging) =>
-    classNames('row', {
-        'row--dragging': isDragging
+    classNames('dnd-table__row', {
+        'dnd-table__row--dragging': isDragging
     });
 
 // Custom Table Cell - keeps cell width when the row

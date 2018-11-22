@@ -31,7 +31,7 @@ export default class DragAndDropElements extends React.Component {
 
     render() {
         return (
-            <Container>
+            <Container className="interface-dnd-elements">
                 <div className="d-flex">
                     <div>
                         <HeaderMain title="Drag &amp; Drop Elements" 
