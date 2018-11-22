@@ -14,7 +14,6 @@ import {
     CardHeader,
     Card,
     CardBody,
-    FloatGrid,
     ListGroup,
     ListGroupItem,
     Progress,
@@ -22,6 +21,7 @@ import {
     Button,
     Media
 } from './../../components';
+import { applyColumn } from './../../components/FloatGrid';
 
 import { HeaderMain } from "../../features/HeaderMain";
 import { MetricVsTarget } from "../../features/Analytics/MetricVsTarget";
@@ -83,7 +83,7 @@ class Analytics extends React.Component {
 
         return (
             <React.Fragment>
-                <Container fluid={ false } className="dashboard-analytics">
+                <Container fluid={ false }>
                     <div className="d-flex mt-3 mb-5">
                         <HeaderMain 
                             title="Analytics"
@@ -201,7 +201,7 @@ class Analytics extends React.Component {
                     </div>
                 </Container>
 
-                <Grid>
+                <Grid className="dashboard-analytics">
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }
