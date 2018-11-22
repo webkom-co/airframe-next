@@ -1,25 +1,27 @@
 @import "./../../variables.scss";
 
-.ph--large {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 200px;
-    background-color: $gray-400;
-    margin-bottom: 5px;
-
-    > i {
-        color: #fff;
+.drop-zone {
+    &__ph--large {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 200px;
+        background-color: $gray-400;
+        margin-bottom: 5px;
+    
+        > i {
+            color: #fff;
+        }
     }
-}
-
-.ph--small {
-    display: inline-block;
-    background-color: $gray-400;
-    padding: 7px 5px;
-    border-radius: 7px;
-
-    > i {
-        color: #fff;
+    
+    &__ph--small {
+        display: inline-block;
+        background-color: $gray-400;
+        padding: 7px 5px;
+        border-radius: 7px;
+    
+        > i {
+            color: #fff;
+        }
     }
 }

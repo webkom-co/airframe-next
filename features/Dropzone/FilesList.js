@@ -30,7 +30,7 @@ export const FilesList = ({ files, onFileRemove }) => (
             _.map(files, (file, index) => (
                 <tr key={ index }>
                     <td className="align-middle">
-                        <div className='ph--small'>
+                        <div className='drop-zone__ph--small'>
                             <i className={`fa fa-fw fa-2x ${getFileIcon(file)}`} />
                         </div>
                     </td>

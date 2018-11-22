@@ -14,10 +14,11 @@ import {
     FilesGrid,
     FilesList
 } from './../../features/Dropzone';
+import { HeaderMain } from "../../features/HeaderMain";
 
-import { HeaderMain } from "../../components/HeaderMain";
+import './../../styles/pages/forms/drop-zone.scss';
 
-export class Dropzone extends React.Component {
+export default class Dropzone extends React.Component {
     state = {
         isOver: false,
         files: [],

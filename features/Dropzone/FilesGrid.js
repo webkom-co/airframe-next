@@ -22,7 +22,7 @@ export const FilesGrid = ({ files, onFileRemove }) => (
         _.map(files, (file, index) => (
             <Col lg={ 4 } md={ 6 } key={index}>
                 <Card className="mb-3">
-                    <div className="card-img-top ph--large">
+                    <div className="card-img-top drop-zone__ph--large">
                         <i className={`fa fa-fw fa-3x ${getFileIcon(file)}`} />
                     </div>
                     <CardBody className="pt-2">

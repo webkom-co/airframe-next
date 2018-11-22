@@ -13,7 +13,7 @@ import { Example, ButtonInput, AddonInput } from '../../features/DatePicker';
 
 import { HeaderMain } from "../../features/HeaderMain";
 
-export class DatePickerExamples extends React.Component {
+export default class DatePickerExamples extends React.Component {
     state = {
         startDate: moment(),
         endDate: moment().add(5, 'days')
