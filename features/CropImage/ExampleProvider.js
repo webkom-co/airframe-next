@@ -70,14 +70,18 @@ export class ExampleProvider extends React.Component {
         return (
             <Row>
                 <Col lg={ 6 }>
-                    <ReactCrop
-                        className="d-block"
-                        crop={ position }
-                        src={ src }
-                        onChange={ (position) => { this.setState({ position }) }}
-                        onComplete={ (croppedPosition) => { this.setState({ croppedPosition }) } }
-                        { ...cropProps }
-                    />
+                    {
+                        (typeof window !== 'undefined') && (
+                            <ReactCrop
+                                className="d-block"
+                                crop={ position }
+                                src={ src }
+                                onChange={ (position) => { this.setState({ position }) }}
+                                onComplete={ (croppedPosition) => { this.setState({ croppedPosition }) } }
+                                { ...cropProps }
+                            />
+                        )
+                    }
                 </Col>
                 <Col lg={ 6 } >
                 {

@@ -17,7 +17,7 @@ import {
     CustomPlaceholder
 } from './../../features/Selects';
 
-export const Selects = () => (
+const Selects = () => (
     <Container>
         <Row>
             <Col lg={ 12 }>
@@ -91,3 +91,5 @@ export const Selects = () => (
         </Row>
     </Container>
 );
+
+export default Selects;

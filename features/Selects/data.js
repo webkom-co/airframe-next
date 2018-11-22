@@ -1,6 +1,6 @@
 import _ from 'lodash';
 import faker from 'faker';
-import { randomAvatar } from './../../../utilities';
+import { randomAvatar } from './../../core/utilities';
 
 export const colourOptions = [
     { value: 'ocean', label: 'Ocean', color: '#00B8D9', isFixed: true },

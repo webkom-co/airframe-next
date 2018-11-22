@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import Slider, { Range } from 'rc-slider';
 
-import colors from './../../colors';
+import colors from './../../core/colors';
 import {
     Form,
     FormGroup,
@@ -34,7 +34,6 @@ const marks = {
         label: <strong>100°C</strong>,
     },
 }
-
 class CustomizedRange extends React.Component {
     constructor(props) {
         super(props);

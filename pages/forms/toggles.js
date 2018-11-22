@@ -12,7 +12,7 @@ import { HeaderMain } from "../../features/HeaderMain";
 
 import './../../styles/pages/forms/toggles.scss';
 
-export class Toggles extends React.Component {
+class Toggles extends React.Component {
     state = {
         baconIsReady: true,
         cheeseIsReady: false,
@@ -197,3 +197,5 @@ export class Toggles extends React.Component {
         );
     }
 }
+
+export default Toggles;

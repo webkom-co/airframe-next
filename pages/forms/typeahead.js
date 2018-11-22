@@ -29,7 +29,7 @@ import {
 import { HeaderMain } from "../../features/HeaderMain";
 import { HeaderDemo } from "../../features/HeaderDemo";
 
-export const Typeahead = () => (
+const Typeahead = () => (
     <Container>
         <HeaderMain 
             title="Typeahead"
@@ -215,10 +215,12 @@ export const Typeahead = () => (
                 </CardTitle>
                 <p>
                     Setting the <code>bodyContainer</code> prop will attach the menu 
-                    to <code>document.body</code> instead of the typeahead. 
+                    to <code>document .body</code> instead of the typeahead. 
                     Compare the behaviors in the srolling container below.
                 </p>
-                <BodyContainer />
+                {
+                    (typeof document !== 'undefined') && <BodyContainer />
+                }
             </Col>
         </Row>
         { /* START Header Example */}
@@ -449,3 +451,5 @@ export const Typeahead = () => (
         </Row>
     </Container>
 );
+
+export default Typeahead;

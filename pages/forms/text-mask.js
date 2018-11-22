@@ -25,7 +25,7 @@ const dolarsMaskDecimal = createNumberMask({ prefix: '$', allowDecimal: true });
 const percentageMask = createNumberMask({ prefix: '', suffix: '%', integerLimit: 3 });
 const upperCasePipe = conformedValue => conformedValue.toUpperCase();
 
-export const TextMask = () => (
+const TextMask = () => (
     <Container>
         <HeaderMain 
             title="Text Mask"
@@ -214,3 +214,5 @@ export const TextMask = () => (
 
     </Container>
 );
+
+export default TextMask;

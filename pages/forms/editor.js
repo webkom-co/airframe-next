@@ -9,7 +9,7 @@ import {
 
 import { HeaderMain } from "../../features/HeaderMain";
 
-export class Editor extends React.Component {
+export default class Editor extends React.Component {
     state = {
         text: `
             <p>${ faker.lorem.paragraph() }</p>

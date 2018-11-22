@@ -82,12 +82,12 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
             <SidebarMenu.Item title="Date Picker" to='/forms/date-picker' />
             <SidebarMenu.Item title="Drop Zone" to='/forms/drop-zone' />
-            <SidebarMenu.Item title="Editor" to='/forms/forms' />
+            <SidebarMenu.Item title="Editor" to='/forms/editor' />
             <SidebarMenu.Item title="Selects" to='/forms/selects' />
-            <SidebarMenu.Item title="sliders" to='/forms/sliders' />
-            <SidebarMenu.Item title="text-mask" to='/forms/text-mask' />
-            <SidebarMenu.Item title="toggles" to='/forms/toggles' />
-            <SidebarMenu.Item title="typeahead" to='/forms/typeahead' />
+            <SidebarMenu.Item title="Sliders" to='/forms/sliders' />
+            <SidebarMenu.Item title="Text Mask" to='/forms/text-mask' />
+            <SidebarMenu.Item title="Toggles" to='/forms/toggles' />
+            <SidebarMenu.Item title="Typeahead" to='/forms/typeahead' />
             <SidebarMenu.Item title="Wizard" to='/forms/wizard' />
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }

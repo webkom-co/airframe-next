@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
 
-import classes from './wizard.scss';
+import './../../styles/components/wizard.scss';
 
 export class Wizard extends React.Component {
     static propTypes = {
@@ -51,7 +51,7 @@ export class Wizard extends React.Component {
         const activeStep = this.getActiveStep();
 
         return (
-            <div className={classes['wizard']}>
+            <div className='wizard'>
                 {
                     _.map(children, (child, index) => (
                         React.cloneElement(child, {

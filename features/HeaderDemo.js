@@ -23,7 +23,7 @@ HeaderDemo.propTypes = {
         PropTypes.number
     ]),
     title: PropTypes.string,
-    subTitle: PropTypes.string,
+    subTitle: PropTypes.node,
     className: PropTypes.string
 };
 HeaderDemo.defaultProps = {

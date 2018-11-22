@@ -1,7 +1,7 @@
 import React from 'react';
 import Select from 'react-select';
 import { FormGroup, Label, Input } from './../../components';
-import { colourOptions } from '../data';
+import { colourOptions } from './data';
 
 export class Single extends React.Component {
     constructor() {
