@@ -1,7 +1,5 @@
 import React from 'react';
 import faker from 'faker';
-import { Link } from 'react-router-dom';
-import { LineChart, Line } from 'recharts';
 import {
     Container,
     Row,
@@ -37,14 +35,15 @@ import {
     CardFooterInfo
 } from "../../components/CardFooterInfo";
 import {
-    LineBarAreaComposedChart
-} from "./../../Graphs/ReCharts/components/LineBarAreaComposedChart";
+    AudienceMetricsChart
+} from "./components/AudienceMetricsChart";
 import {
     TinyAreaChart
 } from "./../../Graphs/ReCharts/components/TinyAreaChart";
 import {
     SimpleLineChart
 } from "./../../Graphs/ReCharts/components/SimpleLineChart";
+
 
 const Analytics = () => (
     <Container>
@@ -200,7 +199,7 @@ const Analytics = () => (
                         <CardTitle tag="h6" className="mb-4">
                             Analytics Audience Metrics
                         </CardTitle>
-                        <LineBarAreaComposedChart />
+                        <AudienceMetricsChart />
                         <CardFooterInfo />
                     </CardBody>
                 </Card>
