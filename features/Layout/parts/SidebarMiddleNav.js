@@ -35,6 +35,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             <SidebarMenu.Item title="Navbar"to='/layouts/navbar-only' exact />
             <SidebarMenu.Item title="Sidebar Default"to='/layouts/sidebar-default' exact />
             <SidebarMenu.Item title="Sidebar A"to='/layouts/sidebar-a' exact />
+            <SidebarMenu.Item title="Drag &amp; Drop Layout"to='/layouts/drag-and-drop-layouts' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
@@ -59,6 +60,10 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             <SidebarMenu.Item title="Modals"to='/interface/modals' />
             <SidebarMenu.Item title="Breadcrumbs"to='/interface/breadcrumbs' />
             <SidebarMenu.Item title="Navbars"to='/interface/navbars' />
+            <SidebarMenu.Item title="Calendar"to='/interface/calendar' />
+            <SidebarMenu.Item title="Crop Image"to='/interface/crop-image' />
+            <SidebarMenu.Item title="Drag &amp; Drop Elements"to='/interface/drag-and-drop-elements' />
+            <SidebarMenu.Item title="Notifications"to='/interface/notifications' />
         </SidebarMenu.Item>
         { /* -------- Graphs ---------*/ }
         <SidebarMenu.Item
@@ -72,9 +77,18 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-check-square-o"></i>}
             title="Forms"
         >
-            <SidebarMenu.Item title="Forms"to='/forms/forms' />
-            <SidebarMenu.Item title="Forms Layouts"to='/forms/forms-layouts' />
-            <SidebarMenu.Item title="Input Groups"to='/forms/input-groups' />
+            <SidebarMenu.Item title="Forms" to='/forms/forms' />
+            <SidebarMenu.Item title="Forms Layouts" to='/forms/forms-layouts' />
+            <SidebarMenu.Item title="Input Groups" to='/forms/input-groups' />
+            <SidebarMenu.Item title="Date Picker" to='/forms/date-picker' />
+            <SidebarMenu.Item title="Drop Zone" to='/forms/drop-zone' />
+            <SidebarMenu.Item title="Editor" to='/forms/editor' />
+            <SidebarMenu.Item title="Selects" to='/forms/selects' />
+            <SidebarMenu.Item title="Sliders" to='/forms/sliders' />
+            <SidebarMenu.Item title="Text Mask" to='/forms/text-mask' />
+            <SidebarMenu.Item title="Toggles" to='/forms/toggles' />
+            <SidebarMenu.Item title="Typeahead" to='/forms/typeahead' />
+            <SidebarMenu.Item title="Wizard" to='/forms/wizard' />
         </SidebarMenu.Item>
         { /* -------- Tables ---------*/ }
         <SidebarMenu.Item
@@ -82,6 +96,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             title="Tables"
         >
             <SidebarMenu.Item title="Tables"to='/tables/tables' />
+            <SidebarMenu.Item title="Extended Tables"to='/tables/extended-table' />
         </SidebarMenu.Item>
         { /* -------- Apps ---------*/ }
         <SidebarMenu.Item

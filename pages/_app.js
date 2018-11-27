@@ -10,6 +10,7 @@ import { LayoutDefault } from './../features/Layout/LayoutDefault';
 import './../styles/bootstrap.scss';
 import './../styles/main.scss';
 import './../styles/plugins/plugins.scss';
+import './../styles/plugins/plugins.css';
 
 Router.events.on('routeChangeStart', () => NProgress.start());
 Router.events.on('routeChangeComplete', () => NProgress.done());
