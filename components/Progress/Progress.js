@@ -11,7 +11,7 @@ import './../../styles/elements/progress.scss';
 const Progress = (props) => {
     const { children, slim, className, ...otherProps } = props;
     const progressClass = classNames(className, {
-        'progress-slim': slim
+        'progress--slim': slim
     });
 
     return (
