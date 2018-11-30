@@ -8,8 +8,6 @@ import {
     SidebarTrigger
 } from './../../components';
 
-import { NavbarActivityFeed } from './parts/NavbarActivityFeed';
-import { NavbarMessages } from './parts/NavbarMessages';
 import { NavbarUser } from './parts/NavbarUser';
 
 export const NavbarDefault = () => (
@@ -44,8 +42,6 @@ export const NavbarDefault = () => (
             </NavItem>
         </Nav>
         <Nav navbar className="ml-auto">
-            <NavbarActivityFeed />
-            <NavbarMessages className="ml-2" />
             <NavbarUser className="ml-2" />
         </Nav>
     </Navbar>
