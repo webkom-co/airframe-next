@@ -27,7 +27,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
                     title="First Eager Load"
                 />
                 <SidebarMenu.Item
-                    to="/nested-routes/deep/deep-nested-route-1"
+                    to="/nested-routes/deep/deep-nested-route-2"
                     title="Second Eager Load"
                 />
             </SidebarMenu.Item>
@@ -35,7 +35,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-bookmark-o"></i>}
             title="Docs"
-            href='https://webkom.gitbook.io/spin-next/'
+            href='https://webkom.gitbook.io/'
         />
     </SidebarMenu >
 );
