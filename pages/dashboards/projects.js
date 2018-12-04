@@ -40,7 +40,7 @@ const ProjectsDashboard = () => (
             </Col>
             <Col lg={ 3 }>
                 <div className="hr-text hr-text-center my-2">
-                    <span>Payments probably</span>
+                    <span>Payments probably partially</span>
                 </div>
                 <Row>
                     <Col xs={ 6 } className="text-center">
