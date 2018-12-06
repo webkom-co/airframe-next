@@ -371,6 +371,8 @@ const Cards = () => (
                             { cardText({ cardNo: "4.04" }) } 
                         </CardBody>
                     </Card>
+                </Col>
+                <Col lg={ 6 }>
                     <Card className="mb-3">
                         <CardHeader
                             type="border"
@@ -382,12 +384,10 @@ const Cards = () => (
                             { cardText({ cardNo: "4.05" }) } 
                         </CardBody>
                     </Card>
-                </Col>
-                <Col lg={ 6 }>
                     <Card className="mb-3">
                         <CardHeader
                             type="border"
-                            color="dark"
+                            color="warning"
                             tag="h6">
                                 Bottom Warning Border
                         </CardHeader>
@@ -398,7 +398,7 @@ const Cards = () => (
                     <Card className="mb-3">
                         <CardHeader
                             type="border"
-                            color="primary"
+                            color="danger"
                             tag="h6">
                                 Bottom Danger Border
                         </CardHeader>
@@ -409,18 +409,7 @@ const Cards = () => (
                     <Card className="mb-3">
                         <CardHeader
                             type="border"
-                            color="secondary"
-                            tag="h6">
-                                Bottom Dark Border
-                        </CardHeader>
-                        <CardBody>
-                            { cardText({ cardNo: "4.08" }) } 
-                        </CardBody>
-                    </Card>
-                    <Card className="mb-3">
-                        <CardHeader
-                            type="border"
-                            color="success"
+                            color="facebook"
                             tag="h6">
                                 Bottom Facebook Border
                         </CardHeader>
