@@ -11,6 +11,8 @@ import {
     Badge,
     CustomInput,
     InputGroupAddon,
+    Dropdown,
+    UncontrolledDropdown,
     UncontrolledButtonDropdown,
     ListGroupItem,
     ListGroup,
@@ -740,18 +742,18 @@ const Dropdowns = () => (
                                 <code>&lt;Dropdown direction=&quot;up&quot; /&gt;</code> 
                                 to the parent element.
                             </p>
-                            <UncontrolledButtonDropdown direction="up">
+                            <UncontrolledDropdown direction="up">
                                 <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
-                                <DropdownMenu persist>
+                                <DropdownMenu>
                                     <DropdownItem header>Menu</DropdownItem>
                                     <DropdownItem>Profile</DropdownItem>
                                     <DropdownItem>Settings</DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                            </UncontrolledDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -771,18 +773,18 @@ const Dropdowns = () => (
                                 <code>&lt;Dropdown direction=&quot;left&quot; /&gt;</code> 
                                 to the parent element.
                             </p>
-                            <UncontrolledButtonDropdown direction="left">
+                            <UncontrolledDropdown direction="left">
                                 <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
-                                <DropdownMenu persist>
+                                <DropdownMenu>
                                     <DropdownItem header>Menu</DropdownItem>
                                     <DropdownItem>Profile</DropdownItem>
                                     <DropdownItem>Settings</DropdownItem>
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                            </UncontrolledDropdown>
                         </CardBody>
                     </Card>
                 </Col>
@@ -806,7 +808,7 @@ const Dropdowns = () => (
                                 <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
-                                <DropdownMenu persist>
+                                <DropdownMenu>
                                     <DropdownItem header>Menu</DropdownItem>
                                     <DropdownItem>Profile</DropdownItem>
                                     <DropdownItem>Settings</DropdownItem>
