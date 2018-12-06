@@ -11,7 +11,6 @@ import {
     Badge,
     CustomInput,
     InputGroupAddon,
-    Dropdown,
     UncontrolledDropdown,
     UncontrolledButtonDropdown,
     ListGroupItem,
