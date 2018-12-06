@@ -34,15 +34,15 @@ import { SimpleLineChart } from "./../../features/ReCharts/SimpleLineChart";
 import './../../styles/pages/dashboards/analytics.scss';
 
 const LAYOUT = {
-    'metric-v-target-users': { h: 6, md: 4 },
-    'metric-v-target-sessions': { h: 6, md: 4 },
-    'metric-v-target-pageviews': { h: 6, md: 4 },
-    'analytics-audience-metrics': { h: 10, minH: 7 },
-    'traffic-channels': { md: 6, h: 6 },
+    'metric-v-target-users': { h: 6, md: 4, minW: 4 },
+    'metric-v-target-sessions': { h: 6, md: 4, minW: 4 },
+    'metric-v-target-pageviews': { h: 6, md: 4, minW: 4 },
+    'analytics-audience-metrics': { h: 10, minH: 7, minW: 4 },
+    'traffic-channels': { md: 6, h: 6, minW: 4 },
     'sessions': { md: 6, h: 6, maxH: 9, minW: 3 },
-    'spend': { md: 6, h: 6 },
-    'website-performance': { md: 6, h: 12 },
-    'organic-traffic': { md: 6, h: 10 }
+    'spend': { md: 6, h: 6, minW: 3 },
+    'website-performance': { md: 6, h: 12, minW: 6 },
+    'organic-traffic': { md: 6, h: 10, minW: 6 }
 }
 
 const SessionByDevice = (props) => (
