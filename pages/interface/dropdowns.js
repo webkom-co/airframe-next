@@ -804,7 +804,7 @@ const Dropdowns = () => (
                                 <code>&lt;Dropdown direction=&quot;right&quot; /&gt;</code> 
                                 to the parent element.
                             </p>
-                            <UncontrolledButtonDropdown direction="right">
+                            <UncontrolledDropdown direction="right">
                                 <DropdownToggle color="secondary" outline caret>
                                     See Demo
                                 </DropdownToggle>
@@ -815,7 +815,7 @@ const Dropdowns = () => (
                                     <DropdownItem divider />
                                     <DropdownItem>Logout</DropdownItem>
                                 </DropdownMenu>
-                            </UncontrolledButtonDropdown>
+                            </UncontrolledDropdown>
                         </CardBody>
                     </Card>
                 </Col>
