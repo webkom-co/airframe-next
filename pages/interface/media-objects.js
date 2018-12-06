@@ -869,7 +869,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p className="text-muted">
+                                    <p className="text-success">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
@@ -897,7 +897,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p className="text-muted">
+                                    <p className="text-danger">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
@@ -925,7 +925,7 @@ const MediaObjects = () => (
                                     <span className="mt-0 d-flex h6 mb-1">
                                         { faker.name.firstName() } { faker.name.lastName() }
                                     </span>
-                                    <p className="text-muted">
+                                    <p className="text-warning">
                                         { faker.lorem.sentence() }
                                     </p>
                                 </Media>
