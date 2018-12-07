@@ -10,9 +10,9 @@ const comparatorSign = (comp) => {
     switch (comp) {
         case Comparator.EQ:
             return '=';
-        case Comparator.GT:
-            return '>';
         case Comparator.LT:
+            return '>';
+        case Comparator.GT:
             return '<';
     }
 }
@@ -43,6 +43,7 @@ class NumberFilter extends React.Component {
 
         this.comparatorInputId = uid();
         this.valueInputId = uid();
+        this.handleClick = this.handleClick.bind(this);
     }
 
     componentDidMount() {
