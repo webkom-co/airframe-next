@@ -88,7 +88,7 @@ const TrSystem = (props) => (
         </td>
         {
             _.map(props.colors, (color,index)=>(
-                <td style={{ width: '20%' }} key={index}>
+                <td style={{ width: '20%', minWidth: '220px' }} key={index}>
                     <h6 className="mb-0">
                         { randomArray(tdValue) } {tdUnits[index]}
                     </h6>
