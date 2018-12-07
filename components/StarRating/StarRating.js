@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import classes from './StarRating.scss';
 
-import colors from './../../core/colors';
-
 export const StarRating = (props) => {
     const {
         className,
@@ -29,8 +27,11 @@ export const StarRating = (props) => {
                     for(let i = 1; i <= maxStars; i++) {
                         const starProps = {
                             key: i,
-                            className: `fa fa-fw ${ i <= currentStars ? 'fa-star' : 'fa-star-o' }`,
-                            style: i <= currentStars ? { color: starColor } : { },
+                            className: classNames('fa fa-fw', {
+                                'fa-star': i <= currentStars,
+                                'fa-star-o': i > currentStars,
+                                [`text-${starColor}`]: i <= currentStars
+                            }),
                             onClick: () => isInterctive && onSelect(i)
                         };
 
@@ -58,5 +59,5 @@ StarRating.propTypes = {
 StarRating.defaultProps = {
     max: 5,
     at: 0,
-    starColor: colors['warning'],
+    starColor: 'warning',
 };
