@@ -84,15 +84,20 @@ class Analytics extends React.Component {
         return (
             <React.Fragment>
                 <Container fluid={ false }>
-                    <div className="d-flex mt-3 mb-5">
+                    <div className="d-lg-flex mt-3 mb-3 mb-lg-5">
                         <HeaderMain 
                             title="Analytics"
-                            className="mt-0"
+                            className="mt-0 mb-3 mb-lg-0"
                         />
                         <ButtonToolbar className="ml-auto">
-                            <ButtonGroup className="align-self-start mr-2">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                            <ButtonGroup className="align-self-start mr-md-2 d-block w-100 d-md-inline-flex w-md-auto">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
+                                    >
                                         <i className="fa fa-globe mr-2"></i>
                                         www.webkom.co
                                     </DropdownToggle>
@@ -117,9 +122,14 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mr-2">
+                            <ButtonGroup className="align-self-start mt-2 mr-2 mt-md-0">
                                 <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                        className="mb-md-2"
+                                    >
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Last Month
                                     </DropdownToggle>
@@ -149,9 +159,14 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mr-2">
+                            <ButtonGroup className="align-self-start mt-2 mb-2 ml-auto ml-md-0 mr-md-2 mt-md-0 mb-md-0">
                                 <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
+                                    <DropdownToggle
+                                        color="secondary"
+                                        outline
+                                        caret
+                                        className="mb-md-2"
+                                    >
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Previous Period
                                     </DropdownToggle>
@@ -181,22 +196,24 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start">
-                                <Button color="primary" className="mb-2 mr-2">
-                                    <i className="fa fa-check mr-2"></i>
-                                    Apply
-                                </Button>
-                            </ButtonGroup>
-                            <ButtonGroup>
-                                <Button
-                                    color="secondary"
-                                    outline
-                                    className="mb-2 align-self-start"
-                                    onClick={this._resetLayout}
-                                >
-                                    <i className="fa fa-times"></i>
-                                </Button>
-                            </ButtonGroup>
+                            <div className="align-self-start w-100 d-md-inline-flex w-md-auto">
+                                <ButtonGroup className="align-self-start">
+                                    <Button color="primary" className="mb-2 mr-2">
+                                        <i className="fa fa-check mr-2"></i>
+                                        Apply
+                                    </Button>
+                                </ButtonGroup>
+                                <ButtonGroup>
+                                    <Button
+                                        color="secondary"
+                                        outline
+                                        className="mb-2 align-self-start"
+                                        onClick={this._resetLayout}
+                                    >
+                                        <i className="fa fa-times"></i>
+                                    </Button>
+                                </ButtonGroup>
+                            </div>
                         </ButtonToolbar>
                     </div>
                 </Container>
