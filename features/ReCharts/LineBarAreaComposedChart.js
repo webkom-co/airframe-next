@@ -36,7 +36,6 @@ const generateDot = ({stroke, ...other}) => (
 const LineBarAreaComposedChart = ({height, className}) => (
     <ResponsiveContainer
         width='100%'
-        minHeight='250px'
         className={ className }
         {...(!_.isUndefined(height) ? {
             height
@@ -45,7 +44,7 @@ const LineBarAreaComposedChart = ({height, className}) => (
         })}
     >
         <ComposedChart data={data}
-            margin={{top: 20, right: 20, bottom: 20, left: 20}}>
+            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
           <CartesianGrid stroke='#f5f5f5'/>
           <XAxis dataKey="name"/>
           <YAxis />

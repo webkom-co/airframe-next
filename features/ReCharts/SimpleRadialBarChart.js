@@ -18,26 +18,32 @@ const data = [
       {name: 'unk.', uv: 6.67, pv: 4800, fill: colors['purple']}
     ];
     
-  const style = {
+const style = {
     top: 0,
-    left: 350,
+    right: 0,
     lineHeight: '24px'
-  };
+};
 
 const SimpleRadialBarChart = () => (
     <ResponsiveContainer width='100%' aspect={ 1 / 1}>
-        <RadialBarChart cx={ 150 } innerRadius={20} outerRadius={140} barSize={10} data={data}>
+        <RadialBarChart
+            cx="40%"
+            innerRadius={20}
+            outerRadius="80%"
+            barSize={10}
+            data={data}
+        >
             <RadialBar
                 minAngle={15}
                 label={{ position: 'insideStart', fill: colors['900'], fontSize: '10px' }}
                 background={{fill: colors['200']}}
                 clockWise={true}
                 dataKey='uv'
+                width="60%"
             />
             <Legend iconSize={10} layout='vertical' verticalAlign='middle' wrapperStyle={style}/>
         </RadialBarChart>
     </ResponsiveContainer>
-
-)
+);
 
 export { SimpleRadialBarChart };

@@ -29,20 +29,20 @@ const data02 = [
 ];
 
 const TwoLevelPieChart = () => (
-    <ResponsiveContainer width='100%' aspect={6.0/3.0}>
+    <ResponsiveContainer width='100%' aspect={6.00 / 3.00}>
         <PieChart>
             <Pie
                 data={data01}
                 dataKey="value"
-                outerRadius={60}
+                outerRadius={"45%"}
                 fill={ colors['info-07'] }
                 stroke={ colors['white'] }
             />
             <Pie
                 data={data02}
                 dataKey="value"
-                innerRadius={70}
-                outerRadius={90}
+                innerRadius={"55%"}
+                outerRadius={"75%"}
                 fill={ colors['purple'] }
                 stroke={ colors['white'] }
                 label={{fill: colors['800'], fontSize: '12px'}}
