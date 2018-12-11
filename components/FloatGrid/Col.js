@@ -72,16 +72,17 @@ export class Col extends React.Component {
         const floatColClasses = classNames(className, 'float-col',
             'float-column', `float-column--size-${floatColBpId}`);
 
-        return (
-            active ? (
-                <div { ...otherProps } className={ floatColClasses }>
-                    { children }
-                </div>
-            ) : (
-                <BootstrapCol { ...(_.extend(bsColumnProps, otherProps)) } className={ className }>
-                    { children }
-                </BootstrapCol>
-            )
+        return active ? (
+            <div { ...otherProps } className={ floatColClasses }>
+                { children }
+            </div>
+        ) : (
+            <BootstrapCol
+                { ...(_.extend(bsColumnProps, otherProps)) }
+                className={ classNames(className, 'pb-3') }
+            >
+                { children }
+            </BootstrapCol>
         );
     }
 }

@@ -34,15 +34,15 @@ import { SimpleLineChart } from "./../../features/ReCharts/SimpleLineChart";
 import './../../styles/pages/dashboards/analytics.scss';
 
 const LAYOUT = {
-    'metric-v-target-users': { h: 6, md: 4, minW: 4 },
-    'metric-v-target-sessions': { h: 6, md: 4, minW: 4 },
-    'metric-v-target-pageviews': { h: 6, md: 4, minW: 4 },
+    'metric-v-target-users': { h: 6, lg: 4, minW: 4 },
+    'metric-v-target-sessions': { h: 6, lg: 4, minW: 4 },
+    'metric-v-target-pageviews': { h: 6, lg: 4, minW: 4 },
     'analytics-audience-metrics': { h: 10, minH: 7, minW: 4 },
-    'traffic-channels': { md: 6, h: 6, minW: 4 },
-    'sessions': { md: 6, h: 6, maxH: 9, minW: 3 },
-    'spend': { md: 6, h: 6, minW: 3 },
-    'website-performance': { md: 6, h: 12, minW: 6 },
-    'organic-traffic': { md: 6, h: 10, minW: 6 }
+    'traffic-channels': { lg: 6, h: 6, minW: 4 },
+    'sessions': { lg: 6, h: 6, maxH: 9, minW: 3 },
+    'spend': { lg: 6, h: 6, minW: 3 },
+    'website-performance': { lg: 6, h: 12, minW: 6 },
+    'organic-traffic': { lg: 6, h: 10, minW: 6 }
 }
 
 const SessionByDevice = (props) => (
@@ -69,13 +69,41 @@ SessionByDevice.propTypes = {
 
 class Analytics extends React.Component {
     state = {
-        layouts: _.clone(LAYOUT)
+        layouts: _.clone(LAYOUT),
+        enabled: false
+    }
+
+    constructor(props) {
+        super(props);
+
+        this._sizeHandler = this._sizeHandler.bind(this);
+    }
+
+    componentDidMount() {
+        if (typeof window !== 'undefined') {
+            window.addEventListener('resize', this._sizeHandler);
+        }
+        this._sizeHandler();
+    }
+
+    componentWillUnmount() {
+        if (typeof window !== 'undefined') {
+            window.removeEventListener('resize', this._sizeHandler);
+        }
     }
 
     _resetLayout = () => {
         this.setState({
             layouts: _.clone(LAYOUT)
         })
+    }
+
+    _sizeHandler = () => {
+        if (typeof window !== 'undefined') {
+            this.setState({
+                enabled: !!window.matchMedia('(min-width: 992px)').matches
+            })
+        }
     }
 
     render() {
@@ -218,7 +246,7 @@ class Analytics extends React.Component {
                     </div>
                 </Container>
 
-                <Grid className="dashboard-analytics">
+                <Grid className="dashboard-analytics" active={ this.state.enabled }>
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }

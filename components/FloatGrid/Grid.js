@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { Grid as ReactGrid } from './../';
+import { Container } from './../';
 import { FloatGridContext } from './floatGridContext';
 import './../../styles/components/float-grid.scss';
 
@@ -71,29 +71,35 @@ export class Grid extends React.Component {
         }, className, 'float-grid-parent');
 
         return(
-            active ? (
-                <FloatGridContext.Provider
-                    value={{
-                        gridUnitsToPx: (w, h) => {
-                            return {
-                                wPx: w / 12 * gridSize.w,
-                                hPx: h * rowHeight
-                            }
-                        },
-                    }}
-                >
-                    <div
-                        className={ floatWrapClasses }
-                        ref={ this._gridRef }
-                    >
-                        { modifiedChildren }
-                    </div>
-                </FloatGridContext.Provider>
-            ) : (
-                <ReactGrid fluid={ fluid } className={ className } { ...otherProps }>
-                    { modifiedChildren }
-                </ReactGrid>
-            )
+            <FloatGridContext.Provider
+                value={{
+                    gridUnitsToPx: (w, h) => {
+                        return {
+                            wPx: w / 12 * gridSize.w,
+                            hPx: h * rowHeight
+                        }
+                    },
+                    active
+                }}
+            >
+                {
+                    active ? (
+                        <div
+                            className={ floatWrapClasses }
+                            ref={ this._gridRef }
+                        >
+                            { modifiedChildren }
+                        </div>
+                    ) : (
+                        <div ref={ this._gridRef }>
+                            <Container fluid={ fluid } className={ className } { ...otherProps }>
+                                { modifiedChildren }
+                            </Container>
+                        </div>
+                    )
+                }
+                
+            </FloatGridContext.Provider>
         );
     }
 
