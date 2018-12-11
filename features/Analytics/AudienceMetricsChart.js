@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import _ from 'lodash';
 import moment from 'moment';
 
@@ -13,9 +14,9 @@ import {
     Area,
     Bar,
     Dot
-} from './../../../../components/recharts';
+} from './../../components/recharts';
 
-import colors from './../../../../colors';
+import colors from './../../core/colors';
 
 const CHART_LENGTH = 30;
 const CHART_START_DATE = moment().subtract(CHART_LENGTH, 'months');
@@ -45,18 +46,24 @@ const generateDot = ({stroke, ...other}) => (
     />
 );
 
-export const AudienceMetricsChart = () => (
-    <ResponsiveContainer width='100%' aspect={ 3 / 1 }>
+const AudienceMetricsChart = ({ isLarge, className }) => (
+    <ResponsiveContainer width='100%' minHeight='280px' className={className}>
         <ComposedChart data={data}
             margin={{top: 20, right: 20, bottom: 20, left: 20}}>
           <CartesianGrid stroke='#f5f5f5' strokeDasharray={ 0 } vertical={ false }/>
           <XAxis dataKey="month"/>
           <YAxis />
           <Tooltip />
-          <Legend />
+          <Legend wrapperStyle={{ bottom: 15 }}/>
           <Bar dataKey='New York' barSize={6} fill={ colors['500'] } />
           <Area dataKey='Tokyo' fill={ colors['purple-04'] } stroke={ colors['purple'] } activeDot={ null } />
           <Area dataKey='Berlin' fill={ colors['primary-04'] } stroke={ colors['primary'] } activeDot={{r: 5}} dot={generateDot}  />
        </ComposedChart>
     </ResponsiveContainer>
 );
+AudienceMetricsChart.propTypes = {
+    isLarge: PropTypes.bool,
+    className: PropTypes.string
+};
+
+export { AudienceMetricsChart };

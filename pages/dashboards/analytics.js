@@ -26,8 +26,8 @@ import { applyColumn } from './../../components/FloatGrid';
 import { HeaderMain } from "../../features/HeaderMain";
 import { MetricVsTarget } from "../../features/Analytics/MetricVsTarget";
 import { WebsitePerformance } from "../../features/Analytics/WebsitePerformance";
+import { AudienceMetricsChart } from "../../features/Analytics/AudienceMetricsChart";
 import { CardFooterInfo } from "../../features/CardFooterInfo";
-import { LineBarAreaComposedChart } from "./../../features/ReCharts/LineBarAreaComposedChart";
 import { TinyAreaChart } from "./../../features/ReCharts/TinyAreaChart";
 import { SimpleLineChart } from "./../../features/ReCharts/SimpleLineChart";
 
@@ -37,7 +37,7 @@ const LAYOUT = {
     'metric-v-target-users': { h: 6, lg: 4, minW: 4 },
     'metric-v-target-sessions': { h: 6, lg: 4, minW: 4 },
     'metric-v-target-pageviews': { h: 6, lg: 4, minW: 4 },
-    'analytics-audience-metrics': { h: 10, minH: 7, minW: 4 },
+    'analytics-audience-metrics': { h: 9, minW: 7 },
     'traffic-channels': { lg: 6, h: 6, minW: 4 },
     'sessions': { lg: 6, h: 6, maxH: 9, minW: 3 },
     'spend': { lg: 6, h: 6, minW: 3 },
@@ -70,7 +70,7 @@ SessionByDevice.propTypes = {
 class Analytics extends React.Component {
     state = {
         layouts: _.clone(LAYOUT),
-        enabled: false
+        largeScreen: true
     }
 
     constructor(props) {
@@ -101,7 +101,7 @@ class Analytics extends React.Component {
     _sizeHandler = () => {
         if (typeof window !== 'undefined') {
             this.setState({
-                enabled: !!window.matchMedia('(min-width: 992px)').matches
+                largeScreen: !!window.matchMedia('(min-width: 992px)').matches
             })
         }
     }
@@ -246,7 +246,7 @@ class Analytics extends React.Component {
                     </div>
                 </Container>
 
-                <Grid className="dashboard-analytics" active={ this.state.enabled }>
+                <Grid className="dashboard-analytics" active={ this.state.largeScreen }>
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }
@@ -326,7 +326,11 @@ class Analytics extends React.Component {
                                     <i className="fa fa-ellipsis-v mr-2"></i> Analytics Audience Metrics
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
-                                    <LineBarAreaComposedChart height="100%" className="flex-fill"/>
+                                    <AudienceMetricsChart
+                                        height="100%"
+                                        className="flex-fill"
+                                        isLarge={ this.state.largeScreen }
+                                    />
                                     <CardFooterInfo />
                                 </CardBody>
                             </Card>
@@ -339,16 +343,16 @@ class Analytics extends React.Component {
                                 <Table responsive className="table mb-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col" className="bt-0">Channel</th>
-                                            <th scope="col" className="bt-0">Sessions</th>
-                                            <th scope="col" className="bt-0">Prev Period</th>
-                                            <th scope="col" className="text-right bt-0">Change</th>
-                                            <th scope="col" className="bt-0 text-right">Trend</th>
+                                            <th scope="col" className="bt-0 text-nowrap">Channel</th>
+                                            <th scope="col" className="bt-0 text-nowrap">Sessions</th>
+                                            <th scope="col" className="bt-0 text-nowrap">Prev Period</th>
+                                            <th scope="col" className="text-right bt-0 text-nowrap">Change</th>
+                                            <th scope="col" className="bt-0 text-right text-nowrap">Trend</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 Organic Search
                                             </td>
                                             <td className="text-inverse align-middle">
@@ -357,11 +361,11 @@ class Analytics extends React.Component {
                                             <td className="align-middle">
                                                 <span data-faker="[[finance.amount]]">949.00</span>
                                             </td>
-                                            <td className="align-middle text-right">
+                                            <td className="align-middle text-right text-nowrap">
                                                 -75,0% 
                                                 <i className="fa fa-caret-down text-danger ml-1"></i>
                                             </td>
-                                            <td className="text-right align-middle">
+                                            <td className="text-right align-middle" style={{ minWidth: '200px' }}>
                                                 <TinyAreaChart />
                                             </td>
                                         </tr>
