@@ -180,7 +180,7 @@ const Clients = () => (
                             <span className="align-self-center">
                                 Showing 1 to 10 of 57 entries
                             </span>
-                            <Pagination aria-label="Page navigation example" className="ml-auto">
+                            <Pagination aria-label="Page navigation example" className="ml-auto" listClassName="mb-0">
                                 <PaginationItem>
                                     <PaginationLink previous href="#">
                                         <i className="fa fa-fw fa-angle-left"></i>
@@ -237,7 +237,7 @@ const Clients = () => (
                                     </Button> 
                                 </Col>
                                 <Col sm={ 6 }>
-                                    <Button color="secondary" outline block>
+                                    <Button color="secondary" outline block className="mt-2 mt-sm-0">
                                         Edit
                                     </Button> 
                                 </Col>
