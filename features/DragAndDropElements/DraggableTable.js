@@ -160,7 +160,7 @@ const DraggableRow = (props) => (
                 /> 
             </TableCell>
             <TableCell
-                className="align-middle"
+                className="align-middle text-nowrap"
                 isDragOccurring={snapshot.isDragging}
             >
                 <span className="mt-0 h6 mb-1">
@@ -177,7 +177,7 @@ const DraggableRow = (props) => (
                 {_.map(props.skills, (skill, index) => (
                     <Badge
                         key={ index }
-                        className={`px-2 ${index > 0 && 'ml-1'}`}
+                        className={`px-2 mx-1`}
                     >
                         { skill }
                     </Badge>
@@ -263,14 +263,14 @@ export class DraggableTable extends React.Component {
                     </CardTitle>
                 </CardHeader>
                 <DragDropContext onDragEnd={this.onDragEnd}>
-                    <Table className="mb-0">
+                    <Table className="mb-0" responsive>
                         <thead>
                             <tr>
                                 <th className="bt-0"></th>
                                 <th className="bt-0">Photo</th>
                                 <th className="bt-0">Name</th>
                                 <th className="bt-0">Skills</th>
-                                <th className="bt-0">Interview Passed in</th>
+                                <th className="bt-0 text-nowrap">Interview Passed in</th>
                                 <th className="bt-0 text-right">Portfolio</th>
                             </tr>
                         </thead>

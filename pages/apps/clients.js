@@ -56,7 +56,7 @@ const Clients = () => (
                                             </UncontrolledTabs.NavLink>
                                         </NavItem>
                                     </Nav>
-                                    <ButtonToolbar className="ml-auto">
+                                    <ButtonToolbar className="ml-auto flex-nowrap">
                                         <ButtonGroup>
                                             <Button color="secondary" outline className="align-self-center mr-2" id="tooltipSettings">
                                                 <i className="fa fa-fw fa-gear"></i>

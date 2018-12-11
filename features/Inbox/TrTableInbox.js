@@ -77,7 +77,7 @@ const TrTableInbox = (props) => (
                         /> 
                     </Media>
                     <Media body>
-                        <div className="mt-0 d-flex">
+                        <div className="mt-0 d-flex text-nowrap">
                             { faker.name.firstName() } { faker.name.lastName() }
                         </div>
                         <span>
@@ -86,7 +86,7 @@ const TrTableInbox = (props) => (
                     </Media>
                 </Media>
             </td>
-            <td className="align-middle">
+            <td className="align-middle" style={{ minWidth: "200px" }}>
                 <Link to="/apps/email-details">
                     { faker.company.catchPhrase() }
                 </Link>
@@ -101,9 +101,9 @@ const TrTableInbox = (props) => (
             <td className="align-middle">
                 <i className="fa fa-paperclip"></i>
             </td>
-            <td className="align-middle text-right">
-                30-Jun-2014<br />
-                01:54 PM
+            <td className="align-middle text-right text-nowrap">
+                <p className="m-0">30-Jun-2014</p>
+                <p className="m-0">01:54 PM</p>
             </td>
         </tr>
 

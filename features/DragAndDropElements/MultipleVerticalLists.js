@@ -130,7 +130,7 @@ class Column extends React.Component {
             >
                 {(provided) => (
                     <div
-                        className="col-md-4"
+                        className="col-md-4 mb-4"
                         ref={provided.innerRef}
                         {...provided.draggableProps}
                     >

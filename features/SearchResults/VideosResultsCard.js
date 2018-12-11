@@ -69,7 +69,7 @@ const VideosResultsCard = () => (
                     size={ 32 }
                     height="100p"
                 >
-                <CardImg />
+                    <CardImg style={{ minHeight: "200px" }} />
                 </HolderProvider.Icon>
             </Card>
             <Card>
@@ -96,12 +96,12 @@ const VideosResultsCard = () => (
                             </div>
                         </div>
                         <dl className="row mb-0">
-                            <dt className="col-sm-3">Rating: </dt>
-                            <dd className="col-sm-9">
+                            <dt className="col-lg-3 text-nowrap">Rating: </dt>
+                            <dd className="col-lg-9">
                                 { randomArray(stars) }
                             </dd>
-                            <dt className="col-sm-3">Category: </dt>
-                            <dd className="col-sm-9">
+                            <dt className="col-lg-3 text-nowrap">Category: </dt>
+                            <dd className="col-lg-9">
                                 <Badge color="secondary" pill className="mr-1">
                                     { faker.internet.domainName() }
                                 </Badge>
@@ -112,8 +112,8 @@ const VideosResultsCard = () => (
                                     { faker.internet.domainName() }
                                 </Badge>
                             </dd>
-                            <dt className="col-sm-3">Author: </dt>
-                            <dd className="col-sm-9">
+                            <dt className="col-lg-3 text-nowrap">Author: </dt>
+                            <dd className="col-lg-9">
                                 <Media>
                                     <Media left className="align-self-center mr-3">
                                         <Avatar.Image
@@ -140,8 +140,8 @@ const VideosResultsCard = () => (
                                     </Media>
                                 </Media>
                             </dd>
-                            <dt className="col-sm-3">Description: </dt>
-                            <dd className="col-sm-9">
+                            <dt className="col-lg-3 text-nowrap">Description: </dt>
+                            <dd className="col-lg-9">
                                 <p className="mb-0">
                                     { faker.lorem.sentence() }
                                 </p>

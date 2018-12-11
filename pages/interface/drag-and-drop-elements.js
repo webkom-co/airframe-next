@@ -32,18 +32,23 @@ export default class DragAndDropElements extends React.Component {
     render() {
         return (
             <Container className="interface-dnd-elements">
-                <div className="d-flex">
+                <div className="d-sm-flex">
                     <div>
                         <HeaderMain title="Drag &amp; Drop Elements" 
-                            className="mb-5 mt-4"
+                            className="mb-3 mb-sm-5 mt-4"
                         />
                     </div>
-                    <Button onClick={ this.onResetState } className="ml-auto align-self-center" color="primary" outline>
+                    <Button
+                        onClick={ this.onResetState }
+                        className="align-self-center mb-3 d-block mb-sm-0 ml-sm-auto"
+                        color="primary"
+                        outline
+                    >
                         Reset Layout
                     </Button>
                 </div>
 
-                <div className="mb-5">
+                <div>
                     <HeaderDemo
                         no="1"
                         title="Mutliple Verical Lists"

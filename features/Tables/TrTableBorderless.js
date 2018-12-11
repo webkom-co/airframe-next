@@ -42,11 +42,11 @@ const receipt = [
 /*eslint-enable */
 /*eslint-disable */
 const paymentMethod = [
-    <td className="align-middle">
+    <td className="align-middle text-nowrap">
         <i className="fa fa-fw fa-paypal text-primary mr-2"></i>
         { faker.internet.email() }
     </td>,
-    <td className="align-middle">
+    <td className="align-middle text-nowrap">
         <i className="fa fa-fw fa-credit-card-alt mr-2"></i>
         Visa 4*** **** **** 9221
     </td>
@@ -72,10 +72,10 @@ const TrTableBorderless = () => (
                     <td className="align-middle">
                         <samp>{ faker.random.number() }</samp>
                     </td>
-                    <td className="align-middle">
+                    <td className="align-middle" style={{ minWidth: "100px" }}>
                         { faker.date.weekday() }, 12 { faker.date.month() }, 2018
                     </td>
-                    <td className="align-middle">
+                    <td className="align-middle text-nowrap">
                         $ { faker.finance.amount() }
                     </td>
                     <td className="align-middle">

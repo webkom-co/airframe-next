@@ -30,7 +30,13 @@ const TrTableClients = (props) => (
     <React.Fragment>
         <tr>
             <td className="align-middle">
-                <CustomInput type="checkbox" id={`trTableClients-${ props.id }` } label="" inline />
+                <CustomInput
+                    type="checkbox"
+                    id={`trTableClients-${ props.id }` }
+                    label=""
+                    inline
+                    className="mr-0"
+                />
             </td>
             <td className="align-middle">
                 <a href="#" id={`trTableClientsTooltip-${ props.id }` }>
@@ -61,10 +67,10 @@ const TrTableClients = (props) => (
                         /> 
                     </Media>
                     <Media body>
-                        <div className="mt-0 d-flex">
+                        <div className="mt-0 text-nowrap">
                             { faker.name.firstName() } { faker.name.lastName() }
                         </div>
-                        <span>
+                        <span className="text-muted">
                             { faker.name.jobTitle() }
                         </span>
                     </Media>
@@ -73,7 +79,7 @@ const TrTableClients = (props) => (
             <td className="align-middle">
                 { faker.internet.email() }
             </td>
-            <td className="align-middle">
+            <td className="align-middle text-nowrap">
                 { faker.phone.phoneNumberFormat() }
             </td>
             <td className="align-middle text-right">

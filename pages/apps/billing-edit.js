@@ -45,7 +45,7 @@ const BillingEdit = () => (
                                 </span>
                             </div>
                             <Row className="mb-4">
-                                <Col sm={3} className="text-right">
+                                <Col sm={3} className="text-sm-right">
                                    Your Plan
                                 </Col>
                                 <Col sm={9}>
@@ -60,24 +60,24 @@ const BillingEdit = () => (
                                         <Progress bar color="info" value="25" />
                                     </Progress>
                                     <dl className="row">
-                                        <dt className="col-sm-4 text-right">Amount Space</dt>
+                                        <dt className="col-sm-4 text-sm-right">Amount Space</dt>
                                         <dd className="col-sm-8">214,8 GB / 1,03 TB</dd>
-                                        <dt className="col-sm-4 text-right">Regular Files</dt>
+                                        <dt className="col-sm-4 text-sm-right">Regular Files</dt>
                                         <dd className="col-sm-8">
                                             <i className="fa fa-circle text-primary mr-2"></i>
                                             177,8 GB
                                         </dd>
-                                        <dt className="col-sm-4 text-right">Shared Files</dt>
+                                        <dt className="col-sm-4 text-sm-right">Shared Files</dt>
                                         <dd className="col-sm-8">
                                             <i className="fa fa-circle text-success mr-2"></i>
                                             37 GB
                                         </dd>
-                                        <dt className="col-sm-4 text-right">Available Files</dt>
+                                        <dt className="col-sm-4 text-sm-right">Available Files</dt>
                                         <dd className="col-sm-8">
                                             <i className="fa fa-circle text-info mr-2"></i>
                                             177,8 GB
                                         </dd>
-                                        <dt className="col-sm-4 text-right">Action</dt>
+                                        <dt className="col-sm-4 text-sm-right">Action</dt>
                                         <dd className="col-sm-8">
                                             <Button color="secondary" outline size="sm">
                                                 Change Plan
@@ -90,7 +90,7 @@ const BillingEdit = () => (
                                 <span className="small">Payment</span>
                             </div>
                             <Row>
-                                <Col sm={3} className="text-right">
+                                <Col sm={3} className="text-sm-right">
                                    Payment Method
                                 </Col>
                                 <Col sm={9}>
@@ -101,11 +101,11 @@ const BillingEdit = () => (
                                         </span> - Account: <samp>Tyshawn_Lakin56@gmail.com</samp>
                                     </div>
                                     <dl className="row">
-                                        <dt className="col-sm-4 text-right">Next Payment Due</dt>
+                                        <dt className="col-sm-4 text-sm-right">Next Payment Due</dt>
                                         <dd className="col-sm-8">2016-05-21</dd>
-                                        <dt className="col-sm-4 text-right">Amount</dt>
+                                        <dt className="col-sm-4 text-sm-right">Amount</dt>
                                         <dd className="col-sm-8">$ 13.00</dd>
-                                        <dt className="col-sm-4 text-right">Action</dt>
+                                        <dt className="col-sm-4 text-sm-right">Action</dt>
                                         <dd className="col-sm-8">
                                             <Button color="secondary" outline size="sm">
                                                 Change Payment

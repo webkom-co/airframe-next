@@ -72,7 +72,7 @@ const WizardStep1 = () => (
             </div>
         </Col>
         <Col md={ 6 }>
-            <Table>
+            <Table responsive="sm">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -516,7 +516,7 @@ export default class WizardExample extends React.Component {
                     className="my-4"
                 />
                 <Card>
-                    <CardBody className="d-flex justify-content-center pt-5">
+                    <CardBody className="d-flex justify-content-center pt-lg-5 pb-0">
                         <Wizard
                             activeStep={ currentStep }
                             onStepChanged={ this._changeStep }
@@ -552,7 +552,7 @@ export default class WizardExample extends React.Component {
                         </Wizard>
                     </CardBody>
 
-                    <CardBody className="p-5">
+                    <CardBody className="p-lg-5">
                     {
                         (() => {
                             switch(this.state.currentStep) {
