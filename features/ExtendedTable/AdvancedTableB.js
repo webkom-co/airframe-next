@@ -191,8 +191,8 @@ export class AdvancedTableB extends React.Component {
             {
                 props => (
                     <React.Fragment>
-                        <div className="d-flex justify-content-end align-items-center mb-2">
-                            <h6 className="my-0">
+                        <div className="d-md-flex justify-content-end align-items-center mb-2">
+                            <h6 className="mb-2 my-md-0">
                                 AdvancedTable B
                             </h6>
                             <div className="d-flex ml-auto">

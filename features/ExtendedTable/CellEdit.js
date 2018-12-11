@@ -45,7 +45,8 @@ const columns = [
             type: Type.TEXTAREA
         },
         style: {
-            width: '40%'
+            width: '40%',
+            minWidth: '400px'
         },
         headerClasses: 'text-nowrap'
     }, {

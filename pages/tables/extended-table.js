@@ -13,6 +13,7 @@ import {
 } from './../../features/ExtendedTable';
 
 import { HeaderMain } from "../../features/HeaderMain";
+import "../../styles/pages/tables/extended-table.scss";
 
 export const ExtendedTable = () => (
     <Container className="tables-extended-table">
