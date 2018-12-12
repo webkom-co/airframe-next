@@ -43,7 +43,7 @@ const Clients = () => (
                     <Card className="mb-3">
                         <UncontrolledTabs initialActiveTabId="clients">
                             <CardBody>
-                                <div className="d-flex">
+                                <div className="d-flex flex-wrap">
                                     <Nav pills>
                                         <NavItem>
                                             <UncontrolledTabs.NavLink tabId="clients">
