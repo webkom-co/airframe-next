@@ -150,13 +150,13 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mt-2 mr-2 mt-md-0">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                            <ButtonGroup className="align-self-start mt-2 d-block w-100 mt-md-0 d-md-inline-flex w-md-auto mr-md-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
                                     <DropdownToggle
                                         color="secondary"
                                         outline
                                         caret
-                                        className="mb-md-2"
+                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
                                     >
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Last Month
@@ -187,13 +187,13 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mt-2 mb-2 ml-auto ml-md-0 mr-md-2 mt-md-0 mb-md-0">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                            <ButtonGroup className="align-self-start mt-2 d-block w-100 mt-md-0 d-md-inline-flex w-md-auto mr-md-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
                                     <DropdownToggle
                                         color="secondary"
                                         outline
                                         caret
-                                        className="mb-md-2"
+                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
                                     >
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Previous Period
@@ -224,7 +224,7 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <div className="align-self-start w-100 d-md-inline-flex w-md-auto">
+                            <div className="align-self-start mt-2 w-100 d-md-inline-flex mt-md-0 w-md-auto">
                                 <ButtonGroup className="align-self-start">
                                     <Button color="primary" className="mb-2 mr-2">
                                         <i className="fa fa-check mr-2"></i>
