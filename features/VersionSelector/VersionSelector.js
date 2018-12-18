@@ -17,7 +17,8 @@ export class VersionSelector extends React.Component {
         dashboard: PropTypes.string,
         down: PropTypes.bool,
         compact: PropTypes.bool,
-        render: PropTypes.func
+        render: PropTypes.func,
+        className: PropTypes.string
     }
 
     constructor(props) {
@@ -55,12 +56,12 @@ export class VersionSelector extends React.Component {
     }
 
     render() {
-        const { down, render } = this.props;
+        const { down, render, className } = this.props;
         const { versions } = this.state;
         const currentVersion = _.find(versions, { label: "React" });
 
         return (
-            <UncontrolledButtonDropdown direction={ down ? "down" : "up" } className="mb-3">
+            <UncontrolledButtonDropdown direction={ down ? "down" : "up" } className={ className }>
                 <DropdownToggle
                     disabled={ _.isEmpty(versions) }
                     color="link"
