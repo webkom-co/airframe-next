@@ -4,11 +4,10 @@ import {
     Link,
     Tools,
     UncontrolledDropdown,
-    DropdownToggle,
     UncontrolledTooltip
 } from './../../components';
 
-import { SwitchVersion } from '../Dropdowns/SwitchVersion';
+import { VersionSelector } from '../VersionSelector/VersionSelector';
 
 const SidebarTopB = () => (
     <React.Fragment>
@@ -22,14 +21,16 @@ const SidebarTopB = () => (
                     <UncontrolledTooltip placement="right" target="tooltipBackToHome">
                         Back to Home
                     </UncontrolledTooltip>
+
                     <UncontrolledDropdown>
-                        <DropdownToggle color="link" className="btn-switch-version">
-                            <div className="h4 fw-600 sidebar-logo mb-1 text-left">
-                                react.bs4 <i className="fa fa-angle-down ml-1"></i>
-                            </div>
-                            <div className="job-title small text-left">Version: Jquery, 1.0.0</div>
-                        </DropdownToggle>
-                        <SwitchVersion />
+                        <VersionSelector down dashboard="Master" render={(currentVersion) => (
+                            <React.Fragment>
+                                <div className="h4 fw-600 sidebar-logo mb-1 text-left">
+                                    react.bs4 <i className="fa fa-angle-down ml-1"></i>
+                                </div>
+                                <div className="job-title small text-left">Version: {currentVersion.label}, {currentVersion.version}</div>
+                            </React.Fragment>
+                        )}/>
                     </UncontrolledDropdown>
                 </div>
             </Tools.DefaultOnly>
