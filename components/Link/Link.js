@@ -12,7 +12,7 @@ export const Link = ({ to, children, onClick, prefetch, ...otherProps }) => {
 
     return (
         <NextLink href={ to } prefetch={ prefetch }>
-            <a href="javascript:;" onClick={clickHandler} {...otherProps}>
+            <a href={ to } onClick={clickHandler} {...otherProps}>
                 { children }
             </a>
         </NextLink>

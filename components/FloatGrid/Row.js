@@ -5,12 +5,14 @@ import {
     WidthProvider,
     Responsive
 } from 'react-grid-layout';
+import { Row as BSRow } from './..';
 
 import { FloatGridContext } from './floatGridContext';
 
 const ResponsiveGrid = WidthProvider(Responsive);
 const responsiveBreakpoints = {
-    xl: 1199, lg: 991, md: 767, sm: 576, xs: 0
+    xl: 1139, lg: 959, md: 719, sm: 539, xs: 0
+    //xl: Number.MAX_VALUE, lg: 1199, md: 991, sm: 767, xs: 576
 };
 const breakPointSteps = _.keys(responsiveBreakpoints);
 const TOTAL_ROW = 12;
@@ -47,43 +49,55 @@ export class Row extends React.Component {
     render() {
         const { children, rowHeight, onLayoutChange, ...otherProps } = this.props;
         const { trueColSizes } = this.state;
-        const layouts = this._lastLayouts = this._calculateLayouts(children);
-        const adjustedChildren = simplifyChildrenArray(
-            React.Children.map(children, (child) =>
-                React.cloneElement(child, { trueSize: trueColSizes[child.props.i] })));
 
-        return (
-            <ResponsiveGrid
-                cols={{ xl: 12, lg: 12, md: 12, sm: 12, xs: 12 }}
-                breakpoints={ responsiveBreakpoints }
-                layouts={ layouts }
-                padding={ [ 0, 0 ] }
-                margin={ [ 0, 0 ] }
-                rowHeight={ rowHeight }
-                onLayoutChange={(currentLayout, allLayouts) => {
-                    // Notify the parent
-                    onLayoutChange(this._transformForChangeHandler(allLayouts));
-                    // Recalculate true sizes
-                    this._updateTrueColSizes(currentLayout);
-                }}
-                onBreakpointChange={(activeLayout) => {
-                    this.setState({ activeLayout });
-                }}
-                onResize={
-                    (layout, oldItem, newItem) => {
-                        this.setState({
-                            trueColSizes: {
-                                ...trueColSizes,
-                                [newItem.i]: this.context.gridUnitsToPx(newItem.w, newItem.h)
-                            }
-                        });
+        if (this.context.active) {
+            const layouts = this._lastLayouts = this._calculateLayouts(children);
+            const adjustedChildren = simplifyChildrenArray(
+                React.Children.map(children, (child) =>
+                    React.cloneElement(child, { trueSize: trueColSizes[child.props.i] })));
+
+            return (
+                <ResponsiveGrid
+                    cols={{ xl: 12, lg: 12, md: 12, sm: 12, xs: 12 }}
+                    breakpoints={ responsiveBreakpoints }
+                    layouts={ layouts }
+                    padding={ [ 0, 0 ] }
+                    margin={ [ 0, 0 ] }
+                    rowHeight={ rowHeight }
+                    onLayoutChange={(currentLayout, allLayouts) => {
+                        // Notify the parent
+                        onLayoutChange(this._transformForChangeHandler(allLayouts));
+                        // Recalculate true sizes
+                        this._updateTrueColSizes(currentLayout);
+                    }}
+                    onBreakpointChange={(activeLayout) => {
+                        this.setState({ activeLayout });
+                    }}
+                    onResize={
+                        (layout, oldItem, newItem) => {
+                            this.setState({
+                                trueColSizes: {
+                                    ...trueColSizes,
+                                    [newItem.i]: this.context.gridUnitsToPx(newItem.w, newItem.h)
+                                }
+                            });
+                        }
                     }
-                }
-                { ...otherProps }
-            >
-                { adjustedChildren }
-            </ResponsiveGrid>
-        );
+                    { ...otherProps }
+                >
+                    { adjustedChildren }
+                </ResponsiveGrid>
+            );
+        } else {
+            const adjustedChildren = React.Children.map(children, (child) =>
+                React.cloneElement(child, { active: false }));
+            
+            return (
+                <BSRow>
+                    { adjustedChildren }
+                </BSRow>
+            );
+        }
     }
 
     _updateTrueColSizes = (layout) => {

@@ -1,4 +1,5 @@
 @import './../../styles/variables.scss';
+@import '~bootstrap/scss/mixins/breakpoints';
 
 .wizard {
     display: flex;
@@ -10,6 +11,7 @@
     display: flex;
     align-items: center;
     text-decoration: none !important;
+    white-space: nowrap;
 
     &--active {
         .wizard-step__icon {
@@ -54,5 +56,26 @@
 
     + .wizard-step {
         margin-left: 20px;
+    }
+}
+
+@media (max-width: breakpoint-max('md', $grid-breakpoints)) {
+    .wizard {
+        flex-wrap: wrap;
+    }
+
+    .wizard-step {
+        flex: 0 1 50%;
+        padding: 0.5rem;
+
+        + .wizard-step {
+            margin-left: 0;    
+        }
+    }
+}
+
+@media (max-width: breakpoint-max('xs', $grid-breakpoints)) {
+    .wizard-step {
+        flex-basis: 100%;
     }
 }
