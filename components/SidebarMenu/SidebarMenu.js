@@ -109,6 +109,12 @@ class SidebarMenu extends React.Component {
         }
     }
 
+    componentWillUnmount() {
+        if (this.sidebarAnimation) {
+            this.sidebarAnimation.destroy();
+        }
+    }
+
     render() {
         const isSlim = this.props.slim || (
             this.props.pageConfig.sidebarSlim &&
