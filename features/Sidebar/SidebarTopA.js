@@ -4,7 +4,6 @@ import faker from 'faker';
 
 import { 
     Sidebar,
-    Tools,
     UncontrolledButtonDropdown,
     Avatar,
     AvatarAddOn,
@@ -16,39 +15,45 @@ import {
 import isInteractive from './../../components/IsInteractive';
 import { randomAvatar } from './../../core/utilities';
 
-const avatarImg = randomAvatar();
+const commonAvatarProps = {
+    src: randomAvatar(),
+    addOns: [
+        <AvatarAddOn.Icon 
+            className="fa fa-circle"
+            color="white"
+            key="avatar-icon-bg"
+        />,
+        <AvatarAddOn.Icon 
+            className="fa fa-circle"
+            color="success"
+            key="avatar-icon-fg"
+        />
+    ]
+}
 
 const SidebarTopA = ({ isInteractive }) => (
     <React.Fragment>
         { /* START Sidebar TOP: A */ }
-        <Sidebar.Section className="pt-0">
+        <Sidebar.Section>
             { /* START SIDEBAR-SLIM: Avatar */ }
             <Link to="/">
-                <Tools.SlimProps
-                    slimProps={{ size: 'sm' }}
-                >
+                <Sidebar.HideSlim>
                     <Avatar.Image
                         size="lg"
-                        src={ avatarImg }
-                        addOns={[
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="white"
-                                key="avatar-icon-bg"
-                            />,
-                            <AvatarAddOn.Icon 
-                                className="fa fa-circle"
-                                color="success"
-                                key="avatar-icon-fg"
-                            />
-                        ]}
+                        { ...commonAvatarProps }
                     />
-                </Tools.SlimProps>
+                </Sidebar.HideSlim>
+                <Sidebar.ShowSlim>
+                    <Avatar.Image
+                        size="sm"
+                        { ...commonAvatarProps }
+                    />
+                </Sidebar.ShowSlim>
             </Link>
             { /* END SIDEBAR-SLIM: Avatar */ }
             <br />
             { /* START SIDEBAR-DEFAULT: Dropdown */ }
-            <Tools.DefaultOnly>
+            <Sidebar.HideSlim>
                 <UncontrolledButtonDropdown>
                     <DropdownToggle color="link" className="pl-0 pb-0 btn-profile" disabled={!isInteractive}>
                         { faker.name.firstName() } { faker.name.lastName() }
@@ -79,7 +84,7 @@ const SidebarTopA = ({ isInteractive }) => (
                 <span className="small">
                     { faker.name.jobTitle() }
                 </span>
-            </Tools.DefaultOnly>
+            </Sidebar.HideSlim>
             { /* END SIDEBAR-DEFAULT: Dropdown */ }
         </Sidebar.Section>
         { /* END Sidebar TOP: A */ }

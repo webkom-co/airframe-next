@@ -2,7 +2,6 @@ import React from 'react';
 
 import { 
     Sidebar,
-    Tools,
     UncontrolledButtonDropdown,
     DropdownToggle,
     UncontrolledPopover,
@@ -19,13 +18,15 @@ const SidebarBottomA = () => (
         { /* START Sidebar BOTTOM: A */ }
         <Sidebar.Section>
             { /* START DESKTOP View */ }
-            <Tools.DefaultOnly>
-                <VersionSelector dashboard="Master" />
-                <FooterAuth />
-            </Tools.DefaultOnly>
+            <Sidebar.HideSlim>
+                <div>
+                    <VersionSelector dashboard="Master" />
+                    <FooterAuth />
+                </div>
+            </Sidebar.HideSlim>
             { /* END DESKTOP View */ }
             { /* START SLIM Only View */ }
-            <Tools.SlimOnly>
+            <Sidebar.ShowSlim>
                 <div className="text-center">
                     <UncontrolledButtonDropdown direction="right" className="mb-3 d-flex justify-content-center ">
                         <DropdownToggle color="link" className="pb-0">
@@ -34,10 +35,10 @@ const SidebarBottomA = () => (
                         <SwitchVersion />
                     </UncontrolledButtonDropdown>
                 </div>
-            </Tools.SlimOnly>
+            </Sidebar.ShowSlim>
             { /* END SLIM Only View  */ }
             { /* START SLIM Only View */ }
-            <Tools.SlimOnly>
+            <Sidebar.ShowSlim>
                 <div className="text-center">
                     <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
                     <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
@@ -46,7 +47,7 @@ const SidebarBottomA = () => (
                         </PopoverBody>
                     </UncontrolledPopover>
                 </div>
-            </Tools.SlimOnly>
+            </Sidebar.ShowSlim>
             { /* END SLIM Only View */ }
         </Sidebar.Section>
     </React.Fragment>

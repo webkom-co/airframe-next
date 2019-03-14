@@ -4,7 +4,6 @@ import {
     Link,
     Sidebar,
     SidebarTrigger,
-    Tools
 } from './../../components';
 
 import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
@@ -22,15 +21,15 @@ export const SidebarDefault = () => (
         </Sidebar.Close>
         { /* START SIDEBAR-OVERLAY: Close (x) */ }
         
-        <Sidebar.Section>
-            { /* START SIDEBAR: Only for Desktop */ }
-            <Tools.DefaultOnly>
+        <Sidebar.HideSlim>
+            <Sidebar.Section className="pb-0">
+                { /* START SIDEBAR: Only for Desktop */ }
                 <Link to="/" className="h4 fw-600 text-primary">
                     react.bs4
                 </Link>
-            </Tools.DefaultOnly>
-            { /* START SIDEBAR: Only for Desktop */ }
-        </Sidebar.Section>
+                { /* START SIDEBAR: Only for Desktop */ }
+            </Sidebar.Section>
+        </Sidebar.HideSlim>        
 
         { /* START SIDEBAR: Only for Mobile */ }
         <Sidebar.MobileFluid>

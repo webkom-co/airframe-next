@@ -210,7 +210,7 @@ class Layout extends React.Component {
         const sidebar = findChildByType(children, LayoutSidebar);
         const navbars = findChildrenByType(children, LayoutNavbar);
         const content = findChildByType(children, LayoutContent);
-        const layoutClass = classNames('layout', {
+        const layoutClass = classNames('layout', 'layout--animations-enabled', {
             'layout--only-navbar': this.state.sidebarHidden && !this.state.navbarHidden
         });
 
