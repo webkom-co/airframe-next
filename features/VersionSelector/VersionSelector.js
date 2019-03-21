@@ -10,7 +10,7 @@ import {
     DropdownToggle
 } from './../../components';
 
-const SERVICE_URL = "http://ec2-18-216-189-103.us-east-2.compute.amazonaws.com:8000";
+const SERVICE_URL = "http://dashboards.webkom.co:8000";
 
 export class VersionSelector extends React.Component {
     static propTypes = {
