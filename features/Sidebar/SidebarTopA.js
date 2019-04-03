@@ -36,7 +36,7 @@ const SidebarTopA = ({ isInteractive }) => (
         { /* START Sidebar TOP: A */ }
         <Sidebar.Section>
             { /* START SIDEBAR-SLIM: Avatar */ }
-            <Link to="/">
+            <Link to="/" className="d-block">
                 <Sidebar.HideSlim>
                     <Avatar.Image
                         size="lg"
@@ -51,11 +51,10 @@ const SidebarTopA = ({ isInteractive }) => (
                 </Sidebar.ShowSlim>
             </Link>
             { /* END SIDEBAR-SLIM: Avatar */ }
-            <br />
             { /* START SIDEBAR-DEFAULT: Dropdown */ }
             <Sidebar.HideSlim>
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile" disabled={!isInteractive}>
+                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile sidebar__link" disabled={!isInteractive}>
                         { faker.name.firstName() } { faker.name.lastName() }
                         <i className="fa fa-angle-down ml-2"></i>
                     </DropdownToggle>
@@ -80,10 +79,9 @@ const SidebarTopA = ({ isInteractive }) => (
                     </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
-                <br />
-                <span className="small">
+                <div className="small">
                     { faker.name.jobTitle() }
-                </span>
+                </div>
             </Sidebar.HideSlim>
             { /* END SIDEBAR-DEFAULT: Dropdown */ }
         </Sidebar.Section>

@@ -24,7 +24,7 @@ export const SidebarDefault = () => (
         <Sidebar.HideSlim>
             <Sidebar.Section className="pb-0">
                 { /* START SIDEBAR: Only for Desktop */ }
-                <Link to="/" className="h4 fw-600 text-primary">
+                <Link to="/" className="h4 fw-600 sidebar__brand">
                     react.bs4
                 </Link>
                 { /* START SIDEBAR: Only for Desktop */ }

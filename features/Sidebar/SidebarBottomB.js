@@ -26,7 +26,11 @@ const SidebarBottomB = ({ isInteractive }) => (
             { /* START DESKTOP View */ }
             <Sidebar.HideSlim>
                 <UncontrolledButtonDropdown direction="up" className="mb-3">
-                    <DropdownToggle color="link" className="btn-profile text-left pl-0 pb-0" disabled={!isInteractive}>
+                    <DropdownToggle
+                        color="link"
+                        className="btn-profile text-left pl-0 pb-0 sidebar__link"
+                        disabled={!isInteractive}
+                    >
                         <Media>
                             <Media left middle className="mr-3">
                                 <Avatar.Image
@@ -64,7 +68,10 @@ const SidebarBottomB = ({ isInteractive }) => (
             <Sidebar.ShowSlim>
                 <div className="text-center">
                     <UncontrolledButtonDropdown direction="right" className="mb-3">
-                        <DropdownToggle color="link" className="text-left pl-0 pb-0">
+                        <DropdownToggle
+                            color="link"
+                            className="text-left pl-0 pb-0 sidebar__link"
+                        >
                             <Avatar.Image
                                 size="sm"
                                 src={ randomAvatar() }

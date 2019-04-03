@@ -68,7 +68,7 @@ class ThemeSelector extends React.Component {
                 </Button>
                 <Card className="theme-config__body">
                     <CardBody>
-                        <FormGroup tag="fieldset">
+                        <FormGroup>
                             <span className="h6 text-uppercase">
                                 Sidebar Style
                             </span>
@@ -96,14 +96,14 @@ class ThemeSelector extends React.Component {
                             }
                         </FormGroup>
 
-                        <FormGroup tag="fieldset">
+                        <FormGroup>
                             <span className="h6 text-uppercase">
                                 Sidebar Color
                             </span>
                             {
                                 _.map(this.props.colorOptions, (option, index) => (
-                                    <FormGroup key={ index }>
-                                        <Label check>
+                                    <FormGroup check key={ index }>
+                                        <Label check className="w-100">
                                             <Input
                                                 type="radio"
                                                 name="sidebarColor"
@@ -117,7 +117,10 @@ class ThemeSelector extends React.Component {
                                                     }
                                                 }}
                                             />{' '}
-                                            { option.name }
+                                            <span className="d-flex align-items-center">
+                                                { option.name }
+                                                <i className={`fa fa-circle ml-auto text-${option.value}`} />
+                                            </span>
                                         </Label>
                                     </FormGroup>
                                 ))

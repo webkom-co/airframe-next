@@ -2,13 +2,10 @@ import React from 'react';
 
 import { 
     Sidebar,
-    UncontrolledButtonDropdown,
-    DropdownToggle,
     UncontrolledPopover,
     PopoverBody
 } from './../../components';
 
-import { SwitchVersion } from '../Dropdowns/SwitchVersion';
 import { FooterAuth } from '../Pages/FooterAuth';
 import { FooterText } from '../FooterText';
 import { VersionSelector } from '../VersionSelector/VersionSelector';
@@ -20,33 +17,30 @@ const SidebarBottomA = () => (
             { /* START DESKTOP View */ }
             <Sidebar.HideSlim>
                 <div>
-                    <VersionSelector dashboard="Master" />
+                    <VersionSelector dashboard="Master" sidebar/>
                     <FooterAuth />
                 </div>
             </Sidebar.HideSlim>
             { /* END DESKTOP View */ }
             { /* START SLIM Only View */ }
             <Sidebar.ShowSlim>
-                <div className="text-center">
-                    <UncontrolledButtonDropdown direction="right" className="mb-3 d-flex justify-content-center ">
-                        <DropdownToggle color="link" className="pb-0">
-                            <i className="fa fa-fw fa-toggle-on"></i>
-                        </DropdownToggle>
-                        <SwitchVersion />
-                    </UncontrolledButtonDropdown>
+                <div className="text-center mb-3">
+                    <VersionSelector dashboard="Master" sidebar render={() => (
+                        <i className="fa fa-fw fa-toggle-on"></i>
+                    )}/>
                 </div>
             </Sidebar.ShowSlim>
             { /* END SLIM Only View  */ }
             { /* START SLIM Only View */ }
             <Sidebar.ShowSlim>
-                <div className="text-center">
+                <a className="text-center sidebar__link" href="javascript:;">
                     <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
                     <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
                         <PopoverBody>
                             <FooterText />
                         </PopoverBody>
                     </UncontrolledPopover>
-                </div>
+                </a>
             </Sidebar.ShowSlim>
             { /* END SLIM Only View */ }
         </Sidebar.Section>

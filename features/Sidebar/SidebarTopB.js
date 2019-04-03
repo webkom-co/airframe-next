@@ -17,14 +17,14 @@ const SidebarTopB = () => (
                 <div>
                     <div className="d-flex">
                         <Link to="/" className="align-self-center" id="tooltipBackToHome">
-                            <i className="fa fa-send fa-fw fa-2x text-primary"></i>
+                            <i className="fa fa-send fa-fw fa-2x sidebar__brand"></i>
                         </Link>
                         <UncontrolledTooltip placement="right" target="tooltipBackToHome">
                             Back to Home
                         </UncontrolledTooltip>
 
                         <UncontrolledDropdown>
-                            <VersionSelector down dashboard="Master" render={(currentVersion) => (
+                            <VersionSelector down sidebar dashboard="Master" render={(currentVersion) => (
                                 <React.Fragment>
                                     <div className="h4 fw-600 sidebar-logo mb-1 text-left">
                                         react.bs4 <i className="fa fa-angle-down ml-1"></i>
@@ -40,8 +40,8 @@ const SidebarTopB = () => (
             { /* START SLIM Only View */ }
             <Sidebar.ShowSlim>
                 <div className="text-center">
-                    <Link to="/">
-                        <i className="fa fa-send fa-fw text-primary" id="tooltipBackToHomeSlim"></i>
+                    <Link to="/" className="sidebar__link">
+                        <i className="fa fa-send fa-fw" id="tooltipBackToHomeSlim"></i>
                     </Link>
                     <UncontrolledTooltip placement="right" target="tooltipBackToHomeSlim">
                         Back to Home

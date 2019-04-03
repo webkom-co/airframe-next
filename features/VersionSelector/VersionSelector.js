@@ -1,5 +1,6 @@
 import React from 'react';
 import fetch from 'node-fetch';
+import classNames from 'classnames';
 import _ from 'lodash';
 import moment from 'moment';
 import PropTypes from 'prop-types';
@@ -18,7 +19,8 @@ export class VersionSelector extends React.Component {
         down: PropTypes.bool,
         compact: PropTypes.bool,
         render: PropTypes.func,
-        className: PropTypes.string
+        className: PropTypes.string,
+        sidebar: PropTypes.bool
     }
 
     constructor(props) {
@@ -56,7 +58,7 @@ export class VersionSelector extends React.Component {
     }
 
     render() {
-        const { down, render, className } = this.props;
+        const { down, render, className, sidebar } = this.props;
         const { versions } = this.state;
         const currentVersion = _.find(versions, { label: "React" });
 
@@ -64,8 +66,14 @@ export class VersionSelector extends React.Component {
             <UncontrolledButtonDropdown direction={ down ? "down" : "up" } className={ className }>
                 <DropdownToggle
                     disabled={ _.isEmpty(versions) }
-                    color="link"
-                    className="btn-switch-version text-left pl-0 pb-0"
+                    tag="a"
+                    href="javascript:;"
+                    className={classNames(
+                        'btn-switch-version',
+                        {
+                            'sidebar__link': sidebar,
+                        }
+                    )}
                 >
                     {
                         currentVersion ? (

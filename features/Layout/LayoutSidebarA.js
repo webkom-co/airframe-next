@@ -1,7 +1,9 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import {
-    Layout
+    Layout,
+    ThemeProvider,
+    ThemeSelector,
 } from './../../components';
 import { NavbarSidebarA } from './NavbarSidebarA';
 import { SidebarSidebarA } from './SidebarSidebarA';
@@ -9,21 +11,25 @@ import { SidebarSidebarA } from './SidebarSidebarA';
 import { favIcons } from './favIcons';
 
 export const LayoutSidebarA = ({ isMobile, children }) => (
-    <Layout sidebarSlim favIcons={ favIcons } isMobile={isMobile}>
-        { /* --------- Navbar ----------- */ }
-        <Layout.Navbar>
-            <NavbarSidebarA />
-        </Layout.Navbar>
-        { /* -------- Sidebar ------------*/ }
-        <Layout.Sidebar>
-            <SidebarSidebarA />
-        </Layout.Sidebar>
+    <ThemeProvider>
+        <Layout sidebarSlim favIcons={ favIcons } isMobile={isMobile}>
+            { /* --------- Navbar ----------- */ }
+            <Layout.Navbar>
+                <NavbarSidebarA />
+            </Layout.Navbar>
+            { /* -------- Sidebar ------------*/ }
+            <Layout.Sidebar>
+                <SidebarSidebarA />
+            </Layout.Sidebar>
 
-        { /* -------- Content ------------*/ }
-        <Layout.Content>
-            { children }
-        </Layout.Content>
-    </Layout>
+            { /* -------- Content ------------*/ }
+            <Layout.Content>
+                { children }
+            </Layout.Content>
+            { /* -- Theme Selector (DEMO) ----*/ }
+            <ThemeSelector />
+        </Layout>
+    </ThemeProvider>
 );
 LayoutSidebarA.propTypes = {
     children: PropTypes.node,
