@@ -10,6 +10,7 @@ import { LayoutContent } from './LayoutContent';
 import { LayoutNavbar } from './LayoutNavbar';
 import { LayoutSidebar } from './LayoutSidebar';
 import { PageConfigContext } from './PageConfigContext';
+import { ThemeClass } from './../Theme/ThemeClass';
 import config from './../../config';
 
 const findChildByType = (children, targetType) => {
@@ -210,6 +211,15 @@ class Layout extends React.Component {
         const sidebar = findChildByType(children, LayoutSidebar);
         const navbars = findChildrenByType(children, LayoutNavbar);
         const content = findChildByType(children, LayoutContent);
+        const otherChildren = _.differenceBy(
+            React.Children.toArray(children),
+            [
+                sidebar,
+                ...navbars,
+                content
+            ],
+            'type'
+        );
         const layoutClass = classNames('layout', 'layout--animations-enabled', {
             'layout--only-navbar': this.state.sidebarHidden && !this.state.navbarHidden
         });
@@ -237,22 +247,28 @@ class Layout extends React.Component {
                         ))
                     }
                 </Head>
-                <div className={ layoutClass } ref={ this.containerRef }>
-                    { 
-                        !this.state.sidebarHidden && sidebar && React.cloneElement(sidebar, {
-                            sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (
-                                this.state.screenSize === 'lg' || this.state.screenSize === 'xl'
-                            ),
-                            sidebarCollapsed: !this.props.sidebarSlim && this.state.sidebarCollapsed
-                        })
-                    }
+                <ThemeClass>
+                    {(themeClass) => (
+                        <div className={ classNames(layoutClass, themeClass) } ref={ this.containerRef }>
+                            { 
+                                !this.state.sidebarHidden && sidebar && React.cloneElement(sidebar, {
+                                    sidebarSlim: !!this.props.sidebarSlim && this.state.sidebarCollapsed && (
+                                        this.state.screenSize === 'lg' || this.state.screenSize === 'xl'
+                                    ),
+                                    sidebarCollapsed: !this.props.sidebarSlim && this.state.sidebarCollapsed
+                                })
+                            }
 
-                    <div className="layout__wrap">
-                        { !this.state.navbarHidden && navbars }
+                            <div className="layout__wrap">
+                                { !this.state.navbarHidden && navbars }
 
-                        { content }
-                    </div>
-                </div>
+                                { content }
+                            </div>
+
+                            { otherChildren }
+                        </div>
+                    )}
+                </ThemeClass>
             </PageConfigContext.Provider>
         );
     }

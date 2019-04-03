@@ -22,6 +22,11 @@ import Sidebar from './Sidebar';
 import SidebarMenu from './SidebarMenu';
 import SidebarTrigger from './SidebarTrigger';
 import StarRating from './StarRating';
+import {
+    ThemeClass,
+    ThemeProvider,
+    ThemeSelector,
+} from './Theme';
 import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
 import UncontrolledPopover from './UncontrolledPopover';
@@ -133,6 +138,9 @@ export {
     SidebarMenu,
     SidebarTrigger,
     StarRating,
+    ThemeClass,
+    ThemeProvider,
+    ThemeSelector,
     Tools,
     UncontrolledPopover,
     UncontrolledTabs,
