@@ -228,7 +228,10 @@ class Layout extends React.Component {
             <PageConfigContext.Provider
                 value={{
                     ...this.state,
-                    sidebarSlim: !!this.props.sidebarSlim,
+                    sidebarSlim: !!this.props.sidebarSlim && (
+                        this.state.screenSize === 'lg' ||
+                        this.state.screenSize === 'xl'
+                    ),
 
                     toggleSidebar: this.toggleSidebar.bind(this),
                     setElementsVisibility: this.setElementsVisibility.bind(this),
