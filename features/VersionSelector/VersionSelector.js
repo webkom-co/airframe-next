@@ -81,7 +81,7 @@ export class VersionSelector extends React.Component {
                                 <React.Fragment>
                                     NextJS (React) {currentVersion.version} <i className={`fa ${down ? "fa-angle-down" : "fa-angle-up"} ml-2`}></i>
                                     <br />
-                                    <span className="small">
+                                    <span className={ classNames('small', { 'sidebar__link--muted': sidebar }) }>
                                         { moment(currentVersion.date).format("ddd, MMM DD, YYYY h:mm:ss A") }
                                     </span>
                                 </React.Fragment>

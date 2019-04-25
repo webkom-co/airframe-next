@@ -2,7 +2,6 @@ import React from 'react';
 
 import {
     Link,
-    UncontrolledDropdown,
     UncontrolledTooltip,
     Sidebar
 } from './../../components';
@@ -16,23 +15,30 @@ const SidebarTopB = () => (
             <Sidebar.HideSlim>
                 <div>
                     <div className="d-flex">
-                        <Link to="/" className="align-self-center" id="tooltipBackToHome">
-                            <i className="fa fa-send fa-fw fa-2x sidebar__brand"></i>
+                        <Link to="/" className="align-self-center sidebar__brand" id="tooltipBackToHome">
+                            <i className="fa fa-send fa-fw fa-2x"></i>
                         </Link>
                         <UncontrolledTooltip placement="right" target="tooltipBackToHome">
                             Back to Home
                         </UncontrolledTooltip>
 
-                        <UncontrolledDropdown>
-                            <VersionSelector down sidebar dashboard="Master" render={(currentVersion) => (
+                        <VersionSelector
+                            down
+                            sidebar
+                            dashboard="Master"
+                            render={(currentVersion) => (
                                 <React.Fragment>
                                     <div className="h4 fw-600 sidebar-logo mb-1 text-left">
-                                        react.bs4 <i className="fa fa-angle-down ml-1"></i>
+                                        react.bs4 <i className="fa fa-angle-down ml-1 sidebar__link--muted"></i>
                                     </div>
-                                    <div className="job-title small text-left">Version: {currentVersion.label}, {currentVersion.version}</div>
+                                    <div
+                                        className="job-title small text-left sidebar__link--muted"
+                                    >
+                                        Version: {currentVersion.label}, {currentVersion.version}
+                                    </div>
                                 </React.Fragment>
-                            )}/>
-                        </UncontrolledDropdown>
+                            )}
+                        />
                     </div>
                 </div>
             </Sidebar.HideSlim>
@@ -40,8 +46,8 @@ const SidebarTopB = () => (
             { /* START SLIM Only View */ }
             <Sidebar.ShowSlim>
                 <div className="text-center">
-                    <Link to="/" className="sidebar__link">
-                        <i className="fa fa-send fa-fw" id="tooltipBackToHomeSlim"></i>
+                    <Link to="/">
+                        <i className="fa fa-send fa-fw text-primary" id="tooltipBackToHomeSlim"></i>
                     </Link>
                     <UncontrolledTooltip placement="right" target="tooltipBackToHomeSlim">
                         Back to Home

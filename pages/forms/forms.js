@@ -176,9 +176,7 @@ const Forms = () => (
                                         Static Text
                                     </Label>
                                     <Col sm={9}>
-                                        <Input plaintext>
-                                            static@text.com
-                                        </Input>
+                                        <Input plaintext initialvalue="static@text.com" />
                                     </Col>
                                 </FormGroup>
                                 { /* END Input */}

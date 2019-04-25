@@ -1,6 +1,7 @@
 import React from 'react';
 
-import { 
+import {
+    Button,
     Sidebar,
     UncontrolledPopover,
     PopoverBody
@@ -12,38 +13,46 @@ import { VersionSelector } from '../VersionSelector/VersionSelector';
 
 const SidebarBottomA = () => (
     <React.Fragment>
-        { /* START Sidebar BOTTOM: A */ }
-        <Sidebar.Section>
-            { /* START DESKTOP View */ }
-            <Sidebar.HideSlim>
-                <div>
-                    <VersionSelector dashboard="Master" sidebar/>
-                    <FooterAuth />
-                </div>
-            </Sidebar.HideSlim>
-            { /* END DESKTOP View */ }
-            { /* START SLIM Only View */ }
-            <Sidebar.ShowSlim>
-                <div className="text-center mb-3">
-                    <VersionSelector dashboard="Master" sidebar render={() => (
+        { /* START Desktop */ }
+        <Sidebar.HideSlim>
+            <Sidebar.Section className="pb-0">
+                <VersionSelector sidebar dashboard="Master" />
+            </Sidebar.Section>
+            <Sidebar.Section>
+                <FooterAuth />
+            </Sidebar.Section>
+        </Sidebar.HideSlim>
+        { /* END Desktop */ }
+
+        { /* START Slim Only */ }
+        <Sidebar.ShowSlim>
+            <Sidebar.Section className="text-center">
+                { /* Slim Version Selector */ }
+                <VersionSelector
+                    dashboard="Master"
+                    sidebar
+                    compact
+                    render={() => (
                         <i className="fa fa-fw fa-toggle-on"></i>
-                    )}/>
-                </div>
-            </Sidebar.ShowSlim>
-            { /* END SLIM Only View  */ }
-            { /* START SLIM Only View */ }
-            <Sidebar.ShowSlim>
-                <a className="text-center sidebar__link" href="javascript:;">
-                    <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
-                    <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
-                        <PopoverBody>
-                            <FooterText />
-                        </PopoverBody>
-                    </UncontrolledPopover>
-                </a>
-            </Sidebar.ShowSlim>
-            { /* END SLIM Only View */ }
-        </Sidebar.Section>
+                    )}
+                />
+
+                { /* Footer Text as Tooltip */ }
+                <Button
+                    id="UncontrolledSidebarPopoverFooter"
+                    color="link"
+                    className="sidebar__link p-0 mt-3"
+                >
+                    <i className="fa fa-fw fa-question-circle-o"></i>
+                </Button>
+                <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
+                    <PopoverBody>
+                        <FooterText />
+                    </PopoverBody>
+                </UncontrolledPopover>
+            </Sidebar.Section>
+        </Sidebar.ShowSlim>
+        { /* END Slim Only */ }
     </React.Fragment>
 )
 

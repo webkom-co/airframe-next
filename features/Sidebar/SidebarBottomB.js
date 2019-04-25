@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import faker from 'faker';
 
 import { 
+    Button,
     Sidebar,
     UncontrolledButtonDropdown,
     DropdownToggle,
@@ -28,37 +29,37 @@ const SidebarBottomB = ({ isInteractive }) => (
                 <UncontrolledButtonDropdown direction="up" className="mb-3">
                     <DropdownToggle
                         color="link"
-                        className="btn-profile text-left pl-0 pb-0 sidebar__link"
-                        disabled={!isInteractive}
+                        className="btn-profile text-left pl-0 pb-0"
+                        disabled={ !isInteractive }
                     >
-                        <Media>
-                            <Media left middle className="mr-3">
-                                <Avatar.Image
-                                    size="md"
-                                    src={ randomAvatar() }
-                                    addOns={[
-                                        <AvatarAddOn.Icon 
-                                            className="fa fa-circle"
-                                            color="white"
-                                            key="avatar-icon-bg"
-                                        />,
-                                        <AvatarAddOn.Icon 
-                                            className="fa fa-circle"
-                                            color="success"
-                                            key="avatar-icon-fg"
-                                        />
-                                    ]}
-                                /> 
+                            <Media>
+                                <Media left middle className="mr-3">
+                                    <Avatar.Image
+                                        size="md"
+                                        src={ randomAvatar() }
+                                        addOns={[
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="white"
+                                                key="avatar-icon-bg"
+                                            />,
+                                            <AvatarAddOn.Icon 
+                                                className="fa fa-circle"
+                                                color="success"
+                                                key="avatar-icon-fg"
+                                            />
+                                        ]}
+                                    /> 
+                                </Media>
+                                <Media body>
+                                    <span className="mt-0 d-flex h6 mb-1 text-truncate">
+                                        { faker.name.firstName() } { faker.name.lastName() } <i className="fa fa-fw fa-angle-up ml-1"></i>
+                                    </span>
+                                    <p className="small text-truncate">
+                                        { faker.name.jobTitle() }
+                                    </p>
+                                </Media>
                             </Media>
-                            <Media body>
-                                <span className="mt-0 d-flex h6 mb-1 text-truncate">
-                                    { faker.name.firstName() } { faker.name.lastName() } <i className="fa fa-fw fa-angle-up ml-1"></i>
-                                </span>
-                                <p className="small text-truncate">
-                                    { faker.name.jobTitle() }
-                                </p>
-                            </Media>
-                        </Media>
                     </DropdownToggle>
                     <DropdownProfile />
                 </UncontrolledButtonDropdown>
@@ -70,7 +71,8 @@ const SidebarBottomB = ({ isInteractive }) => (
                     <UncontrolledButtonDropdown direction="right" className="mb-3">
                         <DropdownToggle
                             color="link"
-                            className="text-left pl-0 pb-0 sidebar__link"
+                            className="text-left pl-0 pb-0"
+                            disabled={ !isInteractive }
                         >
                             <Avatar.Image
                                 size="sm"
@@ -102,7 +104,13 @@ const SidebarBottomB = ({ isInteractive }) => (
             { /* START SLIM Only View */ }
             <Sidebar.ShowSlim>
                 <div className="text-center">
-                    <i className="fa fa-fw fa-question-circle-o" id="UncontrolledSidebarPopoverFooter"></i>
+                    <Button
+                        color="link"
+                        id="UncontrolledSidebarPopoverFooter"
+                        className="sidebar__link p-0"
+                    >
+                        <i className="fa fa-fw fa-question-circle-o" />
+                    </Button>
                     <UncontrolledPopover placement="left-end" target="UncontrolledSidebarPopoverFooter">
                         <PopoverBody>
                             <FooterText />

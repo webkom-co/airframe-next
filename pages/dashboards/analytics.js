@@ -118,14 +118,9 @@ class Analytics extends React.Component {
                             className="mt-0 mb-3 mb-lg-0"
                         />
                         <ButtonToolbar className="ml-auto">
-                            <ButtonGroup className="align-self-start mr-md-2 d-block w-100 d-md-inline-flex w-md-auto">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
-                                    <DropdownToggle
-                                        color="secondary"
-                                        outline
-                                        caret
-                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
-                                    >
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
                                         <i className="fa fa-globe mr-2"></i>
                                         www.webkom.co
                                     </DropdownToggle>
@@ -150,14 +145,9 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mt-2 d-block w-100 mt-md-0 d-md-inline-flex w-md-auto mr-md-2">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
-                                    <DropdownToggle
-                                        color="secondary"
-                                        outline
-                                        caret
-                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
-                                    >
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Last Month
                                     </DropdownToggle>
@@ -187,14 +177,9 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <ButtonGroup className="align-self-start mt-2 d-block w-100 mt-md-0 d-md-inline-flex w-md-auto mr-md-2">
-                                <UncontrolledButtonDropdown className="ml-auto flex-column d-block d-md-inline-flex w-100 w-md-auto">
-                                    <DropdownToggle
-                                        color="secondary"
-                                        outline
-                                        caret
-                                        className="mb-md-2 d-block w-100 d-md-inline-block w-md-auto"
-                                    >
+                            <ButtonGroup className="align-self-start mr-2">
+                                <UncontrolledButtonDropdown className="ml-auto flex-column">
+                                    <DropdownToggle color="secondary" outline caret className="mb-2">
                                         <i className="fa fa-calendar-o mr-2"></i>
                                         Previous Period
                                     </DropdownToggle>
@@ -224,24 +209,22 @@ class Analytics extends React.Component {
                                     </DropdownMenu>
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
-                            <div className="align-self-start mt-2 w-100 d-md-inline-flex mt-md-0 w-md-auto">
-                                <ButtonGroup className="align-self-start">
-                                    <Button color="primary" className="mb-2 mr-2">
-                                        <i className="fa fa-check mr-2"></i>
-                                        Apply
-                                    </Button>
-                                </ButtonGroup>
-                                <ButtonGroup>
-                                    <Button
-                                        color="secondary"
-                                        outline
-                                        className="mb-2 align-self-start"
-                                        onClick={this._resetLayout}
-                                    >
-                                        <i className="fa fa-times"></i>
-                                    </Button>
-                                </ButtonGroup>
-                            </div>
+                            <ButtonGroup className="align-self-start">
+                                <Button color="primary" className="mb-2 mr-2">
+                                    <i className="fa fa-check mr-2"></i>
+                                    Apply
+                                </Button>
+                            </ButtonGroup>
+                            <ButtonGroup>
+                                <Button
+                                    color="secondary"
+                                    outline
+                                    className="mb-2 align-self-start"
+                                    onClick={this._resetLayout}
+                                >
+                                    <i className="fa fa-times"></i>
+                                </Button>
+                            </ButtonGroup>
                         </ButtonToolbar>
                     </div>
                 </Container>

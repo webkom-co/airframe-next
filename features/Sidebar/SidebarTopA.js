@@ -54,7 +54,11 @@ const SidebarTopA = ({ isInteractive }) => (
             { /* START SIDEBAR-DEFAULT: Dropdown */ }
             <Sidebar.HideSlim>
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="link" className="pl-0 pb-0 btn-profile sidebar__link" disabled={!isInteractive}>
+                    <DropdownToggle
+                        color="link"
+                        className="pl-0 pb-0 btn-profile sidebar__link"
+                        disabled={ !isInteractive }
+                    >
                         { faker.name.firstName() } { faker.name.lastName() }
                         <i className="fa fa-angle-down ml-2"></i>
                     </DropdownToggle>
