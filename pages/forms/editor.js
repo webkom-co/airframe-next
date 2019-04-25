@@ -1,6 +1,11 @@
 import React from 'react';
-import ReactQuill from 'react-quill';
 import faker from 'faker';
+// Workaround for SSR problems
+let ReactQuill = null;
+if (typeof window !== 'undefined') {
+    ReactQuill = require('react-quill');
+}
+
 
 import {
     Container,
@@ -46,15 +51,19 @@ export default class Editor extends React.Component {
                     <strong>Quill</strong> is a modern rich text editor built for compatibility and extensibility.
                 </p>
                 <Card>
-                    <ReactQuill
-                        value={ this.state.text }
-                        onChange={ this._handleChange }
-                        modules={ this.modules }
-                        formats={ this.formats }
-                        style={{
-                            minHeight: '480px'
-                        }}
-                    />
+                    {
+                        ReactQuill && (
+                            <ReactQuill
+                                value={ this.state.text }
+                                onChange={ this._handleChange }
+                                modules={ this.modules }
+                                formats={ this.formats }
+                                style={{
+                                    minHeight: '480px'
+                                }}
+                            />
+                        )
+                    }
                 </Card>
             </Container>
         );

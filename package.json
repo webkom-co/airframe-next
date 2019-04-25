@@ -49,6 +49,7 @@
     "numeral": "^2.0.6",
     "prop-types": "^15.7.2",
     "query-string": "^6.4.2",
+    "quill": "^2.0.0-dev.3",
     "rc-slider": "^8.6.9",
     "react": "^16.8.6",
     "react-beautiful-dnd": "^11.0.1",
