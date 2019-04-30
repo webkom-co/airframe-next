@@ -5,6 +5,7 @@ import _ from 'lodash';
 import classNames from 'classnames';
 
 import { withPageConfig } from './../Layout/withPageConfig'
+import Common from './../../core/common';
 import { MenuContext } from './MenuContext';
 
 class SidebarMenu extends React.Component {
@@ -16,6 +17,8 @@ class SidebarMenu extends React.Component {
         pageConfig: PropTypes.object,
         disabled: PropTypes.bool
     }
+
+    containerRef = React.createRef();
 
     constructor(props) {
         super(props);
@@ -90,6 +93,11 @@ class SidebarMenu extends React.Component {
     }
 
     componentDidMount() {
+        this.sidebarAnimation = new Common.SideMenuAnimate();
+        this.sidebarAnimation.assignParentElement(
+            this.containerRef.current
+        ); 
+        
         setTimeout(() => {
             this.setActiveEntries(true);
         }, 0);
@@ -98,6 +106,12 @@ class SidebarMenu extends React.Component {
     componentDidUpdate(prevProps) {
         if (this.props.router.pathname !== prevProps.router.pathname) {
             this.setActiveEntries();
+        }
+    }
+
+    componentWillUnmount() {
+        if (this.sidebarAnimation) {
+            this.sidebarAnimation.destroy();
         }
     }
 
@@ -123,7 +137,7 @@ class SidebarMenu extends React.Component {
                     removeEntry: this.removeEntry.bind(this)
                 }}
             >
-            <ul className={ sidebarMenuClass }>
+            <ul className={ sidebarMenuClass } ref={ this.containerRef }>
             {
                 React.Children.map(this.props.children, (child) =>
                     <MenuContext.Consumer>
