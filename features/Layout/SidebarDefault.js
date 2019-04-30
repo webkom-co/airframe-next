@@ -1,13 +1,12 @@
 import React from 'react';
 
 import {
+    Link,
     Sidebar,
     SidebarTrigger,
 } from './../../components';
 
 import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
-
-import { SidebarTop } from './parts/SidebarTop'
 import { SidebarBottom } from './parts/SidebarBottom'
 
 export const SidebarDefault = () => (
@@ -18,7 +17,15 @@ export const SidebarDefault = () => (
             </SidebarTrigger>
         </Sidebar.Close>
         
-        <SidebarTop />
+        { /* START SIDEBAR: Only for Desktop */ }
+        <Sidebar.HideSlim>
+            <Sidebar.Section>
+                <Link to="/" className="h4 fw-600 sidebar__brand">
+                    react.bs4
+                </Link>
+            </Sidebar.Section>
+        </Sidebar.HideSlim>
+        { /* END SIDEBAR: Only for Desktop */ }
 
         { /* scrollable on mobile */ }
         <Sidebar.MobileFluid>

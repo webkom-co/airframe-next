@@ -53,7 +53,7 @@ export const SidebarBottom = () => (
         { /* START DESKTOP View */ }
         <Tools.DefaultOnly>
             <UncontrolledButtonDropdown direction="up" className="mb-3">
-                <DropdownToggle color="link" className="btn-profile text-left pl-0 pb-0">
+                <DropdownToggle color="link" className="btn-profile sidebar__link text-left pl-0 pb-0">
                         <Media>
                             <Media left middle className="mr-3">
                                 <Avatar.Image
@@ -77,7 +77,7 @@ export const SidebarBottom = () => (
                                 <span className="mt-0 d-flex h6 mb-1 text-truncate">
                                     Jane Doe <i className="fa fa-fw fa-angle-up ml-1"></i>
                                 </span>
-                                <p className="small text-truncate">
+                                <p className="small text-truncate sidebar__link--muted">
                                     Web Developer
                                 </p>
                             </Media>
