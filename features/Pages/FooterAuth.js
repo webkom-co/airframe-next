@@ -4,7 +4,7 @@ import { FooterText } from '../FooterText';
 
 const FooterAuth = ({ className }) => (
     <div className={ className }>
-        <p className="small text-muted">
+        <p className="small">
             <FooterText />
         </p>
     </div>
