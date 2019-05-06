@@ -7,10 +7,10 @@ import {
     CardBody,
     Button,
     FormGroup,
-    Label,
-    Input
+    CustomInput,
 } from 'reactstrap';
 
+import './../../styles/components/theme-selector.scss';
 import { Consumer } from './ThemeContext';
 
 class ThemeSelector extends React.Component {
@@ -74,24 +74,22 @@ class ThemeSelector extends React.Component {
                             </span>
                             {
                                 _.map(this.props.styleOptions, (option, index) => (
-                                    <FormGroup check key={ index }>
-                                        <Label check>
-                                            <Input
-                                                type="radio"
-                                                name="sidebarStyle"
-                                                value={ option.value }
-                                                checked={ this.props.style === option.value }
-                                                onChange={(ev) => {
-                                                    if (ev.target.checked) {
-                                                        this.props.onChangeTheme({
-                                                            style: option.value
-                                                        });
-                                                    }
-                                                }}
-                                            />{' '}
-                                            { option.name }
-                                        </Label>
-                                    </FormGroup>
+                                    <CustomInput
+                                        key={ index }
+                                        type="radio"
+                                        name="sidebarStyle"
+                                        id={`sidebarStyle--${option.value}`}
+                                        value={ option.value }
+                                        checked={ this.props.style === option.value }
+                                        onChange={(ev) => {
+                                            if (ev.target.checked) {
+                                                this.props.onChangeTheme({
+                                                    style: option.value
+                                                });
+                                            }
+                                        }}
+                                        label={ option.name }
+                                    />
                                 ))
                             }
                         </FormGroup>
@@ -102,27 +100,27 @@ class ThemeSelector extends React.Component {
                             </span>
                             {
                                 _.map(this.props.colorOptions, (option, index) => (
-                                    <FormGroup check key={ index }>
-                                        <Label check className="w-100">
-                                            <Input
-                                                type="radio"
-                                                name="sidebarColor"
-                                                value={ option.value }
-                                                checked={ this.props.color === option.value }
-                                                onChange={(ev) => {
-                                                    if (ev.target.checked) {
-                                                        this.props.onChangeTheme({
-                                                            color: option.value
-                                                        });
-                                                    }
-                                                }}
-                                            />{' '}
+                                    <CustomInput
+                                        key={ index }
+                                        type="radio"
+                                        name="sidebarColor"
+                                        id={`sidebarStyle--${option.value}`}
+                                        value={ option.value }
+                                        checked={ this.props.color === option.value }
+                                        onChange={(ev) => {
+                                            if (ev.target.checked) {
+                                                this.props.onChangeTheme({
+                                                    color: option.value
+                                                });
+                                            }
+                                        }}
+                                        label={(
                                             <span className="d-flex align-items-center">
                                                 { option.name }
                                                 <i className={`fa fa-circle ml-auto text-${option.value}`} />
                                             </span>
-                                        </Label>
-                                    </FormGroup>
+                                        )}
+                                    />
                                 ))
                             }
                         </FormGroup>

@@ -26,9 +26,11 @@ export class SidebarContent extends React.Component {
     componentDidMount() {
         this.sidebarEntryAnimate = new Common.SidebarEntryAnimate();
         this.slimSidebarAnimate = new Common.SlimSidebarAnimate();
+        this.slimMenuAnimate = new Common.SlimMenuAnimate();
 
         this.sidebarEntryAnimate.assignParentElement(this.sidebarRef.current);
         this.slimSidebarAnimate.assignParentElement(this.sidebarRef.current);
+        this.slimMenuAnimate.assignSidebarElement(this.sidebarRef.current);
 
         this.sidebarEntryAnimate.executeAnimation()
             .then(() => {
@@ -39,6 +41,7 @@ export class SidebarContent extends React.Component {
     componentWillUnmount() {
         this.sidebarEntryAnimate.destroy();
         this.slimSidebarAnimate.destroy();
+        this.slimMenuAnimate.destroy();
     }
 
     render() {
