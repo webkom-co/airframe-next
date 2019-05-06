@@ -22,7 +22,7 @@ export const SidebarDefault = () => (
         { /* START SIDEBAR-OVERLAY: Close (x) */ }
         
         <Sidebar.HideSlim>
-            <Sidebar.Section className="pb-0">
+            <Sidebar.Section>
                 { /* START SIDEBAR: Only for Desktop */ }
                 <Link to="/" className="h4 fw-600 sidebar__brand">
                     react.bs4

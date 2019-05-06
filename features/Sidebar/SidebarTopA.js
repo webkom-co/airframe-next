@@ -33,26 +33,18 @@ const commonAvatarProps = {
 
 const SidebarTopA = ({ isInteractive }) => (
     <React.Fragment>
-        { /* START Sidebar TOP: A */ }
-        <Sidebar.Section>
-            { /* START SIDEBAR-SLIM: Avatar */ }
-            <Link to="/" className="d-block">
-                <Sidebar.HideSlim>
-                    <Avatar.Image
-                        size="lg"
-                        { ...commonAvatarProps }
-                    />
-                </Sidebar.HideSlim>
-                <Sidebar.ShowSlim>
-                    <Avatar.Image
-                        size="sm"
-                        { ...commonAvatarProps }
-                    />
-                </Sidebar.ShowSlim>
-            </Link>
-            { /* END SIDEBAR-SLIM: Avatar */ }
-            { /* START SIDEBAR-DEFAULT: Dropdown */ }
-            <Sidebar.HideSlim>
+        { /* START: Sidebar Default */ }
+        <Sidebar.HideSlim>
+            <Sidebar.Section className="pt-0">
+                <Link to="/" className="d-block">
+                    <Sidebar.HideSlim>
+                        <Avatar.Image
+                            size="lg"
+                            { ...commonAvatarProps }
+                        />
+                    </Sidebar.HideSlim>
+                </Link>
+                
                 <UncontrolledButtonDropdown>
                     <DropdownToggle
                         color="link"
@@ -86,10 +78,20 @@ const SidebarTopA = ({ isInteractive }) => (
                 <div className="small">
                     { faker.name.jobTitle() }
                 </div>
-            </Sidebar.HideSlim>
-            { /* END SIDEBAR-DEFAULT: Dropdown */ }
-        </Sidebar.Section>
-        { /* END Sidebar TOP: A */ }
+            </Sidebar.Section>
+        </Sidebar.HideSlim>
+        { /* END: Sidebar Default */ }
+
+        { /* START: Sidebar Slim */ }
+        <Sidebar.ShowSlim>
+            <Sidebar.Section>
+                <Avatar.Image
+                    size="sm"
+                    { ...commonAvatarProps }
+                />
+            </Sidebar.Section>
+        </Sidebar.ShowSlim>
+        { /* END: Sidebar Slim */ }
     </React.Fragment>
 );
 SidebarTopA.propTypes = {
