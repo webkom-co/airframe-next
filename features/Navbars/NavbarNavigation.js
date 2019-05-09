@@ -10,16 +10,19 @@ import {
     DropdownMenu,
     DropdownItem,
     NestedDropdown,
-    Link
+    ActiveLink as Link
 } from './../../components';
 
-const NavbarNavigation = () => (
+const NavbarNavigation = ({ ...otherProps }) => (
 <React.Fragment>
     <UncontrolledCollapse navbar toggler="#navbar-navigation-toggler">
-        <Nav navbar>
+        <Nav navbar { ...otherProps }>
             <NavItem>
-                <NavLink tag={ Link } to="/">
-                    <i className="fa fa-home"></i>
+                <NavLink tag={ Link } to="/layouts/navbar-only">
+                    <i className="fa fa-fw fa-home d-none d-md-inline"></i>
+                    <span className="d-md-none">
+                        Home
+                    </span>
                 </NavLink>
             </NavItem>
             <UncontrolledDropdown nav inNavbar>

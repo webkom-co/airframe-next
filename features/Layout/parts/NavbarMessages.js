@@ -29,7 +29,7 @@ const NavbarMessages = (props) => (
     <UncontrolledDropdown nav inNavbar { ...props }>
         <DropdownToggle nav>
             <IconWithBadge
-                badge={ <Badge pill color="warning">6</Badge> }
+                badge={ <Badge pill color="secondary">6</Badge> }
             >
                 <i className="fa fa-envelope-o fa-fw" />
             </IconWithBadge>
