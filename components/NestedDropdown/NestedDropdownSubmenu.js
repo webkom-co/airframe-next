@@ -23,9 +23,7 @@ class NestedDropdownSubmenu extends React.Component {
         const itemClass = classNames(className, 'nested-dropdown__submenu-item', {
             'nested-dropdown__submenu-item--open': openId === this.id
         });
-        const linkClass = classNames('nested-dropdown__submenu-item__link', 'dropdown-item', {
-            'active': openId === this.id
-        });
+        const linkClass = classNames('nested-dropdown__submenu-item__link', 'dropdown-item');
         
         return (
             <Tag className={ itemClass }>
