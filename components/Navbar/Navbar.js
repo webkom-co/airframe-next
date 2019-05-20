@@ -11,17 +11,9 @@ const Navbar = ({ themed, fluid, shadow, className, children, ...otherProps }) =
 
     return (
         <BSNavbar className={ navbarClass } { ...otherProps }>
-            {
-                fluid ? (
-                    <div className="navbar-collapse-wrap">
-                        { children }
-                    </div>
-                ) : (
-                    <Container className="navbar-collapse-wrap">
-                        { children }
-                    </Container>
-                )
-            }
+            <Container className="navbar-collapse-wrap" fluid={ fluid }>
+                { children }
+            </Container>
         </BSNavbar>
     )
 };
