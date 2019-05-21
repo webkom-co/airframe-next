@@ -10,6 +10,7 @@ import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
 
 import { SidebarTopA } from './../Sidebar/SidebarTopA'
 import { SidebarBottomA } from './../Sidebar/SidebarBottomA'
+import { LogoThemed } from './../LogoThemed/LogoThemed';
 
 export const SidebarDefault = () => (
     <Sidebar>
@@ -24,8 +25,8 @@ export const SidebarDefault = () => (
         <Sidebar.HideSlim>
             <Sidebar.Section>
                 { /* START SIDEBAR: Only for Desktop */ }
-                <Link to="/" className="h4 fw-600 sidebar__brand">
-                    react.bs4
+                <Link to="/" className="sidebar__brand">
+                    <LogoThemed checkBackground />
                 </Link>
                 { /* START SIDEBAR: Only for Desktop */ }
             </Sidebar.Section>

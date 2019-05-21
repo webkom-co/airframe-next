@@ -8,6 +8,8 @@ import {
     SidebarTrigger
 } from './../../components';
 
+import { LogoThemed } from './../LogoThemed/LogoThemed';
+
 import { NavbarActivityFeed } from './parts/NavbarActivityFeed';
 import { NavbarMessages } from './parts/NavbarMessages';
 import { NavbarUser } from './parts/NavbarUser';
@@ -20,7 +22,7 @@ export const NavbarDefault = () => (
             </NavItem>
             <NavItem className="navbar-brand h5 mb-0 d-lg-none">
                 <Link to="/">
-                    react.bs4
+                    <LogoThemed />
                 </Link>
             </NavItem>
             <NavItem className="d-none d-md-block">
