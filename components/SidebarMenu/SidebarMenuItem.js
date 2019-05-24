@@ -71,10 +71,14 @@ export class SidebarMenuItem extends React.Component {
         slim: PropTypes.bool,
         // User props
         icon: PropTypes.node,
-        title: PropTypes.string,
+        title: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.node
+        ]),
         to: PropTypes.string,
         href: PropTypes.string,
-        exact: PropTypes.bool
+        exact: PropTypes.bool,
+        noCaret: PropTypes.bool,
     }
 
     static defaultProps = {
@@ -125,7 +129,11 @@ export class SidebarMenuItem extends React.Component {
         });
 
         return (
-            <li className={ itemClass }>
+            <li
+                className={classNames(itemClass, {
+                    'sidebar-menu__entry--no-caret': this.props.noCaret,
+                })}
+            >
                 <SidebarMenuItemLink
                     to={ this.props.to || null }
                     href={ this.props.href || null }
