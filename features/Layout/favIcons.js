@@ -1,5 +1,5 @@
 export const favIcons = [
-    { rel: 'icon', type: 'image/ico', href: '/static/images/favicons/favicon.ico' },
+    { rel: 'icon', type: 'image/x-icon', href: '/static/images/favicons/favicon.ico' },
 
     { rel: 'apple-touch-icon', sizes: '180x180', href: '/static/images/favicons/apple-touch-icon.png' },
 
