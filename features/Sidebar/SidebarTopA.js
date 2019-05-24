@@ -75,7 +75,7 @@ const SidebarTopA = ({ isInteractive }) => (
                     </DropdownItem>
                     </DropdownMenu>
                 </UncontrolledButtonDropdown>
-                <div className="small">
+                <div className="small sidebar__link--muted">
                     { faker.name.jobTitle() }
                 </div>
             </Sidebar.Section>

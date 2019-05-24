@@ -19,7 +19,7 @@ const SidebarBottomA = () => (
                 <VersionSelector sidebar dashboard="Master" />
             </Sidebar.Section>
             <Sidebar.Section>
-                <FooterAuth />
+                <FooterAuth className="text-muted" />
             </Sidebar.Section>
         </Sidebar.HideSlim>
         { /* END Desktop */ }
