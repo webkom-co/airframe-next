@@ -16,7 +16,7 @@ const SidebarBottomA = () => (
         { /* START Desktop */ }
         <Sidebar.HideSlim>
             <Sidebar.Section className="pb-0">
-                <VersionSelector sidebar dashboard="Master" />
+                <VersionSelector sidebar dashboard="Airframe" />
             </Sidebar.Section>
             <Sidebar.Section>
                 <FooterAuth className="text-muted" />
@@ -29,7 +29,7 @@ const SidebarBottomA = () => (
             <Sidebar.Section className="text-center">
                 { /* Slim Version Selector */ }
                 <VersionSelector
-                    dashboard="Master"
+                    dashboard="Airframe"
                     sidebar
                     compact
                     render={() => (
