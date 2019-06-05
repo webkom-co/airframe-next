@@ -4,7 +4,7 @@ import paginationFactory from 'react-bootstrap-table2-paginator';
 import filterFactory, { Comparator, dateFilter } from 'react-bootstrap-table2-filter'
 import ToolkitProvider from 'react-bootstrap-table2-toolkit';
 import _ from 'lodash';
-import faker from 'faker';
+import faker from 'faker/locale/en_US';
 import moment from 'moment';
 
 import {
@@ -13,7 +13,11 @@ import {
     StarRating,
     ButtonGroup
 } from './../../components';
-import { CustomExportCSV, CustomSearch } from './';
+import { CustomExportCSV } from './CustomExportButton';
+import { CustomSearch } from './CustomSearch';
+import { CustomPaginationPanel } from './CustomPaginationPanel';
+import { CustomSizePerPageButton } from './CustomSizePerPageButton';
+import { CustomPaginationTotal } from './CustomPaginationTotal';
 import { randomArray } from './../../core/utilities';
 import {
     buildCustomTextFilter,
@@ -212,7 +216,16 @@ export class AdvancedTableA extends React.Component {
         const columnDefs = this.createColumnDefinitions();
         const paginationDef = paginationFactory({
             paginationSize: 5,
-            showTotal: true
+            showTotal: true,
+            pageListRenderer: (props) => (
+                <CustomPaginationPanel { ...props } size="sm" className="ml-md-auto mt-2 mt-md-0" />
+            ),
+            sizePerPageRenderer: (props) => (
+                <CustomSizePerPageButton { ...props } />
+            ),
+            paginationTotalRenderer: (from, to, size) => (
+                <CustomPaginationTotal { ...{ from, to, size } } />
+            )
         });
         const selectRowConfig = {
             mode: 'checkbox',
@@ -232,8 +245,8 @@ export class AdvancedTableA extends React.Component {
             {
                 props => (
                     <React.Fragment>
-                        <div className="d-md-flex justify-content-end align-items-center mb-2">
-                            <h6 className="mb-2 my-md-0">
+                        <div className="d-flex justify-content-end align-items-center mb-2">
+                            <h6 className="my-0">
                                 AdvancedTable A
                             </h6>
                             <div className="d-flex ml-auto">
@@ -241,7 +254,7 @@ export class AdvancedTableA extends React.Component {
                                     className="mr-2"
                                     { ...props.searchProps }
                                 />
-                                <ButtonGroup className="">
+                                <ButtonGroup>
                                     <CustomExportCSV
                                         { ...props.csvProps }
                                     >
