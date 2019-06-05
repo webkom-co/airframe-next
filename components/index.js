@@ -15,6 +15,7 @@ import InputGroupAddon from './InputGroupAddon';
 import IsInteractive from './IsInteractive';
 import Layout, { withPageConfig, setupPage } from './Layout';
 import Link from './Link';
+import Navbar from './Navbar';
 import NestedDropdown from './NestedDropdown';
 import OuterClick from './OuterClick';
 import Progress from './Progress';
@@ -26,6 +27,7 @@ import {
     ThemeClass,
     ThemeProvider,
     ThemeSelector,
+    ThemeConsumer,
 } from './Theme';
 import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
@@ -88,7 +90,6 @@ export {
     ModalFooter,
     ModalHeader,
     Nav,
-    Navbar,
     NavbarBrand,
     NavbarToggler,
     NavItem,
@@ -129,6 +130,7 @@ export {
     HolderProvider,
     Layout,
     Link,
+    Navbar,
     NestedDropdown,
     withPageConfig,
     setupPage,
@@ -139,6 +141,7 @@ export {
     SidebarTrigger,
     StarRating,
     ThemeClass,
+    ThemeConsumer,
     ThemeProvider,
     ThemeSelector,
     Tools,
