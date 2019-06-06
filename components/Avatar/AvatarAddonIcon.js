@@ -4,7 +4,7 @@ import classNames from 'classnames';
 
 const AvatarAddonIcon = (props) => {
     const addOnClass = classNames({
-        'avatar__icon--small': props.small
+        'avatar__icon__inner': props.small
     }, `text-${ props.color }`);
 
     return (
