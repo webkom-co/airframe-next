@@ -117,19 +117,12 @@ const NavbarNavigation = ({ ...otherProps }) => (
 
             <UncontrolledDropdown nav inNavbar>
                 <DropdownToggle nav>
-                    Pages                                 
+                    Layouts                                 
                     <i className="fa fa-angle-down fa-fw ml-1"></i>
                 </DropdownToggle>
                 <DropdownMenu>
-                    <DropdownItem tag={ Link } to="/pages/register">Register</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/login">Login</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/forgot-password">Forgot Password</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/lock-screen">Lock Screen</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/error-404">Error 404</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/confirmation">Confirmation</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/success">Success</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/danger">Danger</DropdownItem>
-                    <DropdownItem tag={ Link } to="/pages/coming-soon">Coming Soon</DropdownItem>
+                    <DropdownItem tag={ Link } to="/layouts/sidebar-default">Sidebar &amp; navbar</DropdownItem>
+                    <DropdownItem tag={ Link } to="/layouts/navbar-only">Navbar Only</DropdownItem>
                 </DropdownMenu>
             </UncontrolledDropdown>
 

@@ -2,113 +2,90 @@ import React from 'react';
 
 import {
     Container,
-    Row,
-    Col
+    Link,
 } from './../../components';
-import { HeaderMain } from "../../features/HeaderMain";
 
 const SidebarDefault = () => (
     <Container>
-        <Row>
-            <Col>
-                <HeaderMain 
-                    title="Sidebar Default"
-                    className="mb-5 mt-4"
-                />
+        <h1 className="display-4 mb-4 mt-2">Sidebar &amp; Navbar</h1>
+        
+        <p className="mb-5">
+            Welcome to the <b>&quot;Airframe&quot;</b> Admin Dashboard Theme based on <a href="https://getbootstrap.com" target="_blank" rel="noopener noreferrer">Bootstrap 4.x</a> version for React called&nbsp;
+            <a href="https://reactstrap.github.io" target="_blank" rel="noopener noreferrer">reactstrap</a> - easy to use React Bootstrap 4 components compatible with React 16+.
+        </p>
 
-                <h4>Sidebar</h4>
-                <p>
-                    This sidebar uses <strong>Routes</strong>:
-                </p>
-                <ul>
-                    <li>
-                        Main Sidebar: <code>/app/layout/components/<strong>DefaultSidebar</strong></code>
-                    </li>
-                    <ul>
-                        <li>
-                            Top Fixed Section: <code>/app/routes/components/Sidebar/<strong>SidebarTopA</strong></code>
-                        </li>
-                        <li>
-                            Middle Section <i>(navigation)</i>: <code>/app/layout/components/<strong>SidebarMiddleNav</strong></code>
-                        </li>
-                        <li>
-                            Bottom Section <i>(footer)</i>: <code>/app/routes/components/Sidebar/<strong>SidebarBottomA</strong></code>
-                        </li>
-                    </ul>
-                </ul>
-                <hr/>
-                <h6>Sidebar Code Example:</h6>
-                <pre>
-                    <code>
-                    &lt;Sidebar&gt; <br />
-                        &nbsp; /* START SIDEBAR-OVERLAY: Close (x) */ <br />
-                        &nbsp; &lt;Sidebar.Close&gt;<br />
-                        &nbsp; &nbsp; &lt;SidebarTrigger tag={ 'a' } href=&quot;javascript:;&quot;&gt;<br />
-                        &nbsp; &nbsp; &nbsp; &lt;i className=&quot;fa fa-times-circle fa-fw&quot;&gt;&lt;/i&gt;<br />
-                        &nbsp; &nbsp; &lt;/SidebarTrigger&gt;<br />
-                        &nbsp; &lt;/Sidebar.Close&gt;<br />
-                        &nbsp; /* END SIDEBAR-OVERLAY: Close (x) */<br />
-                        <br />
-                        &nbsp; /* START SIDEBAR: Fixed Section */<br />
-                        &nbsp; &lt;Sidebar.Section&gt;<br />
-                        &nbsp; &nbsp; <strong>&lt;SidebarTopA /&gt;</strong><br />
-                        &nbsp; &lt;/Sidebar.Section&gt;<br />
-                        &nbsp; /* END SIDEBAR: Fixed Section */<br />
-                        <br />
-                        &nbsp; /* START SIDEBAR: Mobile Scroll Wrapper */<br />
-                        &nbsp; &lt; Sidebar.MobileFluid&gt;<br />
-                        &nbsp; &nbsp; /* START SIDEBAR: Everywhere */<br />
-                        &nbsp; &nbsp; &lt; Sidebar.Section fluid cover&gt;<br />
-                        &nbsp; &nbsp; /* SIDEBAR: Menu */<br />
-                        &nbsp; &nbsp; <strong>&lt;SidebarMiddleNav /&gt;</strong><br />
-                        &nbsp; &nbsp; &lt;/Sidebar.Section&gt;<br />
-                        &nbsp; &nbsp; /* END SIDEBAR: Everywhere */<br />
-                        &nbsp; &nbsp; <strong>&lt;SidebarBottomA /&gt;</strong><br />
-                        &nbsp; &lt;/Sidebar.MobileFluid&gt;<br />
-                        &nbsp; /* END SIDEBAR: Mobile Scroll Wrapper */<br />
-                    &lt;/Sidebar&gt;
-                    </code>
-                </pre>
-                <hr/>
-                <h4>Navbar</h4>
-                <p>
-                    This navbar uses <strong>Routes</strong>:
-                </p>
-                <ul>
-                    <li>
-                        Main Navbar: <code>/app/layout/components/<strong>DefaultNavbar</strong></code>
-                    </li>
-                    <ul>
-                        <li>
-                            Top Right <i>(icon bell with badge)</i>: <code>/app/layout/components/<strong>NavbarActivityFeed</strong></code>
-                        </li>
-                        <li>
-                            Top Right <i>(icon envelope with badge)</i>: <code>/app/layout/components/<strong>NavbarMessages</strong></code>
-                        </li>
-                        <li>
-                            Top Right <i>(icon power off)</i>: <code>/app/layout/components/<strong>NavbarUser</strong></code>
-                        </li>
-                    </ul>
-                </ul>
-                <h6>Navbar Code Example:</h6>
-                <pre>
-                    <code>
-                        &lt;Navbar light color=&quot;none&quot; expand=&quot;xs&quot;&gt;<br />
-                            &nbsp; &lt;Nav navbar&gt;<br />
-                            &nbsp; &nbsp; &lt;NavItem className=&quot;mr-3&quot;&gt;<br />
-                            &nbsp; &nbsp; &nbsp; &lt;SidebarTrigger/&gt;<br />
-                            &nbsp; &nbsp; &lt;/NavItem&gt;<br />
-                            &nbsp; &lt;/Nav&gt;<br />
-                            &nbsp; &lt;Nav navbar className=&quot;ml-auto&quot;&gt;<br />
-                            &nbsp; &nbsp; &lt;<strong>NavbarActivityFeed</strong> /&gt;<br />
-                            &nbsp; &nbsp; &lt;<strong>NavbarMessages</strong> className=&quot;ml-2&quot; /&gt;<br />
-                            &nbsp; &nbsp; &lt;<strong>NavbarUser</strong> className=&quot;ml-2&quot; /&gt;<br />
-                            &nbsp; &lt;/Nav&gt;<br />
-                        &lt;/Navbar&gt;<br />
-                    </code>
-                </pre>
-            </Col>
-        </Row>
+        <section className="mb-5">
+            <h6>
+                Layouts for this framework:
+            </h6>
+            <ul className="pl-3">
+                <li>
+                    <Link to="/layouts/sidebar-default">Sidebar with Navbar</Link>
+                </li>
+                <li>
+                    <Link to="/layouts/navbar-only">Navbar Only</Link>
+                </li>
+            </ul>
+        </section>
+
+        <section className="mb-5">
+            <h6>
+                This Starter has:
+            </h6>
+            <ul className="pl-3">
+                <li>
+                    <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/documentation-next.js" target="_blank" rel="noopener noreferrer">Documentation</a> - which describes how to configure this version.
+                </li>
+                <li>
+                    <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/credits-next.js" target="_blank" rel="noopener noreferrer">Credits</a> - technical details of which versions are used for this framework.
+                </li>
+                <li>
+                    <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/roadmap-react" target="_blank" rel="noopener noreferrer">Roadmap</a> - update for this technology for the coming months.
+                </li>
+                <li>
+                    <b>Bugs</b> - do you see errors in this version? Please report vie email: <i>info@webkom.co</i>
+                </li>
+            </ul>
+        </section>
+
+        <section className="mb-5">
+            <h6>
+                Other versions for &quot;Airframe&quot;:
+            </h6>
+            <ul className="pl-3">
+                <li>
+                    <a href="http://dashboards.webkom.co/jquery/airframe">jQuery</a> - based on the newest <i>Bootstrap 4.x</i>
+                </li>
+                <li>
+                    <a href="http://dashboards.webkom.co/react/airframe">React</a> - based on the newest <i>Reactstrap</i>
+                </li>
+                <li>
+                    <a href="http://dashboards.webkom.co/react-next/airframe">Next.js (React)</a> - based on the newest <i>Reactstrap</i> and <i>Next.js</i>
+                </li>
+                <li>
+                    <a href="http://dashboards.webkom.co/angular/airframe">Angular</a> - based on the newest <i>ng-bootstrap</i>
+                </li>
+                <li>
+                    <a href="http://dashboards.webkom.co/net-mvc/airframe">.NET MVC</a> - based on the newest <i>Bootstrap 4.x</i>
+                </li>
+                <li>
+                    <a href="http://dashboards.webkom.co/vue/airframe">Vue.js</a> - based on the newest <i>BootstrapVue</i>
+                </li>
+                <li>
+                    <b>Other Versions</b>, such as <i>Ruby on Rails, Ember, Laravel etc.</i>, please ask for the beta version via email: info@webkom.co
+                </li>
+            </ul>
+        </section>
+
+        <section className="mb-5">
+            <h6>
+                Work Orders:
+            </h6>
+            <p>
+                Regarding configuration, changes under client&apos;s requirements.<br />
+                Pleace contact us through the <a href="http://wbkom.co/contact" target="_blank" rel="noopener noreferrer">webkom.co/contact</a> website.
+            </p>
+        </section>
     </Container>
 );
 

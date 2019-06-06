@@ -175,7 +175,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-bookmark-o"></i>}
             title="Docs"
-        to='https://webkom.gitbook.io'
+            to='https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/documentation-next.js'
         />
         { /* -------- Versions ---------*/ }
         <SidebarMenu.Item
