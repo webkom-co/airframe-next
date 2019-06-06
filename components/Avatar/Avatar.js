@@ -14,6 +14,9 @@ const Avatar = (props) => {
         avatarAddOn.type.addOnId === "avatar--badge");
     const icons = _.filter(addOnsdArr, (avatarAddOn) =>
         avatarAddOn.type.addOnId === "avatar--icon");
+    const isNested = _.reduce(addOnsdArr, (acc, avatarAddOn) =>
+        acc || !!avatarAddOn.props.small, false);
+
     return (
         <div className={ avatarClass } style={ props.style }>
             {
@@ -29,13 +32,19 @@ const Avatar = (props) => {
                         case 1:
                             return (
                                 <div className="avatar__icon">
-                                { _.first(icons) }
+                                    { _.first(icons) }
                                 </div>
                             )
                         default:
                             return (
-                                <div className="avatar__icon avatar__icon--stack">
-                                { icons }
+                                <div
+                                    className={
+                                        classNames({
+                                            'avatar__icon--nested': isNested,
+                                        }, 'avatar__icon', 'avatar__icon--stack')
+                                    }
+                                >
+                                    { icons }
                                 </div>
                             )
                     }
