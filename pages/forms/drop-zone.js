@@ -43,22 +43,29 @@ export default class Dropzone extends React.Component {
                         Simple HTML5-compliant drag&apos;n&apos;drop zone for files built with React.js.
                     </p>
                     <FileDrop
-                        className={dropzoneClass}
                         multiple
                         onDragEnter={() => { this.setState({isOver: true}) }}
                         onDragLeave={() => { this.setState({isOver: false}) }}
                         onDrop={this._filesDropped}
                     >
-                        <i className="fa fa-cloud-upload fa-fw fa-3x mb-3"></i>
-                        <h5 className='mt-0'>
-                            Upload Your files
-                        </h5>
-                        <p>
-                            Drag a file here or <span className='text-primary'>browse</span> for a file to upload.
-                        </p>
-                        <p className="small">
-                            JPG, GIF, PNG, MOV, and AVI. Please choose files under 2GB for upload. File sizes are 400x300px.
-                        </p>
+                        {
+                            ({ getRootProps, getInputProps }) => (
+                                <div {...getRootProps()} className={dropzoneClass}>
+                                    <i className="fa fa-cloud-upload fa-fw fa-3x mb-3"></i>
+                                    <h5 className='mt-0'>
+                                        Upload Your files
+                                    </h5>
+                                    <p>
+                                        Drag a file here or <span className='text-primary'>browse</span> for a file to upload.
+                                    </p>
+                                    <p className="small">
+                                        JPG, GIF, PNG, MOV, and AVI. Please choose files under 2GB for upload. File sizes are 400x300px.
+                                    </p>
+                                    <input { ...getInputProps() } />
+                                </div>
+                            )
+                        }
+                        
                     </FileDrop>
                 </div>
                 { /*    Files List    */}

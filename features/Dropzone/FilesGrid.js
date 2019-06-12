@@ -26,7 +26,7 @@ export const FilesGrid = ({ files, onFileRemove }) => (
                         <i className={`fa fa-fw fa-3x ${getFileIcon(file)}`} />
                     </div>
                     <CardBody className="pt-2">
-                        <p className="d-flex align-items-center mb-0 mt-0">
+                        <div className="d-flex align-items-center mb-0 mt-0">
                             <h6 className="text-truncate mb-0">
                                 { file.name }
                             </h6>
@@ -41,13 +41,13 @@ export const FilesGrid = ({ files, onFileRemove }) => (
                             <UncontrolledTooltip placement="left" target={`delete-file-${index}`}>
                                 Delete File
                             </UncontrolledTooltip>
-                        </p>
-                        <p className="mb-0">
+                        </div>
+                        <div className="mb-0">
                             by You &middot; <span className='text-uppercase'>{`${numeral(file.size).format('0.00a')}B`}</span>
-                        </p>
-                        <p className='mb-0'>
+                        </div>
+                        <div className='mb-0'>
                             { moment(file.modifiedDate).format('DD-MMM-YYYY, HH:mm') }
-                        </p>
+                        </div>
                     </CardBody>
                 </Card>
             </Col>
