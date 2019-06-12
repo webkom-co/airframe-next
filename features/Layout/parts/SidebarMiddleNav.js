@@ -87,7 +87,6 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             <SidebarMenu.Item title="Date Picker" to='/forms/date-picker' />
             <SidebarMenu.Item title="Drop Zone" to='/forms/drop-zone' />
             <SidebarMenu.Item title="Editor" to='/forms/editor' />
-            <SidebarMenu.Item title="Selects" to='/forms/selects' />
             <SidebarMenu.Item title="Sliders" to='/forms/sliders' />
             <SidebarMenu.Item title="Text Mask" to='/forms/text-mask' />
             <SidebarMenu.Item title="Toggles" to='/forms/toggles' />
