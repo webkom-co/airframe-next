@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-import ReactCrop from 'react-image-crop'
+const ReactCrop = typeof window !== 'undefined' ? require('react-image-crop').default : null;
 
 import {
     Row,
@@ -19,18 +19,17 @@ const initialPosition = {
     height: 80,
 }
 
-function getCroppedImg(image, pixelCrop, fileName) {
+function getCroppedImg(image, pixelCrop, scale, fileName) {
     const canvas = _document.createElement('canvas');
     canvas.width = pixelCrop.width;
     canvas.height = pixelCrop.height;
     const ctx = canvas.getContext('2d');
-  
     ctx.drawImage(
         image,
-        pixelCrop.x,
-        pixelCrop.y,
-        pixelCrop.width,
-        pixelCrop.height,
+        pixelCrop.x * scale.x,
+        pixelCrop.y * scale.y,
+        pixelCrop.width * scale.x,
+        pixelCrop.height * scale.y,
         0,
         0,
         pixelCrop.width,
@@ -43,7 +42,7 @@ function getCroppedImg(image, pixelCrop, fileName) {
             resolve(file);
         }, 'image/jpeg');
     });
-  }
+}
 
 export class ExampleProvider extends React.Component {
     static propTypes = {
@@ -62,6 +61,8 @@ export class ExampleProvider extends React.Component {
         croppedBlob: null
     }
 
+    cropRef = React.createRef();
+
     render() {
         const { croppedBlob, position } = this.state;
         const { cropProps, src } = this.props;
@@ -71,13 +72,14 @@ export class ExampleProvider extends React.Component {
             <Row>
                 <Col lg={ 6 }>
                     {
-                        (typeof window !== 'undefined') && (
+                        ReactCrop && (
                             <ReactCrop
                                 className="d-block"
                                 crop={ position }
                                 src={ src }
                                 onChange={ (position) => { this.setState({ position }) }}
                                 onComplete={ (croppedPosition) => { this.setState({ croppedPosition }) } }
+                                ref={ this.cropRef }
                                 { ...cropProps }
                             />
                         )
@@ -123,15 +125,14 @@ export class ExampleProvider extends React.Component {
 
         if (_document) {
             const imageElement = _document.createElement('img');
-            
+            const holderElement = this.cropRef.current.componentRef;
             imageElement.onload = () => {
-                const pos = {
-                    x: (croppedPosition.x / 100) * imageElement.naturalWidth,
-                    y: (croppedPosition.y / 100) * imageElement.naturalHeight,
-                    width: (croppedPosition.width / 100) * imageElement.naturalWidth,
-                    height: (croppedPosition.height / 100) * imageElement.naturalHeight,
-                }
-                getCroppedImg(imageElement, pos, 'result.jpg')
+                const holderSize = holderElement.getBoundingClientRect();
+                const scale = {
+                    x: imageElement.naturalWidth / (holderSize.right - holderSize.left),
+                    y: imageElement.naturalHeight / (holderSize.bottom - holderSize.top),
+                };
+                getCroppedImg(imageElement, croppedPosition, scale, 'result.jpg')
                     .then((croppedBlob) => {
                         this.setState({croppedBlob});
                     });
