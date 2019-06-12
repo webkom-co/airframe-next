@@ -15,8 +15,8 @@ import { HeaderMain } from "../../features/HeaderMain";
 
 export default class DatePickerExamples extends React.Component {
     state = {
-        startDate: moment(),
-        endDate: moment().add(5, 'days')
+        startDate: moment().toDate(),
+        endDate: moment().add(5, 'days').toDate()
     }
 
     render() {
