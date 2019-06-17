@@ -8,7 +8,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -34,9 +35,15 @@ const ForgotPassword = () => (
                     </FormText>
                 </FormGroup>
                 <div className="d-flex">
-                    <Button color="primary" tag={ Link } to="/" className="align-self-center">
-                        Reset Password
-                    </Button>
+                    <ThemeConsumer>
+                    {
+                        ({ color }) => (
+                            <Button color={ color } tag={ Link } to="/" className="align-self-center">
+                                Reset Password
+                            </Button>
+                        )
+                    }
+                    </ThemeConsumer>
                     <Button color="secondary" outline tag={ Link } to="/" className="align-self-center ml-auto">
                         Back to Home
                     </Button>

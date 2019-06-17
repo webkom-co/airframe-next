@@ -13,7 +13,12 @@ import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
 import IsInteractive from './IsInteractive';
-import Layout, { withPageConfig, setupPage } from './Layout';
+import Layout, {
+    withPageConfig,
+    setupPage,
+    PageConfigConsumer,
+    PageConfigProvider
+} from './Layout';
 import Link from './Link';
 import Navbar from './Navbar';
 import NestedDropdown from './NestedDropdown';
@@ -134,6 +139,8 @@ export {
     NestedDropdown,
     withPageConfig,
     setupPage,
+    PageConfigConsumer,
+    PageConfigProvider,
     OuterClick,
     Progress,
     Sidebar,

@@ -7,7 +7,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -29,9 +30,15 @@ const LockScreen = () => (
                     </Label>
                     <Input type="password" name="password" id="password" placeholder="Enter the password to continue..." />
                 </FormGroup>
-                <Button color="primary" block tag={ Link } to="/">
-                    Unlock
-                </Button>
+                <ThemeConsumer>
+                {
+                    ({ color }) => (
+                        <Button color={ color } block tag={ Link } to="/">
+                            Unlock
+                        </Button>
+                    )
+                }
+                </ThemeConsumer>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}

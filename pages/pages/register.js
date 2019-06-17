@@ -9,7 +9,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -55,9 +56,15 @@ const Register = () => (
                 <FormGroup>
                     <CustomInput type="checkbox" id="acceptTerms" label="Accept Terms and Privacy Policy" inline />
                 </FormGroup>
-                <Button color="primary" block tag={ Link } to="/">
-                    Create Account
-                </Button>
+                <ThemeConsumer>
+                {
+                    ({ color }) => (
+                        <Button color={ color } block tag={ Link } to="/">
+                            Create Account
+                        </Button>
+                    )
+                }
+                </ThemeConsumer>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}

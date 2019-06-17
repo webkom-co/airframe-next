@@ -4,6 +4,7 @@ import {
     Layout,
     ThemeProvider,
     ThemeSelector,
+    PageConfigConsumer,
 } from './../../components';
 import { NavbarDefault } from './NavbarDefault';
 import { SidebarDefault } from './SidebarDefault';
@@ -28,7 +29,13 @@ export const LayoutDefault = ({ isMobile, children }) => (
             </Layout.Content>
 
             { /* -- Theme Selector (DEMO) ----*/ }
-            <ThemeSelector />
+            <PageConfigConsumer>
+            {
+                ({ sidebarHidden, navbarHidden }) => (
+                    <ThemeSelector styleDisabled={ sidebarHidden && navbarHidden } />
+                )
+            }
+            </PageConfigConsumer>
         </Layout>
     </ThemeProvider>
 );

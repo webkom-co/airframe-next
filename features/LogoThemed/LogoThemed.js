@@ -30,7 +30,7 @@ const getLogoUrlBackground = (style, color) => {
     }
 }
 
-const LogoThemed = ({ checkBackground, className }) => (
+const LogoThemed = ({ checkBackground, className, ...otherProps }) => (
     <ThemeConsumer>
     {
         ({ style, color }) => (
@@ -42,6 +42,7 @@ const LogoThemed = ({ checkBackground, className }) => (
                 }
                 className={ classNames('d-block', className) }
                 alt="Airframe Logo"
+                { ...otherProps }
             />
         )
     }

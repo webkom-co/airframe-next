@@ -9,7 +9,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -32,9 +33,15 @@ const Error404 = () => (
                     <InputGroup>
                         <Input type="text" name="text" id="search" placeholder="Enter search phrase here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary" tag={ Link } to="/">
-                                <i className="fa fa-search"></i>
-                            </Button>
+                            <ThemeConsumer>
+                            {
+                                ({ color }) => (
+                                    <Button color={ color } tag={ Link } to="/">
+                                        <i className="fa fa-search"></i>
+                                    </Button>
+                                )
+                            }
+                            </ThemeConsumer>
                         </InputGroupAddon>
                     </InputGroup>
                 </FormGroup>

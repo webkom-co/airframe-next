@@ -10,7 +10,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -53,9 +54,15 @@ const ComingSoon = () => (
                     <InputGroup>
                         <Input type="email" name="email" id="email" placeholder="Enter here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary" tag={ Link } to="/">
-                                Subscribe
-                            </Button>
+                            <ThemeConsumer>
+                            {
+                                ({ color }) => (
+                                    <Button color={ color } tag={ Link } to="/">
+                                        Subscribe
+                                    </Button>
+                                )
+                            }
+                            </ThemeConsumer>
                         </InputGroupAddon>
                     </InputGroup>
                     <FormText className="muted">

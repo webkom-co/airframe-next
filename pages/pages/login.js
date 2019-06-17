@@ -9,7 +9,8 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
 import { HeaderAuth } from "../../features/Pages/HeaderAuth";
@@ -43,9 +44,15 @@ const Login = () => (
                 <FormGroup>
                     <CustomInput type="checkbox" id="rememberPassword" label="Remember Password" inline />
                 </FormGroup>
-                <Button color="primary" block tag={ Link } to="/">
-                    Sign In
-                </Button>
+                <ThemeConsumer>
+                {
+                    ({ color }) => (
+                        <Button color={ color } block tag={ Link } to="/">
+                            Sign In
+                        </Button>
+                    )
+                }
+                </ThemeConsumer>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
