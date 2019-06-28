@@ -90,7 +90,7 @@ class NumberFilter extends React.Component {
                         onChange={(e) => { this.setState({ comparator: e.target.value }) }}
                         onClick={this.handleClick}
                         value={ comparator }
-                        className="d-block mr-1"
+                        className="d-block bg-white mr-1"
                         id={this.comparatorInputId}
                     >
                         <option value=""></option>
@@ -110,6 +110,7 @@ class NumberFilter extends React.Component {
             }
                 <Input
                     type="number"
+                    className="bg-white"
                     bsSize="sm"
                     onChange={(e) => { this.setState({ value: e.target.value }) }}
                     onClick={this.handleClick}

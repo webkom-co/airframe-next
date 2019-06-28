@@ -41,11 +41,11 @@ const BillingEdit = () => (
                         <Table className="mb-0" responsive>
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Browser &amp; OS</th>
-                                    <th>IP</th>
-                                    <th>Location</th>
-                                    <th>Signed In</th>
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">Browser &amp; OS</th>
+                                    <th className="bt-0">IP</th>
+                                    <th className="bt-0">Location</th>
+                                    <th className="bt-0">Signed In</th>
                                     <th className="text-right">
                                         Action
                                     </th>

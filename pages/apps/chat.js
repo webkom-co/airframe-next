@@ -31,20 +31,20 @@ const Clients = () => (
                 </Col>
                 <Col lg={ 9 }>
                     <Card className="mb-3">
-                        <CardHeader className="d-flex">
+                        <CardHeader className="d-flex bb-0 bg-white">
                             <ChatCardHeader />
                         </CardHeader>
                         <CardBody>
-                            <ChatLeft />
-                            <ChatRight />
-                            <ChatLeft />
-                            <ChatRight />
+                            <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
+                            <ChatRight cardClassName="text-dark"/>
+                            <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
+                            <ChatRight cardClassName="text-dark"/>
                             <div className="small mb-3 mt-4 text-center">
                                 Yesterday
                             </div>
-                            <ChatLeft />
-                            <ChatRight />
-                            <ChatLeft />
+                            <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
+                            <ChatRight cardClassName="text-dark"/>
+                            <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
                         </CardBody>
                         <CardFooter>
                             <ChatCardFooter />

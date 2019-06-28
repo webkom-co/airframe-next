@@ -8,12 +8,12 @@ import {
 
 import colors from './../../core/colors';
 
-const data = _.times(20, () => ({ pv: Math.random() * 100 }));
+const data = _.times(40, () => ({ pv: Math.random() * 100 }));
 
 const TinyBarChart = () => (
     <ResponsiveContainer width='100%' height={ 40 }>
         <BarChart data={data}>
-            <Bar dataKey='pv' fill={ colors['primary'] } />
+            <Bar dataKey='pv' fill={ colors['primary'] } barSize={5} />
         </BarChart>
     </ResponsiveContainer>
 );

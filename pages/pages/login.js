@@ -30,16 +30,16 @@ const Login = () => (
                     <Label for="emailAdress">
                         Email Adress
                     </Label>
-                    <Input type="email" name="email" id="emailAdress" placeholder="Enter email..." />
+                    <Input type="email" name="email" id="emailAdress" placeholder="Enter email..." className="bg-white" />
                     <FormText color="muted">
-                        We&apos;ll never share your email with anyone else.
+                        We&amp;ll never share your email with anyone else.
                     </FormText>
                 </FormGroup>
                 <FormGroup>
                     <Label for="password">
                         Password
                     </Label>
-                    <Input type="password" name="password" id="password" placeholder="Password..." />
+                    <Input type="password" name="password" id="password" placeholder="Password..." className="bg-white" />
                 </FormGroup>
                 <FormGroup>
                     <CustomInput type="checkbox" id="rememberPassword" label="Remember Password" inline />
@@ -57,10 +57,10 @@ const Login = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/forgotpassword">
+                <Link to="/pages/forgotpassword" className="text-decoration-none">
                     Forgot Password
                 </Link>
-                <Link to="/pages/register" className="ml-auto">
+                <Link to="/pages/register" className="ml-auto text-decoration-none">
                     Register
                 </Link>
             </div>

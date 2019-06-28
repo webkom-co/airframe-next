@@ -53,7 +53,7 @@ const TrTableProjectsList = () => (
                     </td>
                     <td className="align-middle">
                         <div>
-                            <Link to="/apps/tasks/list">
+                            <Link to="/apps/tasks/list" className="text-decoration-none">
                                 { faker.company.catchPhrase() }
                             </Link>
                         </div>
@@ -82,8 +82,8 @@ const TrTableProjectsList = () => (
                     </td>
                     <td className="align-middle text-right">
                         <UncontrolledButtonDropdown>
-                            <DropdownToggle color="secondary" outline caret>
-                                <i className="fa fa-gear"></i>
+                            <DropdownToggle color="link" outline>
+                                <i className="fa fa-gear" /><i className="fa fa-angle-down ml-2" />
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>

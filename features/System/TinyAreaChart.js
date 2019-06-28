@@ -12,7 +12,7 @@ import colors from './../../core/colors';
 const TinyAreaChart = (props) => {
     const data = _.times(20, () => ({ pv: Math.random() * 100 }));
     return (
-        <ResponsiveContainer width='100%' height={ 40 }>
+        <ResponsiveContainer width='100%' minWidth='150px' height={ 40 }>
             <AreaChart data={data}>
                 <Area dataKey='pv' stroke={ colors[ props.strokeColor ] } fill={ colors[ props.fillColor ] } />
             </AreaChart>

@@ -87,6 +87,10 @@ export default class Calendar extends React.Component {
                     title="Calendar"
                     className="mb-5 mt-4"
                 />
+                <p class="pb-4">
+                    An events calendar component built for React and made for modern browsers (read: IE10+) and uses flexbox over the classic tables-ception approach. 
+                    See <a href="https://github.com/intljusticemission/react-big-calendar" target="_blank">Demo and Docs</a>
+                </p>
                 <DragAndDropCalendar
                     style={{
                         minHeight: '720px'

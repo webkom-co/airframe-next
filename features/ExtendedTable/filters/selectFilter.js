@@ -57,7 +57,7 @@ class SelectFilter extends React.Component {
                 onChange={(e) => { this.setState({ value: e.target.value }) }}
                 onClick={ this.handleClick }
                 value={ this.state.value }
-                className="d-block"
+                className="d-block bg-white"
                 id={this.inputId}
             >
                 <option value="">{ placeholder }</option>

@@ -30,27 +30,27 @@ const Register = () => (
                     <Label for="username">
                         Username
                     </Label>
-                    <Input type="text" name="text" id="username" placeholder="Enter a Username..." />
+                    <Input type="text" name="text" id="username" placeholder="Enter a Username..." className="bg-white" />
                 </FormGroup>
                 <FormGroup>
                     <Label for="password">
                         Password
                     </Label>
-                    <Input type="password" name="password" id="password" placeholder="Password..." />
+                    <Input type="password" name="password" id="password" placeholder="Password..." className="bg-white" />
                 </FormGroup>
                 <FormGroup>
                     <Label for="repeatPassword">
                         Repeat Password
                     </Label>
-                    <Input type="password" name="password" id="repeatPassword" placeholder="Password..." />
+                    <Input type="password" name="password" id="repeatPassword" placeholder="Password..." className="bg-white" />
                 </FormGroup>
                 <FormGroup>
                     <Label for="emailAdress">
                         Email Adress
                     </Label>
-                    <Input type="email" name="email" id="emailAdress" placeholder="Enter email..." />
+                    <Input type="email" name="email" id="emailAdress" placeholder="Enter email..." className="bg-white" />
                     <FormText color="muted">
-                        We&apos;ll never share your email with anyone else.
+                        We&amp;ll never share your email with anyone else.
                     </FormText>
                 </FormGroup>
                 <FormGroup>
@@ -69,10 +69,10 @@ const Register = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/forgot-password">
+                <Link to="/pages/forgot-password" className="text-decoration-none">
                     Forgot Password
                 </Link>
-                <Link to="/pages/login" className="ml-auto">
+                <Link to="/pages/login" className="ml-auto text-decoration-none">
                     Login
                 </Link>
             </div>

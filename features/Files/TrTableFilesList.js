@@ -4,6 +4,7 @@ import faker from 'faker';
 import { 
     Badge,
     Avatar,
+    AvatarAddOn,
     UncontrolledButtonDropdown,
     DropdownToggle,
     DropdownMenu,
@@ -14,12 +15,14 @@ import {
 import { randomArray, randomAvatar } from './../../core/utilities';
 
 const badges = [
-    "secondary",
+    "secondary"
+];
+
+const status = [
     "success",
+    "danger",
     "warning",
-    "info",
-    "secondary",
-    "primary"
+    "secondary"
 ];
 
 const TrTableFilesList = () => (
@@ -48,6 +51,18 @@ const TrTableFilesList = () => (
                 <Avatar.Image
                     size="md"
                     src={ randomAvatar() }
+                    addOns={[
+                        <AvatarAddOn.Icon 
+                            className="fa fa-circle"
+                            color="white"
+                            key="avatar-icon-bg"
+                        />,
+                        <AvatarAddOn.Icon 
+                            className="fa fa-circle"
+                            color={ randomArray(status) }
+                            key="avatar-icon-fg"
+                        />
+                    ]}
                 />
             </td>
             <td className="align-middle">
@@ -63,8 +78,8 @@ const TrTableFilesList = () => (
             </td>
             <td className="align-middle text-right">
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="secondary" outline caret>
-                        <i className="fa fa-gear"></i>
+                    <DropdownToggle color="link">
+                        <i className="fa fa-gear" /><i className="fa fa-angle-down ml-2" />
                     </DropdownToggle>
                     <DropdownMenu right>
                         <DropdownItem>

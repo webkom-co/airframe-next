@@ -51,7 +51,7 @@ const Stock = () => (
         </Row>
         <Row>
             <Col lg={ 12 }>
-                <Table responsive className="mb-4">
+                <Table responsive className="mb-4 text-nowrap">
                     <thead>
                         <tr>
                             <td className="bt-0">
@@ -134,20 +134,20 @@ const Stock = () => (
                             <SimpleLineChart />
                             <div className="d-flex mt-4">
                                 <dl className="row">
-                                    <dt className="col-sm-4 text-right">Open</dt>
-                                    <dd className="col-sm-8 text-left">$834.00</dd>
-                                    <dt className="col-sm-4 text-right">High</dt>
-                                    <dd className="col-sm-8 text-left">$198.00</dd>
-                                    <dt className="col-sm-4 text-right">Low</dt>
-                                    <dd className="col-sm-8 text-left">$575.00</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">Open</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">$834.00</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">High</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">$198.00</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">Low</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">$575.00</dd>
                                 </dl>
                                 <dl className="row">
-                                    <dt className="col-sm-4 text-right">Market Cap</dt>
-                                    <dd className="col-sm-8 text-left">876.00B</dd>
-                                    <dt className="col-sm-4 text-right">P/E ratio (ttm)</dt>
-                                    <dd className="col-sm-8 text-left">62.00</dd>
-                                    <dt className="col-sm-4 text-right">Divided Yield</dt>
-                                    <dd className="col-sm-8 text-left">94.7%</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">Market Cap</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">876.00B</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">P/E ratio (ttm)</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">62.00</dd>
+                                    <dt className="col-sm-4 text-left text-sm-right">Divided Yield</dt>
+                                    <dd className="col-sm-8 text-left text-inverse">94.7%</dd>
                                 </dl>
                             </div>
                         </div>
@@ -156,7 +156,7 @@ const Stock = () => (
             </Col>
             <Col lg={ 4 }>
                 <Card className="mb-3">
-                    <CardBody>
+                    <CardBody className="pb-1">
                         <Nav pills>
                             <NavItem>
                                 <NavLink href="#" active>Summary</NavLink>
@@ -166,7 +166,7 @@ const Stock = () => (
                             </NavItem>
                         </Nav>
                     </CardBody>
-                    <Table responsive className="mb-0">
+                    <Table responsive striped className="mb-0">
                         <thead>
                             <tr>
                                 <th className="bt-0">Name</th>
@@ -183,14 +183,14 @@ const Stock = () => (
             </Col>
             <Col lg={ 6 }>
                 <Card className="mb-3">
-                    <CardBody>
+                    <CardBody className="pb-1">
                         <CardTitle className="mb-0">
                             <h6>
                                 Cheap Stock 
                             </h6>
                         </CardTitle>
                     </CardBody>
-                    <Table responsive className="mb-0">
+                    <Table responsive striped className="mb-0">
                         <thead>
                             <tr>
                                 <th className="bt-0"></th>
@@ -209,14 +209,14 @@ const Stock = () => (
             </Col>
             <Col lg={ 6 }>
                 <Card className="mb-3">
-                    <CardBody>
+                    <CardBody className="pb-1">
                         <CardTitle className="mb-0">
                             <h6>
                                 Expensive Stock 
                             </h6>
                         </CardTitle>
                     </CardBody>
-                    <Table responsive className="mb-0">
+                    <Table responsive striped className="mb-0">
                         <thead>
                             <tr>
                                 <th className="bt-0"></th>

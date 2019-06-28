@@ -96,13 +96,13 @@ const contentInfo = ({ closeToast }) => (
                 Information!
             </Media>
             <p>
-                This alert needs your attention, but it&apos;s not important.
+                This alert needs your attention, but it's not important.
             </p>
             <div className="d-flex mt-2">
-                <Button color="info" onClick={() => { closeToast }} >
+                <Button color="primary" onClick={() => { closeToast }} >
                     I Understand
                 </Button>
-                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-info">
+                <Button color="link" onClick={() => { closeToast }}  className="ml-2 text-primary">
                     Cancel
                 </Button>
             </div>
@@ -120,7 +120,7 @@ const contentWarning = ({ closeToast }) => (
                 Warning!
             </Media>
             <p>
-                Better check yourself, you&apos;re not looking too good.
+                Better check yourself, you're not looking too good.
             </p>
             <div className="d-flex mt-2">
                 <Button color="warning" onClick={() => { closeToast }} className="text-white">
@@ -144,7 +144,7 @@ const contentDefault = ({ closeToast }) => (
                 Attention!
             </Media>
             <p>
-                This alert needs your attention, but it&apos;s not important.
+                This alert needs your attention, but it's not important.
             </p>
             <div className="d-flex mt-2">
                 <Button color="secondary" onClick={() => { closeToast }} className="text-white">

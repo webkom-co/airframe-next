@@ -73,10 +73,10 @@ const ComingSoon = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/">
-                    Back to Home
+                <Link to="/" className="text-decoration-none">
+                    <i className="fa fa-angle-left mr-2" /> Back to Home
                 </Link>
-                <Link to="/" className="ml-auto">
+                <Link to="/" className="ml-auto text-decoration-none">
                     Contact
                 </Link>
             </div>

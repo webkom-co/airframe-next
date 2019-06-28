@@ -203,19 +203,19 @@ const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                        <ListGroupItem tag={ Link } to="apps/email-details" action className="by-0">
                             <Attachment 
                                 BgIconClassName="text-primary"
                                 icon="file-word-o"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                        <ListGroupItem tag={ Link } to="apps/email-details" action className="by-0">
                             <Attachment 
                                 BgIconClassName="text-success"
                                 icon="file-excel-o"
                             />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } to="apps/email-details" action>
+                        <ListGroupItem tag={ Link } to="apps/email-details" action className="by-0 mb-3">
                             <Attachment 
                                 BgIconClassName="text-warning"
                                 icon="file-powerpoint-o"
@@ -252,14 +252,14 @@ const Widgets = () => (
                             </span>
                         </CardTitle>
                     </CardBody>
-                    <ListGroup flush>
-                        <ListGroupItem tag={ Link } action to="/apps/email-details">
+                    <ListGroup flush className="mb-4">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details" className="bt-0">
                             <Messages />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } action to="/apps/email-details">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details" className="bt-0">
                             <Messages />
                         </ListGroupItem>
-                        <ListGroupItem tag={ Link } action to="/apps/email-details">
+                        <ListGroupItem tag={ Link } action to="/apps/email-details" className="bt-0">
                             <Messages />
                         </ListGroupItem>
                     </ListGroup>
@@ -361,26 +361,26 @@ const Widgets = () => (
                             </span>
                         </CardTitle>
                     </CardBody>
-                    <ListGroup flush>
-                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
+                    <ListGroup flush className="mb-4">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details" className="bt-0">
                             <Activity 
                                 iconColorBelow="success"
                                 icon="check"
                             />
                         </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details" className="bt-0">
                             <Activity 
                                 iconColorBelow="danger"
                                 icon="close"
                             />
                         </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details" className="bt-0">
                             <Activity 
                                 iconColorBelow="warning"
                                 icon="exclamation"
                             />
                         </ListGroupItem>
-                        <ListGroupItem action tag={ Link } to="/apps/profile-details">
+                        <ListGroupItem action tag={ Link } to="/apps/profile-details" className="bt-0">
                             <Activity 
                                 iconColorBelow="primary"
                                 icon="info"
@@ -550,17 +550,17 @@ const Widgets = () => (
                                 />
                             </Col>
                         </Row>
-                        <Progress multi className="mb-4" style={{height: "5px"}}>
+                        <Progress multi className="mb-2" style={{height: "5px"}}>
                             <Progress bar value="25" />
                             <Progress bar color="info" value="30" />
                             <Progress bar color="secondary" value="45" />
                         </Progress>
-                        <div className="small">
-                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                            How do your users (visitors), sessions (visits) and pageviews 
-                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                        </div>
                     </CardBody>
+                    <CardFooter className="small">
+                        <i className="fa fa-fw fa-info-circle mr-2"></i>
+                        How do your users (visitors), sessions (visits) and pageviews 
+                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                    </CardFooter>
                 </Card>
                 { /* END Card Widget */}
                 { /* START Card Widget */}
@@ -574,7 +574,7 @@ const Widgets = () => (
                         </CardTitle>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem>
+                        <ListGroupItem className="by-0">
                             <WebsitePerformance 
                                 title="Bounce Rate (Avg)"
                                 value="46,893"
@@ -583,7 +583,7 @@ const Widgets = () => (
                                 valuePercent="23,91"
                             />
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className="by-0">
                             <WebsitePerformance 
                                 title="Pageviews (Avg)"
                                 value="2.15"
@@ -591,7 +591,7 @@ const Widgets = () => (
                                 valuePercent="42,82"
                             />
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className="by-0">
                             <WebsitePerformance 
                                 title="New Sessions"
                                 value="76,40"
@@ -600,7 +600,7 @@ const Widgets = () => (
                                 valuePercent="23,91"
                             />
                         </ListGroupItem>
-                        <ListGroupItem>
+                        <ListGroupItem className="by-0 pb-4">
                             <WebsitePerformance 
                                 title="Time on Site (Avg)"
                                 value="2m:16s"
@@ -609,13 +609,11 @@ const Widgets = () => (
                             />
                         </ListGroupItem>
                     </ListGroup>
-                    <CardBody>                
-                        <div className="small">
-                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                            How do your users (visitors), sessions (visits) and pageviews 
-                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                        </div>
-                    </CardBody>
+                    <CardFooter className="small">
+                        <i className="fa fa-fw fa-info-circle mr-2"></i>
+                        How do your users (visitors), sessions (visits) and pageviews 
+                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                    </CardFooter>
                 </Card>
                 { /* END Card Widget */}
                 { /* START Card Widget */}
@@ -624,11 +622,11 @@ const Widgets = () => (
                         <div className="d-flex mb-4">
                             <CardTitle tag="h6">
                                 Spend
-                                <span className="small ml-1 text-muted">
+                                <span className="small ml-1">
                                     #4.05
                                 </span>
                             </CardTitle>
-                            <span className="ml-auto text-right text-muted">
+                            <span className="ml-auto text-right">
                                 Dec 22, 2016 to<br />
                                 Dec 31, 2016 (prev.)
                             </span>
@@ -641,16 +639,14 @@ const Widgets = () => (
                                 <i className="fa mr-1 fa-caret-up"></i>
                                 23.34%
                             </div>
-                            <div className="text-muted">
+                            <div>
                                 vs { faker.finance .amount() } (prev.)
                             </div>
                         </div>
                     </CardBody>
-                    { /*
                     <CardBody className="p-0">
                         <TinyAreaChart />
                     </CardBody>
-                    */ }
                 </Card>
                 { /* END Card Widget */}
             </Col>
@@ -671,6 +667,11 @@ const Widgets = () => (
                             targetValue="169,001"
                         />
                     </CardBody>
+                    <CardFooter className="small">
+                        <i className="fa fa-fw fa-info-circle mr-2"></i>
+                        How do your users (visitors), sessions (visits) and pageviews 
+                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                    </CardFooter>
                 </Card>
                 { /* END Card Widget */}
                 { /* START Card Widget */}
@@ -684,15 +685,15 @@ const Widgets = () => (
                                         #4.04
                                     </span>
                                 </h6>
-                                <span className="text-muted">
+                                <span>
                                     Dec 22, 2016 to Dec 31, 2016 (prev.)
                                 </span>
                             </div>
                             <span className="ml-auto text-right">
                                 Goal:
                                 <UncontrolledButtonDropdown className="ml-2">
-                                    <DropdownToggle color="secondary" outline caret>
-                                        All
+                                    <DropdownToggle color="link" className="text-decoration-none">
+                                        All<i className="fa fa-angle-down ml-2" />
                                     </DropdownToggle>
                                     <DropdownMenu right>
                                         <DropdownItem header>Select Goal:</DropdownItem>
@@ -711,17 +712,17 @@ const Widgets = () => (
                             </h2>
                             <div className="mb-1 text-success">
                                 <i className="fa mr-1 fa-caret-up"></i>
-                                23.34% <span className="text-muted"> vs { faker.finance .amount() } (prev.)
+                                23.34% <span> vs { faker.finance .amount() } (prev.)
                                 </span>
                             </div>
                         </div>
-                        { /* <SimpleLineChart /> */ }
-                        <div className="small pt-3">
-                            <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                            How do your users (visitors), sessions (visits) and pageviews 
-                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                        </div>
+                        <SimpleLineChart />
                     </CardBody>
+                    <CardFooter className="small">
+                        <i className="fa fa-fw fa-info-circle mr-2"></i>
+                        How do your users (visitors), sessions (visits) and pageviews 
+                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                    </CardFooter>
                 </Card>
                  { /* END Card Widget */}
             </Col>

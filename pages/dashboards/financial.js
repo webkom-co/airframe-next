@@ -153,7 +153,7 @@ const Financial = () => (
                                 </Button>
                             </CardTitle>
                         </CardBody>
-                        <Table responsive className="mb-0">
+                        <Table responsive striped className="mb-0">
                             <thead>
                                 <tr>
                                     <th className="bt-0">Company</th>
@@ -177,7 +177,7 @@ const Financial = () => (
                             </Button>
                         </CardTitle>
                     </CardBody>
-                    <Table responsive className="mb-0">
+                    <Table responsive striped className="mb-0">
                         <thead>
                             <tr>
                                 <th className="bt-0">Company</th>
@@ -216,31 +216,31 @@ const Financial = () => (
                     <ListGroup flush>
                         <ListGroupItem className="d-flex">
                             <span>My Cash</span>
-                            <CustomInput type="checkbox" id="myCash" label="" className="ml-auto" />
+                            <CustomInput type="switch" id="exampleCustomSwitch" name="customSwitch" label="" className="ml-auto" />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>My Cap</span>
-                            <CustomInput type="checkbox" id="myCap" label="" className="ml-auto" defaultChecked />
+                            <CustomInput type="switch" id="exampleCustomSwitch1" name="customSwitch" label="" className="ml-auto" defaultChecked />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>Client List</span>
-                            <CustomInput type="checkbox" id="myCash" label="" className="ml-auto" />
+                            <CustomInput type="switch" id="exampleCustomSwitch2" name="customSwitch" label="" className="ml-auto" defaultChecked />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>Recent Fundings</span>
-                            <CustomInput type="checkbox" id="recentFundings" label="" className="ml-auto" defaultChecked />
+                            <CustomInput type="switch" id="exampleCustomSwitch3" name="customSwitch" label="" className="ml-auto" />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>Invoice Creator</span>
-                            <CustomInput type="checkbox" id="invoiceCreator" label="" className="ml-auto" />
+                            <CustomInput type="switch" id="exampleCustomSwitch4" name="customSwitch" label="" className="ml-auto" />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>Sales Lead</span>
-                            <CustomInput type="checkbox" id="salesLead" label="" className="ml-auto" />
+                            <CustomInput type="switch" id="exampleCustomSwitch5" name="customSwitch" label="" className="ml-auto" defaultChecked />
                         </ListGroupItem>
                         <ListGroupItem className="d-flex">
                             <span>Q&A</span>
-                            <CustomInput type="checkbox" id="qa" label="" className="ml-auto" />
+                            <CustomInput type="switch" id="exampleCustomSwitch6" name="customSwitch" label="" className="ml-auto" defaultChecked />
                         </ListGroupItem>
                     </ListGroup>
                 </Card>

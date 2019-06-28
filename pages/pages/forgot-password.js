@@ -29,9 +29,9 @@ const ForgotPassword = () => (
                     <Label for="emailAdress">
                         Email Adress or Username
                     </Label>
-                    <Input type="email" name="email" id="emailAdress" placeholder="Enter..." />
+                    <Input type="email" name="email" id="emailAdress" placeholder="Enter..." className="bg-white" />
                     <FormText color="muted">
-                        We&apos;ll never share your email with anyone else.
+                        We&amp;ll never share your email with anyone else.
                     </FormText>
                 </FormGroup>
                 <div className="d-flex">
@@ -44,18 +44,18 @@ const ForgotPassword = () => (
                         )
                     }
                     </ThemeConsumer>
-                    <Button color="secondary" outline tag={ Link } to="/" className="align-self-center ml-auto">
-                        Back to Home
+                    <Button color="link" tag={ Link } to="/" className="align-self-center ml-auto pr-0 text-decoration-none">
+                        <i className="fa fa-angle-left mr-2"></i> Back to Home
                     </Button>
                 </div>
             </Form>
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/login">
+                <Link to="/pages/login" className="text-decoration-none">
                     Login
                 </Link>
-                <Link to="/pages/register" className="ml-auto">
+                <Link to="/pages/register" className="ml-auto text-decoration-none">
                     Register
                 </Link>
             </div>

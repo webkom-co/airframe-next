@@ -25,7 +25,7 @@ const Success = () => (
             { /* END Header */}
             { /* START Bottom Links */}
             <div className="text-center mb-5">
-                <Link to="/">
+                <Link to="/" className="text-decoration-none">
                     <i className="fa fa-angle-left mr-2"></i>Back to Home
                 </Link>
             </div>

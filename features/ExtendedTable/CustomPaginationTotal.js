@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 export const CustomPaginationTotal = ({ from, to, size }) => (
-    <span className="text-muted ml-2">
+    <span className="small ml-2">
         Showing { from } to { to } of { size } Results
     </span>
 );

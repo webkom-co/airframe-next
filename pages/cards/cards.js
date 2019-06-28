@@ -120,7 +120,7 @@ const Cards = () => (
                         </CardBody>
                     </Card>
                     <Card className="mb-3">
-                        <CardHeader tag="h6" className="bg-facebook">
+                        <CardHeader tag="h6" className="bg-facebook text-white">
                             Facebook Card
                         </CardHeader>
                         <CardBody>
@@ -446,7 +446,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="primary">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Primary Background
                             </CardTitle>
                             { cardText({ cardNo: "5.02" }) } 
@@ -454,7 +454,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="secondary">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Secondary Background
                             </CardTitle>
                             { cardText({ cardNo: "5.03" }) } 
@@ -462,7 +462,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="success">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Success Background
                             </CardTitle>
                             { cardText({ cardNo: "5.04" }) } 
@@ -470,7 +470,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="warning">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Warning Background
                             </CardTitle>
                             { cardText({ cardNo: "5.05" }) } 
@@ -480,7 +480,7 @@ const Cards = () => (
                 <Col lg={ 6 }>
                     <Card className="mb-3" type="background" color="info">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Info Background
                             </CardTitle>
                             { cardText({ cardNo: "5.06" }) } 
@@ -488,7 +488,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="danger">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Danger Background
                             </CardTitle>
                             { cardText({ cardNo: "5.07" }) } 
@@ -496,7 +496,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="dark">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Dark Background
                             </CardTitle>
                             { cardText({ cardNo: "5.04" }) } 
@@ -504,7 +504,7 @@ const Cards = () => (
                     </Card>
                     <Card className="mb-3" type="background" color="facebook">
                         <CardBody>
-                            <CardTitle tag="h6">
+                            <CardTitle tag="h6" className="text-white">
                                 Facebook Background
                             </CardTitle>
                             { cardText({ cardNo: "5.05" }) } 

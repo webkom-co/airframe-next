@@ -11,10 +11,10 @@ import {
 import colors from './../../core/colors';
 
 const TinyBarChart = (props) => {
-        const data = _.times(20, () => ({ pv: 20+Math.random() * 100 }));
+        const data = _.times(40, () => ({ pv: 20+Math.random() * 100 }));
         return (
             <ResponsiveContainer width='100%' height={ 80 }>
-                <BarChart data={data}>
+                <BarChart data={data} margin={{ top: 0, bottom: 0, right: 0, left: 0 }}>
                     <Bar dataKey='pv' fill={ colors[ props.barColor ] } />
                 </BarChart>
             </ResponsiveContainer>

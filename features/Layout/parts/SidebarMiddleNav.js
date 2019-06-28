@@ -100,6 +100,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
         >
             <SidebarMenu.Item title="Tables"to='/tables/tables' />
             <SidebarMenu.Item title="Extended Tables"to='/tables/extended-table' />
+            <SidebarMenu.Item title="AgGrid"to='/tables/ag-grid' />
         </SidebarMenu.Item>
         { /* -------- Apps ---------*/ }
         <SidebarMenu.Item
@@ -181,9 +182,12 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-folder-open-o"></i>}
             title="Versions"
         >
-            <SidebarMenu.Item title="React 2.0"to='https://spin.webkom.co' />
-            <SidebarMenu.Item title="React 1.0"to='https://v1.react.spin.webkom.co' />
-            <SidebarMenu.Item title="JQuery 1.0"to="https://v1.spin.webkom.co" />
+            <SidebarMenu.Item title="NextJS (React)" href='http://airframe.nextjs.webkom.co/' />
+            <SidebarMenu.Item title="React" href='http://dashboards.webkom.co/react/airframe' />
+            <SidebarMenu.Item title="jQuery" to="http://dashboards.webkom.co/jquery/airframe/" />
+            <SidebarMenu.Item title="Vue" to="http://dashboards.webkom.co/vue/airframe" />
+            <SidebarMenu.Item title="Angular" to="http://dashboards.webkom.co/angular/airframe" />
+            <SidebarMenu.Item title=".NET MVC" to="http://dashboards.webkom.co/net-mvc/airframe" />
         </SidebarMenu.Item>
     </SidebarMenu >
 );

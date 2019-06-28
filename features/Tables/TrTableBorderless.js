@@ -75,7 +75,7 @@ const TrTableBorderless = () => (
                     <td className="align-middle" style={{ minWidth: "100px" }}>
                         { faker.date.weekday() }, 12 { faker.date.month() }, 2018
                     </td>
-                    <td className="align-middle text-nowrap">
+                    <td className="align-middle text-inverse text-nowrap">
                         $ { faker.finance.amount() }
                     </td>
                     <td className="align-middle">

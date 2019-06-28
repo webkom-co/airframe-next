@@ -36,11 +36,11 @@ export const AreaChartFillByValue = () => (
                 <DefAreaValueColor
                     id="splitColor"
                     data={ data }
-                    positiveColor={ colors['success-05'] }
-                    negativeColor={ colors['danger-05'] }
+                    positiveColor={ colors['success-03'] }
+                    negativeColor={ colors['danger-03'] }
                 />
             </defs>
-            <Area dataKey="uv" stroke="#000" fill="url(#splitColor)" />
+            <Area dataKey="uv" stroke={ colors['white'] } fill="url(#splitColor)" />
         </AreaChart>
     </ResponsiveContainer>
 

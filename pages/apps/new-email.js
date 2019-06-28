@@ -40,13 +40,13 @@ const NewEmail = () => (
                             { /* START Header */}
                             <div className="flex-column flex-md-row d-flex mb-4">
                                 <div className="mr-md-auto mr-sm-0">
-                                    <Button color="link" tag={ Link } to="/apps/inbox">
+                                    <Button color="link" tag={ Link } to="/apps/inbox" className="text-decoration-none">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
                                 </div>
                                 <ButtonToolbar>
                                     <ButtonGroup className="mr-2">
-                                        <Button color="link" tag={ Link } to="/apps/inbox">
+                                        <Button color="link" tag={ Link } to="/apps/inbox" className="text-decoration-none">
                                             Cancel
                                         </Button>
                                     </ButtonGroup>
@@ -127,7 +127,7 @@ const NewEmail = () => (
 
                         </CardBody>
                         <CardFooter className="text-right">
-                            <Button color="secondary" outline>
+                            <Button color="link" className="text-decoration-none">
                                 <i className="fa fa-paperclip mr-2"></i>
                                 Add New Files
                             </Button>

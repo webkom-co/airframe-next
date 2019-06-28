@@ -52,31 +52,31 @@ const Inbox = () => (
                                 </div>
                                 <ButtonToolbar>
                                     <ButtonGroup className="mr-2">
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipRefresh">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipRefresh">
                                             <i className="fa fa-fw fa-refresh"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipRefresh">
                                             Refresh
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipFav">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipFav">
                                             <i className="fa fa-fw fa-star"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipFav">
                                             Add to Favorites
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipTag">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipTag">
                                             <i className="fa fa-fw fa-tag"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipTag">
                                             Tag
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipBan">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipBan">
                                             <i className="fa fa-fw fa-ban"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipBan">
                                             Ban this User
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline id="tooltipDelete">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipDelete">
                                             <i className="fa fa-fw fa-trash"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipDelete">
@@ -98,13 +98,11 @@ const Inbox = () => (
                         <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
-                                    <th></th>
-                                    <th></th>
-                                    <th>From</th>
-                                    <th>Subject</th>
-                                    <th></th>
-                                    <th></th>
-                                    <th className="text-right">
+                                    <th className="bt-0"></th>
+                                    <th className="bt-0"></th>
+                                    <th className="bt-0">From</th>
+                                    <th className="bt-0">Subject</th>
+                                    <th className="text-right bt-0">
                                         Date
                                     </th>
                                 </tr>

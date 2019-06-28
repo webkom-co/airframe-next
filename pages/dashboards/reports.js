@@ -29,8 +29,8 @@ import {
     TinyDonutChart
 } from "./../../features/Reports/TinyDonutChart";
 import {
-    TinyAreaChart
-} from "./../../features/Reports/TinyAreaChart";
+    TinyArcChart
+} from "./components/TinyArcChart";
 
 /*eslint-disable */
 const progressCompletion = [
@@ -50,7 +50,7 @@ const Reports = () => (
                     className="mb-3 mb-lg-5"
                 />
             </Col>
-            <Col xl={ 3 } lg={ 6 }>
+            <Col xl={ 3 } lg={ 6 } className="mb-4 mb-lg-0">
                 <Card>
                     <CardBody className="bb-0">
                         <span className="d-flex">
@@ -58,9 +58,9 @@ const Reports = () => (
                                 Temperatures
                             </CardTitle>
                             <span className="ml-auto justify-content-start">
-                                <a href="javascript:;" className="ml-auto justify-content-start pr-2" id="TemperaturesTooltipSettings">
+                                <a href="javascript:;" className="ml-auto justify-content-start pr-2 text-decoration-none" id="TemperaturesTooltipSettings">
                                     <i className="fa fa-fw fa-sliders"></i>
-                                </a> <a href="javascript:;" id="TemperaturesTooltipAdd">
+                                </a> <a href="javascript:;" id="TemperaturesTooltipAdd" className="text-decoration-none">
                                     <i className="fa fa-fw fa-plus"></i>
                                 </a>
                             </span>
@@ -73,7 +73,7 @@ const Reports = () => (
                         </span>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="TemperaturesProcessorToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="TemperaturesProcessorToggler" className="by-0 d-flex text-decoration-none">
                             Processor
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="TemperaturesProcessorTooltip"></i>
                         </ListGroupItem>
@@ -113,7 +113,7 @@ const Reports = () => (
                         </CardBody>
                     </UncontrolledCollapse>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="TemperaturesGraphicsToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="TemperaturesGraphicsToggler" className="by-0 d-flex text-decoration-none">
                             Graphics
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="TemperaturesGraphicsTooltip"></i>
                         </ListGroupItem>
@@ -138,7 +138,7 @@ const Reports = () => (
                         </CardBody>
                     </UncontrolledCollapse>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="TemperaturesStorageToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="TemperaturesStorageToggler" className="by-0 d-flex text-decoration-none">
                             Storage
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="TemperaturesStorageTooltip"></i>
                         </ListGroupItem>
@@ -200,7 +200,7 @@ const Reports = () => (
                     </UncontrolledCollapse>
                 </Card>
             </Col>
-            <Col xl={ 3 } lg={ 6 }>
+            <Col xl={ 3 } lg={ 6 } className="mb-4 mb-lg-0">
                 <Card className="mb-sm-4 mb-xl-0">
                     <CardBody className="bb-0">
                         <span className="d-flex">
@@ -208,9 +208,9 @@ const Reports = () => (
                                 Usage
                             </CardTitle>
                             <span className="ml-auto justify-content-start">
-                                <a href="javascript:;" className="ml-auto justify-content-start pr-2" id="UsageTooltipSettings">
+                                <a href="javascript:;" className="ml-auto justify-content-start pr-2 text-decoration-none" id="UsageTooltipSettings">
                                     <i className="fa fa-fw fa-sliders"></i>
-                                </a> <a href="javascript:;" id="UsageTooltipAdd">
+                                </a> <a href="javascript:;" id="UsageTooltipAdd" className="text-decoration-none">
                                     <i className="fa fa-fw fa-plus"></i>
                                 </a>
                             </span>
@@ -223,7 +223,7 @@ const Reports = () => (
                         </span>
                     </CardBody>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="ProcessorToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="ProcessorToggler" className="by-0 d-flex text-decoration-none">
                             Processor
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="ProcessorTooltip"></i>
                         </ListGroupItem>
@@ -235,11 +235,11 @@ const Reports = () => (
                         <CardBody className="pt-0">
                             <dl className="row mb-3">
                                 <dt className="col-sm-5">CPU</dt>
-                                <dd className="col-sm-7 text-right">Intel Core i7</dd>
+                                <dd className="col-sm-7 text-right text-inverse">Intel Core i7</dd>
                                 <dt className="col-sm-5">Base (Turbo)</dt>
-                                <dd className="col-sm-7 text-right">4 GHz (4.4 GHz)</dd>
+                                <dd className="col-sm-7 text-right text-inverse">4 GHz (4.4 GHz)</dd>
                                 <dt className="col-sm-8">Cores (Threads)</dt>
-                                <dd className="col-sm-4 text-right">4 (8)</dd>
+                                <dd className="col-sm-4 text-right text-inverse">4 (8)</dd>
                             </dl>
                             <Progress multi className="mt-2" style={{height: "5px"}}>
                                 <Progress bar value="45" />
@@ -248,7 +248,7 @@ const Reports = () => (
                         </CardBody>
                     </UncontrolledCollapse>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="UsageLoadToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="UsageLoadToggler" className="by-0 d-flex text-decoration-none">
                             Usage (Load)
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="UsageLoadTooltip"></i>
                         </ListGroupItem>
@@ -295,15 +295,15 @@ const Reports = () => (
                                     <tbody>
                                         <tr>
                                             <td className="bt-0">Cores</td>
-                                            <td className="bt-0 text-center">1</td>
-                                            <td className="bt-0 text-center">2</td>
-                                            <td className="bt-0 text-center">3</td>
+                                            <td className="bt-0 text-center text-inverse">1</td>
+                                            <td className="bt-0 text-center text-inverse">2</td>
+                                            <td className="bt-0 text-center text-inverse">3</td>
                                         </tr>
                                         <tr>
                                             <td>Usage %</td>
-                                            <td className="text-center">27</td>
-                                            <td className="text-center">78</td>
-                                            <td className="text-center">13</td>
+                                            <td className="text-center text-inverse">27</td>
+                                            <td className="text-center text-inverse">78</td>
+                                            <td className="text-center text-inverse">13</td>
                                         </tr>
                                         <tr>
                                             <td>Tendency</td>
@@ -323,7 +323,7 @@ const Reports = () => (
                         </UncontrolledCollapse>
                     </ListGroup>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="GraphicsToggler" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="GraphicsToggler" className="by-0 d-flex text-decoration-none">
                             Graphics
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="GraphicsTooltip"></i>
                         </ListGroupItem>
@@ -334,17 +334,17 @@ const Reports = () => (
                             <CardBody className="pt-0">
                                 <dl className="row mb-0">
                                     <dt className="col-sm-5">GPU Name</dt>
-                                    <dd className="col-sm-7 text-right">NVIDIA GTX 980</dd>
+                                    <dd className="col-sm-7 text-right text-inverse">NVIDIA GTX 980</dd>
                                     <dt className="col-sm-5">Bus Width</dt>
-                                    <dd className="col-sm-7 text-right">4 GHz (4.4 GHz)</dd>
+                                    <dd className="col-sm-7 text-right text-inverse">4 GHz (4.4 GHz)</dd>
                                     <dt className="col-sm-7">Memory</dt>
-                                    <dd className="col-sm-5 text-right">4096 GDDR5</dd>
+                                    <dd className="col-sm-5 text-right text-inverse">4096 GDDR5</dd>
                                 </dl>
                             </CardBody>
                         </UncontrolledCollapse>
                     </ListGroup>
                     <ListGroup flush>
-                        <ListGroupItem tag="a" href="#" id="UsageLoadToggler2" className="bb-0 d-flex">
+                        <ListGroupItem tag="a" href="#" id="UsageLoadToggler2" className="by-0 d-flex text-decoration-none">
                             Usage (Load)
                             <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="UsageLoadTooltip2"></i>
                         </ListGroupItem>
@@ -360,7 +360,7 @@ const Reports = () => (
                                                 <h1 className="pt-0">85%</h1>
                                             </th>
                                             <th scope="col" className="text-right bt-0 bb-0 align-middle">
-                                                <TinyDonutChart />
+                                                <TinyArcChart />
                                             </th>
                                         </tr>
                                     </thead>
@@ -400,9 +400,9 @@ const Reports = () => (
                                         Allocation
                                     </CardTitle>
                                     <span className="ml-auto justify-content-start">
-                                        <a href="javascript:;" className="ml-auto justify-content-start pr-2" id="AllocationTooltipSettings">
+                                        <a href="javascript:;" className="ml-auto justify-content-start pr-2 text-decoration-none" id="AllocationTooltipSettings">
                                             <i className="fa fa-fw fa-sliders"></i>
-                                        </a> <a href="javascript:;" id="AllocationTooltipAdd">
+                                        </a> <a href="javascript:;" id="AllocationTooltipAdd" className="text-decoration-none">
                                             <i className="fa fa-fw fa-plus"></i>
                                         </a>
                                     </span>
@@ -415,7 +415,7 @@ const Reports = () => (
                                 </span>
                             </CardBody>
                             <ListGroup flush>
-                                <ListGroupItem tag="a" href="#" id="RamToggler" className="bb-0 d-flex">
+                                <ListGroupItem tag="a" href="#" id="RamToggler" className="by-0 d-flex text-decoration-none">
                                     RAM
                                     <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="RamTooltip"></i>
                                 </ListGroupItem>
@@ -427,11 +427,11 @@ const Reports = () => (
                                 <CardBody className="pt-0">
                                     <dl className="row mb-3">
                                         <dt className="col-sm-5">Installed</dt>
-                                        <dd className="col-sm-7 text-right">16GB DDR3</dd>
+                                        <dd className="col-sm-7 text-right text-inverse">16GB DDR3</dd>
                                         <dt className="col-sm-5">DRAM Freq</dt>
-                                        <dd className="col-sm-7 text-right">4 GHz (4.4 GHz)</dd>
+                                        <dd className="col-sm-7 text-right text-inverse">4 GHz (4.4 GHz)</dd>
                                         <dt className="col-sm-8">Cores (Threads)</dt>
-                                        <dd className="col-sm-4 text-right">4 (8)</dd>
+                                        <dd className="col-sm-4 text-right text-inverse">4 (8)</dd>
                                     </dl>
                                     <Progress multi className="mt-2 mb-3" style={{height: "5px"}}>
                                         <Progress bar value="45" />
@@ -483,9 +483,9 @@ const Reports = () => (
                                         Cooling
                                     </CardTitle>
                                     <span className="ml-auto justify-content-start">
-                                        <a href="javascript:;" className="ml-auto justify-content-start pr-2" id="CoolingTooltipSettings">
+                                        <a href="javascript:;" className="ml-auto justify-content-start pr-2 text-decoration-none" id="CoolingTooltipSettings">
                                             <i className="fa fa-fw fa-sliders"></i>
-                                        </a> <a href="javascript:;" id="CoolingTooltipAdd">
+                                        </a> <a href="javascript:;" id="CoolingTooltipAdd" className="text-decoration-none">
                                             <i className="fa fa-fw fa-plus"></i>
                                         </a>
                                     </span>
@@ -498,7 +498,7 @@ const Reports = () => (
                                 </span>
                             </CardBody>
                             <ListGroup flush>
-                                <ListGroupItem tag="a" href="#" id="FansToggler" className="bb-0 d-flex">
+                                <ListGroupItem tag="a" href="#" id="FansToggler" className="by-0 d-flex text-decoration-none">
                                     Fans
                                     <i className="fa fa-fw fa-angle-down ml-auto justify-content-end" id="FansTooltip"></i>
                                 </ListGroupItem>
@@ -618,13 +618,13 @@ const Reports = () => (
                                             <dt className="col-sm-5">
                                                 Operating System
                                             </dt>
-                                            <dd className="col-sm-7 text-right">
+                                            <dd className="col-sm-7 text-right text-inverse">
                                                 Windows 10 x64
                                             </dd>
                                             <dt className="col-sm-5">
                                                 Build
                                             </dt>
-                                            <dd className="col-sm-7 text-right">
+                                            <dd className="col-sm-7 text-right text-inverse">
                                                 9876
                                             </dd>
                                         </dl>
@@ -634,13 +634,13 @@ const Reports = () => (
                                             <dt className="col-sm-5">
                                                 Admin
                                             </dt>
-                                            <dd className="col-sm-7 text-right">
+                                            <dd className="col-sm-7 text-right text-inverse">
                                                 John Malkovich
                                             </dd>
                                             <dt className="col-sm-5">
                                                 Network
                                             </dt>
-                                            <dd className="col-sm-7 text-right">
+                                            <dd className="col-sm-7 text-right text-inverse">
                                                 Wireless Network
                                             </dd>
                                         </dl>
@@ -649,33 +649,33 @@ const Reports = () => (
                                 <Table hover className="mb-0" size="sm" responsive>
                                     <thead>
                                         <tr>
-                                            <th scope="col">
+                                            <th scope="col" className="bt-0">
                                                 Process
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 Read
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 Threads
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 CPU
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 GPU
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 Memory
                                             </th>
-                                            <th scope="col" className="align-middle text-right">
+                                            <th scope="col" className="align-middle text-right bt-0">
                                                 Tend
                                             </th>
-                                            <th></th>
+                                            <th className="bt-0"></th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     Chrome
@@ -716,7 +716,7 @@ const Reports = () => (
                                             </tr>
                                         </UncontrolledCollapse>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     Photoshop
@@ -757,7 +757,7 @@ const Reports = () => (
                                             </tr>
                                         </UncontrolledCollapse>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     Chrome
@@ -798,7 +798,7 @@ const Reports = () => (
                                             </tr>
                                         </UncontrolledCollapse>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     Safari
@@ -839,7 +839,7 @@ const Reports = () => (
                                             </tr>
                                         </UncontrolledCollapse>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     Chrome
@@ -880,7 +880,7 @@ const Reports = () => (
                                             </tr>
                                         </UncontrolledCollapse>
                                         <tr>
-                                            <td className="align-middle">
+                                            <td className="align-middle text-nowrap">
                                                 <i className="fa fa fa-window-maximize mr-1"></i>
                                                 <span className="text-inverse">
                                                     System

@@ -128,7 +128,7 @@ const AccountEdit = () => (
                             </Button>
                         </CardBody>
                     </Card>
-                    <Card className="mb-3">
+                    <Card className="mb-3 b-danger">
                         <CardBody>
                            <CardTitle tag="h6" className="text-danger">
                                 Delete Account

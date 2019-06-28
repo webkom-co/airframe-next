@@ -310,6 +310,7 @@ const Colors = () => (
                 </Col>
                 <Col lg={ 3 } md={ 6 } sm={ 12 }>
                     <CardRgbaColor 
+                        cardClass="bg-dark b-0"
                         color="light"
                     />
                 </Col>
@@ -492,7 +493,8 @@ const Colors = () => (
                     />
                 </Col>
                 <Col lg={ 3 } md={ 6 } sm={ 12 }>
-                    <CardRgbaColor 
+                    <CardRgbaColor
+                        cardClass="bg-dark b-0"
                         color="white"
                     />
                 </Col>

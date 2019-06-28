@@ -65,7 +65,7 @@ const TrTableDefault = (props) => (
                                 /> 
                             </Media>
                             <Media body>
-                                <div className="mt-0 d-flex">
+                                <div className="mt-0 d-flex text-inverse">
                                     { faker.name.firstName() } { faker.name.lastName() }
                                 </div>
                                 <span>
@@ -88,8 +88,8 @@ const TrTableDefault = (props) => (
                     </td>
                     <td className="align-middle text-right">
                         <UncontrolledButtonDropdown>
-                            <DropdownToggle color="secondary" outline caret>
-                                <i className="fa fa-gear"></i>
+                            <DropdownToggle color="link" className={` text-decoration-none ${ props.dropdownColor } `}>
+                                <i className="fa fa-gear"></i><i className="fa fa-angle-down ml-2"></i>
                             </DropdownToggle>
                             <DropdownMenu right>
                                 <DropdownItem>
@@ -116,10 +116,12 @@ const TrTableDefault = (props) => (
 TrTableDefault.propTypes = {
     projectColor: PropTypes.node,
     leaderStatus: PropTypes.node,
+    dropdownColor: PropTypes.node
 };
 TrTableDefault.defaultProps = {
     projectColor: "text-inverse",
-    leaderStatus: "white"
+    leaderStatus: "white",
+    dropdownColor: ""
 };
 
 export { TrTableDefault };

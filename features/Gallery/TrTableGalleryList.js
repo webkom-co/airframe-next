@@ -23,9 +23,7 @@ const status = [
     "warning"
 ];
 const badges = [
-    "secondary",
-    "primary",
-    "info"
+    "secondary"
 ];
 
 const TrTableGalleryList = (props) => (
@@ -46,7 +44,7 @@ const TrTableGalleryList = (props) => (
             </td>
             <td className="align-middle">
                 <span>
-                    <a className="text-inverse">
+                    <a className="text-inverse" href="#">
                         { faker.commerce.productName() }
                     </a>
                     <br />
@@ -86,9 +84,9 @@ const TrTableGalleryList = (props) => (
                         /> 
                     </Media>
                     <Media body>
-                        <div className="mt-0 d-flex">
+                        <a className="mt-0 text-decoration-none d-flex" href="#">
                             { faker.name.firstName() } { faker.name.lastName() }
-                        </div>
+                        </a>
                         <span>
                             { faker.address.state() }, { faker.address.stateAbbr() } 
                         </span>
@@ -103,7 +101,7 @@ const TrTableGalleryList = (props) => (
                 Format: .png
             </td>
             <td className="align-middle text-right">
-                <Button color="secondary" outline id={`trTableGalleryListTooltip-${ props.id }` }>
+                <Button color="link" id={`trTableGalleryListTooltip-${ props.id }` }>
                     <i className="fa fa-fw fa-download"></i>
                 </Button>
                 <UncontrolledTooltip placement="left" target={`trTableGalleryListTooltip-${ props.id }` }>

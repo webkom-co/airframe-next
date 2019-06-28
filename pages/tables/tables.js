@@ -66,12 +66,12 @@ const Tables = () => (
                         <Table className="mb-0" responsive>
                             <thead>
                                 <tr>
-                                    <th>Project</th>
-                                    <th>Deadline</th>
-                                    <th>Leader</th>
-                                    <th>Budget</th>
-                                    <th>Status</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">Project</th>
+                                    <th className="bt-0">Deadline</th>
+                                    <th className="bt-0">Leader</th>
+                                    <th className="bt-0">Budget</th>
+                                    <th className="bt-0">Status</th>
+                                    <th className="text-right bt-0">
                                         Actions
                                     </th>
                                 </tr>
@@ -106,12 +106,12 @@ const Tables = () => (
                         <Table className="mb-0" responsive>
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Browser & OS</th>
-                                    <th>IP</th>
-                                    <th>Location</th>
-                                    <th>Signed In</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">Browser & OS</th>
+                                    <th className="bt-0">IP</th>
+                                    <th className="bt-0">Location</th>
+                                    <th className="bt-0">Signed In</th>
+                                    <th className="text-right bt-0">
                                         Action
                                     </th>
                                 </tr>
@@ -145,10 +145,10 @@ const Tables = () => (
                         <Table className="mb-0" striped responsive>
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Product Name</th>
-                                    <th>Last Refresh</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">Product Name</th>
+                                    <th className="bt-0">Last Refresh</th>
+                                    <th className="text-right bt-0">
                                         Last Month
                                     </th>
                                 </tr>
@@ -182,10 +182,10 @@ const Tables = () => (
                         <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>Name</th>
-                                    <th>Price</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">Name</th>
+                                    <th className="bt-0">Price</th>
+                                    <th className="text-right bt-0">
                                         Date
                                     </th>
                                 </tr>
@@ -215,17 +215,17 @@ const Tables = () => (
                                 </span>
                             </CardTitle>
                             <p className="mb-0">
-                                Add <code>size=&quot;sm&quot;</code> to make tables more compact by cutting cell padding in half.
+                                Add <code>size="sm"</code> to make tables more compact by cutting cell padding in half.
                             </p>
                         </CardBody>
                         { /* START Table */}
                         <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
-                                    <th>ID</th>
-                                    <th>Name</th>
-                                    <th>Amount</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">ID</th>
+                                    <th className="bt-0">Name</th>
+                                    <th className="bt-0">Amount</th>
+                                    <th className="text-right bt-0">
                                         Payment
                                     </th>
                                 </tr>
@@ -339,12 +339,12 @@ const Tables = () => (
                         <Table className="mb-0" hover responsive>
                             <thead className="thead-light">
                                 <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Nick</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">First Name</th>
+                                    <th className="bt-0">Last Name</th>
+                                    <th className="bt-0">Email</th>
+                                    <th className="bt-0">Nick</th>
+                                    <th className="text-right bt-0">
                                         Role
                                     </th>
                                 </tr>
@@ -354,12 +354,12 @@ const Tables = () => (
                             </tbody>
                             <thead className="thead-dark">
                                 <tr>
-                                    <th>#</th>
-                                    <th>First Name</th>
-                                    <th>Last Name</th>
-                                    <th>Email</th>
-                                    <th>Nick</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">First Name</th>
+                                    <th className="bt-0">Last Name</th>
+                                    <th className="bt-0">Email</th>
+                                    <th className="bt-0">Nick</th>
+                                    <th className="text-right bt-0">
                                         Role
                                     </th>
                                 </tr>
@@ -393,12 +393,12 @@ const Tables = () => (
                         <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
-                                    <th>Invoice</th>
-                                    <th>Name</th>
-                                    <th>Date</th>
-                                    <th>Price</th>
-                                    <th>Status</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">Invoice</th>
+                                    <th className="bt-0">Name</th>
+                                    <th className="bt-0">Date</th>
+                                    <th className="bt-0">Price</th>
+                                    <th className="bt-0">Status</th>
+                                    <th className="text-right bt-0">
                                         Country
                                     </th>
                                 </tr>
@@ -416,7 +416,7 @@ const Tables = () => (
             { /* START Section 10 */}
             <Row>
                 <Col lg={ 12 }>
-                    <Card className="mb-3" type="background" color="900">
+                    <Card className="mb-3" type="background" color="dark">
                         <CardBody>
                             <CardTitle tag="h6">
                                 Table Inverse
@@ -432,12 +432,12 @@ const Tables = () => (
                         <Table className="mb-0" dark responsive>
                             <thead>
                                 <tr>
-                                    <th>Project</th>
-                                    <th>Deadline</th>
-                                    <th>Leader</th>
-                                    <th>Budget</th>
-                                    <th>Status</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">Project</th>
+                                    <th className="bt-0">Deadline</th>
+                                    <th className="bt-0">Leader</th>
+                                    <th className="bt-0">Budget</th>
+                                    <th className="bt-0">Status</th>
+                                    <th className="text-right bt-0">
                                         Actions
                                     </th>
                                 </tr>
@@ -446,6 +446,7 @@ const Tables = () => (
                                 <TrTableDefault 
                                     projectColor="text-white"
                                     leaderStatus="900"
+                                    dropdownColor="text-white"
                                 />
                             </tbody>
                         </Table>

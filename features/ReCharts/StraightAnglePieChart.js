@@ -24,11 +24,10 @@ const StraightAnglePieChart = () => (
                 endAngle={0}
                 data={data}
                 dataKey="value"
-                cy="75%"
-                outerRadius="75%"
-                fill={ colors['primary-08'] }
+                outerRadius={80}
+                fill={ colors['primary'] }
                 stroke={ colors['white'] }
-                label={{fill: colors['800'], fontSize: '12px'}}
+                label={{fill: colors['900'], fontSize: '12px'}}
             />
        </PieChart>
     </ResponsiveContainer>

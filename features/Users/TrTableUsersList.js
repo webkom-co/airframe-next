@@ -16,7 +16,6 @@ import {
 import { randomArray, randomAvatar } from './../../core/utilities';
 
 const TrTableUsersList = (props) => {
-
     const avatar = [
         [
             <AvatarAddOn.Icon 
@@ -113,9 +112,9 @@ const TrTableUsersList = (props) => {
                             /> 
                         </Media>
                         <Media body>
-                            <div className="mt-0 d-flex">
+                            <a className="mt-0 d-flex text-decoration-none" href="#">
                                 { faker.name.firstName() } { faker.name.lastName() }
-                            </div>
+                            </a>
                             <span>
                                 { faker.name.jobTitle() }
                             </span>
@@ -130,8 +129,8 @@ const TrTableUsersList = (props) => {
                 </td>
                 <td className="align-middle text-right">
                     <UncontrolledButtonDropdown>
-                        <DropdownToggle color="secondary" outline caret>
-                            <i className="fa fa-bars"></i>
+                        <DropdownToggle color="link" className="pr-0">
+                            <i className="fa fa-bars"></i><i className="fa fa-angle-down ml-2" />
                         </DropdownToggle>
                         <DropdownMenu right>
                             <DropdownItem>

@@ -36,6 +36,7 @@ export class CustomSearch extends React.Component {
                 <Input
                     onChange={(e) => { this.setState({ value: e.target.value }) }}
                     value={ this.state.value }
+                    className="bg-white"
                     placeholder="Type to search..."
                 />
                 {

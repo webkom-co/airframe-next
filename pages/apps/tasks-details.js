@@ -53,13 +53,13 @@ const TasksDetails = () => (
                                 <tr>
                                     <td className="align-middle">Project</td>
                                     <td className="text-right">
-                                        <a href="#">Analytics Redo</a>
+                                        <a href="#" className="text-decoration-none">Analytics Redo</a>
                                     </td>
                                 </tr>
                                 <tr>
                                     <td className="align-middle">Assigned by</td>
                                     <td className="text-right">
-                                        <a href="#">
+                                        <a href="#" className="text-decoration-none">
                                             { faker.name.firstName() } { faker.name.lastName() }
                                         </a>
                                     </td>
@@ -80,9 +80,9 @@ const TasksDetails = () => (
                                     <td className="align-middle">Priority</td>
                                     <td className="text-right">
                                         <UncontrolledButtonDropdown>
-                                            <DropdownToggle color="link" caret className="p-0">
+                                            <DropdownToggle color="link" className="p-0 text-decoration-none">
                                                 <i className="fa fa-circle text-success mr-2"></i>
-                                                Small 
+                                                Small<i className="fa fa-angle-down ml-2" />
                                             </DropdownToggle>
                                             <DropdownMenu right>
                                                 <DropdownItem header>Select Priority</DropdownItem>
@@ -256,25 +256,33 @@ const TasksDetails = () => (
                                         3
                                     </Badge>
                                 </div>
-                                <Attachment 
-                                    icon="file-word-o"
-                                    iconClassName="text-white"
-                                    BgIconClassName="text-primary"
-                                />
-                                <Attachment 
-                                    icon="file-excel-o"
-                                    iconClassName="text-white"
-                                    BgIconClassName="text-success"
-                                />
-                                <Attachment 
-                                    icon="file-powerpoint-o"
-                                    iconClassName="text-white"
-                                    BgIconClassName="text-warning"
-                                />
-                                <a href="#" className="my-3">
-                                    <i className="fa fa-plus mr-2"></i>
-                                    Add More Files to this Task
-                                </a>
+                                <div className="mb-3">
+                                    <Attachment 
+                                        icon="file-word-o"
+                                        iconClassName="text-white"
+                                        BgIconClassName="text-primary"
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <Attachment 
+                                        icon="file-excel-o"
+                                        iconClassName="text-white"
+                                        BgIconClassName="text-success"
+                                    />
+                                </div>
+                                <div className="mb-3">
+                                    <Attachment 
+                                        icon="file-powerpoint-o"
+                                        iconClassName="text-white"
+                                        BgIconClassName="text-warning"
+                                    />
+                                </div>
+                                <div className="mb-5">
+                                    <a href="#">
+                                        <i className="fa fa-plus mr-2"></i>
+                                        Add More Files to this Task
+                                    </a>
+                                </div>
                             </div>
                             { /* END Atachemnts */}
                             <div className="mb-3">

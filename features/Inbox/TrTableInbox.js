@@ -77,33 +77,29 @@ const TrTableInbox = (props) => (
                         /> 
                     </Media>
                     <Media body>
-                        <div className="mt-0 d-flex text-nowrap">
+                        <a className="mt-0 text-decoration-none d-flex" href="#">
                             { faker.name.firstName() } { faker.name.lastName() }
-                        </div>
+                        </a>
                         <span>
                             { faker.address.state() }
                         </span>
                     </Media>
                 </Media>
             </td>
-            <td className="align-middle" style={{ minWidth: "200px" }}>
-                <Link to="/apps/email-details">
+            <td className="align-middle">
+                <Link to="/apps/email-details" className="text-decoration-none">
                     { faker.company.catchPhrase() }
                 </Link>
                 <br />
                 { faker.lorem.sentence() }
-            </td>
-            <td className="align-middle">
+                <br />
                 <Badge pill color={ randomArray(tag) }>
                     { faker.commerce.department() }
-                </Badge>
+                </Badge> <i className="fa fa-paperclip ml-2"></i>
             </td>
-            <td className="align-middle">
-                <i className="fa fa-paperclip"></i>
-            </td>
-            <td className="align-middle text-right text-nowrap">
-                <p className="m-0">30-Jun-2014</p>
-                <p className="m-0">01:54 PM</p>
+            <td className="align-middle text-right">
+                30-Jun-2014<br />
+                01:54 PM
             </td>
         </tr>
 

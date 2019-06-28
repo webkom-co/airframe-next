@@ -94,13 +94,13 @@ const ProfileDetails = () => (
                                 </span>
                             </div>
                             <div className="text-left mb-4">
-                                <Badge pill color="primary" className="mr-1">
+                                <Badge pill color="secondary" className="mr-1">
                                     { faker.commerce.department() }
                                 </Badge>
                                 <Badge pill color="secondary" className="mr-1">
                                     { faker.commerce.department() }
                                 </Badge>
-                                <Badge pill color="primary" className="mr-1">
+                                <Badge pill color="secondary" className="mr-1">
                                     { faker.commerce.department() }
                                 </Badge>
                             </div>
@@ -109,14 +109,14 @@ const ProfileDetails = () => (
                             </div>
                             <DlRowContacts
                                 leftSideClassName="text-lg-left"
-                                rightSideClassName="text-lg-right"
+                                rightSideClassName="text-lg-right text-inverse"
                             />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
                             </div>
                             <DlRowAddress 
                                 leftSideClassName="text-lg-left"
-                                rightSideClassName="text-lg-right"
+                                rightSideClassName="text-lg-right text-inverse"
                             />
                         </CardBody>
                     </Card>
@@ -235,25 +235,27 @@ const ProfileDetails = () => (
                                         <span className="small">Contact</span>
                                     </div>
                                     <DlRowContacts 
-                                    leftSideClassName="text-lg-right"
+                                        leftSideClassName="text-lg-right"
+                                        rightSideClassName="text-inverse"
                                     />
                                     <div className="mt-4 mb-2">
                                         <span className="small">Address</span>
                                     </div>
                                     <DlRowAddress 
                                         leftSideClassName="text-lg-right"
+                                        rightSideClassName="text-inverse"
                                     />
                                 </Card>
                             </TabPane>
                             <TabPane tabId="chat">
                                 <Card>
-                                    <CardHeader className="d-flex">
+                                    <CardHeader className="d-flex bg-white bb-0">
                                         <h6 className="align-self-center mb-0">
                                             Chat with Romaine Weber
                                         </h6>
                                         <UncontrolledButtonDropdown className="align-self-center ml-auto">
-                                            <DropdownToggle color="secondary" outline caret size="sm">
-                                                <i className="fa fa-gear"></i>
+                                            <DropdownToggle color="link" size="sm">
+                                                <i className="fa fa-gear"></i><i className="fa fa-angle-down ml-2" />
                                             </DropdownToggle>
                                             <DropdownMenu right>
                                                 <DropdownItem>
@@ -273,15 +275,15 @@ const ProfileDetails = () => (
                                         </UncontrolledButtonDropdown>
                                     </CardHeader>
                                     <CardBody>
-                                        <ChatLeft />
-                                        <ChatRight />
-                                        <ChatLeft />
+                                        <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
+                                        <ChatRight cardClassName="text-dark"/>
+                                        <ChatLeft cardClassName="bg-gray-300 b-0 text-dark" />
                                         <div className="mt-4 mb-3 text-center">
                                             <span className="small">
                                                 Yesterday
                                             </span>
                                         </div>
-                                        <ChatRight />
+                                        <ChatRight cardClassName="text-dark" />
                                     </CardBody>
                                     <CardFooter>
                                        <ChatCardFooter />
@@ -307,9 +309,9 @@ const ProfileDetails = () => (
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
-                                                <th>From</th>
-                                                <th>Subject</th>
-                                                <th className="text-right">
+                                            <th className="bt-0">From</th>
+                                                <th className="bt-0">Subject</th>
+                                                <th className="bt-0 text-right">
                                                     Date
                                                 </th>
                                             </tr>

@@ -43,7 +43,7 @@ const SettingsEdit = () => (
                             <Form>
                                 { /* START Input */}
                                 <FormGroup className="mb-5">
-                                    <Label for="notifyMe" className="mb-1">
+                                    <Label for="notifyMe" className="mb-1 text-inverse">
                                         Monthly Newsletter
                                     </Label>
                                     <p className="mb-2">
@@ -55,7 +55,7 @@ const SettingsEdit = () => (
                                 { /* END Input */}
                                 { /* START Input */}
                                 <FormGroup className="mb-5">
-                                    <Label for="privateMessage" className="mb-1">
+                                    <Label for="privateMessage" className="mb-1 text-inverse">
                                         Private Message
                                     </Label>
                                     <p className="mb-2">
@@ -67,7 +67,7 @@ const SettingsEdit = () => (
                                 { /* END Input */}
                                 { /* START Input */}
                                 <FormGroup className="mb-5">
-                                    <Label for="privateMessage" className="mb-1">
+                                    <Label for="privateMessage" className="mb-1 text-inverse">
                                         Publication Email Subscriptions
                                     </Label>
                                     <p className="mb-2">
@@ -80,7 +80,7 @@ const SettingsEdit = () => (
                                 { /* END Input */}
                                 { /* START Input */}
                                 <FormGroup className="mb-5">
-                                    <Label for="ActivityNotifications" className="mb-1">
+                                    <Label for="ActivityNotifications" className="mb-1 text-inverse">
                                         Activity Notifications
                                     </Label>
                                     <p className="mb-2">

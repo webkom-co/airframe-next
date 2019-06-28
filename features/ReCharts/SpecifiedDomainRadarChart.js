@@ -23,7 +23,7 @@ const data = [
 const SpecifiedDomainRadarChart = () => (
     <ResponsiveContainer width='100%' aspect={ 1/1 }>
         <RadarChart outerRadius={150} data={data}>
-          <PolarGrid stroke="green" />
+          <PolarGrid stroke={ colors['400'] } />
           <PolarAngleAxis dataKey="subject" />
           <PolarRadiusAxis angle={30} domain={[0, 150]} />
           <Radar name="Mike" dataKey="A" stroke={ colors['purple'] } fill={ colors['purple'] } fillOpacity={0.3}/>

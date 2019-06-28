@@ -58,7 +58,7 @@ const Clients = () => (
                                     </Nav>
                                     <ButtonToolbar className="ml-auto flex-nowrap">
                                         <ButtonGroup>
-                                            <Button color="secondary" outline className="align-self-center mr-2" id="tooltipSettings">
+                                            <Button color="link" className="align-self-center mr-2 text-decoration-none" id="tooltipSettings">
                                                 <i className="fa fa-fw fa-gear"></i>
                                             </Button>
                                         </ButtonGroup>
@@ -83,12 +83,12 @@ const Clients = () => (
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Name</th>
-                                                <th>Email</th>
-                                                <th className="text-right">Phone</th>
-                                                <th className="text-right">Label</th>
+                                                <th className="bt-0"></th>
+                                                <th className="bt-0"></th>
+                                                <th className="bt-0">Name</th>
+                                                <th className="bt-0">Email</th>
+                                                <th className="text-right bt-0">Phone</th>
+                                                <th className="text-right bt-0">Label</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -126,12 +126,12 @@ const Clients = () => (
                                     <Table className="mb-0" hover responsive>
                                         <thead>
                                             <tr>
-                                                <th></th>
-                                                <th></th>
-                                                <th>Name</th>
-                                                <th>PM</th>
-                                                <th className="text-right">Phone</th>
-                                                <th className="text-right">Label</th>
+                                                <th className="bt-0"></th>
+                                                <th className="bt-0"></th>
+                                                <th className="bt-0">Name</th>
+                                                <th className="bt-0">PM</th>
+                                                <th className="text-right bt-0">Phone</th>
+                                                <th className="text-right bt-0">Label</th>
                                             </tr>
                                         </thead>
                                         <tbody>
@@ -273,14 +273,14 @@ const Clients = () => (
                             </div>
                             <DlRowContacts 
                                 leftSideClassName="text-left"
-                                rightSideClassName="text-right"
+                                rightSideClassName="text-right text-inverse"
                             />
                             <div className="mt-4 mb-2">
                                 <span className="small">Address</span>
                             </div>
                             <DlRowAddress 
                                 leftSideClassName="text-left"
-                                rightSideClassName="text-right"
+                                rightSideClassName="text-right text-inverse"
                             />
                         </CardBody>
                     </Card>

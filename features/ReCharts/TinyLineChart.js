@@ -7,8 +7,6 @@ import {
 	Dot
 } from './../../components/recharts';
 
-import colors from './../../core/colors';
-
 const data = _.times(20, () => ({ pv: Math.random() * 100 }));
 
 const generateDot = ({stroke, ...other}) => (

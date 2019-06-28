@@ -67,9 +67,9 @@ const TrTableClients = (props) => (
                         /> 
                     </Media>
                     <Media body>
-                        <div className="mt-0 text-nowrap">
+                        <a className="mt-0 d-flex text-decoration-none" href="#">
                             { faker.name.firstName() } { faker.name.lastName() }
-                        </div>
+                        </a>
                         <span className="text-muted">
                             { faker.name.jobTitle() }
                         </span>

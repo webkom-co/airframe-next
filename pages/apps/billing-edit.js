@@ -56,26 +56,26 @@ const BillingEdit = () => (
                                     </div>
                                     <Progress multi style={{height: "5px"}} className="mb-3">
                                         <Progress bar value="15" />
-                                        <Progress bar color="success" value="30" />
-                                        <Progress bar color="info" value="25" />
+                                        <Progress bar color="purple" value="30" />
+                                        <Progress bar color="yellow" value="25" />
                                     </Progress>
                                     <dl className="row">
                                         <dt className="col-sm-4 text-sm-right">Amount Space</dt>
-                                        <dd className="col-sm-8">214,8 GB / 1,03 TB</dd>
+                                        <dd className="col-sm-8 text-inverse">214,8 GB / 1,03 TB</dd>
                                         <dt className="col-sm-4 text-sm-right">Regular Files</dt>
                                         <dd className="col-sm-8">
                                             <i className="fa fa-circle text-primary mr-2"></i>
-                                            177,8 GB
+                                            <span className="text-inverse">177,8 GB</span>
                                         </dd>
                                         <dt className="col-sm-4 text-sm-right">Shared Files</dt>
                                         <dd className="col-sm-8">
-                                            <i className="fa fa-circle text-success mr-2"></i>
-                                            37 GB
+                                            <i className="fa fa-circle text-purple mr-2"></i>
+                                            <span className="text-inverse">37 GB</span>
                                         </dd>
                                         <dt className="col-sm-4 text-sm-right">Available Files</dt>
                                         <dd className="col-sm-8">
-                                            <i className="fa fa-circle text-info mr-2"></i>
-                                            177,8 GB
+                                            <i className="fa fa-circle text-yellow mr-2"></i>
+                                            <span className="text-inverse">177,8 GB</span>
                                         </dd>
                                         <dt className="col-sm-4 text-sm-right">Action</dt>
                                         <dd className="col-sm-8">
@@ -102,9 +102,9 @@ const BillingEdit = () => (
                                     </div>
                                     <dl className="row">
                                         <dt className="col-sm-4 text-sm-right">Next Payment Due</dt>
-                                        <dd className="col-sm-8">2016-05-21</dd>
+                                        <dd className="col-sm-8 text-inverse">2016-05-21</dd>
                                         <dt className="col-sm-4 text-sm-right">Amount</dt>
-                                        <dd className="col-sm-8">$ 13.00</dd>
+                                        <dd className="col-sm-8 text-inverse">$ 13.00</dd>
                                         <dt className="col-sm-4 text-sm-right">Action</dt>
                                         <dd className="col-sm-8">
                                             <Button color="secondary" outline size="sm">
@@ -130,13 +130,13 @@ const BillingEdit = () => (
                         <Table className="mb-0" hover responsive>
                             <thead>
                                 <tr>
-                                    <th>#</th>
-                                    <th>ID</th>
-                                    <th>Date</th>
-                                    <th>Amount</th>
-                                    <th>Description</th>
-                                    <th>Payment Method</th>
-                                    <th className="text-right">
+                                    <th className="bt-0">#</th>
+                                    <th className="bt-0">ID</th>
+                                    <th className="bt-0">Date</th>
+                                    <th className="bt-0">Amount</th>
+                                    <th className="bt-0">Description</th>
+                                    <th className="bt-0">Payment Method</th>
+                                    <th className="text-right bt-0">
                                         Receipt
                                     </th>
                                 </tr>

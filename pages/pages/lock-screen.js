@@ -28,7 +28,7 @@ const LockScreen = () => (
                     <Label for="password">
                         Password
                     </Label>
-                    <Input type="password" name="password" id="password" placeholder="Enter the password to continue..." />
+                    <Input type="password" name="password" id="password" placeholder="Enter the password to continue..." className="bg-white" />
                 </FormGroup>
                 <ThemeConsumer>
                 {
@@ -43,11 +43,11 @@ const LockScreen = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/login">
+                <Link to="/pages/login" className="text-decoration-none">
                     Sign as Diffrent User
                 </Link>
-                <Link to="/" className="ml-auto">
-                    Back to Home
+                <Link to="/" className="ml-auto text-decoration-none">
+                    <i className="fa fa-angle-left mr-2"></i> Back to Home
                 </Link>
             </div>
             { /* END Bottom Links */}

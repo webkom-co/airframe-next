@@ -61,6 +61,7 @@ class TextFilter extends React.Component {
                 <Input
                     type="text"
                     bsSize="sm"
+                    className="bg-white"
                     onChange={(e) => this.setState({value: e.target.value})}
                     onClick={ this.handleClick }
                     value={ this.state.value }

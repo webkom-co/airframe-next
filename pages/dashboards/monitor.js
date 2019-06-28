@@ -325,7 +325,7 @@ const Monitor = () => (
                 <div className="hr-text hr-text-left mt-2 mb-4">
                     <span>Mounted Devices</span>
                 </div>
-                <Table>
+                <Table responsive>
                     <thead>
                         <tr>
                             <th className="bt-0">Description</th>

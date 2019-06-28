@@ -10,6 +10,7 @@ import moment from 'moment';
 import {
     Badge,
     Button,
+    CustomInput,
     StarRating,
     ButtonGroup
 } from './../../components';
@@ -61,6 +62,8 @@ export class AdvancedTableA extends React.Component {
             products: _.times(INITIAL_PRODUCTS_COUNT, generateRow),
             selected: []
         };
+
+        this.headerCheckboxRef = React.createRef();
     }
 
     handleSelect(row, isSelected) {
@@ -115,7 +118,7 @@ export class AdvancedTableA extends React.Component {
                     <span className="text-nowrap">{ column.text }</span>
                     <a
                         href="javascript:;"
-                        className="d-block small text-nowrap"
+                        className="d-block small text-decoration-none text-nowrap"
                         onClick={ this.handleResetFilters.bind(this) }
                     >
                         Reset Filters <i className="fa fa-times fa-fw text-danger"></i>
@@ -127,6 +130,11 @@ export class AdvancedTableA extends React.Component {
             text: 'Product Name',
             sort: true,
             sortCaret,
+            formatter: (cell) => (
+                <span className="text-inverse">
+                    { cell }
+                </span>
+            ),
             ...buildCustomTextFilter({
                 placeholder: 'Enter product name...',
                 getFilter: filter => { this.nameFilter = filter; }
@@ -231,7 +239,13 @@ export class AdvancedTableA extends React.Component {
             mode: 'checkbox',
             selected: this.state.selected,
             onSelect: this.handleSelect.bind(this),
-            onSelectAll: this.handleSelectAll.bind(this)
+            onSelectAll: this.handleSelectAll.bind(this),
+            selectionRenderer: ({ mode, checked, disabled }) => (
+                <CustomInput type={ mode } checked={ checked } disabled={ disabled } />
+            ),
+            selectionHeaderRenderer: ({ mode, checked, indeterminate }) => (
+                <CustomInput type={ mode } checked={ checked } innerRef={el => el && (el.indeterminate = indeterminate)} />
+            )
         };
 
         return (

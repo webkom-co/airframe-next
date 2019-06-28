@@ -25,9 +25,12 @@ const data = [{name: 'Page A', uv: 590, pv: 800, amt: 1400},
               {name: 'Page E', uv: 1520, pv: 1108, amt: 1100},
               {name: 'Page F', uv: 1400, pv: 680, amt: 1700}];
 
+// eslint-disable-next-line react/prop-types
 const generateDot = ({stroke, ...other}) => (
     <Dot
         { ...other }
+        r={ 4 }
+        strokeWidth={ 2 }
         fill={ stroke }
         stroke={ colors['white'] }
     />
@@ -36,6 +39,7 @@ const generateDot = ({stroke, ...other}) => (
 const LineBarAreaComposedChart = ({height, className}) => (
     <ResponsiveContainer
         width='100%'
+        minHeight='250px'
         className={ className }
         {...(!_.isUndefined(height) ? {
             height
@@ -44,14 +48,14 @@ const LineBarAreaComposedChart = ({height, className}) => (
         })}
     >
         <ComposedChart data={data}
-            margin={{top: 5, right: 30, left: 20, bottom: 5}}>
-          <CartesianGrid stroke='#f5f5f5'/>
+            margin={{top: 5, right: 20, left: 20, bottom: 5}}>
+          <CartesianGrid />
           <XAxis dataKey="name"/>
           <YAxis />
           <Tooltip />
           <Legend />
-          <Area dataKey='amt' fill={ colors['primary-04'] } stroke={ colors['primary'] } />
-          <Bar dataKey='pv' barSize={12} fill={ colors['info-07'] } />
+          <Area dataKey='amt' fill={ colors['200'] } stroke={ colors['400'] } />
+          <Bar dataKey='pv' barSize={ 5 } fill={ colors['primary'] } />
           <Line dataKey='uv' stroke={ colors['purple'] } activeDot={{r: 5}} dot={generateDot} />
        </ComposedChart>
     </ResponsiveContainer>

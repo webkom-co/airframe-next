@@ -31,7 +31,7 @@ const GalleryTable = () => (
                     />
                     <Card>
                         { /* START Table */}
-                        <Table className="mb-0" hover responsive>
+                        <Table className="mb-0" hover size="sm" responsive>
                             <thead>
                                 <tr>
                                     <th></th>

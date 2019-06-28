@@ -16,12 +16,33 @@ import {
 import { randomArray, randomAvatar } from './../../core/utilities';
 
 const badges = [
+    "secondary"
+];
+
+const avatarStatus = [
     "secondary",
-    "success",
     "warning",
-    "info",
-    "secondary",
-    "primary"
+    "danger",
+    "success"
+];
+
+const prioStatus = [
+        <React.Fragment key="1">
+            <i className="fa fa-circle text-success mr-2"></i>
+            Small<i className="fa fa-angle-down ml-2" />
+        </React.Fragment>,
+        <React.Fragment key="2">
+            <i className="fa fa-circle text-primary mr-2"></i>
+            Normal<i className="fa fa-angle-down ml-2" />
+        </React.Fragment>,
+        <React.Fragment key="3">
+            <i className="fa fa-circle text-warning mr-2"></i>
+            High<i className="fa fa-angle-down ml-2" />
+        </React.Fragment>,
+        <React.Fragment key="3">
+            <i className="fa fa-circle text-danger mr-2"></i>
+            Big<i className="fa fa-angle-down ml-2" />
+        </React.Fragment>
 ];
 
 const TrTableTasksList = (props) => (
@@ -32,9 +53,8 @@ const TrTableTasksList = (props) => (
             </td>
             <td className="align-middle">
                 <UncontrolledButtonDropdown>
-                    <DropdownToggle color="secondary" outline caret size="sm">
-                        <i className="fa fa-circle text-success mr-2"></i>
-                        Small 
+                    <DropdownToggle color="link" link size="sm" className="pl-0 mb-3 text-decoration-none">
+                        { randomArray(prioStatus) }
                     </DropdownToggle>
                     <DropdownMenu>
                         <DropdownItem header>Select Priority</DropdownItem>
@@ -50,7 +70,7 @@ const TrTableTasksList = (props) => (
                             <i className="fa fa-circle text-primary mr-2"></i>
                             Normal 
                         </DropdownItem>
-                        <DropdownItem active>
+                        <DropdownItem>
                             <i className="fa fa-circle text-success mr-2"></i>
                             Small 
                         </DropdownItem>
@@ -60,7 +80,7 @@ const TrTableTasksList = (props) => (
             <td className="align-middle">
                 <div>
                     <span className="mr-2">#{ faker.random.number() }</span>
-                    <Link to="/apps/task-details">
+                    <Link to="/apps/task-details" className="text-decoration-none">
                         { faker.hacker.phrase() }
                     </Link>
                 </div>
@@ -78,23 +98,30 @@ const TrTableTasksList = (props) => (
             </td>
             <td className="align-middle">
                 <Avatar.Image
-                    size="sm"
-                    className="mr-1"
+                    size="md"
                     src={ randomAvatar() }
-                />
-                <Avatar.Image
-                    size="sm"
-                    className="mr-1"
-                    src={ randomAvatar() }
+                    className="mr-3"
+                    addOns={[
+                        <AvatarAddOn.Icon 
+                            className="fa fa-circle"
+                            color="white"
+                            key="avatar-icon-bg"
+                        />,
+                        <AvatarAddOn.Icon 
+                            className="fa fa-circle"
+                            color={ randomArray(avatarStatus) }
+                            key="avatar-icon-fg"
+                        />
+                    ]}
                 />
             </td>
             <td className="align-middle">
                 16-Jul-2016
             </td>
             <td className="align-middle text-right">
-                <UncontrolledButtonDropdown>
-                    <DropdownToggle color="secondary" outline size="sm" caret>
-                        <i className="fa fa-gear"></i>
+                <UncontrolledButtonDropdown className="align-self-center ml-auto">
+                    <DropdownToggle color="link" size="sm">
+                        <i className="fa fa-gear" /><i className="fa fa-angle-down ml-2" />
                     </DropdownToggle>
                     <DropdownMenu right>
                         <DropdownItem>

@@ -41,19 +41,19 @@ const EmailDetails = () => (
                             { /* START Header */}
                             <div className="d-lg-flex justify-content-end mb-4">
                                 <div className="mr-auto d-flex align-items-center mb-3 mb-xl-0">
-                                    <Button color="link" tag={ Link } to="/apps/inbox">
+                                    <Button color="link" tag={ Link } to="/apps/inbox" className="text-decoration-none">
                                         <i className="fa fa-angle-left mr-2"></i>  Inbox
                                     </Button>
                                 </div>
                                 <ButtonToolbar>
                                     <ButtonGroup className="mr-2 mb-3 mb-sm-0">
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipPrev">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipPrev">
                                             <i className="fa fa-fw fa-angle-left"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipPrev">
                                             Prev Message
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipNext">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipNext">
                                             <i className="fa fa-fw fa-angle-right"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipNext">
@@ -61,13 +61,13 @@ const EmailDetails = () => (
                                         </UncontrolledTooltip>
                                     </ButtonGroup>
                                     <ButtonGroup className="mr-2">
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipForward">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipForward">
                                             <i className="fa fa-fw fa-mail-forward"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipForward">
                                             Forward
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipFav">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipFav">
                                             <i className="fa fa-fw fa-star"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipFav">
@@ -79,7 +79,7 @@ const EmailDetails = () => (
                                         <UncontrolledTooltip placement="bottom" target="tooltipPrint">
                                             Print
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipDelete">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipDelete">
                                             <i className="fa fa-fw fa-trash"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="bottom" target="tooltipDelete">
@@ -120,9 +120,9 @@ const EmailDetails = () => (
                                             /> 
                                         </Media>
                                         <Media body>
-                                            <div className="mt-0 d-flex">
+                                            <a className="mt-0 text-decoration-none d-flex" href="#">
                                                 { faker.name.firstName() } { faker.name.lastName() }
-                                            </div>
+                                            </a>
                                             <samp className="small">
                                                 { faker.internet.email() }
                                             </samp>
@@ -183,7 +183,7 @@ const EmailDetails = () => (
                                     <UncontrolledTooltip placement="top" target="tooltipPrevBtm">
                                         Prev Message
                                     </UncontrolledTooltip>
-                                    <Button color="secondary" outline id="tooltipNextBtm">
+                                    <Button color="link" className="text-decoration-none align-self-center" id="tooltipNextBtm">
                                         <i className="fa fa-fw fa-angle-right"></i>
                                     </Button>
                                     <UncontrolledTooltip placement="top" target="tooltipNextBtm">
@@ -192,25 +192,25 @@ const EmailDetails = () => (
                                 </ButtonGroup>
                                 <ButtonToolbar className="flex-column flex-sm-row ml-0 ml-lg-auto">
                                     <ButtonGroup className="mr-2 mb-2 mb-sm-0">
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipForwardBtm">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipForwardBtm">
                                             <i className="fa fa-fw fa-mail-forward"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="top" target="tooltipForwardBtm">
                                             Forward
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipFavBtm">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipFavBtm">
                                             <i className="fa fa-fw fa-star"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="top" target="tooltipFavBtm">
                                             Add to Favorites
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline className="align-self-center" id="tooltipPrintBtm">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipPrintBtm">
                                             <i className="fa fa-fw fa-print"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="top" target="tooltipPrintBtm">
                                             Print
                                         </UncontrolledTooltip>
-                                        <Button color="secondary" outline id="tooltipDeleteBtm">
+                                        <Button color="link" className="text-decoration-none align-self-center" id="tooltipDeleteBtm">
                                             <i className="fa fa-fw fa-trash"></i>
                                         </Button>
                                         <UncontrolledTooltip placement="top" target="tooltipDeleteBtm">

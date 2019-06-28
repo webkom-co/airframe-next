@@ -27,7 +27,6 @@ import { HeaderMain } from "../../features/HeaderMain";
 import { MetricVsTarget } from "../../features/Analytics/MetricVsTarget";
 import { WebsitePerformance } from "../../features/Analytics/WebsitePerformance";
 import { AudienceMetricsChart } from "../../features/Analytics/AudienceMetricsChart";
-import { CardFooterInfo } from "../../features/CardFooterInfo";
 import { TinyAreaChart } from "./../../features/ReCharts/TinyAreaChart";
 import { SimpleLineChart } from "./../../features/ReCharts/SimpleLineChart";
 
@@ -40,8 +39,8 @@ const LAYOUT = {
     'analytics-audience-metrics': { h: 9, minW: 7 },
     'traffic-channels': { lg: 6, h: 6, minW: 4 },
     'sessions': { lg: 6, h: 6, maxH: 9, minW: 3 },
-    'spend': { lg: 6, h: 6, minW: 3 },
-    'website-performance': { lg: 6, h: 12, minW: 6 },
+    'spend': { md: 6, h: 7 },
+    'website-performance': { md: 6, h: 11 },
     'organic-traffic': { lg: 6, h: 10, minW: 6 }
 }
 
@@ -69,27 +68,7 @@ SessionByDevice.propTypes = {
 
 class Analytics extends React.Component {
     state = {
-        layouts: _.clone(LAYOUT),
-        largeScreen: true
-    }
-
-    constructor(props) {
-        super(props);
-
-        this._sizeHandler = this._sizeHandler.bind(this);
-    }
-
-    componentDidMount() {
-        if (typeof window !== 'undefined') {
-            window.addEventListener('resize', this._sizeHandler);
-        }
-        this._sizeHandler();
-    }
-
-    componentWillUnmount() {
-        if (typeof window !== 'undefined') {
-            window.removeEventListener('resize', this._sizeHandler);
-        }
+        layouts: _.clone(LAYOUT)
     }
 
     _resetLayout = () => {
@@ -98,31 +77,23 @@ class Analytics extends React.Component {
         })
     }
 
-    _sizeHandler = () => {
-        if (typeof window !== 'undefined') {
-            this.setState({
-                largeScreen: !!window.matchMedia('(min-width: 992px)').matches
-            })
-        }
-    }
-
     render() {
         const { layouts } = this.state;
 
         return (
             <React.Fragment>
                 <Container fluid={ false }>
-                    <div className="d-lg-flex mt-3 mb-3 mb-lg-5">
+                    <div className="d-flex mt-3 mb-5">
                         <HeaderMain 
                             title="Analytics"
-                            className="mt-0 mb-3 mb-lg-0"
+                            className="mt-0"
                         />
                         <ButtonToolbar className="ml-auto">
                             <ButtonGroup className="align-self-start mr-2">
                                 <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
-                                        <i className="fa fa-globe mr-2"></i>
-                                        www.webkom.co
+                                    <DropdownToggle color="link" className="text-left pl-0 text-decoration-none mb-2">
+                                        <i className="fa fa-globe text-body mr-2"></i>
+                                        www.webkom.co<i className="fa fa-angle-down text-body ml-2" />
                                     </DropdownToggle>
                                     <div className="small">
                                         Last 30 Days vs Previous Period
@@ -147,9 +118,9 @@ class Analytics extends React.Component {
                             </ButtonGroup>
                             <ButtonGroup className="align-self-start mr-2">
                                 <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
-                                        <i className="fa fa-calendar-o mr-2"></i>
-                                        Last Month
+                                    <DropdownToggle color="link" className="text-left pl-0 text-decoration-none mb-2">
+                                        <i className="fa fa-calendar-o text-body mr-2"></i>
+                                        Last Month<i className="fa fa-angle-down text-body ml-2" />
                                     </DropdownToggle>
                                     <div className="small">
                                         Jan 01, 2017 to Jan 31, 2017
@@ -179,9 +150,9 @@ class Analytics extends React.Component {
                             </ButtonGroup>
                             <ButtonGroup className="align-self-start mr-2">
                                 <UncontrolledButtonDropdown className="ml-auto flex-column">
-                                    <DropdownToggle color="secondary" outline caret className="mb-2">
-                                        <i className="fa fa-calendar-o mr-2"></i>
-                                        Previous Period
+                                    <DropdownToggle color="link" className="text-left pl-0 text-decoration-none mb-2">
+                                        <i className="fa fa-calendar-o text-body mr-2"></i>
+                                        Previous Period<i className="fa fa-angle-down text-body ml-2" />
                                     </DropdownToggle>
                                     <div className="small">
                                         Jan 01, 2017 to Jan 31, 2017
@@ -210,26 +181,24 @@ class Analytics extends React.Component {
                                 </UncontrolledButtonDropdown>
                             </ButtonGroup>
                             <ButtonGroup className="align-self-start">
-                                <Button color="primary" className="mb-2 mr-2">
-                                    <i className="fa fa-check mr-2"></i>
+                                <Button color="primary" className="mb-2 mr-2 px-3">
                                     Apply
                                 </Button>
                             </ButtonGroup>
                             <ButtonGroup>
                                 <Button
-                                    color="secondary"
-                                    outline
-                                    className="mb-2 align-self-start"
+                                    color="link"
+                                    className="mb-2 text-decoration-none align-self-start"
                                     onClick={this._resetLayout}
                                 >
-                                    <i className="fa fa-times"></i>
+                                    Reset
                                 </Button>
                             </ButtonGroup>
                         </ButtonToolbar>
                     </div>
                 </Container>
 
-                <Grid className="dashboard-analytics" active={ this.state.largeScreen }>
+                <Grid>
                     <Grid.Row
                         onLayoutChange={ layouts => this.setState({ layouts }) }
                         columnSizes={ this.state.layouts }
@@ -238,138 +207,190 @@ class Analytics extends React.Component {
                         <Grid.Col { ...(applyColumn('metric-v-target-users', layouts)) }>
                             <Card>
                                 <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
+                                    <i className="fa fa-ellipsis-v text-body mr-2"></i> Users
                                 </CardHeader>
                                 <CardBody className="pt-2">
-                                    <div className="text-right mb-3">
-                                        <MetricVsTarget 
-                                            title="Users"
-                                            value="168,793"
-                                            progressbarColor="danger"
-                                            targetValue="169,001"
-                                        />
-                                    </div>
-                                    <div className="small">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users (visitors) 
+                                    <MetricVsTarget 
+                                        title="Users"
+                                        value="168,793"
+                                        progressbarColor="danger"
+                                        targetValue="169,001"
+                                    />
+                                    <Media className="small mt-4">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                       How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('metric-v-target-sessions', layouts)) }>
                             <Card>
                                 <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
+                                    <i className="fa fa-ellipsis-v text-body mr-2"></i> Sessions
                                 </CardHeader>
                                 <CardBody className="pt-2">
-                                    <div className="text-right mb-3">
-                                        <MetricVsTarget 
-                                            title="Sessions"
-                                            value="529,747"
-                                            progressbarValue="67"
-                                            progressbarColor="success"
-                                            targetValue="782,957"
-                                        />
-                                    </div>
-                                    <div className="small">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users sessions (visits) 
+                                    <MetricVsTarget 
+                                        title="Sessions"
+                                        value="529,747"
+                                        progressbarValue="67"
+                                        progressbarColor="success"
+                                        targetValue="782,957"
+                                    />
+                                    <Media className="small mt-4">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                       How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('metric-v-target-pageviews', layouts)) }>
                             <Card>
                                 <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Metric vs Target
+                                    <i className="fa fa-ellipsis-v text-body mr-2"></i> Pageviews
                                 </CardHeader>
                                 <CardBody className="pt-2">
-                                    <div className="text-right mb-3">
-                                        <MetricVsTarget 
-                                            title="Pageviews"
-                                            value="1,763,981"
-                                            progressbarValue="34"
-                                            progressbarColor="success"
-                                            targetValue="1,567,334"
-                                        />
-                                    </div>
-                                    <div className="small">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your pageviews 
+                                    <MetricVsTarget 
+                                        title="Pageviews"
+                                        value="1,763,981"
+                                        progressbarValue="34"
+                                        progressbarColor="success"
+                                        targetValue="1,567,334"
+                                    />
+                                    <Media className="small mt-4">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                       How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('analytics-audience-metrics', layouts)) }>
                             <Card>
                                 <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Analytics Audience Metrics
+                                    <i className="fa fa-ellipsis-v mr-2 text-body"></i> Analytics Audience Metrics
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
-                                    <AudienceMetricsChart
-                                        height="100%"
-                                        className="flex-fill"
-                                        isLarge={ this.state.largeScreen }
-                                    />
-                                    <CardFooterInfo />
+                                    <Grid.Ready>
+                                        <AudienceMetricsChart height="100%" className="flex-fill" />
+                                    </Grid.Ready>
+                                    <Media className="small">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                       How do your users (visitors), sessions (visits) and pageviews 
+                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('traffic-channels', layouts)) }>
                             <Card className="d-flex flex-column">
                                 <CardHeader className="bb-0 pt-3 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Traffic Channels
+                                    <i className="fa fa-ellipsis-v text-body mr-2"></i> Traffic Channels
                                 </CardHeader>
                                 <Table responsive className="table mb-0">
                                     <thead>
                                         <tr>
-                                            <th scope="col" className="bt-0 text-nowrap">Channel</th>
-                                            <th scope="col" className="bt-0 text-nowrap">Sessions</th>
-                                            <th scope="col" className="bt-0 text-nowrap">Prev Period</th>
-                                            <th scope="col" className="text-right bt-0 text-nowrap">Change</th>
-                                            <th scope="col" className="bt-0 text-right text-nowrap">Trend</th>
+                                            <th scope="col" className="bt-0">Channel</th>
+                                            <th scope="col" className="bt-0">Sessions</th>
+                                            <th scope="col" className="bt-0">Prev Period</th>
+                                            <th scope="col" className="text-right bt-0">Change</th>
+                                            <th scope="col" className="bt-0 text-right">Trend</th>
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <tr>
-                                            <td className="align-middle text-nowrap">
+                                            <td className="align-middle text-inverse">
                                                 Organic Search
                                             </td>
-                                            <td className="text-inverse align-middle">
+                                            <td className="align-middle">
                                                 { faker.finance.amount() }
                                             </td>
                                             <td className="align-middle">
                                                 <span data-faker="[[finance.amount]]">949.00</span>
                                             </td>
-                                            <td className="align-middle text-right text-nowrap">
+                                            <td className="align-middle text-right">
                                                 -75,0% 
                                                 <i className="fa fa-caret-down text-danger ml-1"></i>
                                             </td>
-                                            <td className="text-right align-middle" style={{ minWidth: '200px' }}>
+                                            <td className="text-right align-middle">
+                                                <TinyAreaChart />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="align-middle text-inverse">
+                                                Direct
+                                            </td>
+                                            <td className="align-middle">
+                                                { faker.finance.amount() }
+                                            </td>
+                                            <td className="align-middle">
+                                                <span data-faker="[[finance.amount]]">157.11</span>
+                                            </td>
+                                            <td className="align-middle text-right">
+                                                82,1% 
+                                                <i className="fa fa-caret-up text-success ml-1"></i>
+                                            </td>
+                                            <td className="text-right align-middle">
+                                                <TinyAreaChart />
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td className="align-middle text-inverse">
+                                                Social Media
+                                            </td>
+                                            <td className="align-middle">
+                                                { faker.finance.amount() }
+                                            </td>
+                                            <td className="align-middle">
+                                                <span data-faker="[[finance.amount]]">949.00</span>
+                                            </td>
+                                            <td className="align-middle text-right">
+                                                -75,0% 
+                                                <i className="fa fa-caret-down text-danger ml-1"></i>
+                                            </td>
+                                            <td className="text-right align-middle">
                                                 <TinyAreaChart />
                                             </td>
                                         </tr>
                                     </tbody>
                                 </Table>
                                 <CardBody className="mt-auto flex-grow-0">                
-                                    <div className="small">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users (visitors), sessions (visits) and pageviews 
-                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                    <Media className="small">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                            How do your users (visitors), sessions (visits) and pageviews 
+                                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('sessions', layouts)) }>
                             <Card>
                                 <CardHeader className="bb-0 pt-3 pb-0 bg-none" tag="h6">
-                                    <i className="fa fa-ellipsis-v mr-2"></i> Sessions by Device Type
+                                    <i className="fa fa-ellipsis-v text-body mr-2"></i> Sessions by Device Type
                                 </CardHeader>
                                 <CardBody className="d-flex flex-column">
-                                    <div className='sessions'>
+                                    <div className={classes['sessions']}>
                                         <SessionByDevice 
                                             title="Desktop"
                                             color="primary"
@@ -389,46 +410,61 @@ class Analytics extends React.Component {
                                             value="81,525"
                                         />
                                     </div>
-                                    <Progress multi className='sessions-progress'>
-                                        <Progress bar value="25" />
-                                        <Progress bar color="info" value="30" />
-                                        <Progress bar color="secondary" value="45" />
+                                    <Progress multi className={ classes['sessions-progress'] } style={{height: "5px"}}>
+                                        <Progress bar value="25" style={{height: "5px"}} />
+                                        <Progress bar color="info" value="30" style={{height: "5px"}} />
+                                        <Progress bar color="secondary" value="45" style={{height: "5px"}} />
                                     </Progress>
-                                    <div className='sessions-info small mt-auto'>
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users (visitors), sessions (visits) and pageviews 
-                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                    <div className={`${classes['sessions-info']} mt-auto`}>
+                                        <Media className="small">
+                                            <Media left>
+                                                <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                            </Media>
+                                            <Media body>
+                                           How do your users (visitors), sessions (visits) and pageviews 
+                                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                            </Media>
+                                        </Media>
                                     </div>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
                         <Grid.Col { ...(applyColumn('spend', layouts)) }>
                             <Card>
-                                <CardHeader className="d-flex bb-0 pt-3 bg-none" tag="h6">
-                                    <span>
-                                        <i className="fa fa-ellipsis-v mr-2"></i> Spend
+                                <CardHeader className="d-flex bb-0 pt-3 bg-none">
+                                    <span className="h6">
+                                        <i className="fa fa-ellipsis-v text-body mr-2"></i> Spend
                                     </span>
-                                    <span className="ml-auto text-right text-muted">
+                                    <span className="ml-auto text-right">
                                         Dec 22, 2016 to<br />
-                                        Dec 31, 2016 (prev.)
+                                        Dec 31, 2016 <i>(prev.)</i>
                                     </span>
                                 </CardHeader>
                                 <CardBody>
                                     <div className="text-center mb-4">
                                         <h2>
-                                        $2,890.12
+                                            $2,890.12
                                         </h2>
                                         <div className="mb-1 text-success">
                                             <i className="fa mr-1 fa-caret-up"></i>
                                             23.34%
                                         </div>
-                                        <div className="text-muted">
+                                        <div>
                                             vs { faker.finance .amount() } (prev.)
                                         </div>
                                     </div>
                                 </CardBody>
                                 <CardBody className="p-0">
-                                    <TinyAreaChart />
+                                    <TinyAreaChart height={ 70 } />
+                                    <Media className="small p-3">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                            How do your users (visitors), sessions (visits) and pageviews 
+                                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
@@ -438,7 +474,7 @@ class Analytics extends React.Component {
                                     <i className="fa fa-ellipsis-v mr-2"></i> Website Performance
                                 </CardHeader>
                                 <ListGroup flush>
-                                    <ListGroupItem>
+                                    <ListGroupItem className="bt-0">
                                         <WebsitePerformance 
                                             title="Bounce Rate (Avg)"
                                             value="46,893"
@@ -447,7 +483,7 @@ class Analytics extends React.Component {
                                             valuePercent="23,91"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem>
+                                    <ListGroupItem className="bt-0">
                                         <WebsitePerformance 
                                             title="Pageviews (Avg)"
                                             value="2.15"
@@ -455,7 +491,7 @@ class Analytics extends React.Component {
                                             valuePercent="42,82"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem>
+                                    <ListGroupItem className="bt-0">
                                         <WebsitePerformance 
                                             title="New Sessions"
                                             value="76,40"
@@ -464,7 +500,7 @@ class Analytics extends React.Component {
                                             valuePercent="23,91"
                                         />
                                     </ListGroupItem>
-                                    <ListGroupItem>
+                                    <ListGroupItem className="bt-0 bb-0">
                                         <WebsitePerformance 
                                             title="Time on Site (Avg)"
                                             value="2m:16s"
@@ -474,11 +510,15 @@ class Analytics extends React.Component {
                                     </ListGroupItem>
                                 </ListGroup>
                                 <CardBody className="flex-grow-0 mt-auto">                
-                                    <div className="small">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
-                                        How do your users (visitors), sessions (visits) and pageviews 
-                                        metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                    <Media className="small">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
+                                            How do your users (visitors), sessions (visits) and pageviews 
+                                            metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>
@@ -494,8 +534,8 @@ class Analytics extends React.Component {
                                                 How did my organic traffic perform?
                                             </span>
                                             <br />
-                                            <span className="text-muted">
-                                                Dec 22, 2016 to Dec 31, 2016 (prev.)
+                                            <span>
+                                                Dec 22, 2016 to Dec 31, 2016 <i>(prev.)</i>
                                             </span>
                                         </Media>
                                     </Media>
@@ -508,16 +548,22 @@ class Analytics extends React.Component {
                                         </h2>
                                         <div className="mb-1 text-success">
                                             <i className="fa mr-1 fa-caret-up"></i>
-                                            23.34% <span className="text-muted"> vs { faker.finance .amount() } (prev.)
+                                            23.34% <span> vs { faker.finance .amount() } <i>(prev.)</i>
                                             </span>
                                         </div>
                                     </div>
-                                    <SimpleLineChart height="100%" className="flex-fill"/>
-                                    <div className="small pt-3">
-                                        <i className="fa fa-fw fa-info-circle text-muted mr-2"></i>
+                                    <Grid.Ready>
+                                        <SimpleLineChart height="100%" className="flex-fill"/>
+                                    </Grid.Ready>
+                                    <Media className="small pt-1">
+                                        <Media left>
+                                            <i className="fa fa-fw fa-info-circle mr-2"></i>
+                                        </Media>
+                                        <Media body>
                                         How do your users (visitors), sessions (visits) and pageviews 
                                         metrics for <abbr title="attribute">www.webkom.com</abbr> compare to your targets over the last 30 days?
-                                    </div>
+                                        </Media>
+                                    </Media>
                                 </CardBody>
                             </Card>
                         </Grid.Col>

@@ -38,10 +38,10 @@ const TrTableBordered = () => (
                     </td>
                     <td className="align-middle text-right">
                         <ButtonGroup>
-                            <Button color="secondary" outline>
+                            <Button color="link" className="text-decoration-none">
                                 <i className="fa fa-clone"></i>
                             </Button>
-                            <Button color="secondary" outline>
+                            <Button color="link" className="text-decoration-none">
                                 <i className="fa fa-close"></i>
                             </Button>
                         </ButtonGroup>
