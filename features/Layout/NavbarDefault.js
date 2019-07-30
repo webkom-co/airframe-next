@@ -9,6 +9,7 @@ import {
 } from './../../components';
 
 import { NavbarUser } from './parts/NavbarUser';
+import { LogoThemed } from './../LogoThemed/LogoThemed';
 
 export const NavbarDefault = () => (
     <Navbar light color="none" expand="xs" fluid>
@@ -18,7 +19,7 @@ export const NavbarDefault = () => (
             </NavItem>
             <NavItem className="navbar-brand h5 mb-0 d-lg-none">
                 <Link to="/">
-                    react.bs4
+                    <LogoThemed />
                 </Link>
             </NavItem>
             <NavItem className="d-none d-md-block">

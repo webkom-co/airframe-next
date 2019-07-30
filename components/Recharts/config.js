@@ -18,7 +18,7 @@ export default {
         },
         tick: {
             // Axis Labels color:
-            fill: colors['900']
+            fill: colors['600']
         }
     },
     polarRadiusAxis: {

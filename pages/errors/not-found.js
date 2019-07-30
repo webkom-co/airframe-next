@@ -9,26 +9,20 @@ import {
     Button,
     Label,
     EmptyLayout,
-    Link
+    Link,
+    ThemeConsumer
 } from './../../components';
 
-const ErrorNotFound = () => (
+import { HeaderAuth } from "../../features/HeaderAuth";
+import { FooterAuth } from "../../features/FooterAuth";
+
+const Error404 = () => (
     <EmptyLayout>
         <EmptyLayout.Section center>
             { /* START Header */}
-            <div className="mb-4">
-                <div className="mb-4 text-center">
-                    <Link to="/">
-                        <i className="fa fa-send fa-3x text-primary"></i>
-                    </Link>
-                </div>
-                <h5 className="text-center mb-4">
-                    Error 404
-                </h5>
-                <p className="text-center">
-                    The request page was not found within this App.
-                </p>
-            </div>
+            <HeaderAuth 
+                title="Error 404"
+            />
             { /* END Header */}
             { /* START Form */}
             <Form className="mb-3">
@@ -39,9 +33,15 @@ const ErrorNotFound = () => (
                     <InputGroup>
                         <Input type="text" name="text" id="search" placeholder="Enter search phrase here..." />
                         <InputGroupAddon addonType="append">
-                            <Button color="primary" tag={ Link } to="/">
-                                <i className="fa fa-search"></i>
-                            </Button>
+                            <ThemeConsumer>
+                            {
+                                ({ color }) => (
+                                    <Button color={ color } tag={ Link } to="/">
+                                        <i className="fa fa-search"></i>
+                                    </Button>
+                                )
+                            }
+                            </ThemeConsumer>
                         </InputGroupAddon>
                     </InputGroup>
                 </FormGroup>
@@ -49,7 +49,7 @@ const ErrorNotFound = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/">
+                <Link to="/pages/login">
                     Back to Home
                 </Link>
                 <Link to="/" className="ml-auto">
@@ -57,8 +57,11 @@ const ErrorNotFound = () => (
                 </Link>
             </div>
             { /* END Bottom Links */}
+            { /* START Footer */}
+            <FooterAuth />
+            { /* END Footer */}
         </EmptyLayout.Section>
     </EmptyLayout>
 );
 
-export default ErrorNotFound;
+export default Error404;

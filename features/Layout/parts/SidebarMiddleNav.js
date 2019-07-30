@@ -179,7 +179,19 @@ export const SidebarMiddleNav = () => (
         <SidebarMenu.Item
             icon={<i className="fa fa-fw fa-bookmark-o"></i>}
             title="Docs"
-            href='https://webkom.gitbook.io/spin/v/airframe/airframe-react/documentation-react'
+            to='https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/documentation-next.js'
         />
+        { /* -------- Versions ---------*/ }
+        <SidebarMenu.Item
+            icon={<i className="fa fa-fw fa-folder-open-o"></i>}
+            title="Versions"
+        >
+            <SidebarMenu.Item title="NextJS (React)" href='http://airframe.nextjs.webkom.co/' />
+            <SidebarMenu.Item title="React" href='http://dashboards.webkom.co/react/airframe' />
+            <SidebarMenu.Item title="jQuery" to="http://dashboards.webkom.co/jquery/airframe/" />
+            <SidebarMenu.Item title="Vue" to="http://dashboards.webkom.co/vue/airframe" />
+            <SidebarMenu.Item title="Angular" to="http://dashboards.webkom.co/angular/airframe" />
+            <SidebarMenu.Item title=".NET MVC" to="http://dashboards.webkom.co/net-mvc/airframe" />
+        </SidebarMenu.Item>
     </SidebarMenu >
 );
