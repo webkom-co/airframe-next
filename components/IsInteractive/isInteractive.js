@@ -20,3 +20,4 @@ export const isInteractive = (Component) =>
             );
         }
     }
+    

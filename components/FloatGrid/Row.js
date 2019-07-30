@@ -5,7 +5,7 @@ import {
     WidthProvider,
     Responsive
 } from 'react-grid-layout';
-import { Row as BSRow } from './..';
+import { Row as BSRow } from 'reactstrap';
 
 import { FloatGridContext } from './floatGridContext';
 
@@ -37,6 +37,7 @@ export class Row extends React.Component {
         trueColSizes: { },
         activeLayout: 'xl'
     }
+    initialDebounceTimeout = false;
 
     componentDidUpdate(nextProps) {
         if (!_.isEqual(nextProps.gridSize, this.props.gridSize)) {
@@ -69,6 +70,11 @@ export class Row extends React.Component {
                         onLayoutChange(this._transformForChangeHandler(allLayouts));
                         // Recalculate true sizes
                         this._updateTrueColSizes(currentLayout);
+
+                        clearTimeout(this.initialDebounceTimeout);
+                        this.initialDebounceTimeout = setTimeout(() => {
+                            this.context.setGridReady();
+                        }, 0);
                     }}
                     onBreakpointChange={(activeLayout) => {
                         this.setState({ activeLayout });

@@ -9,12 +9,14 @@ import { ValueLabel } from './Recharts/ValueLabel';
 import { DefAreaValueColor } from './Recharts/DefAreaValueColor';
 import { PieValueLabel } from './Recharts/PieValueLabel';
 import { Tooltip } from './Recharts/Tooltip';
+import { Legend } from './Recharts/Legend';
 
 export {
     CartesianGrid,
     PolarGrid,
     DefAreaValueColor,
     ValueLabel,
+    Legend,
     XAxis,
     YAxis,
     ZAxis,
@@ -38,7 +40,6 @@ export {
     ErrorBar,
     Label,
     LabelList,
-    Legend,
     Line,
     LineChart,
     Pie,

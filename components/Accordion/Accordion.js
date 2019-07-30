@@ -1,6 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Card } from './..';
+
+import Card from './../Card';
 
 import { Provider } from './context';
 

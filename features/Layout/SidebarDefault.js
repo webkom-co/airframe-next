@@ -7,6 +7,7 @@ import {
 } from './../../components';
 
 import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
+import { SidebarTop } from './parts/SidebarTop'
 import { SidebarBottom } from './parts/SidebarBottom'
 
 export const SidebarDefault = () => (
@@ -29,6 +30,8 @@ export const SidebarDefault = () => (
 
         { /* scrollable on mobile */ }
         <Sidebar.MobileFluid>
+            <SidebarTop />
+            
             <Sidebar.Section fluid cover>
                 <SidebarMiddleNav />
             </Sidebar.Section>

@@ -5,7 +5,7 @@ import {
     Card as BsCard
 } from 'reactstrap';
 
-import './../../styles/elements/card.scss';
+import './Card.scss';
 
 const Card = (props) => {
     const { children, type, color, className, ...otherProps } = props;

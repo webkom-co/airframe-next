@@ -1,6 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { withRouter } from 'next/router'
+import { withRouter } from 'next/router';
 import _ from 'lodash';
 import classNames from 'classnames';
 
@@ -69,11 +69,16 @@ class SidebarMenu extends React.Component {
             return previous;
         }
         
-        const activeChild = _.find(this.state.entries, (entry) =>
-                entry.exact ?
-                    entry.url === this.props.router.pathname :
-                    _.includes(this.props.router.pathname, entry.url)
-            );
+        const activeChild = _.find(this.state.entries, (entry) => {
+            const { pathname } = this.props.router;
+
+            const noTailSlashLocation = pathname[pathname.length - 1] === '/' && pathname.length > 1 ?
+                pathname.replace(/\/$/, '') : pathname;
+
+            return entry.exact ?
+                entry.url === noTailSlashLocation :
+                _.includes(noTailSlashLocation, entry.url)
+        });
 
         if (activeChild) {
             const activeEntries = [...activeId(activeChild, this.entries), activeChild.id];

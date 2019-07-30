@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import { Collapse, CardBody } from './..'
+import { Collapse, CardBody } from 'reactstrap';
 
 import { Consumer } from './context';
 

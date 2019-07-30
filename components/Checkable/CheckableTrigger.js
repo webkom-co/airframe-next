@@ -1,22 +1,21 @@
 import React from 'react';
+import classNames from 'classnames';
 import PropTypes from 'prop-types';
 
 import { Consumer } from './context';
 
+import './CheckableTrigger.scss';
+
 const CheckableTrigger = (props) => {
     const { children, tag, className, ...otherProps } = props;
     const Tag = tag;
+    const tagClass = classNames('checkable__trigger', className);
 
     return (
         <Consumer>
         {
             (value) => (
-                <Tag 
-                    { ...otherProps }
-                    className={ className }
-                    style={{ cursor: 'pointer' }}
-                    onClick={ () => { value.toggle() } }
-                >
+                <Tag { ...otherProps } className={ tagClass } onClick={ () => { value.toggle() } }>
                     { children }
                 </Tag>
             )

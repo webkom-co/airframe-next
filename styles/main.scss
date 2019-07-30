@@ -1,10 +1,1 @@
 @import '~@owczar/dashboard-style--main/scss/style';
-@import './variables.scss';
-
-.sidebar-menu--disabled {
-    .sidebar-menu__entry__link {
-        pointer-events: none;
-        color: $gray-500 !important;
-        background: none !important;
-    }
-}
