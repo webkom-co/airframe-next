@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import _ from 'lodash';
-
-import { Modal } from './..';
+import { Modal } from 'reactstrap';
 
 import { Provider } from './context';
 

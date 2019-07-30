@@ -5,7 +5,7 @@ import {
     WidthProvider,
     Responsive
 } from 'react-grid-layout';
-import { Row as BSRow } from './..';
+import { Row as BSRow } from 'reactstrap';
 
 import { FloatGridContext } from './floatGridContext';
 

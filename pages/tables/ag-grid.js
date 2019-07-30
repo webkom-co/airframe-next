@@ -2,7 +2,7 @@ import React from 'react';
 import { chain, reduce } from 'lodash';
 import fetch from 'node-fetch';
 
-import { 
+import {
     Container,
     Card,
     CardFooter,
@@ -10,13 +10,11 @@ import {
     Input,
     InputGroup,
 } from './../../components';
-import { 
+import {
     AgGridReact,
     AgGridColumn,
 } from './../../components/agGrid';
-import colors from './../../core/colors'
-
-import { HeaderMain } from "../../features/HeaderMain";
+import colors from './../../core/colors';
 
 /*
     CONSTS
@@ -323,10 +321,12 @@ export default class AgGridExample extends React.Component {
 
         return (
             <Container>
-                <HeaderMain 
-                    title="AgGrid"
-                    className="mb-5 mt-4"
-                />
+                <div class=" d-flex mb-5 mt-4">
+                    <h1 class="display-4 mr-3 mb-0 align-self-start">
+                        AgGrid
+                    </h1>
+                </div>
+                
                 <p className="pb-3">
                     <strong>Over 2,500 Companies use ag-Grid.</strong> The &quot;ag&quot; part of ag-Grid stands for &quot;agnostic&quot;. The internal ag-Grid engine is implemented in TypeScript with zero dependencies. ag-Grid supports Angular through a wrapper component. 
                     The wrapper lets you use ag-Grid in your application like any other Angular component – you pass configuration through property bindings and handle events through event bindings. 

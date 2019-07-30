@@ -66,7 +66,7 @@ const NavbarOnly = () => (
                     <a href="http://dashboards.webkom.co/angular/airframe" className="text-primary">Angular</a> - based on the newest <i>ng-bootstrap</i>
                 </li>
                 <li>
-                    <a href="http://dashboards.webkom.co/net-mvc/airframe"> className="text-primary".NET MVC</a> - based on the newest <i>Bootstrap 4.x</i>
+                    <a href="http://dashboards.webkom.co/net-mvc/airframe" className="text-primary">.NET MVC</a> - based on the newest <i>Bootstrap 4.x</i>
                 </li>
                 <li>
                     <a href="http://dashboards.webkom.co/vue/airframe" className="text-primary">Vue.js</a> - based on the newest <i>BootstrapVue</i>

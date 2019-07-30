@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import Head from 'next/head';
+import { Helmet } from 'react-helmet';
 import { withRouter } from 'next/router';
 import _ from 'lodash';
 
@@ -10,7 +10,8 @@ import { LayoutContent } from './LayoutContent';
 import { LayoutNavbar } from './LayoutNavbar';
 import { LayoutSidebar } from './LayoutSidebar';
 import { PageConfigContext } from './PageConfigContext';
-import { ThemeClass } from './../Theme/ThemeClass';
+import { ThemeClass } from './../Theme';
+
 import config from './../../config';
 
 const findChildByType = (children, targetType) => {
@@ -41,9 +42,8 @@ class Layout extends React.Component {
     static propTypes = {
         children: PropTypes.node,
         sidebarSlim: PropTypes.bool,
-        router: PropTypes.object,
-        favIcons: PropTypes.array,
-        isMobile: PropTypes.bool
+        location: PropTypes.object,
+        favIcons: PropTypes.array
     }
 
     constructor(props) {
@@ -53,7 +53,7 @@ class Layout extends React.Component {
             sidebarHidden: false,
             navbarHidden: false,
             footerHidden: false,
-            sidebarCollapsed: !!props.isMobile,
+            sidebarCollapsed: false,
             screenSize: '',
             animationsDisabled: true,
 
@@ -62,45 +62,42 @@ class Layout extends React.Component {
             pageKeywords: config.siteKeywords
         };
 
-        this.lastLgSidebarCollapsed = this.state.sidebarCollapsed;
+        this.lastLgSidebarCollapsed = false;
         this.containerRef = React.createRef();
-        this.layoutAdjuster
     }
 
-    // Determine the current window size
-    // and set it up in the context state
-    layoutAdjuster = () => {
-        const { screenSize } = this.state;
-        let currentScreenSize;
-
-        _.forOwn(responsiveBreakpoints, (value, key) => {
-            const queryParts = [
-                `${ _.isUndefined(value.min) ? '' : `(min-width: ${value.min}px)` }`,
-                `${ _.isUndefined(value.max) ? '' : `(max-width: ${value.max}px)`}`
-            ];
-            const query = _.compact(queryParts).join(' and ');
-
-            if (window.matchMedia(query).matches) {
-                currentScreenSize = key;
-            }
-        });
-
-        if (screenSize !== currentScreenSize) {
-            this.setState({ screenSize: currentScreenSize });
-            this.updateLayoutOnScreenSize(currentScreenSize);
-        }
-    };
-
-    resize = () => {
-        setTimeout(this.layoutAdjuster, 0);
-    };
-
     componentDidMount() {
+        // Determine the current window size
+        // and set it up in the context state
+        const layoutAdjuster = () => {
+            const { screenSize } = this.state;
+            let currentScreenSize;
+
+            _.forOwn(responsiveBreakpoints, (value, key) => {
+                const queryParts = [
+                    `${ _.isUndefined(value.min) ? '' : `(min-width: ${value.min}px)` }`,
+                    `${ _.isUndefined(value.max) ? '' : `(max-width: ${value.max}px)`}`
+                ];
+                const query = _.compact(queryParts).join(' and ');
+
+                if (window.matchMedia(query).matches) {
+                    currentScreenSize = key;
+                }
+            });
+
+            if (screenSize !== currentScreenSize) {
+                this.setState({ screenSize: currentScreenSize });
+                this.updateLayoutOnScreenSize(currentScreenSize);
+            }
+        };
+
         // Add window initialization
         if (typeof window !== 'undefined') {
-            window.addEventListener('resize', this.resize);
+            window.addEventListener('resize', () => {
+                setTimeout(layoutAdjuster.bind(this), 0);
+            });
             
-            this.layoutAdjuster();
+            layoutAdjuster();
 
             window.requestAnimationFrame(() => {
                 this.setState({ animationsDisabled: false });
@@ -125,10 +122,10 @@ class Layout extends React.Component {
             if (prevState.sidebarCollapsed !== this.state.sidebarCollapsed) {
                 // Most of the devices
                 const styleUpdate = this.state.sidebarCollapsed ? {
-                        //overflowY: 'auto',
+                        overflowY: 'auto',
                         touchAction: 'auto'
                     }: {
-                        //overflowY: 'hidden',
+                        overflowY: 'hidden',
                         touchAction: 'none'
                     }
                 Object.assign(this.bodyElement.style, styleUpdate);
@@ -160,10 +157,6 @@ class Layout extends React.Component {
 
         // Update positions of STICKY navbars
         this.updateNavbarsPositions();
-    }
-
-    componentWillUnmount() {
-        window.removeEventListener('resize', this.resize);
     }
 
     updateLayoutOnScreenSize(screenSize) {
@@ -221,7 +214,7 @@ class Layout extends React.Component {
             'type'
         );
         const layoutClass = classNames('layout', 'layout--animations-enabled', {
-            'layout--only-navbar': this.state.sidebarHidden && !this.state.navbarHidden
+            //'layout--only-navbar': this.state.sidebarHidden && !this.state.navbarHidden
         });
 
         return (
@@ -238,9 +231,8 @@ class Layout extends React.Component {
                     changeMeta: (metaData) => { this.setState(metaData) }
                 }}
             >
-                <Head>
+                <Helmet>
                     <meta charSet="utf-8" />
-                    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0, minimal-ui"/>
                     <title>{ config.siteTitle + (this.state.pageTitle ? ` - ${this.state.pageTitle}` : '') }</title>
                     <link rel="canonical" href={ config.siteCannonicalUrl } />
                     <meta name="description" content={ this.state.pageDescription } />
@@ -249,7 +241,8 @@ class Layout extends React.Component {
                             <link { ...favIcon } key={ index } />
                         ))
                     }
-                </Head>
+
+                </Helmet>
                 <ThemeClass>
                     {(themeClass) => (
                         <div className={ classNames(layoutClass, themeClass) } ref={ this.containerRef }>

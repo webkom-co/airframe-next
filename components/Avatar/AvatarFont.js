@@ -55,7 +55,7 @@ AvatarFont.propTypes = {
     ...Avatar.propTypes
 };
 AvatarFont.defaultProps = {
-    bgColor: 'gray-400',
+    bgColor: '400',
     fgColor: 'white',
     size: 'md'
 };

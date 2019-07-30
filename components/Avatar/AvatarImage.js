@@ -7,6 +7,8 @@ import { Avatar } from './Avatar';
 import { AvatarFont } from './AvatarFont';
 
 class AvatarImage extends React.PureComponent {
+    imgRef = React.createRef();
+
     static propTypes = {
         src: PropTypes.string.isRequired,
         placeholder: PropTypes.node,
@@ -19,8 +21,6 @@ class AvatarImage extends React.PureComponent {
         placeholder: <i className="fa fa-user fa-fw"></i>
     }
 
-    imgRef = React.createRef();
-
     constructor(props) {
         super(props);
         
@@ -30,9 +30,7 @@ class AvatarImage extends React.PureComponent {
     }
 
     componentDidMount() {
-        const img = this.imgRef.current;
-
-        if (img.complete && img.naturalWidth > 0) {
+        if (this.imgRef && this.imgRef.current && this.imgRef.current.naturalWidth !== 0) {
             this.setState({ imgLoaded: true });
         }
     }
@@ -47,9 +45,9 @@ class AvatarImage extends React.PureComponent {
             <div className={ parentClass }>
                 <Avatar className="avatar-image__image" {...avatarProps}>
                     <img
-                        ref={ this.imgRef }
                         src={ src }
                         alt={ alt }
+                        ref={ this.imgRef }
                         onLoad={ () => { this.setState({ imgLoaded: true }) } }
                     />
                 </Avatar>

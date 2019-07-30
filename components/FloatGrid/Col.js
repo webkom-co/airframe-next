@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import _ from 'lodash';
 import classNames from 'classnames';
 
-import { Col as BootstrapCol } from './../';
+import { Col as BootstrapCol } from 'reactstrap';
 
 // Twice Smaller than Bootstrap breakpoints
 const breakPoints = [
@@ -56,7 +56,8 @@ export class Col extends React.Component {
         xsY: PropTypes.number, 
 
         trueSize: PropTypes.object,
-        children: PropTypes.node
+        children: PropTypes.node,
+        className: PropTypes.string
     }
 
     static defaultProps = {

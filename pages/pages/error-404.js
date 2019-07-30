@@ -13,8 +13,8 @@ import {
     ThemeConsumer
 } from './../../components';
 
-import { HeaderAuth } from "../../features/Pages/HeaderAuth";
-import { FooterAuth } from "../../features/Pages/FooterAuth";
+import { HeaderAuth } from "../../features/HeaderAuth";
+import { FooterAuth } from "../../features/FooterAuth";
 
 const Error404 = () => (
     <EmptyLayout>

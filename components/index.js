@@ -8,7 +8,7 @@ import CustomInput from './CustomInput';
 import Divider from './Divider';
 import EmptyLayout from './EmptyLayout';
 import ExtendedDropdown from './ExtendedDropdown';
-import Grid from './FloatGrid';
+import FloatGrid from './FloatGrid';
 import HolderProvider from './HolderProvider';
 import IconWithBadge from './IconWithBadge';
 import InputGroupAddon from './InputGroupAddon';
@@ -16,11 +16,13 @@ import IsInteractive from './IsInteractive';
 import Layout, {
     withPageConfig,
     setupPage,
-    PageConfigConsumer,
-    PageConfigProvider
+    PageConfigProvider,
+    PageConfigConsumer
 } from './Layout';
 import Link from './Link';
+import Nav from './Nav';
 import Navbar from './Navbar';
+import NavbarThemeProvider from './NavbarThemeProvider';
 import NestedDropdown from './NestedDropdown';
 import OuterClick from './OuterClick';
 import Progress from './Progress';
@@ -38,9 +40,7 @@ import Tools from './Tools';
 import UncontrolledModal from './UncontrolledModal';
 import UncontrolledPopover from './UncontrolledPopover';
 import UncontrolledTabs from './UncontrolledTabs';
-import UniversalMatchMedia from './UniversalMatchMedia';
 import Wizard from './Wizard';
-
 // Export non overriden Reactstrap components
 export {
     Alert,
@@ -94,7 +94,6 @@ export {
     ModalBody,
     ModalFooter,
     ModalHeader,
-    Nav,
     NavbarBrand,
     NavbarToggler,
     NavItem,
@@ -128,20 +127,22 @@ export {
     Divider,
     EmptyLayout,
     ExtendedDropdown,
-    Grid,
+    FloatGrid,
     IconWithBadge,
     InputGroupAddon,
     IsInteractive,
     HolderProvider,
     Layout,
     Link,
+    Nav,
     Navbar,
+    NavbarThemeProvider,
     NestedDropdown,
     withPageConfig,
     setupPage,
+    OuterClick,
     PageConfigConsumer,
     PageConfigProvider,
-    OuterClick,
     Progress,
     Sidebar,
     SidebarMenu,
@@ -155,6 +156,5 @@ export {
     UncontrolledPopover,
     UncontrolledTabs,
     UncontrolledModal,
-    UniversalMatchMedia,
     Wizard
 };

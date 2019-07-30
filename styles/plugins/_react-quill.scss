@@ -1,13 +1,30 @@
 /* React Quill Overrides */
-@import "./../bootstrap.scss";
+@import "~bootstrap/scss/mixins/_border-radius.scss";
+@import "./../variables.scss";
 
 .card .quill {
     display: flex;
     flex-direction: column;
 
     .ql-toolbar {
-        @extend .card-header;
-    
+        // START Bootstrap Card Header
+        padding: $card-spacer-y $card-spacer-x;
+        margin-bottom: 0; // Removes the default margin-bottom of <hN>
+        color: $card-cap-color;
+        background-color: $card-cap-bg;
+        border-bottom: $card-border-width solid $card-border-color;
+
+        &:first-child {
+            @include border-radius($card-inner-border-radius $card-inner-border-radius 0 0);
+        }
+
+        + .list-group {
+            .list-group-item:first-child {
+                border-top: 0;
+            }
+        }
+        // END Bootstrap Card Header
+
         flex: 0 0 auto;
         border-width: 0 0 1px 0;
         background-color: $gray-100;

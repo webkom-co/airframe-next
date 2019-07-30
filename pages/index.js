@@ -4,15 +4,18 @@ import Router from 'next/router';
 class Index extends React.Component {
     static getInitialProps({ res }) {
         if (res) {
-            res.writeHead(301, {Location: `/dashboards/projects`});
+            res.writeHead(301, {Location: `/layouts/sidebar-and-navbar`});
             res.end();
         } else {
-            Router.push('/dashboards/projects');
+            Router.push('/layouts/sidebar-and-navbar');
         }
     }
 
     render() {
-        return <div></div>
+        return (
+            <div>
+            </div>
+        );
     }
 }
 

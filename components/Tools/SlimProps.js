@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import MatchMedia from 'react-responsive';
 
-import UniversalMatchMedia from './../UniversalMatchMedia';
-import { withPageConfig } from './../Layout/withPageConfig';
+import { withPageConfig } from './../../components/Layout/withPageConfig';
 
 const SlimProps = (props) => {
     const {
@@ -13,17 +13,17 @@ const SlimProps = (props) => {
 
     return (
         <React.Fragment>
-            <UniversalMatchMedia minWidth={ 992 }>
+            <MatchMedia minWidth={ 992 }>
                 {
                     /* If slim is enabled extend the children with slimProps */
                     pageConfig.sidebarSlim && pageConfig.sidebarCollapsed ?
                         React.Children.map(children, (child) => React.cloneElement(child, slimProps)) :
                         children
                 }
-            </UniversalMatchMedia>
-            <UniversalMatchMedia maxWidth={ 991.8 }>
+            </MatchMedia>
+            <MatchMedia maxWidth={ 991.8 }>
                 { children }
-            </UniversalMatchMedia>
+            </MatchMedia>
         </React.Fragment>
     );
 };

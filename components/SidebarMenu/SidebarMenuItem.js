@@ -12,11 +12,7 @@ import { MenuContext } from './MenuContext';
 const SidebarMenuItemLink = (props) => (
     (props.to || props.href) ? (
         props.to ? (
-            <Link
-                to={ props.to }
-                className={`${props.classBase}__entry__link`}
-                prefetch={ props.prefetch }
-            >
+            <Link to={ props.to } className={`${props.classBase}__entry__link`}>
                 { props.children }
             </Link>
         ) : (
@@ -46,11 +42,7 @@ SidebarMenuItemLink.propTypes = {
     active: PropTypes.bool,
     onToggle: PropTypes.func,
     children: PropTypes.node,
-    classBase: PropTypes.string,
-    prefetch: PropTypes.bool
-}
-SidebarMenuItemLink.defaultProps = {
-    prefetch: true
+    classBase: PropTypes.string
 }
 
 /**

@@ -5,7 +5,7 @@ import {
     CardHeader as BsCardHeader
 } from 'reactstrap';
 
-import './../../styles/elements/card-header.scss';
+import './CardHeader.scss';
 
 const CardHeader = (props) => {
     const { type, color, className, children, ...otherProps } = props;

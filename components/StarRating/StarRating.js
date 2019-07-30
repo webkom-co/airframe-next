@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import classes from './StarRating.scss';
+import './StarRating.scss';
 
 export const StarRating = (props) => {
     const {
@@ -13,7 +13,7 @@ export const StarRating = (props) => {
         ...otherProps
     } = props;
 
-    const starRatingClass = classNames(classes.starRating, className);
+    const starRatingClass = classNames('star-rating', className);
 
     const isInterctive = !!onSelect;
     const StartElement = isInterctive ? 'a' : 'i';
@@ -50,6 +50,7 @@ export const StarRating = (props) => {
 };
 
 StarRating.propTypes = {
+    className: PropTypes.string,
     max: PropTypes.number,
     at: PropTypes.number,
     starColor: PropTypes.string,

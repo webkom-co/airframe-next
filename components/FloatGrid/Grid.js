@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { Container } from './../';
+import { Container } from 'reactstrap';
 import { FloatGridContext } from './floatGridContext';
 import './../../styles/components/float-grid.scss';
 
