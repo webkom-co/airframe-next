@@ -5,7 +5,7 @@ import Router from 'next/router';
 import MobileDetect from 'mobile-detect';
 import NProgress from 'nprogress';
 
-import { LayoutDefault } from './../features/Layout/LayoutDefault';
+import { LayoutNavbarOnly } from './../features/Layout/LayoutNavbarOnly';
 
 import './../styles/bootstrap.scss';
 import './../styles/main.scss';
@@ -45,7 +45,7 @@ export default class DashboardApp extends App {
 
     render () {
         const { Component, pageProps, isMobile } = this.props;
-        const LayoutComponent = Component.layoutComponent || LayoutDefault;
+        const LayoutComponent = Component.layoutComponent || LayoutNavbarOnly;
 
         return (
             <Container>

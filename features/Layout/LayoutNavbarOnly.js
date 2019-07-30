@@ -3,7 +3,6 @@ import PropTypes from 'prop-types';
 import {
     Layout,
     ThemeProvider,
-    ThemeSelector
 } from './../../components';
 import { NavbarOnlyNavbar } from './NavbarOnlyNavbar';
 import { favIcons } from './favIcons';
@@ -20,9 +19,6 @@ export const LayoutNavbarOnly = ({ isMobile, children }) => (
             <Layout.Content>
                 { children }
             </Layout.Content>
-
-            { /* -- Theme Selector (DEMO) ----*/ }
-            <ThemeSelector />
         </Layout>
     </ThemeProvider>
 );
