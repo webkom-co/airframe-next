@@ -34,6 +34,10 @@ class ThemeSelector extends React.Component {
             { name: 'Info', value: 'info' },
             { name: 'Danger', value: 'danger' },
             { name: 'Warning', value: 'warning' },
+            { name: 'Indigo', value: 'indigo' },
+            { name: 'Purple', value: 'purple' },
+            { name: 'Pink', value: 'pink' },
+            { name: 'Yellow', value: 'yellow' }
         ]
     };
 
@@ -160,3 +164,4 @@ const ContextThemeSelector = (props) =>
     </Consumer>
 
 export { ContextThemeSelector as ThemeSelector };
+

@@ -22,6 +22,8 @@ import { NavbarMessages } from
     './parts/NavbarMessages';
 import { NavbarUser } from
     './parts/NavbarUser';
+import { LogoThemed } from
+    './../LogoThemed/LogoThemed';
 import { DropdownProfile } from
     './../Dropdowns/DropdownProfile';
 import { NavbarNavigation } from
@@ -31,8 +33,8 @@ export const NavbarOnlyNavbar = () => (
     <React.Fragment>
         <Navbar light expand="lg" themed>
             <Link to="/">
-                <NavbarBrand className="mb-0">
-                    react.bs4
+                <NavbarBrand>
+                    <LogoThemed checkBackground />
                 </NavbarBrand>
             </Link>
 

@@ -2,12 +2,19 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 import { Link } from './../components';
+import { LogoThemed } from './LogoThemed/LogoThemed';
 
 const HeaderAuth = (props) => (
     <div className="mb-4">
         <div className="mb-4 text-center">
-            <Link to="/">
-                <i className={ `fa fa-${ props.icon } fa-3x ${ props.iconClassName }` }></i>
+            <Link to="/" className="d-inline-block">
+                {
+                    props.icon ? (
+                        <i className={ `fa fa-${ props.icon } fa-3x ${ props.iconClassName }` }></i>
+                    ) : (
+                        <LogoThemed checkBackground height="30" />
+                    )
+                }
             </Link>
         </div>
         <h5 className="text-center mb-4">
@@ -25,10 +32,9 @@ HeaderAuth.propTypes = {
     text: PropTypes.node,
 };
 HeaderAuth.defaultProps = {
-    icon: "send",
     title: "Waiting for Data...",
     text: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Iure voluptas aperiam odit, reiciendis dicta nihil.",
-    iconClassName: "text-primary"
+    iconClassName: "text-theme"
 };
 
 export { HeaderAuth };

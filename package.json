@@ -1,5 +1,5 @@
 {
-  "name": "react-starter",
+  "name": "airframe-dashboard",
   "version": "0.1.0",
   "description": "Seed project for flexible light React/Bootstrap 4 dashboards.",
   "main": "index.js",
@@ -26,7 +26,7 @@
     "file-loader": "^4.1.0"
   },
   "dependencies": {
-    "@owczar/dashboard-style--main": "^0.2.31",
+    "@owczar/dashboard-style--airframe": "^0.1.13",
     "@zeit/next-css": "^1.0.1",
     "@zeit/next-sass": "^1.0.1",
     "ag-grid-community": "^21.1.0",

@@ -31,13 +31,13 @@ class Index extends React.Component {
                     </h6>
                     <ul className="pl-3">
                         <li>
-                            <a href="#" className="text-primary" target="_blank" rel="noopener noreferrer">Documentation</a> - which describes how to configure this version.
+                            <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/documentation-next.js" className="text-primary" target="_blank" rel="noopener noreferrer">Documentation</a> - which describes how to configure this version.
                         </li>
                         <li>
-                            <a href="#" className="text-primary" target="_blank" rel="noopener noreferrer">Credits</a> - technical details of which versions are used for this framework.
+                            <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/credits-next.js" className="text-primary" target="_blank" rel="noopener noreferrer">Credits</a> - technical details of which versions are used for this framework.
                         </li>
                         <li>
-                            <a href="#" className="text-primary" target="_blank" rel="noopener noreferrer">Roadmap</a> - update for this technology for the coming months.
+                            <a href="https://webkom.gitbook.io/spin/v/airframe/airframe-next.js/roadmap-react" className="text-primary" target="_blank" rel="noopener noreferrer">Roadmap</a> - update for this technology for the coming months.
                         </li>
                         <li>
                             <b>Bugs</b> - do you see errors in this version? Please report vie email: <i>info@webkom.co</i>
