@@ -5,7 +5,7 @@ import classNames from 'classnames';
 const SidebarSection = (props) => {
     const sectionClass = classNames("sidebar__section", {
         'sidebar__section--fluid': props.fluid,
-        'sidebar__section--cover': props.cover,
+        'sidebar__section--cover': props.cover
     }, props.className);
 
     return (
@@ -19,8 +19,6 @@ SidebarSection.propTypes = {
     children: PropTypes.node,
     fluid: PropTypes.bool,
     cover: PropTypes.bool,
-    slimOnly: PropTypes.bool,
-    defaultOnly: PropTypes.bool,
     className: PropTypes.string
 };
 

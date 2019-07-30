@@ -12,8 +12,8 @@ import {
     Link
 } from './../../components';
 
-import { HeaderAuth } from "../../features/Pages/HeaderAuth";
-import { FooterAuth } from "../../features/Pages/FooterAuth";
+import { HeaderAuth } from "../../features/HeaderAuth";
+import { FooterAuth } from "../../features/FooterAuth";
 
 const Error404 = () => (
     <EmptyLayout>
@@ -42,7 +42,7 @@ const Error404 = () => (
             { /* END Form */}
             { /* START Bottom Links */}
             <div className="d-flex mb-5">
-                <Link to="/pages/login">
+                <Link to="/login">
                     Back to Home
                 </Link>
                 <Link to="/" className="ml-auto">

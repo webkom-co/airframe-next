@@ -7,7 +7,7 @@ import {
     CardBody,
     Button,
     FormGroup,
-    CustomInput,
+    CustomInput
 } from 'reactstrap';
 
 import './../../styles/components/theme-selector.scss';
@@ -18,6 +18,7 @@ class ThemeSelector extends React.Component {
         style: PropTypes.string.isRequired,
         color: PropTypes.string.isRequired,
         styleOptions: PropTypes.array,
+        styleDisabled: PropTypes.bool,
         colorOptions: PropTypes.array,
         onChangeTheme: PropTypes.func,
     };
@@ -32,7 +33,7 @@ class ThemeSelector extends React.Component {
             { name: 'Success', value: 'success' },
             { name: 'Info', value: 'info' },
             { name: 'Danger', value: 'danger' },
-            { name: 'Warning', value: 'warning' }
+            { name: 'Warning', value: 'warning' },
         ]
     };
 
@@ -57,6 +58,7 @@ class ThemeSelector extends React.Component {
         const rootClass = classNames('theme-config', {
             'theme-config--active': this.state.isActive,
         });
+
         return (
             <div className={ rootClass }>
                 <Button
@@ -64,13 +66,47 @@ class ThemeSelector extends React.Component {
                     className="theme-config__trigger"
                     onClick={() => { this.setState({isActive: !this.state.isActive}) }}
                 >
-                    <i className="fa fa-gear fa-fw"></i>
+                    <i className="fa fa-paint-brush fa-fw"></i>
                 </Button>
                 <Card className="theme-config__body">
                     <CardBody>
+                        <h6 className="text-center mb-3">
+                            Configurator
+                        </h6>
+
                         <FormGroup>
-                            <span className="h6 text-uppercase">
-                                Sidebar Style
+                            <span className="h6 small mb-2 d-block">
+                                Nav Color
+                            </span>
+                            {
+                                _.map(this.props.colorOptions, (option, index) => (
+                                        <CustomInput
+                                            key={ index }
+                                            type="radio"
+                                            name="sidebarColor"
+                                            id={ `sidebarStyle--${option.value}` }
+                                            value={ option.value }
+                                            checked={ this.props.color === option.value }
+                                            onChange={(ev) => {
+                                                if (ev.target.checked) {
+                                                    this.props.onChangeTheme({
+                                                        color: option.value
+                                                    });
+                                                }
+                                            }}
+                                            label={(
+                                                <span className="d-flex align-items-center">
+                                                    { option.name }
+                                                    <i className={`fa fa-circle ml-auto text-${option.value}`} />
+                                                </span>
+                                            )}
+                                        />
+                                ))
+                            }
+                        </FormGroup>
+                        <FormGroup>
+                            <span className="h6 small mb-2 d-block">
+                                Nav Style
                             </span>
                             {
                                 _.map(this.props.styleOptions, (option, index) => (
@@ -78,8 +114,9 @@ class ThemeSelector extends React.Component {
                                         key={ index }
                                         type="radio"
                                         name="sidebarStyle"
-                                        id={`sidebarStyle--${option.value}`}
+                                        id={ `sidebarStyle--${option.value}` }
                                         value={ option.value }
+                                        disabled={ this.props.styleDisabled }
                                         checked={ this.props.style === option.value }
                                         onChange={(ev) => {
                                             if (ev.target.checked) {
@@ -89,37 +126,6 @@ class ThemeSelector extends React.Component {
                                             }
                                         }}
                                         label={ option.name }
-                                    />
-                                ))
-                            }
-                        </FormGroup>
-
-                        <FormGroup>
-                            <span className="h6 text-uppercase">
-                                Sidebar Color
-                            </span>
-                            {
-                                _.map(this.props.colorOptions, (option, index) => (
-                                    <CustomInput
-                                        key={ index }
-                                        type="radio"
-                                        name="sidebarColor"
-                                        id={`sidebarStyle--${option.value}`}
-                                        value={ option.value }
-                                        checked={ this.props.color === option.value }
-                                        onChange={(ev) => {
-                                            if (ev.target.checked) {
-                                                this.props.onChangeTheme({
-                                                    color: option.value
-                                                });
-                                            }
-                                        }}
-                                        label={(
-                                            <span className="d-flex align-items-center">
-                                                { option.name }
-                                                <i className={`fa fa-circle ml-auto text-${option.value}`} />
-                                            </span>
-                                        )}
                                     />
                                 ))
                             }
@@ -146,10 +152,10 @@ class ThemeSelector extends React.Component {
     }
 }
 
-const ContextThemeSelector = () =>
+const ContextThemeSelector = (props) =>
     <Consumer>
         {
-            (themeState) => <ThemeSelector { ...themeState } />
+            (themeState) => <ThemeSelector { ...themeState } { ...props } />
         }
     </Consumer>
 

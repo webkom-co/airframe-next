@@ -1,4 +1,5 @@
 import React from 'react';
+import _ from 'lodash';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import {
@@ -37,7 +38,7 @@ class EmptyLayout extends React.Component {
             </div>
         );
     }
-}
+};
 
 const PageConfigEmptyLayout = withPageConfig(EmptyLayout);
 

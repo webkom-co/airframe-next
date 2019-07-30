@@ -2,7 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 
-import { Container } from './../';
+import { Container } from 'reactstrap';
 import { FloatGridContext } from './floatGridContext';
 import './../../styles/components/float-grid.scss';
 
@@ -11,7 +11,8 @@ export class Grid extends React.Component {
         active: PropTypes.bool,
         children: PropTypes.node,
         fluid: PropTypes.bool,
-        rowHeight: PropTypes.number
+        rowHeight: PropTypes.number,
+        className: PropTypes.string
     }
 
     static defaultProps = {
@@ -21,7 +22,8 @@ export class Grid extends React.Component {
     }
 
     state = {
-        gridSize: { w: 0, h: 0 }
+        gridSize: { w: 0, h: 0 },
+        gridReady: false,
     }
     _gridRef = React.createRef();
     _resizeDebounceTimeout = 0;
@@ -79,7 +81,9 @@ export class Grid extends React.Component {
                             hPx: h * rowHeight
                         }
                     },
-                    active
+                    active,
+                    gridReady: this.state.gridReady,
+                    setGridReady: () => { this.setState({ gridReady: true }) }
                 }}
             >
                 {

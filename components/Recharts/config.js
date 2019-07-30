@@ -5,25 +5,26 @@ export default {
     grid: {
         stroke: colors['400'],
         strokeWidth: 1,
-        strokeDasharray: '3px'
+        strokeDasharray: '1px'
     },
     polarGrid: {
         stroke: colors['400'],
     },
     axis: {
-        stroke: colors['600'],
-        strokeWidth: 2,
+        stroke: colors['500'],
+        strokeWidth: 1,
         style: {
             fontSize: '12px'
         },
         tick: {
+            // Axis Labels color:
             fill: colors['900']
         }
     },
     polarRadiusAxis: {
         stroke: colors['400'],
         tick: {
-            fill: colors['danger']
+            fill: colors['900']
         }
     },
     polarAngleAxis: {
@@ -35,8 +36,13 @@ export default {
         }
     },
     label: {
-        fontSize: 10,
-        fill: colors['600']
+        fontSize: 11,
+        fill: colors['900']
+    },
+    legend: {
+        wrapperStyle: {
+            color: colors['900']
+        }
     },
     pieLabel: {
         fontSize: 12,
@@ -44,7 +50,12 @@ export default {
     },
     tooltip: {
         cursor: {
-            fill: colors['light-08']
+            fill: colors['primary-01']
+        },
+        contentStyle: {
+            background: colors['900'],
+            border: `1px solid ${colors['900']}`,
+            color: colors['white']
         }
     }
 };

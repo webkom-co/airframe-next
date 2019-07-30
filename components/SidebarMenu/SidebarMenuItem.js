@@ -12,11 +12,7 @@ import { MenuContext } from './MenuContext';
 const SidebarMenuItemLink = (props) => (
     (props.to || props.href) ? (
         props.to ? (
-            <Link
-                to={ props.to }
-                className={`${props.classBase}__entry__link`}
-                prefetch={ props.prefetch }
-            >
+            <Link to={ props.to } className={`${props.classBase}__entry__link`}>
                 { props.children }
             </Link>
         ) : (
@@ -46,11 +42,7 @@ SidebarMenuItemLink.propTypes = {
     active: PropTypes.bool,
     onToggle: PropTypes.func,
     children: PropTypes.node,
-    classBase: PropTypes.string,
-    prefetch: PropTypes.bool
-}
-SidebarMenuItemLink.defaultProps = {
-    prefetch: true
+    classBase: PropTypes.string
 }
 
 /**
@@ -71,10 +63,14 @@ export class SidebarMenuItem extends React.Component {
         slim: PropTypes.bool,
         // User props
         icon: PropTypes.node,
-        title: PropTypes.string,
+        title: PropTypes.oneOfType([
+            PropTypes.string,
+            PropTypes.node
+        ]),
         to: PropTypes.string,
         href: PropTypes.string,
-        exact: PropTypes.bool
+        exact: PropTypes.bool,
+        noCaret: PropTypes.bool,
     }
 
     static defaultProps = {
@@ -125,7 +121,11 @@ export class SidebarMenuItem extends React.Component {
         });
 
         return (
-            <li className={ itemClass }>
+            <li
+                className={classNames(itemClass, {
+                    'sidebar-menu__entry--no-caret': this.props.noCaret,
+                })}
+            >
                 <SidebarMenuItemLink
                     to={ this.props.to || null }
                     href={ this.props.href || null }

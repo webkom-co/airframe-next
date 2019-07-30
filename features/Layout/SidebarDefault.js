@@ -8,8 +8,8 @@ import {
 
 import { SidebarMiddleNav } from './parts/SidebarMiddleNav';
 
-import { SidebarTopA } from './../Sidebar/SidebarTopA'
-import { SidebarBottomA } from './../Sidebar/SidebarBottomA'
+import { SidebarTop } from './../Sidebar/SidebarTop'
+import { SidebarBottom } from './../Sidebar/SidebarBottom'
 
 export const SidebarDefault = () => (
     <Sidebar>
@@ -33,14 +33,14 @@ export const SidebarDefault = () => (
 
         { /* START SIDEBAR: Only for Mobile */ }
         <Sidebar.MobileFluid>
-            <SidebarTopA />
+            <SidebarTop />
             
             <Sidebar.Section fluid cover>
                 { /* SIDEBAR: Menu */ }
                 <SidebarMiddleNav />
             </Sidebar.Section>
 
-            <SidebarBottomA />
+            <SidebarBottom />
         </Sidebar.MobileFluid>
         { /* END SIDEBAR: Only for Mobile */ }
     </Sidebar>

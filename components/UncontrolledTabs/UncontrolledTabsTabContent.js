@@ -1,7 +1,5 @@
 import React from 'react';
-import {
-    TabContent
-} from './..';
+import { TabContent } from 'reactstrap';
 
 import { Consumer } from './context';
 

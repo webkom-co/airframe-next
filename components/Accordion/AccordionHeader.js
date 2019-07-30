@@ -1,12 +1,11 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
-import {
-    CardHeader
-} from './..';
+
+import CardHeader from './../CardHeader';
 
 import { Consumer } from './context';
-import './../../styles/elements/accordion-header.scss';
+import './AccordionHeader.scss';
 
 export const AccordionHeader = (props) => (
     <Consumer>

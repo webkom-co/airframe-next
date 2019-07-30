@@ -25,7 +25,7 @@ class Checkable extends React.Component {
 
     render() {
         const { tag, children, ...otherProps } = this.props;
-        const Tag = tag;
+        const Tag = this.props.tag;
 
         return (
             <Provider

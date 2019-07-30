@@ -36,10 +36,8 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-columns"></i>}
             title="Layouts"
         >
-            <SidebarMenu.Item title="Navbar"to='/layouts/navbar-only' exact />
-            <SidebarMenu.Item title="Sidebar Default"to='/layouts/sidebar-default' exact />
-            <SidebarMenu.Item title="Sidebar A"to='/layouts/sidebar-a' exact />
-            <SidebarMenu.Item title="Drag &amp; Drop Layout"to='/layouts/drag-and-drop-layouts' exact />
+            <SidebarMenu.Item title="Sidebar &amp; Navbar"to='/layouts/sidebar-and-navbar' exact />
+            <SidebarMenu.Item title="Navbar Only"to='/layouts/navbar-only' exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
@@ -98,8 +96,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-trello"></i>}
             title="Tables"
         >
-            <SidebarMenu.Item title="Tables"to='/tables/tables' />
-            <SidebarMenu.Item title="Extended Tables"to='/tables/extended-table' />
+            <SidebarMenu.Item title="AgGrid"to='/tables/ag-grid' />
         </SidebarMenu.Item>
         { /* -------- Apps ---------*/ }
         <SidebarMenu.Item
