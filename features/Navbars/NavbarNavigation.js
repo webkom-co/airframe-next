@@ -122,8 +122,9 @@ const NavbarNavigation = ({ accent, pills, ...navbarProps }) => (
                 <i className="fa fa-angle-down fa-fw ml-1"></i>
             </DropdownToggle>
             <DropdownMenu>
-                <DropdownItem tag={ Link } to="/layouts/sidebar-default">Sidebar &amp; Navbar</DropdownItem>
-                <DropdownItem tag={ Link } to="/layouts/navbar-only">Navbar Only</DropdownItem>
+                <DropdownItem tag={ Link } to="/layouts/navbar">Navbar</DropdownItem>
+                <DropdownItem tag={ Link } to="/layouts/sidebar">Sidebar</DropdownItem>
+                <DropdownItem tag={ Link } to="/layouts/sidebar-with-navbar">Sidebar with Navbar</DropdownItem>
             </DropdownMenu>
         </UncontrolledDropdown>
 

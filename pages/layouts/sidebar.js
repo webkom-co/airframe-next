@@ -3,13 +3,13 @@ import React from 'react';
 import {
     Container,
     Link,
-} from './../../components';
-import { LayoutNavbarOnly } from
-    './../../features/Layout/LayoutNavbarOnly';
+} from '../../components';
 
-const NavbarOnly = () => (
+const SidebarDefault = () => (
     <Container>
-        <p className="mb-5 mt-3">
+        <h1 className="display-4 mb-4 mt-2">Sidebar &amp; Navbar</h1>
+        
+        <p className="mb-5">
             Welcome to the <b>&quot;Airframe&quot;</b> Admin Dashboard Theme based on <a href="https://getbootstrap.com" className="text-primary" target="_blank" rel="noopener noreferrer">Bootstrap 4.x</a> version for React called&nbsp;
             <a href="https://reactstrap.github.io" className="text-primary" target="_blank" rel="noopener noreferrer">reactstrap</a> - easy to use React Bootstrap 4 components compatible with React 16+.
         </p>
@@ -20,10 +20,13 @@ const NavbarOnly = () => (
             </h6>
             <ul className="pl-3">
                 <li>
-                    <Link to="/layouts/navbar-only" className="text-primary">Navbar Only</Link>
+                    <Link to="/layouts/navbar" className="text-primary">Navbar</Link>
                 </li>
                 <li>
-                    <Link to="/layouts/sidebar-default" className="text-primary">Sidebar with Navbar</Link>
+                    <Link to="/layouts/sidebar" className="text-primary">Sidebar</Link>
+                </li>
+                <li>
+                    <Link to="/layouts/sidebar-with-navbar" className="text-primary">Sidebar with Navbar</Link>
                 </li>
             </ul>
         </section>
@@ -88,6 +91,5 @@ const NavbarOnly = () => (
         </section>
     </Container>
 );
-NavbarOnly.layoutComponent = LayoutNavbarOnly;
 
-export default NavbarOnly;
+export default SidebarDefault;

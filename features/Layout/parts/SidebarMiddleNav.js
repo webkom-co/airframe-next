@@ -28,7 +28,7 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-clone"></i>}
             title="Cards"
         >
-            <SidebarMenu.Item title="Cards"to='/cards/cards' exact />
+            <SidebarMenu.Item title="Cards" to='/cards/cards' exact />
             <SidebarMenu.Item title="Cards Headers"to='/cards/cardsheaders' exact />
         </SidebarMenu.Item>
         { /* -------- Layouts ---------*/ }
@@ -36,8 +36,9 @@ const SidebarMiddleNav = ({ isInteractive }) => (
             icon={<i className="fa fa-fw fa-columns"></i>}
             title="Layouts"
         >
-            <SidebarMenu.Item title="Sidebar &amp; Navbar"to='/layouts/sidebar-and-navbar' exact />
-            <SidebarMenu.Item title="Navbar Only"to='/layouts/navbar-only' exact />
+            <SidebarMenu.Item title="Navbar" to='/layouts/navbar' exact />
+            <SidebarMenu.Item title="Sidebar" to='/layouts/sidebar' exact />
+            <SidebarMenu.Item title="Sidebar With Navbar" to="/layouts/sidebar-with-navbar" exact />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item
