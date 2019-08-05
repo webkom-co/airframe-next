@@ -15,7 +15,7 @@ import { NavbarMessages } from './parts/NavbarMessages';
 import { NavbarUser } from './parts/NavbarUser';
 
 export const NavbarDefault = () => (
-    <Navbar light color="none" expand="xs" fluid>
+    <Navbar light expand="xs" fluid>
         <Nav navbar>
             <NavItem className="mr-3">
                 <SidebarTrigger/>
