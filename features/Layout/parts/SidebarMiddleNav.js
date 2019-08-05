@@ -37,9 +37,8 @@ export const SidebarMiddleNav = () => (
             title="Layouts"
         >
             <SidebarMenu.Item title="Navbar" />
-            <SidebarMenu.Item title="Sidebar Default" />
-            <SidebarMenu.Item title="Sidebar A" />
-            <SidebarMenu.Item title="Drag &amp; Drop" />
+            <SidebarMenu.Item title="Sidebar" />
+            <SidebarMenu.Item title="Sidebar With Navbar" />
         </SidebarMenu.Item>
         { /* -------- Interface ---------*/ }
         <SidebarMenu.Item

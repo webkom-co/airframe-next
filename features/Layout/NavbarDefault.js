@@ -12,7 +12,7 @@ import { NavbarUser } from './parts/NavbarUser';
 import { LogoThemed } from './../LogoThemed/LogoThemed';
 
 export const NavbarDefault = () => (
-    <Navbar light color="none" expand="xs" fluid>
+    <Navbar light expand="xs" fluid>
         <Nav navbar>
             <NavItem className="mr-3">
                 <SidebarTrigger/>
