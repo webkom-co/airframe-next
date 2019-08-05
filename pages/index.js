@@ -17,10 +17,13 @@ class Index extends React.Component {
                     </h6>
                     <ul className="pl-3">
                         <li>
-                            <a href="http://dashboards.webkom.co/react/default/layouts/sidebar-default" className="text-primary">Sidebar with Navbar</a>
+                            <a href="http://dashboards.webkom.co/react-next/airframe/layouts/navbar" className="text-primary">Navbar</a>
                         </li>
                         <li>
-                            <a href="http://dashboards.webkom.co/react/default/layouts/navbar-only" className="text-primary">Navbar Only</a>
+                            <a href="http://dashboards.webkom.co/react-next/airframe/layouts/sidebar" className="text-primary">Sidebar</a>
+                        </li>
+                        <li>
+                            <a href="http://dashboards.webkom.co/react-next/airframe/layouts/sidebar-with-navbar" className="text-primary">Sidebar with Navbar</a>
                         </li>
                     </ul>
                 </section>
