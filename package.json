@@ -1,7 +1,7 @@
 {
-  "name": "airframe-dashboard",
+  "name": "divops-pw",
   "version": "0.1.0",
-  "description": "Seed project for flexible light React/Bootstrap 4 dashboards.",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "dev": "NODE_ENV=development node ./server.js",
@@ -83,5 +83,6 @@
     "text-mask-addons": "^3.8.0",
     "uuid": "^3.3.2",
     "webpack-cli": "^3.3.6"
-  }
+  },
+  "keywords": []
 }
